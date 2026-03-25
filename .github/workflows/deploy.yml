@@ -1,0 +1,44 @@
+name: Generate & Deploy All Verticals
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate all landing pages
+        run: python3 generate.py
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
+      - name: Deploy all verticals to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          slugs=(
+            accounting chiropractor churchadmin contractor dentist designer
+            electrician eventplanner farmer funeral hr insurance landlord
+            militaryspouse mortgage mortuary nutritionist pastor personaltrainer
+            plumber principal realtor restaurant salon teacher therapist
+            travelagent vet
+          )
+          for slug in "${slugs[@]}"; do
+            echo "Deploying $slug..."
+            wrangler pages deploy output/$slug \
+              --project-name=${slug}-landing \
+              --commit-dirty=true \
+              || echo "WARNING: $slug deploy failed, continuing..."
+          done
