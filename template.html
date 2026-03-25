@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PRODUCT_NAME}} — {{TAGLINE}}</title>
+    <meta name="description" content="{{HERO_COUNT}} expert-built AI tasks for {{TARGET_AUDIENCE}}. No prompt engineering. Pay as you go. Credits never expire.">
+    <link rel="canonical" href="https://{{DOMAIN}}/">
+    <meta property="og:title" content="{{PRODUCT_NAME}} — {{HERO_COUNT}} Expert-Built Tasks. No Prompt Engineering.">
+    <meta property="og:description" content="Stop wrestling with generic AI. {{HERO_COUNT}} purpose-built tasks for {{TARGET_AUDIENCE}}. Pay as you go, credits never expire.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{DOMAIN}}">
+    <meta property="og:site_name" content="{{PRODUCT_NAME}}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "{{PRODUCT_NAME}}",
+        "applicationCategory": "BusinessApplication",
+        "description": "AI-powered task automation for {{TARGET_AUDIENCE}}. {{HERO_COUNT}} specialized tasks. Privacy-focused. Works with OpenClaw, Claude Desktop, and any MCP-compatible AI assistant.",
+        "url": "https://{{DOMAIN}}",
+        "operatingSystem": "Windows, macOS, Linux",
+        "offers": [
+            {"@type": "Offer", "name": "Starter", "price": "29.00", "priceCurrency": "USD", "description": "15 credits"},
+            {"@type": "Offer", "name": "Pro", "price": "99.00", "priceCurrency": "USD", "description": "60 credits"},
+            {"@type": "Offer", "name": "Business", "price": "199.00", "priceCurrency": "USD", "description": "150 credits"},
+            {"@type": "Offer", "name": "Power", "price": "349.00", "priceCurrency": "USD", "description": "350 credits"},
+            {"@type": "Offer", "name": "Unlimited", "price": "599.00", "priceCurrency": "USD", "description": "800 credits"},
+            {"@type": "Offer", "name": "Enterprise", "price": "999.00", "priceCurrency": "USD", "description": "2000 credits"}
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: {{PRIMARY_COLOR}};
+            --accent: {{ACCENT_COLOR}};
+            --background: {{BACKGROUND_COLOR}};
+            --accent-hover: color-mix(in srgb, var(--accent) 80%, black);
+            --primary-light: color-mix(in srgb, var(--accent) 12%, white);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: var(--background);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ─── Header ─── */
+        header {
+            padding: 20px 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links > a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links > a:hover { color: var(--accent); }
+
+        .header-cta {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            background: var(--accent);
+            color: white !important;
+            transition: all 0.2s;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-hover);
+            color: white !important;
+        }
+
+        /* ─── Hamburger ─── */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 300;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 150;
+        }
+
+        .mobile-overlay.active { display: block; }
+
+        /* ─── Hero ─── */
+        .hero {
+            padding: 90px 0 80px;
+            text-align: center;
+            background: linear-gradient(180deg, white 0%, var(--background) 100%);
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+        }
+
+        .hero h1 span { color: var(--accent); }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #4b5563;
+            margin-bottom: 40px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+        }
+
+        .cta-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: white;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            box-shadow: none;
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--primary-light);
+        }
+
+        /* ─── Example Tasks Band ─── */
+        .tasks-band {
+            background: var(--primary);
+            padding: 28px 0;
+            overflow: hidden;
+        }
+
+        .tasks-band-label {
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .tasks-scroll {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 24px;
+        }
+
+        .task-chip {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .task-chip.accent {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ─── Section Common ─── */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        /* ─── Features ─── */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        .feature-card {
+            padding: 28px;
+            background: var(--background);
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: box-shadow 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .feature-card .card-cta {
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ─── Task Modal ─── */
+        .task-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .task-modal-overlay.open { display: flex; }
+
+        .task-modal {
+            background: white;
+            border-radius: 16px;
+            max-width: 640px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 36px;
+            position: relative;
+        }
+
+        .task-modal-close {
+            position: absolute;
+            top: 16px; right: 20px;
+            background: none; border: none;
+            font-size: 1.5rem; cursor: pointer;
+            color: #6b7280;
+        }
+
+        .task-modal h2 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .task-modal .modal-subtitle {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .task-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+            gap: 12px;
+        }
+
+        .task-list-item:last-child { border-bottom: none; }
+
+        .task-list-item .task-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .task-list-item .task-desc {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+
+        .task-complexity {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .complexity-simple { background: #d1fae5; color: #065f46; }
+        .complexity-medium { background: #fef3c7; color: #92400e; }
+        .complexity-complex { background: #ede9fe; color: #5b21b6; }
+
+        .task-modal-loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ─── How It Works ─── */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--background);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 32px 24px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .step p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ─── Privacy / ZDR ─── */
+        .privacy-section {
+            padding: 80px 0;
+            background: var(--primary);
+            color: white;
+        }
+
+        .privacy-section .section-title { color: white; }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .privacy-card {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .privacy-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .privacy-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .privacy-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+
+        /* ─── Pricing ─── */
+        .pricing {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--background);
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            background: white;
+            transform: scale(1.04);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.04) translateY(-4px);
+        }
+
+        .pricing-card .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .pricing-card .price {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+            line-height: 1;
+        }
+
+        .pricing-card .credits {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .pricing-card .per-credit {
+            color: #6b7280;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card li {
+            padding: 6px 0;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .pricing-card li:last-child { border-bottom: none; }
+
+        .buy-btn {
+            width: 100%;
+            padding: 13px 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .buy-btn:hover { background: var(--accent-hover); }
+
+        /* ─── FAQ ─── */
+        .faq {
+            padding: 80px 0;
+            background: var(--background);
+        }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-family: inherit;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--accent);
+            flex-shrink: 0;
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 24px 20px;
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer { display: block; }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 40px 0;
+            background: var(--primary);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        footer .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        footer .footer-logo span { color: var(--accent); }
+
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: white; }
+
+        footer .footer-links { margin-bottom: 16px; }
+
+        footer .footer-bottom { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.1rem; }
+            .hero .subtitle { font-size: 1.05rem; }
+            .section-title { font-size: 1.6rem; }
+            .pricing-card.featured { transform: none; }
+            .pricing-card.featured:hover { transform: translateY(-4px); }
+
+            .hamburger { display: block; }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 80px 32px 32px;
+                gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+                z-index: 200;
+                align-items: flex-start;
+                overflow-y: auto;
+            }
+
+            .nav-links.active { display: flex; }
+
+            .nav-links > a {
+                padding: 14px 0;
+                font-size: 1.05rem;
+                border-bottom: 1px solid #f3f4f6;
+                width: 100%;
+            }
+
+            .header-cta {
+                width: 100%;
+                text-align: center;
+                margin-top: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── Header ─── -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">{{LOGO_HTML}}</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <!-- ─── Hero ─── -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-eyebrow">{{HERO_COUNT}} Expert-Built {{HERO_NOUN}}</div>
+            <h1>{{CLAUDE_YOUR}}.<br><span>No Prompt Engineering.</span></h1>
+            <p class="subtitle">A generic AI is a Swiss Army knife — useful for everything, optimized for nothing. {{PRODUCT_NAME}} is {{HERO_COUNT}} purpose-built tasks, each engineered for exactly the work <em>you</em> do.</p>
+            <div class="hero-ctas">
+                <a href="#pricing" class="cta-button">Get Started — $29 Starter</a>
+                <a href="#features" class="cta-button secondary">See What's Inside</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Example Tasks Band ─── -->
+    <div class="tasks-band">
+        <p class="tasks-band-label">Example Tasks</p>
+        <div class="tasks-scroll">
+            {{EXAMPLE_TASK_CHIPS}}
+        </div>
+    </div>
+
+    <!-- ─── Features ─── -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Built for {{TARGET_AUDIENCE_SHORT}}, Not Generic Professionals</h2>
+            <p class="section-subtitle">Every task template was engineered with the specific terminology, workflows, and standards of your profession — not repurposed from generic business content.</p>
+            <div class="feature-grid">
+                {{FEATURE_CARDS}}
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── How It Works ─── -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">From Question to Professional Output in Seconds</h2>
+            <p class="section-subtitle">No setup wizards. No prompt libraries to memorize. Just open the task, answer a few questions, and get the output you need.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Install the Plugin</h3>
+                    <p>Download {{PRODUCT_NAME}} and install it in OpenClaw, Claude Desktop, or any MCP-compatible AI client. Takes under 5 minutes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pick Your Task</h3>
+                    <p>Browse {{HERO_COUNT}} purpose-built tasks organized by workflow. Each task is named for exactly what it does — no guessing required.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Provide Your Details</h3>
+                    <p>The task asks you the right questions. You fill in your specific information — client names, dates, context. No prompt engineering.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Professional Output</h3>
+                    <p>Receive structured, professional output ready to use. Review it, apply your judgment, and you're done. One credit, one task.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Privacy / ZDR Section ─── -->
+    <section class="privacy-section">
+        <div class="container">
+            <h2 class="section-title">Your Data Stays Yours</h2>
+            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">{{PRODUCT_NAME}} runs locally on your machine. Your client data, case details, and sensitive information never touch our servers.</p>
+            <div class="privacy-grid">
+                <div class="privacy-card">
+                    <div class="privacy-badge">Local AI</div>
+                    <h3>Runs on Your Machine</h3>
+                    <p>All AI processing happens in your local Claude Desktop or OpenClaw installation. We never see your data or your outputs.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-badge">ZDR Ready</div>
+                    <h3>Zero Data Retention</h3>
+                    <p>Use Anthropic's ZDR (Zero Data Retention) API for maximum privacy. Your inputs and outputs are never stored at Anthropic either.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-badge">Verified</div>
+                    <h3>VirusTotal-Verified Releases</h3>
+                    <p>Every release is submitted to VirusTotal before distribution. You can verify the integrity of what you install.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-badge">Credits Only</div>
+                    <h3>We Just Count Tasks</h3>
+                    <p>{{PRODUCT_NAME}} servers only log that a task credit was used — never what the task contained. That's all we need to know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Pricing ─── -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Pay-As-You-Go Pricing</h2>
+            <p class="section-subtitle">No subscriptions. No monthly fees. Buy credits, use them whenever you need them. <strong>Credits never expire.</strong></p>
+            <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-bottom:40px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$29</div>
+                    <div class="credits">15 credits</div>
+                    <p class="per-credit">$1.93 per task</p>
+                    <ul>
+                        <li>✓ All {{HERO_COUNT}} tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Perfect for getting started</li>
+                    </ul>
+                    <button onclick="checkout('starter')" class="buy-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$99</div>
+                    <div class="credits">60 credits</div>
+                    <p class="per-credit">$1.65 per task · 14% off</p>
+                    <ul>
+                        <li>✓ All {{HERO_COUNT}} tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Great for regular use</li>
+                    </ul>
+                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Business</h3>
+                    <div class="price">$199</div>
+                    <div class="credits">150 credits</div>
+                    <p class="per-credit">$1.33 per task · 31% off</p>
+                    <ul>
+                        <li>✓ All {{HERO_COUNT}} tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Best for active practices</li>
+                    </ul>
+                    <button onclick="checkout('business')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Power</h3>
+                    <div class="price">$349</div>
+                    <div class="credits">350 credits</div>
+                    <p class="per-credit">$1.00 per task · 48% off</p>
+                    <ul>
+                        <li>✓ All {{HERO_COUNT}} tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Serious savings for busy teams</li>
+                    </ul>
+                    <button onclick="checkout('power')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Unlimited</h3>
+                    <div class="price">$599</div>
+                    <div class="credits">800 credits</div>
+                    <p class="per-credit">$0.75 per task · 61% off</p>
+                    <ul>
+                        <li>✓ All {{HERO_COUNT}} tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Maximum value</li>
+                    </ul>
+                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$999</div>
+                    <div class="credits">2,000 credits</div>
+                    <p class="per-credit">$0.50 per task · 74% off</p>
+                    <ul>
+                        <li>✓ All {{HERO_COUNT}} tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Best value for power users</li>
+                    </ul>
+                    <button onclick="checkout('enterprise')" class="buy-btn">Get Credits</button>
+                </div>
+            </div>
+
+            <p style="text-align:center; color:#9ca3af; font-size:0.8rem; margin-top:24px;">*{{PRODUCT_NAME}} credits cover {{PRODUCT_NAME}} tasks only. If you use a cloud AI provider (Anthropic, OpenAI, etc.), their API charges are separate.</p>
+        </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-question">What is {{PRODUCT_NAME}} and how does it work?</button>
+                    <div class="faq-answer">{{PRODUCT_NAME}} is a plugin for AI assistants (Claude Desktop, OpenClaw, and any MCP-compatible client) that gives you {{HERO_COUNT}} pre-built, expert-crafted task templates for {{TARGET_AUDIENCE}}. Instead of figuring out how to prompt an AI to do professional work, you pick a task, answer its specific questions, and get professional-quality output immediately.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do I need a subscription?</button>
+                    <div class="faq-answer">No. {{PRODUCT_NAME}} uses a pay-as-you-go credit model. You buy a credit pack and use credits whenever you need them. One credit = one task. Credits never expire, so you're never pressured to use them by a deadline.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What AI apps does it work with?</button>
+                    <div class="faq-answer">{{PRODUCT_NAME}} works with any MCP-compatible AI client: OpenClaw, Claude Desktop, Cursor, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Is my data private and secure?</button>
+                    <div class="faq-answer">Yes. {{PRODUCT_NAME}} runs locally — all AI processing happens on your machine or through your own AI API account. We never receive your inputs, outputs, or client data. Our servers only log that a credit was consumed. For maximum privacy, use Anthropic's Zero Data Retention (ZDR) API.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How is this different from just using ChatGPT or Claude directly?</button>
+                    <div class="faq-answer">Generic AI gives general answers that require expert follow-up to verify and format. {{PRODUCT_NAME}} tasks are pre-engineered to ask the right questions, follow the right methodology, apply domain-specific rules, and produce structured output ready to use. You don't need to know how to write a good prompt — that work is already done.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do tasks get updated?</button>
+                    <div class="faq-answer">Yes. When we improve a task or update it for regulatory changes, all users get the updated version automatically at no charge. With generic AI, you'd need to notice the change and update your own prompts.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What if I need help getting set up?</button>
+                    <div class="faq-answer">Visit our <a href="/support" style="color:var(--accent);">support page</a> for setup guides, FAQs, and contact options. We also provide a getting started guide with step-by-step instructions for every supported platform.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">{{LOGO_HTML_FOOTER}}</div>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 {{PRODUCT_NAME}}. All rights reserved. · <a href="https://{{DOMAIN}}">{{DOMAIN}}</a></p>
+                <p style="margin-top:8px;">Powered by <a href="https://openclaw.ai">OpenClaw</a> · Works with Claude Desktop & MCP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─── Scripts ─── -->
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) toggleNav();
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+    </script>
+
+    <script>
+        const API_BASE = 'https://api.lawtasksai.com';
+        const PRODUCT_ID = '{{PRODUCT_ID}}';
+
+        function checkout(pack) {
+            document.getElementById('emailModalPack').value = pack;
+            document.getElementById('emailModalInput').value = '';
+            document.getElementById('emailModalError').textContent = '';
+            document.getElementById('emailModalBtn').disabled = false;
+            document.getElementById('emailModalBtn').textContent = 'Continue to Payment →';
+            document.getElementById('emailModal').style.display = 'flex';
+            setTimeout(() => document.getElementById('emailModalInput').focus(), 50);
+        }
+
+        function closeEmailModal() {
+            document.getElementById('emailModal').style.display = 'none';
+        }
+
+        async function submitEmailModal() {
+            const email = document.getElementById('emailModalInput').value.trim();
+            const pack = document.getElementById('emailModalPack').value;
+            const errEl = document.getElementById('emailModalError');
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                errEl.textContent = 'Please enter a valid email address.';
+                return;
+            }
+            errEl.textContent = '';
+            document.getElementById('emailModalBtn').disabled = true;
+            document.getElementById('emailModalBtn').textContent = 'Redirecting…';
+            closeEmailModal();
+            proceedToCheckout(pack, email);
+        }
+
+        async function proceedToCheckout(pack, email) {
+            try {
+                const response = await fetch(`${API_BASE}/checkout/create-session`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+                    body: JSON.stringify({ pack, email, product: PRODUCT_ID })
+                });
+                const data = await response.json();
+                if (data.checkout_url) {
+                    window.location.href = data.checkout_url;
+                } else {
+                    alert('Unable to start checkout. Please try again or contact support.');
+                }
+            } catch (err) {
+                alert('Something went wrong. Please try again or visit /support for help.');
+            }
+        }
+
+        // ─── Task Category Modal ───────────────────────────────────────
+        const modal = document.getElementById('taskModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSubtitle = document.getElementById('modalSubtitle');
+        const modalBody = document.getElementById('modalBody');
+
+        let allSkillsCache = null;
+
+        async function getAllSkills() {
+            if (allSkillsCache) return allSkillsCache;
+            const resp = await fetch(`${API_BASE}/v1/skills?limit=500`, {
+                headers: { 'X-Product-ID': PRODUCT_ID }
+            });
+            const data = await resp.json();
+            allSkillsCache = Array.isArray(data) ? data : [];
+            return allSkillsCache;
+        }
+
+        async function openCategory(categoryName) {
+            modalTitle.textContent = categoryName;
+            modalSubtitle.textContent = 'Loading tasks...';
+            modalBody.innerHTML = '<div class="task-modal-loading">Loading...</div>';
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            try {
+                const all = await getAllSkills();
+                // Build slug the same way the API does: lowercase, spaces+& → _and_, strip non-alnum
+                const slug = categoryName.toLowerCase()
+                    .replace(/\s*&\s*/g, '_and_')
+                    .replace(/[^a-z0-9]+/g, '_')
+                    .replace(/^_+|_+$/g, '');
+                const prefix = (PRODUCT_ID + '_' + slug).slice(0, 40);
+                const list = all.filter(s => {
+                    const cid = (s.category_id || '').toLowerCase();
+                    return cid.startsWith(prefix);
+                });
+
+                modalSubtitle.textContent = `${list.length} task${list.length !== 1 ? 's' : ''} available`;
+
+                if (list.length === 0) {
+                    modalBody.innerHTML = '<p style="color:#6b7280;padding:20px 0;">No tasks found for this category.</p>';
+                    return;
+                }
+
+                modalBody.innerHTML = list.map(s => {
+                    const cx = (s.complexity || 'medium').toLowerCase();
+                    const cxLabel = cx.charAt(0).toUpperCase() + cx.slice(1);
+                    return `<div class="task-list-item">
+                        <div>
+                            <div class="task-name">${s.name}</div>
+                            <div class="task-desc">${s.description || ''}</div>
+                        </div>
+                        <span class="task-complexity complexity-${cx}">${cxLabel}</span>
+                    </div>`;
+                }).join('');
+            } catch(e) {
+                modalBody.innerHTML = '<p style="color:#6b7280;padding:20px 0;">Could not load tasks. Please try again.</p>';
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    </script>
+
+    <!-- ─── Task Modal ─── -->
+    <!-- Email capture modal for checkout -->
+    <div id="emailModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;align-items:center;justify-content:center;">
+        <div style="background:#fff;border-radius:12px;padding:36px 32px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+            <h3 style="margin:0 0 8px;font-size:1.25rem;color:#111;">Enter your email</h3>
+            <p style="margin:0 0 20px;color:#555;font-size:0.95rem;">We'll send your license key and download link here after payment.</p>
+            <input id="emailModalInput" type="email" placeholder="you@example.com" autocomplete="email"
+                onkeydown="if(event.key==='Enter')submitEmailModal();"
+                style="width:100%;box-sizing:border-box;padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:1rem;outline:none;margin-bottom:8px;">
+            <div id="emailModalError" style="color:#dc2626;font-size:0.875rem;min-height:20px;margin-bottom:12px;"></div>
+            <button id="emailModalBtn" onclick="submitEmailModal()"
+                style="width:100%;padding:13px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;">
+                Continue to Payment →
+            </button>
+            <button onclick="closeEmailModal()"
+                style="width:100%;padding:10px;margin-top:10px;background:none;border:none;color:#888;font-size:0.9rem;cursor:pointer;">
+                Cancel
+            </button>
+        </div>
+        <input type="hidden" id="emailModalPack">
+    </div>
+
+    <div class="task-modal-overlay" id="taskModal">
+        <div class="task-modal">
+            <button class="task-modal-close" onclick="closeModal()">×</button>
+            <h2 id="modalTitle"></h2>
+            <p class="modal-subtitle" id="modalSubtitle"></p>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+</body>
+</html>

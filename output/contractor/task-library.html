@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 180 Purpose-Built General contractors Tools — ContractorTasksAI</title>
+    <meta name="description" content="Browse all 180 ContractorTasksAI task templates. Purpose-built for General contractors, subcontractors, and construction project managers — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://contractortasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #F97316; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #F97316; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #F97316; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(249,115,22,0.1); color: #F97316;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #F97316; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #F97316; color: #F97316; background: rgba(249,115,22,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #F97316; box-shadow: 0 4px 12px rgba(249,115,22,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(249,115,22,0.1); color: #F97316; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #F97316; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(249,115,22,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #F97316; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">ContractorTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🏗️ 180 tasks available</div>
+            <h1><span>180</span> Purpose-Built Tools<br>for General contractorss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 180</a>
+            <a href="#estimating_and_bidding_administration" class="filter-btn" data-cat="estimating_and_bidding_administration">Estimating & Bidding Administration (25)</a>
+            <a href="#contract_administration" class="filter-btn" data-cat="contract_administration">Contract Administration (25)</a>
+            <a href="#project_scheduling_and_progress_administration" class="filter-btn" data-cat="project_scheduling_and_progress_administration">Project Scheduling & Progress Administration (20)</a>
+            <a href="#financial_and_billing_administration" class="filter-btn" data-cat="financial_and_billing_administration">Financial & Billing Administration (25)</a>
+            <a href="#safety_and_compliance_documentation" class="filter-btn" data-cat="safety_and_compliance_documentation">Safety & Compliance Documentation (20)</a>
+            <a href="#subcontractor_and_vendor_management" class="filter-btn" data-cat="subcontractor_and_vendor_management">Subcontractor & Vendor Management (20)</a>
+            <a href="#licensing_insurance_and_business_administration" class="filter-btn" data-cat="licensing_insurance_and_business_administration">Licensing, Insurance & Business Administration (25)</a>
+            <a href="#project_closeout_administration" class="filter-btn" data-cat="project_closeout_administration">Project Closeout Administration (20)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Estimating & Bidding Administration -->
+    <section class="category-section" id="estimating_and_bidding_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Estimating & Bidding Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft bid clarification letter</h3>
+                    <p>Write a letter requesting clarification on ambiguous bid documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft bid cover letter</h3>
+                    <p>Write a professional cover letter to accompany a bid submission</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft no-bid letter</h3>
+                    <p>Write a professional letter declining to bid on a project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft project scope summary</h3>
+                    <p>Write a plain-language summary of the project scope for estimating purposes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft value engineering options list</h3>
+                    <p>Document potential cost-saving alternatives for review by the owner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log bid bond documentation</h3>
+                    <p>Track bid bond requirements, submissions, and returns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log bid protest documentation</h3>
+                    <p>Record the basis and timeline of a bid protest submission</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log bid request tracking</h3>
+                    <p>Maintain a log of all active bid requests with due dates and status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log bid result notification</h3>
+                    <p>Record bid results and note whether the project was awarded</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log historical cost data</h3>
+                    <p>Organize past project cost data for use in future estimates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log pre-bid meeting notes</h3>
+                    <p>Record attendees, questions, and answers from a pre-bid meeting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log subcontractor quote requests</h3>
+                    <p>Track which subs have been contacted for quotes and their response status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare addendum review log</h3>
+                    <p>Document all bid addenda received and confirm they are incorporated</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare alternate bid item list</h3>
+                    <p>Document alternate bid items with add/deduct amounts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare bid comparison matrix</h3>
+                    <p>Create a side-by-side comparison of subcontractor bids</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare bid delivery checklist</h3>
+                    <p>Create a checklist ensuring all required bid documents are included</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare bid invitation response</h3>
+                    <p>Draft a formal response to a bid invitation request with company information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare bonding capacity documentation</h3>
+                    <p>Compile documents showing the company's surety bonding capacity</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare equipment rental rate sheet</h3>
+                    <p>Compile daily and weekly rates for commonly rented equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare labor hours estimate worksheet</h3>
+                    <p>Compile a worksheet estimating labor hours by trade and task</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare material quantity takeoff sheet</h3>
+                    <p>Create a spreadsheet tracking material quantities needed for an estimate</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare overhead and profit calculation sheet</h3>
+                    <p>Document the company's overhead rate and markup for estimating</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare project feasibility summary</h3>
+                    <p>Write a summary of cost and schedule feasibility for a prospective project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare specialty items cost log</h3>
+                    <p>Track costs for specialty or custom materials and lead times</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare unit price schedule</h3>
+                    <p>Compile a unit price list for standard bid items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Administration -->
+    <section class="category-section" id="contract_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Contract Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft change order request</h3>
+                    <p>Write a formal change order request documenting scope, cost, and schedule impact</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft contract transmittal letter</h3>
+                    <p>Write a cover letter transmitting a signed contract to the owner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft final completion notice</h3>
+                    <p>Write a formal letter notifying the owner of substantial completion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft lien waiver</h3>
+                    <p>Prepare a conditional or unconditional lien waiver for payment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft notice of delay</h3>
+                    <p>Write a formal letter notifying the owner of a project delay and its cause</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft notice to proceed letter</h3>
+                    <p>Prepare the notice to proceed issued to a subcontractor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft request for information (rfi)</h3>
+                    <p>Write a formal RFI to request design clarification</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log contract correspondence file</h3>
+                    <p>Maintain a log of all formal correspondence related to the contract</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log contract dispute documentation</h3>
+                    <p>Compile correspondence and records for a contract dispute file</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log contract milestone dates</h3>
+                    <p>Document all contractual milestone dates including notice to proceed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log executed contract file</h3>
+                    <p>Organize and document a signed contract in the project file</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log liquidated damages calculation</h3>
+                    <p>Document the liquidated damages clause and calculate potential exposure</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log owner-approved change orders</h3>
+                    <p>Record signed and approved change orders in the contract file</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log retainage release tracking</h3>
+                    <p>Track retainage withheld and requests for retainage release</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare as-built drawing transmittal</h3>
+                    <p>Write the cover letter for submitting as-built drawings at project close</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare change order backup package</h3>
+                    <p>Compile labor, material, and equipment documentation supporting a change order</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare contract change log</h3>
+                    <p>Track all executed change orders with number, date, and amount</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare contract closeout checklist</h3>
+                    <p>List all documents and items required for contract closeout</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare contract review checklist</h3>
+                    <p>Create a checklist of contract terms to review before signing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare lien waiver log</h3>
+                    <p>Track lien waivers submitted and received from subcontractors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare notice to owner (nto) log</h3>
+                    <p>Track notices to owner filed by subcontractors or suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare rfi log</h3>
+                    <p>Track all RFIs submitted, dates sent, and responses received</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare subcontract agreement</h3>
+                    <p>Draft a subcontract agreement for a specific trade or scope</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare subcontractor change order</h3>
+                    <p>Draft a change order to a subcontractor for a scope change</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare warranty documentation</h3>
+                    <p>Compile warranty letters and terms for all installed systems and materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Contract Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Scheduling & Progress Administration -->
+    <section class="category-section" id="project_scheduling_and_progress_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Project Scheduling & Progress Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft monthly progress report</h3>
+                    <p>Write a comprehensive monthly project status report</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft project closeout schedule</h3>
+                    <p>Write a schedule for completing all closeout tasks and submittals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft request for schedule extension</h3>
+                    <p>Write a formal request for a contract time extension</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft schedule delay analysis</h3>
+                    <p>Write a narrative documenting the cause and impact of a schedule delay</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log critical path items</h3>
+                    <p>Document tasks currently on the critical path and mitigation steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log final inspection checklist</h3>
+                    <p>Track items identified in the final inspection and their resolution</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log jobsite visitor record</h3>
+                    <p>Maintain a sign-in log for all project visitors including inspectors and owner reps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log punchlist tracking</h3>
+                    <p>Maintain the project punchlist with item status and responsible party</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log schedule update</h3>
+                    <p>Document weekly or bi-weekly schedule updates and variances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log submittals received and returned</h3>
+                    <p>Track all submittals with submission date, review status, and return date</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log weather delay documentation</h3>
+                    <p>Record weather conditions and delays with dates and duration</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare daily job log</h3>
+                    <p>Write the daily construction log recording work performed and conditions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare lessons learned document</h3>
+                    <p>Write a post-project lessons learned summary for internal review</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare look-ahead schedule</h3>
+                    <p>Write a 3-week or 6-week look-ahead schedule for field coordination</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare meeting minutes</h3>
+                    <p>Record all decisions, action items, and attendees from a project meeting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare project schedule draft</h3>
+                    <p>Create a baseline project schedule identifying major milestones</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare pull planning session notes</h3>
+                    <p>Record outcomes and commitments from a pull planning session</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare submittal log</h3>
+                    <p>Create and maintain the master submittal log for the project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare substantial completion documentation</h3>
+                    <p>Compile the documentation package for substantial completion notification</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare weekly progress report</h3>
+                    <p>Write the weekly project status report for the owner or project manager</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial & Billing Administration -->
+    <section class="category-section" id="financial_and_billing_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial & Billing Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft billing continuation sheet</h3>
+                    <p>Complete the itemized continuation sheet supporting the pay application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft final invoice</h3>
+                    <p>Write the final project invoice including retainage and all outstanding amounts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft joint check agreement</h3>
+                    <p>Prepare a joint check agreement for owner, contractor, and sub</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft vendor payment authorization</h3>
+                    <p>Prepare payment authorization for an approved vendor invoice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log dispute reserve documentation</h3>
+                    <p>Document amounts in dispute and held in reserve</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log material invoice tracking</h3>
+                    <p>Record all material invoices received with approval and payment status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log overbillings and underbillings</h3>
+                    <p>Track project billing status relative to percent complete</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log owner payment receipt</h3>
+                    <p>Record all owner payments received with date, check number, and amount</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log pay application</h3>
+                    <p>Prepare a monthly pay application (AIA G702/G703 or equivalent)</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log payroll compliance documentation</h3>
+                    <p>Track fringe benefit, apprentice ratio, and rate compliance for public works</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log project cost report</h3>
+                    <p>Compile actual costs vs. budget by cost code for management review</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log stored materials documentation</h3>
+                    <p>Compile documentation for stored materials billed on a pay application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log subcontractor payment tracking</h3>
+                    <p>Track payments made to each subcontractor by month and invoice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log tax lien or hold notice</h3>
+                    <p>Document any tax liens or payment holds affecting the project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare equipment usage cost log</h3>
+                    <p>Track equipment time and cost charged to a specific project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare insurance certificate request</h3>
+                    <p>Request and log certificates of insurance from subcontractors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare job cost summary</h3>
+                    <p>Write a monthly or final job cost summary by category</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare lien release for payment</h3>
+                    <p>Compile conditional lien releases accompanying a payment application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare notice of non-payment</h3>
+                    <p>Draft a formal notice of non-payment or overdue invoice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare prevailing wage payroll records</h3>
+                    <p>Compile certified payroll documentation for prevailing wage projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare profit fade analysis</h3>
+                    <p>Write a summary of project profit fade with causes identified</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare retainage release request</h3>
+                    <p>Write a formal request for retainage release at project completion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare schedule of values</h3>
+                    <p>Draft the schedule of values for contract billing purposes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare subcontractor pay application review</h3>
+                    <p>Review and log subcontractor pay applications for processing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare wip (work-in-progress) schedule</h3>
+                    <p>Compile the work-in-progress schedule for financial reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Compliance Documentation -->
+    <section class="category-section" id="safety_and_compliance_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Safety & Compliance Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft workers compensation incident report</h3>
+                    <p>Prepare the employer's first report of injury form</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log confined space entry permit</h3>
+                    <p>Prepare and log confined space entry permits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log crane inspection and operator certification</h3>
+                    <p>Track crane inspection certificates and operator qualifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log incident/accident report</h3>
+                    <p>Complete a standardized incident report form for a jobsite accident</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log lead or asbestos abatement documentation</h3>
+                    <p>Record contractor qualifications and disposal manifests for abatement work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log osha 300 injury and illness log</h3>
+                    <p>Maintain the required OSHA injury and illness log</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log respirator fit test records</h3>
+                    <p>Track annual fit test results for employees using respirators</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log safety inspection checklist</h3>
+                    <p>Record results of weekly safety walkthrough inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log scaffolding inspection record</h3>
+                    <p>Document daily scaffold inspection results</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log sds (safety data sheet) binder</h3>
+                    <p>Maintain a current SDS binder for all chemicals on site</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare drug testing compliance log</h3>
+                    <p>Track pre-employment and post-incident drug testing records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare electrical safety lockout/tagout log</h3>
+                    <p>Track lockout/tagout procedure compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare excavation safety checklist</h3>
+                    <p>Document required excavation and trenching safety compliance steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare fall protection plan</h3>
+                    <p>Document the fall protection plan for work at heights</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare hazard communication plan</h3>
+                    <p>Compile the written hazard communication program for the project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare hot work permit</h3>
+                    <p>Document hot work permits for welding or cutting activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare near-miss report</h3>
+                    <p>Document a near-miss event with corrective actions noted</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare silica exposure control plan</h3>
+                    <p>Compile the required silica dust control plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare site-specific safety plan</h3>
+                    <p>Compile a site-specific safety and health plan for the project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare toolbox talk record</h3>
+                    <p>Document toolbox talk topic, date, attendees, and signatures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subcontractor & Vendor Management -->
+    <section class="category-section" id="subcontractor_and_vendor_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Subcontractor & Vendor Management</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft coordination meeting agenda</h3>
+                    <p>Write the agenda for a weekly subcontractor coordination meeting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft notice of substituted subcontractor</h3>
+                    <p>Prepare formal notice to owner when replacing a listed subcontractor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft subcontractor scope letter</h3>
+                    <p>Write a detailed scope of work letter for a subcontractor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log back-charge notice</h3>
+                    <p>Write a formal notice of back-charge to a subcontractor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log dbe/mbe/wbe participation tracking</h3>
+                    <p>Track certified diverse business utilization for compliance reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log equipment rental agreement</h3>
+                    <p>Document rental equipment contract terms, pickup, and return</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log material delivery discrepancy</h3>
+                    <p>Document material shortages or damage upon delivery</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log material substitution request</h3>
+                    <p>Prepare and track requests for product substitutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log subcontractor license verification</h3>
+                    <p>Verify and document current contractor license status for each sub</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log subcontractor performance evaluation</h3>
+                    <p>Record post-project performance ratings for each subcontractor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log subcontractor prequalification</h3>
+                    <p>Track submission and review of subcontractor prequalification packages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare approved subcontractor list</h3>
+                    <p>Maintain a current list of prequalified subcontractors by trade</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare backup subcontractor list</h3>
+                    <p>Compile a list of backup subs in case a primary sub cannot perform</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare delivery schedule coordination</h3>
+                    <p>Document scheduled material deliveries and receiving assignments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare joint venture agreement summary</h3>
+                    <p>Write a summary of key terms of a joint venture teaming agreement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare purchase order log</h3>
+                    <p>Track all purchase orders issued with vendor, amount, and status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare subcontractor insurance tracking</h3>
+                    <p>Track required insurance certificates and coverage limits for each sub</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare sub default notice</h3>
+                    <p>Draft a formal notice of default to a non-performing subcontractor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare supplier contact list</h3>
+                    <p>Compile a current list of material suppliers with contact and account information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare vendor approved product list</h3>
+                    <p>Compile a list of owner- or spec-approved product substitutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Licensing, Insurance & Business Administration -->
+    <section class="category-section" id="licensing_insurance_and_business_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Licensing, Insurance & Business Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft business continuity plan</h3>
+                    <p>Write the administrative version of the company's business continuity plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log annual state report filing</h3>
+                    <p>Track annual state business report filing requirements and status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log bank line of credit documentation</h3>
+                    <p>Maintain records of the company's operating line of credit</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log certificate of insurance issuance</h3>
+                    <p>Track COIs issued to owners and GCs for active projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log contractor qualification prequalification package</h3>
+                    <p>Compile prequalification documents for submission to GCs or owners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log duns/uei number documentation</h3>
+                    <p>Record the company's DUNS or UEI number and registration status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log performance and payment bond tracking</h3>
+                    <p>Track bond issuance and expiration for each bonded project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log professional liability (e&o) policy</h3>
+                    <p>Document errors and omissions coverage if applicable</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log state registration by jurisdiction</h3>
+                    <p>Document contractor registration and qualification in each state</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log subcontract default bond claim</h3>
+                    <p>Document steps for submitting a claim on a subcontractor's bond</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log training and certification tracking</h3>
+                    <p>Maintain records of employee certifications and training completions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log union agreement compliance</h3>
+                    <p>Document compliance with union collective bargaining agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log workers compensation policy documentation</h3>
+                    <p>Record WC policy details, coverage dates, and experience modifier</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare annual financial statement</h3>
+                    <p>Compile the documents for an annual reviewed or audited financial statement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare business license renewal</h3>
+                    <p>Track local business license renewals and fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare contractor license renewal log</h3>
+                    <p>Track state contractor license expiration dates and renewal steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare corporate document file</h3>
+                    <p>Organize articles of incorporation, operating agreements, and meeting minutes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare dbe/mbe/wbe certification documentation</h3>
+                    <p>Compile documents for diverse business enterprise certification</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare employee handbook</h3>
+                    <p>Write the company's employee policies and HR handbook</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare equipment insurance documentation</h3>
+                    <p>Record equipment floater policy details and scheduled equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare federal contractor registration</h3>
+                    <p>Document SAM.gov registration and updates for federal work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare insurance renewal calendar</h3>
+                    <p>Track expiration dates for all business insurance policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare osha 300a annual summary</h3>
+                    <p>Compile and post the OSHA 300A annual injury summary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare surety bond application</h3>
+                    <p>Compile financial documents for a bonding application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare vehicle fleet insurance log</h3>
+                    <p>Record insurance coverage for all company vehicles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Closeout Administration -->
+    <section class="category-section" id="project_closeout_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Project Closeout Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Draft project reference letter request</h3>
+                    <p>Write a letter requesting a project reference or testimonial</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log as-built drawing submission</h3>
+                    <p>Document the preparation and delivery of as-built drawings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log award or recognition submission</h3>
+                    <p>Compile documents for a project award or industry recognition submission</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log consent of surety</h3>
+                    <p>Obtain and file the surety's consent to final payment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log final permit closeout</h3>
+                    <p>Document permit final inspections and approvals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log operation and maintenance manual</h3>
+                    <p>Compile and organize O&M manuals for all installed equipment and systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log post-project financial review</h3>
+                    <p>Document the final profit/loss analysis for management review</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log project files archive</h3>
+                    <p>Organize all project documentation for long-term archiving</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log spare parts and keys delivery</h3>
+                    <p>Record delivery of spare parts, keys, and access cards to the owner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Log training records for owner staff</h3>
+                    <p>Document training provided to owner's staff on systems and equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare attic stock delivery record</h3>
+                    <p>Document the delivery of spare materials and attic stock to the owner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare certificate of occupancy tracking</h3>
+                    <p>Track CO application, inspection, and issuance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client satisfaction survey</h3>
+                    <p>Write a post-project satisfaction survey for the owner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare commissioning documentation</h3>
+                    <p>Compile commissioning reports and test results for mechanical systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare final pay application</h3>
+                    <p>Prepare and submit the final pay application including retainage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare one-year warranty walkthrough checklist</h3>
+                    <p>Create a checklist for the 11-month warranty inspection</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare project case study</h3>
+                    <p>Write a brief project case study for the company's marketing portfolio</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare project closeout checklist</h3>
+                    <p>Create a comprehensive checklist of all closeout deliverables</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare subcontractor final releases</h3>
+                    <p>Collect final lien releases and closeout documents from all subs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare warranty letter compilation</h3>
+                    <p>Gather and organize manufacturer and contractor warranty letters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Project Closeout Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 180 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ContractorTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

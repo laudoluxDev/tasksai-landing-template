@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Complete - PrincipalTasksAI</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --accent: #B45309; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a2e; background: #fafbfc;
+            min-height: 100vh; display: flex; flex-direction: column;
+        }
+        .container { max-width: 600px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; background: white; border-bottom: 1px solid #e5e7eb; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a2e; text-decoration: none; }
+        .logo span { color: var(--accent); }
+        main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 24px; }
+        .success-card {
+            background: white; border-radius: 12px; padding: 48px; text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); max-width: 500px; width: 100%;
+        }
+        .success-icon {
+            width: 72px; height: 72px; background: #10b981; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
+        }
+        .success-icon svg { width: 36px; height: 36px; color: white; }
+        h1 { font-size: 1.75rem; margin-bottom: 10px; }
+        .subtitle { color: #6b7280; margin-bottom: 28px; }
+        .details { background: #f9fafb; border-radius: 8px; padding: 20px; margin-bottom: 28px; text-align: left; }
+        .detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label { color: #6b7280; font-size: 0.9rem; }
+        .detail-value { font-weight: 600; color: #1a1a2e; }
+        .license-key { font-family: monospace; font-size: 0.82rem; background: #e5e7eb; padding: 2px 6px; border-radius: 4px; }
+        .download-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background: var(--accent); color: white; padding: 16px 32px; border-radius: 8px;
+            text-decoration: none; font-weight: 600; font-size: 1.05rem; width: 100%;
+            transition: opacity 0.2s;
+        }
+        .download-btn:hover { opacity: 0.9; }
+        .loading { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+        .spinner {
+            width: 40px; height: 40px; border: 3px solid #e5e7eb;
+            border-top-color: var(--accent); border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .error { color: #dc2626; background: #fef2f2; padding: 16px; border-radius: 8px; }
+        .note { margin-top: 24px; padding: 14px; background: #f0fdf4; border-radius: 8px;
+            border-left: 3px solid #10b981; text-align: left; font-size: 0.88rem; color: #065f46; }
+        footer { padding: 24px; text-align: center; color: #9ca3af; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Principal<span>TasksAI</span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="success-card">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading your purchase details...</p>
+            </div>
+
+            <div id="content" style="display:none;">
+                <div class="success-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                <h1>Purchase Complete!</h1>
+                <p class="subtitle">Your PrincipalTasksAI skills are ready to download.</p>
+
+                <div class="details">
+                    <div class="detail-row">
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value" id="email">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Credits Purchased</span>
+                        <span class="detail-value" id="credits">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Total Balance</span>
+                        <span class="detail-value" id="total-credits">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">License Key</span>
+                        <span class="detail-value license-key" id="license-key">—</span>
+                    </div>
+                </div>
+
+                <a href="#" id="download-btn" class="download-btn">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                    </svg>
+                    Download Your PrincipalTasksAI Skills
+                </a>
+
+                <div class="note">
+                    <strong>💡 Save this page or your email.</strong> Your license key above lets you re-download anytime from <code>https://principaltasksai.com/success</code>.
+                </div>
+            </div>
+
+            <div id="error" class="error" style="display:none;">
+                <p>We couldn't load your purchase details automatically. Check your email for your license key, or contact <a href="mailto:hello@principaltasksai.com">hello@principaltasksai.com</a> for help.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Laudo Lux, LLC &nbsp;·&nbsp; <a href="mailto:hello@principaltasksai.com">hello@principaltasksai.com</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a></p>
+    </footer>
+
+    <script>
+        const API_BASE = 'https://api.lawtasksai.com';
+        const PRODUCT_ID = 'principal';
+
+        async function loadPurchaseDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const sessionId = params.get('session_id');
+            if (!sessionId) { showError(); return; }
+
+            // Retry up to 5 times (handles webhook race condition)
+            for (let attempt = 1; attempt <= 5; attempt++) {
+                try {
+                    const resp = await fetch(`${API_BASE}/checkout/session/${sessionId}`, {
+                        headers: { 'X-Product-ID': PRODUCT_ID }
+                    });
+                    if (!resp.ok) {
+                        if (attempt < 5) { await sleep(1500); continue; }
+                        throw new Error('not ok');
+                    }
+                    const data = await resp.json();
+                    document.getElementById('email').textContent = data.email || '—';
+                    document.getElementById('credits').textContent = data.credits_purchased || '—';
+                    document.getElementById('total-credits').textContent = data.total_credits || '—';
+                    document.getElementById('license-key').textContent = data.license_key || '—';
+                    if (data.license_key) {
+                        document.getElementById('download-btn').href =
+                            `${API_BASE}/download/loader/${data.license_key}`;
+                    }
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                    return;
+                } catch (e) {
+                    if (attempt < 5) { await sleep(1500); }
+                }
+            }
+            showError();
+        }
+
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'block';
+        }
+
+        function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+        loadPurchaseDetails();
+    </script>
+</body>
+</html>

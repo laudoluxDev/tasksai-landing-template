@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 170 Purpose-Built Dentists and dental office administrators Tools — DentistTasksAI</title>
+    <meta name="description" content="Browse all 170 DentistTasksAI task templates. Purpose-built for Dentists and dental office administrators — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://dentisttasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #06B6D4; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #06B6D4; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #06B6D4; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(6,182,212,0.1); color: #06B6D4;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #06B6D4; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #06B6D4; color: #06B6D4; background: rgba(6,182,212,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #06B6D4; box-shadow: 0 4px 12px rgba(6,182,212,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(6,182,212,0.1); color: #06B6D4; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #06B6D4; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(6,182,212,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #06B6D4; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">DentistTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🦷 170 tasks available</div>
+            <h1><span>170</span> Purpose-Built Tools<br>for Dentists and dental office administratorss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 170</a>
+            <a href="#patient_intake_and_onboarding" class="filter-btn" data-cat="patient_intake_and_onboarding">Patient Intake & Onboarding (24)</a>
+            <a href="#treatment_plan_communications" class="filter-btn" data-cat="treatment_plan_communications">Treatment Plan Communications (25)</a>
+            <a href="#insurance_and_billing_administration" class="filter-btn" data-cat="insurance_and_billing_administration">Insurance & Billing Administration (24)</a>
+            <a href="#patient_communications_and_recall" class="filter-btn" data-cat="patient_communications_and_recall">Patient Communications & Recall (20)</a>
+            <a href="#compliance_and_hipaa_documentation" class="filter-btn" data-cat="compliance_and_hipaa_documentation">Compliance & HIPAA Documentation (20)</a>
+            <a href="#appointment_and_schedule_management" class="filter-btn" data-cat="appointment_and_schedule_management">Appointment & Schedule Management (20)</a>
+            <a href="#financial_administration" class="filter-btn" data-cat="financial_administration">Financial Administration (20)</a>
+            <a href="#practice_management" class="filter-btn" data-cat="practice_management">Practice Management (17)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Patient Intake & Onboarding -->
+    <section class="category-section" id="patient_intake_and_onboarding">
+        <div class="container">
+            <div class="category-header">
+                <h2>Patient Intake & Onboarding</h2>
+                <span class="category-count">24 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Collect patient copay or deposit</h3>
+                    <p>Process payment according to office financial policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect patient medication list</h3>
+                    <p>Review and update with each visit</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct new patient intake call</h3>
+                    <p>Review insurance, medical history, and appointment scheduling</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct new patient survey</h3>
+                    <p>Gather feedback on office environment and staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct new patient tour</h3>
+                    <p>Show key areas of office and explain patient flow</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create patient electronic chart</h3>
+                    <p>Set up digital record in practice management system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain financial policy agreement</h3>
+                    <p>Review payment options, plans, and due dates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain office policies to new patients</h3>
+                    <p>Walk through appointment policies, cancellation fees, and payment options</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Greet and check in new patients</h3>
+                    <p>Collect signed forms, make copies of ID and insurance card</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain new patient waitlist</h3>
+                    <p>Notify patients when appointments become available</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage new patient paperwork</h3>
+                    <p>Collect and file patient registration, HIPAA, and consent forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify billing of new patient</h3>
+                    <p>Provide demographic and coverage details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain patient dental and medical history</h3>
+                    <p>Gather comprehensive health background</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new patient to practice</h3>
+                    <p>Explain office flow, introduce key staff, tour facility</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare new patient welcome packet</h3>
+                    <p>Compile a welcome packet with intake forms, office policies, and contact information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process new patient referrals</h3>
+                    <p>Gather required paperwork and schedule appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review patient consent forms</h3>
+                    <p>Ensure HIPAA, treatment, and financial policies signed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Scan and file new patient documents</h3>
+                    <p>Organize physical and digital patient records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule new patient first visit</h3>
+                    <p>Coordinate with provider schedules and patient availability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule new patient follow-up visit</h3>
+                    <p>Book appointment based on provider recommendations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send new patient appointment reminders</h3>
+                    <p>Email, text, or call to confirm scheduled visit</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up patient portal account</h3>
+                    <p>Invite new patients to access online records and forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update patient contact information</h3>
+                    <p>Ensure phone, email, and address are current in practice management system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify patient photo id</h3>
+                    <p>Photocopy or scan ID to match insurance and records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Patient Intake & Onboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Plan Communications -->
+    <section class="category-section" id="treatment_plan_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Treatment Plan Communications</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Assist patients in filing insurance claims</h3>
+                    <p>Guide through process of obtaining reimbursement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect patient portion of treatment fees</h3>
+                    <p>Process payments for agreed upon services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate referrals to specialists</h3>
+                    <p>Schedule appointments with external providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create custom dental product orders</h3>
+                    <p>Purchase specialized devices, appliances, or materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document patient refusal of recommended care</h3>
+                    <p>Note in chart and have patient sign declination</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document reasons for missed appointments</h3>
+                    <p>Note in patient chart and notify provider</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate patients on oral hygiene</h3>
+                    <p>Demonstrate brushing, flossing, and other techniques</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain treatment plan to patient</h3>
+                    <p>Discuss diagnosis, options, and estimated costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate communication between providers</h3>
+                    <p>Share patient information and coordinate care plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on outstanding treatment</h3>
+                    <p>Remind patients to complete recommended care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Inform patient of treatment delays or changes</h3>
+                    <p>Notify of scheduling conflicts or supply issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage treatment plan revisions</h3>
+                    <p>Update patient records as needs change over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain patient authorization for treatment</h3>
+                    <p>Collect signed consent forms for procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide treatment plan cost estimate</h3>
+                    <p>Calculate expected patient responsibility</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide written treatment instructions</h3>
+                    <p>Give patients take-home materials and resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to patient questions about treatment</h3>
+                    <p>Provide clear explanations and address concerns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review and explain dental x-rays</h3>
+                    <p>Describe findings and need for recommended care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review provider treatment plan</h3>
+                    <p>Understand recommended procedures and timeline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule follow-up treatment appointments</h3>
+                    <p>Book next phase of multi-visit procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule recommended dental appointments</h3>
+                    <p>Coordinate provider and patient availability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send treatment plan to insurance company</h3>
+                    <p>Obtain predetermination of benefits coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up payment plan for treatment costs</h3>
+                    <p>Establish installment schedule for patient balance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit pre-treatment insurance claims</h3>
+                    <p>Obtain pre-approvals for covered procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify insurance benefits and coverage</h3>
+                    <p>Confirm plan limitations, exclusions, and maximums</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify treatment acceptance with patient</h3>
+                    <p>Confirm plan agreement before starting services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Treatment Plan Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance & Billing Administration -->
+    <section class="category-section" id="insurance_and_billing_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Insurance & Billing Administration</h2>
+                <span class="category-count">24 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Audit insurance claim submissions</h3>
+                    <p>Ensure accuracy and completeness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect patient copays and deductibles</h3>
+                    <p>Process payments at time of service</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate patients on dental insurance</h3>
+                    <p>Explain benefits, limitations, and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle patient insurance eligibility issues</h3>
+                    <p>Resolve coverage questions or discrepancies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement billing compliance practices</h3>
+                    <p>Follow regulations and prevent fraud/abuse</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement electronic claims submissions</h3>
+                    <p>Submit paperless insurance reimbursement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain practice fee analysis reports</h3>
+                    <p>Monitor charge rates and revenue trends</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage dental insurance contracts</h3>
+                    <p>Negotiate in-network rates and fee schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage insurance credentialing process</h3>
+                    <p>Enroll providers in insurance networks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage insurance prior authorizations</h3>
+                    <p>Obtain approvals for covered procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in insurance audits and reviews</h3>
+                    <p>Provide documentation and information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Post patient payments to accounts</h3>
+                    <p>Apply cash receipts to open charges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare monthly billing statements</h3>
+                    <p>Generate consolidated patient account reports</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process dental insurance claim denials</h3>
+                    <p>Appeal and resubmit rejected claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process patient insurance payments</h3>
+                    <p>Reconcile Explanation of Benefits (EOB)</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process patient refunds and adjustments</h3>
+                    <p>Handle overpayments and correct billing errors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide billing statements to patients</h3>
+                    <p>Generate invoices for outstanding amounts due</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve patient balance collections</h3>
+                    <p>Work with third-party agencies to collect debt</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to patient billing inquiries</h3>
+                    <p>Address questions about charges and payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resubmit denied insurance claims</h3>
+                    <p>Appeal rejections and refile paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up patient payment plans</h3>
+                    <p>Establish installment schedules for balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit dental insurance claims</h3>
+                    <p>File electronic or paper claims for services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track and follow up on unpaid claims</h3>
+                    <p>Proactively manage outstanding balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify patient insurance coverage</h3>
+                    <p>Check benefits, deductibles, and copays</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Communications & Recall -->
+    <section class="category-section" id="patient_communications_and_recall">
+        <div class="container">
+            <div class="category-header">
+                <h2>Patient Communications & Recall</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Address patient complaints and concerns</h3>
+                    <p>Resolve issues professionally and compassionately</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct outreach for overdue patients</h3>
+                    <p>Proactively contact those needing recall visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct patient satisfaction surveys</h3>
+                    <p>Gather feedback on overall office experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm upcoming patient appointments</h3>
+                    <p>Contact patients to verify scheduled visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate patient appointment reminders</h3>
+                    <p>Send automated text, email, and phone alerts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate patient referrals to specialists</h3>
+                    <p>Facilitate records transfer and appointment booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate patients on oral hygiene practices</h3>
+                    <p>Demonstrate proper brushing, flossing, and care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate communication with patient families</h3>
+                    <p>Work with caregivers, guardians, or decision-makers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on missed or cancelled appointments</h3>
+                    <p>Reach out to reschedule and understand no-shows</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Inform patients of lab or test results</h3>
+                    <p>Communicate findings and next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain patient communication records</h3>
+                    <p>Document all interactions in practice management system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain patient satisfaction metrics</h3>
+                    <p>Track survey data and implement improvement plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage patient requests and messages</h3>
+                    <p>Document interactions and follow up as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage patient requests for medical records</h3>
+                    <p>Process release forms and provide copies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify patients of provider schedule changes</h3>
+                    <p>Alert to any unexpected office closures or delays</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide patients with procedure instructions</h3>
+                    <p>Give pre- and post-op care guidance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to patient phone inquiries</h3>
+                    <p>Address questions, concerns, or requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule patient transportation assistance</h3>
+                    <p>Coordinate with third-party services if needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send appointment reminder notifications</h3>
+                    <p>Provide email, text, or phone call prompts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update patients on delays or changes</h3>
+                    <p>Notify of scheduling conflicts or provider changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Patient Communications & Recall</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & HIPAA Documentation -->
+    <section class="category-section" id="compliance_and_hipaa_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & HIPAA Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Conduct hipaa employee background checks</h3>
+                    <p>Vet team members with access to protected data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct hipaa risk assessments and audits</h3>
+                    <p>Evaluate data security and workflow compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate hipaa policy and procedure updates</h3>
+                    <p>Review and revise compliance guidelines as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate osha training for clinical staff</h3>
+                    <p>Educate on workplace safety and infection control</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document informed consent for procedures</h3>
+                    <p>Collect signed permission forms for dental work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document patient care and treatment plans</h3>
+                    <p>Record details in electronic health records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document patient refusals or declinations</h3>
+                    <p>Note when patients decline recommended care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement data backup and recovery protocols</h3>
+                    <p>Ensure patient data is regularly archived and protected</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement medical records retention policies</h3>
+                    <p>Determine appropriate storage timelines and destruction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain hipaa breach notification procedures</h3>
+                    <p>Be prepared to notify patients of data privacy incidents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain hipaa-compliant email and messaging</h3>
+                    <p>Ensure digital communications meet privacy standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain patient consent forms</h3>
+                    <p>Obtain signatures for HIPAA, treatment, and financial policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain proper disposal of medical waste</h3>
+                    <p>Follow biohazard handling and document destruction policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage business associate agreements</h3>
+                    <p>Ensure third-party vendors meet privacy requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage patient requests to access records</h3>
+                    <p>Process forms and provide copies of medical information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage protected health information disclosures</h3>
+                    <p>Track and report on any releases of patient data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to subpoenas and legal requests</h3>
+                    <p>Coordinate with providers to release patient data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Restrict unauthorized access to patient data</h3>
+                    <p>Control user permissions in practice management system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Safeguard protected health information</h3>
+                    <p>Secure physical and digital patient records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on hipaa privacy requirements</h3>
+                    <p>Educate team on regulations and compliance practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & HIPAA Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Schedule Management -->
+    <section class="category-section" id="appointment_and_schedule_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Appointment & Schedule Management</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Block off provider schedules for time off</h3>
+                    <p>Manage vacations, continuing education, and other absences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate provider schedule changes</h3>
+                    <p>Notify patients of rescheduled, cancelled, or delayed visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate referrals between providers</h3>
+                    <p>Schedule follow-up visits with in-house specialists</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Determine optimal patient flow and scheduling</h3>
+                    <p>Analyze patterns to improve utilization and productivity</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document patient no-shows and cancellations</h3>
+                    <p>Note in records and apply any relevant fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle patient requests to reschedule</h3>
+                    <p>Work with them to find a new mutually-agreeable time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle same-day or walk-in appointment requests</h3>
+                    <p>Accommodate urgent needs and fit-in unscheduled visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement online patient scheduling portal</h3>
+                    <p>Allow self-service booking of available appointment times</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain provider daily appointment books</h3>
+                    <p>Track scheduled visits, procedures, and open slots</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain staff break and lunch schedules</h3>
+                    <p>Coordinate coverage to ensure continuous patient care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage double-booking and overlapping visits</h3>
+                    <p>Resolve scheduling conflicts and patient complaints</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage patient appointment wait lists</h3>
+                    <p>Notify and schedule from the list when openings occur</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor and report on appointment metrics</h3>
+                    <p>Track KPIs like utilization, wait times, and throughput</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare daily provider appointment lists</h3>
+                    <p>Generate and distribute daily patient schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process patient appointment confirmations</h3>
+                    <p>Verify visits and update provider calendars</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule new patient appointments</h3>
+                    <p>Coordinate provider and patient availability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send automated appointment reminders</h3>
+                    <p>Contact patients via email, text, or phone calls</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up recurring and recurring hygiene visits</h3>
+                    <p>Schedule regular cleanings and follow-up care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Troubleshoot scheduling system issues</h3>
+                    <p>Resolve software or hardware problems impacting booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update patient appointment information</h3>
+                    <p>Capture changes to visit dates, times, or providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Administration -->
+    <section class="category-section" id="financial_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze financial reports and kpis</h3>
+                    <p>Review revenue, productivity, and A/R metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate patient refunds and adjustments</h3>
+                    <p>Handle overpayments, incorrect charges, and credits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle patient requests for payment plans</h3>
+                    <p>Establish installment schedules for dental services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement financial policies and procedures</h3>
+                    <p>Ensure consistent application of billing practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain accurate patient fee schedules</h3>
+                    <p>Update and apply fee changes for dental procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain inventory control and tracking</h3>
+                    <p>Monitor usage, reordering needs, and storage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage collection efforts for past-due accounts</h3>
+                    <p>Work with third-party agencies to recover outstanding debt</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage dental supply and equipment ordering</h3>
+                    <p>Procure materials, instruments, and capital assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage vendor contracts and relationships</h3>
+                    <p>Negotiate pricing, terms, and service level agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor aged accounts receivable balances</h3>
+                    <p>Follow up on outstanding patient and insurance payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Perform monthly closing and accruals</h3>
+                    <p>Prepare for accounting and tax filing requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Post all patient financial transactions</h3>
+                    <p>Apply cash receipts, refunds, and adjustments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare annual budgets and financial forecasts</h3>
+                    <p>Project revenue, expenses, and capital expenditures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process credit card and electronic payments</h3>
+                    <p>Securely handle card transactions and bank transfers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process patient payments and deposits</h3>
+                    <p>Collect copays, deductibles, and outstanding balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll for clinical and administrative staff</h3>
+                    <p>Calculate wages, benefits, and tax withholdings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide detailed billing statements to patients</h3>
+                    <p>Generate invoices with line-item procedures and charges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile insurance payments and eobs</h3>
+                    <p>Match reimbursement to billed claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to patient billing and account inquiries</h3>
+                    <p>Address questions and resolve discrepancies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit claims and collect from third-party payers</h3>
+                    <p>Process insurance reimbursement and denials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Management -->
+    <section class="category-section" id="practice_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Practice Management</h2>
+                <span class="category-count">17 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer employee benefit programs</h3>
+                    <p>Enroll staff in health insurance, retirement plans, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze key performance indicators (kpis)</h3>
+                    <p>Monitor data on productivity, profitability, and growth</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate employee recruiting and onboarding</h3>
+                    <p>Post job listings, screen candidates, and train new hires</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate facility maintenance and repairs</h3>
+                    <p>Address building, equipment, and safety issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate staff meetings and training sessions</h3>
+                    <p>Plan agendas, facilitate discussions, and track action items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop and implement employee policies</h3>
+                    <p>Establish guidelines for conduct, leave, and discipline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop the practice's strategic business plan</h3>
+                    <p>Set goals, define initiatives, and track key metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate office supply and equipment procurement</h3>
+                    <p>Order and maintain inventory of necessary items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain licenses, permits, and certifications</h3>
+                    <p>Renew registrations and track provider credentialing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain the dental practice website</h3>
+                    <p>Update content, images, and contact information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's marketing and advertising</h3>
+                    <p>Develop promotions, design ads, and track campaign results</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's social media channels</h3>
+                    <p>Create posts, respond to comments, and engage followers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage vendor relationships and contracts</h3>
+                    <p>Negotiate terms, resolve issues, and renew agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor and address staff performance issues</h3>
+                    <p>Document concerns, provide feedback, and take corrective action</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize and maintain employee personnel files</h3>
+                    <p>Securely store HR documents and track compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee the practice's it infrastructure</h3>
+                    <p>Manage hardware, software, networks, and data storage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare and file all required business taxes</h3>
+                    <p>Ensure compliance with federal, state, and local requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 170 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DentistTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

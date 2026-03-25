@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 174 Purpose-Built Travel agents Tools — TravelAgentTasksAI</title>
+    <meta name="description" content="Browse all 174 TravelAgentTasksAI task templates. Purpose-built for Travel agents, travel advisors, and tour operators — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://travelagenttasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #0891B2; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #0891B2; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #0891B2; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(8,145,178,0.1); color: #0891B2;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #0891B2; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #0891B2; color: #0891B2; background: rgba(8,145,178,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #0891B2; box-shadow: 0 4px 12px rgba(8,145,178,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(8,145,178,0.1); color: #0891B2; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #0891B2; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(8,145,178,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #0891B2; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">TravelAgentTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">✈️ 174 tasks available</div>
+            <h1><span>174</span> Purpose-Built Tools<br>for Travel agentss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 174</a>
+            <a href="#itinerary_and_trip_planning" class="filter-btn" data-cat="itinerary_and_trip_planning">Itinerary & Trip Planning (25)</a>
+            <a href="#client_proposals_and_quotes" class="filter-btn" data-cat="client_proposals_and_quotes">Client Proposals & Quotes (25)</a>
+            <a href="#supplier_and_vendor_communications" class="filter-btn" data-cat="supplier_and_vendor_communications">Supplier & Vendor Communications (20)</a>
+            <a href="#booking_and_confirmation_administration" class="filter-btn" data-cat="booking_and_confirmation_administration">Booking & Confirmation Administration (25)</a>
+            <a href="#travel_insurance_documentation" class="filter-btn" data-cat="travel_insurance_documentation">Travel Insurance Documentation (20)</a>
+            <a href="#client_communications_and_follow_up" class="filter-btn" data-cat="client_communications_and_follow_up">Client Communications & Follow-Up (20)</a>
+            <a href="#compliance_and_licensing" class="filter-btn" data-cat="compliance_and_licensing">Compliance & Licensing (20)</a>
+            <a href="#business_development" class="filter-btn" data-cat="business_development">Business Development (19)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Itinerary & Trip Planning -->
+    <section class="category-section" id="itinerary_and_trip_planning">
+        <div class="container">
+            <div class="category-header">
+                <h2>Itinerary & Trip Planning</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Arrange airport transfers</h3>
+                    <p>Book car services, taxis, or rideshare for airport arrivals and departures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assemble final itinerary document</h3>
+                    <p>Compile all trip details into a polished, branded itinerary for the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Book client accommodations</h3>
+                    <p>Reserve hotel rooms and confirm reservations with the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with suppliers</h3>
+                    <p>Communicate with airlines, hotels, tour operators, etc. to finalize all arrangements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create transportation schedule</h3>
+                    <p>Outline flights, trains, buses, and transfers for the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create trip timeline</h3>
+                    <p>Develop a comprehensive timeline for the client's trip</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client signature on itinerary</h3>
+                    <p>Collect the client's signature to confirm approval of the final itinerary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize all trip documents</h3>
+                    <p>Gather and collate all relevant travel documents in a client folder</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize trip photography</h3>
+                    <p>Arrange for a photographer to capture the client's journey</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Plan activities and sightseeing</h3>
+                    <p>Research and schedule activities, tours, and sightseeing for the trip</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare detailed travel itinerary</h3>
+                    <p>Draft a day-by-day travel itinerary with logistics, accommodations, and activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare driving directions</h3>
+                    <p>Provide turn-by-turn directions for self-drive portions of the itinerary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare pre-trip destination guide</h3>
+                    <p>Assemble a comprehensive destination guide for the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Print and deliver physical itinerary</h3>
+                    <p>Print and physically deliver the itinerary document to the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide digital itinerary updates</h3>
+                    <p>Send the client any last-minute changes or updates to the itinerary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend cultural experiences</h3>
+                    <p>Propose immersive cultural activities for the client to enjoy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research hotel options</h3>
+                    <p>Curate a list of suitable hotel options within the client's budget</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research local attractions</h3>
+                    <p>Identify and recommend top attractions, activities, and events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review final itinerary with client</h3>
+                    <p>Walk through the complete itinerary with the client to ensure accuracy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up trip emergency contacts</h3>
+                    <p>Compile and distribute emergency contact information for the client's trip</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Share digital itinerary with client</h3>
+                    <p>Provide the client with a shareable, electronic version of the final itinerary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Store client itinerary records</h3>
+                    <p>Maintain a digital archive of the client's finalized trip itinerary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Suggest dining and shopping options</h3>
+                    <p>Curate a list of recommended restaurants, cafes, and shops</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track client arrival and departure</h3>
+                    <p>Monitor the client's travel status and communicate any changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update itinerary as changes occur</h3>
+                    <p>Revise the itinerary to accommodate any last-minute changes or requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Itinerary & Trip Planning</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Proposals & Quotes -->
+    <section class="category-section" id="client_proposals_and_quotes">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Proposals & Quotes</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Add service fees and commissions</h3>
+                    <p>Incorporate the agency's fees and supplier commissions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Benchmark against competitors</h3>
+                    <p>Research competitor proposals to improve own offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Calculate package pricing</h3>
+                    <p>Determine the total cost for each proposed trip option</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Convert proposal to booking</h3>
+                    <p>Transform the approved proposal into a formal trip booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Cost out accommodations</h3>
+                    <p>Secure hotel rates and include them in the package pricing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Customize proposal per client</h3>
+                    <p>Revise the proposal to address the client's specific feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Discuss proposal details with client</h3>
+                    <p>Answer questions and provide clarification on the package options</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Factor in client's budget</h3>
+                    <p>Ensure proposed packages align with the client's budget constraints</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Factor in travel insurance</h3>
+                    <p>Provide quotes for recommended travel insurance coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client trip requirements</h3>
+                    <p>Conduct a comprehensive needs assessment with the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify new package opportunities</h3>
+                    <p>Brainstorm novel trip ideas to propose to clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate package pricing</h3>
+                    <p>Work with the client to finalize the trip package cost</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client approval on proposal</h3>
+                    <p>Collect the client's sign-off on the selected trip package</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Pitch custom trip packages</h3>
+                    <p>Proactively offer bespoke travel experiences to clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare trip package options</h3>
+                    <p>Develop multiple itinerary proposals for the client to consider</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Present proposal options to client</h3>
+                    <p>Deliver the trip package proposals to the client for review</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Price activities and tours</h3>
+                    <p>Research and incorporate activity/tour pricing into the proposals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Price ground transportation</h3>
+                    <p>Account for local transportation costs in the package proposals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide air travel estimates</h3>
+                    <p>Research and include flight pricing in the package quotes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client with proposal copy</h3>
+                    <p>Deliver a final copy of the approved proposal to the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research destination options</h3>
+                    <p>Explore potential travel locations that fit the client's criteria</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review proposal templates</h3>
+                    <p>Periodically update proposal templates to improve efficiency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Solicit client feedback on proposals</h3>
+                    <p>Ask clients for input to enhance future proposal quality</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Store client proposal records</h3>
+                    <p>Maintain a digital archive of the client's trip proposal</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track proposal conversion rates</h3>
+                    <p>Analyze the success of proposals in converting to bookings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Client Proposals & Quotes</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supplier & Vendor Communications -->
+    <section class="category-section" id="supplier_and_vendor_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Supplier & Vendor Communications</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Attend supplier product trainings</h3>
+                    <p>Stay informed on new offerings and policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate booking details</h3>
+                    <p>Share client itinerary information with suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate multi-supplier trips</h3>
+                    <p>Align logistics when booking across multiple providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document supplier interactions</h3>
+                    <p>Keep records of all communications and agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Escalate supplier issues</h3>
+                    <p>Intervene when suppliers fail to meet contractual obligations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish supplier relationships</h3>
+                    <p>Build and maintain partnerships with travel providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate supplier responses</h3>
+                    <p>Relay client questions or requests to appropriate suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle supplier cancellations</h3>
+                    <p>Mitigate the impact of supplier-initiated trip changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain supplier contact database</h3>
+                    <p>Organize and update supplier contact information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage supplier communications</h3>
+                    <p>Maintain clear, professional dialog with all travel partners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage supplier invoices</h3>
+                    <p>Process and pay invoices from travel suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate compensation for issues</h3>
+                    <p>Secure refunds or credits for client inconveniences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate supplier contracts</h3>
+                    <p>Secure the best rates and terms with travel vendors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify suppliers of changes</h3>
+                    <p>Inform vendors of any revisions to client bookings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide supplier performance feedback</h3>
+                    <p>Offer constructive feedback to improve supplier service</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research new supplier options</h3>
+                    <p>Identify potential new travel providers to work with</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve supplier billing issues</h3>
+                    <p>Troubleshoot and rectify any billing problems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review supplier partnerships annually</h3>
+                    <p>Assess the value and viability of existing relationships</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track supplier service levels</h3>
+                    <p>Monitor and evaluate vendor performance metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Vet and onboard new suppliers</h3>
+                    <p>Qualify and integrate new travel vendors into operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Supplier & Vendor Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Confirmation Administration -->
+    <section class="category-section" id="booking_and_confirmation_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Booking & Confirmation Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze booking trends and patterns</h3>
+                    <p>Review booking data to identify opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Calculate total booking cost</h3>
+                    <p>Determine the full price for the client's trip package</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Check availability for requested dates</h3>
+                    <p>Confirm desired travel dates are open with suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect deposit payment from client</h3>
+                    <p>Process the initial deposit to confirm the booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect final trip balance from client</h3>
+                    <p>Process the remaining balance due prior to travel</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with suppliers on changes</h3>
+                    <p>Notify travel providers of booking revisions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute client contact details</h3>
+                    <p>Share client info with relevant suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client booking details</h3>
+                    <p>Collect all necessary information to initiate the booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Issue booking confirmation to client</h3>
+                    <p>Provide the client with details of the confirmed booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Issue travel documents to client</h3>
+                    <p>Provide the client with tickets, vouchers, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Leverage booking management software</h3>
+                    <p>Utilize tools to streamline booking workflows</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain booking data integrity</h3>
+                    <p>Ensure accurate, up-to-date booking records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage booking change requests</h3>
+                    <p>Accommodate modifications to an existing reservation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage waitlists and availability</h3>
+                    <p>Maintain and communicate booking waitlist status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor booking deadlines</h3>
+                    <p>Ensure timely payments and avoid late fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify clients of booking status</h3>
+                    <p>Communicate any updates or issues with the booking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize client travel documents</h3>
+                    <p>Compile and deliver all necessary trip paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Place provisional bookings with suppliers</h3>
+                    <p>Secure client's preferred travel components</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process booking cancellations</h3>
+                    <p>Handle client-initiated trip cancellations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process bookings for group travel</h3>
+                    <p>Handle larger, multi-passenger group reservations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide booking info to operations team</h3>
+                    <p>Brief internal staff on client trip details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide booking quote to client</h3>
+                    <p>Present the client with the complete booking price</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Receive client booking request</h3>
+                    <p>Process new trip booking inquiries from clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Refund cancelled booking amounts</h3>
+                    <p>Issue refunds for cancelled or unused travel components</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update booking records and files</h3>
+                    <p>Maintain comprehensive booking documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Booking & Confirmation Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Insurance Documentation -->
+    <section class="category-section" id="travel_insurance_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Travel Insurance Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advise clients on pre-existing conditions</h3>
+                    <p>Provide guidance on how to handle pre-existing issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist clients with policy changes</h3>
+                    <p>Help modify or update existing insurance plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect and store client medical info</h3>
+                    <p>Securely retain client health data for insurance needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop custom insurance packages</h3>
+                    <p>Create unique travel insurance solutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document all insurance interactions</h3>
+                    <p>Keep detailed records of client insurance activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate clients on insurance options</h3>
+                    <p>Provide guidance on available travel insurance coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure compliance with regulations</h3>
+                    <p>Maintain awareness of insurance-related laws and rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate insurance plan performance</h3>
+                    <p>Analyze claims data to improve policy recommendations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain insurance policy details</h3>
+                    <p>Review the coverage terms and conditions with the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle insurance claims on behalf of client</h3>
+                    <p>File and manage insurance claims for the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Liaise with insurance providers</h3>
+                    <p>Communicate with insurers to resolve client issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client insurance records</h3>
+                    <p>Keep organized files of all client insurance policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate preferred insurance rates</h3>
+                    <p>Work with providers to secure discounted coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client's insurance selection</h3>
+                    <p>Collect the client's preferred insurance choice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process insurance policy purchase</h3>
+                    <p>Facilitate the client's insurance plan acquisition</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide insurance policy documents</h3>
+                    <p>Deliver the client's insurance paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend appropriate insurance plans</h3>
+                    <p>Suggest the right policy based on the client's trip</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Remind clients of insurance renewal</h3>
+                    <p>Proactively notify clients of upcoming policy expiration</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research new insurance offerings</h3>
+                    <p>Identify emerging travel insurance products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on insurance policies</h3>
+                    <p>Educate team members on insurance products and processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Travel Insurance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Communications & Follow-Up -->
+    <section class="category-section" id="client_communications_and_follow_up">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Communications & Follow-Up</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Address client concerns or issues</h3>
+                    <p>Resolve any problems that arise during the client's journey</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze client satisfaction metrics</h3>
+                    <p>Review feedback data to enhance the client experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Check in with clients during travel</h3>
+                    <p>Maintain regular contact to monitor the client's trip</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect client feedback post-trip</h3>
+                    <p>Solicit reviews and suggestions for service improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm client contact information</h3>
+                    <p>Validate and update the client's contact details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Deliver trip departure reminders</h3>
+                    <p>Proactively notify clients of upcoming travel dates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop personalized communications</h3>
+                    <p>Tailor messages to each client's preferences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Foster long-term client relationships</h3>
+                    <p>Cultivate trust and loyalty over multiple bookings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client communication records</h3>
+                    <p>Document all interactions in the client's file</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer exclusive client perks</h3>
+                    <p>Give loyal clients access to special benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide trip planning guidance</h3>
+                    <p>Offer recommendations and advice to help clients prepare</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recognize client loyalty and advocacy</h3>
+                    <p>Acknowledge and reward clients for positive referrals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client inquiries</h3>
+                    <p>Handle questions and requests from clients in a timely manner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule client consultations</h3>
+                    <p>Arrange in-person or virtual meetings as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule periodic client check-ins</h3>
+                    <p>Proactively reconnect with clients between trips</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Segment clients for targeted outreach</h3>
+                    <p>Group clients based on shared characteristics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send post-trip thank-you notes</h3>
+                    <p>Express gratitude for the client's business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send pre-trip communications</h3>
+                    <p>Provide clients with important information before departure</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Share industry updates and news</h3>
+                    <p>Provide clients with relevant travel-related information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Upsell clients on premium services</h3>
+                    <p>Suggest enhanced travel experiences to clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications & Follow-Up</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Licensing -->
+    <section class="category-section" id="compliance_and_licensing">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Licensing</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advise clients on travel restrictions</h3>
+                    <p>Provide guidance on visa, passport, and other entry rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Advocate for travel consumer protections</h3>
+                    <p>Push for improved laws and policies governing the industry</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with consumer protection laws</h3>
+                    <p>Adhere to regulations governing travel sales practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct internal audits periodically</h3>
+                    <p>Review operations to ensure ongoing compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Demonstrate commitment to ethics</h3>
+                    <p>Uphold the highest standards of professional conduct</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Fulfill financial reporting requirements</h3>
+                    <p>Submit periodic financial disclosures as mandated</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement data privacy protocols</h3>
+                    <p>Safeguard client information as per regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain detailed compliance records</h3>
+                    <p>Document the agency's adherence to regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain professional liability insurance</h3>
+                    <p>Secure coverage to protect the agency from claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain proper business licensing</h3>
+                    <p>Ensure the agency is compliant with local regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage travel-related tax obligations</h3>
+                    <p>Calculate and remit all applicable taxes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor regulatory changes in industry</h3>
+                    <p>Stay informed on new laws and policies affecting travel</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain required travel agent certifications</h3>
+                    <p>Complete necessary industry training and exams</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in industry associations</h3>
+                    <p>Engage with travel trade groups to influence regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew licensing and credentials annually</h3>
+                    <p>Complete renewal processes for all necessary certifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to regulatory inquiries</h3>
+                    <p>Cooperate with authorities conducting travel agent audits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Satisfy destination entry requirements</h3>
+                    <p>Verify clients meet all necessary travel document criteria</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on compliance standards</h3>
+                    <p>Educate team members on regulatory requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update agency policies and procedures</h3>
+                    <p>Revise internal practices to maintain compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Uphold supplier contract terms</h3>
+                    <p>Meet the obligations outlined in vendor agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Development -->
+    <section class="category-section" id="business_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Development</h2>
+                <span class="category-count">19 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze industry trends and changes</h3>
+                    <p>Stay ahead of evolving client preferences and behaviors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a comprehensive marketing plan</h3>
+                    <p>Outline strategies to promote the agency's services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Cultivate client referral networks</h3>
+                    <p>Incentivize existing clients to recommend the agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop new product offerings</h3>
+                    <p>Create innovative travel packages and experiences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop the agency's brand identity</h3>
+                    <p>Establish a unique, recognizable brand for the business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Diversify revenue streams</h3>
+                    <p>Explore ancillary income sources beyond core services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish strategic partnerships</h3>
+                    <p>Form alliances with complementary businesses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Expand into new geographic markets</h3>
+                    <p>Identify and penetrate untapped regional client bases</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather competitive intelligence</h3>
+                    <p>Research competitors to identify market opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement targeted advertising campaigns</h3>
+                    <p>Run paid ads to reach prospective clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Invest in customer retention strategies</h3>
+                    <p>Implement programs to foster long-term client loyalty</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Leverage search engine optimization (seo)</h3>
+                    <p>Optimize digital channels for improved visibility</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the agency's online presence</h3>
+                    <p>Maintain an engaging website and social media channels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor team sales performance</h3>
+                    <p>Track individual and collective sales metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer team-based sales incentives</h3>
+                    <p>Motivate agents through commission structures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new travel agent team members</h3>
+                    <p>Recruit, hire, and train additional sales staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in industry trade shows</h3>
+                    <p>Represent the agency at travel industry events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce marketing content and assets</h3>
+                    <p>Generate branded materials like brochures, videos, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide ongoing sales training</h3>
+                    <p>Equip agents with the skills to excel at client interactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 174 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TravelAgentTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

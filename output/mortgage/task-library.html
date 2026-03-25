@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 80 Purpose-Built Mortgage loan officers Tools — MortgageTasksAI</title>
+    <meta name="description" content="Browse all 80 MortgageTasksAI task templates. Purpose-built for Mortgage loan officers, processors, and underwriters — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://mortgagetasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #0891B2; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #0891B2; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #0891B2; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(8,145,178,0.1); color: #0891B2;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #0891B2; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #0891B2; color: #0891B2; background: rgba(8,145,178,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #0891B2; box-shadow: 0 4px 12px rgba(8,145,178,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(8,145,178,0.1); color: #0891B2; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #0891B2; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(8,145,178,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #0891B2; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MortgageTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🏦 80 tasks available</div>
+            <h1><span>80</span> Purpose-Built Tools<br>for Mortgage loan officerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 80</a>
+            <a href="#borrower_communications" class="filter-btn" data-cat="borrower_communications">Borrower Communications (20)</a>
+            <a href="#loan_processing_and_conditions" class="filter-btn" data-cat="loan_processing_and_conditions">Loan Processing & Conditions (10)</a>
+            <a href="#underwriting_documentation" class="filter-btn" data-cat="underwriting_documentation">Underwriting Documentation (10)</a>
+            <a href="#compliance_and_disclosure_administration" class="filter-btn" data-cat="compliance_and_disclosure_administration">Compliance & Disclosure Administration (10)</a>
+            <a href="#closing_coordination" class="filter-btn" data-cat="closing_coordination">Closing Coordination (10)</a>
+            <a href="#pre_approval_and_application" class="filter-btn" data-cat="pre_approval_and_application">Pre-Approval & Application (0)</a>
+            <a href="#pipeline_management" class="filter-btn" data-cat="pipeline_management">Pipeline Management (10)</a>
+            <a href="#business_development" class="filter-btn" data-cat="business_development">Business Development (10)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Borrower Communications -->
+    <section class="category-section" id="borrower_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Borrower Communications</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Clarify loan program details for the borrower</h3>
+                    <p>Educate the borrower on the specifics of their chosen loan program</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain and obtain borrower consent for credit report</h3>
+                    <p>Call the borrower to explain the credit report process and get their consent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on application submission</h3>
+                    <p>Check in with the borrower to confirm receipt of their application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage borrower communications during underwriting</h3>
+                    <p>Keep the borrower informed of progress and any additional needs during underwriting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide estimated closing costs disclosure</h3>
+                    <p>Send the borrower an estimate of their anticipated closing costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve borrower questions about required documents</h3>
+                    <p>Address borrower questions about any documentation needed for the loan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to borrower inquiries about interest rates</h3>
+                    <p>Field questions from the borrower about current interest rate trends</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule borrower signing appointment</h3>
+                    <p>Coordinate the closing signing appointment with the borrower</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update borrower on loan status changes</h3>
+                    <p>Proactively communicate any updates to the loan status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write a pre-approval congratulations letter</h3>
+                    <p>Draft a letter notifying a borrower of their pre-approval with key terms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist the borrower in completing the application</h3>
+                    <p>Guide the borrower through the loan application process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect borrower contact information</h3>
+                    <p>Obtain the borrower's phone, email, and address details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct initial borrower interview</h3>
+                    <p>Gather basic information about the borrower and their goals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate the borrower on affordability guidelines</h3>
+                    <p>Explain debt-to-income and loan-to-value ratio limits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain loan program options to the borrower</h3>
+                    <p>Educate the borrower on different mortgage loan types</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Initiate borrower credit report authorization</h3>
+                    <p>Request the borrower's permission to pull their credit report</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage borrower expectations around pre-approval</h3>
+                    <p>Set realistic expectations for the pre-approval and approval process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain borrower tax transcript authorization</h3>
+                    <p>Get the borrower's consent to request their tax transcripts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide pre-approval letter to the borrower</h3>
+                    <p>Issue the pre-approval letter with key loan details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review application for completeness and accuracy</h3>
+                    <p>Ensure the loan application is filled out properly</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Borrower Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Processing & Conditions -->
+    <section class="category-section" id="loan_processing_and_conditions">
+        <div class="container">
+            <div class="category-header">
+                <h2>Loan Processing & Conditions</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Collect homeowner's insurance information</h3>
+                    <p>Get a copy of the borrower's homeowner's insurance policy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate property appraisal scheduling</h3>
+                    <p>Work with the appraiser to schedule the home valuation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage receipt of required loan conditions</h3>
+                    <p>Track and follow up on all outstanding loan conditions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain borrower income documentation</h3>
+                    <p>Collect pay stubs, W-2s, tax returns, and other income proof</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Order title search and title insurance</h3>
+                    <p>Initiate the title search and obtain title insurance for the property</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare closing disclosure statement</h3>
+                    <p>Draft the final Closing Disclosure for the borrower</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare loan estimate disclosure</h3>
+                    <p>Draft and send the initial Loan Estimate form to the borrower</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve outstanding loan conditions</h3>
+                    <p>Work with the borrower and third parties to clear any remaining conditions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review appraisal report for accuracy</h3>
+                    <p>Ensure the appraisal report is complete and aligns with the property</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify borrower asset documentation</h3>
+                    <p>Review bank statements, investment accounts, and other asset sources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Loan Processing & Conditions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Underwriting Documentation -->
+    <section class="category-section" id="underwriting_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Underwriting Documentation</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze borrower income and debt ratios</h3>
+                    <p>Calculate the borrower's debt-to-income and loan-to-value ratios</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assess borrower eligibility for loan programs</h3>
+                    <p>Determine if the borrower meets the criteria for their desired loan type</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Determine if additional documentation is needed</h3>
+                    <p>Identify and request any missing documents required for underwriting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document underwriting decision rationale</h3>
+                    <p>Clearly explain the reasoning behind the underwriting determination</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain credit report and fico scores</h3>
+                    <p>Pull the borrower's credit report and analyze their credit scores</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare underwriting summary memo</h3>
+                    <p>Compile a comprehensive summary of the borrower's financial profile</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend loan approval or denial to underwriter</h3>
+                    <p>Provide a final recommendation based on the full loan package review</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review borrower debt obligations</h3>
+                    <p>Assess the borrower's existing debts and payment history</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review property information and comparable sales</h3>
+                    <p>Evaluate the property details and recent similar home sales</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify borrower employment history</h3>
+                    <p>Confirm the borrower's current and past employment details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Underwriting Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Disclosure Administration -->
+    <section class="category-section" id="compliance_and_disclosure_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Disclosure Administration</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Deliver final closing disclosure to borrower</h3>
+                    <p>Issue the final Closing Disclosure statement to the borrower</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Deliver good faith estimate to borrower</h3>
+                    <p>Issue the GFE with estimated loan costs to the borrower</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document state-specific regulatory compliance</h3>
+                    <p>Address any state-level compliance requirements for the loan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure compliance with respa regulations</h3>
+                    <p>Verify adherence to Real Estate Settlement Procedures Act rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain loan file documentation</h3>
+                    <p>Organize and archive all relevant loan documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage trid compliance and timing</h3>
+                    <p>Ensure proper delivery of Loan Estimate and Closing Disclosure forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain borrower acknowledgments</h3>
+                    <p>Collect signed acknowledgments for disclosures and documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare hmda reporting data</h3>
+                    <p>Gather the necessary information for Home Mortgage Disclosure Act reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide disclosures for loan program changes</h3>
+                    <p>Update the borrower on any changes to their loan program details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide initial truth in lending disclosure</h3>
+                    <p>Send the borrower the required TILA disclosure form</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Coordination -->
+    <section class="category-section" id="closing_coordination">
+        <div class="container">
+            <div class="category-header">
+                <h2>Closing Coordination</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Confirm all loan conditions have been satisfied</h3>
+                    <p>Ensure all outstanding conditions have been properly cleared</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Disburse funds to appropriate parties</h3>
+                    <p>Ensure accurate distribution of funds from the loan proceeds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate signing of closing documents</h3>
+                    <p>Assist the borrower in properly executing all closing paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage trailing documents and post-closing items</h3>
+                    <p>Follow up on any documents needed after the closing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain homeowner's insurance binder</h3>
+                    <p>Collect the final homeowner's insurance policy documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain title commitment and legal description</h3>
+                    <p>Review the title commitment details and property legal description</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare closing instructions for settlement agent</h3>
+                    <p>Provide clear guidelines for the closing agent to follow</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide final documentation to the borrower</h3>
+                    <p>Deliver the complete set of closing paperwork to the borrower</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review closing disclosure statement for accuracy</h3>
+                    <p>Verify that the Closing Disclosure matches the loan terms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule closing appointment with all parties</h3>
+                    <p>Coordinate the closing date, time, and location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Closing Coordination</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Approval & Application -->
+    <section class="category-section" id="pre_approval_and_application">
+        <div class="container">
+            <div class="category-header">
+                <h2>Pre-Approval & Application</h2>
+                <span class="category-count">0 tasks</span>
+            </div>
+            <div class="task-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Management -->
+    <section class="category-section" id="pipeline_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Pipeline Management</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze pipeline metrics and trends</h3>
+                    <p>Review key performance indicators for the loan portfolio</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with third-party partners</h3>
+                    <p>Collaborate with title companies, appraisers, and other vendors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop strategies to improve pipeline efficiency</h3>
+                    <p>Identify and implement process improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document pipeline processes and best practices</h3>
+                    <p>Create training materials and guidelines for the team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify and address pipeline bottlenecks</h3>
+                    <p>Proactively resolve any delays or roadblocks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain an organized loan pipeline tracker</h3>
+                    <p>Create and update a centralized pipeline report</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor loan statuses and next steps</h3>
+                    <p>Track the progress of each loan through the process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare weekly or monthly pipeline reports</h3>
+                    <p>Generate comprehensive pipeline status updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide pipeline visibility to leadership</h3>
+                    <p>Keep management informed on the state of the loan pipeline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule periodic pipeline review meetings</h3>
+                    <p>Facilitate discussions on the current loan pipeline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Pipeline Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Development -->
+    <section class="category-section" id="business_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Development</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze market trends and competitor activities</h3>
+                    <p>Stay informed on industry developments and the competition</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend local networking events and meetups</h3>
+                    <p>Represent the company at industry functions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collaborate with the sales team on lead generation</h3>
+                    <p>Work with loan officers to identify and qualify new leads</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a comprehensive content marketing strategy</h3>
+                    <p>Create blog posts, videos, and other valuable content</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop marketing materials for the loan programs</h3>
+                    <p>Create brochures, flyers, and other collateral</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Host educational webinars for potential borrowers</h3>
+                    <p>Provide informative sessions on the mortgage process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a database of referral sources</h3>
+                    <p>Track real estate agents, financial planners, and other partners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the company's social media presence</h3>
+                    <p>Post updates, engage with followers, and monitor discussions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reach out to referral partners proactively</h3>
+                    <p>Cultivate relationships with key referral sources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to inbound leads from the website</h3>
+                    <p>Follow up on prospective borrowers who inquire online</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 80 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MortgageTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

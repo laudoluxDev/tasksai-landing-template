@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 182 Purpose-Built Pastors Tools — PastorTasksAI</title>
+    <meta name="description" content="Browse all 182 PastorTasksAI task templates. Purpose-built for Pastors, ministers, and church leaders — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://pastortasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #7C3AED; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #7C3AED; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #7C3AED; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(124,58,237,0.1); color: #7C3AED;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #7C3AED; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #7C3AED; color: #7C3AED; background: rgba(124,58,237,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #7C3AED; box-shadow: 0 4px 12px rgba(124,58,237,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(124,58,237,0.1); color: #7C3AED; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #7C3AED; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(124,58,237,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #7C3AED; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">PastorTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">✝️ 182 tasks available</div>
+            <h1><span>182</span> Purpose-Built Tools<br>for Pastorss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 182</a>
+            <a href="#sermon_and_teaching_preparation" class="filter-btn" data-cat="sermon_and_teaching_preparation">Sermon & Teaching Preparation (20)</a>
+            <a href="#pastoral_counseling_documentation" class="filter-btn" data-cat="pastoral_counseling_documentation">Pastoral Counseling Documentation (20)</a>
+            <a href="#ceremony_and_rite_administration" class="filter-btn" data-cat="ceremony_and_rite_administration">Ceremony & Rite Administration (26)</a>
+            <a href="#congregant_communications" class="filter-btn" data-cat="congregant_communications">Congregant Communications (26)</a>
+            <a href="#board_and_leadership_administration" class="filter-btn" data-cat="board_and_leadership_administration">Board & Leadership Administration (25)</a>
+            <a href="#community_outreach" class="filter-btn" data-cat="community_outreach">Community Outreach (20)</a>
+            <a href="#financial_and_stewardship_administration" class="filter-btn" data-cat="financial_and_stewardship_administration">Financial & Stewardship Administration (20)</a>
+            <a href="#staff_and_volunteer_management" class="filter-btn" data-cat="staff_and_volunteer_management">Staff & Volunteer Management (25)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Sermon & Teaching Preparation -->
+    <section class="category-section" id="sermon_and_teaching_preparation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Sermon & Teaching Preparation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze sermon delivery data</h3>
+                    <p>Track and analyze attendance, views, and engagement metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create preaching schedule</h3>
+                    <p>Build and distribute a preaching schedule for pastoral team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Curate sermon illustration library</h3>
+                    <p>Build and maintain a visual illustration library</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Digitize historical sermons</h3>
+                    <p>Scan, OCR, and archive past sermon manuscripts and notes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document illustration sources</h3>
+                    <p>Catalog, organize, and document sources for visual illustrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document sermon file structure</h3>
+                    <p>Establish a consistent file/folder structure for storing sermon files</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document sermon writing process</h3>
+                    <p>Codify and train new pastors on the sermon prep workflow</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement sermon archiving</h3>
+                    <p>Establish a long-term sermon archiving and retrieval system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement sermon feedback system</h3>
+                    <p>Collect and respond to congregant feedback on sermons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain sermon prep checklists</h3>
+                    <p>Document and distribute prep checklists for pastors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain sermon topic calendar</h3>
+                    <p>Track upcoming sermon topics and themes on a long-term calendar</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage sermon copyright permissions</h3>
+                    <p>Ensure proper attribution and licenses for quoted content</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage sermon series planning</h3>
+                    <p>Coordinate multi-week sermon series and themes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare sermon outline template</h3>
+                    <p>Create a structured outline template for weekly sermon preparation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce sermon series graphics</h3>
+                    <p>Create visuals to support sermon series branding</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Record sermon audio/video</h3>
+                    <p>Set up and manage equipment for recording sermons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Repurpose sermon content</h3>
+                    <p>Adapt sermons into blog posts, social media, devotionals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review sermon manuscripts</h3>
+                    <p>Provide feedback and editing on pastor's sermon text</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write sermon discussion guides</h3>
+                    <p>Produce small group discussion questions for sermons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write sermon series announcements</h3>
+                    <p>Draft promotional copy for upcoming sermon series</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Sermon & Teaching Preparation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pastoral Counseling Documentation -->
+    <section class="category-section" id="pastoral_counseling_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Pastoral Counseling Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze counseling trends</h3>
+                    <p>Identify patterns and opportunities for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct case file audits</h3>
+                    <p>Review and update older counseling records periodically</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate community referrals</h3>
+                    <p>Build partnerships for external counseling referrals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop counseling intake forms</h3>
+                    <p>Design and distribute intake forms for pastoral counseling</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop counseling workflows</h3>
+                    <p>Document and train on standard counseling procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document counseling session notes</h3>
+                    <p>Record detailed notes from pastoral counseling sessions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate counselor meetings</h3>
+                    <p>Lead regular meetings for pastoral counseling team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle counseling referrals</h3>
+                    <p>Maintain a network of licensed counseling referrals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement crisis response plan</h3>
+                    <p>Establish protocols for urgent/emergency counseling needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement online scheduling</h3>
+                    <p>Set up and maintain online booking for counseling</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client confidentiality</h3>
+                    <p>Establish and enforce policies for client data privacy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain counselor credentials</h3>
+                    <p>Ensure pastoral counselors meet licensing requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client communication</h3>
+                    <p>Respond to inquiries and update clients on status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage counseling feedback</h3>
+                    <p>Collect and respond to feedback on pastoral counseling</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize counseling workflows</h3>
+                    <p>Streamline and improve existing counseling processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize counseling case files</h3>
+                    <p>Establish a filing system for pastoral counseling records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide counseling resources</h3>
+                    <p>Curate and distribute educational materials for congregants</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule counseling appointments</h3>
+                    <p>Coordinate and manage the pastoral counseling calendar</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track counseling metrics</h3>
+                    <p>Analyze utilization, outcomes, and congregant satisfaction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write counseling policy manual</h3>
+                    <p>Codify all counseling-related policies and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Pastoral Counseling Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ceremony & Rite Administration -->
+    <section class="category-section" id="ceremony_and_rite_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Ceremony & Rite Administration</h2>
+                <span class="category-count">26 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze ceremony satisfaction</h3>
+                    <p>Collect and act on congregant feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze ceremony trends</h3>
+                    <p>Track participation, costs, and other key metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect ceremony feedback</h3>
+                    <p>Gather input to improve future ceremony experiences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate ceremony music</h3>
+                    <p>Work with musicians and worship team for ceremony music</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate ceremony scheduling</h3>
+                    <p>Manage the calendar and booking for all ceremonies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate off-site ceremonies</h3>
+                    <p>Plan and execute ceremonies held outside the church</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create ceremony program templates</h3>
+                    <p>Design and distribute customizable ceremony programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Design ceremony signage</h3>
+                    <p>Create wayfinding and informational ceremony signs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop ceremony protocols</h3>
+                    <p>Codify standard operating procedures for each type</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop ceremony training</h3>
+                    <p>Create training materials for pastors and volunteers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute ceremony instructions</h3>
+                    <p>Provide detailed guides to ceremony participants</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute ceremony reminders</h3>
+                    <p>Send pre-ceremony notifications to participants</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document ceremony procedures</h3>
+                    <p>Codify step-by-step instructions for each ceremony type</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle ceremony rsvps</h3>
+                    <p>Track attendance and participant information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement ceremony booking system</h3>
+                    <p>Create an automated booking and scheduling tool</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement online booking</h3>
+                    <p>Allow congregants to self-schedule ceremonies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain clergy calendar</h3>
+                    <p>Coordinate pastor/officiant schedules for ceremonies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain sacramental records</h3>
+                    <p>Document all baptisms, weddings, funerals, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage ceremony decorations</h3>
+                    <p>Plan, procure, and set up ceremony decor and flowers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage ceremony equipment</h3>
+                    <p>Inventory, maintain, and store all ceremony supplies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage ceremony livestreams</h3>
+                    <p>Capture and broadcast ceremonies for remote viewers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage special event logistics</h3>
+                    <p>Organize logistics for church-hosted special events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize ceremony rehearsals</h3>
+                    <p>Schedule and facilitate rehearsals for key ceremonies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare ceremony checklists</h3>
+                    <p>Document setup, logistical, and liturgical requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Preserve ceremony archives</h3>
+                    <p>Digitize and catalog historical ceremony records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce ceremony photo/video</h3>
+                    <p>Arrange professional media coverage for ceremonies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Ceremony & Rite Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Congregant Communications -->
+    <section class="category-section" id="congregant_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Congregant Communications</h2>
+                <span class="category-count">26 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze member demographics</h3>
+                    <p>Gain insights into the makeup of the congregation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate external marketing</h3>
+                    <p>Promote the church to the broader community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate social media posts</h3>
+                    <p>Plan, create, and schedule content across channels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate volunteer communications</h3>
+                    <p>Keep ministry volunteers informed and engaged</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Craft congregant newsletters</h3>
+                    <p>Write, edit, and distribute regular email newsletters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop new member onboarding</h3>
+                    <p>Design a process to welcome and integrate new attendees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute donor acknowledgments</h3>
+                    <p>Send thank-you notes to financial contributors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute emergency alerts</h3>
+                    <p>Rapidly notify congregants of urgent news/events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate member feedback</h3>
+                    <p>Collect and respond to input from the congregation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle member lifecycle changes</h3>
+                    <p>Update records for births, deaths, weddings, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement congregant messaging</h3>
+                    <p>Leverage SMS, email, and other channels to reach members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement virtual events</h3>
+                    <p>Organize and promote online/remote church events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain congregant database</h3>
+                    <p>Collect and organize contact information for all members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage church event registration</h3>
+                    <p>Facilitate sign-ups and ticketing for church events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage church mobile app</h3>
+                    <p>Maintain the church's mobile application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage church website content</h3>
+                    <p>Update and maintain the church's online presence</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage congregant data privacy</h3>
+                    <p>Ensure compliance with data protection regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage member engagement data</h3>
+                    <p>Track and analyze congregant involvement metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Operate congregant helpdesk</h3>
+                    <p>Provide support and information to members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize congregant touchpoints</h3>
+                    <p>Improve the member experience across all interactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce congregant directories</h3>
+                    <p>Publish and distribute contact lists for members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce member testimonials</h3>
+                    <p>Collect and share stories from the congregation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce weekly announcements</h3>
+                    <p>Draft, format, and distribute the church bulletin</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to congregant inquiries</h3>
+                    <p>Field questions and provide information to members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write member-facing policies</h3>
+                    <p>Draft and distribute church policies and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write member onboarding guides</h3>
+                    <p>Create educational materials for new members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Congregant Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board & Leadership Administration -->
+    <section class="category-section" id="board_and_leadership_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Board & Leadership Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer board elections</h3>
+                    <p>Manage the nomination and voting process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Administer board recognition/awards</h3>
+                    <p>Organize celebrations and accolades</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze board effectiveness metrics</h3>
+                    <p>Measure the impact and performance of the board</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct board self-assessments</h3>
+                    <p>Facilitate periodic board evaluation and reflection</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate board meeting logistics</h3>
+                    <p>Schedule, plan, and execute board gatherings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate board member travel</h3>
+                    <p>Handle logistics for board-related travel</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop board training curriculum</h3>
+                    <p>Design educational programs for board members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute board meeting materials</h3>
+                    <p>Share agendas, reports, and other documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate board committee work</h3>
+                    <p>Coordinate the activities of board subcommittees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate board strategic planning</h3>
+                    <p>Support the board's long-term visioning process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle board communications</h3>
+                    <p>Field inquiries and distribute updates to the board</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement board decision tracking</h3>
+                    <p>Document and follow up on action items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement board document management</h3>
+                    <p>Establish policies and tools for board records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement board portal/dashboard</h3>
+                    <p>Develop a centralized hub for board resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain board governance calendar</h3>
+                    <p>Track recurring board/committee activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain board meeting recordings</h3>
+                    <p>Archive video/audio of board proceedings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain board member records</h3>
+                    <p>Track contact info, terms, committees, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain board policy manual</h3>
+                    <p>Codify and update all board-approved policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage board information requests</h3>
+                    <p>Field and respond to inquiries from the board</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage board member transitions</h3>
+                    <p>Handle departures, new appointments, term renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new board members</h3>
+                    <p>Provide orientation and training for new directors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize board retreats/offsites</h3>
+                    <p>Plan and execute strategic planning sessions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce board meeting agendas</h3>
+                    <p>Draft and distribute meeting schedules/topics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce board reports/dashboards</h3>
+                    <p>Create performance, financial, and strategic reports</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Take board meeting minutes</h3>
+                    <p>Record and distribute detailed meeting notes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Board & Leadership Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Outreach -->
+    <section class="category-section" id="community_outreach">
+        <div class="container">
+            <div class="category-header">
+                <h2>Community Outreach</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze community demographics</h3>
+                    <p>Gain insights into the makeup of the local population</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze community needs assessments</h3>
+                    <p>Use data to identify opportunities to serve locally</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate church volunteer teams</h3>
+                    <p>Organize member participation in outreach initiatives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate community service projects</h3>
+                    <p>Organize member participation in local initiatives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop community engagement kpis</h3>
+                    <p>Track and report on outreach program effectiveness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop community engagement plans</h3>
+                    <p>Design comprehensive outreach strategies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute community resource guides</h3>
+                    <p>Provide information on local services and support</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate community advisory board</h3>
+                    <p>Engage local leaders to guide outreach strategy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate community partnerships</h3>
+                    <p>Build relationships with local organizations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle community donation requests</h3>
+                    <p>Process and respond to donation inquiries</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement community communication</h3>
+                    <p>Engage with local stakeholders via various channels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement community feedback loops</h3>
+                    <p>Collect and act on input from local stakeholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage church facility rentals</h3>
+                    <p>Coordinate use of church space by outside groups</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage community event calendar</h3>
+                    <p>Track and promote local events of interest</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage community prayer requests</h3>
+                    <p>Process and respond to prayer requests from the area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize church-hosted events</h3>
+                    <p>Plan and execute public events/programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce community impact reports</h3>
+                    <p>Demonstrate the church's value to the local area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce community newsletters</h3>
+                    <p>Write and distribute information for the local area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote church community involvement</h3>
+                    <p>Highlight member participation in the local area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote community charity drives</h3>
+                    <p>Organize member contributions to local causes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Community Outreach</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial & Stewardship Administration -->
+    <section class="category-section" id="financial_and_stewardship_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial & Stewardship Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer contribution receipts</h3>
+                    <p>Generate annual tax receipts for member donations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze contribution trends</h3>
+                    <p>Identify patterns and opportunities in member giving</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate contribution audits</h3>
+                    <p>Facilitate periodic reviews of financial records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate stewardship education</h3>
+                    <p>Create programs to promote biblical financial principles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate contribution methods</h3>
+                    <p>Offer multiple channels for members to give</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate recurring contributions</h3>
+                    <p>Allow members to set up automated giving schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement contribution policies</h3>
+                    <p>Establish guidelines for handling member gifts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement contribution tax compliance</h3>
+                    <p>Ensure the church meets all relevant regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement contribution tracking</h3>
+                    <p>Provide members with records of their giving</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain member contribution records</h3>
+                    <p>Track and document all financial donations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage church financial accounts</h3>
+                    <p>Oversee and reconcile banking and accounting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage contribution acknowledgments</h3>
+                    <p>Send timely thank-you notes to donors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage contribution campaigns</h3>
+                    <p>Plan and execute appeals for special offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage contribution designated funds</h3>
+                    <p>Process and track member gifts with specific purposes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Operate contribution management system</h3>
+                    <p>Maintain the church's donation processing platform</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize contribution user experience</h3>
+                    <p>Improve the process of making donations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process member contributions</h3>
+                    <p>Receive, record, and acknowledge all donations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce financial reports/statements</h3>
+                    <p>Create periodic reports for church leadership</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce stewardship impact reports</h3>
+                    <p>Demonstrate the church's use of financial resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide contribution tax guidance</h3>
+                    <p>Educate members on charitable giving tax benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial & Stewardship Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff & Volunteer Management -->
+    <section class="category-section" id="staff_and_volunteer_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Staff & Volunteer Management</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer staff/volunteer benefits</h3>
+                    <p>Manage payroll, insurance, time off, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze staff/volunteer demographic data</h3>
+                    <p>Gain insights into the makeup of the team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze staff/volunteer engagement</h3>
+                    <p>Track metrics related to team involvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate staff/volunteer events</h3>
+                    <p>Plan social, recognition, and team-building activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate staff/volunteer schedules</h3>
+                    <p>Create and distribute work/service calendars</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate staff/volunteer service teams</h3>
+                    <p>Organize specialized ministry groups</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop staff/volunteer succession planning</h3>
+                    <p>Prepare for future leadership and role changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate staff/volunteer team-building</h3>
+                    <p>Plan activities to strengthen internal relationships</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate staff/volunteer training</h3>
+                    <p>Develop and deliver educational programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate staff/volunteer transitions</h3>
+                    <p>Handle departures, new hires, and role changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle staff/volunteer disciplinary issues</h3>
+                    <p>Address conduct concerns per policy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle staff/volunteer onboarding</h3>
+                    <p>Manage the process of bringing on new team members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement staff/volunteer feedback</h3>
+                    <p>Collect input to improve the work environment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement staff/volunteer portal/hub</h3>
+                    <p>Develop a central hub for internal resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain staff/volunteer credential tracking</h3>
+                    <p>Monitor and renew required certifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain staff/volunteer handbooks</h3>
+                    <p>Document policies, procedures, and expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain staff/volunteer records</h3>
+                    <p>Track contact info, roles, schedules, credentials, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage staff/volunteer communications</h3>
+                    <p>Keep internal teams informed and engaged</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage staff/volunteer project coordination</h3>
+                    <p>Facilitate cross-functional collaboration</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage staff/volunteer recognition</h3>
+                    <p>Celebrate achievements and milestones</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize staff/volunteer recruitment/retention</h3>
+                    <p>Improve the process of finding and keeping talent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize staff/volunteer workflows</h3>
+                    <p>Streamline and improve internal processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce staff/volunteer directories</h3>
+                    <p>Publish contact lists for internal teams</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce staff/volunteer newsletter/updates</h3>
+                    <p>Keep the team informed on church news</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce staff/volunteer performance reviews</h3>
+                    <p>Evaluate and provide feedback to team members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Staff & Volunteer Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 182 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PastorTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

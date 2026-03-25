@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 167 Purpose-Built K-12 teachers Tools — TeacherTasksAI</title>
+    <meta name="description" content="Browse all 167 TeacherTasksAI task templates. Purpose-built for K-12 teachers, special education staff, and school counselors — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://teachertasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #0D9488; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #0D9488; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #0D9488; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(13,148,136,0.1); color: #0D9488;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #0D9488; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #0D9488; color: #0D9488; background: rgba(13,148,136,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #0D9488; box-shadow: 0 4px 12px rgba(13,148,136,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(13,148,136,0.1); color: #0D9488; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #0D9488; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(13,148,136,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #0D9488; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">TeacherTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">📚 167 tasks available</div>
+            <h1><span>167</span> Purpose-Built Tools<br>for K-12 teacherss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 167</a>
+            <a href="#parent_and_family_communications" class="filter-btn" data-cat="parent_and_family_communications">Parent & Family Communications (24)</a>
+            <a href="#lesson_planning_and_curriculum" class="filter-btn" data-cat="lesson_planning_and_curriculum">Lesson Planning & Curriculum (19)</a>
+            <a href="#student_assessment_and_reporting" class="filter-btn" data-cat="student_assessment_and_reporting">Student Assessment & Reporting (25)</a>
+            <a href="#iep_and_special_education_documentation" class="filter-btn" data-cat="iep_and_special_education_documentation">IEP & Special Education Documentation (20)</a>
+            <a href="#classroom_management" class="filter-btn" data-cat="classroom_management">Classroom Management (20)</a>
+            <a href="#professional_development" class="filter-btn" data-cat="professional_development">Professional Development (20)</a>
+            <a href="#compliance_and_policy_documentation" class="filter-btn" data-cat="compliance_and_policy_documentation">Compliance & Policy Documentation (20)</a>
+            <a href="#school_administration_support" class="filter-btn" data-cat="school_administration_support">School Administration Support (19)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Parent & Family Communications -->
+    <section class="category-section" id="parent_and_family_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Parent & Family Communications</h2>
+                <span class="category-count">24 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Arrange a home visit</h3>
+                    <p>Schedule and conduct a home visit to better understand a student's home life</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Call a parent about an absence</h3>
+                    <p>Contact a parent to discuss a student's prolonged absence from school</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate a behavior issue</h3>
+                    <p>Notify a parent about a behavioral incident involving their child</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute class party sign-ups</h3>
+                    <p>Coordinate parent contributions for classroom celebrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft a parent-teacher conference agenda</h3>
+                    <p>Prepare an agenda for an upcoming parent-teacher conference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate a parent support group</h3>
+                    <p>Organize and lead a group for parents of students with similar needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate a parent-teacher check-in</h3>
+                    <p>Lead a productive check-in meeting with a parent about their child's progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on a parent concern</h3>
+                    <p>Address an ongoing issue raised by a parent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather parent feedback</h3>
+                    <p>Solicit input from parents to improve classroom practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle a parent complaint</h3>
+                    <p>Professionally respond to a parent's complaint about a classroom policy or incident</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Host a virtual parent meeting</h3>
+                    <p>Facilitate an online gathering of parents for announcements or discussion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage a parent-teacher portal</h3>
+                    <p>Maintain an online platform for parent-teacher communication</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize a back-to-school night</h3>
+                    <p>Plan and execute a successful back-to-school event for parents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize a parent workshop</h3>
+                    <p>Plan and facilitate a session to educate parents on a relevant topic</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide tech support for parents</h3>
+                    <p>Assist parents with questions or issues related to classroom technology</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recognize parent volunteers</h3>
+                    <p>Appreciate and acknowledge the contributions of parent volunteers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to a parent email</h3>
+                    <p>Craft a thoughtful response to a parent email about a student's performance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule a parent-teacher conference</h3>
+                    <p>Coordinate with a parent to set up a meeting time and send a calendar invite</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send a classroom newsletter</h3>
+                    <p>Compile and distribute a monthly classroom newsletter to keep parents informed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send a sympathy note</h3>
+                    <p>Express condolences to a family experiencing a loss</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send home student work samples</h3>
+                    <p>Select and send home a portfolio of a student's recent work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Share curriculum information</h3>
+                    <p>Provide parents with an overview of the current unit or semester's curriculum</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Translate parent communications</h3>
+                    <p>Ensure important notices and updates are available in multiple languages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write a parent progress update</h3>
+                    <p>Draft a personalized progress update letter for a student's parent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Parent & Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson Planning & Curriculum -->
+    <section class="category-section" id="lesson_planning_and_curriculum">
+        <div class="container">
+            <div class="category-header">
+                <h2>Lesson Planning & Curriculum</h2>
+                <span class="category-count">19 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Align lesson plans to standards</h3>
+                    <p>Ensure all lesson plans address relevant academic standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze student work samples</h3>
+                    <p>Review student work to inform future instructional decisions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collaborate on curriculum</h3>
+                    <p>Work with colleagues to align and refine the curriculum</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a unit plan</h3>
+                    <p>Develop a comprehensive plan for teaching a multi-week unit</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create differentiated materials</h3>
+                    <p>Produce alternative versions of lesson materials for diverse learners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Curate educational resources</h3>
+                    <p>Identify and organize relevant instructional materials and media</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Design summative assessments</h3>
+                    <p>Construct formal assessments to evaluate student learning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop formative assessments</h3>
+                    <p>Create informal assessments to check for student understanding</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop project-based activities</h3>
+                    <p>Design engaging, hands-on learning experiences for students</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document curriculum changes</h3>
+                    <p>Note any modifications made to the curriculum over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document curriculum pacing</h3>
+                    <p>Map out the timing and progression of curriculum units</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a digital portfolio</h3>
+                    <p>Collect and organize exemplars of student work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a substitute binder</h3>
+                    <p>Assemble materials for a substitute teacher to use in your absence</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Modify lesson plans for diverse needs</h3>
+                    <p>Adapt lesson plans to accommodate students with special needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for curriculum audits</h3>
+                    <p>Ensure all curriculum documentation is organized and accessible</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide feedback on lessons</h3>
+                    <p>Offer constructive feedback to colleagues on their lesson plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reflect on lesson effectiveness</h3>
+                    <p>Evaluate the success of a lesson and identify areas for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research instructional strategies</h3>
+                    <p>Explore and learn about new teaching methods and approaches</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write daily lesson plans</h3>
+                    <p>Prepare detailed lesson plans for each day of instruction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Lesson Planning & Curriculum</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Assessment & Reporting -->
+    <section class="category-section" id="student_assessment_and_reporting">
+        <div class="container">
+            <div class="category-header">
+                <h2>Student Assessment & Reporting</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer classroom-based tests</h3>
+                    <p>Create and deliver periodic assessments of student mastery</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Administer standardized tests</h3>
+                    <p>Proctor and monitor mandatory state/district assessments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze assessment data</h3>
+                    <p>Review and interpret student performance data to inform instruction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze trends in assessment data</h3>
+                    <p>Identify patterns and areas of strength/weakness in student learning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze validity of assessments</h3>
+                    <p>Review the effectiveness and fairness of assessment instruments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate assessment results</h3>
+                    <p>Share student assessment data and performance with parents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate grading policies</h3>
+                    <p>Explain and clarify the school's grading system to students/parents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct student conferences</h3>
+                    <p>Meet with students to discuss their learning and set goals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop rubrics and scoring guides</h3>
+                    <p>Design tools to ensure consistent and equitable assessment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop student learning objectives</h3>
+                    <p>Establish measurable goals for student academic growth</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Differentiate assessments</h3>
+                    <p>Create alternative versions of tests and assignments for diverse learners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Disaggregate assessment data</h3>
+                    <p>Analyze student performance data by subgroups and demographics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document student growth over time</h3>
+                    <p>Maintain portfolios to track individual student progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate assessment practices</h3>
+                    <p>Reflect on and refine the classroom assessment approach</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate student-led conferences</h3>
+                    <p>Empower students to lead discussions about their own learning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement alternative assessments</h3>
+                    <p>Use performance-based, project-based, or other non-traditional assessments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain assessment records</h3>
+                    <p>Securely file and organize student assessment documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain student grade books</h3>
+                    <p>Accurately record and track student grades in a grade book</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor student intervention plans</h3>
+                    <p>Track the effectiveness of academic or behavioral interventions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for parent-teacher conferences</h3>
+                    <p>Gather relevant student data and materials for meetings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare student progress reports</h3>
+                    <p>Write detailed updates on each student's academic performance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide assessment feedback to admins</h3>
+                    <p>Report on student assessment results and trends to school leaders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide feedback on student work</h3>
+                    <p>Offer detailed, constructive feedback to help students improve</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide test accommodations</h3>
+                    <p>Implement approved accommodations for students with special needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Score student assessments</h3>
+                    <p>Grade and provide feedback on student tests, quizzes, and projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Student Assessment & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IEP & Special Education Documentation -->
+    <section class="category-section" id="iep_and_special_education_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>IEP & Special Education Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advocate for student needs</h3>
+                    <p>Speak up for appropriate services and supports for a student</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect student work samples</h3>
+                    <p>Gather exemplars of student work for the IEP portfolio</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate with case managers</h3>
+                    <p>Collaborate with special education staff to support student needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate with related services</h3>
+                    <p>Coordinate with specialists (OT, PT, SLP, etc.) for student support</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct informal assessments</h3>
+                    <p>Gather data on a student's progress through informal measures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop behavior intervention plans</h3>
+                    <p>Design plans to address significant student behavioral challenges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop transition plans</h3>
+                    <p>Prepare for a student's transition to a new grade or school</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document student accommodations</h3>
+                    <p>Ensure all approved accommodations are clearly noted</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement classroom modifications</h3>
+                    <p>Adjust instruction and environment to meet IEP requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain confidential records</h3>
+                    <p>Securely store and manage sensitive student information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain student iep records</h3>
+                    <p>Securely file and organize all IEP-related documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor implementation of iep</h3>
+                    <p>Ensure agreed-upon accommodations and modifications are provided</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize assistive technology</h3>
+                    <p>Ensure appropriate tools and devices are available and utilized</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in evaluation meetings</h3>
+                    <p>Contribute information to determine a student's special needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in iep meetings</h3>
+                    <p>Attend and contribute to Individualized Education Plan meetings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for annual iep reviews</h3>
+                    <p>Gather data and documentation for IEP renewal meetings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide progress updates to parents</h3>
+                    <p>Report on a student's IEP goal attainment to families</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide training for staff</h3>
+                    <p>Educate colleagues on effective strategies for diverse learners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Refer students for evaluation</h3>
+                    <p>Initiate the process for special education eligibility assessment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Support 504 plan implementation</h3>
+                    <p>Assist with the execution of 504 accommodation plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">IEP & Special Education Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classroom Management -->
+    <section class="category-section" id="classroom_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Classroom Management</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze classroom climate data</h3>
+                    <p>Review student/parent/staff feedback to improve environment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze student attendance data</h3>
+                    <p>Monitor and respond to patterns of student absenteeism</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate classroom procedures</h3>
+                    <p>Clearly explain and reinforce classroom routines and expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate with administration</h3>
+                    <p>Inform school leaders about recurring or severe behavior issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with counseling staff</h3>
+                    <p>Work with school psychologists or social workers to support students</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop individualized behavior plans</h3>
+                    <p>Design targeted interventions for students with unique needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document classroom accommodations</h3>
+                    <p>Note any environmental or instructional modifications made</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document student behavior incidents</h3>
+                    <p>Record details of significant behavioral events or infractions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish classroom rules</h3>
+                    <p>Develop and communicate clear behavioral expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate restorative circles</h3>
+                    <p>Lead group discussions to address and resolve conflicts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate student leadership roles</h3>
+                    <p>Empower students to take on meaningful classroom responsibilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate student self-regulation</h3>
+                    <p>Teach and model strategies for emotional self-management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a reward system</h3>
+                    <p>Design and maintain a program to reinforce positive behavior</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement tiered behavior supports</h3>
+                    <p>Provide increasingly intensive interventions based on student needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement trauma-informed practices</h3>
+                    <p>Adjust classroom routines to be responsive to student trauma</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a behavior intervention log</h3>
+                    <p>Track the implementation and effectiveness of behavior plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage classroom technology use</h3>
+                    <p>Establish and enforce policies for student device/internet usage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize a peer mediation program</h3>
+                    <p>Train and oversee student leaders to resolve minor conflicts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide behavior-focused pd</h3>
+                    <p>Offer training to colleagues on effective classroom management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to crisis situations</h3>
+                    <p>Follow protocols to address urgent safety or security incidents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Classroom Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Development -->
+    <section class="category-section" id="professional_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Professional Development</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Apply for awards and recognitions</h3>
+                    <p>Seek out prestigious honors or accolades in the field</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend education conferences</h3>
+                    <p>Travel to and engage with external professional events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend in-service trainings</h3>
+                    <p>Participate in school-provided professional development sessions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete online learning modules</h3>
+                    <p>Engage with self-paced digital professional learning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Contribute to curriculum development</h3>
+                    <p>Work with teams to create, refine, or update curricula</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Contribute to professional publications</h3>
+                    <p>Author articles, blog posts, or other publications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop presentation skills</h3>
+                    <p>Build capacity to facilitate effective PD sessions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Engage in peer observations</h3>
+                    <p>Observe and provide feedback to colleagues' lessons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Engage in self-directed learning</h3>
+                    <p>Independently research and learn about new teaching methods</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement feedback from evaluations</h3>
+                    <p>Act on constructive criticism from formal observations/reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Join professional associations</h3>
+                    <p>Become an active member of education-focused organizations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a professional portfolio</h3>
+                    <p>Collect and organize evidence of professional growth</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain professional networks</h3>
+                    <p>Nurture connections with peers in the education community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Mentor early-career teachers</h3>
+                    <p>Provide guidance and support to novice educators</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in coaching cycles</h3>
+                    <p>Work with an instructional coach to improve teaching practice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in data analysis sessions</h3>
+                    <p>Collaborate with colleagues to examine student performance data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Pursue advanced certifications</h3>
+                    <p>Earn additional credentials or endorsements in education</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Pursue graduate-level coursework</h3>
+                    <p>Enroll in advanced degree programs or graduate-level classes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reflect on teaching practice</h3>
+                    <p>Analyze one's own instruction to identify areas for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Seek out leadership opportunities</h3>
+                    <p>Apply for or volunteer for expanded roles and responsibilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Professional Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Policy Documentation -->
+    <section class="category-section" id="compliance_and_policy_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Policy Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Adhere to acceptable use policies</h3>
+                    <p>Ensure student and staff technology usage aligns with policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with copyright regulations</h3>
+                    <p>Ensure instructional materials adhere to fair use guidelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with medication administration</h3>
+                    <p>Follow policies for storing and dispensing student medications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with reporting requirements</h3>
+                    <p>Submit mandatory student/staff data reports to authorities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with testing security measures</h3>
+                    <p>Implement practices to ensure the integrity of assessments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document classroom volunteer hours</h3>
+                    <p>Track the time and contributions of parent/community volunteers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document field trip procedures</h3>
+                    <p>Follow protocols for planning and executing off-campus trips</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document staff training completion</h3>
+                    <p>Track professional development activities for certification</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document student health information</h3>
+                    <p>Maintain records of student medical needs and accommodations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document student immunization records</h3>
+                    <p>Verify and file evidence of student vaccination compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement accessibility standards</h3>
+                    <p>Ensure classroom materials and activities are inclusive</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement data privacy protocols</h3>
+                    <p>Protect student and staff personally identifiable information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement school safety protocols</h3>
+                    <p>Follow and document procedures for emergency preparedness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement student discipline policies</h3>
+                    <p>Follow protocols for addressing behavioral infractions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement student referral processes</h3>
+                    <p>Document the steps taken to support struggling learners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain class size compliance</h3>
+                    <p>Adhere to mandated student-to-teacher ratios</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain confidential student files</h3>
+                    <p>Securely store and manage sensitive student records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain inventory of classroom assets</h3>
+                    <p>Document the acquisition, use, and condition of supplies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain mandated reporter training</h3>
+                    <p>Complete annual professional development on abuse reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain student attendance records</h3>
+                    <p>Track and document student absences, tardies, and dismissals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Policy Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Administration Support -->
+    <section class="category-section" id="school_administration_support">
+        <div class="container">
+            <div class="category-header">
+                <h2>School Administration Support</h2>
+                <span class="category-count">19 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Assist with school event planning</h3>
+                    <p>Support the logistics of school-wide celebrations and functions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with student registration</h3>
+                    <p>Support the enrollment and onboarding of new students</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with student transportation</h3>
+                    <p>Help coordinate and document bus schedules and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Contribute to accreditation processes</h3>
+                    <p>Assist with gathering evidence and documentation for reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Contribute to school improvement plans</h3>
+                    <p>Provide feedback and recommendations for school-level initiatives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Contribute to school newsletters</h3>
+                    <p>Draft content for school-wide publications and communications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Contribute to school safety planning</h3>
+                    <p>Provide input on emergency preparedness and security measures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate classroom volunteers</h3>
+                    <p>Recruit, schedule, and manage parent/community volunteers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with support staff</h3>
+                    <p>Collaborate with office, custodial, and other support personnel</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain inventory of classroom supplies</h3>
+                    <p>Document the use and replenishment of instructional materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain school facility upkeep</h3>
+                    <p>Document and address needs for classroom/school maintenance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain school inventory records</h3>
+                    <p>Document the acquisition, use, and condition of school assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage classroom budgets</h3>
+                    <p>Track and report on expenditures from classroom funding</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage classroom technology</h3>
+                    <p>Troubleshoot and maintain classroom devices and software</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in curriculum committees</h3>
+                    <p>Collaborate with colleagues to align and refine the curriculum</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Represent the school in the community</h3>
+                    <p>Engage with local organizations and businesses on behalf of the school</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Serve on school leadership teams</h3>
+                    <p>Contribute to decision-making about school policies and practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit supply requisition forms</h3>
+                    <p>Request new or replacement classroom materials and equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Support school-wide data collection</h3>
+                    <p>Gather and organize data for administrative reports and decisions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">School Administration Support</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 167 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TeacherTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 164 Purpose-Built Farmers Tools — FarmerTasksAI</title>
+    <meta name="description" content="Browse all 164 FarmerTasksAI task templates. Purpose-built for Farmers, ranchers, and agricultural operations managers — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://farmertasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #84CC16; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #84CC16; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #84CC16; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(132,204,22,0.1); color: #84CC16;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #84CC16; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #84CC16; color: #84CC16; background: rgba(132,204,22,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #84CC16; box-shadow: 0 4px 12px rgba(132,204,22,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(132,204,22,0.1); color: #84CC16; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #84CC16; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(132,204,22,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #84CC16; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">FarmerTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🌾 164 tasks available</div>
+            <h1><span>164</span> Purpose-Built Tools<br>for Farmerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 164</a>
+            <a href="#usda_and_government_program_documentation" class="filter-btn" data-cat="usda_and_government_program_documentation">USDA & Government Program Documentation (25)</a>
+            <a href="#crop_and_production_records" class="filter-btn" data-cat="crop_and_production_records">Crop & Production Records (19)</a>
+            <a href="#equipment_and_maintenance_logs" class="filter-btn" data-cat="equipment_and_maintenance_logs">Equipment & Maintenance Logs (20)</a>
+            <a href="#financial_and_grant_administration" class="filter-btn" data-cat="financial_and_grant_administration">Financial & Grant Administration (23)</a>
+            <a href="#land_and_lease_administration" class="filter-btn" data-cat="land_and_lease_administration">Land & Lease Administration (25)</a>
+            <a href="#employee_and_labor_management" class="filter-btn" data-cat="employee_and_labor_management">Employee & Labor Management (20)</a>
+            <a href="#compliance_and_certification_documentation" class="filter-btn" data-cat="compliance_and_certification_documentation">Compliance & Certification Documentation (25)</a>
+            <a href="#vendor_and_supplier_management" class="filter-btn" data-cat="vendor_and_supplier_management">Vendor & Supplier Management (7)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- USDA & Government Program Documentation -->
+    <section class="category-section" id="usda_and_government_program_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>USDA & Government Program Documentation</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Apply for crop insurance</h3>
+                    <p>Submit application for federal crop insurance coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for disaster assistance</h3>
+                    <p>Claim losses due to natural disasters through USDA programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete fsa acreage reports</h3>
+                    <p>Submit annual acreage and production data to the Farm Service Agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with organic certification</h3>
+                    <p>Prepare inspection documentation for organic farm status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with usda audits</h3>
+                    <p>Provide documentation and information for program reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll in commodity programs</h3>
+                    <p>Sign up for price support, disaster assistance, or supply control</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll in nrcs conservation programs</h3>
+                    <p>Complete paperwork for NRCS (Natural Resources Conservation Service) programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File annual farm income tax return</h3>
+                    <p>Prepare and submit IRS Form 1040 Schedule F</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File dairy program paperwork</h3>
+                    <p>Enroll in Dairy Margin Coverage or Dairy Revenue Protection</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain payment limitation files</h3>
+                    <p>Document compliance with USDA payment caps and eligibility</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain usda online accounts</h3>
+                    <p>Update contact information, banking details, and profiles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain usda program records</h3>
+                    <p>Document compliance with subsidy and payment limitations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage usda correspondence</h3>
+                    <p>Respond to inquiries, notices, and other communications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare farm bill program appeals</h3>
+                    <p>Challenge determinations about program eligibility or payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare farm disaster declarations</h3>
+                    <p>Document weather events and request county/state disaster status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare fsa program application</h3>
+                    <p>Draft an application for a USDA Farm Service Agency program</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renegotiate usda loan terms</h3>
+                    <p>Work with FSA to modify repayment schedules or interest rates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew farm labor certifications</h3>
+                    <p>Ensure compliance with H-2A and H-2B worker documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew usda farm number</h3>
+                    <p>Ensure continued eligibility for USDA programs and payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to usda surveys</h3>
+                    <p>Complete questionnaires on production, inventory, and finances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit acreage crop reporting</h3>
+                    <p>Report planted acreages to the Farm Service Agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit livestock indemnity claims</h3>
+                    <p>File reports for livestock losses under USDA programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit reports for arc/plc</h3>
+                    <p>Report yields and other data for Agriculture Risk Coverage / Price Loss Coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track conservation program contracts</h3>
+                    <p>Monitor progress on NRCS cost-share agreement terms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update farm program profiles</h3>
+                    <p>Modify records for direct payments, ARC/PLC, or other initiatives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">USDA & Government Program Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop & Production Records -->
+    <section class="category-section" id="crop_and_production_records">
+        <div class="container">
+            <div class="category-header">
+                <h2>Crop & Production Records</h2>
+                <span class="category-count">19 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Comply with fsma recordkeeping</h3>
+                    <p>Maintain food safety documentation for FDA inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with gap certification</h3>
+                    <p>Maintain traceability, food safety, and worker records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document animal health treatments</h3>
+                    <p>Log medications, vaccinations, and veterinary visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document crop rotation plans</h3>
+                    <p>Outline multi-year planting schedules by field</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document crop storage and sales</h3>
+                    <p>Record inventories, shrinkage, and marketing transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain grazing management plans</h3>
+                    <p>Document rotational schedules and forage utilization</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain ipm scouting reports</h3>
+                    <p>Track pest pressure, weed issues, and treatment actions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain livestock production data</h3>
+                    <p>Record breeding, calving, weaning, and slaughter details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain yield history records</h3>
+                    <p>Document annual crop production for each field</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage hay and forage inventory</h3>
+                    <p>Track harvested yields, moisture, and storage details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor input usage and costs</h3>
+                    <p>Log fertilizer, chemical, and other material applications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare crop insurance claims</h3>
+                    <p>Document losses and submit proof of production</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for organic certification</h3>
+                    <p>Maintain input records and audit trail for organic production</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Record rainfall and irrigation data</h3>
+                    <p>Log precipitation, soil moisture, and water usage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track energy and utility usage</h3>
+                    <p>Monitor electricity, fuel, and other utility consumption</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track equipment maintenance logs</h3>
+                    <p>Document repair history and service schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track grain quality test results</h3>
+                    <p>Monitor moisture, protein, and other specifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track market prices and contracts</h3>
+                    <p>Document cash and forward sales for commodities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track planted acreages by crop</h3>
+                    <p>Record planting dates, locations, and total acres</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Crop & Production Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Maintenance Logs -->
+    <section class="category-section" id="equipment_and_maintenance_logs">
+        <div class="container">
+            <div class="category-header">
+                <h2>Equipment & Maintenance Logs</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Comply with fifra regulations</h3>
+                    <p>Document pesticide storage, disposal, and worker training</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document equipment modifications</h3>
+                    <p>Track changes, upgrades, and customizations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document equipment performance</h3>
+                    <p>Analyze yield maps, sensor data, and operator feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document implement adjustments</h3>
+                    <p>Record settings for planting, spraying, harvesting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document pesticide applications</h3>
+                    <p>Track chemical use, worker protection, and buffer zones</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain farm vehicle records</h3>
+                    <p>Log mileage, fuel, and service for trucks/ATVs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain irrigation system logs</h3>
+                    <p>Record water usage, repairs, and maintenance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain machinery repair logs</h3>
+                    <p>Document maintenance, repairs, and parts replacement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage equipment warranties</h3>
+                    <p>File claims and track coverage periods</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage precision ag hardware</h3>
+                    <p>Maintain sensors, displays, and connectivity for precision farming</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage precision technology</h3>
+                    <p>Maintain calibration, data, and software for GPS/telematics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Order and inventory parts/supplies</h3>
+                    <p>Ensure critical spares are available</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Plan equipment replacement</h3>
+                    <p>Evaluate operational costs and upgrade needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for dot inspections</h3>
+                    <p>Ensure compliance for commercial motor vehicles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for equipment appraisals</h3>
+                    <p>Compile maintenance history and upgrade documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for osha inspections</h3>
+                    <p>Ensure regulatory compliance for worker safety</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule routine maintenance</h3>
+                    <p>Develop and follow servicing schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track equipment usage hours</h3>
+                    <p>Record operating time for each machine</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track fuel consumption and costs</h3>
+                    <p>Monitor gallons used and expenditures by machine</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track hire/rental of equipment</h3>
+                    <p>Document terms, rates, and operating hours</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Equipment & Maintenance Logs</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial & Grant Administration -->
+    <section class="category-section" id="financial_and_grant_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial & Grant Administration</h2>
+                <span class="category-count">23 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Apply for farm bill program payments</h3>
+                    <p>Enroll in subsidies, disaster aid, or supply control</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for operating loans</h3>
+                    <p>Complete paperwork for short-term financing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for usda conservation grants</h3>
+                    <p>Secure funding for environment/sustainability projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for usda farm loans</h3>
+                    <p>Complete FSA direct and guaranteed loan applications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document capital investments</h3>
+                    <p>Track major improvements, land purchases, and other CAPEX</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File quarterly tax returns</h3>
+                    <p>Prepare and submit forms 941 and state payroll taxes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain accounting software</h3>
+                    <p>Enter transactions, run reports, and manage books</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain farm financial records</h3>
+                    <p>Track income, expenses, assets, and liabilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain farm inventory records</h3>
+                    <p>Track physical assets, consumables, and valuations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain grant reporting</h3>
+                    <p>Document project progress and compliance for funders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage accounts payable</h3>
+                    <p>Pay vendors, suppliers, and service providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage crop insurance claims</h3>
+                    <p>Document losses and submit proof of production</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage farm payroll</h3>
+                    <p>Process employee wages, taxes, and benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage owner draws and distributions</h3>
+                    <p>Document equity, profits, and capital account changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor commodity market trends</h3>
+                    <p>Analyze price movements and basis levels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain equipment financing</h3>
+                    <p>Secure loans or leases for machinery purchases</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare annual profit & loss</h3>
+                    <p>Generate income statement for tax filing and lenders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare cash flow projections</h3>
+                    <p>Forecast upcoming liquidity needs and income</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare enterprise budgets</h3>
+                    <p>Project costs and revenues for each commodity</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for farm audits</h3>
+                    <p>Compile financial records for lenders or regulators</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile bank statements</h3>
+                    <p>Ensure accuracy of deposits, withdrawals, and balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Secure crop marketing contracts</h3>
+                    <p>Negotiate terms for future sales of commodities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track accounts receivable</h3>
+                    <p>Invoice customers and monitor outstanding payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Grant Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Land & Lease Administration -->
+    <section class="category-section" id="land_and_lease_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Land & Lease Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Apply for farmland preservation</h3>
+                    <p>Enroll in conservation easement or purchase of development rights</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with conservation easements</h3>
+                    <p>Fulfill terms of land use restrictions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with wetland regulations</h3>
+                    <p>Fulfill requirements for USACE and state agencies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document land ownership details</h3>
+                    <p>Maintain records of deeds, titles, and legal descriptions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document land use history</h3>
+                    <p>Maintain archives of prior owners, tenants, and activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document water rights and usage</h3>
+                    <p>Ensure compliance with state/local regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain conservation plans</h3>
+                    <p>Document NRCS-approved practices for each field</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain crp and wrp contract files</h3>
+                    <p>Monitor compliance with program terms and conditions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain farmland improvement records</h3>
+                    <p>Track investments in drainage, fencing, irrigation, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain restricted-use pesticide records</h3>
+                    <p>Document compliance with application and storage rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage crp and wrp contracts</h3>
+                    <p>Fulfill terms of Conservation Reserve and Wetlands programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage farmland leases</h3>
+                    <p>Negotiate terms, prepare contracts, and track payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage farmland/mineral leases</h3>
+                    <p>Negotiate terms for oil/gas, wind, or solar projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage farmland partition actions</h3>
+                    <p>Divide jointly-owned property or estates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage hunting club memberships</h3>
+                    <p>Invoice, track payments, and oversee access</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage hunting/recreation leases</h3>
+                    <p>Negotiate access, fees, and liability terms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage pasture lease agreements</h3>
+                    <p>Negotiate terms for grazing livestock on rented land</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare farmland appraisal reports</h3>
+                    <p>Compile productivity, improvements, and market data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for boundary disputes</h3>
+                    <p>Compile surveys, deeds, and historical records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for eminent domain cases</h3>
+                    <p>Document land values and productivity for compensation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for right-of-way disputes</h3>
+                    <p>Document property boundaries and land use history</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for zoning/annexation issues</h3>
+                    <p>Document land use, water rights, and grandfathered status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track farmland rental payments</h3>
+                    <p>Invoice and record income from tenant farmers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track government program acreages</h3>
+                    <p>Document base acres, yields, and payment histories</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track property tax assessments</h3>
+                    <p>Ensure accurate valuations and timely payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Land & Lease Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee & Labor Management -->
+    <section class="category-section" id="employee_and_labor_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Employee & Labor Management</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer employee benefits</h3>
+                    <p>Manage healthcare, retirement, paid leave, and more</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with labor regulations</h3>
+                    <p>Fulfill requirements for FLSA, OSHA, FMLA, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with worker safety rules</h3>
+                    <p>Fulfill OSHA and EPA requirements for training, PPE, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct performance reviews</h3>
+                    <p>Evaluate employee skills, productivity, and development</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct safety training sessions</h3>
+                    <p>Provide education on equipment, chemicals, and protocols</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop employee handbooks</h3>
+                    <p>Codify company policies, procedures, and expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop employee incentive plans</h3>
+                    <p>Design and administer bonus, commission, or reward programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop job descriptions</h3>
+                    <p>Define qualifications, duties, and reporting structure</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document worker housing leases</h3>
+                    <p>Maintain rental contracts and tenant records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle employee disciplinary issues</h3>
+                    <p>Document warnings, suspensions, and termination actions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain employee personnel files</h3>
+                    <p>Document hiring, performance, and termination records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain i-9 and e-verify records</h3>
+                    <p>Verify worker eligibility and immigration status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain labor contractor records</h3>
+                    <p>Verify terms, hours, and invoices for temporary workers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage worker compensation claims</h3>
+                    <p>Report incidents, file claims, and track return to work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage worker housing facilities</h3>
+                    <p>Maintain rental units, utilities, and living conditions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage worker transportation</h3>
+                    <p>Coordinate commutes, field trips, and motor pool usage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll and benefits</h3>
+                    <p>Calculate wages, withholdings, and provide pay stubs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process worker time records</h3>
+                    <p>Track hours, overtime, PTO, and other time-based data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recruit, interview, and hire staff</h3>
+                    <p>Attract, evaluate, and onboard new team members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track employee training records</h3>
+                    <p>Document skills, certifications, and continuing education</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Employee & Labor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Certification Documentation -->
+    <section class="category-section" id="compliance_and_certification_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Certification Documentation</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Comply with ada accessibility laws</h3>
+                    <p>Ensure farm facilities, vehicles, and services are compliant</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with food traceability rules</h3>
+                    <p>Maintain lot codes, pedigrees, and recall procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with nhtsa vehicle safety</h3>
+                    <p>Maintain inspections, driver qualifications, and logbooks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with nutrient management plans</h3>
+                    <p>Document application rates, soil tests, and runoff controls</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with usda food safety rules</h3>
+                    <p>Fulfill requirements of FSMA and other FDA regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document agrichemical storage</h3>
+                    <p>Track inventory, handling, and disposal of pesticides, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document agricultural labor laws</h3>
+                    <p>Fulfill requirements for minimum wages, overtime, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document pesticide use and storage</h3>
+                    <p>Track chemical applications, worker training, and inventory</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document precision ag data privacy</h3>
+                    <p>Secure grower information and satisfy data regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document worker protection protocols</h3>
+                    <p>Fulfill rules for field reentry, PPE, and exposure limits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document worker safety training</h3>
+                    <p>Provide education on equipment, chemicals, and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Fulfill non-gmo product standards</h3>
+                    <p>Maintain documentation for non-bioengineered inputs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Fulfill sustainable forestry standards</h3>
+                    <p>Maintain records for managed timberland and woodlots</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain ag equipment inspections</h3>
+                    <p>Fulfill roadworthiness, emissions, and safety requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain animal welfare certification</h3>
+                    <p>Fulfill standards for ethical livestock production</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain biosecurity protocols</h3>
+                    <p>Track visitor logs, disinfection, and animal health controls</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain epa/nrcs conservation plans</h3>
+                    <p>Document approved practices for soil, water, and habitat</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain gap food safety records</h3>
+                    <p>Ensure traceability, employee hygiene, and product handling</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain hazardous waste manifests</h3>
+                    <p>Track generation, transportation, and disposal records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain organic certification</h3>
+                    <p>Document inputs, practices, and audit trail for organic farms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage private sustainability audits</h3>
+                    <p>Document environmental and social responsibility practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for environmental inspections</h3>
+                    <p>Demonstrate compliance with air, water, and soil regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for fda food facility audits</h3>
+                    <p>Provide records, SOPs, and data for regulatory inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for osha workplace audits</h3>
+                    <p>Demonstrate compliance with worker safety regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for usda organic audits</h3>
+                    <p>Provide detailed records on inputs, practices, and sales</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Compliance & Certification Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vendor & Supplier Management -->
+    <section class="category-section" id="vendor_and_supplier_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Vendor & Supplier Management</h2>
+                <span class="category-count">7 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Document product warranty claims</h3>
+                    <p>File and track repair/replacement of failed equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate and select new vendors</h3>
+                    <p>Research, qualify, and onboard new business partners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain approved vendor lists</h3>
+                    <p>Track qualified suppliers of inputs, equipment, and services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain seed/fertilizer inventory</h3>
+                    <p>Track lots, expiration, and procurement schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage approved pesticide lists</h3>
+                    <p>Maintain inventory of compliant, permitted products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate purchase contracts</h3>
+                    <p>Establish terms, pricing, and service-level agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process supplier invoices</h3>
+                    <p>Ensure accuracy, apply discounts, and initiate payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 164 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 FarmerTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 169 Purpose-Built Real estate agents Tools — RealtorTasksAI</title>
+    <meta name="description" content="Browse all 169 RealtorTasksAI task templates. Purpose-built for Real estate agents, brokers, and transaction coordinators — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://realtortasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #0EA5E9; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #0EA5E9; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #0EA5E9; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(14,165,233,0.1); color: #0EA5E9;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #0EA5E9; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #0EA5E9; color: #0EA5E9; background: rgba(14,165,233,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #0EA5E9; box-shadow: 0 4px 12px rgba(14,165,233,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(14,165,233,0.1); color: #0EA5E9; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #0EA5E9; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(14,165,233,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #0EA5E9; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">RealtorTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🏠 169 tasks available</div>
+            <h1><span>169</span> Purpose-Built Tools<br>for Real estate agentss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 169</a>
+            <a href="#listing_and_marketing_administration" class="filter-btn" data-cat="listing_and_marketing_administration">Listing & Marketing Administration (26)</a>
+            <a href="#buyer_and_seller_communications" class="filter-btn" data-cat="buyer_and_seller_communications">Buyer & Seller Communications (25)</a>
+            <a href="#transaction_coordination" class="filter-btn" data-cat="transaction_coordination">Transaction Coordination (25)</a>
+            <a href="#compliance_and_disclosure_documentation" class="filter-btn" data-cat="compliance_and_disclosure_documentation">Compliance & Disclosure Documentation (20)</a>
+            <a href="#client_relationship_management" class="filter-btn" data-cat="client_relationship_management">Client Relationship Management (20)</a>
+            <a href="#financial_and_commission_administration" class="filter-btn" data-cat="financial_and_commission_administration">Financial & Commission Administration (20)</a>
+            <a href="#open_house_and_showing_administration" class="filter-btn" data-cat="open_house_and_showing_administration">Open House & Showing Administration (20)</a>
+            <a href="#business_development" class="filter-btn" data-cat="business_development">Business Development (13)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Listing & Marketing Administration -->
+    <section class="category-section" id="listing_and_marketing_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Listing & Marketing Administration</h2>
+                <span class="category-count">26 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze market comparables</h3>
+                    <p>Research and provide detailed analysis of similar recently sold properties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct pre-listing inspection</h3>
+                    <p>Identify and address any issues that could impact the sale</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate property staging</h3>
+                    <p>Provide guidance and resources for staging the listed property</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop property marketing plan</h3>
+                    <p>Create a comprehensive strategy to market and promote a new listing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute marketing materials</h3>
+                    <p>Send listing flyers, brochures, and digital assets to sphere of influence and local area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate broker tours</h3>
+                    <p>Organize and host periodic broker open houses to showcase listings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on leads</h3>
+                    <p>Promptly respond to and nurture prospective buyer inquiries</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client testimonials</h3>
+                    <p>Request and collect positive client reviews to feature on marketing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage listing price changes</h3>
+                    <p>Communicate and justify any adjustments to the list price</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage listing syndication</h3>
+                    <p>Ensure the property is distributed across all relevant real estate websites</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage rental listings</h3>
+                    <p>Handle the unique requirements for marketing and administering rental properties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage virtual tour</h3>
+                    <p>Set up and test a virtual tour for the listed property</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor listing competition</h3>
+                    <p>Stay informed on rival listings and adjust strategy accordingly</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize online listing</h3>
+                    <p>Ensure all listing details, photos, and keywords are properly entered on MLS and real estate portals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare listing agreements</h3>
+                    <p>Draft and execute seller representation contracts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare listing presentation</h3>
+                    <p>Draft a professional listing presentation package for a prospective seller</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare seller disclosures</h3>
+                    <p>Gather and organize all legally required property disclosures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote open houses</h3>
+                    <p>Schedule, advertise, and host successful open house events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew expired listings</h3>
+                    <p>Proactively work to relist properties whose initial listing has expired</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to showing requests</h3>
+                    <p>Promptly schedule and confirm all showings with buyers and their agents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule maintenance/repairs</h3>
+                    <p>Coordinate with vendors to address any pre-listing repairs or updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule professional photography</h3>
+                    <p>Coordinate with a real estate photographer to capture high-quality listing photos</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track listing analytics</h3>
+                    <p>Monitor online listing performance, views, and engagement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update listing status</h3>
+                    <p>Communicate changes in listing status (active, pending, sold) to all stakeholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update marketing materials</h3>
+                    <p>Refresh listing photos, descriptions, and collateral as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write property description</h3>
+                    <p>Craft an engaging, accurate description of the listed property</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer & Seller Communications -->
+    <section class="category-section" id="buyer_and_seller_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Buyer & Seller Communications</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Assist with buyer's offer</h3>
+                    <p>Review, negotiate, and submit purchase offers on the buyer's behalf</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with pricing strategy</h3>
+                    <p>Research comps and recommend an optimal list price</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect seller testimonials</h3>
+                    <p>Request positive reviews to feature in future marketing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate offer details</h3>
+                    <p>Present and explain all offer terms to the seller</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct buyer consultation</h3>
+                    <p>Meet with prospective buyers to understand their needs and goals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct seller consultation</h3>
+                    <p>Meet with prospective sellers to discuss listing strategy and goals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct seller home tour</h3>
+                    <p>Walk through the property, identify strengths, and note any issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate buyer's inspections</h3>
+                    <p>Schedule, attend, and follow up on any necessary home inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate seller's move-out</h3>
+                    <p>Provide guidance and resources for a smooth transition</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop buyer search criteria</h3>
+                    <p>Create detailed buyer profiles to guide property searches</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate seller relocation</h3>
+                    <p>Offer support for sellers who are moving to a new area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Guide buyer through closing</h3>
+                    <p>Ensure a smooth transaction from contract to keys in hand</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle seller objections</h3>
+                    <p>Professionally address any concerns or hesitations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain buyer communication</h3>
+                    <p>Provide regular updates and respond promptly to buyer inquiries</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage buyer showings</h3>
+                    <p>Schedule, confirm, and coordinate all property viewings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage rental transactions</h3>
+                    <p>Guide both landlords and tenants through leasing processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage seller expectations</h3>
+                    <p>Set realistic timelines and communicate throughout the process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate seller concessions</h3>
+                    <p>Advocate for the seller's best interests during contract talks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare seller for listing</h3>
+                    <p>Advise on property prep, staging, and disclosure requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide buyer education</h3>
+                    <p>Offer guidance on mortgage, inspection, appraisal, and closing processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide seller education</h3>
+                    <p>Explain the home selling steps, marketing plan, and commission structure</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Represent buyer in negotiations</h3>
+                    <p>Advocate for the buyer's best interests during contract discussions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Represent seller at closing</h3>
+                    <p>Attend the closing and address any last-minute issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review seller disclosures</h3>
+                    <p>Ensure all legally required property information is accurately disclosed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set buyer expectations</h3>
+                    <p>Explain the home buying process, timeline, and agent responsibilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction Coordination -->
+    <section class="category-section" id="transaction_coordination">
+        <div class="container">
+            <div class="category-header">
+                <h2>Transaction Coordination</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer referral program</h3>
+                    <p>Manage the tracking and payout of client referral fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Advise on lease-to-own deals</h3>
+                    <p>Provide guidance on specialized lease-purchase contracts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend closing</h3>
+                    <p>Represent the client and ensure a smooth transaction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend home inspection</h3>
+                    <p>Be present to observe and discuss findings with the inspector</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate appraisal process</h3>
+                    <p>Order the appraisal and provide supporting documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate lease takeovers</h3>
+                    <p>Facilitate the transfer of an existing lease to the new owner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate rental move-in/out</h3>
+                    <p>Manage the administrative tasks for tenant transitions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate title search</h3>
+                    <p>Order and review the property's title report</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate 1031 exchanges</h3>
+                    <p>Help investors defer capital gains through like-kind exchanges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate mortgage application</h3>
+                    <p>Assist the buyer in submitting a complete loan application</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate title clearance</h3>
+                    <p>Work to resolve any title issues or encumbrances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle short sales/foreclosures</h3>
+                    <p>Navigate the unique requirements of distressed property sales</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage appraisal challenges</h3>
+                    <p>Facilitate any necessary re-evaluation or appeal</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage contract negotiations</h3>
+                    <p>Facilitate discussions and revisions between all parties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage earnest money</h3>
+                    <p>Hold, track, and disburse the buyer's good-faith deposit</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor loan approval status</h3>
+                    <p>Regularly follow up with the lender on approval progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate inspection items</h3>
+                    <p>Advocate for the client's interests during repair discussions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Order title insurance</h3>
+                    <p>Coordinate the title company to issue the required policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee property management</h3>
+                    <p>Assist landlords with tenant screening, maintenance, and financials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare closing disclosure</h3>
+                    <p>Review and explain the final settlement statement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare purchase agreement</h3>
+                    <p>Draft the initial offer and purchase contract</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review appraisal findings</h3>
+                    <p>Ensure the appraised value aligns with the purchase price</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review inspection report</h3>
+                    <p>Analyze the report and identify any concerns or needed repairs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule final walkthrough</h3>
+                    <p>Arrange for the buyer to inspect the property before closing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule home inspection</h3>
+                    <p>Arrange for a comprehensive property inspection</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Transaction Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Disclosure Documentation -->
+    <section class="category-section" id="compliance_and_disclosure_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Disclosure Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Adhere to foreign investor regulations</h3>
+                    <p>Understand and apply rules for non-resident property sales</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Adhere to respa guidelines</h3>
+                    <p>Comply with the Real Estate Settlement Procedures Act</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with cfpb regulations</h3>
+                    <p>Follow guidelines for consumer financial protection</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with state regulations</h3>
+                    <p>Stay up-to-date on state-specific real estate laws and forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Disclose known property defects</h3>
+                    <p>Provide full transparency on any material issues with the home</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File required transaction docs</h3>
+                    <p>Submit all necessary paperwork to title companies and authorities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain anti-money laundering policies</h3>
+                    <p>Implement measures to detect and report suspicious transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client privacy</h3>
+                    <p>Safeguard all sensitive personal and financial information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain error & omissions insurance</h3>
+                    <p>Carry professional liability coverage for potential claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain fair housing policies</h3>
+                    <p>Ensure all marketing and client interactions comply with FHA laws</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage ada accessibility requirements</h3>
+                    <p>Advise clients on fair housing and accessibility laws</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client data retention</h3>
+                    <p>Store records and documents per legal and ethical requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage data privacy policies</h3>
+                    <p>Protect client data in accordance with data protection laws</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage transaction checklists</h3>
+                    <p>Track the completion of all required documentation and milestones</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare property disclosures</h3>
+                    <p>Gather and organize all legally required seller disclosures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide agency disclosures</h3>
+                    <p>Explain the agent's fiduciary duties and legal representation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide energy efficiency disclosures</h3>
+                    <p>Disclose a home's energy usage and improvement opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide lead-based paint disclosures</h3>
+                    <p>Notify buyers of potential lead hazards in older homes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review property survey</h3>
+                    <p>Analyze the property boundaries, easements, and encroachments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track licenses and renewals</h3>
+                    <p>Ensure all agent and broker licenses remain active and compliant</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Relationship Management -->
+    <section class="category-section" id="client_relationship_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Relationship Management</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze client data trends</h3>
+                    <p>Use analytics to identify opportunities and predict needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client satisfaction surveys</h3>
+                    <p>Collect and analyze feedback to improve service delivery</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create client profiles</h3>
+                    <p>Gather detailed information to personalize the client experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Customize client communication</h3>
+                    <p>Tailor messaging and channels to individual preferences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client loyalty program</h3>
+                    <p>Implement a system to reward and retain high-value clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate client focus groups</h3>
+                    <p>Gather targeted input to enhance products and services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client feedback</h3>
+                    <p>Solicit and document client satisfaction throughout the process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client contact database</h3>
+                    <p>Centralize and organize all client contact details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client gift program</h3>
+                    <p>Select and deliver thoughtful gifts for special occasions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client referral pipeline</h3>
+                    <p>Nurture relationships to generate ongoing referral business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client referral program</h3>
+                    <p>Administer the tracking and rewards for client referrals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client social media</h3>
+                    <p>Engage with and respond to online client interactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer concierge-style services</h3>
+                    <p>Provide white-glove assistance beyond real estate transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize client events/mixers</h3>
+                    <p>Host networking opportunities to build relationships</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client education resources</h3>
+                    <p>Share valuable content to position the agent as an expert</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client progress updates</h3>
+                    <p>Keep clients informed of key milestones and next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide market trend updates</h3>
+                    <p>Share relevant real estate news and analysis</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client inquiries</h3>
+                    <p>Address questions and concerns in a timely manner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule client check-ins</h3>
+                    <p>Proactively follow up with buyers and sellers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send personalized communications</h3>
+                    <p>Craft tailored messages, newsletters, and outreach</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Relationship Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial & Commission Administration -->
+    <section class="category-section" id="financial_and_commission_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial & Commission Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer agent draw programs</h3>
+                    <p>Manage the disbursement and repayment of agent advance draws</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Administer retirement plan contributions</h3>
+                    <p>Set up and contribute to agent 401(k) or other retirement accounts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze agent production metrics</h3>
+                    <p>Track and report on individual and team sales performance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with agent tax preparation</h3>
+                    <p>Provide transaction details for agent tax filing purposes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure wage garnishment compliance</h3>
+                    <p>Properly handle any required wage withholding or garnishment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate agent healthcare benefits</h3>
+                    <p>Enroll and manage agent group health insurance plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle accounts receivable</h3>
+                    <p>Invoice clients and collect outstanding real estate fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement anti-money laundering controls</h3>
+                    <p>Follow protocols to detect and prevent illicit financial activity</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain detailed transaction records</h3>
+                    <p>Document all financial details of real estate transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain escrow trust accounts</h3>
+                    <p>Properly hold and disburse client deposits and funds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agent licensing and fees</h3>
+                    <p>Handle the payment and renewal of agent licensing and association dues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agent onboarding/offboarding</h3>
+                    <p>Handle the financial aspects of recruiting and terminating agents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agent performance bonuses</h3>
+                    <p>Develop and implement incentive programs for top producers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage commission disbursements</h3>
+                    <p>Ensure timely and accurate payment of earned commissions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare agent commission statements</h3>
+                    <p>Calculate and document agent splits for each transaction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process charitable donation requests</h3>
+                    <p>Facilitate the donation of real estate commissions to charities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide agent expense reimbursement</h3>
+                    <p>Process requests and documentation for approved agent expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide agent payment options</h3>
+                    <p>Offer flexible commission payout methods (direct deposit, check, etc.)</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile agent commission reports</h3>
+                    <p>Verify the accuracy of commission statements and payouts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track agent sales production</h3>
+                    <p>Maintain records of agent listings, sales, and earnings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial & Commission Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open House & Showing Administration -->
+    <section class="category-section" id="open_house_and_showing_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Open House & Showing Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze open house attendance data</h3>
+                    <p>Track and report on visitor traffic and lead generation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct virtual showings/tours</h3>
+                    <p>Facilitate remote property viewing experiences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm showing appointments</h3>
+                    <p>Notify all parties of the scheduled showing details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute showing instructions</h3>
+                    <p>Provide agents and buyers with necessary access information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate property tours during open houses</h3>
+                    <p>Guide prospective buyers through the listed home</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on buyer showing feedback</h3>
+                    <p>Reach out to buyers to address any questions or concerns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Greet and register open house attendees</h3>
+                    <p>Welcome visitors and collect contact information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle open house lead follow-up</h3>
+                    <p>Promptly reach out to all captured open house leads</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain open house sign-in sheets</h3>
+                    <p>Document attendee information for post-event outreach</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agent showing feedback</h3>
+                    <p>Collect and compile agent insights after property viewings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage no-show/cancellation policy</h3>
+                    <p>Enforce guidelines and fees for missed or cancelled showings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage open house agent schedules</h3>
+                    <p>Coordinate agent availability and coverage for events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare open house materials</h3>
+                    <p>Assemble necessary signage, brochures, and other supplies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare showing disclosure forms</h3>
+                    <p>Ensure all required documentation is completed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote open house marketing</h3>
+                    <p>Advertise open houses through various digital and print channels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide open house agent training</h3>
+                    <p>Equip agents with best practices for hosting successful events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide showing agent support</h3>
+                    <p>Assist agents before, during, and after property showings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule open house events</h3>
+                    <p>Coordinate dates, times, and agent coverage for open houses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule property showings</h3>
+                    <p>Coordinate appointment times with buyers and sellers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track showing activity metrics</h3>
+                    <p>Monitor and report on showing volume, conversion rates, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Open House & Showing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Development -->
+    <section class="category-section" id="business_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Development</h2>
+                <span class="category-count">13 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze market trends and data</h3>
+                    <p>Research and share insights to guide business strategy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate agent advertising campaigns</h3>
+                    <p>Plan and execute print, digital, and multimedia ad placements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop agent recruitment initiatives</h3>
+                    <p>Attract and onboard top talent to the organization</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop prospecting strategies</h3>
+                    <p>Devise and implement effective lead generation tactics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate agent mentorship program</h3>
+                    <p>Match new/junior agents with experienced senior agents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement agent social media plans</h3>
+                    <p>Guide and support agents' personal/professional online activity</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agent continuing education</h3>
+                    <p>Track and facilitate mandatory license renewal coursework</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agent marketing materials</h3>
+                    <p>Create, distribute, and maintain branded collateral</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer agent productivity tools</h3>
+                    <p>Provide technology, software, and resources to boost efficiency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize agent networking events</h3>
+                    <p>Host gatherings to build relationships and generate referrals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee agent branding and websites</h3>
+                    <p>Ensure consistent messaging and digital presence</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee agent professional development</h3>
+                    <p>Identify growth opportunities and help agents advance careers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide agent coaching and training</h3>
+                    <p>Deliver ongoing professional development opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 169 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RealtorTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>
