@@ -23,6 +23,7 @@
         "url": "https://realtortasksai.com",
         "operatingSystem": "Windows, macOS, Linux",
         "offers": [
+            {"@type": "Offer", "name": "Try It", "price": "5.00", "priceCurrency": "USD", "description": "2 credits"},
             {"@type": "Offer", "name": "Starter", "price": "29.00", "priceCurrency": "USD", "description": "15 credits"},
             {"@type": "Offer", "name": "Pro", "price": "99.00", "priceCurrency": "USD", "description": "60 credits"},
             {"@type": "Offer", "name": "Business", "price": "199.00", "priceCurrency": "USD", "description": "150 credits"},
@@ -944,6 +945,19 @@
             <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-bottom:40px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
 
             <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Try It</h3>
+                    <div class="price">$5</div>
+                    <div class="credits">2 credits</div>
+                    <p class="per-credit">$2.50 per task</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Try before you commit</li>
+                    </ul>
+                    <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
+                </div>
+
                 <div class="pricing-card">
                     <h3>Starter</h3>
                     <div class="price">$29</div>
