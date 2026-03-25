@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 127 Purpose-Built Mortuary science professionals and funeral home staff Tools — MortuaryTasksAI</title>
+    <meta name="description" content="Browse all 127 MortuaryTasksAI task templates. Purpose-built for Mortuary science professionals and funeral home staff — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://mortuarytasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #334155; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #334155; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #334155; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(51,65,85,0.1); color: #334155;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #334155; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #334155; color: #334155; background: rgba(51,65,85,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #334155; box-shadow: 0 4px 12px rgba(51,65,85,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(51,65,85,0.1); color: #334155; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #334155; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(51,65,85,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #334155; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MortuaryTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🕯️ 127 tasks available</div>
+            <h1><span>127</span> Purpose-Built Tools<br>for Mortuary science professionals and funeral home staffs</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 127</a>
+            <a href="#case_and_preparation_records" class="filter-btn" data-cat="case_and_preparation_records">Case & Preparation Records (15)</a>
+            <a href="#regulatory_and_government_filings" class="filter-btn" data-cat="regulatory_and_government_filings">Regulatory & Government Filings (15)</a>
+            <a href="#cremation_authorization_and_documentation" class="filter-btn" data-cat="cremation_authorization_and_documentation">Cremation Authorization & Documentation (15)</a>
+            <a href="#family_communications" class="filter-btn" data-cat="family_communications">Family Communications (15)</a>
+            <a href="#transportation_documentation" class="filter-btn" data-cat="transportation_documentation">Transportation Documentation (15)</a>
+            <a href="#compliance_and_licensing" class="filter-btn" data-cat="compliance_and_licensing">Compliance & Licensing (17)</a>
+            <a href="#financial_administration" class="filter-btn" data-cat="financial_administration">Financial Administration (15)</a>
+            <a href="#business_operations" class="filter-btn" data-cat="business_operations">Business Operations (20)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Case & Preparation Records -->
+    <section class="category-section" id="case_and_preparation_records">
+        <div class="container">
+            <div class="category-header">
+                <h2>Case & Preparation Records</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Catalog decedent clothing and belongings</h3>
+                    <p>Log all items sent with the decedent for return to family</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Compile decedent medical history</h3>
+                    <p>Obtain and summarize relevant medical records from providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document embalming procedure</h3>
+                    <p>Record details of the embalming process for the case file</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Inventory decedent personal effects</h3>
+                    <p>Document all items received with the decedent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain embalming room logbook</h3>
+                    <p>Track chemicals, equipment, and process details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain temperature-controlled storage</h3>
+                    <p>Monitor and document environmental conditions for remains</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Perform final quality check of preparation</h3>
+                    <p>Ensure decedent is presentable and all steps are complete</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Photograph decedent for case file</h3>
+                    <p>Take high-quality photos for identification and documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Photograph decedent preparation areas</h3>
+                    <p>Document the cleanliness and organization of prep spaces</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare case file for storage</h3>
+                    <p>Organize and secure all physical and digital records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare case intake record</h3>
+                    <p>Document initial case information including decedent details and family contact</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare decedent identification bracelet</h3>
+                    <p>Create and attach a tamper-evident ID bracelet</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Scan and digitize paper case records</h3>
+                    <p>Convert physical records to electronic format for archiving</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer case file to archival storage</h3>
+                    <p>Move older cases to long-term secure storage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update electronic case management system</h3>
+                    <p>Enter all relevant case details into the digital database</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Case & Preparation Records</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory & Government Filings -->
+    <section class="category-section" id="regulatory_and_government_filings">
+        <div class="container">
+            <div class="category-header">
+                <h2>Regulatory & Government Filings</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Complete death certificate</h3>
+                    <p>Gather required information and submit to vital records office</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete shipping paperwork for air transport</h3>
+                    <p>File documentation for remains transported by air</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct osha safety inspections</h3>
+                    <p>Document workplace conditions and procedural compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document infectious waste manifests</h3>
+                    <p>Track handling and disposal of biohazardous materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File paperwork for cremation authorization</h3>
+                    <p>Obtain legal approval before performing cremation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File permit for disposition of remains</h3>
+                    <p>Obtain authorization for burial, cremation, or other method</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File quarterly tax returns for the business</h3>
+                    <p>Prepare and submit required government filings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain records of statutory hold periods</h3>
+                    <p>Document compliance with minimum wait times</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain burial-transit permits</h3>
+                    <p>Secure approvals for moving remains across jurisdictions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for state board inspections</h3>
+                    <p>Ensure readiness for unannounced regulatory audits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew funeral director licenses</h3>
+                    <p>Complete continuing education and file for license renewal</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Report communicable disease deaths</h3>
+                    <p>Notify public health department of infectious fatalities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit body donation consent forms</h3>
+                    <p>Process requests for anatomical gifts to medical schools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit fetal death certificate</h3>
+                    <p>File required paperwork for stillbirths and miscarriages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit monthly reports to regulators</h3>
+                    <p>Provide data on case volume, dispositions, and more</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Regulatory & Government Filings</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cremation Authorization & Documentation -->
+    <section class="category-section" id="cremation_authorization_and_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Cremation Authorization & Documentation</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Conduct random audits of cremation records</h3>
+                    <p>Review files to ensure proper procedures were followed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate return of cremated remains</h3>
+                    <p>Arrange for family pickup or delivery of urn/container</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document cremation process details</h3>
+                    <p>Record temperature, duration, and other metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document receipt of cremated remains</h3>
+                    <p>Catalog urn/container contents and provide to family</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain chain of custody records</h3>
+                    <p>Track the remains at each step from intake to return</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain log of cremation authorizations</h3>
+                    <p>Track all cremation cases for regulatory compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain authorization for cremation</h3>
+                    <p>Secure written consent from legal next of kin</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain permits for scattering of ashes</h3>
+                    <p>File authorizations for nontraditional dispositions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Photograph identification of remains</h3>
+                    <p>Take pictures of the decedent for visual confirmation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare cremated remains for return</h3>
+                    <p>Package ashes securely for delivery to family</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare cremation authorization paperwork</h3>
+                    <p>Compile all required forms for the cremation process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide copies of authorization to family</h3>
+                    <p>Give the next of kin the signed consent documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Retain cremation records permanently</h3>
+                    <p>Archive case files as required by state regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Supervise placement into cremation chamber</h3>
+                    <p>Ensure proper handling and loading of the casket</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify identification of decedent</h3>
+                    <p>Cross-check records to confirm the correct individual</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Cremation Authorization & Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Communications -->
+    <section class="category-section" id="family_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Family Communications</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Arrange for removal of personal effects</h3>
+                    <p>Handle the return of the decedent's belongings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with selection of casket or urn</h3>
+                    <p>Guide the family in choosing an appropriate container</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect biographical information for obituary</h3>
+                    <p>Obtain details to include in the published notice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with clergy for religious services</h3>
+                    <p>Schedule officiant and discuss ceremony logistics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Deliver cremated remains to family</h3>
+                    <p>Coordinate the transfer of the urn or container</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain options for final disposition</h3>
+                    <p>Review burial, cremation, and other possibilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on outstanding payments</h3>
+                    <p>Collect any remaining balances owed for services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather family contact information</h3>
+                    <p>Document names, numbers, and relationship to decedent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify family of death and next steps</h3>
+                    <p>Provide initial information about the process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer grief counseling resources</h3>
+                    <p>Connect the family with support services as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Present estimate of funeral service costs</h3>
+                    <p>Provide a detailed breakdown of expected expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide certified copies of death certificate</h3>
+                    <p>Assist the family in obtaining required documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide guidance on flowers and memorabilia</h3>
+                    <p>Advise on appropriate tributes and mementos</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review embalming and preparation plans</h3>
+                    <p>Discuss the decedent's appearance and presentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule in-person arrangements meeting</h3>
+                    <p>Coordinate a time for the family to visit the funeral home</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Family Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Documentation -->
+    <section class="category-section" id="transportation_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Transportation Documentation</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Arrange for transfer of remains to airport</h3>
+                    <p>Coordinate logistics of pickup and delivery to airline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Arrange specialty transport for oversized caskets</h3>
+                    <p>Handle wide, tall, or exceptionally heavy containers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete shipping manifest for air transport</h3>
+                    <p>Document details for remains transported by air</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm receipt of remains at destination</h3>
+                    <p>Verify successful delivery to the receiving funeral home</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Dispatch drivers for removal of remains</h3>
+                    <p>Send staff to retrieve the decedent from a location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document chain of custody during transport</h3>
+                    <p>Track handoffs and monitor status of the shipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain fleet of funeral home vehicles</h3>
+                    <p>Oversee maintenance, licensing, and insurance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage third-party transport providers</h3>
+                    <p>Vet, contract with, and oversee subcontracted services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify airline of hazardous materials</h3>
+                    <p>Disclose any embalmed or cremated remains in cargo</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain authorization for international transport</h3>
+                    <p>Secure approvals when shipping across borders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare decedent for airline cargo shipment</h3>
+                    <p>Ensure proper packaging and labeling for air travel</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Procure eco-friendly transport options</h3>
+                    <p>Offer hybrid or electric hearses and limousines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule ground transport for local service</h3>
+                    <p>Coordinate with hearse, limo, or other vehicle providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule organ/tissue donor transport</h3>
+                    <p>Coordinate logistics when remains are split for donation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track mileage and fuel usage for fleet</h3>
+                    <p>Document expenses for tax and regulatory reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Transportation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Licensing -->
+    <section class="category-section" id="compliance_and_licensing">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Licensing</h2>
+                <span class="category-count">17 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Comply with hipaa privacy regulations</h3>
+                    <p>Protect confidentiality of decedent and family records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with state preneed funeral laws</h3>
+                    <p>Follow regulations around advanced funeral planning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct employee background checks</h3>
+                    <p>Vet new hires for any criminal or disciplinary issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct workplace safety inspections</h3>
+                    <p>Document equipment, facility, and procedural reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop emergency preparedness plans</h3>
+                    <p>Create and distribute guidelines for natural disasters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop policies for customer refunds</h3>
+                    <p>Establish guidelines for returns, cancellations, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document staff training and competency</h3>
+                    <p>Maintain records of skills, certifications, and education</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure proper storage of hazardous materials</h3>
+                    <p>Secure chemicals, fuels, and other regulated supplies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement infection control protocols</h3>
+                    <p>Establish and train on procedures for biohazards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement quality assurance procedures</h3>
+                    <p>Audit case files and operational workflows</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain controlled substance licenses</h3>
+                    <p>Renew DEA and state registrations for pharmaceuticals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain licenses for funeral directors</h3>
+                    <p>Ensure all staff hold required state certifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage third-party vendor relationships</h3>
+                    <p>Vet and oversee contractors, suppliers, and partners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in industry accreditation</h3>
+                    <p>Pursue recognition from professional associations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide osha training for staff</h3>
+                    <p>Document compliance with workplace safety regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit reports to state funeral board</h3>
+                    <p>Provide data on cases, staffing, facilities, and more</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track continuing education credits</h3>
+                    <p>Monitor staff progress toward license renewal requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Licensing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Administration -->
+    <section class="category-section" id="financial_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial Administration</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Arrange financing for capital projects</h3>
+                    <p>Secure loans or leases for facility upgrades/expansion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with charitable solicitation laws</h3>
+                    <p>Register and report for any public fundraising</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File quarterly payroll tax returns</h3>
+                    <p>Calculate, withhold, and remit employee taxes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain business liability policies</h3>
+                    <p>Renew general, professional, and other key insurances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain general ledger accounting</h3>
+                    <p>Record all income, expenses, and financial transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage accounts receivable collections</h3>
+                    <p>Follow up on outstanding balances owed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee health insurance plans</h3>
+                    <p>Enroll staff, process claims, and maintain coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage preneed funeral trust funds</h3>
+                    <p>Track balances, investment returns, and distributions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee workers' compensation insurance</h3>
+                    <p>Ensure appropriate coverage and handle any claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare annual business tax returns</h3>
+                    <p>Complete federal, state, and local filings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare monthly financial statements</h3>
+                    <p>Generate P&L, balance sheet, and cash flow reports</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare price lists for services</h3>
+                    <p>Maintain documented fees for all offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payments from families</h3>
+                    <p>Accept and reconcile cash, check, and card payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll for hourly employees</h3>
+                    <p>Calculate wages, withholdings, and direct deposits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile bank and credit card accounts</h3>
+                    <p>Match internal records to external statements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Operations -->
+    <section class="category-section" id="business_operations">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Operations</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze operational performance metrics</h3>
+                    <p>Track KPIs, dashboards, and other business data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct market research and analysis</h3>
+                    <p>Gather competitive intelligence and industry insights</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate community outreach programs</h3>
+                    <p>Plan and execute local engagement activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate facilities maintenance projects</h3>
+                    <p>Schedule and oversee renovations, repairs, and upgrades</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop and launch new service offerings</h3>
+                    <p>Create, price, and market innovative funeral products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop and maintain website content</h3>
+                    <p>Create and update the online presence and brand</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop strategic business plans</h3>
+                    <p>Create budgets, forecasts, and long-term objectives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure compliance with ada accessibility</h3>
+                    <p>Verify that the physical space meets legal standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement customer relationship software</h3>
+                    <p>Utilize CRM tools to manage cases and interactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement environmental sustainability initiatives</h3>
+                    <p>Reduce waste, conserve resources, and go green</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement process improvement initiatives</h3>
+                    <p>Identify and execute operational optimizations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain facility management schedule</h3>
+                    <p>Document maintenance, cleaning, and upkeep activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain vendor and supplier relationships</h3>
+                    <p>Vet, negotiate with, and oversee third-party partners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage human resources and staffing</h3>
+                    <p>Handle hiring, onboarding, scheduling, and reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage inventory of supplies and goods</h3>
+                    <p>Track consumables, merchandise, and funeral items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage social media accounts and profiles</h3>
+                    <p>Post updates, engage with followers, and monitor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage third-party software and it systems</h3>
+                    <p>Oversee tech infrastructure, security, and support</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee vehicle fleet and equipment</h3>
+                    <p>Schedule repairs, replacements, and routine service</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce marketing and advertising materials</h3>
+                    <p>Design brochures, ads, videos, and other collateral</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide bereavement support resources</h3>
+                    <p>Offer literature, workshops, and referrals to families</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 127 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MortuaryTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

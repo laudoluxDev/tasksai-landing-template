@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 166 Purpose-Built Military spouses Tools — MilitarySpouseTasksAI</title>
+    <meta name="description" content="Browse all 166 MilitarySpouseTasksAI task templates. Purpose-built for Military spouses, veterans, and military families — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://militaryspousetasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #1D4ED8; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #1D4ED8; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #1D4ED8; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(29,78,216,0.1); color: #1D4ED8;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #1D4ED8; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #1D4ED8; color: #1D4ED8; background: rgba(29,78,216,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #1D4ED8; box-shadow: 0 4px 12px rgba(29,78,216,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(29,78,216,0.1); color: #1D4ED8; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #1D4ED8; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(29,78,216,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #1D4ED8; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MilitarySpouseTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">⭐ 166 tasks available</div>
+            <h1><span>166</span> Purpose-Built Tools<br>for Military spousess</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 166</a>
+            <a href="#pcs_and_relocation_documentation" class="filter-btn" data-cat="pcs_and_relocation_documentation">PCS & Relocation Documentation (42)</a>
+            <a href="#benefits_and_entitlements_administration" class="filter-btn" data-cat="benefits_and_entitlements_administration">Benefits & Entitlements Administration (22)</a>
+            <a href="#employment_and_career_transition" class="filter-btn" data-cat="employment_and_career_transition">Employment & Career Transition (20)</a>
+            <a href="#education_and_licensing_documentation" class="filter-btn" data-cat="education_and_licensing_documentation">Education & Licensing Documentation (20)</a>
+            <a href="#family_support_resources" class="filter-btn" data-cat="family_support_resources">Family Support Resources (0)</a>
+            <a href="#financial_administration" class="filter-btn" data-cat="financial_administration">Financial Administration (25)</a>
+            <a href="#legal_and_power_of_attorney_documents" class="filter-btn" data-cat="legal_and_power_of_attorney_documents">Legal & Power of Attorney Documents (20)</a>
+            <a href="#community_and_volunteer_administration" class="filter-btn" data-cat="community_and_volunteer_administration">Community & Volunteer Administration (17)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- PCS & Relocation Documentation -->
+    <section class="category-section" id="pcs_and_relocation_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>PCS & Relocation Documentation</h2>
+                <span class="category-count">42 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advocate for family member needs</h3>
+                    <p>Effectively communicate with providers and command</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Build a social support network</h3>
+                    <p>Connect with new friends and community groups</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure family caregiver preparedness</h3>
+                    <p>Document medical info and care plans for dependents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Locate new medical providers</h3>
+                    <p>Research and select new doctors, dentists, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain family communication plan</h3>
+                    <p>Develop emergency contacts and communication strategies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain family emergency preparedness</h3>
+                    <p>Assemble disaster kits and emergency plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain family self-care routines</h3>
+                    <p>Prioritize individual and family wellbeing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage family counseling/therapy</h3>
+                    <p>Access mental health resources for the family</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage family member special needs</h3>
+                    <p>Advocate for accommodations and needed services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage family pet relocation</h3>
+                    <p>Arrange for pet transport and veterinary care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage tricare coverage changes</h3>
+                    <p>Report life events that impact Tricare eligibility</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research local community resources</h3>
+                    <p>Identify helpful nonprofits, clubs, and programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule wellness appointments</h3>
+                    <p>Book annual physicals, dental cleanings, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer medical/dental records</h3>
+                    <p>Obtain and transfer family health documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand exceptional family member program</h3>
+                    <p>Learn about EFMP and enroll eligible family members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand family legal protections</h3>
+                    <p>Learn about power of attorney, wills, and more</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Utilize child/youth programs</h3>
+                    <p>Enroll kids in on-base activities and events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Utilize military family support programs</h3>
+                    <p>Access counseling, childcare, recreation, and more</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Utilize spousal employment assistance</h3>
+                    <p>Access programs to support military spouse careers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Cancel local memberships/subscriptions</h3>
+                    <p>Cancel gym, library, etc. before departing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Clean and prepare old home</h3>
+                    <p>Thoroughly clean and prepare the home for new occupants</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete outbound clearance</h3>
+                    <p>Obtain all necessary signatures for outbound clearance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct pre-move home inspection</h3>
+                    <p>Document existing home condition before turnover</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Disconnect utilities at old home</h3>
+                    <p>Schedule utility disconnections at the right time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain pcs documentation folder</h3>
+                    <p>Organize and store all paperwork related to the PCS move in one central location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage pet relocation</h3>
+                    <p>Arrange for pet transport, update vet records, register with new vet</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify banks/credit cards of move</h3>
+                    <p>Update billing addresses and contact info</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify utility providers of move</h3>
+                    <p>Contact electricity, water, cable, internet providers to cancel or transfer service</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize donated/sold items</h3>
+                    <p>Decide what to donate, sell, or discard before the move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Pack and label household goods</h3>
+                    <p>Carefully pack and label all belongings for the move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare pcs move checklist</h3>
+                    <p>Create a comprehensive checklist for an upcoming permanent change of station move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare pcs travel plan</h3>
+                    <p>Coordinate transportation, lodging, and meals for the PCS move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare personal/sentimental items</h3>
+                    <p>Decide what to bring personally vs. ship with movers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule medical appointments</h3>
+                    <p>Book any necessary appointments at the new location before arrival</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule moving company</h3>
+                    <p>Research, book, and coordinate with the moving company</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer medical records</h3>
+                    <p>Obtain copies of medical records and transfer to new providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer pet registration/records</h3>
+                    <p>Update pet licenses, microchips, and vet records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer vehicle registration</h3>
+                    <p>Register vehicles at the new state DMV within 30 days of arrival</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update address with usps</h3>
+                    <p>Complete the USPS change of address form for the new duty station</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update car insurance</h3>
+                    <p>Notify insurance provider of the move and update policy details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update emergency contacts</h3>
+                    <p>Provide new contact information to schools, daycares, doctor's offices, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update mail forwarding</h3>
+                    <p>Complete USPS mail forwarding for 1 year</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">PCS & Relocation Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits & Entitlements Administration -->
+    <section class="category-section" id="benefits_and_entitlements_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Benefits & Entitlements Administration</h2>
+                <span class="category-count">22 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Apply for bah</h3>
+                    <p>Submit application for Basic Allowance for Housing (BAH)</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for childcare fee assistance</h3>
+                    <p>Claim childcare fee assistance from the military</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for educational benefits</h3>
+                    <p>Utilize tuition assistance, GI Bill, or MyCAA funds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for efmp enrollment</h3>
+                    <p>Enroll family members in the Exceptional Family Member Program</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for military spouse preference</h3>
+                    <p>Utilize the military spouse preference program</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for spouse scholarships</h3>
+                    <p>Research and apply for military spouse scholarships</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for spouse sgli</h3>
+                    <p>Enroll spouse in Servicemembers' Group Life Insurance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim dependent id card</h3>
+                    <p>Obtain dependent military ID cards for family members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim non-medical attendant allowance</h3>
+                    <p>Submit claims for caregiver expenses if eligible</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim pcs household goods shipment</h3>
+                    <p>Submit paperwork for government-paid household goods move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim pcs travel allowance</h3>
+                    <p>Understand and submit claims for mileage, per diem, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim spouse employment assistance</h3>
+                    <p>Access programs for military spouse employment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll children in tricare</h3>
+                    <p>Add new children to Tricare health insurance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll in spouse seco</h3>
+                    <p>Sign up for Spouse Education and Career Opportunities program</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll in tricare</h3>
+                    <p>Select and enroll in the appropriate TRICARE plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage tricare dental coverage</h3>
+                    <p>Enroll in, use, and maintain Tricare dental insurance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage tricare prescriptions</h3>
+                    <p>Transfer and refill Tricare prescriptions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage tricare vision coverage</h3>
+                    <p>Utilize Tricare vision benefits for routine eye care</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer professional licensure</h3>
+                    <p>Understand reciprocity for professional licenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand bah/housing entitlements</h3>
+                    <p>Learn about Basic Allowance for Housing benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update deers information</h3>
+                    <p>Add/remove family members, report life changes in DEERS</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update tsp contributions</h3>
+                    <p>Review and update Thrift Savings Plan contributions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Benefits & Entitlements Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employment & Career Transition -->
+    <section class="category-section" id="employment_and_career_transition">
+        <div class="container">
+            <div class="category-header">
+                <h2>Employment & Career Transition</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Apply for jobs at new location</h3>
+                    <p>Submit applications, resumes, and cover letters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim unemployment benefits</h3>
+                    <p>Apply for unemployment insurance if job is lost</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Expand professional network</h3>
+                    <p>Connect with new contacts in the local community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explore entrepreneurial options</h3>
+                    <p>Start a business or freelance opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Leverage military spouse hiring</h3>
+                    <p>Use preference programs to expedite hiring</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain professional development</h3>
+                    <p>Attend training, conferences, or networking events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employment gaps</h3>
+                    <p>Explain resume gaps due to PCS moves</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage transition to new role</h3>
+                    <p>Onboard and integrate into a new job smoothly</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage work-life balance</h3>
+                    <p>Set healthy boundaries and avoid burnout</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate job offers</h3>
+                    <p>Learn how to effectively negotiate salary and benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for job interviews</h3>
+                    <p>Practice interviewing and research potential questions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for relicensing costs</h3>
+                    <p>Budget for fees to transfer professional licenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for remote/portable work</h3>
+                    <p>Identify remote, freelance, or portable career options</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide notice at current job</h3>
+                    <p>Give proper notice and exit gracefully</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research job opportunities</h3>
+                    <p>Identify companies, roles, and industries of interest</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research portable career options</h3>
+                    <p>Identify careers that can move with the military</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer professional licenses</h3>
+                    <p>Ensure licenses/certifications transfer to new state</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update linkedin profile</h3>
+                    <p>Optimize profile for job search in new location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update resume for pcs move</h3>
+                    <p>Tailor resume to new location and job market</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Utilize spouse employment programs</h3>
+                    <p>Access spouse employment assistance from the military</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Employment & Career Transition</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Licensing Documentation -->
+    <section class="category-section" id="education_and_licensing_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Education & Licensing Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Address special education needs</h3>
+                    <p>Advocate for accommodations or services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Apply for education scholarships</h3>
+                    <p>Seek out scholarships for military dependents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Arrange extracurricular activities</h3>
+                    <p>Enroll children in sports, clubs, or lessons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate with new teachers</h3>
+                    <p>Introduce children and share pertinent info</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll children in new school</h3>
+                    <p>Complete registration and transfer records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll children in youth programs</h3>
+                    <p>Sign up for military youth/teen programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify tutoring/academic support</h3>
+                    <p>Access resources for children's academic success</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain children's extracurriculars</h3>
+                    <p>Ensure continued participation in activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage iep/504 plan transfers</h3>
+                    <p>Ensure accommodations transfer to new schools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage school registration paperwork</h3>
+                    <p>Complete enrollment forms for new schools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage special license transfers</h3>
+                    <p>Transfer professional or occupational licenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain student id cards</h3>
+                    <p>Acquire school-issued IDs for children</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Request school transcripts</h3>
+                    <p>Request and transfer academic records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research local school options</h3>
+                    <p>Evaluate public, private, or homeschool choices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule school appointments</h3>
+                    <p>Book meetings with teachers, counselors, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand childcare options</h3>
+                    <p>Research and select childcare providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand education benefits</h3>
+                    <p>Learn about available military education funding</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand graduation requirements</h3>
+                    <p>Learn about diploma/credit transfer policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update children's emergency contacts</h3>
+                    <p>Provide new contact info to schools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update children's medical records</h3>
+                    <p>Obtain and transfer school health records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Education & Licensing Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Support Resources -->
+    <section class="category-section" id="family_support_resources">
+        <div class="container">
+            <div class="category-header">
+                <h2>Family Support Resources</h2>
+                <span class="category-count">0 tasks</span>
+            </div>
+            <div class="task-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Administration -->
+    <section class="category-section" id="financial_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Cancel local subscriptions/memberships</h3>
+                    <p>Cancel gym, library, etc. before departing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim dislocation allowance (dla)</h3>
+                    <p>Apply for financial assistance with PCS move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim moving expense reimbursement</h3>
+                    <p>Submit receipts for authorized moving costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim pcs travel reimbursement</h3>
+                    <p>Submit documentation for mileage, per diem, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim permanent change of station (pcs) allowances</h3>
+                    <p>Apply for PCS-related financial entitlements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Claim reimbursement for pov shipment</h3>
+                    <p>Submit paperwork for vehicle transport costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a pcs move budget</h3>
+                    <p>Plan and track all relocation-related expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate/adjust thrift savings plan (tsp)</h3>
+                    <p>Review TSP contributions and allocations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate home sale/purchase options</h3>
+                    <p>Consider renting, selling, or buying a new home</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage automatic bill payments</h3>
+                    <p>Update payment methods for utilities, subscriptions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage change to state tax withholding</h3>
+                    <p>Update state taxes when moving to a new state</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage federal/state tax changes</h3>
+                    <p>Understand tax implications of PCS move</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage investment/retirement accounts</h3>
+                    <p>Review and update investment portfolio</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage personal/household insurance</h3>
+                    <p>Update homeowner's, renter's, auto policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage servicemember's group life insurance (sgli)</h3>
+                    <p>Review and update SGLI coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Open/close bank/credit card accounts</h3>
+                    <p>Transition accounts to new location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Open/close safety deposit boxes</h3>
+                    <p>Transfer valuables to a new location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for change of duty station costs</h3>
+                    <p>Budget for PCS-related expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for childcare fee changes</h3>
+                    <p>Budget for potential changes to childcare costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up new utility accounts</h3>
+                    <p>Establish electricity, water, internet, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer car insurance coverage</h3>
+                    <p>Contact provider to update policy for new location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer/update direct deposit information</h3>
+                    <p>Provide new banking details to payroll/accounts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand bah and housing entitlements</h3>
+                    <p>Learn about Basic Allowance for Housing benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand survivor benefits</h3>
+                    <p>Learn about SGLI, SBP, and death benefit options</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update bank account information</h3>
+                    <p>Change billing addresses and contact details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal & Power of Attorney Documents -->
+    <section class="category-section" id="legal_and_power_of_attorney_documents">
+        <div class="container">
+            <div class="category-header">
+                <h2>Legal & Power of Attorney Documents</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Maintain personal legal document library</h3>
+                    <p>Organize and store important legal paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage beneficiary designations</h3>
+                    <p>Update life insurance and retirement account beneficiaries</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage child support/alimony payments</h3>
+                    <p>Transfer or update financial support obligations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage hipaa release forms</h3>
+                    <p>Update healthcare information release forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage immigration and citizenship paperwork</h3>
+                    <p>Address visa, green card, or naturalization needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage legal guardianship paperwork</h3>
+                    <p>Update legal guardianship arrangements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage name change or divorce paperwork</h3>
+                    <p>Update legal name or marital status documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage power of attorney for deployed spouse</h3>
+                    <p>Establish or update deployment POA</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain or update advance directive</h3>
+                    <p>Establish living will and healthcare directives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain or update custody agreements</h3>
+                    <p>Review and modify child custody arrangements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain or update dd form 93 (record of emergency data)</h3>
+                    <p>Provide updated emergency contact information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain or update power of attorney</h3>
+                    <p>Establish power of attorney documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain or update will</h3>
+                    <p>Create or revise personal will</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer or update estate planning documents</h3>
+                    <p>Review and revise wills, trusts, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer or update pet ownership paperwork</h3>
+                    <p>Register pets in the new location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer or update vehicle titles/registrations</h3>
+                    <p>Register vehicles in the new state</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand military justice system</h3>
+                    <p>Learn about UCMJ and military legal processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand military legal assistance</h3>
+                    <p>Access free legal advice and services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand servicemember's civil relief act</h3>
+                    <p>Learn about SCRA protections and benefits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand uniformed services employment and reemployment rights act</h3>
+                    <p>Learn about USERRA protections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Legal & Power of Attorney Documents</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Volunteer Administration -->
+    <section class="category-section" id="community_and_volunteer_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Community & Volunteer Administration</h2>
+                <span class="category-count">17 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Attend newcomers/welcome events</h3>
+                    <p>Engage with PCS welcome activities in the community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend unit-level family functions</h3>
+                    <p>Participate in squadron, battalion, etc. events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Get involved with youth programs</h3>
+                    <p>Volunteer with military youth and teen activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify local community groups</h3>
+                    <p>Research and connect with new clubs, nonprofits, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain family social connections</h3>
+                    <p>Cultivate friendships and a support network</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage community event planning</h3>
+                    <p>Organize social, charitable, or educational gatherings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage volunteer commitments</h3>
+                    <p>Transition existing volunteer roles to new location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize care packages/donations</h3>
+                    <p>Collect and send items to deployed troops</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in base advisory councils</h3>
+                    <p>Join groups that provide military family feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in family readiness groups</h3>
+                    <p>Get involved with unit-level family support</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update contact information for community</h3>
+                    <p>Provide new address, phone, and email to groups</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Utilize military spouse mentor programs</h3>
+                    <p>Connect with experienced military spouses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Volunteer at base thrift stores</h3>
+                    <p>Donate time at on-base resale shops</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Volunteer at children's schools</h3>
+                    <p>Support teachers, staff, and extracurriculars</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Volunteer at military child care centers</h3>
+                    <p>Assist with childcare services on base</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Volunteer at military family centers</h3>
+                    <p>Donate time to on-base support programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Volunteer with local nonprofits</h3>
+                    <p>Donate time to community-based organizations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Community & Volunteer Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 166 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MilitarySpouseTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

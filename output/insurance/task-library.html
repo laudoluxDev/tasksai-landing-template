@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 162 Purpose-Built Insurance agents Tools — InsuranceTasksAI</title>
+    <meta name="description" content="Browse all 162 InsuranceTasksAI task templates. Purpose-built for Insurance agents, brokers, and claims adjusters — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://insurancetasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #0369A1; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #0369A1; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #0369A1; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(3,105,161,0.1); color: #0369A1;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #0369A1; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #0369A1; color: #0369A1; background: rgba(3,105,161,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #0369A1; box-shadow: 0 4px 12px rgba(3,105,161,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(3,105,161,0.1); color: #0369A1; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #0369A1; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(3,105,161,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #0369A1; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">InsuranceTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🛡️ 162 tasks available</div>
+            <h1><span>162</span> Purpose-Built Tools<br>for Insurance agentss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 162</a>
+            <a href="#policy_documentation_and_summaries" class="filter-btn" data-cat="policy_documentation_and_summaries">Policy Documentation & Summaries (25)</a>
+            <a href="#claims_administration" class="filter-btn" data-cat="claims_administration">Claims Administration (25)</a>
+            <a href="#client_communications" class="filter-btn" data-cat="client_communications">Client Communications (20)</a>
+            <a href="#renewal_and_retention" class="filter-btn" data-cat="renewal_and_retention">Renewal & Retention (20)</a>
+            <a href="#compliance_and_regulatory_documentation" class="filter-btn" data-cat="compliance_and_regulatory_documentation">Compliance & Regulatory Documentation (20)</a>
+            <a href="#underwriting_administration" class="filter-btn" data-cat="underwriting_administration">Underwriting Administration (24)</a>
+            <a href="#agency_operations" class="filter-btn" data-cat="agency_operations">Agency Operations (20)</a>
+            <a href="#business_development" class="filter-btn" data-cat="business_development">Business Development (8)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Policy Documentation & Summaries -->
+    <section class="category-section" id="policy_documentation_and_summaries">
+        <div class="container">
+            <div class="category-header">
+                <h2>Policy Documentation & Summaries</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze policy gaps</h3>
+                    <p>Identify coverage shortfalls or areas where clients may need supplemental policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Audit policy information</h3>
+                    <p>Review client policy details for accuracy and completeness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Compile policy riders</h3>
+                    <p>Gather and summarize all endorsements, exclusions, and supplemental coverage in a policy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create policy timelines</h3>
+                    <p>Develop visual timelines to track policy effective dates, expiration, and renewal</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Customize policy language</h3>
+                    <p>Tailor standard policy documents to meet specific client needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft policy renewal letters</h3>
+                    <p>Compose letters notifying clients of upcoming policy renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft policy termination letters</h3>
+                    <p>Compose notifications when a client's policy is being cancelled or not renewed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain policy changes</h3>
+                    <p>Communicate updates to policy terms, coverage, or pricing to clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain policy deductibles</h3>
+                    <p>Help clients understand their financial responsibility for claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain policy exclusions</h3>
+                    <p>Clarify for clients which risks or situations are not covered by their policy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Generate insurance id cards</h3>
+                    <p>Create and distribute physical or digital ID cards for client policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Generate policy id badges</h3>
+                    <p>Create physical or digital identification cards for client policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Generate policy invoices</h3>
+                    <p>Create and distribute billing statements for client policy premiums</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain policy archives</h3>
+                    <p>Securely store terminated or expired policy documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize policy documentation</h3>
+                    <p>Establish and maintain a central repository for all policy-related paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize policy files</h3>
+                    <p>Maintain organized electronic and physical policy files for each client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize policy renewals</h3>
+                    <p>Establish a system to proactively manage upcoming policy renewal dates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare policy summary letter</h3>
+                    <p>Write a plain-language summary of a client's coverage for their records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process policy amendments</h3>
+                    <p>Update policies to reflect life changes, coverage adjustments, or other modifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process policy back-dating</h3>
+                    <p>Update policies to reflect retroactive coverage start dates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide policy comparisons</h3>
+                    <p>Analyze and compare multiple policy options for a client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Summarize policy features</h3>
+                    <p>Prepare concise overviews of key policy details for client reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Summarize policy limits</h3>
+                    <p>Clearly communicate to clients the maximum amounts their policy will pay out</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update policy documents</h3>
+                    <p>Review and revise policy documents to reflect changes in coverage or client information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update policy records</h3>
+                    <p>Ensure client policy information is accurate and up-to-date in agency systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Policy Documentation & Summaries</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Claims Administration -->
+    <section class="category-section" id="claims_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Claims Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze claims trends</h3>
+                    <p>Identify patterns and insights from historical claims data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze loss runs</h3>
+                    <p>Review claims data to identify trends and opportunities for risk mitigation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Audit claims procedures</h3>
+                    <p>Review and improve the agency's end-to-end claims management system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate claims denials</h3>
+                    <p>Notify clients when an insurance claim has been partially or fully denied</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate claims resolutions</h3>
+                    <p>Notify clients when their insurance claims have been fully processed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate claim status</h3>
+                    <p>Update clients on the progress and resolution of their insurance claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with adjusters</h3>
+                    <p>Liaise with claims adjusters to provide information and resolve issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Escalate claims issues</h3>
+                    <p>Elevate complex or problematic claims to supervisors for resolution</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Explain claims coverage</h3>
+                    <p>Clarify for clients what their policy does and does not cover for a claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate claims inspections</h3>
+                    <p>Coordinate site visits and assessments by claims adjusters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Initiate claims process</h3>
+                    <p>Guide clients through submitting a new insurance claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Investigate claims disputes</h3>
+                    <p>Research and respond to client challenges or disagreements about a claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Investigate suspicious claims</h3>
+                    <p>Research potential fraudulent or exaggerated insurance claim submissions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain claims records</h3>
+                    <p>Organize and archive all documentation related to insurance claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage claims workflows</h3>
+                    <p>Establish and maintain efficient processes for handling insurance claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage subrogation claims</h3>
+                    <p>Coordinate the recovery of claim payouts from liable third parties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare claims presentations</h3>
+                    <p>Create visual aids and summaries for discussing complex insurance claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare claims summaries</h3>
+                    <p>Compile detailed reports on specific insurance claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process claims for salvage</h3>
+                    <p>Handle the disposition of damaged property recovered through an insurance claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process claims overpayments</h3>
+                    <p>Manage the recovery of funds when a client receives an excessive claim payout</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process claims payments</h3>
+                    <p>Facilitate the disbursement of funds to clients for approved claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process supplemental claims</h3>
+                    <p>Handle requests for additional coverage or payouts on an existing claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review claims documentation</h3>
+                    <p>Ensure all necessary information is provided for a valid claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Streamline claims intake</h3>
+                    <p>Optimize the process for clients to report and submit new insurance claims</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify claims eligibility</h3>
+                    <p>Ensure clients meet policy requirements to qualify for a submitted claim</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Claims Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Communications -->
+    <section class="category-section" id="client_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Communications</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Collect client testimonials</h3>
+                    <p>Gather positive feedback and success stories from satisfied policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate coverage changes</h3>
+                    <p>Notify clients of any updates or modifications to their insurance policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client check-ins</h3>
+                    <p>Proactively contact policyholders to review their coverage needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Deliver client presentations</h3>
+                    <p>Give in-person or virtual talks to explain insurance products and services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Deliver client proposals</h3>
+                    <p>Present insurance policy recommendations and pricing to prospective clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute client newsletters</h3>
+                    <p>Create and send periodic communications to keep clients informed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate client onboarding</h3>
+                    <p>Guide new policyholders through the account setup and enrollment process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on client leads</h3>
+                    <p>Reach out to warm prospects to convert them into new policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client complaints</h3>
+                    <p>Address and resolve issues or dissatisfaction expressed by policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client events</h3>
+                    <p>Plan and execute seminars, webinars, and other policyholder gatherings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client expectations</h3>
+                    <p>Set and communicate realistic timelines and service levels to policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Personalize client communications</h3>
+                    <p>Tailor messages, documents, and interactions to each policyholder's needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client referrals</h3>
+                    <p>Handle inquiries and onboarding for new clients referred by existing ones</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client education</h3>
+                    <p>Create content to help policyholders better understand their insurance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide policy overviews</h3>
+                    <p>Summarize key coverage details for new and existing clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve client disputes</h3>
+                    <p>Address and mediate conflicts or disagreements with policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client inquiries</h3>
+                    <p>Handle phone, email, and in-person questions from policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client surveys</h3>
+                    <p>Handle feedback and data collection from client satisfaction polls</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule client meetings</h3>
+                    <p>Coordinate calendars to arrange in-person or virtual consultations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update client contact info</h3>
+                    <p>Maintain accurate records of client names, addresses, and communication preferences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renewal & Retention -->
+    <section class="category-section" id="renewal_and_retention">
+        <div class="container">
+            <div class="category-header">
+                <h2>Renewal & Retention</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze renewal profitability</h3>
+                    <p>Assess the financial impact and ROI of the agency's renewal book</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze renewal rates</h3>
+                    <p>Review data to understand retention trends across the agency's book of business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate renewal decisions</h3>
+                    <p>Notify clients of policy renewal approvals, denials, or non-renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate renewal timelines</h3>
+                    <p>Notify policyholders of key dates for policy renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct policy reviews</h3>
+                    <p>Meet with clients to discuss coverage updates and renewal options</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct renewal audits</h3>
+                    <p>Review the agency's renewal procedures and identify optimization areas</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop renewal campaigns</h3>
+                    <p>Create marketing initiatives to promote policy renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather renewal feedback</h3>
+                    <p>Solicit input from clients to improve the renewal experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify lapsed policies</h3>
+                    <p>Monitor and follow up on expired or non-renewed client policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify renewal opportunities</h3>
+                    <p>Proactively track upcoming policy expiration dates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Incentivize policy renewals</h3>
+                    <p>Provide discounts, rewards, or other benefits to encourage client retention</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Leverage data for renewals</h3>
+                    <p>Leverage analytics to target high-value renewal opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage renewal exceptions</h3>
+                    <p>Address unusual circumstances or special requests for policy renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage renewal workflows</h3>
+                    <p>Establish efficient processes for renewing client insurance policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer policy endorsements</h3>
+                    <p>Suggest supplemental coverages for clients to add to their policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare renewal proposals</h3>
+                    <p>Generate detailed quotes and coverage recommendations for clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process mid-term changes</h3>
+                    <p>Handle modifications to client policies during the coverage period</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process policy renewals</h3>
+                    <p>Efficiently handle the administrative tasks for renewing client policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reward loyal clients</h3>
+                    <p>Recognize and appreciate long-term policyholders through special offers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Streamline renewal reminders</h3>
+                    <p>Optimize the delivery of policy renewal notices to policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Renewal & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Regulatory Documentation -->
+    <section class="category-section" id="compliance_and_regulatory_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Regulatory Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Adhere to privacy regulations</h3>
+                    <p>Implement safeguards to protect client data and information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with disclosure rules</h3>
+                    <p>Provide clients with mandated policy and coverage notifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document agency hierarchy</h3>
+                    <p>Maintain organizational charts and reporting structures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document claims procedures</h3>
+                    <p>Establish and formalize the agency's claims handling protocols</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document underwriting decisions</h3>
+                    <p>Maintain records justifying coverage approval and pricing determinations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure product compliance</h3>
+                    <p>Verify that insurance offerings meet state-specific regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain agency certification</h3>
+                    <p>Ensure the agency meets the requirements for designated specialty programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain errors & omissions</h3>
+                    <p>Acquire and renew the agency's professional liability coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain licensing records</h3>
+                    <p>Ensure all agency and agent licenses are current and compliant</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client file retention</h3>
+                    <p>Establish policies for storing and archiving client records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage compliance policies</h3>
+                    <p>Develop and enforce agency-wide policies to meet regulatory standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage producer appointments</h3>
+                    <p>Handle the onboarding and contracting of new insurance agents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage producer background checks</h3>
+                    <p>Conduct due diligence on new agent hires</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage producer terminations</h3>
+                    <p>Handle the off-boarding process when agents leave the agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor industry regulations</h3>
+                    <p>Stay informed of changes in insurance laws, rules, and guidelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for regulatory exams</h3>
+                    <p>Gather documentation and information for insurance department inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare regulatory filings</h3>
+                    <p>Complete and submit required insurance industry reports and forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process insurance certificates</h3>
+                    <p>Generate and distribute proof-of-coverage documents for clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process licensing renewals</h3>
+                    <p>Handle the administrative tasks for renewing agency and agent licenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to regulatory audits</h3>
+                    <p>Gather information and participate in compliance examinations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Underwriting Administration -->
+    <section class="category-section" id="underwriting_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Underwriting Administration</h2>
+                <span class="category-count">24 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze policy exposure data</h3>
+                    <p>Review client information to identify risks and mitigate potential losses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze policy loss ratios</h3>
+                    <p>Review claims data to assess the profitability of specific insurance products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze underwriting trends</h3>
+                    <p>Identify patterns and insights from the agency's new business data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Calculate premium pricing</h3>
+                    <p>Determine the cost of insurance policies based on underwriting assessments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate underwriting decisions</h3>
+                    <p>Notify clients of policy approvals, denials, or additional requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct underwriting audits</h3>
+                    <p>Review the agency's risk assessment procedures and make improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate risk profile factors</h3>
+                    <p>Analyze client characteristics and exposures to determine appropriate coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate premium audits</h3>
+                    <p>Coordinate site visits and data collection for policy premium adjustments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate underwriting referrals</h3>
+                    <p>Forward complex or borderline cases to higher-level underwriters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather underwriting information</h3>
+                    <p>Collect data and documentation required to assess insurance risks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain underwriting guidelines</h3>
+                    <p>Regularly review and update the agency's insurance risk assessment criteria</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain underwriting records</h3>
+                    <p>Organize and archive all documentation related to policy submissions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage policy reinstatements</h3>
+                    <p>Process the reactivation of lapsed or cancelled insurance coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage policy submissions queue</h3>
+                    <p>Prioritize and distribute new business applications for timely review</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage policy terminations</h3>
+                    <p>Handle the discontinuation of insurance coverage due to non-renewal or cancellation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage underwriting exceptions</h3>
+                    <p>Address requests for policy terms or coverages outside standard guidelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage underwriting workflows</h3>
+                    <p>Establish efficient processes for reviewing and approving new business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare policy binders</h3>
+                    <p>Issue temporary proof-of-coverage documents to new policyholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare underwriting reports</h3>
+                    <p>Generate detailed analyses and summaries of the agency's risk portfolio</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process new business submissions</h3>
+                    <p>Handle the intake and review of applications for new insurance policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process policy cancellations</h3>
+                    <p>Handle the termination of insurance coverage due to non-payment or other reasons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process policy endorsements</h3>
+                    <p>Handle changes or additions to existing insurance coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide underwriting guidelines</h3>
+                    <p>Educate producers on the agency's risk assessment criteria and requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Validate client information</h3>
+                    <p>Confirm the accuracy and completeness of data provided on policy applications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Underwriting Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agency Operations -->
+    <section class="category-section" id="agency_operations">
+        <div class="container">
+            <div class="category-header">
+                <h2>Agency Operations</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Coordinate agency events</h3>
+                    <p>Plan and execute conferences, seminars, and other policyholder gatherings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate training programs</h3>
+                    <p>Develop and deliver educational sessions for agency producers and staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute marketing materials</h3>
+                    <p>Prepare and deliver promotional collateral to producers and clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle producer inquiries</h3>
+                    <p>Address questions and concerns from the agency's insurance agents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain agency calendars</h3>
+                    <p>Schedule internal and external meetings, events, and deadlines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain agency policies</h3>
+                    <p>Develop and enforce operational guidelines for the insurance agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain agency records</h3>
+                    <p>Organize and archive important documents related to the insurance business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agency budgets</h3>
+                    <p>Track and report on the financial performance of the insurance agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agency facilities</h3>
+                    <p>Oversee the maintenance and operations of the insurance agency's physical office</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agency risks</h3>
+                    <p>Identify and mitigate potential threats to the insurance agency's operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agency technology</h3>
+                    <p>Maintain and troubleshoot the insurance agency's software and systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage agency vendors</h3>
+                    <p>Procure and maintain relationships with third-party service providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage producer compensation</h3>
+                    <p>Administer the agency's sales commission and bonus structures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage producer onboarding</h3>
+                    <p>Coordinate the hiring and training of new insurance agents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee agency compliance</h3>
+                    <p>Ensure the insurance agency adheres to all applicable regulations and standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process producer commissions</h3>
+                    <p>Calculate and disburse compensation for sales of insurance policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process producer licensing</h3>
+                    <p>Manage the acquisition and renewal of insurance agent licenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process producer terminations</h3>
+                    <p>Handle the offboarding of agents who are leaving the agency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide agency reporting</h3>
+                    <p>Generate performance metrics, analytics, and insights for agency leadership</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Support agency marketing</h3>
+                    <p>Assist with the creation and distribution of promotional content</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Agency Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Development -->
+    <section class="category-section" id="business_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Development</h2>
+                <span class="category-count">8 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Conduct client needs assessments</h3>
+                    <p>Gather information to understand prospective clients' insurance requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop sales proposals</h3>
+                    <p>Create customized quotes and coverage recommendations for prospective clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate sales presentations</h3>
+                    <p>Deliver in-person or virtual product demonstrations to prospective clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify sales opportunities</h3>
+                    <p>Analyze market data to find potential new business prospects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain agency website</h3>
+                    <p>Ensure the insurance agency's online presence is up-to-date and engaging</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage lead generation campaigns</h3>
+                    <p>Implement marketing initiatives to attract new insurance policy inquiries</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process new client onboarding</h3>
+                    <p>Guide prospects through the application, underwriting, and enrollment process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide sales coaching</h3>
+                    <p>Offer training and guidance to insurance agents on effective selling techniques</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 162 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 InsuranceTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

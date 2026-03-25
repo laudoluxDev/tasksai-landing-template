@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 60 Purpose-Built HR managers Tools — HRTasksAI</title>
+    <meta name="description" content="Browse all 60 HRTasksAI task templates. Purpose-built for HR managers, HR generalists, and small business owners — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://hrtasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #3B82F6; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #3B82F6; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #3B82F6; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(59,130,246,0.1); color: #3B82F6;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #3B82F6; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #3B82F6; color: #3B82F6; background: rgba(59,130,246,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #3B82F6; box-shadow: 0 4px 12px rgba(59,130,246,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(59,130,246,0.1); color: #3B82F6; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #3B82F6; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(59,130,246,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #3B82F6; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">HRTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">👥 60 tasks available</div>
+            <h1><span>60</span> Purpose-Built Tools<br>for HR managerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 60</a>
+            <a href="#recruiting_and_hiring_documentation" class="filter-btn" data-cat="recruiting_and_hiring_documentation">Recruiting & Hiring Documentation (9)</a>
+            <a href="#onboarding_and_orientation" class="filter-btn" data-cat="onboarding_and_orientation">Onboarding & Orientation (7)</a>
+            <a href="#performance_management" class="filter-btn" data-cat="performance_management">Performance Management (8)</a>
+            <a href="#employee_relations_and_investigations" class="filter-btn" data-cat="employee_relations_and_investigations">Employee Relations & Investigations (7)</a>
+            <a href="#termination_and_offboarding" class="filter-btn" data-cat="termination_and_offboarding">Termination & Offboarding (7)</a>
+            <a href="#compliance_and_policy_administration" class="filter-btn" data-cat="compliance_and_policy_administration">Compliance & Policy Administration (8)</a>
+            <a href="#benefits_administration" class="filter-btn" data-cat="benefits_administration">Benefits Administration (7)</a>
+            <a href="#hr_communications" class="filter-btn" data-cat="hr_communications">HR Communications (7)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Recruiting & Hiring Documentation -->
+    <section class="category-section" id="recruiting_and_hiring_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Recruiting & Hiring Documentation</h2>
+                <span class="category-count">9 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Check references</h3>
+                    <p>Contact provided references to validate experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct in-person interviews</h3>
+                    <p>Lead structured behavioral and technical interviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct phone screens</h3>
+                    <p>Perform initial phone interviews to assess fit</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Extend job offers</h3>
+                    <p>Draft and send formal offer letters to selected candidates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new hires</h3>
+                    <p>Manage new employee paperwork and setup</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare interview questions</h3>
+                    <p>Develop targeted questions to assess candidate skills</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review resumes and cvs</h3>
+                    <p>Systematically evaluate candidate applications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule interviews</h3>
+                    <p>Coordinate calendar availability for interviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write a job posting</h3>
+                    <p>Draft a clear, compelling job posting for an open position</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Onboarding & Orientation -->
+    <section class="category-section" id="onboarding_and_orientation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Onboarding & Orientation</h2>
+                <span class="category-count">7 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Assign mentors/buddies</h3>
+                    <p>Pair new hires with seasoned employees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete i-9 and w-4 forms</h3>
+                    <p>Assist new hires with employment paperwork</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct orientation sessions</h3>
+                    <p>Lead new hire orientation presentations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create onboarding checklists</h3>
+                    <p>Develop comprehensive checklists for new hires</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare new hire materials</h3>
+                    <p>Assemble welcome packets, ID badges, equipment, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule onboarding activities</h3>
+                    <p>Coordinate trainings, meetings, and activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up new employee accounts</h3>
+                    <p>Provision computer, email, payroll, benefits, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Onboarding & Orientation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Management -->
+    <section class="category-section" id="performance_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Performance Management</h2>
+                <span class="category-count">8 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Develop performance review forms</h3>
+                    <p>Design templates for annual/quarterly reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate review meetings</h3>
+                    <p>Lead performance review discussions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather 360 feedback</h3>
+                    <p>Solicit peer/manager/subordinate feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage performance issues</h3>
+                    <p>Document, counsel, and develop improvement plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule performance check-ins</h3>
+                    <p>Coordinate meetings for performance discussions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set performance goals</h3>
+                    <p>Collaborate with employees on SMART objectives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track employee development</h3>
+                    <p>Monitor progress on goals and development plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write performance reviews</h3>
+                    <p>Compose detailed, balanced review narratives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Performance Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee Relations & Investigations -->
+    <section class="category-section" id="employee_relations_and_investigations">
+        <div class="container">
+            <div class="category-header">
+                <h2>Employee Relations & Investigations</h2>
+                <span class="category-count">7 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Accommodate disabilities</h3>
+                    <p>Interact with employees and providers for ADA support</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Administer disciplinary actions</h3>
+                    <p>Issue warnings, suspensions, or terminations as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct workplace investigations</h3>
+                    <p>Gather facts, interview parties, and document findings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain personnel records</h3>
+                    <p>Securely store and manage employee files</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage leave policies</h3>
+                    <p>Oversee compliance with FMLA, sick leave, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve harassment claims</h3>
+                    <p>Intake reports, assess, and facilitate resolutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to employee concerns</h3>
+                    <p>Address inquiries, grievances, and complaints</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Termination & Offboarding -->
+    <section class="category-section" id="termination_and_offboarding">
+        <div class="container">
+            <div class="category-header">
+                <h2>Termination & Offboarding</h2>
+                <span class="category-count">7 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Calculate final pay and benefits</h3>
+                    <p>Process remaining wages, PTO, COBRA, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Cancel accounts and access</h3>
+                    <p>Disable system logins, emails, and network privileges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct exit interviews</h3>
+                    <p>Gather feedback from departing employees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Initiate termination processes</h3>
+                    <p>Prepare paperwork, notifications, and logistics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide employment verifications</h3>
+                    <p>Respond to requests for references and employment history</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Return company property</h3>
+                    <p>Collect laptops, badges, keys, and other assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update hr systems</h3>
+                    <p>Record termination details and rehire eligibility</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Termination & Offboarding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Policy Administration -->
+    <section class="category-section" id="compliance_and_policy_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Policy Administration</h2>
+                <span class="category-count">8 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer leave and time off</h3>
+                    <p>Track, approve, and report on PTO, sick leave, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate workplace events</h3>
+                    <p>Plan and execute company parties, celebrations, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate workplace safety</h3>
+                    <p>Implement OSHA regulations and conduct training</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain employee handbooks</h3>
+                    <p>Review, update, and distribute policy manuals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain insurance coverage</h3>
+                    <p>Enroll employees in health, dental, vision, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage personnel files</h3>
+                    <p>Ensure compliant storage and access controls</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage vendor relationships</h3>
+                    <p>Procure and maintain HR-related service providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll and taxes</h3>
+                    <p>Calculate wages, withholdings, and tax payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Administration -->
+    <section class="category-section" id="benefits_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Benefits Administration</h2>
+                <span class="category-count">7 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer retirement plans</h3>
+                    <p>Manage 401(k), pension, and other savings programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate benefits details</h3>
+                    <p>Educate employees on coverage, utilization, and costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enroll employees in benefits</h3>
+                    <p>Guide new hires through insurance selections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain compliance reporting</h3>
+                    <p>File required ACA, ERISA, and other regulatory forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage open enrollment</h3>
+                    <p>Facilitate annual benefits election process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process life events changes</h3>
+                    <p>Update coverage for marriages, births, divorces, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve benefits claims issues</h3>
+                    <p>Liaise with providers to address employee questions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Benefits Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HR Communications -->
+    <section class="category-section" id="hr_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>HR Communications</h2>
+                <span class="category-count">7 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Deliver manager training</h3>
+                    <p>Provide guidance on people management best practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft internal announcements</h3>
+                    <p>Compose and distribute company-wide communications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate team building events</h3>
+                    <p>Plan and execute offsite retreats, parties, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain hr sharepoint/intranet</h3>
+                    <p>Curate and update HR-specific resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee recognition</h3>
+                    <p>Coordinate and promote awards, bonuses, and celebrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Publish employee newsletters</h3>
+                    <p>Create and distribute periodic staff updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to employee inquiries</h3>
+                    <p>Address HR-related questions and concerns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">HR Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 60 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 HRTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

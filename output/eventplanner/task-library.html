@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 108 Purpose-Built Event planners Tools — EventPlannerTasksAI</title>
+    <meta name="description" content="Browse all 108 EventPlannerTasksAI task templates. Purpose-built for Event planners, wedding coordinators, and corporate event managers — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://eventplannertasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #F43F5E; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #F43F5E; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #F43F5E; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(244,63,94,0.1); color: #F43F5E;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #F43F5E; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #F43F5E; color: #F43F5E; background: rgba(244,63,94,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #F43F5E; box-shadow: 0 4px 12px rgba(244,63,94,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(244,63,94,0.1); color: #F43F5E; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #F43F5E; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(244,63,94,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #F43F5E; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">EventPlannerTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🎉 108 tasks available</div>
+            <h1><span>108</span> Purpose-Built Tools<br>for Event plannerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 108</a>
+            <a href="#client_proposals_and_contracts" class="filter-btn" data-cat="client_proposals_and_contracts">Client Proposals & Contracts (39)</a>
+            <a href="#vendor_management" class="filter-btn" data-cat="vendor_management">Vendor Management (15)</a>
+            <a href="#event_logistics_and_coordination" class="filter-btn" data-cat="event_logistics_and_coordination">Event Logistics & Coordination (15)</a>
+            <a href="#budget_and_financial_administration" class="filter-btn" data-cat="budget_and_financial_administration">Budget & Financial Administration (12)</a>
+            <a href="#client_communications" class="filter-btn" data-cat="client_communications">Client Communications (12)</a>
+            <a href="#run_of_show_and_day_of_documents" class="filter-btn" data-cat="run_of_show_and_day_of_documents">Run-of-Show & Day-Of Documents (0)</a>
+            <a href="#post_event_administration" class="filter-btn" data-cat="post_event_administration">Post-Event Administration (0)</a>
+            <a href="#marketing_and_business_development" class="filter-btn" data-cat="marketing_and_business_development">Marketing & Business Development (15)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Client Proposals & Contracts -->
+    <section class="category-section" id="client_proposals_and_contracts">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Proposals & Contracts</h2>
+                <span class="category-count">39 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Archive the final contract documentation</h3>
+                    <p>Store the fully executed contract and any amendments for record-keeping</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate contract milestones to the team</h3>
+                    <p>Ensure the entire event planning team is aware of critical contract dates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm contract compliance throughout</h3>
+                    <p>Monitor the execution of the contract to ensure all terms are met</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create an event contract template</h3>
+                    <p>Develop a standardized event contract with clauses covering scope, payment, cancellation, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Customize the event contract for a client</h3>
+                    <p>Review the client's needs and tailor the contract accordingly</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Finalize and sign the event contract</h3>
+                    <p>Obtain all necessary signatures to execute the contract</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate the event contract</h3>
+                    <p>Work with the client to reach agreement on any contract terms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client approval for contract addendums</h3>
+                    <p>Get sign-off from the client for any changes to the original contract</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide the signed contract to the client</h3>
+                    <p>Deliver the fully executed contract to the client for their records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve any contract disputes or changes</h3>
+                    <p>Work with the client to address any contractual issues that arise</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review the client's event contract</h3>
+                    <p>Carefully review the contract to ensure all terms are clear and acceptable</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review the contract for upcoming milestones</h3>
+                    <p>Identify key dates, deliverables, and deadlines in the contract</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Store the signed contract securely</h3>
+                    <p>File the contract in the appropriate location for future reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track contract revisions and versions</h3>
+                    <p>Maintain a record of contract changes over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write an event proposal</h3>
+                    <p>Draft a professional event proposal outlining scope, timeline, and pricing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Archive all event documentation</h3>
+                    <p>Organize and store all relevant files and records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Compile event performance metrics</h3>
+                    <p>Gather and analyze data on the event's success</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct post-event debriefs</h3>
+                    <p>Lead discussions to capture lessons learned</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate post-event communications</h3>
+                    <p>Share information and follow-up with attendees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate vendor relationships</h3>
+                    <p>Review the performance of vendors for future events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather and incorporate client feedback</h3>
+                    <p>Use insights to improve future event planning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify opportunities for improvement</h3>
+                    <p>Pinpoint ways to enhance the planning process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare the final event report</h3>
+                    <p>Deliver a comprehensive summary to the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process final vendor invoices</h3>
+                    <p>Ensure all outstanding payments are made</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recognize and thank the planning team</h3>
+                    <p>Acknowledge the contributions of the event staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile the final event budget</h3>
+                    <p>Finalize the financial accounting for the event</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Return or dispose of event materials</h3>
+                    <p>Handle the appropriate disposal or storage of event items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assemble an event day emergency plan</h3>
+                    <p>Outline protocols for handling unexpected situations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Capture event photos, video, and content</h3>
+                    <p>Document the event experience for post-event use</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct event day briefings and check-ins</h3>
+                    <p>Lead periodic meetings to align the team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate event setup and teardown</h3>
+                    <p>Ensure a smooth transition for load-in and load-out</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create event day checklists and instructions</h3>
+                    <p>Provide clear guidance for executing critical tasks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create event program and collateral</h3>
+                    <p>Develop informative materials for attendees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop the event run-of-show</h3>
+                    <p>Create a detailed timeline and schedule for the event day</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop vendor/staff instruction manuals</h3>
+                    <p>Document procedures and expectations for on-site personnel</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event credentials and access</h3>
+                    <p>Oversee the distribution of event badges, passes, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor and troubleshoot event execution</h3>
+                    <p>Identify and resolve any issues that arise in real-time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare speaker/performer briefing notes</h3>
+                    <p>Compile key information for event presenters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce event signage and wayfinding</h3>
+                    <p>Design clear, visually-appealing directional signage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vendor Management -->
+    <section class="category-section" id="vendor_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Vendor Management</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Coordinate vendor schedules and logistics</h3>
+                    <p>Ensure all vendors are aligned on event timing, access, and responsibilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a vendor contact list</h3>
+                    <p>Compile detailed information about each vendor's services and contact details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate vendor relationships post-event</h3>
+                    <p>Review the overall vendor experience and identify opportunities for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain vendor records and documentation</h3>
+                    <p>Keep organized files on each vendor's contract, invoices, and communications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage vendor communications</h3>
+                    <p>Maintain regular touch points with vendors throughout the planning process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor vendor performance</h3>
+                    <p>Assess vendors' delivery against agreed-upon requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate vendor contracts</h3>
+                    <p>Work with vendors to finalize the terms of their engagement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain signed vendor contracts</h3>
+                    <p>Ensure all vendor contracts are properly executed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide vendor details to the client</h3>
+                    <p>Share relevant vendor information with the client as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide vendor feedback and ratings</h3>
+                    <p>Share constructive feedback with vendors to help them enhance their services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research potential vendors</h3>
+                    <p>Identify and evaluate vendors that could support the event</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve vendor issues or disputes</h3>
+                    <p>Address any problems that arise with vendor services or deliverables</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review vendor proposals and pricing</h3>
+                    <p>Carefully evaluate the vendors' responses to the RFPs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Select the best-fit vendors</h3>
+                    <p>Choose the vendors that provide the most value for the event</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send rfps to selected vendors</h3>
+                    <p>Distribute Requests for Proposals to vendors for specific event needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Logistics & Coordination -->
+    <section class="category-section" id="event_logistics_and_coordination">
+        <div class="container">
+            <div class="category-header">
+                <h2>Event Logistics & Coordination</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Assign roles and responsibilities</h3>
+                    <p>Clearly define each team member's tasks and accountabilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct post-event walk-throughs</h3>
+                    <p>Review the venue conditions and identify any issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct site visits and walkthroughs</h3>
+                    <p>Inspect the event venue to finalize logistics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate event signage and wayfinding</h3>
+                    <p>Develop effective signage to guide attendees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a comprehensive event plan</h3>
+                    <p>Develop a detailed plan covering all aspects of the event</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create detailed event diagrams and floor plans</h3>
+                    <p>Produce visual aids to communicate the event layout</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop emergency/contingency plans</h3>
+                    <p>Create backup plans for potential issues or disruptions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish event timelines and milestones</h3>
+                    <p>Define key deadlines and deliverables for the planning process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate team planning meetings</h3>
+                    <p>Lead regular meetings to coordinate planning efforts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a detailed event task list</h3>
+                    <p>Track all outstanding tasks and their status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event equipment and rentals</h3>
+                    <p>Procure, schedule, and oversee all necessary event furnishings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event load-in and load-out</h3>
+                    <p>Coordinate the setup and breakdown of the event venue</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event security and ushering</h3>
+                    <p>Ensure the event space is safe and attendees are directed appropriately</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee event day staffing and logistics</h3>
+                    <p>Ensure all on-site personnel and equipment are in place</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee event technology and av support</h3>
+                    <p>Manage the setup and operation of all event technology</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Event Logistics & Coordination</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget & Financial Administration -->
+    <section class="category-section" id="budget_and_financial_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Budget & Financial Administration</h2>
+                <span class="category-count">12 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze budget variances and issues</h3>
+                    <p>Identify and address any budget overruns or shortfalls</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop the event budget</h3>
+                    <p>Create a comprehensive budget covering all anticipated expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure compliance with financial policies</h3>
+                    <p>Adhere to any client or company financial guidelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain detailed financial records</h3>
+                    <p>Keep organized documentation of all income and expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event deposits and retainers</h3>
+                    <p>Collect and track deposits and retainers from the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client approval for the budget</h3>
+                    <p>Review the budget with the client and gain their sign-off</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare final event financial reporting</h3>
+                    <p>Deliver a comprehensive financial summary to the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client payments and deposits</h3>
+                    <p>Record and reconcile all payments received from the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process vendor invoices and payments</h3>
+                    <p>Ensure timely payment of all event-related invoices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide budget updates to the client</h3>
+                    <p>Regularly communicate the event's financial status to the client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend ways to optimize the budget</h3>
+                    <p>Identify opportunities to reduce costs or reallocate funds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track and manage the event budget</h3>
+                    <p>Continuously monitor spending against the approved budget</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Budget & Financial Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Communications -->
+    <section class="category-section" id="client_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Communications</h2>
+                <span class="category-count">12 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Deliver post-event reporting to the client</h3>
+                    <p>Provide a comprehensive summary of the event's outcomes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Escalate significant client issues</h3>
+                    <p>Elevate critical problems or conflicts to the appropriate stakeholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish client communication protocols</h3>
+                    <p>Define the preferred channels, frequency, and content of communications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client feedback and input</h3>
+                    <p>Solicit the client's thoughts and preferences throughout the process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client testimonials and feedback</h3>
+                    <p>Collect the client's thoughts on the overall event experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Incorporate client feedback for future events</h3>
+                    <p>Use learnings to enhance the planning process going forward</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a client communication log</h3>
+                    <p>Document all interactions and decisions for future reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client change requests</h3>
+                    <p>Handle any changes to the event scope, timeline, or requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify the client of key milestones</h3>
+                    <p>Inform the client of important dates, deliverables, and decisions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client status updates</h3>
+                    <p>Deliver consistent updates on the event's planning and execution</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond promptly to client inquiries</h3>
+                    <p>Address the client's questions or concerns in a timely manner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule regular client check-in meetings</h3>
+                    <p>Coordinate recurring meetings to review planning progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Run-of-Show & Day-Of Documents -->
+    <section class="category-section" id="run_of_show_and_day_of_documents">
+        <div class="container">
+            <div class="category-header">
+                <h2>Run-of-Show & Day-Of Documents</h2>
+                <span class="category-count">0 tasks</span>
+            </div>
+            <div class="task-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Post-Event Administration -->
+    <section class="category-section" id="post_event_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Post-Event Administration</h2>
+                <span class="category-count">0 tasks</span>
+            </div>
+            <div class="task-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing & Business Development -->
+    <section class="category-section" id="marketing_and_business_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Marketing & Business Development</h2>
+                <span class="category-count">15 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Activate sponsor benefits and branding</h3>
+                    <p>Ensure agreed-upon sponsor activations are executed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze event registration and attendance</h3>
+                    <p>Use data to inform future marketing strategies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate event email marketing</h3>
+                    <p>Craft and send strategic email communications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create event website and landing pages</h3>
+                    <p>Design engaging web content to drive registration</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop sponsor benefit packages</h3>
+                    <p>Create valuable offerings for event sponsors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop the event marketing strategy</h3>
+                    <p>Define the overall approach for promoting the event</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify new event business opportunities</h3>
+                    <p>Recognize chances to grow the event portfolio</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event social media campaigns</h3>
+                    <p>Leverage social platforms to generate buzz</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage event sponsorship opportunities</h3>
+                    <p>Identify, pitch, and secure event sponsors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard and manage event sponsors</h3>
+                    <p>Coordinate with sponsors throughout the event lifecycle</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize event seo and digital presence</h3>
+                    <p>Ensure strong online visibility and discoverability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce event promotional materials</h3>
+                    <p>Design and distribute brochures, flyers, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide sponsor reporting and analytics</h3>
+                    <p>Deliver post-event performance data to sponsors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Secure event media coverage</h3>
+                    <p>Pitch stories to relevant news outlets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Solicit attendee feedback and testimonials</h3>
+                    <p>Gather insights to enhance future event marketing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Marketing & Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 108 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EventPlannerTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

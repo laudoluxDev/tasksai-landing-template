@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 160 Purpose-Built Restaurant owners Tools — RestaurantTasksAI</title>
+    <meta name="description" content="Browse all 160 RestaurantTasksAI task templates. Purpose-built for Restaurant owners, managers, and food service operators — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://restauranttasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #DC2626; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #DC2626; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #DC2626; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(220,38,38,0.1); color: #DC2626;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #DC2626; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #DC2626; color: #DC2626; background: rgba(220,38,38,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #DC2626; box-shadow: 0 4px 12px rgba(220,38,38,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(220,38,38,0.1); color: #DC2626; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #DC2626; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(220,38,38,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #DC2626; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">RestaurantTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🍽️ 160 tasks available</div>
+            <h1><span>160</span> Purpose-Built Tools<br>for Restaurant ownerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 160</a>
+            <a href="#staff_and_hr_administration" class="filter-btn" data-cat="staff_and_hr_administration">Staff & HR Administration (24)</a>
+            <a href="#vendor_and_supplier_management" class="filter-btn" data-cat="vendor_and_supplier_management">Vendor & Supplier Management (25)</a>
+            <a href="#health_and_safety_compliance" class="filter-btn" data-cat="health_and_safety_compliance">Health & Safety Compliance (20)</a>
+            <a href="#customer_service_and_complaints" class="filter-btn" data-cat="customer_service_and_complaints">Customer Service & Complaints (20)</a>
+            <a href="#financial_and_operations_administration" class="filter-btn" data-cat="financial_and_operations_administration">Financial & Operations Administration (25)</a>
+            <a href="#marketing_and_promotions" class="filter-btn" data-cat="marketing_and_promotions">Marketing & Promotions (20)</a>
+            <a href="#liquor_license_and_permits" class="filter-btn" data-cat="liquor_license_and_permits">Liquor License & Permits (20)</a>
+            <a href="#catering_and_events" class="filter-btn" data-cat="catering_and_events">Catering & Events (6)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Staff & HR Administration -->
+    <section class="category-section" id="staff_and_hr_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Staff & HR Administration</h2>
+                <span class="category-count">24 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer background checks</h3>
+                    <p>Conduct criminal and reference checks on prospective hires</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate policy changes</h3>
+                    <p>Notify staff of new or updated rules, procedures, and expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with labor laws</h3>
+                    <p>Stay informed of changes and ensure the restaurant meets all requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct new hire orientation</h3>
+                    <p>Plan and deliver an orientation program for onboarding new restaurant staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct performance reviews</h3>
+                    <p>Develop and implement a system for regularly evaluating employee performance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop job descriptions</h3>
+                    <p>Write clear and comprehensive descriptions for each restaurant position</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle employee complaints</h3>
+                    <p>Investigate and resolve any staff grievances or workplace disputes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle employee grievances</h3>
+                    <p>Investigate complaints and take corrective action when necessary</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain hr documentation</h3>
+                    <p>Ensure all personnel files and records are complete and organized</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain staff contact list</h3>
+                    <p>Keep an up-to-date directory of all restaurant employees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee discipline</h3>
+                    <p>Issue warnings, suspensions, or terminations in accordance with policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee records</h3>
+                    <p>Maintain accurate personnel files, including hire dates, payroll, disciplinary actions, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee time off</h3>
+                    <p>Track sick days, personal days, and other leave requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage worker's compensation</h3>
+                    <p>File claims, liaise with insurance providers, and ensure proper documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize team building events</h3>
+                    <p>Plan and host activities to foster camaraderie and improve morale</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize team meetings</h3>
+                    <p>Set agendas, facilitate discussions, and distribute meeting minutes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process employee terminations</h3>
+                    <p>Conduct exit interviews, retrieve company property, and facilitate final paychecks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide employment verification</h3>
+                    <p>Respond to inquiries from banks, landlords, or other organizations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recruit and hire new staff</h3>
+                    <p>Post job listings, screen applicants, interview candidates, and make hiring decisions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule employee vacations</h3>
+                    <p>Coordinate time off requests and ensure adequate shift coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule staff training</h3>
+                    <p>Coordinate and schedule ongoing training sessions for servers, chefs, bartenders, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update employee handbook</h3>
+                    <p>Review and revise the employee handbook to reflect current policies and regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update organizational chart</h3>
+                    <p>Revise the restaurant's staffing hierarchy as roles and personnel change</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write a staff scheduling memo</h3>
+                    <p>Draft a memo communicating the upcoming week's schedule and any policy reminders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vendor & Supplier Management -->
+    <section class="category-section" id="vendor_and_supplier_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Vendor & Supplier Management</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Audit vendor invoices</h3>
+                    <p>Review charges, identify errors, and process timely payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate supply issues</h3>
+                    <p>Notify kitchen staff of delays, shortages, or product substitutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct vendor audits</h3>
+                    <p>Periodically review performance, pricing, and compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct vendor site visits</h3>
+                    <p>Inspect facilities, observe operations, and ensure compliance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop contingency plans</h3>
+                    <p>Identify backup suppliers for critical items in case of disruptions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate new vendors</h3>
+                    <p>Research, vet, and onboard additional suppliers for food, equipment, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate product samples</h3>
+                    <p>Test new ingredients, equipment, or services offered by vendors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather vendor references</h3>
+                    <p>Contact other clients to assess reputation and reliability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement quality controls</h3>
+                    <p>Establish standards and procedures for inspecting incoming shipments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain vendor database</h3>
+                    <p>Keep organized records of all current and past suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage delivery schedules</h3>
+                    <p>Coordinate receipt of goods and services to align with restaurant needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage equipment maintenance</h3>
+                    <p>Coordinate repairs, replacements, and preventative care with vendors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage purchase approvals</h3>
+                    <p>Establish and enforce protocols for authorized spending</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage vendor relationships</h3>
+                    <p>Maintain positive working relationships and open communication</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate vendor contracts</h3>
+                    <p>Review and renegotiate terms with current suppliers and service providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate volume discounts</h3>
+                    <p>Leverage the restaurant's buying power to secure better pricing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new vendors</h3>
+                    <p>Collect W-9s, negotiate terms, and integrate into systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize inventory levels</h3>
+                    <p>Analyze usage patterns to determine ideal stocking quantities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Order food and supplies</h3>
+                    <p>Place regular orders for ingredients, tableware, cleaning products, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process vendor payments</h3>
+                    <p>Review statements, match to purchase orders, and issue timely checks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve vendor disputes</h3>
+                    <p>Address and mediate any problems or conflicts with suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Solicit competitive bids</h3>
+                    <p>Request quotes from multiple vendors for large purchases or services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Streamline procurement</h3>
+                    <p>Automate and digitize ordering, receiving, and accounting processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track inventory and usage</h3>
+                    <p>Monitor stock levels and consumption to avoid shortages or waste</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Vet third-party services</h3>
+                    <p>Research, interview, and select providers for pest control, waste, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Vendor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health & Safety Compliance -->
+    <section class="category-section" id="health_and_safety_compliance">
+        <div class="container">
+            <div class="category-header">
+                <h2>Health & Safety Compliance</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Comply with food codes</h3>
+                    <p>Adhere to all applicable regulations for food service operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct drills and training</h3>
+                    <p>Schedule and lead emergency response exercises with staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct safety inspections</h3>
+                    <p>Regularly audit the facility for hazards and take corrective action</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with inspectors</h3>
+                    <p>Facilitate site visits and provide requested documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop safety handbooks</h3>
+                    <p>Create comprehensive guides for workplace policies and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure ada compliance</h3>
+                    <p>Meet accessibility requirements for staff and customers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement covid protocols</h3>
+                    <p>Enforce any pandemic-related rules, policies, and practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain haccp protocols</h3>
+                    <p>Document food safety procedures and temperatures as required</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain health permits</h3>
+                    <p>Renew licenses, certificates, and registrations with local authorities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain osha compliance</h3>
+                    <p>Ensure workplace safety standards are met and documented</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain safety signage</h3>
+                    <p>Post required notices, evacuation plans, and hazard warnings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage chemical storage</h3>
+                    <p>Properly label, secure, and dispose of hazardous substances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage equipment safety</h3>
+                    <p>Inspect, maintain, and replace kitchen appliances, tools, and machinery</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage worker injuries</h3>
+                    <p>File claims, coordinate medical care, and track lost time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor kitchen cleanliness</h3>
+                    <p>Ensure proper sanitation, storage, and handling of food and equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee waste disposal</h3>
+                    <p>Arrange for the lawful removal of grease, recyclables, and garbage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide safety training</h3>
+                    <p>Educate staff on injury prevention, emergency protocols, and HAZCOM</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule pest control</h3>
+                    <p>Arrange regular inspections and treatments to prevent infestations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track regulatory changes</h3>
+                    <p>Stay informed of updates to health, safety, and labor laws</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update emergency plans</h3>
+                    <p>Review and revise procedures for responding to fires, accidents, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Service & Complaints -->
+    <section class="category-section" id="customer_service_and_complaints">
+        <div class="container">
+            <div class="category-header">
+                <h2>Customer Service & Complaints</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Address food allergies and dietary needs</h3>
+                    <p>Maintain procedures for safely accommodating customer requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct customer surveys</h3>
+                    <p>Gather feedback to identify areas for service and operational improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate catering orders</h3>
+                    <p>Manage off-site event logistics, including menu planning and delivery</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle customer complaints</h3>
+                    <p>Investigate issues, offer solutions, and document resolutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle special event bookings</h3>
+                    <p>Coordinate schedules, menus, and other details for private parties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a customer feedback system</h3>
+                    <p>Provide multiple channels for guests to submit comments and concerns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a loyalty program</h3>
+                    <p>Develop and promote initiatives to reward frequent diners</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain customer database</h3>
+                    <p>Keep organized records of customer information and preferences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain customer service policies</h3>
+                    <p>Document protocols for handling various customer interactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage gift card programs</h3>
+                    <p>Process sales, redeem balances, and prevent fraud</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage online reviews</h3>
+                    <p>Monitor ratings and respond professionally to public feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage reservations and seating</h3>
+                    <p>Coordinate arrival times, party sizes, and table assignments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide concierge services</h3>
+                    <p>Assist guests with special requests, reservations, or recommendations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide excellent hospitality</h3>
+                    <p>Ensure staff are friendly, attentive, and committed to guest satisfaction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve billing and payment issues</h3>
+                    <p>Address problems with credit card charges, gift certificates, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve customer disputes</h3>
+                    <p>Negotiate refunds, discounts, or other remedies for unsatisfied patrons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to customer emails</h3>
+                    <p>Address inquiries, reservations, and feedback via the restaurant inbox</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to social media inquiries</h3>
+                    <p>Address questions, comments, and complaints across online platforms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track customer visit frequency</h3>
+                    <p>Analyze dining patterns to identify loyal patrons and high-value guests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on service standards</h3>
+                    <p>Ensure employees are equipped to deliver a consistently positive experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Service & Complaints</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial & Operations Administration -->
+    <section class="category-section" id="financial_and_operations_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial & Operations Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer insurance policies</h3>
+                    <p>Maintain appropriate coverage and ensure timely renewals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze cost of goods sold</h3>
+                    <p>Monitor food, beverage, and supply expenses to maximize profitability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze financial performance</h3>
+                    <p>Review key metrics, identify trends, and make operational adjustments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with labor regulations</h3>
+                    <p>Ensure adherence to minimum wage, overtime, and other labor laws</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct internal audits</h3>
+                    <p>Review accounting records, inventory, and controls for accuracy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File sales and payroll taxes</h3>
+                    <p>Calculate, remit, and document all required tax payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement cost-cutting measures</h3>
+                    <p>Identify opportunities to reduce waste, streamline processes, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain fixed asset inventory</h3>
+                    <p>Track ownership, usage, and maintenance of furniture, equipment, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain fixed asset records</h3>
+                    <p>Document the acquisition, depreciation, and disposal of equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage accounts payable</h3>
+                    <p>Process and record vendor invoices, utility bills, and other expenses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage accounts receivable</h3>
+                    <p>Invoice customers, track payments, and pursue past-due balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage business licenses</h3>
+                    <p>Obtain, renew, and maintain all required permits and registrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage petty cash and tips</h3>
+                    <p>Establish procedures for handling smaller, day-to-day transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage restaurant inventory</h3>
+                    <p>Track stock levels, spoilage, and usage to control food and supply costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage restaurant leases</h3>
+                    <p>Negotiate terms, comply with obligations, and handle any disputes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage restaurant liability</h3>
+                    <p>Maintain adequate insurance coverage and mitigate legal risks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor cash flow and liquidity</h3>
+                    <p>Ensure sufficient funds are available to cover ongoing obligations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize pricing strategies</h3>
+                    <p>Adjust menu item costs based on market conditions and profitability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee capital expenditures</h3>
+                    <p>Evaluate, approve, and track major purchases or improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee it infrastructure</h3>
+                    <p>Manage technology systems, software, and cybersecurity protocols</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare annual budgets</h3>
+                    <p>Forecast revenue and expenses to guide strategic planning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare financial reports</h3>
+                    <p>Generate income statements, balance sheets, and cash flow analyses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process credit card transactions</h3>
+                    <p>Secure merchant accounts, process payments, and resolve chargebacks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll and benefits</h3>
+                    <p>Calculate hours, withhold taxes, and distribute compensation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile bank statements</h3>
+                    <p>Verify deposits, withdrawals, and outstanding checks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Financial & Operations Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing & Promotions -->
+    <section class="category-section" id="marketing_and_promotions">
+        <div class="container">
+            <div class="category-header">
+                <h2>Marketing & Promotions</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advertise on local platforms</h3>
+                    <p>Place ads in newspapers, magazines, radio, or community publications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze marketing performance</h3>
+                    <p>Track metrics, assess ROI, and make data-driven improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate grand openings</h3>
+                    <p>Plan and execute launch celebrations for new restaurant locations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create promotional content</h3>
+                    <p>Write copy and design graphics for digital and print campaigns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Cultivate media relationships</h3>
+                    <p>Pitch stories to local journalists to earn favorable press coverage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop loyalty programs</h3>
+                    <p>Create initiatives to reward frequent diners and build brand loyalty</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop marketing strategies</h3>
+                    <p>Devise plans to attract new customers and increase brand awareness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute email newsletters</h3>
+                    <p>Compose and send updates to the restaurant's mailing list</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain marketing calendar</h3>
+                    <p>Plan and schedule all promotional campaigns and brand activations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain the restaurant website</h3>
+                    <p>Update menus, photos, reservations, and other site content</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage partnerships and sponsorships</h3>
+                    <p>Cultivate relationships to cross-promote and reach new audiences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage seasonal promotions</h3>
+                    <p>Develop time-limited offers and limited-time menu items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage social media channels</h3>
+                    <p>Post updates, respond to comments, and engage the online community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize charity fundraisers</h3>
+                    <p>Host events to support local causes and enhance community ties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize special events</h3>
+                    <p>Plan and execute promotions, tastings, contests, and other activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee reputation management</h3>
+                    <p>Monitor online reviews and address any negative feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee vendor partnerships</h3>
+                    <p>Collaborate with suppliers on co-marketing opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce printed collateral</h3>
+                    <p>Design and order business cards, menus, flyers, and other materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote gift card sales</h3>
+                    <p>Market the restaurant's gift card program to drive incremental revenue</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track customer demographics</h3>
+                    <p>Analyze diner data to inform targeted marketing initiatives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liquor License & Permits -->
+    <section class="category-section" id="liquor_license_and_permits">
+        <div class="container">
+            <div class="category-header">
+                <h2>Liquor License & Permits</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Comply with liquor regulations</h3>
+                    <p>Adhere to all state and local laws governing the sale of alcohol</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate liquor audits and inspections</h3>
+                    <p>Facilitate visits from state/local authorities and provide documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a responsible service policy</h3>
+                    <p>Document the restaurant's approach to addressing intoxicated patrons</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Dispose of expired/spoiled inventory</h3>
+                    <p>Follow proper procedures for legally discarding liquor products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a liquor cut-off procedure</h3>
+                    <p>Establish guidelines for refusing service and managing conflicts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a point-of-sale lockout</h3>
+                    <p>Restrict alcohol sales after a pre-set time to avoid over-serving</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement point-of-sale controls</h3>
+                    <p>Set policies and procedures for secure alcohol transactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain liquor inventory records</h3>
+                    <p>Track purchases, sales, and wastage to prevent diversion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain liquor storage and handling</h3>
+                    <p>Adhere to temperature, security, and spoilage requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain signage and notices</h3>
+                    <p>Post all required licensing, service, and warning placards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee alcohol consumption</h3>
+                    <p>Set and enforce rules for staff drinking, both on and off duty</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage liquor liability insurance</h3>
+                    <p>Maintain adequate coverage to protect the business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain liquor licenses</h3>
+                    <p>Research requirements, submit applications, and secure approvals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain temporary licenses</h3>
+                    <p>Secure permits for pop-up events, festivals, or holiday service</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee catering liquor service</h3>
+                    <p>Ensure proper permits, liability coverage, and service protocols</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process special event permits</h3>
+                    <p>Obtain any necessary licenses for private parties or celebrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew liquor licenses annually</h3>
+                    <p>Complete renewal paperwork and pay applicable fees on time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research local liquor laws</h3>
+                    <p>Stay informed of regulatory changes and evolving compliance rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule alcohol delivery times</h3>
+                    <p>Coordinate receipt of beer, wine, and spirits shipments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on responsible service</h3>
+                    <p>Educate employees on ID checks, intoxication policies, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Liquor License & Permits</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering & Events -->
+    <section class="category-section" id="catering_and_events">
+        <div class="container">
+            <div class="category-header">
+                <h2>Catering & Events</h2>
+                <span class="category-count">6 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Coordinate event logistics</h3>
+                    <p>Handle planning, staffing, equipment, and service details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Catering & Events</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop catering menus and packages</h3>
+                    <p>Design specialized offerings for large-scale functions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Catering & Events</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage catering inquiries</h3>
+                    <p>Respond to requests for off-site events and private parties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Catering & Events</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate venue and vendor contracts</h3>
+                    <p>Review and approve terms for event spaces, rentals, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Catering & Events</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee off-site food preparation</h3>
+                    <p>Ensure proper handling, transportation, and food safety</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Catering & Events</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Price catering services competitively</h3>
+                    <p>Analyze costs and set profitable rates for catered events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Catering & Events</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 160 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RestaurantTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

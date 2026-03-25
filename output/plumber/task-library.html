@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 80 Purpose-Built Plumbing contractors and plumbers Tools — PlumberTasksAI</title>
+    <meta name="description" content="Browse all 80 PlumberTasksAI task templates. Purpose-built for Plumbing contractors and plumbers — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://plumbertasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #0284C7; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #0284C7; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #0284C7; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(2,132,199,0.1); color: #0284C7;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #0284C7; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #0284C7; color: #0284C7; background: rgba(2,132,199,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #0284C7; box-shadow: 0 4px 12px rgba(2,132,199,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(2,132,199,0.1); color: #0284C7; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #0284C7; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(2,132,199,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #0284C7; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">PlumberTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🔧 80 tasks available</div>
+            <h1><span>80</span> Purpose-Built Tools<br>for Plumbing contractors and plumberss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 80</a>
+            <a href="#estimating_and_bidding" class="filter-btn" data-cat="estimating_and_bidding">Estimating & Bidding (10)</a>
+            <a href="#permit_and_inspection_administration" class="filter-btn" data-cat="permit_and_inspection_administration">Permit & Inspection Administration (10)</a>
+            <a href="#work_order_and_job_management" class="filter-btn" data-cat="work_order_and_job_management">Work Order & Job Management (10)</a>
+            <a href="#customer_communications" class="filter-btn" data-cat="customer_communications">Customer Communications (10)</a>
+            <a href="#safety_and_compliance_documentation" class="filter-btn" data-cat="safety_and_compliance_documentation">Safety & Compliance Documentation (10)</a>
+            <a href="#subcontractor_and_supplier_management" class="filter-btn" data-cat="subcontractor_and_supplier_management">Subcontractor & Supplier Management (10)</a>
+            <a href="#licensing_and_insurance_administration" class="filter-btn" data-cat="licensing_and_insurance_administration">Licensing & Insurance Administration (10)</a>
+            <a href="#business_administration" class="filter-btn" data-cat="business_administration">Business Administration (10)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Estimating & Bidding -->
+    <section class="category-section" id="estimating_and_bidding">
+        <div class="container">
+            <div class="category-header">
+                <h2>Estimating & Bidding</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Adjust estimate for plumbing project scope changes</h3>
+                    <p>Revise the bid when the customer requests additions, deletions, or modifications to the original project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Calculate material costs for plumbing project</h3>
+                    <p>Determine the costs of pipes, fittings, fixtures, and other materials needed for a plumbing job</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create plumbing service agreement document</h3>
+                    <p>Prepare a formal contract that outlines the scope of work, pricing, and terms and conditions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Estimate labor hours for plumbing work</h3>
+                    <p>Assess the time required for plumbers to complete a plumbing installation or repair</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Factor in overhead costs for plumbing bid</h3>
+                    <p>Include expenses like insurance, licenses, transportation, and equipment when pricing a plumbing job</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate plumbing contract terms with customer</h3>
+                    <p>Discuss and agree on payment schedules, warranties, and other contractual details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain customer signature on plumbing contract</h3>
+                    <p>Ensure the customer has reviewed and approved the plumbing service agreement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare plumbing service estimate</h3>
+                    <p>Draft a detailed estimate for a plumbing service or installation job</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research comparable plumbing jobs for accurate pricing</h3>
+                    <p>Analyze past projects, industry benchmarks, and competitor rates to price a plumbing job competitively</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track plumbing job profitability against estimate</h3>
+                    <p>Monitor actual costs and hours worked to assess the accuracy of the initial bid</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Estimating & Bidding</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Permit & Inspection Administration -->
+    <section class="category-section" id="permit_and_inspection_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Permit & Inspection Administration</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Address plumbing inspection failures or violations</h3>
+                    <p>Resolve any issues identified during the inspection process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Complete plumbing permit application forms</h3>
+                    <p>Fill out the required paperwork to obtain permits from the local building/planning department</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Determine plumbing permit requirements</h3>
+                    <p>Research local codes and regulations to identify necessary permits for a plumbing project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document passed plumbing inspections</h3>
+                    <p>Retain copies of signed inspection reports for the customer's records and your files</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate plumbing final inspection</h3>
+                    <p>Assist the inspector during the completion walkthrough of the plumbing installation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain plumbing permit documentation</h3>
+                    <p>File and organize all permit-related paperwork for current and past projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Pay plumbing permit fees to local authorities</h3>
+                    <p>Submit payment for the permit application, inspection fees, and any other required charges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for plumbing rough-in inspection</h3>
+                    <p>Ensure the plumbing work is ready for the initial on-site inspection</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule plumbing inspections with local officials</h3>
+                    <p>Coordinate with the building department to arrange for required plumbing inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit plumbing permit application with supporting docs</h3>
+                    <p>Gather and submit all documents needed to process the permit request</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Order & Job Management -->
+    <section class="category-section" id="work_order_and_job_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Work Order & Job Management</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze plumbing service productivity metrics</h3>
+                    <p>Review technician performance, job profitability, and other KPIs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assign plumbers to work orders based on skills</h3>
+                    <p>Match the right technicians to each plumbing job based on their expertise</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect payment from customers for plumbing work</h3>
+                    <p>Process invoices, accept payment methods, and provide receipts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create plumbing work order for new job</h3>
+                    <p>Prepare a standardized work order form that details the customer's request</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Dispatch plumbers to jobsites as scheduled</h3>
+                    <p>Provide technicians with work order details and route information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document plumbing work completed on-site</h3>
+                    <p>Record details of the repairs, replacements, or installations performed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up with customers after plumbing service</h3>
+                    <p>Ensure customer satisfaction, address any issues, and request reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain plumbing job history and documentation</h3>
+                    <p>Store work orders, invoices, and other records for future reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor plumbing job progress in real-time</h3>
+                    <p>Track the status of each active work order using a job management system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule plumbing service appointments</h3>
+                    <p>Coordinate visit times that work for the customer and your available crews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Work Order & Job Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Communications -->
+    <section class="category-section" id="customer_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Customer Communications</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Collect customer feedback on plumbing services</h3>
+                    <p>Solicit reviews, ratings, and testimonials to improve your offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create plumbing service newsletters and updates</h3>
+                    <p>Distribute helpful tips, seasonal reminders, and company news</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document customer interactions and agreements</h3>
+                    <p>Log all communications, commitments, and decisions in the customer's file</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate customers on plumbing code requirements</h3>
+                    <p>Explain local regulations and permit needs for their plumbing projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up with customers on open plumbing issues</h3>
+                    <p>Proactively check in to ensure satisfaction and resolve any outstanding problems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle customer complaints about plumbing work</h3>
+                    <p>Address concerns, investigate issues, and find resolutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain consistent plumbing brand messaging</h3>
+                    <p>Ensure all customer-facing communications align with your company's voice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote plumbing specials, discounts, and offers</h3>
+                    <p>Market your services and incentives to attract new and repeat customers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide plumbing system operation guidance</h3>
+                    <p>Instruct customers on how to properly use and maintain their plumbing fixtures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to plumbing service inquiries</h3>
+                    <p>Answer phone calls, emails, and messages from prospective customers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Customer Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Compliance Documentation -->
+    <section class="category-section" id="safety_and_compliance_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Safety & Compliance Documentation</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Create plumbing safety policies and procedures</h3>
+                    <p>Establish guidelines for jobsite conditions, PPE, and hazard mitigation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document plumbing jobsite safety inspections</h3>
+                    <p>Conduct regular reviews and retain records of identified issues and corrections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File plumbing incident and accident reports</h3>
+                    <p>Thoroughly document any injuries, property damage, or other incidents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain plumber training and certification records</h3>
+                    <p>Document the ongoing education and qualifications of your workforce</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor changes to plumbing laws and regulations</h3>
+                    <p>Stay informed of any updates that impact your business operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain required plumbing licenses and certifications</h3>
+                    <p>Ensure your business and technicians meet all legal requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for plumbing regulatory audits or inspections</h3>
+                    <p>Organize records and prepare your team to successfully pass external reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide plumbing safety training for technicians</h3>
+                    <p>Educate crews on proper techniques, equipment usage, and risk management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review plumbing operations for compliance</h3>
+                    <p>Assess adherence to codes, regulations, and industry best practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update plumbing manuals, forms, and templates</h3>
+                    <p>Ensure all documentation reflects current safety standards and policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subcontractor & Supplier Management -->
+    <section class="category-section" id="subcontractor_and_supplier_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Subcontractor & Supplier Management</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Document plumbing subcontractor interactions</h3>
+                    <p>Record all communications, change orders, and issues for reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain an approved list of plumbing suppliers</h3>
+                    <p>Identify reliable sources for materials, equipment, and specialty items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage plumbing inventory and material tracking</h3>
+                    <p>Monitor stock levels, usage, and warehousing to avoid shortages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage plumbing subcontractor scheduling and dispatch</h3>
+                    <p>Coordinate the availability and deployment of supplemental labor</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate contracts with plumbing subcontractors</h3>
+                    <p>Establish terms, rates, and service level agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate pricing and terms with plumbing suppliers</h3>
+                    <p>Secure favorable rates, discounts, and payment structures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee plumbing subcontractor work quality</h3>
+                    <p>Monitor job performance and ensure compliance with your standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Place orders for plumbing materials and equipment</h3>
+                    <p>Ensure timely delivery of the necessary products for each job</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Qualify plumbing subcontractors and vendors</h3>
+                    <p>Vet potential partners for licensing, insurance, performance, and pricing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve plumbing material defects or delivery issues</h3>
+                    <p>Address problems with suppliers to minimize disruption to your work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Licensing & Insurance Administration -->
+    <section class="category-section" id="licensing_and_insurance_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Licensing & Insurance Administration</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Acquire plumbing workers' compensation coverage</h3>
+                    <p>Ensure proper protection for your employees on the job</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document plumbing insurance policy information</h3>
+                    <p>Organize coverage details, renewal dates, and contact information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File plumbing insurance claims for incidents</h3>
+                    <p>Report and provide supporting documentation for any covered losses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain plumbing contractor license requirements</h3>
+                    <p>Renew licenses, track continuing education, and address any issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage plumbing business entity compliance</h3>
+                    <p>Maintain proper legal structure, tax IDs, and operational registrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain plumbing business licenses and permits</h3>
+                    <p>Register your company with local and state authorities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain plumbing surety bonds for larger projects</h3>
+                    <p>Meet customer or regulatory requirements for performance guarantees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review plumbing insurance coverage annually</h3>
+                    <p>Assess whether policies still meet the needs of your evolving business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Secure general liability insurance for plumbing work</h3>
+                    <p>Protect the business from claims of property damage or injury</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Stay informed of changes to plumbing licensing laws</h3>
+                    <p>Proactively adapt your practices to regulatory updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Administration -->
+    <section class="category-section" id="business_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Administration</h2>
+                <span class="category-count">10 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Conduct plumbing employee performance reviews</h3>
+                    <p>Assess skills, provide feedback, and identify training needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate plumbing office supplies and inventory</h3>
+                    <p>Procure, stock, and distribute the necessary tools and materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop annual plumbing business plan</h3>
+                    <p>Create a strategic roadmap for growth, profitability, and sustainability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle plumbing employee hiring and onboarding</h3>
+                    <p>Recruit, interview, and integrate new technicians into the team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement plumbing fleet fuel and mileage tracking</h3>
+                    <p>Monitor usage, costs, and environmental impact of transportation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain plumbing company website and online presence</h3>
+                    <p>Manage digital marketing, SEO, and customer-facing digital assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage plumbing company financial records</h3>
+                    <p>Maintain accurate books, invoices, receipts, and tax documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage plumbing fleet maintenance and repairs</h3>
+                    <p>Oversee the care and upkeep of company vehicles and equipment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll for plumbing field technicians</h3>
+                    <p>Ensure proper compensation, tax withholding, and benefit deductions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide plumbing employee benefits administration</h3>
+                    <p>Enroll staff in health insurance, retirement plans, and other offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 80 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PlumberTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 154 Purpose-Built Graphic designers Tools — DesignerTasksAI</title>
+    <meta name="description" content="Browse all 154 DesignerTasksAI task templates. Purpose-built for Graphic designers, interior designers, and creative agencies — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://designertasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #EC4899; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #EC4899; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #EC4899; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(236,72,153,0.1); color: #EC4899;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #EC4899; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #EC4899; color: #EC4899; background: rgba(236,72,153,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #EC4899; box-shadow: 0 4px 12px rgba(236,72,153,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(236,72,153,0.1); color: #EC4899; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #EC4899; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(236,72,153,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #EC4899; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">DesignerTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🎨 154 tasks available</div>
+            <h1><span>154</span> Purpose-Built Tools<br>for Graphic designerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 154</a>
+            <a href="#client_proposals_and_contracts" class="filter-btn" data-cat="client_proposals_and_contracts">Client Proposals & Contracts (17)</a>
+            <a href="#project_briefing_and_scoping" class="filter-btn" data-cat="project_briefing_and_scoping">Project Briefing & Scoping (16)</a>
+            <a href="#revision_and_feedback_management" class="filter-btn" data-cat="revision_and_feedback_management">Revision & Feedback Management (16)</a>
+            <a href="#client_communications" class="filter-btn" data-cat="client_communications">Client Communications (20)</a>
+            <a href="#invoice_and_payment_administration" class="filter-btn" data-cat="invoice_and_payment_administration">Invoice & Payment Administration (20)</a>
+            <a href="#creative_brief_development" class="filter-btn" data-cat="creative_brief_development">Creative Brief Development (20)</a>
+            <a href="#project_closeout_and_delivery" class="filter-btn" data-cat="project_closeout_and_delivery">Project Closeout & Delivery (20)</a>
+            <a href="#business_development" class="filter-btn" data-cat="business_development">Business Development (25)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Client Proposals & Contracts -->
+    <section class="category-section" id="client_proposals_and_contracts">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Proposals & Contracts</h2>
+                <span class="category-count">17 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Audit contract compliance</h3>
+                    <p>Ensure all contracted deliverables are met</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect client contract approvals</h3>
+                    <p>Obtain signatures or digital agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a project scope document</h3>
+                    <p>Detail project objectives, timeline, milestones, and success metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create formal change orders</h3>
+                    <p>Document and obtain approval for scope changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create project-specific ndas</h3>
+                    <p>Draft and execute non-disclosure agreements for sensitive work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Customize proposal for each client</h3>
+                    <p>Tailor the proposal to the client's needs and industry</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client contract library</h3>
+                    <p>Organize and version-control all active contracts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client retainer agreements</h3>
+                    <p>Set up and administer recurring payments and work orders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offboard client upon contract end</h3>
+                    <p>Transition work, return assets, and archive materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare a design services contract</h3>
+                    <p>Outline terms, ownership, revisions, and IP rights</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Renew or update client contracts</h3>
+                    <p>Review and revise contracts upon expiration or change</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve contract disputes</h3>
+                    <p>Mediate and negotiate when issues arise</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review and negotiate client contract</h3>
+                    <p>Ensure fair terms and client acceptance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send proposal follow-up communication</h3>
+                    <p>Check in on proposal status and next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Terminate client contracts</h3>
+                    <p>Provide proper notice and finalize outstanding items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track contract milestones</h3>
+                    <p>Monitor timelines and communicate status updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write a design proposal</h3>
+                    <p>Draft a professional project proposal outlining scope, deliverables, and pricing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Proposals & Contracts</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Briefing & Scoping -->
+    <section class="category-section" id="project_briefing_and_scoping">
+        <div class="container">
+            <div class="category-header">
+                <h2>Project Briefing & Scoping</h2>
+                <span class="category-count">16 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze potential project risks</h3>
+                    <p>Identify and mitigate threats to success</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assign tasks to project team</h3>
+                    <p>Delegate responsibilities based on skills and availability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Build a project task list</h3>
+                    <p>Outline all the work to be completed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a project roadmap</h3>
+                    <p>Visualize the timeline, dependencies, and deliverables</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Define project phases and milestones</h3>
+                    <p>Break down the work into manageable stages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a detailed project brief</h3>
+                    <p>Synthesize client goals, scope, deliverables, and timeline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client-provided assets</h3>
+                    <p>Catalog all source files, specs, and reference materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Estimate project resource needs</h3>
+                    <p>Budget staffing, tools, and other costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate project kickoff meeting</h3>
+                    <p>Introduce the team, review plans, and set expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Kick off new client project</h3>
+                    <p>Host an intro meeting, set expectations, and gather requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a project status dashboard</h3>
+                    <p>Track progress, blockers, and risks in one place</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client approval on project plan</h3>
+                    <p>Review and sign off on the final scope</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new team members</h3>
+                    <p>Ensure everyone has access and context</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Publish a project communication plan</h3>
+                    <p>Detail how updates will flow to stakeholders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set project management cadence</h3>
+                    <p>Schedule check-ins, milestones, and status updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up project collaboration tools</h3>
+                    <p>Implement file sharing, task boards, and messaging</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Project Briefing & Scoping</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revision & Feedback Management -->
+    <section class="category-section" id="revision_and_feedback_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Revision & Feedback Management</h2>
+                <span class="category-count">16 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Archive previous design versions</h3>
+                    <p>Store work history and reference past iterations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate revision status updates</h3>
+                    <p>Keep clients informed of progress and timing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client design review meetings</h3>
+                    <p>Walk through work, gather input, and set next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct post-project retrospectives</h3>
+                    <p>Capture lessons learned to improve future work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a feedback tracking system</h3>
+                    <p>Log all input, assign ownership, and monitor resolution</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create project documentation guides</h3>
+                    <p>Explain processes, tools, and standards for the team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop project quality checklists</h3>
+                    <p>Ensure consistency and attention to detail</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish client feedback process</h3>
+                    <p>Define how and when feedback will be provided</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish creative style guidelines</h3>
+                    <p>Define branding, design, and formatting rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate design critique sessions</h3>
+                    <p>Lead productive discussions and document learnings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a single source of truth</h3>
+                    <p>Ensure all team members work from the latest files</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client revision requests</h3>
+                    <p>Prioritize, scope, and implement change orders</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage overlapping client feedback</h3>
+                    <p>Reconcile conflicting input and priorities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client signoff on revisions</h3>
+                    <p>Confirm satisfaction before proceeding</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prioritize and sequence revisions</h3>
+                    <p>Optimize the order to maximize efficiency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Version control design deliverables</h3>
+                    <p>Track changes, revert when needed, and roll back</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Revision & Feedback Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Communications -->
+    <section class="category-section" id="client_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Communications</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Conduct client onboarding sessions</h3>
+                    <p>Introduce the team, review processes, and set expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client satisfaction surveys</h3>
+                    <p>Gather feedback to improve future engagements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Craft client-facing project status reports</h3>
+                    <p>Communicate progress, risks, and next actions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create client communication templates</h3>
+                    <p>Streamline emails, status reports, and other touchpoints</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create client-ready design rationale</h3>
+                    <p>Document the thinking behind design choices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a client newsletter program</h3>
+                    <p>Regularly share project updates and thought leadership</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client-specific preferences</h3>
+                    <p>Capture unique needs, pain points, and communication styles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate design presentation walkthroughs</h3>
+                    <p>Explain concepts, rationale, and implementation details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Lead client presentation deliveries</h3>
+                    <p>Walk through work, gather feedback, and set next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a client contact database</h3>
+                    <p>Store client details, history, and relationship context</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client contact information</h3>
+                    <p>Keep records of all stakeholder details up-to-date</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client point-of-contact changes</h3>
+                    <p>Update team on new stakeholders and their roles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Plan and host client working sessions</h3>
+                    <p>Collaborate on ideation, refinement, and approvals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client presentation materials</h3>
+                    <p>Design decks, mockups, and progress reports</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for client audit or review meetings</h3>
+                    <p>Gather supporting materials and anticipate questions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve client communication breakdowns</h3>
+                    <p>De-escalate tensions and find mutually-agreeable solutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to ad-hoc client inquiries</h3>
+                    <p>Answer questions, provide status updates, and unblock issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule client check-in meetings</h3>
+                    <p>Coordinate recurring status updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write client case studies and testimonials</h3>
+                    <p>Showcase successful projects and their impact</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write client-facing emails and messages</h3>
+                    <p>Convey information clearly and professionally</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invoice & Payment Administration -->
+    <section class="category-section" id="invoice_and_payment_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Invoice & Payment Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Approve and submit vendor invoices</h3>
+                    <p>Ensure accurate and timely payment to suppliers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create project budget and pricing</h3>
+                    <p>Calculate fair rates and expected costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File client 1099 tax documentation</h3>
+                    <p>Comply with tax reporting requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Forecast and plan project cash flow</h3>
+                    <p>Anticipate incoming and outgoing funds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle client payment disputes</h3>
+                    <p>Investigate issues and find mutually-agreeable resolutions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain accounting software and tools</h3>
+                    <p>Implement and administer financial systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a client billing history</h3>
+                    <p>Document all invoices, payments, and credits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client purchase orders</h3>
+                    <p>Review, approve, and match to invoices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client retainer replenishments</h3>
+                    <p>Ensure ongoing work is properly funded</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate client payment terms</h3>
+                    <p>Agree on invoicing schedules and grace periods</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client payment receipts</h3>
+                    <p>Record, reconcile, and deposit funds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client retainer replenishments</h3>
+                    <p>Manage funds available for ongoing work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client-facing expense reports</h3>
+                    <p>Transparently account for all project costs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client financial reports</h3>
+                    <p>Share budget vs. actual data and project profitability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile project expenses and margins</h3>
+                    <p>Analyze profitability and adjust future pricing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review and audit client billing data</h3>
+                    <p>Identify errors, anomalies, and opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send client invoices on schedule</h3>
+                    <p>Bill according to contract terms and timelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up recurring client payment methods</h3>
+                    <p>Streamline invoice collection and cash flow</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track client invoice payments</h3>
+                    <p>Monitor outstanding balances and follow up on late payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train team on billing best practices</h3>
+                    <p>Ensure consistent, compliant financial processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Invoice & Payment Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Brief Development -->
+    <section class="category-section" id="creative_brief_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Creative Brief Development</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze creative brief effectiveness</h3>
+                    <p>Assess whether objectives were achieved</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Archive creative briefs for future reference</h3>
+                    <p>Build a library of past work to inform new projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate creative brief to project team</h3>
+                    <p>Ensure everyone understands goals and parameters</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct competitor/industry research</h3>
+                    <p>Identify relevant benchmarks and trends</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a detailed creative brief</h3>
+                    <p>Document design challenges and opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Define target audience and personas</h3>
+                    <p>Understand users' needs, pain points, and behaviors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop brand style guides and patterns</h3>
+                    <p>Codify visual identity, writing tone, UI elements, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distill client's brand positioning</h3>
+                    <p>Articulate personality, values, and unique selling points</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish creative direction and style</h3>
+                    <p>Capture visual, tonal, and experiential guidelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate client creative kickoff</h3>
+                    <p>Align on objectives, audience, and success metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Incorporate client feedback on creative brief</h3>
+                    <p>Refine and finalize the guiding document</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain creative brief version control</h3>
+                    <p>Document changes and rationale over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Map the customer journey and touchpoints</h3>
+                    <p>Identify all brand interactions and pain points</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Pitch creative brief to clients and stakeholders</h3>
+                    <p>Secure buy-in and approval for the plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prioritize creative brief requirements</h3>
+                    <p>Focus the work on highest-impact elements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review creative brief with key stakeholders</h3>
+                    <p>Socialize, gather feedback, and finalize</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Revisit and update creative brief</h3>
+                    <p>Adapt to evolving client needs or market dynamics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train new team members on creative brief</h3>
+                    <p>Onboard designers, copywriters, and developers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Translate creative brief to project plan</h3>
+                    <p>Break down requirements into deliverables and tasks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Use creative brief to drive design qa</h3>
+                    <p>Evaluate work against stated objectives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Creative Brief Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Closeout & Delivery -->
+    <section class="category-section" id="project_closeout_and_delivery">
+        <div class="container">
+            <div class="category-header">
+                <h2>Project Closeout & Delivery</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Archive project documentation and assets</h3>
+                    <p>Store all relevant materials for future reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Archive project for future reference</h3>
+                    <p>Store all materials in an organized, accessible way</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct a final client walkthrough</h3>
+                    <p>Review completed work and gather final feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a project closeout report</h3>
+                    <p>Summarize outcomes, challenges, and recommendations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Debrief with client on project experience</h3>
+                    <p>Gather feedback to enhance future engagements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document and apply lessons learned</h3>
+                    <p>Update processes, tools, and training for the future</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate knowledge transfer to client</h3>
+                    <p>Ensure they have necessary information to maintain work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather project team feedback</h3>
+                    <p>Identify what went well and opportunities to improve</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Hold a project retrospective meeting</h3>
+                    <p>Analyze successes, challenges, and lessons learned</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a client project history</h3>
+                    <p>Document key milestones, decisions, and outcomes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client revisions after delivery</h3>
+                    <p>Address any remaining issues or change requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client signoff on deliverables</h3>
+                    <p>Confirm satisfaction and acceptance of the project</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Package and deliver final files</h3>
+                    <p>Organize, compress, and hand off design assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process final client invoice and payment</h3>
+                    <p>Ensure all work is accounted for and compensated</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reflect on personal/team performance</h3>
+                    <p>Identify areas for professional development</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule a post-project check-in</h3>
+                    <p>Follow up on client satisfaction and next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transfer project assets to client systems</h3>
+                    <p>Ensure they can maintain and build upon the work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transition client to post-project support</h3>
+                    <p>Outline ongoing services, maintenance, or next steps</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update client contact information</h3>
+                    <p>Note any personnel or role changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update internal project metrics</h3>
+                    <p>Track profitability, utilization, and other KPIs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Project Closeout & Delivery</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Development -->
+    <section class="category-section" id="business_development">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Development</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze and report on sales metrics</h3>
+                    <p>Track KPIs like win rate, deal size, and conversion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze marketing and sales effectiveness</h3>
+                    <p>Track metrics, iterate tactics, and optimize ROI</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Attend industry events and conferences</h3>
+                    <p>Network, promote the business, and seek new leads</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Build a professional services catalog</h3>
+                    <p>Define and price standardized product offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct market and competitor research</h3>
+                    <p>Understand the industry landscape and opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Craft client-facing sales proposals</h3>
+                    <p>Pitch services, experience, and unique value</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create branded marketing materials</h3>
+                    <p>Design websites, presentations, brochures, etc.</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create case studies and client testimonials</h3>
+                    <p>Document successful projects and their impact</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Cultivate strategic industry partnerships</h3>
+                    <p>Identify potential referrers, collaborators, and allies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a client referral program</h3>
+                    <p>Incentivize happy customers to recommend services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a marketing/sales strategy</h3>
+                    <p>Identify target verticals, channels, and tactics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish strategic partnerships</h3>
+                    <p>Identify potential collaborators and joint ventures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on lost sales opportunities</h3>
+                    <p>Understand reasons and identify improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a crm for sales pipeline</h3>
+                    <p>Track leads, opportunities, and forecasting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a marketing and sales calendar</h3>
+                    <p>Plan campaigns, events, content, and other initiatives</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client prospecting and outreach</h3>
+                    <p>Initiate contact, qualify leads, and progress opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the company's social media</h3>
+                    <p>Engage with the industry and build brand awareness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the company website and content</h3>
+                    <p>Publish thought leadership, portfolios, and service offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Publish thought leadership content</h3>
+                    <p>Write articles, guides, and white papers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Qualify and nurture new sales leads</h3>
+                    <p>Assess fit, build rapport, and move towards close</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research and pitch to target accounts</h3>
+                    <p>Identify high-potential clients and customize proposals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client requests for information</h3>
+                    <p>Provide detailed overviews of services and expertise</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client rfps and rfqs</h3>
+                    <p>Tailor proposals to specific project requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule and lead sales presentations</h3>
+                    <p>Showcase capabilities and secure new business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train and onboard new sales team</h3>
+                    <p>Ensure consistent messaging and best practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Development</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 154 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DesignerTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 161 Purpose-Built CPAs Tools — AccountingTasksAI</title>
+    <meta name="description" content="Browse all 161 AccountingTasksAI task templates. Purpose-built for CPAs, bookkeepers, and accounting firm staff — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://accountingtasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #10B981; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #10B981; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #10B981; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(16,185,129,0.1); color: #10B981;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #10B981; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #10B981; color: #10B981; background: rgba(16,185,129,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #10B981; box-shadow: 0 4px 12px rgba(16,185,129,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(16,185,129,0.1); color: #10B981; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #10B981; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(16,185,129,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #10B981; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">AccountingTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">📊 161 tasks available</div>
+            <h1><span>161</span> Purpose-Built Tools<br>for CPAss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 161</a>
+            <a href="#client_onboarding_and_engagement" class="filter-btn" data-cat="client_onboarding_and_engagement">Client Onboarding & Engagement (24)</a>
+            <a href="#tax_season_administration" class="filter-btn" data-cat="tax_season_administration">Tax Season Administration (25)</a>
+            <a href="#bookkeeping_and_reporting" class="filter-btn" data-cat="bookkeeping_and_reporting">Bookkeeping & Reporting (19)</a>
+            <a href="#payroll_administration" class="filter-btn" data-cat="payroll_administration">Payroll Administration (20)</a>
+            <a href="#compliance_and_regulatory_documentation" class="filter-btn" data-cat="compliance_and_regulatory_documentation">Compliance & Regulatory Documentation (20)</a>
+            <a href="#client_communications" class="filter-btn" data-cat="client_communications">Client Communications (25)</a>
+            <a href="#financial_statement_preparation" class="filter-btn" data-cat="financial_statement_preparation">Financial Statement Preparation (20)</a>
+            <a href="#practice_management" class="filter-btn" data-cat="practice_management">Practice Management (8)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Client Onboarding & Engagement -->
+    <section class="category-section" id="client_onboarding_and_engagement">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Onboarding & Engagement</h2>
+                <span class="category-count">24 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Acquire client signatures on agreements</h3>
+                    <p>Ensure all necessary contracts and authorizations are signed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assign client to appropriate team members</h3>
+                    <p>Delegate responsibilities based on client needs and staff expertise</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Automate onboarding workflow processes</h3>
+                    <p>Leverage technology to streamline new client setup</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client orientation webinars</h3>
+                    <p>Provide training on the firm's services and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct new client intake interview</h3>
+                    <p>Meet with new clients to gather information and assess their needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct post-engagement reviews</h3>
+                    <p>Assess what went well and identify areas for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with other service providers</h3>
+                    <p>Communicate with the client's attorneys, bankers, or other advisors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create client account profile</h3>
+                    <p>Set up client information in accounting software and filing systems</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client onboarding checklists</h3>
+                    <p>Create standardized procedures to ensure consistency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Discuss billing and payment terms</h3>
+                    <p>Explain the firm's fee structure and payment policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish bookkeeping protocols</h3>
+                    <p>Work with client to determine best practices for ongoing financial management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client referrals and testimonials</h3>
+                    <p>Collect positive feedback to use in marketing materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client contact information</h3>
+                    <p>Update records as client details change over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client document storage and access</h3>
+                    <p>Establish secure filing and retrieval procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new client in accounting system</h3>
+                    <p>Configure the client's information in the accounting software</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client engagement letter</h3>
+                    <p>Draft a formal engagement letter outlining scope of services and fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare welcome packet</h3>
+                    <p>Assemble and send new client onboarding materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review and update client profiles annually</h3>
+                    <p>Ensure client data is current and accurate</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review client financial documents</h3>
+                    <p>Gather and analyze the client's existing financial records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule initial client meeting</h3>
+                    <p>Coordinate schedules to hold the first meeting with new clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule recurring client check-ins</h3>
+                    <p>Set calendar reminders for periodic review meetings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up client access to online portals</h3>
+                    <p>Provide login credentials and instructions for client-facing tools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Terminate client engagements professionally</h3>
+                    <p>Handle the end of a client relationship appropriately</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Transition client to new team members</h3>
+                    <p>Facilitate a smooth handoff when staff changes occur</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Onboarding & Engagement</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Season Administration -->
+    <section class="category-section" id="tax_season_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Tax Season Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze tax season performance metrics</h3>
+                    <p>Track key indicators to enhance future operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assemble client tax information packets</h3>
+                    <p>Gather and organize all necessary documents for tax filing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate tax season status updates</h3>
+                    <p>Provide clients with progress reports and timelines</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct post-tax season reviews</h3>
+                    <p>Identify areas for improvement in the next filing cycle</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with tax software providers</h3>
+                    <p>Ensure seamless integration and updates</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop tax season project plans</h3>
+                    <p>Create detailed timelines and resource allocation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File client tax returns electronically</h3>
+                    <p>Submit completed returns to the IRS and state agencies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on missing tax documents</h3>
+                    <p>Proactively request any outstanding information from clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle irs notices and correspondence</h3>
+                    <p>Assist clients with resolving tax agency issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement secure digital tax workflows</h3>
+                    <p>Leverage technology to streamline tax season processes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Mail tax organizers to clients</h3>
+                    <p>Distribute tax preparation materials by the desired deadline</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain tax compliance calendar</h3>
+                    <p>Track important deadlines and filing requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage outsourced tax preparation services</h3>
+                    <p>Oversee the work of third-party tax service providers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage tax document delivery and storage</h3>
+                    <p>Ensure clients receive and retain required records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage tax document storage and access</h3>
+                    <p>Establish secure filing and retrieval procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify clients of tax refund status</h3>
+                    <p>Share updates on the IRS processing of client returns</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client signatures on tax returns</h3>
+                    <p>Ensure all required authorizations are collected</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare and send client tax payment vouchers</h3>
+                    <p>Provide instructions and reminders for estimated tax payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare annual tax organizer</h3>
+                    <p>Compile client documents and instructions for tax filing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client tax payment arrangements</h3>
+                    <p>Work with clients on installment plans or extensions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client tax extension requests</h3>
+                    <p>File Form 4868 for clients needing additional time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client tax-related inquiries</h3>
+                    <p>Address questions about the filing process or results</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review client tax returns for accuracy</h3>
+                    <p>Thoroughly check calculations, deductions, and reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule client tax preparation meetings</h3>
+                    <p>Coordinate appointments for tax return review and sign-off</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on tax preparation procedures</h3>
+                    <p>Ensure team members are equipped to support clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Tax Season Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bookkeeping & Reporting -->
+    <section class="category-section" id="bookkeeping_and_reporting">
+        <div class="container">
+            <div class="category-header">
+                <h2>Bookkeeping & Reporting</h2>
+                <span class="category-count">19 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze client financial performance</h3>
+                    <p>Review metrics, trends, and key performance indicators</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with client tax professionals</h3>
+                    <p>Ensure accounting data aligns with tax filing requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client accounting training materials</h3>
+                    <p>Create guidebooks, tutorials, and self-help resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify opportunities for process improvements</h3>
+                    <p>Recommend ways to enhance accounting efficiency and accuracy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement accounting software integrations</h3>
+                    <p>Connect client systems with banking, payroll, and other tools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement internal control procedures</h3>
+                    <p>Establish safeguards against errors, fraud, and misuse</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client accounting documentation</h3>
+                    <p>Organize and safeguard financial records and supporting documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client accounts payable and receivable</h3>
+                    <p>Monitor invoicing, payments, and collections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client fixed asset records</h3>
+                    <p>Track and depreciate capital equipment and property</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor client cash flow and liquidity</h3>
+                    <p>Identify potential financing needs or surplus funds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client monthly financial statements</h3>
+                    <p>Generate income statements, balance sheets, and cash flows</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client quarterly estimated tax payments</h3>
+                    <p>Calculate and schedule the necessary federal and state payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client financial transactions</h3>
+                    <p>Record expenses, income, payroll, and other activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide financial reporting to clients</h3>
+                    <p>Present and interpret the monthly financials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide specialized accounting services</h3>
+                    <p>Offer niche services like inventory management or job costing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile client bank and credit card accounts</h3>
+                    <p>Ensure accuracy of financial records and balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client accounting inquiries</h3>
+                    <p>Address questions about the financial records and reports</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up client accounting systems</h3>
+                    <p>Configure the general ledger, chart of accounts, and workflows</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train clients on accounting software usage</h3>
+                    <p>Provide guidance on navigating the financial management platform</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Bookkeeping & Reporting</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payroll Administration -->
+    <section class="category-section" id="payroll_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Payroll Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze client payroll data for insights</h3>
+                    <p>Identify trends, anomalies, and opportunities for optimization</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with client new hire onboarding</h3>
+                    <p>Ensure proper payroll setup for incoming employees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with client year-end tax reporting</h3>
+                    <p>Prepare and distribute employee W-2 and 1099 forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Automate client payroll workflow processes</h3>
+                    <p>Leverage technology to streamline payroll activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with client hr and accounting teams</h3>
+                    <p>Align payroll data with broader personnel and financial records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client payroll training documentation</h3>
+                    <p>Create handbooks, tutorials, and self-help resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>File client payroll tax returns</h3>
+                    <p>Prepare and submit federal, state, and local tax forms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Generate client payroll compliance reports</h3>
+                    <p>Produce documents required by labor laws and regulators</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle client payroll record keeping</h3>
+                    <p>Maintain employee files and comply with regulatory requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement client payroll data security measures</h3>
+                    <p>Protect sensitive employee information and prevent fraud</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client employee benefits administration</h3>
+                    <p>Enroll staff in health insurance, retirement plans, and other offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client payroll tax deposit deadlines</h3>
+                    <p>Ensure timely payments to the IRS and state agencies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client payroll activities</h3>
+                    <p>Calculate wages, generate paystubs, and disburse payments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client payroll tax guidance</h3>
+                    <p>Advise on tax compliance, deposit schedules, and reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide guidance on payroll tax compliance</h3>
+                    <p>Advise clients on changes in laws and regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client payroll inquiries</h3>
+                    <p>Address questions from employees about their pay and deductions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Serve as a client payroll subject matter expert</h3>
+                    <p>Offer strategic guidance on payroll best practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Set up client payroll systems</h3>
+                    <p>Configure pay schedules, tax withholdings, and deductions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train client staff on payroll procedures</h3>
+                    <p>Educate employees on policies, timekeeping, and self-service tools</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update client payroll for changes in status</h3>
+                    <p>Process terminations, leaves of absence, and other HR events</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Payroll Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Regulatory Documentation -->
+    <section class="category-section" id="compliance_and_regulatory_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Regulatory Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advise clients on data privacy and security laws</h3>
+                    <p>Ensure proper handling of confidential information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Advise clients on workplace safety procedures</h3>
+                    <p>Offer guidance to prevent injuries and OSHA violations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist clients with government grant applications</h3>
+                    <p>Help secure funding and comply with reporting rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with client professional certification renewals</h3>
+                    <p>Help CPAs, enrolled agents, and other credentialed staff maintain active status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate client employment law compliance</h3>
+                    <p>Advise on labor regulations, posters, and reporting</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with client legal counsel on compliance</h3>
+                    <p>Collaborate to ensure appropriate policies and practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client compliance policy and procedure manuals</h3>
+                    <p>Document the firm's best practices and legal requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate client audits by regulatory agencies</h3>
+                    <p>Coordinate information requests and on-site inspections</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle client employee retirement plan filings</h3>
+                    <p>Submit annual reports and disclosures to the DOL</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement client records retention schedules</h3>
+                    <p>Establish protocols for document storage and destruction</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client business license registrations</h3>
+                    <p>Ensure proper licensing at the state and local levels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client insurance policy documentation</h3>
+                    <p>Safeguard records of coverage and claims history</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client information security protocols</h3>
+                    <p>Implement controls to protect data, systems, and assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client sales and use tax compliance</h3>
+                    <p>Calculate, file, and remit applicable taxes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client worker's compensation insurance</h3>
+                    <p>Procure coverage, file claims, and maintain records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor changes in accounting standards and regulations</h3>
+                    <p>Communicate updates that impact client operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client osha-required safety documentation</h3>
+                    <p>Develop and distribute mandatory workplace notices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client annual business entity filings</h3>
+                    <p>Prepare and submit required state reports</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client training on regulatory obligations</h3>
+                    <p>Educate staff on employment laws, tax filings, and more</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Serve as a client regulatory compliance resource</h3>
+                    <p>Provide strategic guidance on navigating complex rules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Regulatory Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Communications -->
+    <section class="category-section" id="client_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Communications</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Align client communications with the firm's brand</h3>
+                    <p>Ensure consistent messaging and visual identity</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze client communication metrics</h3>
+                    <p>Track and optimize the effectiveness of outreach efforts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collaborate with clients on public statements</h3>
+                    <p>Review and approve content for press releases or interviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client satisfaction surveys</h3>
+                    <p>Gather feedback to improve the client experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate client events and webinars</h3>
+                    <p>Plan and promote educational or networking opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create client-facing marketing content</h3>
+                    <p>Produce brochures, website copy, and social media posts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client communication policies</h3>
+                    <p>Establish standards for professionalism and responsiveness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client communication training for staff</h3>
+                    <p>Equip team members with best practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft client newsletter articles and updates</h3>
+                    <p>Compose periodic firm news and industry insights</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Expand client communication channels strategically</h3>
+                    <p>Explore new platforms to enhance engagement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate client onboarding and orientation</h3>
+                    <p>Ensure a smooth transition to the firm's services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate virtual client meetings and webinars</h3>
+                    <p>Manage the technical aspects of remote gatherings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on client meeting action items</h3>
+                    <p>Ensure timely completion of agreed-upon tasks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle sensitive client confidentiality requests</h3>
+                    <p>Respect and accommodate special privacy needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Leverage client testimonials and referrals</h3>
+                    <p>Incorporate positive feedback into marketing materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client communication logs</h3>
+                    <p>Document the history of interactions for reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client communication preference profiles</h3>
+                    <p>Record details on the client's desired channels and frequency</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client email correspondence</h3>
+                    <p>Handle inbound messages and send timely replies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client feedback and complaint resolution</h3>
+                    <p>Address concerns and implement service improvements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client social media engagement</h3>
+                    <p>Monitor and respond to online interactions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Personalize client interactions and touchpoints</h3>
+                    <p>Customize communications based on the relationship</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client progress reports and status updates</h3>
+                    <p>Share project timelines, milestones, and issues</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client phone inquiries</h3>
+                    <p>Address questions and provide information promptly</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule and coordinate client meetings</h3>
+                    <p>Arrange in-person, virtual, or hybrid gatherings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Take and distribute client meeting minutes</h3>
+                    <p>Capture key discussion points and action items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Client Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Statement Preparation -->
+    <section class="category-section" id="financial_statement_preparation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial Statement Preparation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Advise clients on accounting policy selection</h3>
+                    <p>Recommend appropriate treatments for unique situations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze client financial performance trends</h3>
+                    <p>Identify meaningful changes in key metrics over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist clients with budgeting and forecasting</h3>
+                    <p>Help develop annual operating and capital budgets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist with client audits and reviews by cpas</h3>
+                    <p>Gather information and documentation as required</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Compile client consolidated financial statements</h3>
+                    <p>Combine information from multiple entities or locations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client financial benchmarking analysis</h3>
+                    <p>Compare the business to industry peers and standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Convert client financial data to gaap standards</h3>
+                    <p>Ensure reporting aligns with accounting principles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Deliver client financial presentations and briefings</h3>
+                    <p>Summarize the results in a clear, concise manner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client reporting templates and tools</h3>
+                    <p>Create standardized formats to streamline preparation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft client financial statement narratives</h3>
+                    <p>Provide commentary on the numbers and performance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Format client financial statements professionally</h3>
+                    <p>Ensure proper structure, layout, and visual presentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather required financial data from clients</h3>
+                    <p>Collect income statements, balance sheets, and cash flows</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Generate client pro forma financial projections</h3>
+                    <p>Create forecasts based on the client's business plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client financial statement version control</h3>
+                    <p>Track changes and preserve prior period records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client approvals on financial statements</h3>
+                    <p>Secure sign-off from management or board members</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client financial ratio calculations</h3>
+                    <p>Compute liquidity, solvency, and profitability ratios</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client explanations of financial results</h3>
+                    <p>Interpret the statements and answer related questions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide clients with industry benchmarking data</h3>
+                    <p>Share relevant performance metrics and best practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review client financial records for accuracy</h3>
+                    <p>Ensure transactions are properly recorded and categorized</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Support client loan, lease, or grant applications</h3>
+                    <p>Prepare financial packages to support third-party requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Financial Statement Preparation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Management -->
+    <section class="category-section" id="practice_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Practice Management</h2>
+                <span class="category-count">8 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer client data backup and disaster recovery</h3>
+                    <p>Protect financial records and client information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate client engagement profitability analysis</h3>
+                    <p>Review the financial performance of each client relationship</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client fee structures and pricing models</h3>
+                    <p>Determine appropriate hourly rates and service packages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client accounts receivable records</h3>
+                    <p>Track outstanding balances and aging schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client billing and invoicing</h3>
+                    <p>Generate and distribute client fee statements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the client onboarding and offboarding process</h3>
+                    <p>Ensure consistent procedures for starting and ending work</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee client file organization and document storage</h3>
+                    <p>Implement secure and efficient record-keeping practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client payments and collections</h3>
+                    <p>Post receipts, handle late payments, and issue refunds</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Practice Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 161 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AccountingTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

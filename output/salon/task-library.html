@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 169 Purpose-Built Salon owners Tools — SalonTasksAI</title>
+    <meta name="description" content="Browse all 169 SalonTasksAI task templates. Purpose-built for Salon owners, spa operators, and beauty professionals — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://salontasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #DB2777; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #DB2777; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #DB2777; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(219,39,119,0.1); color: #DB2777;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #DB2777; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #DB2777; color: #DB2777; background: rgba(219,39,119,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #DB2777; box-shadow: 0 4px 12px rgba(219,39,119,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(219,39,119,0.1); color: #DB2777; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #DB2777; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(219,39,119,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #DB2777; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">SalonTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">✂️ 169 tasks available</div>
+            <h1><span>169</span> Purpose-Built Tools<br>for Salon ownerss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 169</a>
+            <a href="#client_communications_and_retention" class="filter-btn" data-cat="client_communications_and_retention">Client Communications & Retention (25)</a>
+            <a href="#booth_rental_and_staff_agreements" class="filter-btn" data-cat="booth_rental_and_staff_agreements">Booth Rental & Staff Agreements (20)</a>
+            <a href="#appointment_and_schedule_management" class="filter-btn" data-cat="appointment_and_schedule_management">Appointment & Schedule Management (20)</a>
+            <a href="#financial_and_retail_administration" class="filter-btn" data-cat="financial_and_retail_administration">Financial & Retail Administration (25)</a>
+            <a href="#health_and_safety_compliance" class="filter-btn" data-cat="health_and_safety_compliance">Health & Safety Compliance (20)</a>
+            <a href="#marketing_and_promotions" class="filter-btn" data-cat="marketing_and_promotions">Marketing & Promotions (25)</a>
+            <a href="#staff_and_hr_administration" class="filter-btn" data-cat="staff_and_hr_administration">Staff & HR Administration (20)</a>
+            <a href="#business_operations" class="filter-btn" data-cat="business_operations">Business Operations (14)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Client Communications & Retention -->
+    <section class="category-section" id="client_communications_and_retention">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Communications & Retention</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze client retention data</h3>
+                    <p>Use metrics to identify opportunities to improve client loyalty</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Collect client feedback surveys</h3>
+                    <p>Design a post-appointment survey to gather client feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct post-service check-ins</h3>
+                    <p>Follow up with clients after their appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Craft a birthday email campaign</h3>
+                    <p>Design a series of automated emails to celebrate client birthdays</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up with no-show clients</h3>
+                    <p>Reach out to clients who missed their scheduled appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Gather client testimonials</h3>
+                    <p>Request and curate client feedback to use in marketing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Host client appreciation events</h3>
+                    <p>Organize social gatherings to show gratitude to loyal clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a client loyalty app</h3>
+                    <p>Develop a mobile app to track rewards and appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a client loyalty program</h3>
+                    <p>Establish a rewards system to incentivize repeat business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client database</h3>
+                    <p>Organize client information securely and efficiently</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client online bookings</h3>
+                    <p>Ensure a seamless digital scheduling experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client waitlists</h3>
+                    <p>Develop a system to quickly fill last-minute openings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer client concierge services</h3>
+                    <p>Provide personalized services to premium clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer client referral incentives</h3>
+                    <p>Incentivize clients to recommend the salon to friends and family</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Personalize client thank-you notes</h3>
+                    <p>Create a template for handwritten thank-you notes to send after appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve client scheduling conflicts</h3>
+                    <p>Find solutions when clients need to reschedule or change appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client complaints</h3>
+                    <p>Develop a process for handling and resolving client complaints professionally</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client online reviews</h3>
+                    <p>Craft thoughtful responses to both positive and negative reviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Segment client communications</h3>
+                    <p>Tailor messaging based on client preferences and visit history</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send appointment confirmations</h3>
+                    <p>Automate email/text reminders for upcoming client appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send client newsletters</h3>
+                    <p>Create an engaging monthly or quarterly newsletter</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send client reactivation campaigns</h3>
+                    <p>Reconnect with inactive clients to encourage return visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send holiday greetings to clients</h3>
+                    <p>Design festive email/card campaigns for major holidays</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update client contact information</h3>
+                    <p>Ensure client records are accurate and up-to-date</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write a client rebooking reminder</h3>
+                    <p>Draft a friendly reminder encouraging a client to rebook their next appointment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Communications & Retention</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booth Rental & Staff Agreements -->
+    <section class="category-section" id="booth_rental_and_staff_agreements">
+        <div class="container">
+            <div class="category-header">
+                <h2>Booth Rental & Staff Agreements</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Assist with booth rental relocation</h3>
+                    <p>Help stylists transition to new rental spaces within the salon</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate booth rental updates</h3>
+                    <p>Notify stylists of changes to policies, rates, or procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct booth rental audits</h3>
+                    <p>Review agreements, payments, and compliance regularly</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct booth rental inspections</h3>
+                    <p>Ensure rented spaces meet cleanliness and safety standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop booth rental exit policies</h3>
+                    <p>Establish protocols for stylists ending their rental agreement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft booth rental agreements</h3>
+                    <p>Create legally compliant booth rental contracts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Draft independent contractor agreements</h3>
+                    <p>Establish terms for non-booth rental stylists</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure booth rental compliance</h3>
+                    <p>Verify stylists meet licensing, insurance, and tax requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish booth rental policies</h3>
+                    <p>Develop guidelines for booth usage, decor, and client policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain booth rental records</h3>
+                    <p>Track occupancy, vacancies, and other key metrics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage booth rental payments</h3>
+                    <p>Collect rent, track delinquencies, and handle security deposits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage booth rental waitlists</h3>
+                    <p>Maintain a queue of stylists seeking available spaces</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate booth rental renewals</h3>
+                    <p>Work with stylists to extend existing rental agreements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate booth rental terms</h3>
+                    <p>Work with stylists to establish fair rental rates and policies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer booth rental incentives</h3>
+                    <p>Develop programs to attract and retain top talent</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer booth rental referral bonuses</h3>
+                    <p>Incentivize stylists to recommend the salon to peers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Onboard new booth renters</h3>
+                    <p>Orient stylists to salon policies and procedures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide booth rental access control</h3>
+                    <p>Manage salon entry and access for booth rental stylists</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide booth rental training</h3>
+                    <p>Educate stylists on best practices for booth management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve booth rental disputes</h3>
+                    <p>Mediate conflicts between stylists and salon management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Booth Rental & Staff Agreements</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Schedule Management -->
+    <section class="category-section" id="appointment_and_schedule_management">
+        <div class="container">
+            <div class="category-header">
+                <h2>Appointment & Schedule Management</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze appointment data</h3>
+                    <p>Use metrics to identify busy periods and optimize staffing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze appointment no-shows</h3>
+                    <p>Identify patterns and implement strategies to reduce missed visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate schedule updates</h3>
+                    <p>Notify clients of changes to stylist availability or service hours</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a scheduling software</h3>
+                    <p>Implement a dedicated system for managing salon bookings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle appointment changes</h3>
+                    <p>Reschedule, cancel, or modify client bookings as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle walk-in appointments</h3>
+                    <p>Accommodate unscheduled clients without disrupting the flow</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a scheduling policy</h3>
+                    <p>Establish guidelines for booking, tardiness, and cancellations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement online booking</h3>
+                    <p>Allow clients to self-schedule appointments through a website or app</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement staff scheduling rules</h3>
+                    <p>Establish guidelines for time off, shift trading, and overtime</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain appointment records</h3>
+                    <p>Track client visit history, service preferences, and other data</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage appointment waitlists</h3>
+                    <p>Notify clients when openings become available in busy schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee schedules</h3>
+                    <p>Create weekly or monthly work schedules for salon staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer online booking incentives</h3>
+                    <p>Encourage clients to book digitally through promotional offers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer package booking discounts</h3>
+                    <p>Incentivize clients to pre-purchase multiple appointments</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Optimize appointment duration</h3>
+                    <p>Determine ideal time allotments for various salon services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide employee scheduling app</h3>
+                    <p>Give staff mobile access to view and manage their schedules</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide float/on-call staffing</h3>
+                    <p>Schedule flexible employees to cover unexpected absences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide last-minute booking</h3>
+                    <p>Accommodate same-day or short-notice appointment requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule employee breaks</h3>
+                    <p>Ensure compliance with labor laws and provide adequate rest time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Send appointment reminders</h3>
+                    <p>Automatically email or text clients about upcoming visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial & Retail Administration -->
+    <section class="category-section" id="financial_and_retail_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Financial & Retail Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Collect client late payment fees</h3>
+                    <p>Establish and enforce policies for overdue balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct inventory audits</h3>
+                    <p>Reconcile physical inventory with digital records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct market rate analyses</h3>
+                    <p>Research competitor pricing to stay competitive</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle refunds and exchanges</h3>
+                    <p>Develop a fair policy for returning or exchanging services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a commission structure</h3>
+                    <p>Develop fair policies for compensating booth rental stylists</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement pricing strategies</h3>
+                    <p>Set competitive rates for salon services and retail products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain accurate financial records</h3>
+                    <p>Track income, expenses, and profitability by department</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain equipment maintenance logs</h3>
+                    <p>Track servicing, repairs, and replacements for salon assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client package purchases</h3>
+                    <p>Track pre-paid service packages and monitor usage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage gift card sales and redemption</h3>
+                    <p>Track the issuance, usage, and liability of salon gift cards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage point-of-sale system</h3>
+                    <p>Ensure accurate transaction processing and inventory tracking</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon credit card processing</h3>
+                    <p>Ensure PCI compliance and competitive merchant fees</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon expense budgets</h3>
+                    <p>Allocate funds for operations, marketing, and capital projects</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon inventory</h3>
+                    <p>Order, receive, and stock retail products and salon supplies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate vendor contracts</h3>
+                    <p>Secure the best terms for supplies, equipment, and services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer online retail sales</h3>
+                    <p>Sell products through the salon's website or e-commerce platform</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer package pricing discounts</h3>
+                    <p>Bundle services to provide value and encourage repeat visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer payment plan options</h3>
+                    <p>Allow clients to pay for services over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare sales tax filings</h3>
+                    <p>Comply with state and local tax requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client package refunds</h3>
+                    <p>Handle requests to cancel or modify pre-paid service packages</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client payments</h3>
+                    <p>Accept various payment methods (cash, card, digital wallets)</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process employee expense reports</h3>
+                    <p>Reimburse staff for business-related purchases</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process payroll for employees</h3>
+                    <p>Ensure timely and accurate compensation for all staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide financial reporting</h3>
+                    <p>Generate periodic statements for salon management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Track client retail purchases</h3>
+                    <p>Analyze product sales data to optimize inventory</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat3">Financial & Retail Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health & Safety Compliance -->
+    <section class="category-section" id="health_and_safety_compliance">
+        <div class="container">
+            <div class="category-header">
+                <h2>Health & Safety Compliance</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Adhere to blood-borne pathogen standards</h3>
+                    <p>Ensure proper protocols for handling bodily fluids</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with ada accessibility</h3>
+                    <p>Make reasonable accommodations for clients with disabilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with health department regulations</h3>
+                    <p>Meet all local and state requirements for salon operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct employee safety training</h3>
+                    <p>Educate staff on emergency procedures and risk mitigation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct safety inspections</h3>
+                    <p>Identify and address potential hazards in the salon environment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a chemical safety program</h3>
+                    <p>Train staff on the proper handling and storage of hazardous products</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop an emergency action plan</h3>
+                    <p>Prepare for natural disasters, power outages, and other crises</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a workplace violence prevention plan</h3>
+                    <p>Establish procedures to address threats, harassment, or assault</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Enforce a professional dress code</h3>
+                    <p>Establish guidelines for employee appearance and hygiene</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure proper licensing and permits</h3>
+                    <p>Verify all salon services are legally authorized to operate</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure worker's compensation coverage</h3>
+                    <p>Provide adequate insurance for employee injuries or illnesses</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a hazardous waste disposal plan</h3>
+                    <p>Safely dispose of used chemicals, sharps, and other hazardous materials</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a salon security system</h3>
+                    <p>Protect the premises from theft, vandalism, or unauthorized entry</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a sharps injury prevention program</h3>
+                    <p>Train staff on the proper handling of tools and implements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement infection control protocols</h3>
+                    <p>Establish procedures for sanitizing tools and workspaces</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client sanitization records</h3>
+                    <p>Document cleaning and disinfection practices for each service</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain employee medical records</h3>
+                    <p>Securely store sensitive health information for staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain msds documentation</h3>
+                    <p>Provide safety data sheets for all chemicals used on-site</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain osha compliance</h3>
+                    <p>Ensure the salon meets workplace safety regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide staff with ppe</h3>
+                    <p>Ensure access to personal protective equipment as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Health & Safety Compliance</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing & Promotions -->
+    <section class="category-section" id="marketing_and_promotions">
+        <div class="container">
+            <div class="category-header">
+                <h2>Marketing & Promotions</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Collaborate with local influencers</h3>
+                    <p>Partner with relevant social media personalities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct local seo optimization</h3>
+                    <p>Improve the salon's visibility in online search results</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct market research surveys</h3>
+                    <p>Gather insights from clients and the community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a salon blog or vlog</h3>
+                    <p>Publish educational and inspirational content</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a salon website</h3>
+                    <p>Develop an informative and visually appealing online presence</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a client referral program</h3>
+                    <p>Incentivize existing clients to recommend the salon</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a salon branding strategy</h3>
+                    <p>Establish a consistent visual identity and messaging</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop strategic partnerships</h3>
+                    <p>Collaborate with complementary businesses for cross-promotion</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute salon print advertising</h3>
+                    <p>Create and distribute flyers, brochures, or direct mailers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute salon product samples</h3>
+                    <p>Provide clients with complimentary retail items</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute salon service menus</h3>
+                    <p>Ensure clients are aware of the salon's full range of offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a salon email newsletter</h3>
+                    <p>Regularly communicate with clients via email marketing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a salon mobile app</h3>
+                    <p>Provide a convenient digital experience for clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a salon text message list</h3>
+                    <p>Build a subscriber base for promotional SMS messaging</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage online review responses</h3>
+                    <p>Engage with client feedback on review platforms</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon social media accounts</h3>
+                    <p>Post engaging content and respond to followers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer client appreciation discounts</h3>
+                    <p>Provide special pricing or bonuses for loyal customers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer client loyalty point redemption</h3>
+                    <p>Allow clients to exchange rewards for salon services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer client loyalty program rewards</h3>
+                    <p>Incentivize repeat business through a points-based system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer new client referral incentives</h3>
+                    <p>Encourage existing clients to recommend the salon</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Offer seasonal service promotions</h3>
+                    <p>Highlight timely offerings to drive increased bookings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize in-salon promotional events</h3>
+                    <p>Host special events to attract new and existing clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in industry trade shows</h3>
+                    <p>Network with other salon professionals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in local community events</h3>
+                    <p>Sponsor or volunteer at neighborhood activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote salon gift card sales</h3>
+                    <p>Encourage clients to purchase gift cards for friends/family</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Marketing & Promotions</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff & HR Administration -->
+    <section class="category-section" id="staff_and_hr_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Staff & HR Administration</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Administer employee benefit programs</h3>
+                    <p>Enroll staff in healthcare, retirement, and other offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Administer employee compensation plans</h3>
+                    <p>Design competitive and equitable pay structures</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct employee performance reviews</h3>
+                    <p>Provide constructive feedback and identify growth opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct employee satisfaction surveys</h3>
+                    <p>Gather feedback to improve the work culture</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct workplace diversity training</h3>
+                    <p>Promote inclusion and cultural awareness</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop employee career pathways</h3>
+                    <p>Create opportunities for advancement and skill development</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop employee handbooks</h3>
+                    <p>Establish policies, procedures, and expectations for staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate employee training programs</h3>
+                    <p>Upskill staff on technical, customer service, and leadership skills</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Facilitate team building activities</h3>
+                    <p>Organize events to foster camaraderie and collaboration</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle employee disciplinary actions</h3>
+                    <p>Address performance issues or policy violations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement an employee referral program</h3>
+                    <p>Incentivize staff to recommend new hires</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement employee recognition programs</h3>
+                    <p>Celebrate staff achievements and contributions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain employee personnel files</h3>
+                    <p>Securely store confidential employee records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee leave and time off</h3>
+                    <p>Track PTO, sick days, and other absences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee onboarding</h3>
+                    <p>Orient new hires to the salon's culture and operations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee professional licenses</h3>
+                    <p>Verify stylists maintain required certifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage employee scheduling software</h3>
+                    <p>Optimize staffing assignments and minimize overtime</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process employee terminations</h3>
+                    <p>Ensure a smooth exit process for departing staff</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide employee counseling resources</h3>
+                    <p>Offer support for personal or professional challenges</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Resolve employee workplace conflicts</h3>
+                    <p>Mediate disputes and promote a harmonious work environment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Staff & HR Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Operations -->
+    <section class="category-section" id="business_operations">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Operations</h2>
+                <span class="category-count">14 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Conduct a salon swot analysis</h3>
+                    <p>Assess the salon's strengths, weaknesses, opportunities, and threats</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create a salon operational policy manual</h3>
+                    <p>Document standard procedures for all business functions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a comprehensive business plan</h3>
+                    <p>Outline the salon's vision, strategy, and operational details</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a salon strategic growth plan</h3>
+                    <p>Identify opportunities to expand the business</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop a salon sustainability program</h3>
+                    <p>Implement eco-friendly practices and reduce environmental impact</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Establish salon operating hours</h3>
+                    <p>Set appropriate service availability based on client demand</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a preventative equipment maintenance program</h3>
+                    <p>Prolong the lifespan of salon assets</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement a resource procurement system</h3>
+                    <p>Streamline the ordering and delivery of salon supplies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon facility maintenance</h3>
+                    <p>Ensure the physical space is well-kept and functional</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon fleet vehicle maintenance</h3>
+                    <p>Ensure proper care and upkeep of company vehicles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage salon software systems</h3>
+                    <p>Maintain and upgrade technology platforms as needed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize salon storage and organization</h3>
+                    <p>Optimize the layout and flow of the salon environment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee salon construction projects</h3>
+                    <p>Manage the build-out of a new salon location</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Oversee salon renovation projects</h3>
+                    <p>Coordinate upgrades, expansions, or remodeling efforts</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Operations</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 169 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SalonTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>

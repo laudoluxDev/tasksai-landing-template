@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Library — 161 Purpose-Built Registered dietitians Tools — NutritionistTasksAI</title>
+    <meta name="description" content="Browse all 161 NutritionistTasksAI task templates. Purpose-built for Registered dietitians, nutritionists, and wellness coaches — every task engineered for your specific workflows.">
+    <link rel="canonical" href="https://nutritionisttasksai.com/task-library">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6; color: #1a1a1a; background: #fafafa;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0; background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #65A30D; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #65A30D; }
+        .header-cta {
+            padding: 10px 20px; border-radius: 6px; font-weight: 600;
+            font-size: 0.9rem; background: #65A30D; color: white !important;
+        }
+        .header-cta:hover { opacity: 0.88; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+        .mobile-overlay.active { display: block; }
+
+        /* Hero */
+        .page-hero {
+            padding: 64px 0 48px; text-align: center;
+            background: linear-gradient(180deg, white 0%, #f9fafb 100%);
+        }
+        .page-hero .eyebrow {
+            display: inline-block; background: rgba(101,163,13,0.1); color: #65A30D;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+        }
+        .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .page-hero h1 span { color: #65A30D; }
+        .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 580px; margin: 0 auto; }
+
+        /* Filter nav */
+        .filter-nav {
+            background: white; border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0; position: sticky; top: 62px; z-index: 90;
+        }
+        .filter-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn {
+            display: inline-block; padding: 8px 18px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; border: 2px solid #e5e7eb;
+            color: #4b5563; background: white; transition: all 0.2s;
+            white-space: nowrap; cursor: pointer; text-decoration: none;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #65A30D; color: #65A30D; background: rgba(101,163,13,0.1);
+        }
+
+        /* Category sections */
+        .category-section { padding: 56px 0; }
+        .category-section:nth-child(even) { background: white; }
+        .category-section:nth-child(odd) { background: #f9fafb; }
+        .category-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 0.9rem; color: #6b7280; font-weight: 500; white-space: nowrap; }
+
+        /* Task grid */
+        .task-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+        }
+        .task-card {
+            background: white; border-radius: 10px; padding: 20px 22px;
+            border: 1px solid #e5e7eb; transition: all 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .task-card:hover {
+            border-color: #65A30D; box-shadow: 0 4px 12px rgba(101,163,13,0.1);
+            transform: translateY(-1px);
+        }
+        .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
+        .cx-simple { color: #15803d; }
+        .cx-medium { color: #92400e; }
+        .cx-complex { color: #7e22ce; }
+
+        /* Badge colors */
+        .badge-cat0 { background: rgba(101,163,13,0.1); color: #65A30D; }
+        .badge-cat1 { background: #fef3c7; color: #92400e; }
+        .badge-cat2 { background: #f0fdf4; color: #15803d; }
+        .badge-cat3 { background: #fdf4ff; color: #7e22ce; }
+        .badge-cat4 { background: #fff7ed; color: #9a3412; }
+        .badge-cat5 { background: #f0f9ff; color: #0369a1; }
+        .badge-cat6 { background: #fef2f2; color: #b91c1c; }
+        .badge-cat7 { background: #f5f3ff; color: #5b21b6; }
+
+        /* CTA */
+        .bottom-cta {
+            padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        .bottom-cta h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        .bottom-cta p { color: #6b7280; margin-bottom: 8px; font-size: 1.05rem; }
+        .bottom-cta .subp { color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px; }
+        .cta-button {
+            display: inline-block; background: #65A30D; color: white;
+            padding: 16px 36px; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(101,163,13,0.3);
+        }
+        .cta-button:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            padding: 40px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;
+            text-align: center; color: #6b7280; font-size: 0.9rem;
+        }
+        footer a { color: #6b7280; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #65A30D; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .filter-nav { top: 56px; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none; position: fixed; top: 0; right: 0;
+                width: 280px; height: 100vh; background: white;
+                flex-direction: column; padding: 80px 32px 32px; gap: 0;
+                box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 200; align-items: flex-start;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid #f3f4f6; width: 100%; }
+            .header-cta { width: 100%; text-align: center; margin-top: 16px; }
+            .task-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">NutritionistTasks<span>AI</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/task-library">Task Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/support">Support</a>
+                <a href="/#pricing" class="header-cta">Get Credits</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">🥦 161 tasks available</div>
+            <h1><span>161</span> Purpose-Built Tools<br>for Registered dietitianss</h1>
+            <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
+        </div>
+    </section>
+
+    <nav class="filter-nav" id="filterNav" aria-label="Task categories">
+        <div class="container">
+            <a href="#all" class="filter-btn active">All 161</a>
+            <a href="#client_intake_and_assessment" class="filter-btn" data-cat="client_intake_and_assessment">Client Intake & Assessment (45)</a>
+            <a href="#meal_plan_and_nutrition_documentation" class="filter-btn" data-cat="meal_plan_and_nutrition_documentation">Meal Plan & Nutrition Documentation (20)</a>
+            <a href="#insurance_and_billing_administration" class="filter-btn" data-cat="insurance_and_billing_administration">Insurance & Billing Administration (25)</a>
+            <a href="#client_progress_and_follow_up" class="filter-btn" data-cat="client_progress_and_follow_up">Client Progress & Follow-Up (0)</a>
+            <a href="#compliance_and_credentialing" class="filter-btn" data-cat="compliance_and_credentialing">Compliance & Credentialing (20)</a>
+            <a href="#practice_communications" class="filter-btn" data-cat="practice_communications">Practice Communications (25)</a>
+            <a href="#health_education_materials" class="filter-btn" data-cat="health_education_materials">Health Education Materials (20)</a>
+            <a href="#business_administration" class="filter-btn" data-cat="business_administration">Business Administration (6)</a>
+
+        </div>
+    </nav>
+
+    
+    <!-- Client Intake & Assessment -->
+    <section class="category-section" id="client_intake_and_assessment">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Intake & Assessment</h2>
+                <span class="category-count">45 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze client's food journal</h3>
+                    <p>Review the client's detailed food diary to identify areas for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze intake process effectiveness</h3>
+                    <p>Review intake procedures and identify areas for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assess client's current eating habits</h3>
+                    <p>Evaluate the client's typical daily food intake, meal patterns, and nutrition knowledge</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assess client's nutrient intake</h3>
+                    <p>Calculate the client's current intake of macronutrients, micronutrients, and other dietary components</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct anthropometric measurements</h3>
+                    <p>Measure the client's height, weight, body composition, and other physical indicators</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client satisfaction survey</h3>
+                    <p>Gather feedback on the client's experience with the intake process</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct initial client assessment</h3>
+                    <p>Meet with new client to gather background information and understand their needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm client's attendance</h3>
+                    <p>Contact the client to verify they will attend the scheduled appointment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client's nutrition care plan</h3>
+                    <p>Create a detailed plan outlining nutrition goals, interventions, and expected outcomes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client's dietary preferences</h3>
+                    <p>Note the client's food likes, dislikes, allergies, and cultural or religious dietary restrictions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client's informed consent</h3>
+                    <p>Obtain the client's written agreement to the proposed nutrition care plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client's medical history</h3>
+                    <p>Thoroughly document the client's medical conditions, medications, and relevant health factors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate client's physical activity level</h3>
+                    <p>Determine the client's current exercise routine and energy expenditure</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Follow up on missed appointments</h3>
+                    <p>Reach out to clients who do not show up for scheduled visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify client's barriers to success</h3>
+                    <p>Work with the client to understand any obstacles or challenges they face</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify client's health goals and motivations</h3>
+                    <p>Work with the client to establish specific, measurable goals for their nutrition program</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client medical records</h3>
+                    <p>Securely file and store the client's confidential health information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain intake forms and templates</h3>
+                    <p>Update client forms as regulations or best practices change</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Notify client of intake appointment</h3>
+                    <p>Communicate the date, time, and details of the initial assessment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client intake form</h3>
+                    <p>Create a comprehensive intake form collecting diet history and health goals</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client intake paperwork</h3>
+                    <p>Organize all completed intake forms and assessment documents</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule follow-up assessment</h3>
+                    <p>Book a future appointment to monitor the client's progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Summarize client assessment findings</h3>
+                    <p>Compile all gathered information into a comprehensive client profile</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on intake protocols</h3>
+                    <p>Ensure all team members follow consistent client intake practices</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update client database</h3>
+                    <p>Enter new client data into the practice's electronic medical records system</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Address client challenges and barriers</h3>
+                    <p>Work collaboratively to problem-solve issues impacting progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Analyze client's food logs and journals</h3>
+                    <p>Review ongoing dietary intake to identify areas for improvement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assess client's readiness for change</h3>
+                    <p>Evaluate the client's willingness to implement recommendations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Celebrate client's successes and achievements</h3>
+                    <p>Acknowledge milestones and reinforce positive behaviors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate progress to other providers</h3>
+                    <p>Share updates with the client's medical team as appropriate</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct periodic program evaluations</h3>
+                    <p>Review the effectiveness of the practice's nutrition services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client discharge plan</h3>
+                    <p>Document the conclusion of active nutrition therapy</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client's progress notes</h3>
+                    <p>Record changes in health indicators, behaviors, and goal attainment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client's reasons for discontinuation</h3>
+                    <p>Note if a client chooses to stop working with the practice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Identify trends in client attrition</h3>
+                    <p>Investigate reasons for clients leaving the practice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement client retention strategies</h3>
+                    <p>Deploy initiatives to keep clients engaged and motivated</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain client progress tracking system</h3>
+                    <p>Organize and analyze data on client outcomes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Modify nutrition interventions as needed</h3>
+                    <p>Adjust meal plans, supplements, or strategies based on client response</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client satisfaction feedback</h3>
+                    <p>Gather input to improve the quality of nutrition services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client progress reports</h3>
+                    <p>Summarize a client's journey and outcomes for internal or external use</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client education materials</h3>
+                    <p>Share resources to support continued healthy behaviors</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide encouragement and accountability</h3>
+                    <p>Motivate clients to adhere to their nutrition plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend transition to maintenance phase</h3>
+                    <p>Guide clients toward independent nutrition self-management</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule follow-up appointments</h3>
+                    <p>Book future check-ins to monitor long-term outcomes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Schedule regular client check-ins</h3>
+                    <p>Book recurring appointments to monitor progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat0">Client Intake & Assessment</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meal Plan & Nutrition Documentation -->
+    <section class="category-section" id="meal_plan_and_nutrition_documentation">
+        <div class="container">
+            <div class="category-header">
+                <h2>Meal Plan & Nutrition Documentation</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze client's food records</h3>
+                    <p>Review food logs to evaluate dietary intake and adherence to meal plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with other healthcare providers</h3>
+                    <p>Communicate nutrition plan details with the client's medical team</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop personalized meal plans</h3>
+                    <p>Create detailed daily meal plans tailored to the client's needs and preferences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client's nutritional risk factors</h3>
+                    <p>Note conditions, medications, or behaviors that may impact nutritional status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document nutritional interventions</h3>
+                    <p>Record all nutrition recommendations, supplements, and dietary changes prescribed</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document nutrition counseling sessions</h3>
+                    <p>Keep detailed notes on discussions, recommendations, and client feedback</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document nutrition intervention outcomes</h3>
+                    <p>Track changes in the client's health markers and goal attainment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Evaluate the nutritional adequacy of meals</h3>
+                    <p>Ensure client's diet meets macro- and micronutrient requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain electronic nutrition records</h3>
+                    <p>Organize client files, meal plans, and progress notes digitally</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain nutrition education library</h3>
+                    <p>Curate a collection of reliable nutrition resources for client referral</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor client's weight and body composition</h3>
+                    <p>Track changes in the client's physical indicators over time</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare client handouts and education materials</h3>
+                    <p>Create easy-to-understand resources on nutrition topics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide grocery shopping guidance</h3>
+                    <p>Offer tips for navigating the supermarket and reading food labels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide meal planning guidance</h3>
+                    <p>Educate clients on balanced meal composition, portion control, and food preparation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide portion control education</h3>
+                    <p>Teach clients techniques for managing serving sizes and portions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend dietary supplement regimens</h3>
+                    <p>Suggest evidence-based supplements to address nutrient deficiencies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Recommend recipe modifications</h3>
+                    <p>Suggest healthier ingredient substitutions or cooking methods</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client nutrition inquiries</h3>
+                    <p>Address questions about meal plans, recipes, or dietary recommendations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Suggest meal prep strategies</h3>
+                    <p>Share techniques for efficient food preparation and storage</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Update meal plans based on client feedback</h3>
+                    <p>Revise meal plans to better suit the client's preferences and needs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat1">Meal Plan & Nutrition Documentation</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance & Billing Administration -->
+    <section class="category-section" id="insurance_and_billing_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Insurance & Billing Administration</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Analyze practice revenue and payer mix</h3>
+                    <p>Identify opportunities to improve reimbursement</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Appeal denied insurance claims</h3>
+                    <p>Advocate for client coverage of nutrition services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Assist clients with insurance pre-authorizations</h3>
+                    <p>Guide clients through the approval process for nutrition visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate with insurance representatives</h3>
+                    <p>Coordinate with payers to resolve billing discrepancies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document medical necessity for nutrition therapy</h3>
+                    <p>Provide clinical justification for the prescribed interventions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Educate clients on insurance benefits</h3>
+                    <p>Inform clients of covered services and applicable copays/deductibles</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement electronic billing systems</h3>
+                    <p>Use software to streamline insurance and client invoicing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain detailed documentation for audits</h3>
+                    <p>Organize clinical notes, treatment plans, and financial records</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain secure storage of client records</h3>
+                    <p>Protect sensitive financial and medical information</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain superbill for nutrition services</h3>
+                    <p>Create detailed invoices for client and insurance billing</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client payment plans and collections</h3>
+                    <p>Work with clients on customized payment arrangements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Monitor changes to insurance plan policies</h3>
+                    <p>Adjust practice procedures to comply with new requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate rates with insurance companies</h3>
+                    <p>Advocate for fair reimbursement of nutrition services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain prior authorization for nutrition visits</h3>
+                    <p>Request approval from the insurance provider before rendering services</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for insurance audits and reviews</h3>
+                    <p>Gather documentation and respond to information requests</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Process client payments and deposits</h3>
+                    <p>Accept and record payments received from clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide billing statements to clients</h3>
+                    <p>Generate and distribute periodic invoices for services rendered</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Reconcile client account balances</h3>
+                    <p>Track payments, copays, and outstanding patient balances</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research new billing codes and modifiers</h3>
+                    <p>Stay current on evolving nutrition-related CPT and ICD-10 codes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Research new insurance contract opportunities</h3>
+                    <p>Explore expanding in-network provider status</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Review client experience with billing process</h3>
+                    <p>Gather feedback to enhance the client financial journey</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Submit insurance claims for nutrition services</h3>
+                    <p>File reimbursement requests with the client's health plan</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on insurance billing protocols</h3>
+                    <p>Ensure consistent and compliant claims submission</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Understand insurance plan coverage and limitations</h3>
+                    <p>Stay up-to-date on changing policies and requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify client's insurance coverage</h3>
+                    <p>Check eligibility, benefits, and authorization requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat2">Insurance & Billing Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Progress & Follow-Up -->
+    <section class="category-section" id="client_progress_and_follow_up">
+        <div class="container">
+            <div class="category-header">
+                <h2>Client Progress & Follow-Up</h2>
+                <span class="category-count">0 tasks</span>
+            </div>
+            <div class="task-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Credentialing -->
+    <section class="category-section" id="compliance_and_credentialing">
+        <div class="container">
+            <div class="category-header">
+                <h2>Compliance & Credentialing</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Complete continuing education requirements</h3>
+                    <p>Earn credits to satisfy licensing board standards</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Comply with state and federal regulations</h3>
+                    <p>Adhere to laws and guidelines governing nutrition practice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop disaster recovery and business continuity plans</h3>
+                    <p>Safeguard client data and ensure operational resilience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop practice policies and procedures</h3>
+                    <p>Standardize operations and mitigate legal risks</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document compliance training and education</h3>
+                    <p>Record staff participation in mandatory learning</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document professional development activities</h3>
+                    <p>Track courses, conferences, and other learning experiences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Ensure food safety and sanitation practices</h3>
+                    <p>Maintain a clean and hygienic work environment</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement hipaa privacy and security protocols</h3>
+                    <p>Protect client confidentiality and prevent data breaches</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Implement quality improvement initiatives</h3>
+                    <p>Deploy projects to enhance the client experience and outcomes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain detailed client records and files</h3>
+                    <p>Organize comprehensive documentation for each client</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain nutrition-related accreditations</h3>
+                    <p>Earn and renew practice-level designations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain professional licensure</h3>
+                    <p>Renew nutrition-related certifications and registrations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage professional liability insurance</h3>
+                    <p>Obtain and maintain appropriate coverage for the practice</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Participate in peer review processes</h3>
+                    <p>Engage in quality assurance and improvement activities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for on-site inspections</h3>
+                    <p>Ensure the practice is prepared for regulatory site visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare for professional competency exams</h3>
+                    <p>Study and practice to pass recertification examinations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to regulatory audits and investigations</h3>
+                    <p>Cooperate with inquiries and provide requested documentation</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Stay informed on changes to regulations</h3>
+                    <p>Adjust practice operations to align with new requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Train staff on compliance requirements</h3>
+                    <p>Educate team members on regulatory obligations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Verify employee credentials and licenses</h3>
+                    <p>Confirm staff meet minimum qualifications</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat4">Compliance & Credentialing</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Communications -->
+    <section class="category-section" id="practice_communications">
+        <div class="container">
+            <div class="category-header">
+                <h2>Practice Communications</h2>
+                <span class="category-count">25 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Communicate practice policies and procedures</h3>
+                    <p>Inform clients of relevant rules, fees, and practice expectations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Communicate with other healthcare providers</h3>
+                    <p>Share relevant client information and collaborate on care plans</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Conduct client satisfaction surveys</h3>
+                    <p>Gather feedback to improve the overall client experience</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Confirm client appointments and visits</h3>
+                    <p>Notify clients of scheduled nutrition counseling sessions</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Coordinate with local media outlets</h3>
+                    <p>Pursue opportunities for media coverage and interviews</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Craft press releases and media pitches</h3>
+                    <p>Promote the practice's expertise and new offerings</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop and distribute client handouts</h3>
+                    <p>Create visually appealing materials for easy reference</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Distribute client appointment reminders</h3>
+                    <p>Send notifications to prevent missed or forgotten visits</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Document client communication and interactions</h3>
+                    <p>Record all significant exchanges in the client's chart</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Handle client complaints and grievances</h3>
+                    <p>Respond to concerns in a professional and empathetic manner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain the practice's client contact database</h3>
+                    <p>Keep client information organized and up-to-date</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage client waitlist and scheduling</h3>
+                    <p>Maintain a system for handling appointment availability</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage practice social media channels</h3>
+                    <p>Post timely updates and engage with the online community</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's general inquiries</h3>
+                    <p>Address phone calls, emails, and walk-in requests from the public</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's social media presence</h3>
+                    <p>Post relevant nutrition information and engage with followers</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's website and online presence</h3>
+                    <p>Ensure digital marketing assets are accurate and up-to-date</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Obtain client consent for information sharing</h3>
+                    <p>Ensure compliance with privacy regulations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize and facilitate team meetings</h3>
+                    <p>Lead discussions on operational and clinical topics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize and host client events and workshops</h3>
+                    <p>Plan educational sessions and networking opportunities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare and distribute client newsletters</h3>
+                    <p>Create and send periodic updates on nutrition topics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Promote the practice's nutrition services</h3>
+                    <p>Develop marketing content to attract new clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Provide client education and resources</h3>
+                    <p>Share materials to support healthy lifestyle changes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to client inquiries and messages</h3>
+                    <p>Address questions, concerns, or requests in a timely manner</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Respond to requests for client records</h3>
+                    <p>Provide medical documentation to authorized parties</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write blog posts or articles on nutrition topics</h3>
+                    <p>Create content to position the practice as an expert resource</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat5">Practice Communications</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Education Materials -->
+    <section class="category-section" id="health_education_materials">
+        <div class="container">
+            <div class="category-header">
+                <h2>Health Education Materials</h2>
+                <span class="category-count">20 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Adapt educational resources for different literacy levels</h3>
+                    <p>Tailor content to meet the needs of all clients</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create food journal templates and tracking logs</h3>
+                    <p>Offer structured methods for monitoring dietary intake</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-simple">Simple</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create patient education videos on cooking techniques</h3>
+                    <p>Record instructional content for food preparation skills</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Create recipe books and meal planning guides</h3>
+                    <p>Compile collections of nutritious and delicious recipes</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Curate a library of nutrition education videos</h3>
+                    <p>Identify and organize relevant multimedia content</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Design nutrition-focused social media content</h3>
+                    <p>Create engaging posts for the practice's online channels</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Design portion control and meal planning aids</h3>
+                    <p>Furnish visual cues and calculators for healthy eating</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Design visual aids for nutrition counseling</h3>
+                    <p>Prepare diagrams, charts, and infographics</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client goal-setting worksheets</h3>
+                    <p>Provide tools to help clients establish and track progress</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop client handouts on nutrition topics</h3>
+                    <p>Create easy-to-understand educational resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Develop culturally relevant nutrition education</h3>
+                    <p>Adapt materials to reflect diverse backgrounds and preferences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a digital nutrition education library</h3>
+                    <p>Curate a collection of online resources for client access</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Maintain a nutrition reference library</h3>
+                    <p>Organize a collection of books, journals, and digital resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Organize nutrition-focused community workshops</h3>
+                    <p>Plan and facilitate interactive learning experiences</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce audio or video nutrition presentations</h3>
+                    <p>Record podcasts, webinars, or instructional videos</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce client education materials on special diets</h3>
+                    <p>Explain nutrition guidelines for medical conditions or allergies</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Produce content for in-office educational displays</h3>
+                    <p>Design engaging visual exhibits for the practice waiting area</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Translate nutrition materials into other languages</h3>
+                    <p>Ensure accessibility for diverse client populations</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Translate nutrition science into layman's terms</h3>
+                    <p>Explain complex concepts in an easy-to-understand way</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Write blog posts or articles on healthy eating</h3>
+                    <p>Produce educational content for the practice's website</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat6">Health Education Materials</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Administration -->
+    <section class="category-section" id="business_administration">
+        <div class="container">
+            <div class="category-header">
+                <h2>Business Administration</h2>
+                <span class="category-count">6 tasks</span>
+            </div>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h3>Maintain detailed financial records and accounting</h3>
+                    <p>Track income, expenses, and financial performance</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's day-to-day operations</h3>
+                    <p>Oversee administrative duties and ensure smooth workflow</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Manage the practice's payroll and benefits</h3>
+                    <p>Process employee paychecks and administer HR programs</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Negotiate vendor contracts and service agreements</h3>
+                    <p>Secure favorable terms for goods, services, and utilities</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Prepare and file business tax returns</h3>
+                    <p>Comply with state and federal tax reporting requirements</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-complex">Complex</span>
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>Procure office supplies, equipment, and inventory</h3>
+                    <p>Maintain adequate stock of necessary practice resources</p>
+                    <div class="task-footer">
+                        <span class="task-badge badge-cat7">Business Administration</span>
+                        <span class="task-cx cx-medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta" id="all">
+        <div class="container">
+            <h2>Access All 161 Tools</h2>
+            <p>$29 gets you 15 tasks. Credits never expire. No subscription.</p>
+            <p class="subp">Every task produces professional output ready for your review — never raw AI.</p>
+            <a href="/#pricing" class="cta-button">Get Started — $29 Starter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NutritionistTasksAI. All rights reserved.</p>
+            <p style="margin-top:8px;">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/support">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', toggleNav);
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { if (navLinks.classList.contains('active')) toggleNav(); });
+        });
+
+        // Category filter — scroll to section + highlight button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight filter button on scroll
+        const sections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn[href^="#"]:not([href="#all"])');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+            });
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+            });
+            if (!current) document.querySelector('.filter-btn[href="#all"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>
