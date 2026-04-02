@@ -262,7 +262,8 @@ def main():
                         .replace("{{ACCENT_COLOR}}", accent) \
                         .replace("{{DOMAIN}}", domain) \
                         .replace("{{PRODUCT_ID}}", product_id) \
-                        .replace("{{OCCUPATION}}", occupation)
+                        .replace("{{OCCUPATION}}", occupation) \
+                        .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
 
             # Quick sanity check: no unreplaced placeholders
