@@ -31,14 +31,19 @@ jobs:
           slugs=(
             accounting chiropractor churchadmin contractor dentist designer
             electrician eventplanner farmer funeral hr insurance landlord
-            militaryspouse mortgage mortuary nutritionist pastor personaltrainer
+            marketing militaryspouse mortgage mortuary nutritionist pastor personaltrainer
             plumber principal realtor restaurant salon teacher therapist
             travelagent vet
           )
+
+          # marketing uses a differently-named CF Pages project
+          declare -A project_overrides
+          project_overrides[marketing]="marketingtasksai-landing"
           for slug in "${slugs[@]}"; do
-            echo "Deploying $slug..."
+            project="${project_overrides[$slug]:-${slug}-landing}"
+            echo "Deploying $slug → $project..."
             wrangler pages deploy output/$slug \
-              --project-name=${slug}-landing \
+              --project-name=$project \
               --commit-dirty=true \
               || echo "WARNING: $slug deploy failed, continuing..."
           done
