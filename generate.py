@@ -121,6 +121,25 @@ def generate_page(template: str, vertical: dict) -> str:
     feature_cards = build_feature_cards(features)
     audience_short = target_audience_short(target_audience)
 
+    # Build Try It card (conditionally included)
+    show_tryit = vertical.get("show_tryit", True)  # default True
+    tryit_card = """"""
+    if show_tryit:
+        tryit_card = f"""<div class="pricing-card">
+                    <h3>Try It</h3>
+                    <div class="price">$5</div>
+                    <div class="credits">2 credits</div>
+                    <p class="per-credit">$2.50 per task</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Try before you commit</li>
+                    </ul>
+                    <button onclick=\"checkout('tryit')\" class=\"buy-btn\">Try It</button>
+                </div>"""
+
+    api_base = vertical.get("api_base", "https://api.lawtasksai.com")
+
     page = template
     replacements = {
         "{{PRODUCT_NAME}}": product_name,
@@ -141,6 +160,8 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{FEATURE_CARDS}}": feature_cards,
         "{{LOGO_HTML}}": logo_html,
         "{{LOGO_HTML_FOOTER}}": logo_html,
+        "{{API_BASE}}": api_base,
+        "{{TRYIT_CARD}}": tryit_card,
     }
 
     for placeholder, value in replacements.items():
@@ -202,7 +223,8 @@ def main():
                     .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
                     .replace("{{ACCENT_COLOR}}", accent) \
                     .replace("{{DOMAIN}}", domain) \
-                    .replace("{{PRODUCT_ID}}", product_id)
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com"))
                 (out_dir / "success.html").write_text(success_page, encoding="utf-8")
 
             # Generate terms, privacy, support pages
