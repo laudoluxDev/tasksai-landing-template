@@ -32,7 +32,7 @@
     ],
     "status": "live",
     "occupation": "general contractors, subcontractors, and construction professionals",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-P7C4D8EZNS"
   },
@@ -69,7 +69,7 @@
     ],
     "status": "planned",
     "occupation": "real estate agents, brokers, and realtors",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-GV4V3CJLYW"
   },
@@ -180,7 +180,7 @@
     ],
     "status": "planned",
     "occupation": "church administrators and ministry staff",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": ""
   },
@@ -365,7 +365,7 @@
     ],
     "status": "planned",
     "occupation": "farmers, ranchers, and agricultural professionals",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-GT4MQX8ZQE"
   },
@@ -624,7 +624,7 @@
     ],
     "status": "planned",
     "occupation": "morticians, funeral home directors, and mortuary professionals",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": ""
   },
@@ -883,7 +883,7 @@
     ],
     "status": "planned",
     "occupation": "salon owners, stylists, and beauty professionals",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-N14JL8C4EC"
   },
@@ -920,7 +920,7 @@
     ],
     "status": "planned",
     "occupation": "teachers, educators, and instructional staff",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-1QYEGTMFW8"
   },
@@ -957,7 +957,7 @@
     ],
     "status": "planned",
     "occupation": "therapists, counselors, and mental health professionals",
-    "show_tryit": false,
+    "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-CRPT3804J6"
   },
