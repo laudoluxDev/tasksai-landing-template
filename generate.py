@@ -61,6 +61,20 @@ def target_audience_short(full: str) -> str:
     return short
 
 
+def build_ga_tag(ga_id: str) -> str:
+    """Build the Google Analytics script tag, or empty string if no GA ID."""
+    if not ga_id:
+        return ""
+    return f"""<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={ga_id}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', '{ga_id}');
+</script>"""
+
+
 def generate_page(template: str, vertical: dict) -> str:
     """Replace all placeholders in the template for one vertical."""
 
@@ -140,6 +154,9 @@ def generate_page(template: str, vertical: dict) -> str:
 
     api_base = vertical.get("api_base", "https://api.lawtasksai.com")
 
+    # Build GA tag (empty string if no GA ID)
+    ga_tag = build_ga_tag(vertical.get("ga_measurement_id", ""))
+
     page = template
     replacements = {
         "{{PRODUCT_NAME}}": product_name,
@@ -162,6 +179,7 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{LOGO_HTML_FOOTER}}": logo_html,
         "{{API_BASE}}": api_base,
         "{{TRYIT_CARD}}": tryit_card,
+        "{{GA_TAG}}": ga_tag,
     }
 
     for placeholder, value in replacements.items():
@@ -224,7 +242,8 @@ def main():
                     .replace("{{ACCENT_COLOR}}", accent) \
                     .replace("{{DOMAIN}}", domain) \
                     .replace("{{PRODUCT_ID}}", product_id) \
-                    .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com"))
+                    .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com")) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                 (out_dir / "success.html").write_text(success_page, encoding="utf-8")
 
             # Generate terms, privacy, support pages

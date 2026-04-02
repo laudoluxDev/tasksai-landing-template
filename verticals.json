@@ -33,7 +33,8 @@
     "status": "live",
     "occupation": "general contractors, subcontractors, and construction professionals",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-P7C4D8EZNS"
   },
   {
     "product_id": "realtor",
@@ -69,7 +70,8 @@
     "status": "planned",
     "occupation": "real estate agents, brokers, and realtors",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-GV4V3CJLYW"
   },
   {
     "product_id": "accounting",
@@ -105,7 +107,8 @@
     "status": "planned",
     "occupation": "accountants, bookkeepers, and financial professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "chiropractor",
@@ -141,7 +144,8 @@
     "status": "planned",
     "occupation": "chiropractors and chiropractic office staff",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "church",
@@ -177,7 +181,8 @@
     "status": "planned",
     "occupation": "church administrators and ministry staff",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "dentist",
@@ -213,7 +218,8 @@
     "status": "planned",
     "occupation": "dentists and dental office administrators",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "designer",
@@ -249,7 +255,8 @@
     "status": "planned",
     "occupation": "designers and creative professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "electrician",
@@ -285,7 +292,8 @@
     "status": "planned",
     "occupation": "electricians and electrical contractors",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "eventplanner",
@@ -321,7 +329,8 @@
     "status": "planned",
     "occupation": "event planners and event management professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "farmer",
@@ -357,7 +366,8 @@
     "status": "planned",
     "occupation": "farmers, ranchers, and agricultural professionals",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-GT4MQX8ZQE"
   },
   {
     "product_id": "funeral",
@@ -393,7 +403,8 @@
     "status": "planned",
     "occupation": "funeral directors and mortuary professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "hr",
@@ -429,7 +440,8 @@
     "status": "planned",
     "occupation": "human resources professionals and HR managers",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "insurance",
@@ -465,7 +477,8 @@
     "status": "planned",
     "occupation": "insurance agents and insurance office staff",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "landlord",
@@ -501,7 +514,8 @@
     "status": "planned",
     "occupation": "landlords, property managers, and rental property owners",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "militaryspouse",
@@ -537,7 +551,8 @@
     "status": "planned",
     "occupation": "military spouses managing businesses and households",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "mortgage",
@@ -573,7 +588,8 @@
     "status": "planned",
     "occupation": "mortgage brokers, loan officers, and mortgage professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "mortuary",
@@ -609,7 +625,8 @@
     "status": "planned",
     "occupation": "morticians, funeral home directors, and mortuary professionals",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "nutritionist",
@@ -645,7 +662,8 @@
     "status": "planned",
     "occupation": "nutritionists, dietitians, and nutrition professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "pastor",
@@ -681,7 +699,8 @@
     "status": "planned",
     "occupation": "pastors, ministers, and church leaders",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "personaltrainer",
@@ -717,7 +736,8 @@
     "status": "planned",
     "occupation": "personal trainers, fitness coaches, and gym professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "plumber",
@@ -753,7 +773,8 @@
     "status": "planned",
     "occupation": "plumbers and plumbing contractors",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "principal",
@@ -789,7 +810,8 @@
     "status": "planned",
     "occupation": "school principals, vice principals, and school administrators",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "restaurant",
@@ -825,7 +847,8 @@
     "status": "planned",
     "occupation": "restaurant owners, managers, and food service professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "salon",
@@ -861,7 +884,8 @@
     "status": "planned",
     "occupation": "salon owners, stylists, and beauty professionals",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-N14JL8C4EC"
   },
   {
     "product_id": "teacher",
@@ -897,7 +921,8 @@
     "status": "planned",
     "occupation": "teachers, educators, and instructional staff",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-1QYEGTMFW8"
   },
   {
     "product_id": "therapist",
@@ -933,7 +958,8 @@
     "status": "planned",
     "occupation": "therapists, counselors, and mental health professionals",
     "show_tryit": false,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-CRPT3804J6"
   },
   {
     "product_id": "travelagent",
@@ -969,7 +995,8 @@
     "status": "planned",
     "occupation": "travel agents, travel advisors, and tourism professionals",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "vet",
@@ -1005,7 +1032,8 @@
     "status": "planned",
     "occupation": "veterinarians, vet technicians, and veterinary office staff",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": ""
   },
   {
     "product_id": "marketing",
@@ -1050,6 +1078,7 @@
     "status": "live",
     "occupation": "marketing professionals, digital marketers, and marketing managers",
     "show_tryit": true,
-    "api_base": "https://api.lawtasksai.com"
+    "api_base": "https://api.lawtasksai.com",
+    "ga_measurement_id": "G-XG8WVN0QR3"
   }
 ]
