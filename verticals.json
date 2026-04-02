@@ -31,7 +31,9 @@
       "Prepare a site safety plan"
     ],
     "status": "live",
-    "occupation": "general contractors, subcontractors, and construction professionals"
+    "occupation": "general contractors, subcontractors, and construction professionals",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "realtor",
@@ -65,7 +67,9 @@
       "Create an open house follow-up email"
     ],
     "status": "planned",
-    "occupation": "real estate agents, brokers, and realtors"
+    "occupation": "real estate agents, brokers, and realtors",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "accounting",
@@ -99,7 +103,9 @@
       "Draft an IRS correspondence response"
     ],
     "status": "planned",
-    "occupation": "accountants, bookkeepers, and financial professionals"
+    "occupation": "accountants, bookkeepers, and financial professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "chiropractor",
@@ -133,7 +139,9 @@
       "Write a care plan explanation letter"
     ],
     "status": "planned",
-    "occupation": "chiropractors and chiropractic office staff"
+    "occupation": "chiropractors and chiropractic office staff",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "church",
@@ -167,7 +175,9 @@
       "Write a new member welcome packet"
     ],
     "status": "planned",
-    "occupation": "church administrators and ministry staff"
+    "occupation": "church administrators and ministry staff",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "dentist",
@@ -201,7 +211,9 @@
       "Write a referral thank-you letter"
     ],
     "status": "planned",
-    "occupation": "dentists and dental office administrators"
+    "occupation": "dentists and dental office administrators",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "designer",
@@ -235,7 +247,9 @@
       "Write a project completion summary"
     ],
     "status": "planned",
-    "occupation": "designers and creative professionals"
+    "occupation": "designers and creative professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "electrician",
@@ -269,7 +283,9 @@
       "Write a customer invoice"
     ],
     "status": "planned",
-    "occupation": "electricians and electrical contractors"
+    "occupation": "electricians and electrical contractors",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "eventplanner",
@@ -303,7 +319,9 @@
       "Write a vendor inquiry email"
     ],
     "status": "planned",
-    "occupation": "event planners and event management professionals"
+    "occupation": "event planners and event management professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "farmer",
@@ -337,7 +355,9 @@
       "Draft a grant proposal narrative"
     ],
     "status": "planned",
-    "occupation": "farmers, ranchers, and agricultural professionals"
+    "occupation": "farmers, ranchers, and agricultural professionals",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "funeral",
@@ -371,7 +391,9 @@
       "Draft a pre-need agreement"
     ],
     "status": "planned",
-    "occupation": "funeral directors and mortuary professionals"
+    "occupation": "funeral directors and mortuary professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "hr",
@@ -405,7 +427,9 @@
       "Create an employee handbook section"
     ],
     "status": "planned",
-    "occupation": "human resources professionals and HR managers"
+    "occupation": "human resources professionals and HR managers",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "insurance",
@@ -439,7 +463,9 @@
       "Write a loss run request"
     ],
     "status": "planned",
-    "occupation": "insurance agents and insurance office staff"
+    "occupation": "insurance agents and insurance office staff",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "landlord",
@@ -473,7 +499,9 @@
       "Write a lease violation notice"
     ],
     "status": "planned",
-    "occupation": "landlords, property managers, and rental property owners"
+    "occupation": "landlords, property managers, and rental property owners",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "militaryspouse",
@@ -507,7 +535,9 @@
       "Write a school transfer request"
     ],
     "status": "planned",
-    "occupation": "military spouses managing businesses and households"
+    "occupation": "military spouses managing businesses and households",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "mortgage",
@@ -541,7 +571,9 @@
       "Write a denial explanation letter"
     ],
     "status": "planned",
-    "occupation": "mortgage brokers, loan officers, and mortgage professionals"
+    "occupation": "mortgage brokers, loan officers, and mortgage professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "mortuary",
@@ -575,7 +607,9 @@
       "Prepare a compliance inspection checklist"
     ],
     "status": "planned",
-    "occupation": "morticians, funeral home directors, and mortuary professionals"
+    "occupation": "morticians, funeral home directors, and mortuary professionals",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "nutritionist",
@@ -609,7 +643,9 @@
       "Write a referral response letter"
     ],
     "status": "planned",
-    "occupation": "nutritionists, dietitians, and nutrition professionals"
+    "occupation": "nutritionists, dietitians, and nutrition professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "pastor",
@@ -643,7 +679,9 @@
       "Write a board meeting agenda"
     ],
     "status": "planned",
-    "occupation": "pastors, ministers, and church leaders"
+    "occupation": "pastors, ministers, and church leaders",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "personaltrainer",
@@ -677,7 +715,9 @@
       "Write a liability waiver"
     ],
     "status": "planned",
-    "occupation": "personal trainers, fitness coaches, and gym professionals"
+    "occupation": "personal trainers, fitness coaches, and gym professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "plumber",
@@ -711,7 +751,9 @@
       "Write a warranty letter"
     ],
     "status": "planned",
-    "occupation": "plumbers and plumbing contractors"
+    "occupation": "plumbers and plumbing contractors",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "principal",
@@ -745,7 +787,9 @@
       "Write a school improvement plan section"
     ],
     "status": "planned",
-    "occupation": "school principals, vice principals, and school administrators"
+    "occupation": "school principals, vice principals, and school administrators",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "restaurant",
@@ -779,7 +823,9 @@
       "Write a catering inquiry response"
     ],
     "status": "planned",
-    "occupation": "restaurant owners, managers, and food service professionals"
+    "occupation": "restaurant owners, managers, and food service professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "salon",
@@ -813,7 +859,9 @@
       "Write a salon review response"
     ],
     "status": "planned",
-    "occupation": "salon owners, stylists, and beauty professionals"
+    "occupation": "salon owners, stylists, and beauty professionals",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "teacher",
@@ -847,7 +895,9 @@
       "Write a substitute teacher note"
     ],
     "status": "planned",
-    "occupation": "teachers, educators, and instructional staff"
+    "occupation": "teachers, educators, and instructional staff",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "therapist",
@@ -881,7 +931,9 @@
       "Write a safety plan"
     ],
     "status": "planned",
-    "occupation": "therapists, counselors, and mental health professionals"
+    "occupation": "therapists, counselors, and mental health professionals",
+    "show_tryit": false,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "travelagent",
@@ -915,7 +967,9 @@
       "Write a post-trip follow-up"
     ],
     "status": "planned",
-    "occupation": "travel agents, travel advisors, and tourism professionals"
+    "occupation": "travel agents, travel advisors, and tourism professionals",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   },
   {
     "product_id": "vet",
@@ -949,6 +1003,53 @@
       "Write a referral letter"
     ],
     "status": "planned",
-    "occupation": "veterinarians, vet technicians, and veterinary office staff"
+    "occupation": "veterinarians, vet technicians, and veterinary office staff",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
+  },
+  {
+    "product_id": "marketing",
+    "name": "MarketingTasksAI",
+    "display_name": "Marketing Tasks AI",
+    "tagline": "206 AI-powered administrative tools for marketing professionals.",
+    "hero_description": "Stop drowning in campaign setup and reporting. MarketingTasksAI handles email sequences, ad campaigns, analytics reporting, content calendars, SEO audits, social media management, and 200+ other marketing tasks.",
+    "domain": "marketingtasksai.com",
+    "credentials_dir": ".marketingtasksai",
+    "license_prefix": "mkt_",
+    "support_email": "hello@marketingtasksai.com",
+    "accent_color": "#F59E0B",
+    "icon": "\ud83d\udce3",
+    "audience": "Marketing managers, digital marketers, content creators, and marketing agency professionals",
+    "categories": [
+      "Strategy & Planning",
+      "Content Marketing",
+      "SEO",
+      "Paid Advertising",
+      "Email Marketing",
+      "Social Media",
+      "Analytics & Reporting",
+      "Lead Generation & CRM",
+      "Video & Multimedia Marketing",
+      "Events & Experiential Marketing",
+      "Public Relations",
+      "E-Commerce Marketing",
+      "Affiliate & Partnership Marketing",
+      "Local & Community Marketing",
+      "Branding",
+      "Compliance & Legal",
+      "Tools & Operations"
+    ],
+    "skill_count": 206,
+    "sample_tasks": [
+      "Create a Google Ads campaign",
+      "Write a 5-email welcome sequence",
+      "Build a lead scoring model",
+      "Set up GA4 conversion tracking",
+      "Draft a press release"
+    ],
+    "status": "live",
+    "occupation": "marketing professionals, digital marketers, and marketing managers",
+    "show_tryit": true,
+    "api_base": "https://api.lawtasksai.com"
   }
 ]
