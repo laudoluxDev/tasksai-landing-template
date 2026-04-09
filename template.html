@@ -786,7 +786,7 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
                 <a href="/support">Support</a>
-                <a href="#pricing" class="header-cta">Get Credits</a>
+                <a href="#pricing" class="header-cta">Get Started</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -803,7 +803,7 @@
             <p class="subtitle">A generic AI is a Swiss Army knife — useful for everything, optimized for nothing. {{PRODUCT_NAME}} is {{HERO_COUNT}} purpose-built tasks, each engineered for exactly the work <em>you</em> do.</p>
             <div class="hero-ctas">
                 <a href="#pricing" class="cta-button">Get Started — $29 Starter</a>
-                <a href="#features" class="cta-button secondary">See What's Inside</a>
+                <a href="/task-library" class="cta-button secondary">Browse All Tasks</a>
             </div>
         </div>
     </section>
@@ -861,12 +861,12 @@
     <section class="privacy-section">
         <div class="container">
             <h2 class="section-title">Your Data Stays Yours</h2>
-            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">{{PRODUCT_NAME}} runs locally on your machine. Your client data, case details, and sensitive information never touch our servers.</p>
+            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">{{PRODUCT_NAME}} is built for privacy. Your AI runs locally — client data, case details, and sensitive documents are processed on your machine, not ours. Our servers only handle task delivery and credit accounting.</p>
             <div class="privacy-grid">
                 <div class="privacy-card">
                     <div class="privacy-badge">Local AI</div>
                     <h3>Runs on Your Machine</h3>
-                    <p>All AI processing happens in your local Claude Desktop or OpenClaw installation. We never see your data or your outputs.</p>
+                    <p>All AI processing happens in your local Claude Desktop or OpenClaw installation. Your inputs and outputs stay on your machine.</p>
                 </div>
                 <div class="privacy-card">
                     <div class="privacy-badge">ZDR Ready</div>
@@ -999,7 +999,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">What AI apps does it work with?</button>
-                    <div class="faq-answer">{{PRODUCT_NAME}} works with any MCP-compatible AI client: OpenClaw, Claude Desktop, Cursor, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
+                    <div class="faq-answer">{{PRODUCT_NAME}} works with any MCP-compatible AI client: <a href="https://openclaw.ai" target="_blank" rel="noopener" style="color:var(--accent);">OpenClaw</a>, <a href="https://claude.ai/download" target="_blank" rel="noopener" style="color:var(--accent);">Claude Desktop</a>, Cursor, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
                 </div>
 
                 <div class="faq-item">
@@ -1127,11 +1127,6 @@
         }
 
         // ─── Task Category Modal ───────────────────────────────────────
-        const modal = document.getElementById('taskModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalSubtitle = document.getElementById('modalSubtitle');
-        const modalBody = document.getElementById('modalBody');
-
         let allSkillsCache = null;
 
         async function getAllSkills() {
@@ -1145,6 +1140,10 @@
         }
 
         async function openCategory(categoryName) {
+            const modal = document.getElementById('taskModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const modalBody = document.getElementById('modalBody');
             modalTitle.textContent = categoryName;
             modalSubtitle.textContent = 'Loading tasks...';
             modalBody.innerHTML = '<div class="task-modal-loading">Loading...</div>';
@@ -1188,11 +1187,17 @@
         }
 
         function closeModal() {
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
+            const modal = document.getElementById('taskModal');
+            if (modal) {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
         }
 
-        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        document.addEventListener('click', e => {
+            const modal = document.getElementById('taskModal');
+            if (modal && e.target === modal) closeModal();
+        });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
     </script>
 
