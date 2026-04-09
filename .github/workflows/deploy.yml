@@ -21,6 +21,9 @@ jobs:
       - name: Generate all landing pages
         run: python3 generate.py
 
+      - name: Generate task library pages
+        run: python3 generate_task_library.py
+
       - name: Install Wrangler
         run: npm install -g wrangler
 
