@@ -304,7 +304,7 @@ def generate_task_library(vertical, skills):
     <section class="page-hero">
         <div class="container">
             <div class="eyebrow">{icon} {total} tasks available</div>
-            <h1><span>{total}</span> Purpose-Built Tools<br>for {audience.split(",")[0]}s</h1>
+            <h1><span>{total}</span> Purpose-Built Tools<br>for {audience.split(",")[0]}</h1>
             <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
         </div>
     </section>
