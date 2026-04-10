@@ -33,6 +33,29 @@ def badge_class(idx):
                'badge-cat4','badge-cat5','badge-cat6','badge-cat7']
     return classes[idx % len(classes)]
 
+def ensure_plural(text):
+    """Return a clean plural audience label for use in headings.
+
+    1. If the text contains ' and ', use only the part before it
+       (e.g. 'Chiropractors and chiropractic office staff' -> 'Chiropractors').
+    2. If the resulting text already ends in 's', return as-is.
+    3. Otherwise append 's'.
+
+    Examples:
+        'Marketing managers'                          -> 'Marketing managers'
+        'Chiropractors and chiropractic office staff' -> 'Chiropractors'
+        'Mortuary science professionals and ...'      -> 'Mortuary science professionals'
+        'Farmer'                                      -> 'Farmers'
+    """
+    # Strip at " and " to avoid awkward compound plurals
+    if ' and ' in text:
+        text = text.split(' and ')[0].strip()
+    word = text.rstrip().split()[-1] if text.strip() else ''
+    if word.lower().endswith('s'):
+        return text  # already plural
+    return text + 's'
+
+
 def hex_to_rgb(hex_color):
     h = hex_color.lstrip('#')
     return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
@@ -139,7 +162,7 @@ def generate_task_library(vertical, skills):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Library — {total} Purpose-Built {audience.split(",")[0]} Tools — {name}</title>
+    <title>Task Library — {total} Purpose-Built {ensure_plural(audience.split(",")[0])} Tools — {name}</title>
     <meta name="description" content="Browse all {total} {name} task templates. Purpose-built for {audience} — every task engineered for your specific workflows.">
     <link rel="canonical" href="https://{domain}/task-library">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -304,7 +327,7 @@ def generate_task_library(vertical, skills):
     <section class="page-hero">
         <div class="container">
             <div class="eyebrow">{icon} {total} tasks available</div>
-            <h1><span>{total}</span> Purpose-Built Tools<br>for {audience.split(",")[0]}</h1>
+            <h1><span>{total}</span> Purpose-Built Tools<br>for {ensure_plural(audience.split(",")[0])}</h1>
             <p>Every task is engineered for one specific workflow — not a generic prompt, a purpose-built template.</p>
         </div>
     </section>
