@@ -246,6 +246,26 @@ def main():
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                 (out_dir / "success.html").write_text(success_page, encoding="utf-8")
 
+            # Generate signup.html
+            signup_template_path = TEMPLATE_FILE.parent / "signup-template.html"
+            if signup_template_path.exists():
+                signup_tmpl = signup_template_path.read_text(encoding="utf-8")
+                profession = v.get("occupation", v.get("audience", slug))
+                professionals = v.get("professionals", profession + "s")
+                role_title = v.get("role_title", product_name.replace("TasksAI", ""))
+                signup_page = signup_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com")) \
+                    .replace("{{GA_MEASUREMENT_ID}}", v.get("ga_measurement_id", "")) \
+                    .replace("{{PROFESSION}}", profession) \
+                    .replace("{{PROFESSIONALS}}", professionals) \
+                    .replace("{{ROLE_TITLE}}", role_title)
+                (out_dir / "signup.html").write_text(signup_page, encoding="utf-8")
+
             # Generate terms, privacy, support pages
             occupation = v.get("occupation", v.get("audience", slug))
             for tmpl_name, out_name in [
