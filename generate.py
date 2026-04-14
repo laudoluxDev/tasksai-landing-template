@@ -266,6 +266,25 @@ def main():
                     .replace("{{ROLE_TITLE}}", role_title)
                 (out_dir / "signup.html").write_text(signup_page, encoding="utf-8")
 
+            # Generate mcp.html
+            mcp_template_path = TEMPLATE_FILE.parent / "mcp-template.html"
+            if mcp_template_path.exists():
+                mcp_tmpl = mcp_template_path.read_text(encoding="utf-8")
+                tasks_list = v.get("sample_tasks", [])
+                example_task = tasks_list[0] if tasks_list else f"a {v.get('occupation', slug)} task"
+                product_id_upper = product_id.upper() + "TASKSAI"
+                mcp_page = mcp_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{PRODUCT_ID_UPPER}}", product_id_upper) \
+                    .replace("{{LOGO_HTML}}", logo_split) \
+                    .replace("{{EXAMPLE_TASK}}", example_task) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                (out_dir / "mcp.html").write_text(mcp_page, encoding="utf-8")
+
             # Generate terms, privacy, support pages
             occupation = v.get("occupation", v.get("audience", slug))
             for tmpl_name, out_name in [
