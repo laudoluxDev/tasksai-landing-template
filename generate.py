@@ -30,7 +30,7 @@ def build_example_chips(tasks: list[str]) -> str:
     """Render example tasks as chip HTML."""
     chips = []
     for i, task in enumerate(tasks):
-        cls = 'task-chip accent' if i == 0 else 'task-chip'
+        cls = 'task-chip'
         chips.append(f'<span class="{cls}">{task}</span>')
     return "\n            ".join(chips)
 
