@@ -818,14 +818,14 @@
     <!-- ─── Hero ─── -->
     <section class="hero">
         <div class="container">
-            <div class="hero-eyebrow">{{HERO_COUNT}} Expert-Built {{HERO_NOUN}}</div>
-            <h1>{{CLAUDE_YOUR}}.<br><span>No Prompt Engineering.</span></h1>
-            <p class="subtitle">A generic AI is a Swiss Army knife — useful for everything, optimized for nothing. {{PRODUCT_NAME}} is {{HERO_COUNT}} purpose-built tasks, each engineered for exactly the work <em>you</em> do.</p>
+            <div class="hero-eyebrow">{{HERO_EYEBROW_OR_DEFAULT}}</div>
+            <h1>{{HERO_H1}}.<br><span>No Prompt Engineering.</span></h1>
+            <p class="subtitle">{{HERO_SUBHEAD_OR_DEFAULT}}</p>
             <div class="hero-ctas">
                 <a href="/signup" class="cta-button">Try Free — 5 Credits, No Card</a>
                 <a href="#pricing" class="cta-button secondary">See Pricing</a>
             </div>
-            <p class="hero-fine-print">5 free credits on signup &nbsp;·&nbsp; Credits never expire &nbsp;·&nbsp; No subscription</p>
+            <p class="hero-fine-print">{{HERO_FINE_PRINT_OR_DEFAULT}}</p>
         </div>
     </section>
 
@@ -840,8 +840,8 @@
     <!-- ─── Features ─── -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Built for {{TARGET_AUDIENCE_SHORT}}, Not Generic Professionals</h2>
-            <p class="section-subtitle">Every task template was engineered with the specific terminology, workflows, and standards of your profession — not repurposed from generic business content.</p>
+            <h2 class="section-title">{{FEATURES_INTRO_OR_DEFAULT}}</h2>
+            <p class="section-subtitle">{{FEATURES_SUBTITLE_OR_DEFAULT}}</p>
             <div class="feature-grid">
                 {{FEATURE_CARDS}}
             </div>
@@ -878,6 +878,8 @@
         </div>
     </section>
 
+    {{COMPLIANCE_SECTION}}
+
     <!-- ─── Privacy / ZDR Section ─── -->
     <section class="privacy-section">
         <div class="container">
@@ -912,95 +914,16 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, Pay-As-You-Go Pricing</h2>
-            <p class="section-subtitle">No subscriptions. No monthly fees. Buy credits, use them whenever you need them. <strong>Credits never expire.</strong></p>
+            <p class="section-subtitle">{{PRICING_TAGLINE_OR_DEFAULT}}</p>
             <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-bottom:40px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
+            {{API_COST_DISCLAIMER_TOP_HTML}}
+            {{PRICING_CARDS}}
 
-            <div class="pricing-grid">
-                {{TRYIT_CARD}}
-
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$29</div>
-                    <div class="credits">15 credits</div>
-                    <p class="per-credit">$1.93 per task</p>
-                    <ul>
-                        <li>✓ All {{HERO_COUNT}} tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Perfect for getting started</li>
-                    </ul>
-                    <button onclick="checkout('starter')" class="buy-btn">Get Started</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Pro</h3>
-                    <div class="price">$99</div>
-                    <div class="credits">60 credits</div>
-                    <p class="per-credit">$1.65 per task · 14% off</p>
-                    <ul>
-                        <li>✓ All {{HERO_COUNT}} tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Great for regular use</li>
-                    </ul>
-                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="badge">Most Popular</div>
-                    <h3>Business</h3>
-                    <div class="price">$199</div>
-                    <div class="credits">150 credits</div>
-                    <p class="per-credit">$1.33 per task · 31% off</p>
-                    <ul>
-                        <li>✓ All {{HERO_COUNT}} tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Best for active practices</li>
-                    </ul>
-                    <button onclick="checkout('business')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Power</h3>
-                    <div class="price">$349</div>
-                    <div class="credits">350 credits</div>
-                    <p class="per-credit">$1.00 per task · 48% off</p>
-                    <ul>
-                        <li>✓ All {{HERO_COUNT}} tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Serious savings for busy teams</li>
-                    </ul>
-                    <button onclick="checkout('power')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Unlimited</h3>
-                    <div class="price">$599</div>
-                    <div class="credits">800 credits</div>
-                    <p class="per-credit">$0.75 per task · 61% off</p>
-                    <ul>
-                        <li>✓ All {{HERO_COUNT}} tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Maximum value</li>
-                    </ul>
-                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$999</div>
-                    <div class="credits">2,000 credits</div>
-                    <p class="per-credit">$0.50 per task · 74% off</p>
-                    <ul>
-                        <li>✓ All {{HERO_COUNT}} tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Best value for power users</li>
-                    </ul>
-                    <button onclick="checkout('enterprise')" class="buy-btn">Get Credits</button>
-                </div>
-            </div>
-
-            <p style="text-align:center; color:#9ca3af; font-size:0.8rem; margin-top:24px;">*{{PRODUCT_NAME}} credits cover {{PRODUCT_NAME}} tasks only. If you use a cloud AI provider (Anthropic, OpenAI, etc.), their API charges are separate.</p>
+            <p style="text-align:center; color:#9ca3af; font-size:0.8rem; margin-top:24px;">{{API_COST_DISCLAIMER_BOTTOM_TEXT}}</p>
         </div>
     </section>
+
+    {{TESTIMONIALS_SECTION}}
 
     <!-- ─── FAQ ─── -->
     <section class="faq" id="faq">

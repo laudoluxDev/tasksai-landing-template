@@ -920,9 +920,115 @@
     ],
     "status": "planned",
     "occupation": "teachers, educators, and instructional staff",
-    "show_tryit": true,
+    "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-1QYEGTMFW8"
+    "ga_measurement_id": "G-1QYEGTMFW8",
+    "hero_h1": "Turn hours of paperwork into minutes of AI",
+    "hero_eyebrow": "For K-12 teachers, SpEd staff & counselors",
+    "hero_subhead": "TeacherTasksAI is a plugin for Claude Desktop with 200+ ready-to-run tasks \u2014 IEP summaries, report card comments, parent emails, behavior plans, and more. Pick a task, answer a few questions, done. No prompt writing. FERPA-aligned.",
+    "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
+    "features_intro": "Built for K-12 teachers, SpEd staff & counselors",
+    "features_subtitle": "Every task was written for the way educators actually work \u2014 IEP language, grade-level expectations, parent-communication tone, and district reporting formats. Not repurposed from generic business content.",
+    "pricing_tagline": "No subscriptions. Individual teachers pay per credit pack; schools and districts get volume pricing. Credits never expire.",
+    "api_cost_disclaimer_position": "top",
+    "api_cost_disclaimer": "TeacherTasksAI credits cover TeacherTasksAI tasks only. The AI itself runs through Claude Desktop or another MCP-compatible client, which may require its own API key or subscription (Anthropic, OpenAI, etc.). Plan for that separately.",
+    "testimonials_heading": "What teachers are saying",
+    "testimonials": [
+      {
+        "quote": "",
+        "name": "",
+        "role": "",
+        "location": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "role": "",
+        "location": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "role": "",
+        "location": ""
+      }
+    ],
+    "compliance_heading": "Built for K-12 Privacy Requirements",
+    "compliance": [
+      {
+        "badge": "FERPA",
+        "title": "FERPA-Aligned",
+        "description": "Student data stays on your machine. Our servers only count credits used \u2014 we never see names, grades, IEP details, or any education record content."
+      },
+      {
+        "badge": "COPPA",
+        "title": "COPPA-Conscious",
+        "description": "No student accounts. No tracking of minors. Teachers use the tool on their own devices; students never interact with TeacherTasksAI."
+      },
+      {
+        "badge": "State Privacy Laws",
+        "title": "SOPIPA-Compatible",
+        "description": "Designed to comply with California SOPIPA and similar state-level student-data-privacy laws. Share our privacy page with your district IT team."
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Starter",
+        "price": "$19",
+        "credits": "10 credits",
+        "per_credit": "$1.90 per task",
+        "features": [
+          "All 200+ tasks",
+          "Credits never expire",
+          "Perfect for a few key documents"
+        ],
+        "button_label": "Get Started",
+        "checkout_pack": "starter"
+      },
+      {
+        "name": "Semester",
+        "price": "$49",
+        "credits": "35 credits",
+        "per_credit": "$1.40 per task \u00b7 26% off",
+        "features": [
+          "All 200+ tasks",
+          "Credits never expire",
+          "Best for a full semester of regular use"
+        ],
+        "button_label": "Get Credits",
+        "checkout_pack": "business",
+        "featured": true,
+        "badge": "Most Popular"
+      },
+      {
+        "name": "Year-Long",
+        "price": "$99",
+        "credits": "80 credits",
+        "per_credit": "$1.24 per task \u00b7 35% off",
+        "features": [
+          "All 200+ tasks",
+          "Credits never expire",
+          "Covers the whole school year"
+        ],
+        "button_label": "Get Credits",
+        "checkout_pack": "pro"
+      },
+      {
+        "name": "School / District",
+        "price": "Contact Sales",
+        "credits": "",
+        "per_credit": "Volume pricing & invoicing",
+        "features": [
+          "Site licenses for 10\u2013500+ teachers",
+          "Invoicing & purchase orders",
+          "SSO available on request",
+          "District privacy review support"
+        ],
+        "button_label": "Request a Demo",
+        "button_action": "contact",
+        "contact_href": "mailto:hello@teachertasksai.com?subject=District%20pricing%20inquiry"
+      }
+    ]
   },
   {
     "product_id": "therapist",
