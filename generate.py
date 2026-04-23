@@ -51,6 +51,215 @@ def build_feature_cards(features: list[dict]) -> str:
     return "\n                ".join(cards)
 
 
+def build_testimonials_html(testimonials: list, heading: str = "What our users are saying") -> str:
+    """Render testimonials section HTML, or empty string if no valid entries."""
+    if not testimonials:
+        return ""
+    valid = [t for t in testimonials if t.get("quote", "").strip()]
+    if not valid:
+        return ""
+
+    def esc(s):
+        return (s or "").replace("<", "&lt;").replace(">", "&gt;")
+
+    cards = []
+    for t in valid:
+        quote = esc(t.get("quote", ""))
+        name = esc(t.get("name", ""))
+        role = esc(t.get("role", ""))
+        location = esc(t.get("location", ""))
+        location_sep = " · " if role and location else ""
+        cards.append(f"""            <div class="testimonial-card" style="background:var(--background);padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+                <p style="font-size:1rem;color:#374151;line-height:1.7;margin-bottom:16px;">"{quote}"</p>
+                <div style="font-weight:600;color:var(--primary);">{name}</div>
+                <div style="font-size:0.85rem;color:#6b7280;">{role}{location_sep}{location}</div>
+            </div>""")
+
+    cards_html = "\n".join(cards)
+    return f"""<section class="testimonials" style="padding:80px 0;background:#ffffff;">
+    <div class="container">
+        <h2 class="section-title">{heading}</h2>
+        <div class="testimonial-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;">
+{cards_html}
+        </div>
+    </div>
+</section>"""
+
+
+def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> str:
+    """Render compliance/trust badges section HTML, or empty string if no items."""
+    if not items:
+        return ""
+
+    def esc(s):
+        return (s or "").replace("<", "&lt;").replace(">", "&gt;")
+
+    cards = []
+    for item in items:
+        badge = esc(item.get("badge", ""))
+        title = esc(item.get("title", ""))
+        description = esc(item.get("description", ""))
+        cards.append(f"""            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+                <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">{badge}</div>
+                <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">{title}</h3>
+                <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">{description}</p>
+            </div>""")
+
+    cards_html = "\n".join(cards)
+    return f"""<section class="compliance-section" style="padding:60px 0 80px;background:#f9fafb;">
+    <div class="container">
+        <h2 class="section-title">{heading}</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px;">
+{cards_html}
+        </div>
+    </div>
+</section>"""
+
+
+def build_pricing_html(tiers: list, hero_count: str, show_default_tryit: bool = True) -> str:
+    """Render pricing cards HTML. If tiers is empty, return the default pricing-grid HTML."""
+    if not tiers:
+        tryit_block = ""
+        if show_default_tryit:
+            tryit_block = f"""                <div class="pricing-card">
+                    <h3>Try It</h3>
+                    <div class="price">$5</div>
+                    <div class="credits">2 credits</div>
+                    <p class="per-credit">$2.50 per task</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Try before you commit</li>
+                    </ul>
+                    <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
+                </div>
+
+"""
+        return f"""<div class="pricing-grid">
+{tryit_block}                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$29</div>
+                    <div class="credits">15 credits</div>
+                    <p class="per-credit">$1.93 per task</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Perfect for getting started</li>
+                    </ul>
+                    <button onclick="checkout('starter')" class="buy-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$99</div>
+                    <div class="credits">60 credits</div>
+                    <p class="per-credit">$1.65 per task \u00b7 14% off</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Great for regular use</li>
+                    </ul>
+                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Business</h3>
+                    <div class="price">$199</div>
+                    <div class="credits">150 credits</div>
+                    <p class="per-credit">$1.33 per task \u00b7 31% off</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Best for active practices</li>
+                    </ul>
+                    <button onclick="checkout('business')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Power</h3>
+                    <div class="price">$349</div>
+                    <div class="credits">350 credits</div>
+                    <p class="per-credit">$1.00 per task \u00b7 48% off</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Serious savings for busy teams</li>
+                    </ul>
+                    <button onclick="checkout('power')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Unlimited</h3>
+                    <div class="price">$599</div>
+                    <div class="credits">800 credits</div>
+                    <p class="per-credit">$0.75 per task \u00b7 61% off</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Maximum value</li>
+                    </ul>
+                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$999</div>
+                    <div class="credits">2,000 credits</div>
+                    <p class="per-credit">$0.50 per task \u00b7 74% off</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Best value for power users</li>
+                    </ul>
+                    <button onclick="checkout('enterprise')" class="buy-btn">Get Credits</button>
+                </div>
+            </div>"""
+
+    def esc(s):
+        return (s or "").replace("<", "&lt;").replace(">", "&gt;")
+
+    cards = []
+    for tier in tiers:
+        name = esc(tier.get("name", ""))
+        price = esc(tier.get("price", ""))
+        credits = esc(tier.get("credits", ""))
+        per_credit = esc(tier.get("per_credit", ""))
+        features = tier.get("features") or [f"All {hero_count} tasks", "Credits never expire"]
+        button_label = esc(tier.get("button_label", "Get Credits"))
+        button_action = tier.get("button_action", "checkout")
+        checkout_pack = esc(tier.get("checkout_pack", ""))
+        contact_href = esc(tier.get("contact_href", ""))
+        featured = tier.get("featured", False)
+        badge_text = esc(tier.get("badge", "Most Popular"))
+
+        card_class = 'pricing-card featured' if featured else 'pricing-card'
+        badge_html = f'\n                    <div class="badge">{badge_text}</div>' if featured else ""
+        credits_html = f'\n                    <div class="credits">{credits}</div>' if credits else ""
+        per_credit_html = f'\n                    <p class="per-credit">{per_credit}</p>' if per_credit else ""
+
+        feature_items = "\n".join(f"                        <li>\u2713 {esc(f)}</li>" for f in features)
+
+        if button_action == "contact":
+            button_html = f'<a href="{contact_href}" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">{button_label}</a>'
+        else:
+            button_html = f'<button onclick="checkout(\'{checkout_pack}\')" class="buy-btn">{button_label}</button>'
+
+        cards.append(f"""                <div class="{card_class}">{badge_html}
+                    <h3>{name}</h3>
+                    <div class="price">{price}</div>{credits_html}{per_credit_html}
+                    <ul>
+{feature_items}
+                    </ul>
+                    {button_html}
+                </div>""")
+
+    cards_html = "\n\n".join(cards)
+    return f"""<div class="pricing-grid">
+{cards_html}
+            </div>"""
+
+
 def target_audience_short(full: str) -> str:
     """Return a shorter version of the target audience for headings."""
     # Return everything up to first comma, or first 50 chars
@@ -88,7 +297,7 @@ def generate_page(template: str, vertical: dict) -> str:
     accent = vertical.get("accent_color", "#6366F1")
     background = vertical.get("background_color", "#FAFAFA")
     tasks = vertical.get("example_tasks") or vertical.get("sample_tasks", [])
-    claude_your = vertical.get("claude_your", f"Your {product_name} admin, automated")
+    hero_h1 = vertical.get("hero_h1") or vertical.get("claude_your") or "Stop prompt engineering. Start getting work done"
     hero_count = vertical.get("hero_count") or f"{vertical.get('skill_count', 200)}+"
     hero_noun = vertical.get("hero_noun", "Expert Tasks")
     # Build features from categories if no explicit features list
@@ -120,8 +329,8 @@ def generate_page(template: str, vertical: dict) -> str:
                 if keyword in cat_lower:
                     icon = emoji
                     break
-            # Strip "Category N:" prefix if present, and " Administration" suffix for brevity
-            display = cat.replace(" Administration", "").replace(" Management", "")
+            # Use the category name directly as the card title
+            display = cat
             raw_features.append({
                 "icon": icon,
                 "title": display,
@@ -157,6 +366,67 @@ def generate_page(template: str, vertical: dict) -> str:
     # Build GA tag (empty string if no GA ID)
     ga_tag = build_ga_tag(vertical.get("ga_measurement_id", ""))
 
+    # New optional fields
+    pricing_tiers = vertical.get("pricing_tiers", [])
+    pricing_cards = build_pricing_html(pricing_tiers, hero_count, show_tryit)
+
+    testimonials = vertical.get("testimonials", [])
+    testimonials_heading = vertical.get("testimonials_heading", "What our users are saying")
+    testimonials_section = build_testimonials_html(testimonials, testimonials_heading)
+
+    compliance_items = vertical.get("compliance", [])
+    compliance_heading = vertical.get("compliance_heading", "Trust & Compliance")
+    compliance_section = build_compliance_html(compliance_items, compliance_heading)
+
+    # _OR_DEFAULT computed values
+    hero_eyebrow_custom = vertical.get("hero_eyebrow", "").strip()
+    hero_eyebrow_or_default = hero_eyebrow_custom if hero_eyebrow_custom else f"{hero_count} Purpose-Built {hero_noun}"
+
+    hero_subhead_custom = vertical.get("hero_subhead", "").strip()
+    hero_subhead_or_default = hero_subhead_custom if hero_subhead_custom else (
+        f"A generic AI is a Swiss Army knife \u2014 useful for everything, optimized for nothing. "
+        f"{product_name} is {hero_count} purpose-built tasks, each engineered for exactly the work <em>you</em> do."
+    )
+
+    hero_fine_print_custom = vertical.get("hero_fine_print", "").strip()
+    hero_fine_print_or_default = hero_fine_print_custom if hero_fine_print_custom else (
+        "5 free credits on signup &nbsp;\u00b7&nbsp; Credits never expire &nbsp;\u00b7&nbsp; No subscription"
+    )
+
+    features_intro_custom = vertical.get("features_intro", "").strip()
+    features_intro_or_default = features_intro_custom if features_intro_custom else f"Built for {audience_short}"
+
+    features_subtitle_custom = vertical.get("features_subtitle", "").strip()
+    features_subtitle_or_default = features_subtitle_custom if features_subtitle_custom else (
+        "Every task template was engineered with the specific terminology, workflows, and standards of "
+        "your profession \u2014 not repurposed from generic business content."
+    )
+
+    pricing_tagline_custom = vertical.get("pricing_tagline", "").strip()
+    pricing_tagline_or_default = pricing_tagline_custom if pricing_tagline_custom else (
+        "No subscriptions. No monthly fees. Buy credits, use them whenever you need them. Credits never expire."
+    )
+
+    # API cost disclaimer handling
+    api_cost_disclaimer = vertical.get("api_cost_disclaimer", "").strip()
+    api_cost_disclaimer_position = vertical.get("api_cost_disclaimer_position", "bottom")
+    default_disclaimer_text = (
+        f"*{product_name} credits cover {product_name} tasks only. "
+        "If you use a cloud AI provider (Anthropic, OpenAI, etc.), their API charges are separate."
+    )
+    disclaimer_text = api_cost_disclaimer if api_cost_disclaimer else default_disclaimer_text
+
+    if api_cost_disclaimer_position == "top" and api_cost_disclaimer:
+        api_cost_disclaimer_top_html = (
+            f'<div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:8px;'
+            f'padding:16px 20px;margin-bottom:32px;color:#78350f;font-size:0.95rem;text-align:center;">'
+            f'<strong>Heads up:</strong> {api_cost_disclaimer}</div>'
+        )
+        api_cost_disclaimer_bottom_text = ""
+    else:
+        api_cost_disclaimer_top_html = ""
+        api_cost_disclaimer_bottom_text = disclaimer_text
+
     page = template
     replacements = {
         "{{PRODUCT_NAME}}": product_name,
@@ -171,15 +441,36 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{BACKGROUND_COLOR}}": background,
         "{{HERO_COUNT}}": hero_count,
         "{{HERO_NOUN}}": hero_noun,
-        "{{CLAUDE_YOUR}}": claude_your,
+        "{{HERO_H1}}": hero_h1,
+        "{{CLAUDE_YOUR}}": hero_h1,
+        "{{HERO_EYEBROW}}": vertical.get("hero_eyebrow", ""),
+        "{{HERO_EYEBROW_OR_DEFAULT}}": hero_eyebrow_or_default,
+        "{{HERO_SUBHEAD}}": vertical.get("hero_subhead", ""),
+        "{{HERO_SUBHEAD_OR_DEFAULT}}": hero_subhead_or_default,
+        "{{HERO_FINE_PRINT}}": vertical.get("hero_fine_print", ""),
+        "{{HERO_FINE_PRINT_OR_DEFAULT}}": hero_fine_print_or_default,
+        "{{FEATURES_INTRO}}": vertical.get("features_intro", ""),
+        "{{FEATURES_INTRO_OR_DEFAULT}}": features_intro_or_default,
+        "{{FEATURES_SUBTITLE}}": vertical.get("features_subtitle", ""),
+        "{{FEATURES_SUBTITLE_OR_DEFAULT}}": features_subtitle_or_default,
+        "{{PRICING_TAGLINE}}": vertical.get("pricing_tagline", ""),
+        "{{PRICING_TAGLINE_OR_DEFAULT}}": pricing_tagline_or_default,
+        "{{API_COST_DISCLAIMER}}": api_cost_disclaimer,
+        "{{API_COST_DISCLAIMER_POSITION}}": api_cost_disclaimer_position,
+        "{{API_COST_DISCLAIMER_TOP_HTML}}": api_cost_disclaimer_top_html,
+        "{{API_COST_DISCLAIMER_BOTTOM_TEXT}}": api_cost_disclaimer_bottom_text,
         "{{EXAMPLE_TASKS}}": ", ".join(tasks),
         "{{EXAMPLE_TASK_CHIPS}}": example_chips,
         "{{FEATURE_CARDS}}": feature_cards,
         "{{LOGO_HTML}}": logo_html,
         "{{LOGO_HTML_FOOTER}}": logo_html,
         "{{API_BASE}}": api_base,
-        "{{TRYIT_CARD}}": tryit_card,
+
+        "{{TRYIT_CARD}}": "",
         "{{GA_TAG}}": ga_tag,
+        "{{TESTIMONIALS_SECTION}}": testimonials_section,
+        "{{COMPLIANCE_SECTION}}": compliance_section,
+        "{{PRICING_CARDS}}": pricing_cards,
     }
 
     for placeholder, value in replacements.items():
@@ -188,7 +479,7 @@ def generate_page(template: str, vertical: dict) -> str:
     return page
 
 
-# ── Main ───────────────────────────────────────────────────────────────────
+# ── Main ────────────────────────────────────────────────
 
 def main():
     # Validate files exist
@@ -204,7 +495,7 @@ def main():
     template = TEMPLATE_FILE.read_text(encoding="utf-8")
     verticals = json.loads(VERTICALS_FILE.read_text(encoding="utf-8"))
 
-    print(f"\n🚀 TasksAI Landing Page Generator")
+    print(f"\n TasksAI Landing Page Generator")
     print(f"   Template: {TEMPLATE_FILE}")
     print(f"   Verticals: {len(verticals)} found")
     print(f"   Output: {OUTPUT_DIR}\n")
@@ -230,7 +521,6 @@ def main():
                 domain = v.get("domain", f"{slug}tasksai.com")
                 accent = v.get("accent_color", "#2563eb")
                 product_id = v.get("product_id", slug)
-                # Split product name for logo: e.g. "RealtorTasksAI" -> "Realtor<span>TasksAI</span>"
                 if "TasksAI" in product_name:
                     parts = product_name.split("TasksAI")
                     logo_split = f"{parts[0]}<span>TasksAI</span>"
@@ -308,25 +598,25 @@ def main():
             # Quick sanity check: no unreplaced placeholders
             remaining = [tok for tok in ["{{PRODUCT_NAME}}", "{{PRIMARY_COLOR}}", "{{ACCENT_COLOR}}"] if tok in page]
             if remaining:
-                print(f"  ⚠️  {slug}: unreplaced placeholders: {remaining}")
+                print(f"  WARNING  {slug}: unreplaced placeholders: {remaining}")
 
             size_kb = out_file.stat().st_size / 1024
-            print(f"  ✅  {slug:20s}  →  output/{slug}/index.html  ({size_kb:.1f} KB)")
+            print(f"  OK  {slug:20s}  ->  output/{slug}/index.html  ({size_kb:.1f} KB)")
             generated.append(slug)
 
         except Exception as e:
-            print(f"  ❌  {slug}: ERROR — {e}")
+            print(f"  ERROR  {slug}: {e}")
             errors.append((slug, str(e)))
 
     # Summary
-    print(f"\n{'─'*50}")
-    print(f"✅ Generated: {len(generated)}/{len(verticals)} pages")
+    print(f"\n{chr(45)*50}")
+    print(f"Generated: {len(generated)}/{len(verticals)} pages")
     if errors:
-        print(f"❌ Errors:    {len(errors)}")
+        print(f"Errors: {len(errors)}")
         for slug, err in errors:
-            print(f"   • {slug}: {err}")
+            print(f"   - {slug}: {err}")
     else:
-        print(f"🎉 All {len(generated)} pages generated successfully!")
+        print(f"All {len(generated)} pages generated successfully!")
     print(f"\nOutput directory: {OUTPUT_DIR}")
     print()
 
