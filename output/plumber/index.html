@@ -229,6 +229,13 @@
             background: var(--primary-light);
         }
 
+        .hero-fine-print {
+            font-size: 0.82rem;
+            color: #9ca3af;
+            margin-top: 14px;
+            letter-spacing: 0.01em;
+        }
+
         /* ─── Example Tasks Band ─── */
         .tasks-band {
             background: var(--primary);
@@ -238,36 +245,49 @@
 
         .tasks-band-label {
             text-align: center;
-            color: rgba(255,255,255,0.6);
-            font-size: 0.8rem;
-            font-weight: 600;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .tasks-scroll {
             display: flex;
-            gap: 12px;
+            gap: 0;
             flex-wrap: wrap;
             justify-content: center;
             padding: 0 24px;
+            row-gap: 10px;
         }
 
         .task-chip {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-            padding: 8px 18px;
-            border-radius: 20px;
+            color: rgba(255,255,255,0.85);
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 700;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 18px;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .task-chip:last-child {
+            border-right: none;
+        }
+
+        .task-chip::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.85rem;
         }
 
         .task-chip.accent {
-            background: var(--accent);
-            border-color: var(--accent);
+            color: white;
+            font-weight: 700;
         }
 
         /* ─── Section Common ─── */
@@ -786,7 +806,7 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
                 <a href="/support">Support</a>
-                <a href="#pricing" class="header-cta">Get Credits</a>
+                <a href="/signup" class="header-cta">Try Free</a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -798,13 +818,14 @@
     <!-- ─── Hero ─── -->
     <section class="hero">
         <div class="container">
-            <div class="hero-eyebrow">200+ Expert-Built Expert Tasks</div>
-            <h1>Your PlumberTasksAI admin, automated.<br><span>No Prompt Engineering.</span></h1>
+            <div class="hero-eyebrow">200+ Purpose-Built Expert Tasks</div>
+            <h1>Stop prompt engineering. Start getting work done.<br><span>No Prompt Engineering.</span></h1>
             <p class="subtitle">A generic AI is a Swiss Army knife — useful for everything, optimized for nothing. PlumberTasksAI is 200+ purpose-built tasks, each engineered for exactly the work <em>you</em> do.</p>
             <div class="hero-ctas">
-                <a href="#pricing" class="cta-button">Get Started — $29 Starter</a>
-                <a href="#features" class="cta-button secondary">See What's Inside</a>
+                <a href="/signup" class="cta-button">Try Free — 5 Credits, No Card</a>
+                <a href="#pricing" class="cta-button secondary">See Pricing</a>
             </div>
+            <p class="hero-fine-print">5 free credits on signup &nbsp;·&nbsp; Credits never expire &nbsp;·&nbsp; No subscription</p>
         </div>
     </section>
 
@@ -812,7 +833,7 @@
     <div class="tasks-band">
         <p class="tasks-band-label">Example Tasks</p>
         <div class="tasks-scroll">
-            <span class="task-chip accent">Write a plumbing estimate</span>
+            <span class="task-chip">Write a plumbing estimate</span>
             <span class="task-chip">Draft a permit application cover letter</span>
             <span class="task-chip">Prepare a work completion notice</span>
             <span class="task-chip">Create a customer service follow-up</span>
@@ -823,7 +844,7 @@
     <!-- ─── Features ─── -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Built for Plumbing contractors and plumbers, Not Generic Professionals</h2>
+            <h2 class="section-title">Built for Plumbing contractors and plumbers</h2>
             <p class="section-subtitle">Every task template was engineered with the specific terminology, workflows, and standards of your profession — not repurposed from generic business content.</p>
             <div class="feature-grid">
                 <div class="feature-card" onclick="openCategory('Estimating & Bidding')">
@@ -834,13 +855,13 @@
                 </div>
                 <div class="feature-card" onclick="openCategory('Permit & Inspection Administration')">
                     <div class="feature-icon">📄</div>
-                    <h3>Permit & Inspection</h3>
+                    <h3>Permit & Inspection Administration</h3>
                     <p>Purpose-built tasks covering permit & inspection administration for Plumbing contractors and plumbers.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Work Order & Job Management')">
                     <div class="feature-icon">📄</div>
-                    <h3>Work Order & Job</h3>
+                    <h3>Work Order & Job Management</h3>
                     <p>Purpose-built tasks covering work order & job management for Plumbing contractors and plumbers.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
@@ -858,19 +879,19 @@
                 </div>
                 <div class="feature-card" onclick="openCategory('Subcontractor & Supplier Management')">
                     <div class="feature-icon">📝</div>
-                    <h3>Subcontractor & Supplier</h3>
+                    <h3>Subcontractor & Supplier Management</h3>
                     <p>Purpose-built tasks covering subcontractor & supplier management for Plumbing contractors and plumbers.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Licensing & Insurance Administration')">
                     <div class="feature-icon">🏅</div>
-                    <h3>Licensing & Insurance</h3>
+                    <h3>Licensing & Insurance Administration</h3>
                     <p>Purpose-built tasks covering licensing & insurance administration for Plumbing contractors and plumbers.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Business Administration')">
                     <div class="feature-icon">🏢</div>
-                    <h3>Business</h3>
+                    <h3>Business Administration</h3>
                     <p>Purpose-built tasks covering business administration for Plumbing contractors and plumbers.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
@@ -908,16 +929,18 @@
         </div>
     </section>
 
+    
+
     <!-- ─── Privacy / ZDR Section ─── -->
     <section class="privacy-section">
         <div class="container">
             <h2 class="section-title">Your Data Stays Yours</h2>
-            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">PlumberTasksAI runs locally on your machine. Your client data, case details, and sensitive information never touch our servers.</p>
+            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">PlumberTasksAI is built for privacy. Your AI runs locally — client data, case details, and sensitive documents are processed on your machine, not ours. Our servers only handle task delivery and credit accounting.</p>
             <div class="privacy-grid">
                 <div class="privacy-card">
                     <div class="privacy-badge">Local AI</div>
                     <h3>Runs on Your Machine</h3>
-                    <p>All AI processing happens in your local Claude Desktop or OpenClaw installation. We never see your data or your outputs.</p>
+                    <p>All AI processing happens in your local Claude Desktop or OpenClaw installation. Your inputs and outputs stay on your machine.</p>
                 </div>
                 <div class="privacy-card">
                     <div class="privacy-badge">ZDR Ready</div>
@@ -942,9 +965,9 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, Pay-As-You-Go Pricing</h2>
-            <p class="section-subtitle">No subscriptions. No monthly fees. Buy credits, use them whenever you need them. <strong>Credits never expire.</strong></p>
+            <p class="section-subtitle">No subscriptions. No monthly fees. Buy credits, use them whenever you need them. Credits never expire.</p>
             <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-bottom:40px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
-
+            
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Try It</h3>
@@ -1043,6 +1066,8 @@
         </div>
     </section>
 
+    
+
     <!-- ─── FAQ ─── -->
     <section class="faq" id="faq">
         <div class="container">
@@ -1061,7 +1086,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">What AI apps does it work with?</button>
-                    <div class="faq-answer">PlumberTasksAI works with any MCP-compatible AI client: OpenClaw, Claude Desktop, Cursor, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
+                    <div class="faq-answer">PlumberTasksAI works with any MCP-compatible AI client: <a href="https://openclaw.ai" target="_blank" rel="noopener" style="color:var(--accent);">OpenClaw</a>, <a href="https://claude.ai/download" target="_blank" rel="noopener" style="color:var(--accent);">Claude Desktop</a>, Cursor, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
                 </div>
 
                 <div class="faq-item">
@@ -1189,11 +1214,6 @@
         }
 
         // ─── Task Category Modal ───────────────────────────────────────
-        const modal = document.getElementById('taskModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalSubtitle = document.getElementById('modalSubtitle');
-        const modalBody = document.getElementById('modalBody');
-
         let allSkillsCache = null;
 
         async function getAllSkills() {
@@ -1207,6 +1227,10 @@
         }
 
         async function openCategory(categoryName) {
+            const modal = document.getElementById('taskModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const modalBody = document.getElementById('modalBody');
             modalTitle.textContent = categoryName;
             modalSubtitle.textContent = 'Loading tasks...';
             modalBody.innerHTML = '<div class="task-modal-loading">Loading...</div>';
@@ -1250,11 +1274,17 @@
         }
 
         function closeModal() {
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
+            const modal = document.getElementById('taskModal');
+            if (modal) {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
         }
 
-        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        document.addEventListener('click', e => {
+            const modal = document.getElementById('taskModal');
+            if (modal && e.target === modal) closeModal();
+        });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
     </script>
 
@@ -1291,3 +1321,4 @@
 
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
