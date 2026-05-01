@@ -558,6 +558,7 @@ def main():
                     .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
                     .replace("{{ACCENT_COLOR}}", accent) \
                     .replace("{{DOMAIN}}", domain) \
+                    .replace("{{PRODUCT_ID_UPPER}}", product_id.upper()) \
                     .replace("{{PRODUCT_ID}}", product_id) \
                     .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com")) \
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
