@@ -153,7 +153,7 @@
                 <div class="install">
                     <div class="install-step-label">Step 1</div>
                     <h3>Extract the ZIP</h3>
-                    <p style="margin-bottom:10px;">Double-click <code>{{PRODUCT_ID}}tasksai.zip</code> to extract it. Inside you'll find two components:</p>
+                    <p style="margin-bottom:10px;">Double-click <code>{{PRODUCT_ID}}tasksai-skills.zip</code> to extract it. Inside you'll find two components:</p>
                     <ul style="margin-bottom:6px;">
                         <li><code>{{PRODUCT_ID}}tasksai/</code> — the <strong>OpenClaw skill</strong> (SKILL.md + config)</li>
                         <li><code>{{PRODUCT_ID}}tasksai/mcp/</code> — the <strong>MCP server</strong> for Claude Desktop, Cursor, Windsurf &amp; other MCP clients</li>
@@ -189,19 +189,19 @@ Windows:    C:\Users\YOU\.openclaw\skills\{{PRODUCT_ID}}tasksai\</div>
 
                     <!-- MCP panel -->
                     <div class="tab-panel" id="panel-mcp" style="display:none;">
-                        <p style="margin-bottom:16px;">The <code>{{PRODUCT_ID}}tasksai/mcp/</code> folder is a Python MCP server compatible with <strong>Claude Desktop</strong>, <strong>Cursor</strong>, <strong>Windsurf</strong>, and any MCP stdio client.</p>
+                        <p style="margin-bottom:16px;">The <code>{{PRODUCT_ID}}tasksai/mcp/</code> folder (inside your extracted <code>{{PRODUCT_ID}}tasksai-skills</code> folder) is a Python MCP server compatible with <strong>Claude Desktop</strong>, <strong>Cursor</strong>, <strong>Windsurf</strong>, and any MCP stdio client.</p>
 
                         <p style="margin-bottom:6px;"><strong>Requirements:</strong> Python 3.10+ &nbsp;(<a href="https://www.python.org/downloads/" target="_blank">download</a>)</p>
 
                         <p style="margin-bottom:6px;font-weight:600;color:#1a1a2e;">Option A — Automatic installer (recommended)</p>
                         <p style="margin-bottom:6px;">Detects and configures all installed MCP clients automatically:</p>
-                        <div class="code-block">cd ~/Downloads/{{PRODUCT_ID}}tasksai/mcp
+                        <div class="code-block">cd ~/Downloads/{{PRODUCT_ID}}tasksai-skills/{{PRODUCT_ID}}tasksai/mcp
 pip3 install -r requirements.txt
 python3 install.py</div>
                         <p style="margin-bottom:20px;">Restart your MCP client — look for the <strong>{{PRODUCT_ID}}tasksai</strong> tools.</p>
 
                         <p style="margin-bottom:6px;font-weight:600;color:#1a1a2e;">Option B — Manual (Claude Desktop)</p>
-                        <div class="code-block">cd ~/Downloads/{{PRODUCT_ID}}tasksai/mcp
+                        <div class="code-block">cd ~/Downloads/{{PRODUCT_ID}}tasksai-skills/{{PRODUCT_ID}}tasksai/mcp
 pip3 install -r requirements.txt</div>
                         <p style="margin-bottom:6px;">Open your config file:</p>
                         <div class="code-block">Mac:     ~/Library/Application Support/Claude/claude_desktop_config.json
