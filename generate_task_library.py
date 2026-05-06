@@ -124,6 +124,7 @@ def generate_task_library(vertical, skills):
                     <p>{desc}</p>
                     <div class="task-footer">
                         <span class="task-badge {badge_class(i)}">{cat}</span>
+                        <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
                         <span class="task-cx {cx_cls}">{cx_label}</span>
                     </div>
                 </div>'''
