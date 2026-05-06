@@ -603,16 +603,22 @@ def main():
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                 (out_dir / "mcp.html").write_text(mcp_page, encoding="utf-8")
 
-            # Generate terms, privacy, support pages
+            # Generate terms, privacy, support, verified_safe pages
             occupation = v.get("occupation", v.get("audience", slug))
             for tmpl_name, out_name in [
                 ("terms-template.html", "terms.html"),
                 ("privacy-template.html", "privacy.html"),
                 ("support-template.html", "support.html"),
+                ("verified-safe-template.html", "verified_safe.html"),
             ]:
                 tmpl_path = TEMPLATE_FILE.parent / tmpl_name
                 if tmpl_path.exists():
                     tmpl_content = tmpl_path.read_text(encoding="utf-8")
+                    support_email = v.get("support_email", f"hello@{domain}")
+                    audience = v.get("audience", occupation)
+                    # Build inline header/footer for verified_safe page
+                    vs_header = f'<header><div class="container"><div class="header-inner"><a href="/index.html" class="logo">{logo_split}</a><nav class="nav-links"><a href="/index.html">Home</a><a href="/verified_safe.html">Verified Safe</a></nav></div></div></header>'
+                    vs_footer = f'<footer class="site-footer-shared"><div class="container"><div class="footer-disclaimer"><span class="disclaimer-label">&#9888; Not Professional Advice</span><span>{product_name} is software that assists {audience} with their work. It is not a licensed professional service. Always apply your own professional review and judgment to any output. Laudo Lux, LLC.</span></div><div class="footer-inner"><div class="footer-brand"><a href="/index.html" class="logo">{logo_split}</a></div><div class="footer-links"><a href="/index.html">Home</a><a href="/verified_safe.html">Verified Safe</a><a href="mailto:{support_email}">{support_email}</a></div></div><div class="footer-bottom"><p>&copy; 2026 Laudo Lux, LLC &nbsp;&middot;&nbsp; <a href="mailto:{support_email}">{support_email}</a></p></div></div></footer>'
                     rendered = tmpl_content \
                         .replace("{{PRODUCT_NAME}}", product_name) \
                         .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
@@ -620,6 +626,9 @@ def main():
                         .replace("{{DOMAIN}}", domain) \
                         .replace("{{PRODUCT_ID}}", product_id) \
                         .replace("{{OCCUPATION}}", occupation) \
+                        .replace("{{SUPPORT_EMAIL}}", support_email) \
+                        .replace("{{HEADER}}", vs_header) \
+                        .replace("{{FOOTER}}", vs_footer) \
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
 
