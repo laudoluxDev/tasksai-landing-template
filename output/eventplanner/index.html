@@ -935,12 +935,12 @@
     <section class="privacy-section">
         <div class="container">
             <h2 class="section-title">Your Data Stays Yours</h2>
-            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">EventPlannerTasksAI is built for privacy. Your AI runs locally — client data, case details, and sensitive documents are processed on your machine, not ours. Our servers only handle task delivery and credit accounting.</p>
+            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">EventPlannerTasksAI is built for privacy. Your documents and client data never touch our servers — they go only to your AI provider (Anthropic, OpenAI, etc.), or nowhere at all if you use a local model. We handle only task delivery and credit accounting.</p>
             <div class="privacy-grid">
                 <div class="privacy-card">
                     <div class="privacy-badge">Local AI</div>
                     <h3>Runs on Your Machine</h3>
-                    <p>All AI processing happens in your local Claude Desktop or OpenClaw installation. Your inputs and outputs stay on your machine.</p>
+                    <p>All AI processing happens in your Claude Desktop, OpenClaw, or other MCP client. Your documents and queries go to your AI provider — never to our servers. Use a local model via OpenClaw + Ollama and nothing leaves your machine at all.</p>
                 </div>
                 <div class="privacy-card">
                     <div class="privacy-badge">ZDR Ready</div>
@@ -1091,7 +1091,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">Is my data private and secure?</button>
-                    <div class="faq-answer">Yes. EventPlannerTasksAI runs locally — all AI processing happens on your machine or through your own AI API account. We never receive your inputs, outputs, or client data. Our servers only log that a credit was consumed. For maximum privacy, use Anthropic's Zero Data Retention (ZDR) API.</div>
+                    <div class="faq-answer">Yes. EventPlannerTasksAI never receives your documents, queries, or client data — our servers only handle skill delivery and credit accounting. Your data goes to your AI provider (Anthropic, OpenAI, etc.) under your own account and their privacy policy. For maximum confidentiality, use Anthropic's Zero Data Retention (ZDR) API — your inputs and outputs are never stored at Anthropic either. Or use a fully local model via OpenClaw + Ollama and nothing leaves your machine at all.</div>
                 </div>
 
                 <div class="faq-item">

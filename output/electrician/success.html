@@ -9,70 +9,111 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --accent: #EAB308; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6; color: #1a1a2e; background: #fafbfc;
-            min-height: 100vh; display: flex; flex-direction: column;
+        *{margin:0;padding:0;box-sizing:border-box;}
+        :root{--accent:#EAB308;}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafbfc;min-height:100vh;display:flex;flex-direction:column;}
+        .container{max-width:720px;margin:0 auto;padding:0 24px;}
+
+        /* ── Header ── */
+        header{padding:16px 0;background:white;border-bottom:1px solid #e5e7eb;}
+        .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+        .logo{font-size:1.35rem;font-weight:700;color:#1a1a2e;text-decoration:none;white-space:nowrap;}
+        .logo span{color:var(--accent);}
+        .header-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+        .header-links a{
+            font-size:0.82rem;font-weight:500;text-decoration:none;padding:6px 12px;
+            border-radius:6px;transition:background 0.15s,color 0.15s;white-space:nowrap;
         }
-        .container { max-width: 600px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 20px 0; background: white; border-bottom: 1px solid #e5e7eb; }
-        .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a2e; text-decoration: none; }
-        .logo span { color: var(--accent); }
-        main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 24px; }
-        .success-card {
-            background: white; border-radius: 12px; padding: 48px; text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); max-width: 500px; width: 100%;
-        }
-        .success-icon {
-            width: 72px; height: 72px; background: #10b981; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
-        }
-        .success-icon svg { width: 36px; height: 36px; color: white; }
-        h1 { font-size: 1.75rem; margin-bottom: 10px; }
-        .subtitle { color: #6b7280; margin-bottom: 28px; }
-        .details { background: #f9fafb; border-radius: 8px; padding: 20px; margin-bottom: 28px; text-align: left; }
-        .detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
-        .detail-row:last-child { border-bottom: none; }
-        .detail-label { color: #6b7280; font-size: 0.9rem; }
-        .detail-value { font-weight: 600; color: #1a1a2e; }
-        .license-key { font-family: monospace; font-size: 0.82rem; background: #e5e7eb; padding: 2px 6px; border-radius: 4px; }
-        .download-btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            background: var(--accent); color: white; padding: 16px 32px; border-radius: 8px;
-            text-decoration: none; font-weight: 600; font-size: 1.05rem; width: 100%;
-            transition: opacity 0.2s;
-        }
-        .download-btn:hover { opacity: 0.9; }
-        .loading { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-        .spinner {
-            width: 40px; height: 40px; border: 3px solid #e5e7eb;
-            border-top-color: var(--accent); border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .error { color: #dc2626; background: #fef2f2; padding: 16px; border-radius: 8px; }
-        .note { margin-top: 24px; padding: 14px; background: #f0fdf4; border-radius: 8px;
-            border-left: 3px solid #10b981; text-align: left; font-size: 0.88rem; color: #065f46; }
-        footer { padding: 24px; text-align: center; color: #9ca3af; font-size: 0.85rem; }
+        .header-links a.plain{color:#6b7280;}
+        .header-links a.plain:hover{background:#f3f4f6;color:#1a1a2e;}
+        .header-links a.cta{background:var(--accent);color:white;}
+        .header-links a.cta:hover{opacity:0.9;}
+
+        /* ── Main ── */
+        main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:48px 24px;}
+        .success-card{background:white;border-radius:12px;padding:40px 48px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.08);max-width:680px;width:100%;}
+
+        /* ── Success hero ── */
+        .success-icon{width:72px;height:72px;background:#10b981;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+        .success-icon svg{width:36px;height:36px;color:white;}
+        h1{font-size:1.7rem;margin-bottom:8px;color:#1a1a2e;}
+        .subtitle{color:#6b7280;margin-bottom:28px;font-size:0.95rem;}
+
+        /* ── Details table ── */
+        .details{background:#f9fafb;border-radius:8px;padding:16px 20px;margin-bottom:24px;text-align:left;}
+        .detail-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #e5e7eb;}
+        .detail-row:last-child{border-bottom:none;}
+        .detail-label{color:#6b7280;font-size:0.88rem;}
+        .detail-value{font-weight:600;color:#1a1a2e;font-size:0.88rem;}
+        .license-key{font-family:monospace;font-size:0.82rem;background:#e5e7eb;padding:2px 7px;border-radius:4px;}
+
+        /* ── Download button ── */
+        .download-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;width:100%;transition:opacity 0.2s;margin-bottom:32px;}
+        .download-btn:hover{opacity:0.9;}
+        .download-btn svg{width:18px;height:18px;flex-shrink:0;}
+
+        /* ── Install section ── */
+        .install{text-align:left;}
+        .install-step-label{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;}
+        .install h3{font-size:1rem;font-weight:600;color:#1a1a2e;margin-bottom:8px;}
+        .install p,
+        .install li{font-size:0.875rem;color:#6b7280;}
+        .install ul,
+        .install ol{margin-left:20px;}
+        .install li{margin-bottom:6px;}
+        .install code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:0.82rem;font-family:monospace;}
+        .install a{color:var(--accent);}
+
+        /* ── Tabs ── */
+        .tabs{display:flex;border-bottom:2px solid #e5e7eb;margin:20px 0 0;}
+        .tab-btn{flex:1;padding:9px 14px;font-size:0.875rem;font-weight:600;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;background:#f9fafb;color:#6b7280;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.15s;}
+        .tab-btn.active{background:white;color:var(--accent);border-bottom-color:var(--accent);}
+        .tab-panel{padding-top:20px;}
+
+        /* ── Code blocks ── */
+        .code-block{background:#1a1a2e;color:#34d399;padding:10px 14px;border-radius:6px;font-family:monospace;font-size:0.82rem;margin:8px 0 12px;line-height:1.6;white-space:pre-wrap;text-align:left;}
+
+        /* ── Privacy note ── */
+        .privacy-note{margin-top:24px;padding:14px 16px;background:#ecfdf5;border-radius:8px;border-left:4px solid #10b981;font-size:0.875rem;color:#065f46;}
+        .privacy-note strong{display:block;margin-bottom:2px;}
+
+        /* ── Loading / error ── */
+        .loading{display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 0;}
+        .spinner{width:38px;height:38px;border:3px solid #e5e7eb;border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;}
+        @keyframes spin{to{transform:rotate(360deg);}}
+        .error{color:#dc2626;background:#fef2f2;padding:16px;border-radius:8px;text-align:left;font-size:0.9rem;}
+
+        /* ── Footer ── */
+        footer{padding:20px 24px;text-align:center;color:#9ca3af;font-size:0.82rem;}
+        footer a{color:#9ca3af;text-decoration:none;}
+        footer a:hover{color:#6b7280;}
     </style>
 
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="/" class="logo">Electrician<span>TasksAI</span></a>
+            <div class="header-inner">
+                <a href="/" class="logo">Electrician<span>TasksAI</span></a>
+                <nav class="header-links">
+                    <a href="/support" class="plain">Support</a>
+                    <a href="/#faq" class="plain">FAQ</a>
+                    <a href="/#pricing" class="cta">Get More Credits</a>
+                </nav>
+            </div>
         </div>
     </header>
 
     <main>
         <div class="success-card">
+
+            <!-- Loading -->
             <div id="loading" class="loading">
                 <div class="spinner"></div>
-                <p>Loading your purchase details...</p>
+                <p style="color:#6b7280;font-size:0.9rem;">Loading your purchase details…</p>
             </div>
 
+            <!-- Content -->
             <div id="content" style="display:none;">
                 <div class="success-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,76 +143,157 @@
                 </div>
 
                 <a href="#" id="download-btn" class="download-btn">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                     </svg>
                     Download Your ElectricianTasksAI Skills
                 </a>
 
-                <div class="note">
-                    <strong>💡 Save this page or your email.</strong> Your license key above lets you re-download anytime from <code>https://electriciantasksai.com/success</code>.
+                <!-- Install Instructions -->
+                <div class="install">
+                    <div class="install-step-label">Step 1</div>
+                    <h3>Extract the ZIP</h3>
+                    <p style="margin-bottom:10px;">Double-click <code>electriciantasksai-skills.zip</code> to extract it. Inside you'll find two components:</p>
+                    <ul style="margin-bottom:6px;">
+                        <li><code>electriciantasksai/</code> — the <strong>OpenClaw skill</strong> (SKILL.md + config)</li>
+                        <li><code>electriciantasksai/mcp/</code> — the <strong>MCP server</strong> for Claude Desktop, Cursor, Windsurf &amp; other MCP clients</li>
+                    </ul>
+                    <p style="margin-bottom:20px;font-size:0.82rem;">💡 Your license key is pre-configured in both — no manual entry needed.</p>
+
+                    <div class="install-step-label">Step 2</div>
+                    <h3>Choose your AI client</h3>
+
+                    <div class="tabs">
+                        <button class="tab-btn active" id="tab-openclaw" onclick="showTab('openclaw')">🤖 OpenClaw</button>
+                        <button class="tab-btn" id="tab-mcp" onclick="showTab('mcp')">🔌 Claude Desktop &amp; MCP</button>
+                    </div>
+
+                    <!-- OpenClaw panel -->
+                    <div class="tab-panel" id="panel-openclaw">
+                        <p style="margin-bottom:12px;">OpenClaw is a self-hosted AI assistant for Mac, Windows, and Linux. Don't have it yet? <a href="https://openclaw.ai" target="_blank">Download here.</a></p>
+                        <ol>
+                            <li>
+                                <strong>Easy install (recommended)</strong> — open your OpenClaw chat and type:
+                                <div class="code-block">I just downloaded the ElectricianTasksAI skill file to my Downloads folder. Please find it, unzip it if needed, and install it so I can use it.</div>
+                                OpenClaw finds the folder and sets everything up automatically.
+                            </li>
+                            <li>
+                                <strong>Manual install</strong> — copy the <code>electriciantasksai</code> folder into your skills directory:
+                                <div class="code-block">Mac/Linux:  ~/.openclaw/skills/electriciantasksai/
+Windows:    C:\Users\YOU\.openclaw\skills\electriciantasksai\</div>
+                                Then restart OpenClaw to pick up the new skill.
+                            </li>
+                            <li><strong>Start using</strong> — just ask for any task in chat.</li>
+                        </ol>
+                    </div>
+
+                    <!-- MCP panel -->
+                    <div class="tab-panel" id="panel-mcp" style="display:none;">
+                        <p style="margin-bottom:16px;">The <code>electriciantasksai/mcp/</code> folder is a Python MCP server compatible with <strong>Claude Desktop</strong>, <strong>Cursor</strong>, <strong>Windsurf</strong>, and any MCP stdio client.</p>
+
+                        <p style="margin-bottom:6px;"><strong>Requirements:</strong> Python 3.10+ &nbsp;(<a href="https://www.python.org/downloads/" target="_blank">download</a>)</p>
+
+                        <p style="margin-bottom:6px;font-weight:600;color:#1a1a2e;">Option A — Automatic installer (recommended)</p>
+                        <p style="margin-bottom:6px;">Detects and configures all installed MCP clients automatically:</p>
+                        <div class="code-block">cd ~/Downloads/electriciantasksai/mcp
+pip3 install -r requirements.txt
+python3 install.py</div>
+                        <p style="margin-bottom:20px;">Restart your MCP client — look for the <strong>electriciantasksai</strong> tools.</p>
+
+                        <p style="margin-bottom:6px;font-weight:600;color:#1a1a2e;">Option B — Manual (Claude Desktop)</p>
+                        <div class="code-block">cd ~/Downloads/electriciantasksai/mcp
+pip3 install -r requirements.txt</div>
+                        <p style="margin-bottom:6px;">Open your config file:</p>
+                        <div class="code-block">Mac:     ~/Library/Application Support/Claude/claude_desktop_config.json
+Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
+                        <p style="margin-bottom:6px;">Add to <code>"mcpServers"</code>:</p>
+                        <div class="code-block">{
+  "mcpServers": {
+    "electriciantasksai": {
+      "command": "python3",
+      "args": ["/full/path/to/electriciantasksai/mcp/server.py"],
+      "env": { "ELECTRICIANTASKSAI_LICENSE_KEY": "YOUR_LICENSE_KEY" }
+    }
+  }
+}</div>
+                        <p style="margin-bottom:20px;">Replace the path and key with your actual values, then restart your client.</p>
+
+                        <p style="margin-bottom:6px;font-weight:600;color:#1a1a2e;">Option B — Manual (Cursor / Windsurf)</p>
+                        <p style="margin-bottom:20px;">Go to <strong>Settings → MCP Servers</strong> and add the same JSON block above.</p>
+
+                        <p style="margin-bottom:6px;font-weight:600;color:#1a1a2e;">Available tools after install</p>
+                        <ul style="margin-bottom:8px;">
+                            <li><code>electriciantasksai_search</code> — find the right skill</li>
+                            <li><code>electriciantasksai_execute</code> — run a skill (1 credit)</li>
+                            <li><code>electriciantasksai_balance</code> — check credit balance</li>
+                            <li><code>electriciantasksai_categories</code> — browse all categories</li>
+                        </ul>
+                    </div>
+
+                    <!-- Privacy note -->
+                    <div class="privacy-note">
+                        <strong>🔒 Your data never touches our servers.</strong>
+                        ElectricianTasksAI delivers expert analysis frameworks — your AI applies them. Your documents and queries go to your AI provider (Anthropic, OpenAI, etc.), never to us. For maximum confidentiality, use Anthropic's Zero Data Retention API or a local model via OpenClaw + Ollama.
+                    </div>
                 </div>
             </div>
 
+            <!-- Error -->
             <div id="error" class="error" style="display:none;">
                 <p>We couldn't load your purchase details automatically. Check your email for your license key, or contact <a href="mailto:hello@electriciantasksai.com">hello@electriciantasksai.com</a> for help.</p>
             </div>
+
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Laudo Lux, LLC &nbsp;·&nbsp; <a href="mailto:hello@electriciantasksai.com">hello@electriciantasksai.com</a> &nbsp;·&nbsp; <a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a></p>
+        <p>&copy; 2026 Laudo Lux, LLC &nbsp;·&nbsp; <a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="mailto:hello@electriciantasksai.com">hello@electriciantasksai.com</a></p>
     </footer>
 
     <script>
-        const API_BASE = 'https://api.lawtasksai.com';
-        const PRODUCT_ID = 'electrician';
+    function showTab(tab) {
+        ['openclaw','mcp'].forEach(function(t) {
+            document.getElementById('panel-'+t).style.display = t===tab ? 'block' : 'none';
+            document.getElementById('tab-'+t).classList.toggle('active', t===tab);
+        });
+    }
 
-        async function loadPurchaseDetails() {
-            const params = new URLSearchParams(window.location.search);
-            const sessionId = params.get('session_id');
-            if (!sessionId) { showError(); return; }
+    const API_BASE = 'https://api.lawtasksai.com';
+    const PRODUCT_ID = 'electrician';
 
-            // Retry up to 5 times (handles webhook race condition)
-            for (let attempt = 1; attempt <= 5; attempt++) {
-                try {
-                    const resp = await fetch(`${API_BASE}/checkout/session/${sessionId}`, {
-                        headers: { 'X-Product-ID': PRODUCT_ID }
-                    });
-                    if (!resp.ok) {
-                        if (attempt < 5) { await sleep(1500); continue; }
-                        throw new Error('not ok');
-                    }
-                    const data = await resp.json();
-                    document.getElementById('email').textContent = data.email || '—';
-                    document.getElementById('credits').textContent = data.credits_purchased || '—';
-                    document.getElementById('total-credits').textContent = data.total_credits || '—';
-                    document.getElementById('license-key').textContent = data.license_key || '—';
-                    if (sessionId) {
-                        document.getElementById('download-btn').href =
-                            `${API_BASE}/download/loader?session_id=${sessionId}`;
-                    } else if (data.license_key) {
-                        document.getElementById('download-btn').href =
-                            `${API_BASE}/download/loader/${data.license_key}`;
-                    }
-                    document.getElementById('loading').style.display = 'none';
-                    document.getElementById('content').style.display = 'block';
-                    return;
-                } catch (e) {
-                    if (attempt < 5) { await sleep(1500); }
-                }
-            }
-            showError();
+    async function loadPurchaseDetails() {
+        const params = new URLSearchParams(window.location.search);
+        const sessionId = params.get('session_id');
+        if (!sessionId) { showError(); return; }
+
+        for (let attempt = 1; attempt <= 5; attempt++) {
+            try {
+                const resp = await fetch(`${API_BASE}/checkout/session/${sessionId}`, {
+                    headers: { 'X-Product-ID': PRODUCT_ID }
+                });
+                if (!resp.ok) { if (attempt < 5) { await sleep(1500); continue; } throw new Error(); }
+                const data = await resp.json();
+                document.getElementById('email').textContent = data.email || '—';
+                document.getElementById('credits').textContent = data.credits_purchased || '—';
+                document.getElementById('total-credits').textContent = data.total_credits || '—';
+                document.getElementById('license-key').textContent = data.license_key || '—';
+                document.getElementById('download-btn').href = `${API_BASE}/download/loader?session_id=${sessionId}`;
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                return;
+            } catch(e) { if (attempt < 5) await sleep(1500); }
         }
+        showError();
+    }
 
-        function showError() {
-            document.getElementById('loading').style.display = 'none';
-            document.getElementById('error').style.display = 'block';
-        }
+    function showError() {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('error').style.display = 'block';
+    }
 
-        function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-        loadPurchaseDetails();
+    loadPurchaseDetails();
     </script>
 </body>
 </html>
