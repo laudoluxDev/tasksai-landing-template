@@ -18,8 +18,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/shared.css">
     <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: #1e293b; background: #fff; }
+        a { color: inherit; }
+
+        /* ── Header ── */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0f172a;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo span { color: #10b981; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .nav-links a {
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #10b981; }
+        .hamburger { display: none; }
+        .mobile-overlay { display: none; }
+
+        /* ── Layout ── */
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
         .vs-hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
@@ -178,7 +224,8 @@
 </head>
 <body>
 
-<header><div class="container"><div class="header-inner"><a href="/index.html" class="logo">HR<span>TasksAI</span></a><nav class="nav-links"><a href="/index.html">Home</a><a href="/verified_safe.html">Verified Safe</a></nav></div></div></header>
+<div id="site-header"></div>
+<script src="/header.js"></script>
 
 <div class="vs-hero">
     <div class="container">
@@ -312,7 +359,7 @@
     </div>
 </section>
 
-<footer class="site-footer-shared"><div class="container"><div class="footer-disclaimer"><span class="disclaimer-label">&#9888; Not Professional Advice</span><span>HRTasksAI is software that assists HR managers, HR generalists, and small business owners with their work. It is not a licensed professional service. Always apply your own professional review and judgment to any output. Laudo Lux, LLC.</span></div><div class="footer-inner"><div class="footer-brand"><a href="/index.html" class="logo">HR<span>TasksAI</span></a></div><div class="footer-links"><a href="/index.html">Home</a><a href="/verified_safe.html">Verified Safe</a><a href="mailto:hello@hrtasksai.com">hello@hrtasksai.com</a></div></div><div class="footer-bottom"><p>&copy; 2026 Laudo Lux, LLC &nbsp;&middot;&nbsp; <a href="mailto:hello@hrtasksai.com">hello@hrtasksai.com</a></p></div></div></footer>
+{{FOOTER}}
 
 <script>
 (function() {

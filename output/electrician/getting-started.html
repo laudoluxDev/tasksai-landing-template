@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCP Setup — ElectricianTasksAI</title>
+  <meta name="description" content="Connect ElectricianTasksAI to Claude Desktop, Cursor, and Windsurf in minutes. Step-by-step MCP setup guide." />
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a1a2e; background: #fafbfc; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 20px 0; background: white; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+    header .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a2e; text-decoration: none; }
+    .logo span { color: #EAB308; }
+    .header-cta { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; background: #EAB308; color: white; }
+
+    .page-hero { padding: 56px 0 36px; text-align: center; background: linear-gradient(180deg, white 0%, #f3f4f6 100%); }
+    .page-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .page-hero h1 span { color: #EAB308; }
+    .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 600px; margin: 0 auto; }
+
+    .content { padding: 48px 0 80px; }
+
+    /* Steps */
+    .step { margin-bottom: 48px; }
+    .step-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .step-num { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #EAB308; color: white; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+    .step h2 { font-size: 1.4rem; font-weight: 700; }
+    .step p, .step li { color: #4b5563; font-size: 1rem; margin-bottom: 8px; }
+    .step ul, .step ol { padding-left: 20px; margin-bottom: 12px; }
+    .step li { margin-bottom: 6px; }
+    .step a { color: #EAB308; text-decoration: none; font-weight: 500; }
+    .step a:hover { text-decoration: underline; }
+
+    /* Code block */
+    .code-block { background: #1a1a2e; border-radius: 10px; padding: 20px 24px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.92rem; color: #e5e7eb; overflow-x: auto; }
+    .code-block .comment { color: #6b7280; }
+    .code-block .cmd { color: #60a5fa; }
+
+    /* Client cards */
+    .client-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+    .client-card { background: white; border: 2px solid #e5e7eb; border-radius: 10px; padding: 20px; text-align: center; }
+    .client-card .name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .client-card .note { font-size: 0.85rem; color: #6b7280; }
+
+    /* Alert box */
+    .alert { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 16px 20px; margin: 20px 0; font-size: 0.95rem; color: #92400e; }
+    .alert strong { display: block; margin-bottom: 4px; }
+
+    /* No Python box */
+    .no-python { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 24px; margin: 32px 0; }
+    .no-python h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: #0369a1; }
+    .no-python p { color: #0c4a6e; font-size: 0.95rem; margin-bottom: 8px; }
+    .no-python a { color: #0369a1; font-weight: 600; }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid #e5e7eb; margin: 40px 0; }
+
+    /* CTA */
+    .cta-box { background: #EAB308; border-radius: 12px; padding: 40px; text-align: center; color: white; margin-top: 48px; }
+    .cta-box h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { opacity: 0.9; margin-bottom: 24px; }
+    .cta-btn { display: inline-block; background: white; color: #EAB308; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+
+    footer { background: #1a1a2e; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+    footer a { color: #9ca3af; text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+<div id="site-header"></div>
+<script src="/header.js"></script>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Connect to <span>Claude Desktop, Cursor & Windsurf</span></h1>
+    <p>Set up ElectricianTasksAI as an MCP server in minutes. Your skills run in your MCP client — your data never touches our servers. It goes only to your AI provider, or nowhere if you use a local model.</p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+
+    <!-- Supported clients -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">✓</div>
+        <h2>Supported MCP Clients</h2>
+      </div>
+      <div class="client-grid">
+        <div class="client-card">
+          <div class="name">Claude Desktop</div>
+          <div class="note">Anthropic — Mac & Windows</div>
+        </div>
+        <div class="client-card">
+          <div class="name">Cursor</div>
+          <div class="note">AI code editor — Mac & Windows</div>
+        </div>
+        <div class="client-card">
+          <div class="name">Windsurf</div>
+          <div class="note">Codeium — Mac & Windows</div>
+        </div>
+      </div>
+      <p>The installer auto-detects which clients you have installed and configures all of them at once.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Step 1: Requirements -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <h2>Requirements</h2>
+      </div>
+      <ul>
+        <li><strong>Python 3.8 or later</strong> — <a href="https://python.org/downloads" target="_blank">download at python.org</a> if needed</li>
+        <li><strong>A ElectricianTasksAI license key</strong> — included in your purchase confirmation email, or <a href="/signup">get 5 free credits</a></li>
+        <li><strong>At least one supported MCP client</strong> — Claude Desktop, Cursor, or Windsurf</li>
+      </ul>
+      <div class="alert">
+        <strong>⚠️ Mac users running macOS 14+</strong>
+        macOS may ask "python3 would like to access files in your Downloads folder" — click <strong>Allow</strong>. This is a one-time security prompt.
+      </div>
+    </div>
+
+    <!-- Step 2: Download -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <h2>Download Your Package</h2>
+      </div>
+      <p>After purchase, you'll receive an email with a personalized download link. Your license key is pre-configured in the package — no copying and pasting required.</p>
+      <p>Extract the zip file. You'll see two folders:</p>
+      <ul>
+        <li><code>openclaw/</code> — for OpenClaw users</li>
+        <li><code>mcp/</code> — for Claude Desktop, Cursor, and Windsurf</li>
+      </ul>
+    </div>
+
+    <!-- Step 3: Install -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <h2>Run the Installer</h2>
+      </div>
+      <p>Open a terminal (<strong>Mac:</strong> Terminal app &nbsp;|&nbsp; <strong>Windows:</strong> Command Prompt or PowerShell) and run:</p>
+      <div class="code-block">
+        <span class="comment"># Navigate to the mcp folder</span><br/>
+        <span class="cmd">cd ~/Downloads/electrician/mcp</span><br/><br/>
+        <span class="comment"># Run the installer</span><br/>
+        <span class="cmd">python3 install.py</span>
+      </div>
+      <p>The installer will:</p>
+      <ol>
+        <li>Detect your installed MCP clients (Claude Desktop, Cursor, Windsurf)</li>
+        <li>Install the required Python packages automatically</li>
+        <li>Back up your existing MCP config (nothing is lost)</li>
+        <li>Configure ElectricianTasksAI in all detected clients</li>
+      </ol>
+    </div>
+
+    <!-- Step 4: Restart -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <h2>Restart Your MCP Client</h2>
+      </div>
+      <p>Fully quit and reopen Claude Desktop, Cursor, or Windsurf. MCP servers are loaded at startup — a restart is required.</p>
+      <p>You should see <strong>electrician</strong> appear in your connected tools list.</p>
+    </div>
+
+    <!-- Step 5: Use it -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">5</div>
+        <h2>Start Using Your Skills</h2>
+      </div>
+      <p>Just describe what you need in plain language — your AI will search for the right skill and ask you to confirm before running it:</p>
+      <div class="code-block">
+        <span class="comment">You type:</span><br/>
+        <span class="cmd">"I need help with Write a service estimate"</span><br/><br/>
+        <span class="comment">ElectricianTasksAI finds matching skills, shows you options,</span><br/>
+        <span class="comment">then runs the one you choose.</span>
+      </div>
+      <p>Each skill costs 1 credit. Your balance is checked any time with: <em>"Check my electrician credits"</em></p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- No Python fallback -->
+    <div class="no-python">
+      <h3>🐍 Don't have Python or a supported MCP client?</h3>
+      <p>No problem — you can use ElectricianTasksAI directly in your browser with no installation at all.</p>
+      <p><a href="/signup">→ Try the web app free — 5 credits, no card required</a></p>
+      <p style="margin-top:8px;">Or use ElectricianTasksAI with <a href="https://openclaw.ai" target="_blank">OpenClaw</a> — works out of the box, no Python or config files needed.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Manual config -->
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">?</div>
+        <h2>Manual Configuration</h2>
+      </div>
+      <p>If you prefer to configure manually, add this to your MCP client's config file:</p>
+      <div class="code-block">
+{<br/>
+&nbsp;&nbsp;"mcpServers": {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;"electrician": {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"command": "python3",<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"args": ["/path/to/mcp/server.py"],<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"env": {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ELECTRICIANTASKSAI_LICENSE_KEY": "your_license_key_here"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;}<br/>
+}
+      </div>
+      <p><strong>Config file locations:</strong></p>
+      <ul>
+        <li><strong>Claude Desktop (Mac):</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+        <li><strong>Claude Desktop (Windows):</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
+        <li><strong>Cursor / Windsurf:</strong> Check Settings → MCP</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <h2>Need Help?</h2>
+      <p>Our support team typically responds within a few hours.</p>
+      <a href="mailto:hello@electriciantasksai.com" class="cta-btn">Email Support</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/support">Support</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 ElectricianTasksAI. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

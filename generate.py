@@ -584,7 +584,7 @@ def main():
                     .replace("{{ROLE_TITLE}}", role_title)
                 (out_dir / "signup.html").write_text(signup_page, encoding="utf-8")
 
-            # Generate mcp.html
+            # Generate getting-started.html (from mcp-template.html)
             mcp_template_path = TEMPLATE_FILE.parent / "mcp-template.html"
             if mcp_template_path.exists():
                 mcp_tmpl = mcp_template_path.read_text(encoding="utf-8")
@@ -601,7 +601,18 @@ def main():
                     .replace("{{LOGO_HTML}}", logo_split) \
                     .replace("{{EXAMPLE_TASK}}", example_task) \
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
-                (out_dir / "mcp.html").write_text(mcp_page, encoding="utf-8")
+                (out_dir / "getting-started.html").write_text(mcp_page, encoding="utf-8")
+
+            # Generate header.js
+            header_template_path = TEMPLATE_FILE.parent / "header-template.js"
+            if header_template_path.exists():
+                header_tmpl = header_template_path.read_text(encoding="utf-8")
+                header_js = header_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{LOGO_HTML}}", logo_split) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain)
+                (out_dir / "header.js").write_text(header_js, encoding="utf-8")
 
             # Generate terms, privacy, support, verified_safe pages
             occupation = v.get("occupation", v.get("audience", slug))
@@ -616,9 +627,6 @@ def main():
                     tmpl_content = tmpl_path.read_text(encoding="utf-8")
                     support_email = v.get("support_email", f"hello@{domain}")
                     audience = v.get("audience", occupation)
-                    # Build inline header/footer for verified_safe page
-                    vs_header = f'<header><div class="container"><div class="header-inner"><a href="/index.html" class="logo">{logo_split}</a><nav class="nav-links"><a href="/index.html">Home</a><a href="/verified_safe.html">Verified Safe</a></nav></div></div></header>'
-                    vs_footer = f'<footer class="site-footer-shared"><div class="container"><div class="footer-disclaimer"><span class="disclaimer-label">&#9888; Not Professional Advice</span><span>{product_name} is software that assists {audience} with their work. It is not a licensed professional service. Always apply your own professional review and judgment to any output. Laudo Lux, LLC.</span></div><div class="footer-inner"><div class="footer-brand"><a href="/index.html" class="logo">{logo_split}</a></div><div class="footer-links"><a href="/index.html">Home</a><a href="/verified_safe.html">Verified Safe</a><a href="mailto:{support_email}">{support_email}</a></div></div><div class="footer-bottom"><p>&copy; 2026 Laudo Lux, LLC &nbsp;&middot;&nbsp; <a href="mailto:{support_email}">{support_email}</a></p></div></div></footer>'
                     rendered = tmpl_content \
                         .replace("{{PRODUCT_NAME}}", product_name) \
                         .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
@@ -627,8 +635,6 @@ def main():
                         .replace("{{PRODUCT_ID}}", product_id) \
                         .replace("{{OCCUPATION}}", occupation) \
                         .replace("{{SUPPORT_EMAIL}}", support_email) \
-                        .replace("{{HEADER}}", vs_header) \
-                        .replace("{{FOOTER}}", vs_footer) \
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
 
