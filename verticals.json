@@ -69,7 +69,8 @@
         "filename": "payment_reminder_inv1042",
         "preview": "I'm following up on Invoice #1042 for $4,200, which was due on May 1st. Please let us know if..."
       }
-    ]
+    ],
+    "features_subtitle": "Every task built for the job site, the bid, and the invoice."
   },
   {
     "product_id": "realtor",
@@ -112,7 +113,7 @@
     "hero_subhead": "169 ready-to-run tasks for every part of your deal \u2014 listing descriptions, offer letters, buyer emails, disclosure packets, CMA summaries, showing follow-ups, and more. Pick a task, answer a few questions, get professional output. No prompts to write. Works in Claude Desktop and OpenClaw.",
     "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
     "features_intro": "Built for agents who close deals, not write prompts",
-    "features_subtitle": "Every task was written by and for real estate professionals \u2014 MLS language, disclosure formats, transaction timelines, and the exact communication style that wins and keeps clients.",
+    "features_subtitle": "Every task built for the exact work real estate agents do every day.",
     "pricing_tagline": "No subscriptions. Buy credits when you need them \u2014 one credit per task. Credits never expire, so you're never pressured to use them.",
     "compliance_heading": "Your clients' data stays yours",
     "compliance": [
@@ -255,7 +256,7 @@
         "prompt": "Write a listing description for a 4BR home in Denver",
         "skill": "Listing Description Writer",
         "chips": [
-          "MLS tone",
+          "MLS listing format",
           "4BR template",
           "HOA language"
         ],
@@ -321,7 +322,8 @@
     "occupation": "accountants, bookkeepers, and financial professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for returns, clients, and the work between deadlines."
   },
   {
     "product_id": "chiropractor",
@@ -358,7 +360,8 @@
     "occupation": "chiropractors and chiropractic office staff",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for patient care, notes, and practice growth."
   },
   {
     "product_id": "church",
@@ -395,7 +398,8 @@
     "occupation": "church administrators and ministry staff",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for ministry, administration, and the congregation."
   },
   {
     "product_id": "dentist",
@@ -432,7 +436,8 @@
     "occupation": "dentists and dental office administrators",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for patient care, treatment plans, and the front desk."
   },
   {
     "product_id": "designer",
@@ -469,7 +474,8 @@
     "occupation": "designers and creative professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for briefs, clients, and creative work that ships."
   },
   {
     "product_id": "electrician",
@@ -506,7 +512,8 @@
     "occupation": "electricians and electrical contractors",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for estimates, job specs, and code compliance."
   },
   {
     "product_id": "eventplanner",
@@ -543,7 +550,8 @@
     "occupation": "event planners and event management professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for timelines, vendors, and the day-of details."
   },
   {
     "product_id": "farmer",
@@ -580,7 +588,8 @@
     "occupation": "farmers, ranchers, and agricultural professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-GT4MQX8ZQE"
+    "ga_measurement_id": "G-GT4MQX8ZQE",
+    "features_subtitle": "Every task built for how farms actually run \u2014 season to season."
   },
   {
     "product_id": "funeral",
@@ -617,7 +626,8 @@
     "occupation": "funeral directors and mortuary professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built with the care and precision families deserve."
   },
   {
     "product_id": "hr",
@@ -654,7 +664,8 @@
     "occupation": "human resources professionals and HR managers",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for the full employee lifecycle \u2014 hire to goodbye."
   },
   {
     "product_id": "insurance",
@@ -691,7 +702,8 @@
     "occupation": "insurance agents and insurance office staff",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for policies, claims, and client relationships."
   },
   {
     "product_id": "landlord",
@@ -728,7 +740,8 @@
     "occupation": "landlords, property managers, and rental property owners",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for leases, tenants, and keeping properties running."
   },
   {
     "product_id": "militaryspouse",
@@ -765,7 +778,8 @@
     "occupation": "military spouses managing businesses and households",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for the moves, the gaps, and the fresh starts."
   },
   {
     "product_id": "mortgage",
@@ -802,7 +816,8 @@
     "occupation": "mortgage brokers, loan officers, and mortgage professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for borrowers, lenders, and closing on time."
   },
   {
     "product_id": "mortuary",
@@ -839,7 +854,8 @@
     "occupation": "morticians, funeral home directors, and mortuary professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built with the care and precision families deserve."
   },
   {
     "product_id": "nutritionist",
@@ -876,7 +892,8 @@
     "occupation": "nutritionists, dietitians, and nutrition professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for assessments, meal plans, and client progress."
   },
   {
     "product_id": "pastor",
@@ -913,7 +930,8 @@
     "occupation": "pastors, ministers, and church leaders",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for sermons, pastoral care, and church leadership."
   },
   {
     "product_id": "personaltrainer",
@@ -950,7 +968,8 @@
     "occupation": "personal trainers, fitness coaches, and gym professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for programs, clients, and results that stick."
   },
   {
     "product_id": "plumber",
@@ -987,7 +1006,8 @@
     "occupation": "plumbers and plumbing contractors",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for service calls, estimates, and getting the job done."
   },
   {
     "product_id": "principal",
@@ -1024,7 +1044,8 @@
     "occupation": "school principals, vice principals, and school administrators",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for staff, students, families, and everything else."
   },
   {
     "product_id": "restaurant",
@@ -1061,7 +1082,8 @@
     "occupation": "restaurant owners, managers, and food service professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for the kitchen, the floor, and the front office."
   },
   {
     "product_id": "salon",
@@ -1098,7 +1120,8 @@
     "occupation": "salon owners, stylists, and beauty professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-N14JL8C4EC"
+    "ga_measurement_id": "G-N14JL8C4EC",
+    "features_subtitle": "Every task built for the chair, the client, and the business behind it."
   },
   {
     "product_id": "teacher",
@@ -1141,7 +1164,7 @@
     "hero_subhead": "TeacherTasksAI is a plugin for Claude Desktop with 200+ ready-to-run tasks \u2014 IEP summaries, report card comments, parent emails, behavior plans, and more. Pick a task, answer a few questions, done. No prompt writing. FERPA-aligned.",
     "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
     "features_intro": "Built for K-12 teachers, SpEd staff & counselors",
-    "features_subtitle": "Every task was written for the way educators actually work \u2014 IEP language, grade-level expectations, parent-communication tone, and district reporting formats. Not repurposed from generic business content.",
+    "features_subtitle": "Every task built for what happens before, during, and after class.",
     "pricing_tagline": "No subscriptions. Individual teachers pay per credit pack; schools and districts get volume pricing. Credits never expire.",
     "api_cost_disclaimer_position": "top",
     "api_cost_disclaimer": "TeacherTasksAI credits cover TeacherTasksAI tasks only. The AI itself runs through Claude Desktop or another MCP-compatible client, which may require its own API key or subscription (Anthropic, OpenAI, etc.). Plan for that separately.",
@@ -1278,7 +1301,8 @@
     "occupation": "therapists, counselors, and mental health professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-CRPT3804J6"
+    "ga_measurement_id": "G-CRPT3804J6",
+    "features_subtitle": "Every task built around clinical documentation and client care."
   },
   {
     "product_id": "travelagent",
@@ -1315,7 +1339,8 @@
     "occupation": "travel agents, travel advisors, and tourism professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for itineraries, bookings, and happy travelers."
   },
   {
     "product_id": "vet",
@@ -1352,7 +1377,8 @@
     "occupation": "veterinarians, vet technicians, and veterinary office staff",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": ""
+    "ga_measurement_id": "",
+    "features_subtitle": "Every task built for patient care, owner communication, and the clinic."
   },
   {
     "product_id": "marketing",
@@ -1398,6 +1424,7 @@
     "occupation": "marketing professionals, digital marketers, and marketing managers",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-XG8WVN0QR3"
+    "ga_measurement_id": "G-XG8WVN0QR3",
+    "features_subtitle": "Every task built for campaigns, clients, and copy that converts."
   }
 ]
