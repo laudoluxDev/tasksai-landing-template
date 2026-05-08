@@ -627,6 +627,26 @@ def main():
                     tmpl_content = tmpl_path.read_text(encoding="utf-8")
                     support_email = v.get("support_email", f"hello@{domain}")
                     audience = v.get("audience", occupation)
+                    footer_html = (
+                        f'<footer style="background:#0f172a;color:#94a3b8;padding:48px 24px 32px;margin-top:60px;">'
+                        f'<div style="max-width:900px;margin:0 auto;">'
+                        f'<p style="font-size:0.82rem;color:#64748b;border:1px solid #1e293b;border-radius:8px;padding:12px 16px;margin-bottom:32px;">'
+                        f'&#9888; <strong style="color:#94a3b8;">Not Professional Advice</strong> &mdash; '
+                        f'{product_name} is software that assists {audience} with administrative work. '
+                        f'It is not a licensed professional service and does not provide professional advice. '
+                        f'Always apply your own professional review and judgment. Laudo Lux, LLC.</p>'
+                        f'<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;margin-bottom:32px;">'
+                        f'<div><a href="/index.html" style="font-size:1.1rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.02em;">{logo_split}</a>'
+                        f'<p style="margin-top:8px;font-size:0.88rem;">AI-powered workflows for {audience}.</p></div>'
+                        f'<div style="display:flex;flex-direction:column;gap:10px;">'
+                        f'<a href="/index.html" style="color:#94a3b8;text-decoration:none;font-size:0.9rem;">Home</a>'
+                        f'<a href="/verified_safe.html" style="color:#94a3b8;text-decoration:none;font-size:0.9rem;">Verified Safe</a>'
+                        f'<a href="mailto:{support_email}" style="color:#94a3b8;text-decoration:none;font-size:0.9rem;">{support_email}</a>'
+                        f'</div></div>'
+                        f'<div style="border-top:1px solid #1e293b;padding-top:20px;font-size:0.82rem;color:#475569;">'
+                        f'&copy; 2026 Laudo Lux, LLC &nbsp;&middot;&nbsp; <a href="mailto:{support_email}" style="color:#475569;">{support_email}</a>'
+                        f'</div></div></footer>'
+                    )
                     rendered = tmpl_content \
                         .replace("{{PRODUCT_NAME}}", product_name) \
                         .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
@@ -635,6 +655,9 @@ def main():
                         .replace("{{PRODUCT_ID}}", product_id) \
                         .replace("{{OCCUPATION}}", occupation) \
                         .replace("{{SUPPORT_EMAIL}}", support_email) \
+                        .replace("{{LOGO_HTML}}", logo_split) \
+                        .replace("{{NAME}}", product_name) \
+                        .replace("{{FOOTER}}", footer_html) \
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
 
