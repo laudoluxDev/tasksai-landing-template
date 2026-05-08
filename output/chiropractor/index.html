@@ -1094,36 +1094,6 @@
 
     
 
-    <!-- ─── Privacy / ZDR Section ─── -->
-    <section class="privacy-section">
-        <div class="container">
-            <h2 class="section-title">Your Data Stays Yours</h2>
-            <p style="text-align:center; color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 48px; font-size:1.05rem; line-height:1.7;">ChiropractorTasksAI is built for privacy. Your documents and client data never touch our servers — they go only to your AI provider (Anthropic, OpenAI, etc.), or nowhere at all if you use a local model. We handle only task delivery and credit accounting.</p>
-            <div class="privacy-grid">
-                <div class="privacy-card">
-                    <div class="privacy-badge">Local AI</div>
-                    <h3>Runs on Your Machine</h3>
-                    <p>All AI processing happens in your Claude Desktop, OpenClaw, or other MCP client. Your documents and queries go to your AI provider — never to our servers. Use a local model via OpenClaw + Ollama and nothing leaves your machine at all.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="privacy-badge">ZDR Ready</div>
-                    <h3>Zero Data Retention</h3>
-                    <p>Use Anthropic's ZDR (Zero Data Retention) API for maximum privacy. Your inputs and outputs are never stored at Anthropic either.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="privacy-badge">Verified</div>
-                    <h3>VirusTotal-Verified Releases</h3>
-                    <p>Every release is submitted to VirusTotal before distribution. You can verify the integrity of what you install.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="privacy-badge">Credits Only</div>
-                    <h3>We Just Count Tasks</h3>
-                    <p>ChiropractorTasksAI servers only log that a task credit was used — never what the task contained. That's all we need to know.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ─── Pricing ─── -->
     <section class="pricing" id="pricing">
         <div class="container">
@@ -1231,50 +1201,7 @@
 
     
 
-    <!-- ─── FAQ ─── -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-list">
 
-                <div class="faq-item">
-                    <button class="faq-question">What is ChiropractorTasksAI and how does it work?</button>
-                    <div class="faq-answer">ChiropractorTasksAI is a plugin for AI assistants (Claude Desktop, OpenClaw, and any MCP-compatible client) that gives you 200+ pre-built, expert-crafted task templates for Chiropractors and chiropractic office staff. Instead of figuring out how to prompt an AI to do professional work, you pick a task, answer its specific questions, and get professional-quality output immediately.</div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Do I need a subscription?</button>
-                    <div class="faq-answer">No. ChiropractorTasksAI uses a pay-as-you-go credit model. You buy a credit pack and use credits whenever you need them. One credit = one task. Credits never expire, so you're never pressured to use them by a deadline.</div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">What AI apps does it work with?</button>
-                    <div class="faq-answer">ChiropractorTasksAI works with any MCP-compatible AI client: <a href="https://openclaw.ai" target="_blank" rel="noopener" style="color:var(--accent);">OpenClaw</a>, <a href="https://claude.ai/download" target="_blank" rel="noopener" style="color:var(--accent);">Claude Desktop</a>, Cursor, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Is my data private and secure?</button>
-                    <div class="faq-answer">Yes. ChiropractorTasksAI never receives your documents, queries, or client data — our servers only handle skill delivery and credit accounting. Your data goes to your AI provider (Anthropic, OpenAI, etc.) under your own account and their privacy policy. For maximum confidentiality, use Anthropic's Zero Data Retention (ZDR) API — your inputs and outputs are never stored at Anthropic either. Or use a fully local model via OpenClaw + Ollama and nothing leaves your machine at all.</div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">How is this different from just using ChatGPT or Claude directly?</button>
-                    <div class="faq-answer">Generic AI gives general answers that require expert follow-up to verify and format. ChiropractorTasksAI tasks are pre-engineered to ask the right questions, follow the right methodology, apply domain-specific rules, and produce structured output ready to use. You don't need to know how to write a good prompt — that work is already done.</div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Do tasks get updated?</button>
-                    <div class="faq-answer">Yes. When we improve a task or update it for regulatory changes, all users get the updated version automatically at no charge. With generic AI, you'd need to notice the change and update your own prompts.</div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">What if I need help getting set up?</button>
-                    <div class="faq-answer">Visit our <a href="/support" style="color:var(--accent);">support page</a> for setup guides, FAQs, and contact options. We also provide a getting started guide with step-by-step instructions for every supported platform.</div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- ─── Footer ─── -->
     <footer>
@@ -1315,15 +1242,7 @@
             });
         });
 
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item = btn.parentElement;
-                const wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-                if (!wasOpen) item.classList.add('open');
-            });
-        });
+
     </script>
 
     <script>

@@ -129,6 +129,7 @@
     if (p.indexOf("task-library") > -1) return "/task-library.html";
     if (p.indexOf("getting-started") > -1) return "/getting-started.html";
     if (p.indexOf("verified_safe") > -1) return "/verified_safe.html";
+    if (p.indexOf("faq") > -1) return "/faq.html";
     if (p.indexOf("support") > -1) return "/support.html";
     if (p.indexOf("signup") > -1) return "/signup.html";
     return "";
@@ -141,6 +142,7 @@
     { href: "/task-library.html",   label: "Task Library" },
     { href: "/getting-started.html",label: "Getting Started" },
     { href: "/verified_safe.html",  label: "🛡️ Verified Safe" },
+    { href: "/faq.html",            label: "FAQ" },
     { href: "/support.html",        label: "Support" },
   ];
 
