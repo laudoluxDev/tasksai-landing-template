@@ -107,10 +107,33 @@
             <!-- Loading -->
             <div id="loading" class="loading">
                 <div class="spinner"></div>
-                <p style="color:#6b7280;font-size:0.9rem;">Loading your purchase details…</p>
+                <p style="color:#6b7280;font-size:0.9rem;">Loading your details…</p>
             </div>
 
-            <!-- Content -->
+            <!-- Signup success (no purchase) -->
+            <div id="signup-success" style="display:none;">
+                <div class="success-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                <h1>You're in! 🎉</h1>
+                <p class="subtitle">Check your email — your 5 free credits and license key are on their way.</p>
+                <div class="details" style="text-align:left;margin-bottom:28px;">
+                    <div class="detail-row">
+                        <span class="detail-label">Free Credits</span>
+                        <span class="detail-value">5 credits</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">What's next</span>
+                        <span class="detail-value">Check your inbox for your license key</span>
+                    </div>
+                </div>
+                <a href="/getting-started.html" class="download-btn" style="margin-bottom:16px;">Get Started →</a>
+                <p style="color:#9ca3af;font-size:0.85rem;">Want more credits? <a href="/buy-credits.html" style="color:var(--accent);">Browse plans →</a></p>
+            </div>
+
+            <!-- Content (purchase) -->
             <div id="content" style="display:none;">
                 <div class="success-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,6 +284,14 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
     async function loadPurchaseDetails() {
         const params = new URLSearchParams(window.location.search);
         const sessionId = params.get('session_id');
+
+        // Free signup flow — no Stripe session
+        if (params.get('signup') === '1' || params.get('signup') === 'true') {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('signup-success').style.display = 'block';
+            return;
+        }
+
         if (!sessionId) { showError(); return; }
 
         for (let attempt = 1; attempt <= 5; attempt++) {
