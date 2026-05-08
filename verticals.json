@@ -154,64 +154,6 @@
         "location": ""
       }
     ],
-    "pricing_tiers": [
-      {
-        "name": "Starter",
-        "price": "$19",
-        "credits": "10 credits",
-        "per_credit": "$1.90 per task",
-        "features": [
-          "All 169+ tasks",
-          "Credits never expire",
-          "Perfect for a few listings or offers"
-        ],
-        "button_label": "Get Started",
-        "checkout_pack": "starter"
-      },
-      {
-        "name": "Active Agent",
-        "price": "$49",
-        "credits": "35 credits",
-        "per_credit": "$1.40 per task \u00b7 26% off",
-        "features": [
-          "All 169+ tasks",
-          "Credits never expire",
-          "Best for 2\u20134 active listings"
-        ],
-        "button_label": "Get Credits",
-        "checkout_pack": "business",
-        "featured": true,
-        "badge": "Most Popular"
-      },
-      {
-        "name": "Top Producer",
-        "price": "$99",
-        "credits": "80 credits",
-        "per_credit": "$1.24 per task \u00b7 35% off",
-        "features": [
-          "All 169+ tasks",
-          "Credits never expire",
-          "Covers a full busy quarter"
-        ],
-        "button_label": "Get Credits",
-        "checkout_pack": "pro"
-      },
-      {
-        "name": "Brokerage",
-        "price": "Contact Us",
-        "credits": "",
-        "per_credit": "Volume pricing & invoicing",
-        "features": [
-          "Team licenses for 5\u2013100+ agents",
-          "Invoicing & purchase orders",
-          "Onboarding support",
-          "Custom task requests"
-        ],
-        "button_label": "Request Pricing",
-        "button_action": "contact",
-        "contact_href": "mailto:hello@realtortasksai.com?subject=Brokerage%20pricing%20inquiry"
-      }
-    ],
     "features": [
       {
         "icon": "\ud83c\udfe0",
@@ -1205,64 +1147,6 @@
         "badge": "State Privacy Laws",
         "title": "SOPIPA-Compatible",
         "description": "Designed to comply with California SOPIPA and similar state-level student-data-privacy laws. Share our privacy page with your district IT team."
-      }
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Starter",
-        "price": "$19",
-        "credits": "10 credits",
-        "per_credit": "$1.90 per task",
-        "features": [
-          "All 200+ tasks",
-          "Credits never expire",
-          "Perfect for a few key documents"
-        ],
-        "button_label": "Get Started",
-        "checkout_pack": "starter"
-      },
-      {
-        "name": "Semester",
-        "price": "$49",
-        "credits": "35 credits",
-        "per_credit": "$1.40 per task \u00b7 26% off",
-        "features": [
-          "All 200+ tasks",
-          "Credits never expire",
-          "Best for a full semester of regular use"
-        ],
-        "button_label": "Get Credits",
-        "checkout_pack": "business",
-        "featured": true,
-        "badge": "Most Popular"
-      },
-      {
-        "name": "Year-Long",
-        "price": "$99",
-        "credits": "80 credits",
-        "per_credit": "$1.24 per task \u00b7 35% off",
-        "features": [
-          "All 200+ tasks",
-          "Credits never expire",
-          "Covers the whole school year"
-        ],
-        "button_label": "Get Credits",
-        "checkout_pack": "pro"
-      },
-      {
-        "name": "School / District",
-        "price": "Contact Sales",
-        "credits": "",
-        "per_credit": "Volume pricing & invoicing",
-        "features": [
-          "Site licenses for 10\u2013500+ teachers",
-          "Invoicing & purchase orders",
-          "SSO available on request",
-          "District privacy review support"
-        ],
-        "button_label": "Request a Demo",
-        "button_action": "contact",
-        "contact_href": "mailto:hello@teachertasksai.com?subject=District%20pricing%20inquiry"
       }
     ]
   },
