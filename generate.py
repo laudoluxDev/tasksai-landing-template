@@ -96,9 +96,23 @@ def build_hero_demo_html(demo_tasks: list, product_name: str, accent_color: str)
 
     slides = ""
     for i, t in enumerate(tasks):
-        prompt  = t.get("prompt", "")
-        skill   = t.get("skill", "")
-        output  = t.get("output", "")
+        prompt   = t.get("prompt", "")
+        skill    = t.get("skill", "")
+        chips    = t.get("chips", [])
+        filename = t.get("filename", "output")
+        preview  = t.get("preview", "")
+
+        # Chips HTML — up to 3 shown + "+ more"
+        chip_html = "".join(f'<span class="demo-chip">{c}</span>' for c in chips[:3])
+        chip_html += '<span class="demo-chip demo-chip-more">+ more</span>'
+
+        # Filename with live timestamp placeholder (filled by JS)
+        file_html = f'<div class="demo-filename">&#128196; {filename}_<span class="demo-ts"></span>.docx</div>'
+
+        # Preview text — truncate at 90 chars
+        preview_short = (preview[:90] + "...") if len(preview) > 90 else preview
+        preview_html  = f'<div class="demo-preview">&ldquo;{preview_short}&rdquo;</div>'
+
         slides += f"""
         <div class="demo-slide" data-index="{i}">
             <div class="demo-prompt-row">
@@ -107,11 +121,18 @@ def build_hero_demo_html(demo_tasks: list, product_name: str, accent_color: str)
             </div>
             <div class="demo-step step-skill">
                 <span class="demo-spinner"></span>
-                <span>Loading: <strong>{skill}</strong></span>
+                <span>Loading <span class="demo-product-name">{product_name}</span>: <strong>{skill}</strong></span>
             </div>
             <div class="demo-step step-output">
-                <span class="demo-check">&#10003;</span>
-                <span>{output}</span>
+                <div class="demo-output-header">
+                    <span class="demo-check">&#10003;</span>
+                    <span><span class="demo-product-name">{product_name}</span> response ready</span>
+                </div>
+                <div class="demo-output-detail">
+                    <div class="demo-chips">{chip_html}</div>
+                    {file_html}
+                    {preview_html}
+                </div>
             </div>
         </div>"""
 
@@ -136,12 +157,23 @@ def build_hero_demo_html(demo_tasks: list, product_name: str, accent_color: str)
 </div>
 <script>
 (function(){{
+    // Stamp all timestamp placeholders with current datetime
+    var now = new Date();
+    var ts  = now.getFullYear().toString()
+            + String(now.getMonth()+1).padStart(2,'0')
+            + String(now.getDate()).padStart(2,'0')
+            + '_'
+            + String(now.getHours()).padStart(2,'0')
+            + String(now.getMinutes()).padStart(2,'0');
+    document.querySelectorAll('.demo-ts').forEach(function(el){{ el.textContent = ts; }});
+
     var slides = document.querySelectorAll('.demo-slide');
     var dots   = document.querySelectorAll('.demo-dot');
     if (!slides.length) return;
     var current = 0;
-    var PHASES = [800, 900, 1100, 2200]; // typing done, skill visible, output visible, pause
-    var total   = slides.length;
+    // ms: cursor blink, skill row, output row, read pause
+    var PHASES = [800, 900, 1100, 3500];
+    var total  = slides.length;
 
     function showSlide(idx) {{
         slides.forEach(function(s,i) {{
