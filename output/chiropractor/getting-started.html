@@ -3,66 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MCP Setup — ChiropractorTasksAI</title>
-  <meta name="description" content="Connect ChiropractorTasksAI to Claude Desktop, Cursor, and Windsurf in minutes. Step-by-step MCP setup guide." />
+  <title>Getting Started — ChiropractorTasksAI</title>
+  <meta name="description" content="Connect ChiropractorTasksAI to OpenClaw, Claude Desktop, Cursor, and Windsurf. Step-by-step setup guide." />
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a1a2e; background: #fafbfc; }
     .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
-    header { padding: 20px 0; background: white; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
-    header .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.4rem; font-weight: 700; color: #1a1a2e; text-decoration: none; }
-    .logo span { color: #8B5CF6; }
-    .header-cta { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; background: #8B5CF6; color: white; }
 
     .page-hero { padding: 56px 0 36px; text-align: center; background: linear-gradient(180deg, white 0%, #f3f4f6 100%); }
     .page-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
     .page-hero h1 span { color: #8B5CF6; }
-    .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 600px; margin: 0 auto; }
+    .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 620px; margin: 0 auto; }
 
     .content { padding: 48px 0 80px; }
 
-    /* Steps */
-    .step { margin-bottom: 48px; }
-    .step-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-    .step-num { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #8B5CF6; color: white; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
-    .step h2 { font-size: 1.4rem; font-weight: 700; }
+    /* ── Install-path tabs ── */
+    .path-tabs { display: flex; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
+    .path-tab {
+      flex: 1; min-width: 180px; padding: 18px 20px; border-radius: 12px;
+      border: 2px solid #e5e7eb; background: white; cursor: pointer;
+      text-align: left; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .path-tab:hover { border-color: #8B5CF6; }
+    .path-tab.active { border-color: #8B5CF6; box-shadow: 0 0 0 3px color-mix(in srgb, #8B5CF6 15%, transparent); }
+    .path-tab .tab-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #9ca3af; margin-bottom: 4px; }
+    .path-tab .tab-name { font-size: 1.1rem; font-weight: 700; color: #111827; }
+    .path-tab .tab-note { font-size: 0.82rem; color: #6b7280; margin-top: 4px; }
+    .path-tab.active .tab-label { color: #8B5CF6; }
+    .path-tab .recommended-badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      background: #8B5CF6; color: white;
+      padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle;
+    }
+
+    .path-section { display: none; }
+    .path-section.active { display: block; }
+
+    /* ── Steps ── */
+    .step { margin-bottom: 44px; }
+    .step-header { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+    .step-num { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #8B5CF6; color: white; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .step h2 { font-size: 1.3rem; font-weight: 700; }
     .step p, .step li { color: #4b5563; font-size: 1rem; margin-bottom: 8px; }
     .step ul, .step ol { padding-left: 20px; margin-bottom: 12px; }
     .step li { margin-bottom: 6px; }
     .step a { color: #8B5CF6; text-decoration: none; font-weight: 500; }
     .step a:hover { text-decoration: underline; }
 
-    /* Code block */
-    .code-block { background: #1a1a2e; border-radius: 10px; padding: 20px 24px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.92rem; color: #e5e7eb; overflow-x: auto; }
-    .code-block .comment { color: #6b7280; }
-    .code-block .cmd { color: #60a5fa; }
+    /* ── Code blocks ── */
+    .code-block {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 14px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.92rem;
+      color: #f1f5f9;
+      overflow-x: auto;
+      line-height: 1.8;
+    }
+    .code-block .comment { color: #94a3b8; font-style: italic; }
+    .code-block .cmd     { color: #7dd3fc; }
+    .code-block .key     { color: #86efac; }
+    .code-block .val     { color: #fda4af; }
 
-    /* Client cards */
-    .client-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
-    .client-card { background: white; border: 2px solid #e5e7eb; border-radius: 10px; padding: 20px; text-align: center; }
-    .client-card .name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
-    .client-card .note { font-size: 0.85rem; color: #6b7280; }
+    /* Inline code */
+    .step code, p code, li code {
+      background: #f1f5f9; color: #0f172a;
+      padding: 2px 6px; border-radius: 4px;
+      font-size: 0.88em; font-family: 'Courier New', monospace;
+    }
 
-    /* Alert box */
-    .alert { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 16px 20px; margin: 20px 0; font-size: 0.95rem; color: #92400e; }
+    /* ── Alert / info boxes ── */
+    .alert { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 16px 20px; margin: 16px 0; font-size: 0.95rem; color: #92400e; }
     .alert strong { display: block; margin-bottom: 4px; }
+    .info-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .info-box h3 { font-size: 1rem; font-weight: 700; color: #0369a1; margin-bottom: 8px; }
+    .info-box p, .info-box li { color: #0c4a6e; font-size: 0.95rem; margin-bottom: 6px; }
+    .info-box a { color: #0369a1; font-weight: 600; }
 
-    /* No Python box */
-    .no-python { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 24px; margin: 32px 0; }
-    .no-python h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: #0369a1; }
-    .no-python p { color: #0c4a6e; font-size: 0.95rem; margin-bottom: 8px; }
-    .no-python a { color: #0369a1; font-weight: 600; }
-
-    /* Divider */
+    /* ── Divider ── */
     .divider { border: none; border-top: 1px solid #e5e7eb; margin: 40px 0; }
 
-    /* CTA */
+    /* ── Support / CTA box ── */
     .cta-box { background: #8B5CF6; border-radius: 12px; padding: 40px; text-align: center; color: white; margin-top: 48px; }
     .cta-box h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
-    .cta-box p { opacity: 0.9; margin-bottom: 24px; }
-    .cta-btn { display: inline-block; background: white; color: #8B5CF6; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    .cta-box > p { opacity: 0.9; margin-bottom: 24px; }
+
+    /* ── Contact form ── */
+    .contact-form { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; text-align: left; }
+    .contact-form label { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; display: block; }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%; padding: 10px 14px; border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.15);
+      color: white; font-size: 0.95rem; font-family: inherit;
+    }
+    .contact-form select option { color: #1a1a2e; background: white; }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: rgba(255,255,255,0.45); }
+    .contact-form textarea { min-height: 110px; resize: vertical; }
+    .contact-form button {
+      padding: 12px 28px; border-radius: 8px; border: none;
+      background: white; color: #8B5CF6;
+      font-weight: 700; font-size: 1rem; cursor: pointer;
+      align-self: flex-start; transition: opacity 0.15s;
+    }
+    .contact-form button:hover { opacity: 0.9; }
+    .contact-form button:disabled { opacity: 0.6; cursor: default; }
+    .form-success {
+      display: none; background: rgba(255,255,255,0.18);
+      border-radius: 8px; padding: 16px 20px;
+      color: white; font-weight: 600;
+    }
 
     footer { background: #1a1a2e; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
     footer a { color: #9ca3af; text-decoration: none; margin: 0 12px; }
@@ -76,163 +133,217 @@
 
 <div class="page-hero">
   <div class="container">
-    <h1>Connect to <span>Claude Desktop, Cursor & Windsurf</span></h1>
-    <p>Set up ChiropractorTasksAI as an MCP server in minutes. Your skills run in your MCP client — your data never touches our servers. It goes only to your AI provider, or nowhere if you use a local model.</p>
+    <h1>Get started with <span>ChiropractorTasksAI</span></h1>
+    <p>Choose your AI client below — setup takes under 5 minutes.</p>
   </div>
 </div>
 
 <div class="content">
   <div class="container">
 
-    <!-- Supported clients -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">✓</div>
-        <h2>Supported MCP Clients</h2>
-      </div>
-      <div class="client-grid">
-        <div class="client-card">
-          <div class="name">Claude Desktop</div>
-          <div class="note">Anthropic — Mac & Windows</div>
+    <!-- ── Path selector tabs ── -->
+    <div class="path-tabs">
+      <button class="path-tab active" onclick="showPath('openclaw', this)">
+        <div class="tab-label">Recommended</div>
+        <div class="tab-name">OpenClaw <span class="recommended-badge">Easiest</span></div>
+        <div class="tab-note">One command. No config files.</div>
+      </button>
+      <button class="path-tab" onclick="showPath('mcp', this)">
+        <div class="tab-label">Also supported</div>
+        <div class="tab-name">Claude Desktop / Cursor / Windsurf</div>
+        <div class="tab-note">MCP installer — requires Python 3.8+</div>
+      </button>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         PATH A — OpenClaw
+    ══════════════════════════════════════ -->
+    <div id="path-openclaw" class="path-section active">
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">1</div>
+          <h2>Install OpenClaw</h2>
         </div>
-        <div class="client-card">
-          <div class="name">Cursor</div>
-          <div class="note">AI code editor — Mac & Windows</div>
+        <p>If you don't have OpenClaw yet, download and install it from <a href="https://openclaw.ai" target="_blank">openclaw.ai</a>. It runs on Mac and Windows.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">2</div>
+          <h2>Install ChiropractorTasksAI</h2>
         </div>
-        <div class="client-card">
-          <div class="name">Windsurf</div>
-          <div class="note">Codeium — Mac & Windows</div>
+        <p>Open a terminal and run:</p>
+        <div class="code-block">
+          <span class="cmd">openclaw skills install chiropractor</span>
+        </div>
+        <p>OpenClaw will download the skill, prompt you for your license key, and configure everything automatically. That's it.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">3</div>
+          <h2>Start using your tasks</h2>
+        </div>
+        <p>Just describe what you need in plain language:</p>
+        <div class="code-block">
+          <span class="comment">You type:</span><br/>
+          <span class="cmd">"I need help with Write a new patient welcome letter"</span><br/><br/>
+          <span class="comment">ChiropractorTasksAI finds the right task, confirms with you,</span><br/>
+          <span class="comment">then runs it. Each task uses 1 credit.</span>
+        </div>
+        <p>Check your credit balance anytime: <em>"Check my chiropractor credits"</em></p>
+      </div>
+
+      <div class="info-box">
+        <h3>💡 Don't have a license key yet?</h3>
+        <p>Sign up for 5 free credits — no credit card required. Your license key is emailed to you immediately.</p>
+        <p><a href="/signup">→ Get 5 free credits at chiropractortasksai.com/signup</a></p>
+      </div>
+
+    </div><!-- /path-openclaw -->
+
+    <!-- ══════════════════════════════════════
+         PATH B — MCP (Claude Desktop / Cursor / Windsurf)
+    ══════════════════════════════════════ -->
+    <div id="path-mcp" class="path-section">
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">1</div>
+          <h2>Requirements</h2>
+        </div>
+        <ul>
+          <li><strong>Python 3.8 or later</strong> — <a href="https://python.org/downloads" target="_blank">download at python.org</a> if needed</li>
+          <li><strong>A ChiropractorTasksAI license key</strong> — you'll receive this by email after purchase, or <a href="/signup">get 5 free credits</a> to get one now</li>
+          <li><strong>At least one supported MCP client</strong> — Claude Desktop, Cursor, or Windsurf</li>
+        </ul>
+        <div class="alert">
+          <strong>⚠️ Mac users running macOS 14+</strong>
+          macOS may ask "python3 would like to access files in your Downloads folder" — click <strong>Allow</strong>. This is a one-time security prompt.
         </div>
       </div>
-      <p>The installer auto-detects which clients you have installed and configures all of them at once.</p>
-    </div>
 
-    <hr class="divider" />
-
-    <!-- Step 1: Requirements -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">1</div>
-        <h2>Requirements</h2>
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">2</div>
+          <h2>Download Your Package</h2>
+        </div>
+        <p>After purchase, you'll receive an email with a personalized download link. Extract the zip file — you'll see two folders:</p>
+        <ul>
+          <li><code>openclaw/</code> — for OpenClaw users (see the OpenClaw tab above)</li>
+          <li><code>mcp/</code> — for Claude Desktop, Cursor, and Windsurf</li>
+        </ul>
       </div>
-      <ul>
-        <li><strong>Python 3.8 or later</strong> — <a href="https://python.org/downloads" target="_blank">download at python.org</a> if needed</li>
-        <li><strong>A ChiropractorTasksAI license key</strong> — included in your purchase confirmation email, or <a href="/signup">get 5 free credits</a></li>
-        <li><strong>At least one supported MCP client</strong> — Claude Desktop, Cursor, or Windsurf</li>
-      </ul>
-      <div class="alert">
-        <strong>⚠️ Mac users running macOS 14+</strong>
-        macOS may ask "python3 would like to access files in your Downloads folder" — click <strong>Allow</strong>. This is a one-time security prompt.
-      </div>
-    </div>
 
-    <!-- Step 2: Download -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">2</div>
-        <h2>Download Your Package</h2>
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">3</div>
+          <h2>Run the Installer</h2>
+        </div>
+        <p>Open a terminal (<strong>Mac:</strong> Terminal app &nbsp;|&nbsp; <strong>Windows:</strong> Command Prompt or PowerShell) and run:</p>
+        <div class="code-block">
+          <span class="comment"># Navigate to the mcp folder</span><br/>
+          <span class="cmd">cd ~/Downloads/chiropractor/mcp</span><br/><br/>
+          <span class="comment"># Run the installer — it will prompt you for your license key</span><br/>
+          <span class="cmd">python3 install.py</span>
+        </div>
+        <p>The installer will:</p>
+        <ol>
+          <li>Detect your installed MCP clients (Claude Desktop, Cursor, Windsurf)</li>
+          <li>Install the required Python packages automatically</li>
+          <li>Back up your existing MCP config (nothing is lost)</li>
+          <li>Configure ChiropractorTasksAI in all detected clients</li>
+        </ol>
       </div>
-      <p>After purchase, you'll receive an email with a personalized download link. Your license key is pre-configured in the package — no copying and pasting required.</p>
-      <p>Extract the zip file. You'll see two folders:</p>
-      <ul>
-        <li><code>openclaw/</code> — for OpenClaw users</li>
-        <li><code>mcp/</code> — for Claude Desktop, Cursor, and Windsurf</li>
-      </ul>
-    </div>
 
-    <!-- Step 3: Install -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">3</div>
-        <h2>Run the Installer</h2>
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">4</div>
+          <h2>Restart Your MCP Client</h2>
+        </div>
+        <p>Fully quit and reopen Claude Desktop, Cursor, or Windsurf. MCP servers load at startup — a restart is required.</p>
+        <p>You should see <strong>chiropractor</strong> appear in your connected tools list.</p>
       </div>
-      <p>Open a terminal (<strong>Mac:</strong> Terminal app &nbsp;|&nbsp; <strong>Windows:</strong> Command Prompt or PowerShell) and run:</p>
-      <div class="code-block">
-        <span class="comment"># Navigate to the mcp folder</span><br/>
-        <span class="cmd">cd ~/Downloads/chiropractor/mcp</span><br/><br/>
-        <span class="comment"># Run the installer</span><br/>
-        <span class="cmd">python3 install.py</span>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">5</div>
+          <h2>Start Using Your Tasks</h2>
+        </div>
+        <p>Just describe what you need in plain language:</p>
+        <div class="code-block">
+          <span class="comment">You type:</span><br/>
+          <span class="cmd">"I need help with Write a new patient welcome letter"</span><br/><br/>
+          <span class="comment">ChiropractorTasksAI finds the right task, confirms with you,</span><br/>
+          <span class="comment">then runs it. Each task uses 1 credit.</span>
+        </div>
+        <p>Check your credit balance anytime: <em>"Check my chiropractor credits"</em></p>
       </div>
-      <p>The installer will:</p>
-      <ol>
-        <li>Detect your installed MCP clients (Claude Desktop, Cursor, Windsurf)</li>
-        <li>Install the required Python packages automatically</li>
-        <li>Back up your existing MCP config (nothing is lost)</li>
-        <li>Configure ChiropractorTasksAI in all detected clients</li>
-      </ol>
-    </div>
 
-    <!-- Step 4: Restart -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">4</div>
-        <h2>Restart Your MCP Client</h2>
-      </div>
-      <p>Fully quit and reopen Claude Desktop, Cursor, or Windsurf. MCP servers are loaded at startup — a restart is required.</p>
-      <p>You should see <strong>chiropractor</strong> appear in your connected tools list.</p>
-    </div>
+      <hr class="divider" />
 
-    <!-- Step 5: Use it -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">5</div>
-        <h2>Start Using Your Skills</h2>
-      </div>
-      <p>Just describe what you need in plain language — your AI will search for the right skill and ask you to confirm before running it:</p>
-      <div class="code-block">
-        <span class="comment">You type:</span><br/>
-        <span class="cmd">"I need help with Write a new patient welcome letter"</span><br/><br/>
-        <span class="comment">ChiropractorTasksAI finds matching skills, shows you options,</span><br/>
-        <span class="comment">then runs the one you choose.</span>
-      </div>
-      <p>Each skill costs 1 credit. Your balance is checked any time with: <em>"Check my chiropractor credits"</em></p>
-    </div>
-
-    <hr class="divider" />
-
-    <!-- No Python fallback -->
-    <div class="no-python">
-      <h3>🐍 Don't have Python or a supported MCP client?</h3>
-      <p>No problem — you can use ChiropractorTasksAI directly in your browser with no installation at all.</p>
-      <p><a href="/signup">→ Try the web app free — 5 credits, no card required</a></p>
-      <p style="margin-top:8px;">Or use ChiropractorTasksAI with <a href="https://openclaw.ai" target="_blank">OpenClaw</a> — works out of the box, no Python or config files needed.</p>
-    </div>
-
-    <hr class="divider" />
-
-    <!-- Manual config -->
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">?</div>
-        <h2>Manual Configuration</h2>
-      </div>
-      <p>If you prefer to configure manually, add this to your MCP client's config file:</p>
-      <div class="code-block">
-{<br/>
-&nbsp;&nbsp;"mcpServers": {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;"chiropractor": {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"command": "python3",<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"args": ["/path/to/mcp/server.py"],<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"env": {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"CHIROPRACTORTASKSAI_LICENSE_KEY": "your_license_key_here"<br/>
+      <div class="step">
+        <div class="step-header">
+          <div class="step-num">?</div>
+          <h2>Manual Configuration</h2>
+        </div>
+        <p>If you prefer to configure manually, add this to your MCP client's config file:</p>
+        <div class="code-block">
+<span class="key">{</span><br/>
+&nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"chiropractor"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/path/to/mcp/server.py"</span>],<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"CHIROPRACTORTASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-license-key-here"</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// paste the license key from your confirmation email</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 &nbsp;&nbsp;}<br/>
-}
+<span class="key">}</span>
+        </div>
+        <p><strong>Config file locations:</strong></p>
+        <ul>
+          <li><strong>Claude Desktop (Mac):</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+          <li><strong>Claude Desktop (Windows):</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
+          <li><strong>Cursor / Windsurf:</strong> Check Settings → MCP</li>
+        </ul>
       </div>
-      <p><strong>Config file locations:</strong></p>
-      <ul>
-        <li><strong>Claude Desktop (Mac):</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
-        <li><strong>Claude Desktop (Windows):</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
-        <li><strong>Cursor / Windsurf:</strong> Check Settings → MCP</li>
-      </ul>
-    </div>
 
-    <!-- CTA -->
+    </div><!-- /path-mcp -->
+
+    <!-- ── Support contact form ── -->
     <div class="cta-box">
       <h2>Need Help?</h2>
-      <p>Our support team typically responds within a few hours.</p>
-      <a href="mailto:hello@chiropractortasksai.com" class="cta-btn">Email Support</a>
+      <p>Fill in the form and we'll get back to you within a few hours.</p>
+      <form class="contact-form" id="supportForm">
+        <div>
+          <label for="sf_name">Your name</label>
+          <input type="text" id="sf_name" name="name" placeholder="Jane Smith" required />
+        </div>
+        <div>
+          <label for="sf_email">Your email</label>
+          <input type="email" id="sf_email" name="email" placeholder="jane@example.com" required />
+        </div>
+        <div>
+          <label for="sf_topic">What do you need help with?</label>
+          <select id="sf_topic" name="topic">
+            <option value="">— Select a topic —</option>
+            <option>Installation / setup</option>
+            <option>License key or credits</option>
+            <option>Task not working as expected</option>
+            <option>Billing question</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="sf_msg">Message</label>
+          <textarea id="sf_msg" name="message" placeholder="Describe what's happening…" required></textarea>
+        </div>
+        <button type="submit" id="sf_btn">Send Message</button>
+        <div class="form-success" id="sf_success">✓ Message sent! We'll reply within a few hours.</div>
+      </form>
     </div>
 
   </div>
@@ -249,6 +360,54 @@
     <p style="margin-top:12px;">© 2026 ChiropractorTasksAI. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  function showPath(id, tab) {
+    document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.path-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('path-' + id).classList.add('active');
+    tab.classList.add('active');
+  }
+
+  (function () {
+    var form = document.getElementById('supportForm');
+    if (!form) return;
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn     = document.getElementById('sf_btn');
+      var success = document.getElementById('sf_success');
+      btn.disabled    = true;
+      btn.textContent = 'Sending…';
+      var payload = {
+        name:    document.getElementById('sf_name').value.trim(),
+        email:   document.getElementById('sf_email').value.trim(),
+        topic:   document.getElementById('sf_topic').value,
+        message: document.getElementById('sf_msg').value.trim(),
+        product: 'ChiropractorTasksAI'
+      };
+      try {
+        var res = await fetch('https://api.lawtasksai.com/v1/support', {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        });
+        if (res.ok || res.status === 204) {
+          form.reset();
+          success.style.display = 'block';
+          btn.style.display = 'none';
+        } else {
+          btn.disabled    = false;
+          btn.textContent = 'Send Message';
+          alert('Something went wrong. Please email us directly at hello@chiropractortasksai.com');
+        }
+      } catch (err) {
+        btn.disabled    = false;
+        btn.textContent = 'Send Message';
+        alert('Something went wrong. Please email us directly at hello@chiropractortasksai.com');
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
