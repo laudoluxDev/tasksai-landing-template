@@ -235,100 +235,84 @@ def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> s
 def build_pricing_html(tiers: list, hero_count: str, show_default_tryit: bool = True) -> str:
     """Render pricing cards HTML. If tiers is empty, return the default pricing-grid HTML."""
     if not tiers:
-        tryit_block = ""
-        if show_default_tryit:
-            tryit_block = f"""                <div class="pricing-card">
+        return f"""<div class="pricing-grid">
+                <div class="pricing-card">
                     <h3>Try It</h3>
                     <div class="price">$5</div>
-                    <div class="credits">2 credits</div>
-                    <p class="per-credit">$2.50 per task</p>
+                    <div class="credits">5 credits</div>
+                    <p class="per-credit">$1.00 per task</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Try before you commit</li>
+                        <li>\u2713 Perfect for a first look</li>
                     </ul>
                     <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
                 </div>
 
-"""
-        return f"""<div class="pricing-grid">
-{tryit_block}                <div class="pricing-card">
+                <div class="pricing-card">
                     <h3>Starter</h3>
                     <div class="price">$29</div>
-                    <div class="credits">15 credits</div>
-                    <p class="per-credit">$1.93 per task</p>
+                    <div class="credits">30 credits</div>
+                    <p class="per-credit">$0.97 per task</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Perfect for getting started</li>
+                        <li>\u2713 Great for occasional use</li>
                     </ul>
                     <button onclick="checkout('starter')" class="buy-btn">Get Started</button>
                 </div>
 
-                <div class="pricing-card">
-                    <h3>Pro</h3>
-                    <div class="price">$99</div>
-                    <div class="credits">60 credits</div>
-                    <p class="per-credit">$1.65 per task \u00b7 14% off</p>
-                    <ul>
-                        <li>\u2713 All {hero_count} tasks</li>
-                        <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Great for regular use</li>
-                    </ul>
-                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
-                </div>
-
                 <div class="pricing-card featured">
                     <div class="badge">Most Popular</div>
-                    <h3>Business</h3>
-                    <div class="price">$199</div>
-                    <div class="credits">150 credits</div>
-                    <p class="per-credit">$1.33 per task \u00b7 31% off</p>
+                    <h3>Professional</h3>
+                    <div class="price">$79</div>
+                    <div class="credits">100 credits</div>
+                    <p class="per-credit">$0.79 per task &middot; 21% off</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Best for active practices</li>
+                        <li>\u2713 Best for regular use</li>
                     </ul>
-                    <button onclick="checkout('business')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('professional')" class="buy-btn">Get Credits</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Power</h3>
-                    <div class="price">$349</div>
-                    <div class="credits">350 credits</div>
-                    <p class="per-credit">$1.00 per task \u00b7 48% off</p>
+                    <h3>Power User</h3>
+                    <div class="price">$149</div>
+                    <div class="credits">200 credits</div>
+                    <p class="per-credit">$0.75 per task &middot; 25% off</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Serious savings for busy teams</li>
+                        <li>\u2713 For high-volume workflows</li>
                     </ul>
-                    <button onclick="checkout('power')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('poweruser')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Studio</h3>
+                    <div class="price">$299</div>
+                    <div class="credits">500 credits</div>
+                    <p class="per-credit">$0.60 per task &middot; 40% off</p>
+                    <ul>
+                        <li>\u2713 All {hero_count} tasks</li>
+                        <li>\u2713 Credits never expire</li>
+                        <li>\u2713 Ideal for teams and firms</li>
+                    </ul>
+                    <button onclick="checkout('studio')" class="buy-btn">Get Credits</button>
                 </div>
 
                 <div class="pricing-card">
                     <h3>Unlimited</h3>
-                    <div class="price">$599</div>
-                    <div class="credits">800 credits</div>
-                    <p class="per-credit">$0.75 per task \u00b7 61% off</p>
+                    <div class="price">$499</div>
+                    <div class="credits">1,000 credits</div>
+                    <p class="per-credit">$0.50 per task &middot; 50% off</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
                         <li>\u2713 Maximum value</li>
                     </ul>
                     <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$999</div>
-                    <div class="credits">2,000 credits</div>
-                    <p class="per-credit">$0.50 per task \u00b7 74% off</p>
-                    <ul>
-                        <li>\u2713 All {hero_count} tasks</li>
-                        <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Best value for power users</li>
-                    </ul>
-                    <button onclick="checkout('enterprise')" class="buy-btn">Get Credits</button>
                 </div>
             </div>"""
 
