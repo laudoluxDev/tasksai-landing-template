@@ -679,6 +679,11 @@ def main():
                 product_id = v.get("product_id", slug)
                 hero_count = v.get("hero_count") or f"{v.get('skill_count', 200)}+"
                 target_audience = v.get("target_audience") or v.get("audience", "professionals")
+                show_tryit = v.get("show_tryit", True)
+                pricing_tiers = v.get("pricing_tiers", [])
+                pricing_cards = build_pricing_html(pricing_tiers, hero_count, show_tryit)
+                disclaimer = v.get("api_cost_disclaimer", "")
+                api_cost_disclaimer_bottom_text = disclaimer if disclaimer else ""
                 if "TasksAI" in product_name:
                     parts = product_name.split("TasksAI")
                     logo_split = f"{parts[0]}<span>TasksAI</span>"
@@ -753,6 +758,7 @@ def main():
                 ("support-template.html", "support.html"),
                 ("verified-safe-template.html", "verified_safe.html"),
                 ("faq-template.html", "faq.html"),
+                ("buy-credits-template.html", "buy-credits.html"),
             ]:
                 tmpl_path = TEMPLATE_FILE.parent / tmpl_name
                 if tmpl_path.exists():
@@ -795,6 +801,8 @@ def main():
                         .replace("{{NAME}}", product_name) \
                         .replace("{{HERO_COUNT}}", hero_count) \
                         .replace("{{TARGET_AUDIENCE}}", target_audience) \
+                        .replace("{{PRICING_CARDS}}", pricing_cards) \
+                        .replace("{{API_COST_DISCLAIMER_BOTTOM_TEXT}}", api_cost_disclaimer_bottom_text) \
                         .replace("{{FOOTER}}", footer_html) \
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
