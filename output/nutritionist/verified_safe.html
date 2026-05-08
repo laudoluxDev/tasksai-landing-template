@@ -427,7 +427,7 @@
         { key: 'prompt-extraction',  icon: '🔓', label: 'Extraction' },
     ];
 
-    fetch(`${API_BASE}/v1/skills?vertical=${VERTICAL}&limit=500`)
+    fetch(`${API_BASE}/v1/skills?limit=500`, { headers: { 'X-Product-ID': VERTICAL } })
     .then(r => r.json())
     .then(skills => {
         if (!skills || !skills.length) {

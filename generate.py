@@ -86,6 +86,90 @@ def build_testimonials_html(testimonials: list, heading: str = "What our users a
 </section>"""
 
 
+def build_hero_demo_html(demo_tasks: list, product_name: str, accent_color: str) -> str:
+    """Build an animated CSS terminal card cycling through 3 demo tasks."""
+    if not demo_tasks or len(demo_tasks) < 1:
+        return ""
+
+    # Pad to exactly 3 tasks
+    tasks = (demo_tasks * 3)[:3]
+
+    slides = ""
+    for i, t in enumerate(tasks):
+        prompt  = t.get("prompt", "")
+        skill   = t.get("skill", "")
+        output  = t.get("output", "")
+        slides += f"""
+        <div class="demo-slide" data-index="{i}">
+            <div class="demo-prompt-row">
+                <span class="demo-caret">&gt;</span>
+                <span class="demo-prompt-text">{prompt}</span><span class="demo-cursor">|</span>
+            </div>
+            <div class="demo-step step-skill">
+                <span class="demo-spinner"></span>
+                <span>Loading: <strong>{skill}</strong></span>
+            </div>
+            <div class="demo-step step-output">
+                <span class="demo-check">&#10003;</span>
+                <span>{output}</span>
+            </div>
+        </div>"""
+
+    dots = "".join(
+        f'<span class="demo-dot{" active" if i == 0 else ""}" data-dot="{i}"></span>'
+        for i in range(len(tasks))
+    )
+
+    return f"""
+<div class="hero-demo" aria-hidden="true">
+    <div class="demo-card">
+        <div class="demo-card-header">
+            <div class="demo-dots"><span></span><span></span><span></span></div>
+            <span class="demo-card-title">{product_name}</span>
+        </div>
+        <div class="demo-card-body">
+            <div class="demo-slides">{slides}
+            </div>
+        </div>
+    </div>
+    <div class="demo-indicators">{dots}</div>
+</div>
+<script>
+(function(){{
+    var slides = document.querySelectorAll('.demo-slide');
+    var dots   = document.querySelectorAll('.demo-dot');
+    if (!slides.length) return;
+    var current = 0;
+    var PHASES = [800, 900, 1100, 2200]; // typing done, skill visible, output visible, pause
+    var total   = slides.length;
+
+    function showSlide(idx) {{
+        slides.forEach(function(s,i) {{
+            s.classList.toggle('active', i === idx);
+            s.classList.remove('phase-skill','phase-output');
+        }});
+        dots.forEach(function(d,i) {{ d.classList.toggle('active', i === idx); }});
+        var s = slides[idx];
+        setTimeout(function(){{ s.classList.add('phase-skill');  }}, PHASES[0]);
+        setTimeout(function(){{ s.classList.add('phase-output'); }}, PHASES[0]+PHASES[1]);
+    }}
+
+    function next() {{
+        current = (current + 1) % total;
+        showSlide(current);
+    }}
+
+    showSlide(0);
+    setInterval(next, PHASES[0]+PHASES[1]+PHASES[2]+PHASES[3]);
+
+    dots.forEach(function(d,i) {{
+        d.addEventListener('click', function() {{ current=i; showSlide(i); }});
+    }});
+}})();
+</script>
+"""
+
+
 def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> str:
     """Render compliance/trust badges section HTML, or empty string if no items."""
     if not items:
@@ -324,6 +408,13 @@ def generate_page(template: str, vertical: dict) -> str:
     background = vertical.get("background_color", "#FAFAFA")
     tasks = vertical.get("example_tasks") or vertical.get("sample_tasks", [])
     hero_h1 = vertical.get("hero_h1") or vertical.get("claude_your") or "Stop prompt engineering. Start getting work done"
+    # If hero_h1 ends with a complete sentence (period), use it as-is.
+    # Otherwise append the brand tagline span.
+    hero_h1_stripped = hero_h1.rstrip(".")
+    if hero_h1.endswith(".") or vertical.get("hero_h1_no_span"):
+        hero_h1_html = f"{hero_h1_stripped}."
+    else:
+        hero_h1_html = f"{hero_h1_stripped}.<br><span>No Prompt Engineering.</span>"
     hero_count = vertical.get("hero_count") or f"{vertical.get('skill_count', 200)}+"
     hero_noun = vertical.get("hero_noun", "Expert Tasks")
     # Build features from categories if no explicit features list
@@ -395,6 +486,9 @@ def generate_page(template: str, vertical: dict) -> str:
     # New optional fields
     pricing_tiers = vertical.get("pricing_tiers", [])
     pricing_cards = build_pricing_html(pricing_tiers, hero_count, show_tryit)
+
+    demo_tasks = vertical.get("demo_tasks", [])
+    hero_demo_html = build_hero_demo_html(demo_tasks, product_name, accent)
 
     testimonials = vertical.get("testimonials", [])
     testimonials_heading = vertical.get("testimonials_heading", "What our users are saying")
@@ -468,6 +562,7 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{HERO_COUNT}}": hero_count,
         "{{HERO_NOUN}}": hero_noun,
         "{{HERO_H1}}": hero_h1,
+        "{{HERO_H1_HTML}}": hero_h1_html,
         "{{CLAUDE_YOUR}}": hero_h1,
         "{{HERO_EYEBROW}}": vertical.get("hero_eyebrow", ""),
         "{{HERO_EYEBROW_OR_DEFAULT}}": hero_eyebrow_or_default,
@@ -498,6 +593,7 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{TESTIMONIALS_SECTION}}": testimonials_section,
         "{{COMPLIANCE_SECTION}}": compliance_section,
         "{{PRICING_CARDS}}": pricing_cards,
+        "{{HERO_DEMO_HTML}}": hero_demo_html,
     }
 
     for placeholder, value in replacements.items():

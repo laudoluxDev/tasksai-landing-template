@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RealtorTasksAI — 200+ AI-powered administrative tools for real estate agents and brokers.</title>
-    <meta name="description" content="200+ expert-built AI tasks for Real estate agents, brokers, and transaction coordinators. No prompt engineering. Pay as you go. Credits never expire.">
+    <title>RealtorTasksAI — 169 AI-powered tasks for real estate agents and brokers. Listings, offers, buyer emails, disclosures — done in minutes.</title>
+    <meta name="description" content="169+ expert-built AI tasks for Real estate agents, brokers, and transaction coordinators. No prompt engineering. Pay as you go. Credits never expire.">
     <link rel="canonical" href="https://realtortasksai.com/">
-    <meta property="og:title" content="RealtorTasksAI — 200+ Expert-Built Tasks. No Prompt Engineering.">
-    <meta property="og:description" content="Stop wrestling with generic AI. 200+ purpose-built tasks for Real estate agents, brokers, and transaction coordinators. Pay as you go, credits never expire.">
+    <meta property="og:title" content="RealtorTasksAI — 169+ Expert-Built Tasks. No Prompt Engineering.">
+    <meta property="og:description" content="Stop wrestling with generic AI. 169+ purpose-built tasks for Real estate agents, brokers, and transaction coordinators. Pay as you go, credits never expire.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://realtortasksai.com">
     <meta property="og:site_name" content="RealtorTasksAI">
@@ -19,7 +19,7 @@
         "@type": "SoftwareApplication",
         "name": "RealtorTasksAI",
         "applicationCategory": "BusinessApplication",
-        "description": "AI-powered task automation for Real estate agents, brokers, and transaction coordinators. 200+ specialized tasks. Privacy-focused. Works with OpenClaw, Claude Desktop, and any MCP-compatible AI assistant.",
+        "description": "AI-powered task automation for Real estate agents, brokers, and transaction coordinators. 169+ specialized tasks. Privacy-focused. Works with OpenClaw, Claude Desktop, and any MCP-compatible AI assistant.",
         "url": "https://realtortasksai.com",
         "operatingSystem": "Windows, macOS, Linux",
         "offers": [
@@ -234,6 +234,142 @@
             color: #9ca3af;
             margin-top: 14px;
             letter-spacing: 0.01em;
+        }
+
+        /* ─── Hero Demo Animation ─── */
+        .hero-demo {
+            margin-top: 52px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .demo-card {
+            background: #0f172a;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 540px;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+            overflow: hidden;
+            font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+        }
+
+        .demo-card-header {
+            background: #1e293b;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .demo-dots {
+            display: flex;
+            gap: 6px;
+        }
+        .demo-dots span {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            display: block;
+        }
+        .demo-dots span:nth-child(1) { background: #ef4444; }
+        .demo-dots span:nth-child(2) { background: #f59e0b; }
+        .demo-dots span:nth-child(3) { background: #22c55e; }
+
+        .demo-card-title {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            font-family: inherit;
+            letter-spacing: 0.02em;
+        }
+
+        .demo-card-body {
+            padding: 24px 22px 22px;
+            min-height: 148px;
+        }
+
+        .demo-slides { position: relative; }
+
+        .demo-slide {
+            display: none;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .demo-slide.active { display: flex; }
+
+        .demo-prompt-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            color: #e2e8f0;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        .demo-caret { color: var(--accent); font-weight: 700; flex-shrink: 0; }
+        .demo-prompt-text { flex: 1; }
+        .demo-cursor {
+            color: var(--accent);
+            animation: blink 0.9s step-end infinite;
+        }
+        .demo-slide.phase-skill .demo-cursor,
+        .demo-slide.phase-output .demo-cursor { display: none; }
+
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+        .demo-step {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.83rem;
+            line-height: 1.5;
+            padding: 8px 12px;
+            border-radius: 6px;
+            animation: fadeSlideIn 0.35s ease;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-skill  { background: #1e293b; color: #94a3b8; }
+        .step-skill strong { color: #e2e8f0; font-weight: 600; }
+        .step-output { background: #052e16; color: #86efac; }
+        .step-output .demo-check { color: #22c55e; font-weight: 700; flex-shrink: 0; }
+
+        .demo-slide.phase-skill  .step-skill  { display: flex; }
+        .demo-slide.phase-output .step-skill  { display: flex; }
+        .demo-slide.phase-output .step-output { display: flex; }
+
+        .demo-spinner {
+            width: 13px; height: 13px;
+            border: 2px solid #334155;
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: spin 0.7s linear infinite;
+        }
+        .demo-slide.phase-output .demo-spinner {
+            border-top-color: #22c55e;
+            animation: none;
+            border-color: #22c55e;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .demo-indicators {
+            display: flex;
+            gap: 8px;
+        }
+        .demo-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .demo-dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
         }
 
         /* ─── Example Tasks Band ─── */
@@ -799,14 +935,104 @@
     <!-- ─── Hero ─── -->
     <section class="hero">
         <div class="container">
-            <div class="hero-eyebrow">200+ Purpose-Built Expert Tasks</div>
-            <h1>Stop prompt engineering. Start getting work done.<br><span>No Prompt Engineering.</span></h1>
-            <p class="subtitle">A generic AI is a Swiss Army knife — useful for everything, optimized for nothing. RealtorTasksAI is 200+ purpose-built tasks, each engineered for exactly the work <em>you</em> do.</p>
+            <div class="hero-eyebrow">For real estate agents & brokers</div>
+            <h1>Write the listing. Send the follow-up. Close the deal.</h1>
+            <p class="subtitle">169 ready-to-run tasks for every part of your deal — listing descriptions, offer letters, buyer emails, disclosure packets, CMA summaries, showing follow-ups, and more. Pick a task, answer a few questions, get professional output. No prompts to write. Works in Claude Desktop and OpenClaw.</p>
             <div class="hero-ctas">
                 <a href="/signup" class="cta-button">Try Free — 5 Credits, No Card</a>
                 <a href="#pricing" class="cta-button secondary">See Pricing</a>
             </div>
-            <p class="hero-fine-print">5 free credits on signup &nbsp;·&nbsp; Credits never expire &nbsp;·&nbsp; No subscription</p>
+            <p class="hero-fine-print">5 free credits on signup · Credits never expire · No subscription</p>
+            
+<div class="hero-demo" aria-hidden="true">
+    <div class="demo-card">
+        <div class="demo-card-header">
+            <div class="demo-dots"><span></span><span></span><span></span></div>
+            <span class="demo-card-title">RealtorTasksAI</span>
+        </div>
+        <div class="demo-card-body">
+            <div class="demo-slides">
+        <div class="demo-slide" data-index="0">
+            <div class="demo-prompt-row">
+                <span class="demo-caret">&gt;</span>
+                <span class="demo-prompt-text">Write a listing description for a 4BR home in Denver</span><span class="demo-cursor">|</span>
+            </div>
+            <div class="demo-step step-skill">
+                <span class="demo-spinner"></span>
+                <span>Loading: <strong>Listing Description Writer</strong></span>
+            </div>
+            <div class="demo-step step-output">
+                <span class="demo-check">&#10003;</span>
+                <span>MLS-ready listing description generated</span>
+            </div>
+        </div>
+        <div class="demo-slide" data-index="1">
+            <div class="demo-prompt-row">
+                <span class="demo-caret">&gt;</span>
+                <span class="demo-prompt-text">Send a follow-up to buyers from Saturday's open house</span><span class="demo-cursor">|</span>
+            </div>
+            <div class="demo-step step-skill">
+                <span class="demo-spinner"></span>
+                <span>Loading: <strong>Open House Follow-Up Email</strong></span>
+            </div>
+            <div class="demo-step step-output">
+                <span class="demo-check">&#10003;</span>
+                <span>Personalized follow-up email drafted</span>
+            </div>
+        </div>
+        <div class="demo-slide" data-index="2">
+            <div class="demo-prompt-row">
+                <span class="demo-caret">&gt;</span>
+                <span class="demo-prompt-text">Prepare a CMA summary for 123 Maple Street</span><span class="demo-cursor">|</span>
+            </div>
+            <div class="demo-step step-skill">
+                <span class="demo-spinner"></span>
+                <span>Loading: <strong>Comparative Market Analysis</strong></span>
+            </div>
+            <div class="demo-step step-output">
+                <span class="demo-check">&#10003;</span>
+                <span>Client-ready CMA summary generated</span>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div class="demo-indicators"><span class="demo-dot active" data-dot="0"></span><span class="demo-dot" data-dot="1"></span><span class="demo-dot" data-dot="2"></span></div>
+</div>
+<script>
+(function(){
+    var slides = document.querySelectorAll('.demo-slide');
+    var dots   = document.querySelectorAll('.demo-dot');
+    if (!slides.length) return;
+    var current = 0;
+    var PHASES = [800, 900, 1100, 2200]; // typing done, skill visible, output visible, pause
+    var total   = slides.length;
+
+    function showSlide(idx) {
+        slides.forEach(function(s,i) {
+            s.classList.toggle('active', i === idx);
+            s.classList.remove('phase-skill','phase-output');
+        });
+        dots.forEach(function(d,i) { d.classList.toggle('active', i === idx); });
+        var s = slides[idx];
+        setTimeout(function(){ s.classList.add('phase-skill');  }, PHASES[0]);
+        setTimeout(function(){ s.classList.add('phase-output'); }, PHASES[0]+PHASES[1]);
+    }
+
+    function next() {
+        current = (current + 1) % total;
+        showSlide(current);
+    }
+
+    showSlide(0);
+    setInterval(next, PHASES[0]+PHASES[1]+PHASES[2]+PHASES[3]);
+
+    dots.forEach(function(d,i) {
+        d.addEventListener('click', function() { current=i; showSlide(i); });
+    });
+})();
+</script>
+
         </div>
     </section>
 
@@ -825,55 +1051,43 @@
     <!-- ─── Features ─── -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Built for Real estate agents</h2>
-            <p class="section-subtitle">Every task template was engineered with the specific terminology, workflows, and standards of your profession — not repurposed from generic business content.</p>
+            <h2 class="section-title">Built for agents who close deals, not write prompts</h2>
+            <p class="section-subtitle">Every task was written by and for real estate professionals — MLS language, disclosure formats, transaction timelines, and the exact communication style that wins and keeps clients.</p>
             <div class="feature-grid">
                 <div class="feature-card" onclick="openCategory('Listing & Marketing Administration')">
-                    <div class="feature-icon">📣</div>
-                    <h3>Listing & Marketing Administration</h3>
-                    <p>Purpose-built tasks covering listing & marketing administration for Real estate agents.</p>
+                    <div class="feature-icon">🏠</div>
+                    <h3>Listings That Get Showings</h3>
+                    <p>Write compelling MLS descriptions, develop full marketing plans, schedule professional photography, optimize online listings, and manage syndication — in minutes, not hours.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Buyer & Seller Communications')">
-                    <div class="feature-icon">📄</div>
+                    <div class="feature-icon">✉️</div>
                     <h3>Buyer & Seller Communications</h3>
-                    <p>Purpose-built tasks covering buyer & seller communications for Real estate agents.</p>
+                    <p>Draft offer letters, respond to inquiries, set expectations, handle objections, send personalized follow-ups, and keep clients informed at every stage without starting from scratch.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Transaction Coordination')">
                     <div class="feature-icon">🔄</div>
                     <h3>Transaction Coordination</h3>
-                    <p>Purpose-built tasks covering transaction coordination for Real estate agents.</p>
+                    <p>Manage checklists, coordinate inspections, appraisals, and title searches, track loan approval status, schedule the final walkthrough, and get to the closing table without anything falling through the cracks.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Compliance & Disclosure Documentation')">
-                    <div class="feature-icon">✅</div>
-                    <h3>Compliance & Disclosure Documentation</h3>
-                    <p>Purpose-built tasks covering compliance & disclosure documentation for Real estate agents.</p>
-                    <div class="card-cta">Browse tasks →</div>
-                </div>
-                <div class="feature-card" onclick="openCategory('Client Relationship Management')">
-                    <div class="feature-icon">👤</div>
-                    <h3>Client Relationship Management</h3>
-                    <p>Purpose-built tasks covering client relationship management for Real estate agents.</p>
-                    <div class="card-cta">Browse tasks →</div>
-                </div>
-                <div class="feature-card" onclick="openCategory('Financial & Commission Administration')">
-                    <div class="feature-icon">💰</div>
-                    <h3>Financial & Commission Administration</h3>
-                    <p>Purpose-built tasks covering financial & commission administration for Real estate agents.</p>
+                    <div class="feature-icon">📋</div>
+                    <h3>Disclosures & Compliance Docs</h3>
+                    <p>Prepare seller disclosures, lead-based paint notices, agency disclosures, fair housing compliance, RESPA guidelines, and required transaction documents — correctly, every time.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
                 <div class="feature-card" onclick="openCategory('Open House & Showing Administration')">
-                    <div class="feature-icon">📄</div>
-                    <h3>Open House & Showing Administration</h3>
-                    <p>Purpose-built tasks covering open house & showing administration for Real estate agents.</p>
+                    <div class="feature-icon">🤝</div>
+                    <h3>Open House Management</h3>
+                    <p>Promote open houses, manage sign-in sheets, schedule and confirm showings, handle no-shows, follow up on feedback, and convert open house leads into active buyers.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
-                <div class="feature-card" onclick="openCategory('Business Development')">
-                    <div class="feature-icon">🏢</div>
-                    <h3>Business Development</h3>
-                    <p>Purpose-built tasks covering business development for Real estate agents.</p>
+                <div class="feature-card" onclick="openCategory('Client Relationship Management')">
+                    <div class="feature-icon">📈</div>
+                    <h3>Client Relationships & Referrals</h3>
+                    <p>Build referral pipelines, maintain your contact database, send personalized check-ins, run client appreciation programs, and collect testimonials that bring in the next deal.</p>
                     <div class="card-cta">Browse tasks →</div>
                 </div>
             </div>
@@ -894,7 +1108,7 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Pick Your Task</h3>
-                    <p>Browse 200+ purpose-built tasks organized by workflow. Each task is named for exactly what it does — no guessing required.</p>
+                    <p>Browse 169+ purpose-built tasks organized by workflow. Each task is named for exactly what it does — no guessing required.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
@@ -910,7 +1124,28 @@
         </div>
     </section>
 
-    
+    <section class="compliance-section" style="padding:60px 0 80px;background:#f9fafb;">
+    <div class="container">
+        <h2 class="section-title">Your clients' data stays yours</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px;">
+            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+                <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">Privacy-First</div>
+                <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">Zero document retention</h3>
+                <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">RealtorTasksAI never receives your listings, client names, addresses, or transaction details. Our servers only count that a credit was used — nothing else.</p>
+            </div>
+            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+                <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">Local Execution</div>
+                <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">Runs on your machine</h3>
+                <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">Your documents go to your AI provider (Anthropic, OpenAI) under your account — or stay entirely local with OpenClaw + Ollama. Either way, we never see the content.</p>
+            </div>
+            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+                <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">No Lock-in</div>
+                <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">Works with any MCP client</h3>
+                <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">Claude Desktop, OpenClaw, Cursor — if it supports MCP, RealtorTasksAI works in it. Switch AI providers anytime without losing your credits.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- ─── Privacy / ZDR Section ─── -->
     <section class="privacy-section">
@@ -946,100 +1181,61 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, Pay-As-You-Go Pricing</h2>
-            <p class="section-subtitle">No subscriptions. No monthly fees. Buy credits, use them whenever you need them. Credits never expire.</p>
+            <p class="section-subtitle">No subscriptions. Buy credits when you need them — one credit per task. Credits never expire, so you're never pressured to use them.</p>
             <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-bottom:40px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
             
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Try It</h3>
-                    <div class="price">$5</div>
-                    <div class="credits">2 credits</div>
-                    <p class="per-credit">$2.50 per task</p>
-                    <ul>
-                        <li>✓ All 200+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Try before you commit</li>
-                    </ul>
-                    <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
-                </div>
-
-                <div class="pricing-card">
                     <h3>Starter</h3>
-                    <div class="price">$29</div>
-                    <div class="credits">15 credits</div>
-                    <p class="per-credit">$1.93 per task</p>
+                    <div class="price">$19</div>
+                    <div class="credits">10 credits</div>
+                    <p class="per-credit">$1.90 per task</p>
                     <ul>
-                        <li>✓ All 200+ tasks</li>
+                        <li>✓ All 169+ tasks</li>
                         <li>✓ Credits never expire</li>
-                        <li>✓ Perfect for getting started</li>
+                        <li>✓ Perfect for a few listings or offers</li>
                     </ul>
                     <button onclick="checkout('starter')" class="buy-btn">Get Started</button>
                 </div>
 
-                <div class="pricing-card">
-                    <h3>Pro</h3>
-                    <div class="price">$99</div>
-                    <div class="credits">60 credits</div>
-                    <p class="per-credit">$1.65 per task · 14% off</p>
-                    <ul>
-                        <li>✓ All 200+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Great for regular use</li>
-                    </ul>
-                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
-                </div>
-
                 <div class="pricing-card featured">
                     <div class="badge">Most Popular</div>
-                    <h3>Business</h3>
-                    <div class="price">$199</div>
-                    <div class="credits">150 credits</div>
-                    <p class="per-credit">$1.33 per task · 31% off</p>
+                    <h3>Active Agent</h3>
+                    <div class="price">$49</div>
+                    <div class="credits">35 credits</div>
+                    <p class="per-credit">$1.40 per task · 26% off</p>
                     <ul>
-                        <li>✓ All 200+ tasks</li>
+                        <li>✓ All 169+ tasks</li>
                         <li>✓ Credits never expire</li>
-                        <li>✓ Best for active practices</li>
+                        <li>✓ Best for 2–4 active listings</li>
                     </ul>
                     <button onclick="checkout('business')" class="buy-btn">Get Credits</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Power</h3>
-                    <div class="price">$349</div>
-                    <div class="credits">350 credits</div>
-                    <p class="per-credit">$1.00 per task · 48% off</p>
+                    <h3>Top Producer</h3>
+                    <div class="price">$99</div>
+                    <div class="credits">80 credits</div>
+                    <p class="per-credit">$1.24 per task · 35% off</p>
                     <ul>
-                        <li>✓ All 200+ tasks</li>
+                        <li>✓ All 169+ tasks</li>
                         <li>✓ Credits never expire</li>
-                        <li>✓ Serious savings for busy teams</li>
+                        <li>✓ Covers a full busy quarter</li>
                     </ul>
-                    <button onclick="checkout('power')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Unlimited</h3>
-                    <div class="price">$599</div>
-                    <div class="credits">800 credits</div>
-                    <p class="per-credit">$0.75 per task · 61% off</p>
+                    <h3>Brokerage</h3>
+                    <div class="price">Contact Us</div>
+                    <p class="per-credit">Volume pricing & invoicing</p>
                     <ul>
-                        <li>✓ All 200+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Maximum value</li>
+                        <li>✓ Team licenses for 5–100+ agents</li>
+                        <li>✓ Invoicing & purchase orders</li>
+                        <li>✓ Onboarding support</li>
+                        <li>✓ Custom task requests</li>
                     </ul>
-                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$999</div>
-                    <div class="credits">2,000 credits</div>
-                    <p class="per-credit">$0.50 per task · 74% off</p>
-                    <ul>
-                        <li>✓ All 200+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Best value for power users</li>
-                    </ul>
-                    <button onclick="checkout('enterprise')" class="buy-btn">Get Credits</button>
+                    <a href="mailto:hello@realtortasksai.com?subject=Brokerage%20pricing%20inquiry" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Request Pricing</a>
                 </div>
             </div>
 
@@ -1057,7 +1253,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">What is RealtorTasksAI and how does it work?</button>
-                    <div class="faq-answer">RealtorTasksAI is a plugin for AI assistants (Claude Desktop, OpenClaw, and any MCP-compatible client) that gives you 200+ pre-built, expert-crafted task templates for Real estate agents, brokers, and transaction coordinators. Instead of figuring out how to prompt an AI to do professional work, you pick a task, answer its specific questions, and get professional-quality output immediately.</div>
+                    <div class="faq-answer">RealtorTasksAI is a plugin for AI assistants (Claude Desktop, OpenClaw, and any MCP-compatible client) that gives you 169+ pre-built, expert-crafted task templates for Real estate agents, brokers, and transaction coordinators. Instead of figuring out how to prompt an AI to do professional work, you pick a task, answer its specific questions, and get professional-quality output immediately.</div>
                 </div>
 
                 <div class="faq-item">

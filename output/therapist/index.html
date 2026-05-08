@@ -236,6 +236,142 @@
             letter-spacing: 0.01em;
         }
 
+        /* ─── Hero Demo Animation ─── */
+        .hero-demo {
+            margin-top: 52px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .demo-card {
+            background: #0f172a;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 540px;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+            overflow: hidden;
+            font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+        }
+
+        .demo-card-header {
+            background: #1e293b;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .demo-dots {
+            display: flex;
+            gap: 6px;
+        }
+        .demo-dots span {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            display: block;
+        }
+        .demo-dots span:nth-child(1) { background: #ef4444; }
+        .demo-dots span:nth-child(2) { background: #f59e0b; }
+        .demo-dots span:nth-child(3) { background: #22c55e; }
+
+        .demo-card-title {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            font-family: inherit;
+            letter-spacing: 0.02em;
+        }
+
+        .demo-card-body {
+            padding: 24px 22px 22px;
+            min-height: 148px;
+        }
+
+        .demo-slides { position: relative; }
+
+        .demo-slide {
+            display: none;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .demo-slide.active { display: flex; }
+
+        .demo-prompt-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            color: #e2e8f0;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        .demo-caret { color: var(--accent); font-weight: 700; flex-shrink: 0; }
+        .demo-prompt-text { flex: 1; }
+        .demo-cursor {
+            color: var(--accent);
+            animation: blink 0.9s step-end infinite;
+        }
+        .demo-slide.phase-skill .demo-cursor,
+        .demo-slide.phase-output .demo-cursor { display: none; }
+
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+        .demo-step {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.83rem;
+            line-height: 1.5;
+            padding: 8px 12px;
+            border-radius: 6px;
+            animation: fadeSlideIn 0.35s ease;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-skill  { background: #1e293b; color: #94a3b8; }
+        .step-skill strong { color: #e2e8f0; font-weight: 600; }
+        .step-output { background: #052e16; color: #86efac; }
+        .step-output .demo-check { color: #22c55e; font-weight: 700; flex-shrink: 0; }
+
+        .demo-slide.phase-skill  .step-skill  { display: flex; }
+        .demo-slide.phase-output .step-skill  { display: flex; }
+        .demo-slide.phase-output .step-output { display: flex; }
+
+        .demo-spinner {
+            width: 13px; height: 13px;
+            border: 2px solid #334155;
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: spin 0.7s linear infinite;
+        }
+        .demo-slide.phase-output .demo-spinner {
+            border-top-color: #22c55e;
+            animation: none;
+            border-color: #22c55e;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .demo-indicators {
+            display: flex;
+            gap: 8px;
+        }
+        .demo-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .demo-dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
+
         /* ─── Example Tasks Band ─── */
         .tasks-band {
             background: var(--primary);
@@ -807,6 +943,7 @@
                 <a href="#pricing" class="cta-button secondary">See Pricing</a>
             </div>
             <p class="hero-fine-print">5 free credits on signup &nbsp;·&nbsp; Credits never expire &nbsp;·&nbsp; No subscription</p>
+            
         </div>
     </section>
 

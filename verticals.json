@@ -34,13 +34,30 @@
     "occupation": "general contractors, subcontractors, and construction professionals",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-P7C4D8EZNS"
+    "ga_measurement_id": "G-P7C4D8EZNS",
+    "demo_tasks": [
+      {
+        "prompt": "Write a project proposal for a kitchen remodel",
+        "skill": "Project Proposal Writer",
+        "output": "Professional proposal with scope and pricing ready"
+      },
+      {
+        "prompt": "Draft a change order for additional electrical work",
+        "skill": "Change Order Generator",
+        "output": "Signed-ready change order document created"
+      },
+      {
+        "prompt": "Send a payment reminder for invoice #1042",
+        "skill": "Payment Follow-Up Email",
+        "output": "Professional payment reminder drafted"
+      }
+    ]
   },
   {
     "product_id": "realtor",
     "name": "RealtorTasksAI",
     "display_name": "Realtor Tasks AI",
-    "tagline": "200+ AI-powered administrative tools for real estate agents and brokers.",
+    "tagline": "169 AI-powered tasks for real estate agents and brokers. Listings, offers, buyer emails, disclosures \u2014 done in minutes.",
     "hero_description": "Close more deals with less paperwork. RealtorTasksAI handles listing descriptions, buyer communications, transaction coordination, and compliance docs \u2014 all locally on your machine.",
     "domain": "realtortasksai.com",
     "credentials_dir": ".realtortasksai",
@@ -59,7 +76,7 @@
       "Open House & Showing Administration",
       "Business Development"
     ],
-    "skill_count": 200,
+    "skill_count": 169,
     "sample_tasks": [
       "Write a property listing description",
       "Draft a buyer representation agreement cover letter",
@@ -71,7 +88,167 @@
     "occupation": "real estate agents, brokers, and realtors",
     "show_tryit": true,
     "api_base": "https://api.lawtasksai.com",
-    "ga_measurement_id": "G-GV4V3CJLYW"
+    "ga_measurement_id": "G-GV4V3CJLYW",
+    "hero_h1": "Write the listing. Send the follow-up. Close the deal",
+    "hero_eyebrow": "For real estate agents & brokers",
+    "hero_subhead": "169 ready-to-run tasks for every part of your deal \u2014 listing descriptions, offer letters, buyer emails, disclosure packets, CMA summaries, showing follow-ups, and more. Pick a task, answer a few questions, get professional output. No prompts to write. Works in Claude Desktop and OpenClaw.",
+    "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
+    "features_intro": "Built for agents who close deals, not write prompts",
+    "features_subtitle": "Every task was written by and for real estate professionals \u2014 MLS language, disclosure formats, transaction timelines, and the exact communication style that wins and keeps clients.",
+    "pricing_tagline": "No subscriptions. Buy credits when you need them \u2014 one credit per task. Credits never expire, so you're never pressured to use them.",
+    "compliance_heading": "Your clients' data stays yours",
+    "compliance": [
+      {
+        "badge": "Privacy-First",
+        "title": "Zero document retention",
+        "description": "RealtorTasksAI never receives your listings, client names, addresses, or transaction details. Our servers only count that a credit was used \u2014 nothing else."
+      },
+      {
+        "badge": "Local Execution",
+        "title": "Runs on your machine",
+        "description": "Your documents go to your AI provider (Anthropic, OpenAI) under your account \u2014 or stay entirely local with OpenClaw + Ollama. Either way, we never see the content."
+      },
+      {
+        "badge": "No Lock-in",
+        "title": "Works with any MCP client",
+        "description": "Claude Desktop, OpenClaw, Cursor \u2014 if it supports MCP, RealtorTasksAI works in it. Switch AI providers anytime without losing your credits."
+      }
+    ],
+    "testimonials_heading": "What agents are saying",
+    "testimonials": [
+      {
+        "quote": "",
+        "name": "",
+        "role": "",
+        "location": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "role": "",
+        "location": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "role": "",
+        "location": ""
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Starter",
+        "price": "$19",
+        "credits": "10 credits",
+        "per_credit": "$1.90 per task",
+        "features": [
+          "All 169+ tasks",
+          "Credits never expire",
+          "Perfect for a few listings or offers"
+        ],
+        "button_label": "Get Started",
+        "checkout_pack": "starter"
+      },
+      {
+        "name": "Active Agent",
+        "price": "$49",
+        "credits": "35 credits",
+        "per_credit": "$1.40 per task \u00b7 26% off",
+        "features": [
+          "All 169+ tasks",
+          "Credits never expire",
+          "Best for 2\u20134 active listings"
+        ],
+        "button_label": "Get Credits",
+        "checkout_pack": "business",
+        "featured": true,
+        "badge": "Most Popular"
+      },
+      {
+        "name": "Top Producer",
+        "price": "$99",
+        "credits": "80 credits",
+        "per_credit": "$1.24 per task \u00b7 35% off",
+        "features": [
+          "All 169+ tasks",
+          "Credits never expire",
+          "Covers a full busy quarter"
+        ],
+        "button_label": "Get Credits",
+        "checkout_pack": "pro"
+      },
+      {
+        "name": "Brokerage",
+        "price": "Contact Us",
+        "credits": "",
+        "per_credit": "Volume pricing & invoicing",
+        "features": [
+          "Team licenses for 5\u2013100+ agents",
+          "Invoicing & purchase orders",
+          "Onboarding support",
+          "Custom task requests"
+        ],
+        "button_label": "Request Pricing",
+        "button_action": "contact",
+        "contact_href": "mailto:hello@realtortasksai.com?subject=Brokerage%20pricing%20inquiry"
+      }
+    ],
+    "features": [
+      {
+        "icon": "\ud83c\udfe0",
+        "title": "Listings That Get Showings",
+        "full_title": "Listing & Marketing Administration",
+        "desc": "Write compelling MLS descriptions, develop full marketing plans, schedule professional photography, optimize online listings, and manage syndication \u2014 in minutes, not hours."
+      },
+      {
+        "icon": "\u2709\ufe0f",
+        "title": "Buyer & Seller Communications",
+        "full_title": "Buyer & Seller Communications",
+        "desc": "Draft offer letters, respond to inquiries, set expectations, handle objections, send personalized follow-ups, and keep clients informed at every stage without starting from scratch."
+      },
+      {
+        "icon": "\ud83d\udd04",
+        "title": "Transaction Coordination",
+        "full_title": "Transaction Coordination",
+        "desc": "Manage checklists, coordinate inspections, appraisals, and title searches, track loan approval status, schedule the final walkthrough, and get to the closing table without anything falling through the cracks."
+      },
+      {
+        "icon": "\ud83d\udccb",
+        "title": "Disclosures & Compliance Docs",
+        "full_title": "Compliance & Disclosure Documentation",
+        "desc": "Prepare seller disclosures, lead-based paint notices, agency disclosures, fair housing compliance, RESPA guidelines, and required transaction documents \u2014 correctly, every time."
+      },
+      {
+        "icon": "\ud83e\udd1d",
+        "title": "Open House Management",
+        "full_title": "Open House & Showing Administration",
+        "desc": "Promote open houses, manage sign-in sheets, schedule and confirm showings, handle no-shows, follow up on feedback, and convert open house leads into active buyers."
+      },
+      {
+        "icon": "\ud83d\udcc8",
+        "title": "Client Relationships & Referrals",
+        "full_title": "Client Relationship Management",
+        "desc": "Build referral pipelines, maintain your contact database, send personalized check-ins, run client appreciation programs, and collect testimonials that bring in the next deal."
+      }
+    ],
+    "hero_h1_no_span": true,
+    "demo_tasks": [
+      {
+        "prompt": "Write a listing description for a 4BR home in Denver",
+        "skill": "Listing Description Writer",
+        "output": "MLS-ready listing description generated"
+      },
+      {
+        "prompt": "Send a follow-up to buyers from Saturday's open house",
+        "skill": "Open House Follow-Up Email",
+        "output": "Personalized follow-up email drafted"
+      },
+      {
+        "prompt": "Prepare a CMA summary for 123 Maple Street",
+        "skill": "Comparative Market Analysis",
+        "output": "Client-ready CMA summary generated"
+      }
+    ]
   },
   {
     "product_id": "accounting",
