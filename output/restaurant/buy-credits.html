@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Credits — RestaurantTasksAI</title>
+    <meta name="description" content="Buy credits for RestaurantTasksAI. Pay as you go — no subscription. Credits never expire.">
+    <link rel="canonical" href="https://restauranttasksai.com/buy-credits.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #DC2626;
+            --background: #FAFAFA;
+            --accent-hover: color-mix(in srgb, var(--accent) 80%, black);
+            --primary-light: color-mix(in srgb, var(--accent) 12%, white);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: var(--background);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ─── Page Header ─── */
+        .page-header {
+            padding: 72px 0 48px;
+            text-align: center;
+            background: linear-gradient(180deg, white 0%, var(--background) 100%);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .page-eyebrow {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .page-header p {
+            font-size: 1.05rem;
+            color: #4b5563;
+            max-width: 520px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+
+        .page-header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.88rem;
+            color: #6b7280;
+        }
+
+        .page-header-meta span::before {
+            content: '✓ ';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ─── Pricing Grid (reuse from main template) ─── */
+        .pricing {
+            padding: 64px 0 96px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent);
+            box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 20%, transparent);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px color-mix(in srgb, var(--accent) 25%, transparent);
+        }
+
+        .pricing-card .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .pricing-card .price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .pricing-card .credits {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .pricing-card .per-credit {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 24px;
+            font-size: 0.88rem;
+        }
+
+        .pricing-card li {
+            padding: 6px 0;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .pricing-card li:last-child { border-bottom: none; }
+
+        .buy-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+
+        .buy-btn:hover { background: var(--accent-hover); }
+
+        /* ─── Reassurance strip ─── */
+        .reassurance {
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 28px 0;
+            margin-bottom: 48px;
+        }
+
+        .reassurance-inner {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .reassurance-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .reassurance-item .ri-icon {
+            font-size: 1.2rem;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 40px 0;
+            background: var(--primary);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        footer .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        footer .footer-logo span { color: var(--accent); }
+        footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        footer a:hover { color: white; }
+        footer .footer-links { margin-bottom: 16px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
+        footer .footer-bottom { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+
+        @media (max-width: 640px) {
+            .page-header h1 { font-size: 1.9rem; }
+            .pricing-card.featured { transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── Header ─── -->
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
+
+    <!-- ─── Page Header ─── -->
+    <div class="page-header">
+        <div class="container">
+            <div class="page-eyebrow">Pay As You Go</div>
+            <h1>Get Your RestaurantTasksAI Credits</h1>
+            <p>One credit, one task. No subscription, no monthly fees. Buy what you need and use it at your own pace.</p>
+            <div class="page-header-meta">
+                <span>Credits never expire</span>
+                <span>Instant delivery by email</span>
+                <span>Secure checkout via Stripe</span>
+                <span>5 free credits on signup</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Reassurance strip ─── -->
+    <div class="reassurance">
+        <div class="container">
+            <div class="reassurance-inner">
+                <div class="reassurance-item"><span class="ri-icon">🔒</span> Secure Stripe checkout</div>
+                <div class="reassurance-item"><span class="ri-icon">⚡</span> License key emailed instantly</div>
+                <div class="reassurance-item"><span class="ri-icon">♾️</span> Credits never expire</div>
+                <div class="reassurance-item"><span class="ri-icon">🆓</span> New? <a href="/signup.html" style="color:var(--accent);margin-left:4px;font-weight:600;">Get 5 free credits first →</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Pricing Cards ─── -->
+    <section class="pricing">
+        <div class="container">
+            <p style="text-align:center;color:#9ca3af;font-size:0.9rem;margin-bottom:32px;">
+                By purchasing, you agree to our <a href="/terms" style="color:var(--accent);text-decoration:underline;">Terms of Service</a>
+            </p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Try It</h3>
+                    <div class="price">$5</div>
+                    <div class="credits">2 credits</div>
+                    <p class="per-credit">$2.50 per task</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Try before you commit</li>
+                    </ul>
+                    <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$29</div>
+                    <div class="credits">15 credits</div>
+                    <p class="per-credit">$1.93 per task</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Perfect for getting started</li>
+                    </ul>
+                    <button onclick="checkout('starter')" class="buy-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$99</div>
+                    <div class="credits">60 credits</div>
+                    <p class="per-credit">$1.65 per task · 14% off</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Great for regular use</li>
+                    </ul>
+                    <button onclick="checkout('pro')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Business</h3>
+                    <div class="price">$199</div>
+                    <div class="credits">150 credits</div>
+                    <p class="per-credit">$1.33 per task · 31% off</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Best for active practices</li>
+                    </ul>
+                    <button onclick="checkout('business')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Power</h3>
+                    <div class="price">$349</div>
+                    <div class="credits">350 credits</div>
+                    <p class="per-credit">$1.00 per task · 48% off</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Serious savings for busy teams</li>
+                    </ul>
+                    <button onclick="checkout('power')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Unlimited</h3>
+                    <div class="price">$599</div>
+                    <div class="credits">800 credits</div>
+                    <p class="per-credit">$0.75 per task · 61% off</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Maximum value</li>
+                    </ul>
+                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$999</div>
+                    <div class="credits">2,000 credits</div>
+                    <p class="per-credit">$0.50 per task · 74% off</p>
+                    <ul>
+                        <li>✓ All 200+ tasks</li>
+                        <li>✓ Credits never expire</li>
+                        <li>✓ Best value for power users</li>
+                    </ul>
+                    <button onclick="checkout('enterprise')" class="buy-btn">Get Credits</button>
+                </div>
+            </div>
+            <p style="text-align:center;color:#9ca3af;font-size:0.8rem;margin-top:24px;"></p>
+        </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer>
+        <div class="container">
+            <a href="/" class="footer-logo">Restaurant<span>TasksAI</span></a>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/support.html">Support</a>
+                <a href="/verified_safe.html" style="display:inline-flex;align-items:center;gap:5px;background:#10b981;color:white;padding:4px 12px;border-radius:100px;font-weight:600;font-size:0.82rem;">🛡️ Verified Safe</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 RestaurantTasksAI. All rights reserved. · <a href="https://restauranttasksai.com">restauranttasksai.com</a></p>
+                <p style="margin-top:8px;">Powered by <a href="https://openclaw.ai">OpenClaw</a> · Works with Claude Desktop &amp; MCP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─── Email capture modal ─── -->
+    <div id="emailModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;align-items:center;justify-content:center;">
+        <div style="background:#fff;border-radius:12px;padding:36px 32px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+            <h3 style="margin:0 0 8px;font-size:1.25rem;color:#111;">Enter your email</h3>
+            <p style="margin:0 0 20px;color:#555;font-size:0.95rem;">We'll send your license key and download link here after payment.</p>
+            <input id="emailModalInput" type="email" placeholder="you@example.com" autocomplete="email"
+                onkeydown="if(event.key==='Enter')submitEmailModal();"
+                style="width:100%;box-sizing:border-box;padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:1rem;outline:none;margin-bottom:8px;">
+            <div id="emailModalError" style="color:#dc2626;font-size:0.875rem;min-height:20px;margin-bottom:12px;"></div>
+            <button id="emailModalBtn" onclick="submitEmailModal()"
+                style="width:100%;padding:13px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;">
+                Continue to Payment →
+            </button>
+            <button onclick="closeEmailModal()"
+                style="width:100%;padding:10px;margin-top:10px;background:none;border:none;color:#888;font-size:0.9rem;cursor:pointer;">
+                Cancel
+            </button>
+        </div>
+        <input type="hidden" id="emailModalPack">
+    </div>
+
+    <script>
+        const API_BASE = '{{API_BASE}}';
+        const PRODUCT_ID = 'restaurant';
+
+        function checkout(pack) {
+            document.getElementById('emailModalPack').value = pack;
+            document.getElementById('emailModalInput').value = '';
+            document.getElementById('emailModalError').textContent = '';
+            document.getElementById('emailModalBtn').disabled = false;
+            document.getElementById('emailModalBtn').textContent = 'Continue to Payment →';
+            document.getElementById('emailModal').style.display = 'flex';
+            setTimeout(() => document.getElementById('emailModalInput').focus(), 50);
+        }
+
+        function closeEmailModal() {
+            document.getElementById('emailModal').style.display = 'none';
+        }
+
+        async function submitEmailModal() {
+            const email = document.getElementById('emailModalInput').value.trim();
+            const pack = document.getElementById('emailModalPack').value;
+            const errEl = document.getElementById('emailModalError');
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                errEl.textContent = 'Please enter a valid email address.';
+                return;
+            }
+            errEl.textContent = '';
+            document.getElementById('emailModalBtn').disabled = true;
+            document.getElementById('emailModalBtn').textContent = 'Redirecting…';
+            closeEmailModal();
+            try {
+                const response = await fetch(`${API_BASE}/checkout/create-session`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+                    body: JSON.stringify({ pack, email, product: PRODUCT_ID })
+                });
+                const data = await response.json();
+                if (data.checkout_url) {
+                    window.location.href = data.checkout_url;
+                } else {
+                    alert('Unable to start checkout. Please try again or contact support.');
+                }
+            } catch (err) {
+                alert('Something went wrong. Please try again or visit /support for help.');
+            }
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeEmailModal();
+        });
+    </script>
+
+</body>
+</html>
