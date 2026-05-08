@@ -286,7 +286,7 @@
 
         .demo-card-body {
             padding: 24px 22px 22px;
-            min-height: 148px;
+            min-height: 220px;
         }
 
         .demo-slides { position: relative; }
@@ -334,8 +334,57 @@
 
         .step-skill  { background: #1e293b; color: #94a3b8; }
         .step-skill strong { color: #e2e8f0; font-weight: 600; }
-        .step-output { background: #052e16; color: #86efac; }
-        .step-output .demo-check { color: #22c55e; font-weight: 700; flex-shrink: 0; }
+        .demo-product-name { color: var(--accent); font-weight: 600; }
+        .step-output {
+            background: #052e16;
+            color: #86efac;
+            flex-direction: column;
+            gap: 8px;
+            align-items: stretch;
+        }
+        .demo-output-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .demo-output-header .demo-check { color: #22c55e; font-weight: 700; flex-shrink: 0; }
+        .demo-output-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-left: 4px;
+        }
+        .demo-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .demo-chip {
+            background: #0f4c2a;
+            color: #4ade80;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            border: 1px solid #166534;
+            font-family: inherit;
+        }
+        .demo-chip-more {
+            color: #86efac;
+            background: transparent;
+            border-color: #166534;
+        }
+        .demo-filename {
+            font-size: 0.75rem;
+            color: #6ee7b7;
+            letter-spacing: 0.01em;
+        }
+        .demo-preview {
+            font-size: 0.75rem;
+            color: #86efac;
+            font-style: italic;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
 
         .demo-slide.phase-skill  .step-skill  { display: flex; }
         .demo-slide.phase-output .step-skill  { display: flex; }
@@ -959,11 +1008,18 @@
             </div>
             <div class="demo-step step-skill">
                 <span class="demo-spinner"></span>
-                <span>Loading: <strong>Project Proposal Writer</strong></span>
+                <span>Loading <span class="demo-product-name">ContractorTasksAI</span>: <strong>Project Proposal Writer</strong></span>
             </div>
             <div class="demo-step step-output">
-                <span class="demo-check">&#10003;</span>
-                <span>Professional proposal with scope and pricing ready</span>
+                <div class="demo-output-header">
+                    <span class="demo-check">&#10003;</span>
+                    <span><span class="demo-product-name">ContractorTasksAI</span> response ready</span>
+                </div>
+                <div class="demo-output-detail">
+                    <div class="demo-chips"><span class="demo-chip">Scope of work</span><span class="demo-chip">Payment schedule</span><span class="demo-chip">Warranty terms</span><span class="demo-chip demo-chip-more">+ more</span></div>
+                    <div class="demo-filename">&#128196; proposal_kitchen_remodel_<span class="demo-ts"></span>.docx</div>
+                    <div class="demo-preview">&ldquo;This proposal covers full kitchen renovation including demo, cabinetry, countertops, and f...&rdquo;</div>
+                </div>
             </div>
         </div>
         <div class="demo-slide" data-index="1">
@@ -973,11 +1029,18 @@
             </div>
             <div class="demo-step step-skill">
                 <span class="demo-spinner"></span>
-                <span>Loading: <strong>Change Order Generator</strong></span>
+                <span>Loading <span class="demo-product-name">ContractorTasksAI</span>: <strong>Change Order Generator</strong></span>
             </div>
             <div class="demo-step step-output">
-                <span class="demo-check">&#10003;</span>
-                <span>Signed-ready change order document created</span>
+                <div class="demo-output-header">
+                    <span class="demo-check">&#10003;</span>
+                    <span><span class="demo-product-name">ContractorTasksAI</span> response ready</span>
+                </div>
+                <div class="demo-output-detail">
+                    <div class="demo-chips"><span class="demo-chip">Scope change</span><span class="demo-chip">Cost delta</span><span class="demo-chip">Timeline impact</span><span class="demo-chip demo-chip-more">+ more</span></div>
+                    <div class="demo-filename">&#128196; change_order_electrical_co2_<span class="demo-ts"></span>.docx</div>
+                    <div class="demo-preview">&ldquo;Change Order #2: Addition of (4) dedicated 20A circuits per revised architectural drawings...&rdquo;</div>
+                </div>
             </div>
         </div>
         <div class="demo-slide" data-index="2">
@@ -987,11 +1050,18 @@
             </div>
             <div class="demo-step step-skill">
                 <span class="demo-spinner"></span>
-                <span>Loading: <strong>Payment Follow-Up Email</strong></span>
+                <span>Loading <span class="demo-product-name">ContractorTasksAI</span>: <strong>Payment Follow-Up Email</strong></span>
             </div>
             <div class="demo-step step-output">
-                <span class="demo-check">&#10003;</span>
-                <span>Professional payment reminder drafted</span>
+                <div class="demo-output-header">
+                    <span class="demo-check">&#10003;</span>
+                    <span><span class="demo-product-name">ContractorTasksAI</span> response ready</span>
+                </div>
+                <div class="demo-output-detail">
+                    <div class="demo-chips"><span class="demo-chip">Invoice ref</span><span class="demo-chip">Due date</span><span class="demo-chip">Professional tone</span><span class="demo-chip demo-chip-more">+ more</span></div>
+                    <div class="demo-filename">&#128196; payment_reminder_inv1042_<span class="demo-ts"></span>.docx</div>
+                    <div class="demo-preview">&ldquo;I'm following up on Invoice #1042 for $4,200, which was due on May 1st. Please let us know...&rdquo;</div>
+                </div>
             </div>
         </div>
             </div>
@@ -1001,12 +1071,23 @@
 </div>
 <script>
 (function(){
+    // Stamp all timestamp placeholders with current datetime
+    var now = new Date();
+    var ts  = now.getFullYear().toString()
+            + String(now.getMonth()+1).padStart(2,'0')
+            + String(now.getDate()).padStart(2,'0')
+            + '_'
+            + String(now.getHours()).padStart(2,'0')
+            + String(now.getMinutes()).padStart(2,'0');
+    document.querySelectorAll('.demo-ts').forEach(function(el){ el.textContent = ts; });
+
     var slides = document.querySelectorAll('.demo-slide');
     var dots   = document.querySelectorAll('.demo-dot');
     if (!slides.length) return;
     var current = 0;
-    var PHASES = [800, 900, 1100, 2200]; // typing done, skill visible, output visible, pause
-    var total   = slides.length;
+    // ms: cursor blink, skill row, output row, read pause
+    var PHASES = [800, 900, 1100, 3500];
+    var total  = slides.length;
 
     function showSlide(idx) {
         slides.forEach(function(s,i) {

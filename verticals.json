@@ -39,17 +39,35 @@
       {
         "prompt": "Write a project proposal for a kitchen remodel",
         "skill": "Project Proposal Writer",
-        "output": "Professional proposal with scope and pricing ready"
+        "chips": [
+          "Scope of work",
+          "Payment schedule",
+          "Warranty terms"
+        ],
+        "filename": "proposal_kitchen_remodel",
+        "preview": "This proposal covers full kitchen renovation including demo, cabinetry, countertops, and finish work..."
       },
       {
         "prompt": "Draft a change order for additional electrical work",
         "skill": "Change Order Generator",
-        "output": "Signed-ready change order document created"
+        "chips": [
+          "Scope change",
+          "Cost delta",
+          "Timeline impact"
+        ],
+        "filename": "change_order_electrical_co2",
+        "preview": "Change Order #2: Addition of (4) dedicated 20A circuits per revised architectural drawings dated..."
       },
       {
         "prompt": "Send a payment reminder for invoice #1042",
         "skill": "Payment Follow-Up Email",
-        "output": "Professional payment reminder drafted"
+        "chips": [
+          "Invoice ref",
+          "Due date",
+          "Professional tone"
+        ],
+        "filename": "payment_reminder_inv1042",
+        "preview": "I'm following up on Invoice #1042 for $4,200, which was due on May 1st. Please let us know if..."
       }
     ]
   },
@@ -236,17 +254,35 @@
       {
         "prompt": "Write a listing description for a 4BR home in Denver",
         "skill": "Listing Description Writer",
-        "output": "MLS-ready listing description generated"
+        "chips": [
+          "MLS tone",
+          "4BR template",
+          "HOA language"
+        ],
+        "filename": "listing_description_123maple",
+        "preview": "Nestled in the heart of Denver's sought-after Washington Park, this stunning 4-bedroom..."
       },
       {
         "prompt": "Send a follow-up to buyers from Saturday's open house",
         "skill": "Open House Follow-Up Email",
-        "output": "Personalized follow-up email drafted"
+        "chips": [
+          "Warm tone",
+          "Next-step CTA",
+          "Personal details"
+        ],
+        "filename": "followup_email_openhouse_sat",
+        "preview": "It was wonderful meeting you Saturday \u2014 the main floor really does live as well as it shows..."
       },
       {
         "prompt": "Prepare a CMA summary for 123 Maple Street",
         "skill": "Comparative Market Analysis",
-        "output": "Client-ready CMA summary generated"
+        "chips": [
+          "3 comps selected",
+          "Price-per-sqft",
+          "Days on market"
+        ],
+        "filename": "cma_summary_123maple",
+        "preview": "Based on 3 comparable sales within 0.5 miles, the recommended list price range is $485,000\u2013$499,000..."
       }
     ]
   },
