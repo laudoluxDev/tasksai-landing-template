@@ -550,8 +550,7 @@ def generate_page(template: str, vertical: dict) -> str:
 
     features_subtitle_custom = vertical.get("features_subtitle", "").strip()
     features_subtitle_or_default = features_subtitle_custom if features_subtitle_custom else (
-        "Every task template was engineered with the specific terminology, workflows, and standards of "
-        "your profession \u2014 not repurposed from generic business content."
+        f"Every task built for the real work {audience_short} do every day."
     )
 
     pricing_tagline_custom = vertical.get("pricing_tagline", "").strip()
