@@ -674,7 +674,11 @@ def main():
                 product_name = v.get("name", slug)
                 domain = v.get("domain", f"{slug}tasksai.com")
                 accent = v.get("accent_color", "#2563eb")
+                primary = v.get("primary_color", "#1a1a1a")
+                background = v.get("background_color", "#FAFAFA")
                 product_id = v.get("product_id", slug)
+                hero_count = v.get("hero_count") or f"{v.get('skill_count', 200)}+"
+                target_audience = v.get("target_audience") or v.get("audience", "professionals")
                 if "TasksAI" in product_name:
                     parts = product_name.split("TasksAI")
                     logo_split = f"{parts[0]}<span>TasksAI</span>"
@@ -748,6 +752,7 @@ def main():
                 ("privacy-template.html", "privacy.html"),
                 ("support-template.html", "support.html"),
                 ("verified-safe-template.html", "verified_safe.html"),
+                ("faq-template.html", "faq.html"),
             ]:
                 tmpl_path = TEMPLATE_FILE.parent / tmpl_name
                 if tmpl_path.exists():
@@ -777,13 +782,19 @@ def main():
                     rendered = tmpl_content \
                         .replace("{{PRODUCT_NAME}}", product_name) \
                         .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
+                        .replace("{{PRIMARY_COLOR}}", primary) \
                         .replace("{{ACCENT_COLOR}}", accent) \
+                        .replace("{{BACKGROUND_COLOR}}", background) \
                         .replace("{{DOMAIN}}", domain) \
                         .replace("{{PRODUCT_ID}}", product_id) \
+                        .replace("{{PRODUCT_SLUG}}", slug) \
                         .replace("{{OCCUPATION}}", occupation) \
                         .replace("{{SUPPORT_EMAIL}}", support_email) \
                         .replace("{{LOGO_HTML}}", logo_split) \
+                        .replace("{{LOGO_HTML_FOOTER}}", logo_split) \
                         .replace("{{NAME}}", product_name) \
+                        .replace("{{HERO_COUNT}}", hero_count) \
+                        .replace("{{TARGET_AUDIENCE}}", target_audience) \
                         .replace("{{FOOTER}}", footer_html) \
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
