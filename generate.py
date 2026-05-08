@@ -215,14 +215,14 @@ def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> s
         badge = esc(item.get("badge", ""))
         title = esc(item.get("title", ""))
         description = esc(item.get("description", ""))
-        cards.append(f"""            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+        cards.append(f"""            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid color-mix(in srgb, var(--accent) 25%, #e5e7eb);box-shadow:0 2px 8px color-mix(in srgb, var(--accent) 10%, transparent);">
                 <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">{badge}</div>
                 <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">{title}</h3>
                 <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">{description}</p>
             </div>""")
 
     cards_html = "\n".join(cards)
-    return f"""<section class="compliance-section" style="padding:60px 0 80px;background:#f9fafb;">
+    return f"""<section class="compliance-section" style="padding:60px 0 80px;background:color-mix(in srgb, var(--accent) 8%, white);">
     <div class="container">
         <h2 class="section-title">{heading}</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px;">

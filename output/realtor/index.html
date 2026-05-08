@@ -423,7 +423,7 @@
 
         /* ─── Example Tasks Band ─── */
         .tasks-band {
-            background: var(--primary);
+            background: var(--accent);
             padding: 28px 0;
             overflow: hidden;
         }
@@ -677,11 +677,13 @@
         /* ─── Privacy / ZDR ─── */
         .privacy-section {
             padding: 80px 0;
-            background: var(--primary);
-            color: white;
+            background: color-mix(in srgb, var(--accent) 8%, white);
+            color: var(--primary);
         }
 
-        .privacy-section .section-title { color: white; }
+        .privacy-section .section-title { color: var(--primary); }
+        .privacy-section .section-eyebrow { color: var(--accent); }
+        .privacy-section .section-sub { color: #4b5563; }
 
         .privacy-grid {
             display: grid;
@@ -691,21 +693,22 @@
         }
 
         .privacy-card {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: white;
+            border: 1px solid color-mix(in srgb, var(--accent) 25%, #e5e7eb);
             border-radius: 12px;
             padding: 28px;
+            box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 10%, transparent);
         }
 
         .privacy-card h3 {
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 10px;
-            color: white;
+            color: var(--primary);
         }
 
         .privacy-card p {
-            color: rgba(255,255,255,0.7);
+            color: #4b5563;
             font-size: 0.9rem;
             line-height: 1.6;
         }
@@ -1205,21 +1208,21 @@
         </div>
     </section>
 
-    <section class="compliance-section" style="padding:60px 0 80px;background:#f9fafb;">
+    <section class="compliance-section" style="padding:60px 0 80px;background:color-mix(in srgb, var(--accent) 8%, white);">
     <div class="container">
         <h2 class="section-title">Your clients' data stays yours</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px;">
-            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid color-mix(in srgb, var(--accent) 25%, #e5e7eb);box-shadow:0 2px 8px color-mix(in srgb, var(--accent) 10%, transparent);">
                 <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">Privacy-First</div>
                 <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">Zero document retention</h3>
                 <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">RealtorTasksAI never receives your listings, client names, addresses, or transaction details. Our servers only count that a credit was used — nothing else.</p>
             </div>
-            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid color-mix(in srgb, var(--accent) 25%, #e5e7eb);box-shadow:0 2px 8px color-mix(in srgb, var(--accent) 10%, transparent);">
                 <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">Local Execution</div>
                 <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">Runs on your machine</h3>
                 <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">Your documents go to your AI provider (Anthropic, OpenAI) under your account — or stay entirely local with OpenClaw + Ollama. Either way, we never see the content.</p>
             </div>
-            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid #e5e7eb;">
+            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid color-mix(in srgb, var(--accent) 25%, #e5e7eb);box-shadow:0 2px 8px color-mix(in srgb, var(--accent) 10%, transparent);">
                 <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">No Lock-in</div>
                 <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">Works with any MCP client</h3>
                 <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">Claude Desktop, OpenClaw, Cursor — if it supports MCP, RealtorTasksAI works in it. Switch AI providers anytime without losing your credits.</p>
