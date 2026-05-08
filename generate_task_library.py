@@ -109,13 +109,6 @@ def generate_task_library(vertical, skills):
 
         cards = ''
         for s in skill_list:
-            cx = (s.get('credits_per_use') or 1)
-            if cx <= 1:
-                cx_label, cx_cls = 'Simple', 'cx-simple'
-            elif cx <= 2:
-                cx_label, cx_cls = 'Medium', 'cx-medium'
-            else:
-                cx_label, cx_cls = 'Complex', 'cx-complex'
             desc = (s.get('description') or '').replace('<', '&lt;').replace('>', '&gt;')
             task_name = (s.get('name') or '').replace('<', '&lt;').replace('>', '&gt;').capitalize()
             cards += f'''
@@ -125,7 +118,6 @@ def generate_task_library(vertical, skills):
                     <div class="task-footer">
                         <span class="task-badge {badge_class(i)}">{cat}</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx {cx_cls}">{cx_label}</span>
                     </div>
                 </div>'''
 
@@ -258,10 +250,7 @@ def generate_task_library(vertical, skills):
         .task-card p {{ font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }}
         .task-footer {{ display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }}
         .task-badge {{ display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }}
-        .task-cx {{ font-size: 0.75rem; color: #9ca3af; font-weight: 500; }}
-        .cx-simple {{ color: #15803d; }}
-        .cx-medium {{ color: #92400e; }}
-        .cx-complex {{ color: #7e22ce; }}
+
 
         /* Badge colors */
 {badge_css}

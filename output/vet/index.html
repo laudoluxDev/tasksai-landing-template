@@ -408,17 +408,6 @@
             margin-top: 2px;
         }
 
-        .task-complexity {
-            font-size: 0.75rem;
-            padding: 2px 8px;
-            border-radius: 20px;
-            white-space: nowrap;
-            font-weight: 600;
-            flex-shrink: 0;
-        }
-        .complexity-simple { background: #d1fae5; color: #065f46; }
-        .complexity-medium { background: #fef3c7; color: #92400e; }
-        .complexity-complex { background: #ede9fe; color: #5b21b6; }
 
         .task-modal-loading {
             text-align: center;
@@ -1244,14 +1233,11 @@
                 }
 
                 modalBody.innerHTML = list.map(s => {
-                    const cx = (s.complexity || 'medium').toLowerCase();
-                    const cxLabel = cx.charAt(0).toUpperCase() + cx.slice(1);
                     return `<div class="task-list-item">
                         <div>
                             <div class="task-name">${s.name}</div>
                             <div class="task-desc">${s.description || ''}</div>
                         </div>
-                        <span class="task-complexity complexity-${cx}">${cxLabel}</span>
                     </div>`;
                 }).join('');
             } catch(e) {
