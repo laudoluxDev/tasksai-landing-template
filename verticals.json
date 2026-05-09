@@ -1088,7 +1088,7 @@
       "Compliance & Policy Documentation",
       "School Administration Support"
     ],
-    "skill_count": 200,
+    "skill_count": 167,
     "sample_tasks": [
       "Write a parent progress update",
       "Draft report card comments",
@@ -1147,6 +1147,41 @@
         "badge": "State Privacy Laws",
         "title": "SOPIPA-Compatible",
         "description": "Designed to comply with California SOPIPA and similar state-level student-data-privacy laws. Share our privacy page with your district IT team."
+      }
+    ],
+    "demo_tasks": [
+      {
+        "prompt": "Write a parent newsletter for this week's classroom updates",
+        "skill": "Parent Newsletter Writer",
+        "chips": [
+          "Friendly tone",
+          "Weekly format",
+          "Upcoming events"
+        ],
+        "filename": "parent_newsletter_week_of",
+        "preview": "Dear Families, It's been an exciting week in Room 14! We wrapped up our unit on ecosystems and students presented their habitat dioramas..."
+      },
+      {
+        "prompt": "Create a lesson plan on fractions for 4th grade",
+        "skill": "Lesson Plan Builder",
+        "chips": [
+          "Common Core aligned",
+          "4th grade",
+          "15-min activities"
+        ],
+        "filename": "lesson_plan_fractions_4th",
+        "preview": "Lesson Objective: Students will compare fractions with unlike denominators using visual models. Materials: fraction tiles, whiteboard, exit ticket..."
+      },
+      {
+        "prompt": "Write an IEP progress note for a student struggling with reading fluency",
+        "skill": "IEP Progress Note",
+        "chips": [
+          "Goal-aligned",
+          "Measurable data",
+          "Next steps"
+        ],
+        "filename": "iep_progress_note_reading",
+        "preview": "Student demonstrated 87 words per minute on the Aimsweb oral reading fluency probe, compared to the goal of 110 wpm. Continued difficulty with..."
       }
     ]
   },
