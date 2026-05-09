@@ -111,10 +111,12 @@ def generate_task_library(vertical, skills):
         for s in skill_list:
             desc = (s.get('description') or '').replace('<', '&lt;').replace('>', '&gt;')
             task_name = (s.get('name') or '').replace('<', '&lt;').replace('>', '&gt;').capitalize()
+            trigger = (s.get('name') or '').replace('<', '&lt;').replace('>', '&gt;').lower()
             cards += f'''
                 <div class="task-card">
                     <h3>{task_name}</h3>
                     <p>{desc}</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;{trigger}&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge {badge_class(i)}">{cat}</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
@@ -247,7 +249,9 @@ def generate_task_library(vertical, skills):
             transform: translateY(-1px);
         }}
         .task-card h3 {{ font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }}
-        .task-card p {{ font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }}
+        .task-card p {{ font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }}
+        .task-trigger {{ font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }}
+        .task-trigger em {{ color: {accent}; font-style: normal; font-weight: 500; }}
         .task-footer {{ display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }}
         .task-badge {{ display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }}
 
