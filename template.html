@@ -240,7 +240,8 @@
         .demo-card {
             background: #0f172a;
             border-radius: 12px;
-            width: 100%;
+            width: 540px;
+            min-width: 540px;
             max-width: 540px;
             box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
             overflow: hidden;
@@ -278,7 +279,8 @@
 
         .demo-card-body {
             padding: 24px 22px 22px;
-            min-height: 220px;
+            height: 300px;
+            overflow: hidden;
         }
 
         .demo-slides { position: relative; }
@@ -920,6 +922,11 @@
 
         /* ─── Responsive ─── */
         @media (max-width: 768px) {
+            .demo-card {
+                width: 100% !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+            }
             .hero h1 { font-size: 2.1rem; }
             .hero .subtitle { font-size: 1.05rem; }
             .section-title { font-size: 1.6rem; }
