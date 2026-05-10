@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #B45309; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(180,83,9,0.1); color: #B45309; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">PrincipalTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,235 +192,235 @@
                 <div class="task-card">
                     <h3>Communicate behavior/discipline issues</h3>
                     <p>Sensitively address student behavior concerns with families, following established protocols</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate behavior/discipline issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate emergency plans</h3>
                     <p>Provide clear guidance to families on emergency protocols and procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate emergency plans&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate school closures</h3>
                     <p>Notify families promptly of any school closures or schedule changes due to weather, emergencies, or other disruptions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate school closures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Compose emails to parents</h3>
                     <p>Craft clear and informative emails to share school updates, event information, and important announcements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;compose emails to parents&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate translation services</h3>
                     <p>Arrange for interpretation and translation services to remove language barriers for families</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate translation services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create family handbook</h3>
                     <p>Develop and distribute a comprehensive family handbook covering school policies, procedures, and expectations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create family handbook&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute report cards/progress reports</h3>
                     <p>Ensure timely delivery of student academic progress reports to families</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute report cards/progress reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Engage families in volunteering</h3>
                     <p>Encourage and coordinate parent/family volunteer opportunities to support school initiatives</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;engage families in volunteering&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate home-school communication</h3>
                     <p>Provide multiple channels (email, app, website, etc.) for ongoing two-way communication with families</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate home-school communication&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate pta/pto meetings</h3>
                     <p>Work collaboratively with parent-teacher organizations to plan and lead productive meetings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate pta/pto meetings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Gather family contact info</h3>
                     <p>Collect and maintain up-to-date family contact information for emergency and routine communications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;gather family contact info&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle family complaints/grievances</h3>
                     <p>Respond to and resolve family complaints or grievances in a fair and professional manner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle family complaints/grievances&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Host parent information sessions</h3>
                     <p>Plan and facilitate parent information sessions on topics like curriculum, testing, extracurriculars, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;host parent information sessions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize family education workshops</h3>
                     <p>Host workshops to equip families with strategies to support their children's learning at home</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize family education workshops&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize parent-teacher conferences</h3>
                     <p>Schedule and facilitate productive parent-teacher conferences to discuss student progress</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize parent-teacher conferences&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize school open house</h3>
                     <p>Coordinate the logistics for an engaging open house event to welcome new and returning families</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize school open house&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote family engagement events</h3>
                     <p>Organize and promote family-focused events (e.g., fun runs, carnivals, movie nights) to build community</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote family engagement events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Recognize family contributions</h3>
                     <p>Publicly acknowledge and express gratitude for significant family volunteer efforts or donations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;recognize family contributions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Recognize family milestones</h3>
                     <p>Acknowledge significant family events (births, graduations, etc.) with personalized communications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;recognize family milestones&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to parent inquiries</h3>
                     <p>Promptly address parent questions, concerns, and requests via email, phone, or in-person meetings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to parent inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Share student achievements</h3>
                     <p>Highlight individual student successes and accomplishments in newsletters, social media, and other communications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;share student achievements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Solicit parent feedback</h3>
                     <p>Gather input from parents through surveys, forums, or advisory groups to inform school decision-making</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;solicit parent feedback&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Translate communications</h3>
                     <p>Ensure all parent communications are available in the primary languages represented in the school community</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;translate communications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update school website</h3>
                     <p>Regularly review and update the school's website with current information, calendars, and resources for families</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update school website&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Welcome new families</h3>
                     <p>Implement an onboarding process to orient and integrate new students and their families into the school community</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;welcome new families&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Write a school newsletter</h3>
                     <p>Draft a monthly school newsletter with updates, events, and announcements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;write a school newsletter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Parent & Family Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -454,226 +438,226 @@
                 <div class="task-card">
                     <h3>Administer staff surveys</h3>
                     <p>Design and analyze surveys to gather feedback and input from the school's faculty and staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer staff surveys&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Complete staff evaluations</h3>
                     <p>Prepare and deliver annual/semi-annual performance reviews for all instructional and support staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;complete staff evaluations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct teacher observations</h3>
                     <p>Observe classroom instruction and provide actionable feedback to support teacher growth</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct teacher observations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate staff celebrations</h3>
                     <p>Plan and host events to recognize staff milestones, achievements, and contributions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate staff celebrations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate staff recognition</h3>
                     <p>Implement programs to publicly acknowledge and reward outstanding employee contributions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate staff recognition&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate staff recognition events</h3>
                     <p>Plan and host ceremonies to publicly honor outstanding faculty and staff achievements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate staff recognition events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop professional growth plans</h3>
                     <p>Work with teachers to create personalized professional development plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop professional growth plans&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate new role transitions</h3>
                     <p>Provide coaching and support to staff members taking on new leadership responsibilities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate new role transitions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate staff onboarding</h3>
                     <p>Welcome new hires and ensure they receive comprehensive orientation and training</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate staff onboarding&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate staff team-building</h3>
                     <p>Organize and lead activities to foster camaraderie, collaboration, and morale among staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate staff team-building&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain personnel records</h3>
                     <p>Organize and secure confidential employee files and documentation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain personnel records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain staff handbooks</h3>
                     <p>Update and distribute employee handbooks detailing policies, procedures, and expectations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain staff handbooks&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee contracts</h3>
                     <p>Ensure compliance with contractual obligations and district policies for staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee contracts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee discipline</h3>
                     <p>Document and address staff conduct or performance concerns, following HR protocols</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee discipline&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage staff professional memberships</h3>
                     <p>Facilitate and fund staff participation in relevant professional associations and organizations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage staff professional memberships&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage substitute teachers</h3>
                     <p>Schedule and monitor the use of substitute teachers to ensure classroom coverage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage substitute teachers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor teacher attendance</h3>
                     <p>Track and address staff attendance and punctuality issues in alignment with district policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor teacher attendance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee staff professional learning</h3>
                     <p>Plan, schedule, and facilitate ongoing job-embedded professional development for teachers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee staff professional learning&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee staff wellness initiatives</h3>
                     <p>Promote and coordinate programs to support the physical and mental well-being of employees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee staff wellness initiatives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process leave requests</h3>
                     <p>Review and approve staff leave (sick, personal, vacation) in accordance with policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process leave requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process staff tuition reimbursement</h3>
                     <p>Review and approve requests for continuing education tuition reimbursement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process staff tuition reimbursement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Recommend employee awards</h3>
                     <p>Nominate deserving staff members for district or state-level recognition programs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;recommend employee awards&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Recommend staffing decisions</h3>
                     <p>Provide input to district leadership on staffing needs, assignments, and retention</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;recommend staffing decisions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to staff concerns</h3>
                     <p>Address employee questions, complaints, or grievances in a timely and impartial manner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to staff concerns&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track staff licensure/certification</h3>
                     <p>Monitor and document the status of employee credentials, licenses, and certifications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track staff licensure/certification&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Staff Evaluation & HR Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -691,181 +675,181 @@
                 <div class="task-card">
                     <h3>Analyze student behavior data</h3>
                     <p>Review and interpret discipline data to identify trends and inform school improvement efforts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze student behavior data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collaborate with community agencies</h3>
                     <p>Partner with local law enforcement, social services, and youth programs to address student needs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collaborate with community agencies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate student discipline issues</h3>
                     <p>Inform families about disciplinary actions taken and strategies for improvement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate student discipline issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct student disciplinary hearings</h3>
                     <p>Lead fair and impartial hearings to determine appropriate responses to serious behavioral issues</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct student disciplinary hearings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate student support services</h3>
                     <p>Ensure students with specialized needs receive appropriate academic, social-emotional, and health supports</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate student support services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document student behavior incidents</h3>
                     <p>Thoroughly record details of student misconduct, interventions, and consequences</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document student behavior incidents&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate restorative practices</h3>
                     <p>Oversee the use of restorative approaches to address student harm and repair relationships</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate restorative practices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate student reentry/transition</h3>
                     <p>Develop and implement plans to smoothly reintegrate students returning from suspensions or alternative placements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate student reentry/transition&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement attendance interventions</h3>
                     <p>Monitor student attendance and put interventions in place to address chronic absenteeism</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement attendance interventions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement behavioral support plans</h3>
                     <p>Collaborate with teachers, families, and specialists to develop and monitor behavioral intervention plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement behavioral support plans&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain student conduct handbooks</h3>
                     <p>Review and update student handbooks detailing behavioral expectations and disciplinary procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain student conduct handbooks&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain student discipline records</h3>
                     <p>Securely store and manage confidential files related to student behavioral incidents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain student discipline records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage student suspension/expulsion</h3>
                     <p>Process and document short-term suspensions and make recommendations for long-term removal</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage student suspension/expulsion&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote positive school climate</h3>
                     <p>Implement proactive initiatives to cultivate a safe, respectful, and inclusive school environment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote positive school climate&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide staff training on discipline</h3>
                     <p>Deliver professional learning on effective classroom management and student behavior support strategies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide staff training on discipline&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Recognize student achievements</h3>
                     <p>Publicly celebrate students' academic, athletic, artistic, and civic accomplishments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;recognize student achievements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Refer students to counseling services</h3>
                     <p>Connect students with appropriate school-based or community mental health resources</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;refer students to counseling services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to bullying/harassment</h3>
                     <p>Address and document all reports of student-to-student bullying, harassment, or discrimination</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to bullying/harassment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to student crisis situations</h3>
                     <p>Lead the school's response to urgent student safety or mental health emergencies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to student crisis situations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Uphold student code of conduct</h3>
                     <p>Ensure consistent application of the school's disciplinary policies and procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;uphold student code of conduct&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Student Discipline & Support</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -883,181 +867,181 @@
                 <div class="task-card">
                     <h3>Advocate for school needs/priorities</h3>
                     <p>Effectively communicate the school's resource requirements and strategic priorities to district leadership</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;advocate for school needs/priorities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate board member onboarding</h3>
                     <p>Ensure new school board members receive comprehensive orientation and training</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate board member onboarding&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate district-level meetings</h3>
                     <p>Attend and actively participate in district-wide administrative leadership meetings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate district-level meetings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop grant funding proposals</h3>
                     <p>Research and write proposals to secure additional resources through external grant opportunities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop grant funding proposals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft board meeting minutes</h3>
                     <p>Document the proceedings and decisions made during school board meetings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft board meeting minutes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate strategic planning</h3>
                     <p>Lead the school community through the development of strategic goals and action plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate strategic planning&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain board policy manuals</h3>
                     <p>Organize and regularly update the official compilation of school board policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain board policy manuals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage school accreditation process</h3>
                     <p>Oversee the collection of evidence and preparation for school accreditation reviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage school accreditation process&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage school council/pta liaison</h3>
                     <p>Serve as the primary point of contact and conduit between the school and parent/community groups</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage school council/pta liaison&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage school facility projects</h3>
                     <p>Coordinate with district operations teams on facility maintenance, renovations, and new construction</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage school facility projects&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee compliance with regulations</h3>
                     <p>Ensure the school's operations, programs, and procedures adhere to all applicable laws and policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee compliance with regulations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare annual budget proposals</h3>
                     <p>Work with district finance teams to develop the school's annual budget plan</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare annual budget proposals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare board meeting agendas</h3>
                     <p>Collaborate with the school board to develop comprehensive meeting agendas</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare board meeting agendas&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Present to the school board</h3>
                     <p>Deliver informative and engaging presentations at monthly board meetings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;present to the school board&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide state/federal program reports</h3>
                     <p>Submit required programmatic and financial reports for state and federal grant-funded initiatives</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide state/federal program reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Report on school improvement efforts</h3>
                     <p>Regularly update the board on the implementation and impact of school improvement initiatives</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;report on school improvement efforts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Report on student achievement data</h3>
                     <p>Present comprehensive analyses of student learning outcomes and academic performance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;report on student achievement data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to board inquiries</h3>
                     <p>Provide timely and thorough responses to questions or requests from board members</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to board inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to board member requests</h3>
                     <p>Provide information, analyses, and recommendations in response to board member inquiries</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to board member requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to public records requests</h3>
                     <p>Fulfill requests for access to school documents, data, and information as required by law</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to public records requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Board & District Reporting</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1075,181 +1059,181 @@
                 <div class="task-card">
                     <h3>Analyze achievement gap data</h3>
                     <p>Review disaggregated student performance data to identify and address equity gaps</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze achievement gap data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Analyze student assessment data</h3>
                     <p>Interpret and communicate insights from student formative, interim, and summative assessments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze student assessment data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate district-wide testing</h3>
                     <p>Manage the administration of all state and district-mandated student assessments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate district-wide testing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate instructional technology</h3>
                     <p>Oversee the integration of digital tools and platforms to enhance teaching and learning</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate instructional technology&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate summer school programs</h3>
                     <p>Plan and oversee the logistics of optional or mandatory summer learning opportunities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate summer school programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate curriculum alignment</h3>
                     <p>Coordinate the review and alignment of instructional materials to state standards</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate curriculum alignment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate professional learning</h3>
                     <p>Design and deliver job-embedded professional development for teachers on instructional strategies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate professional learning&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement instructional coaching</h3>
                     <p>Partner with teachers to set goals, observe lessons, and provide actionable feedback</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement instructional coaching&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement instructional rounds</h3>
                     <p>Facilitate structured classroom observation and debriefing processes among teachers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement instructional rounds&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Lead curriculum committees</h3>
                     <p>Facilitate collaborative meetings of grade-level or subject-area teacher teams</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;lead curriculum committees&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Lead curriculum review/adoption</h3>
                     <p>Facilitate the evaluation and selection of new instructional materials and resources</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;lead curriculum review/adoption&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage educational partnerships</h3>
                     <p>Cultivate and maintain relationships with community organizations and higher ed institutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage educational partnerships&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage instructional waivers</h3>
                     <p>Process and monitor requests for deviations from standard curriculum or teaching practices</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage instructional waivers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor instructional delivery</h3>
                     <p>Conduct classroom walkthroughs to observe and provide feedback on teaching practices</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor instructional delivery&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor instructional time</h3>
                     <p>Ensure adherence to state-mandated minimum instructional hours and planning time</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor instructional time&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee curriculum development</h3>
                     <p>Lead the process of creating, revising, and refining curriculum guides and pacing plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee curriculum development&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote instructional best practices</h3>
                     <p>Identify, highlight, and facilitate the sharing of effective teaching methods across the school</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote instructional best practices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide instructional guidance</h3>
                     <p>Offer teachers research-based strategies and resources to improve student learning</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide instructional guidance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide interventions for at-risk students</h3>
                     <p>Collaborate with teachers to implement targeted academic and behavioral supports</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide interventions for at-risk students&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Support new teacher induction</h3>
                     <p>Provide mentoring, coaching, and resources to help acclimate novice teachers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;support new teacher induction&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Curriculum & Instructional Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1267,226 +1251,226 @@
                 <div class="task-card">
                     <h3>Adhere to procurement policies</h3>
                     <p>Follow established protocols for purchasing equipment, supplies, and contracted services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adhere to procurement policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Administer student immunization</h3>
                     <p>Track compliance with state-mandated student immunization and health screening requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer student immunization&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Administer student medication</h3>
                     <p>Coordinate the safe storage, distribution, and documentation of prescription and over-the-counter medications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer student medication&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate emergency planning</h3>
                     <p>Develop, practice, and continuously improve the school's emergency response procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate emergency planning&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate student meal programs</h3>
                     <p>Ensure compliance with federal and state regulations for school nutrition services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate student meal programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document special education services</h3>
                     <p>Ensure appropriate documentation and delivery of required special education programs and supports</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document special education services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document student behavior interventions</h3>
                     <p>Maintain detailed records of disciplinary actions, behavior improvement plans, and restorative justice</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document student behavior interventions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Ensure health/safety compliance</h3>
                     <p>Implement protocols and maintain documentation to meet regulatory requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;ensure health/safety compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Fulfill public records requests</h3>
                     <p>Respond to inquiries and provide access to school-related documents and information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;fulfill public records requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement ada accommodations</h3>
                     <p>Ensure the school's facilities, programs, and communications are accessible to individuals with disabilities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement ada accommodations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement student attendance policies</h3>
                     <p>Rigorously track and address issues of student tardiness, absenteeism, and truancy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement student attendance policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement student data privacy protocols</h3>
                     <p>Uphold all federal and state laws governing the protection of student information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement student data privacy protocols&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain employee background checks</h3>
                     <p>Oversee the completion and documentation of criminal history and reference checks for staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain employee background checks&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain facility inspection records</h3>
                     <p>Keep detailed logs of required safety inspections, repairs, and maintenance activities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain facility inspection records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain student information system</h3>
                     <p>Oversee the accurate and timely entry of student data into the district's central database</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain student information system&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain student records</h3>
                     <p>Accurately document and securely store all student enrollment, attendance, and academic data</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain student records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain student testing records</h3>
                     <p>Secure and organize confidential files containing student assessment results</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain student testing records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage school choice/enrollment</h3>
                     <p>Administer fair and equitable processes for student enrollment, transfers, and school selection</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage school choice/enrollment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage section 504 accommodations</h3>
                     <p>Collaborate with families and staff to develop, implement, and monitor 504 plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage section 504 accommodations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage student registration</h3>
                     <p>Oversee the annual enrollment and registration process for all new and returning students</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage student registration&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage student transportation</h3>
                     <p>Coordinate bus routes, schedules, and safety protocols for student travel to/from school</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage student transportation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor student activity funds</h3>
                     <p>Oversee the accounting and reporting of all school-based fundraising and extracurricular revenues</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor student activity funds&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process student fee waivers</h3>
                     <p>Review and approve requests for the reduction or elimination of school-related fees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process student fee waivers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process student transfers/withdrawals</h3>
                     <p>Facilitate the smooth transition of students entering or leaving the school</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process student transfers/withdrawals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to student accidents/injuries</h3>
                     <p>Investigate and document all incidents resulting in student harm or property damage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to student accidents/injuries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1504,46 +1488,46 @@
                 <div class="task-card">
                     <h3>Coordinate facility security</h3>
                     <p>Implement and monitor protocols to protect the safety and security of the school environment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate facility security&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Facilities & Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Inventory school equipment/supplies</h3>
                     <p>Maintain detailed records of all instructional, administrative, and custodial assets</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;inventory school equipment/supplies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Facilities & Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage facility maintenance</h3>
                     <p>Coordinate with district operations teams on the upkeep and repair of school buildings and grounds</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage facility maintenance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Facilities & Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage school technology systems</h3>
                     <p>Oversee the installation, troubleshooting, and maintenance of school-based IT infrastructure</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage school technology systems&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Facilities & Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee custodial services</h3>
                     <p>Ensure the school campus is cleaned, sanitized, and well-maintained on a daily basis</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee custodial services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Facilities & Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>

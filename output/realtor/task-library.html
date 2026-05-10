@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #0EA5E9; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(14,165,233,0.1); color: #0EA5E9; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">RealtorTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,235 +192,235 @@
                 <div class="task-card">
                     <h3>Analyze market comparables</h3>
                     <p>Research and provide detailed analysis of similar recently sold properties</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze market comparables&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct pre-listing inspection</h3>
                     <p>Identify and address any issues that could impact the sale</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct pre-listing inspection&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate property staging</h3>
                     <p>Provide guidance and resources for staging the listed property</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate property staging&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop property marketing plan</h3>
                     <p>Create a comprehensive strategy to market and promote a new listing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop property marketing plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute marketing materials</h3>
                     <p>Send listing flyers, brochures, and digital assets to sphere of influence and local area</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute marketing materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate broker tours</h3>
                     <p>Organize and host periodic broker open houses to showcase listings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate broker tours&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Follow up on leads</h3>
                     <p>Promptly respond to and nurture prospective buyer inquiries</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;follow up on leads&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Gather client testimonials</h3>
                     <p>Request and collect positive client reviews to feature on marketing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;gather client testimonials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage listing price changes</h3>
                     <p>Communicate and justify any adjustments to the list price</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage listing price changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage listing syndication</h3>
                     <p>Ensure the property is distributed across all relevant real estate websites</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage listing syndication&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage rental listings</h3>
                     <p>Handle the unique requirements for marketing and administering rental properties</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage rental listings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage virtual tour</h3>
                     <p>Set up and test a virtual tour for the listed property</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage virtual tour&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor listing competition</h3>
                     <p>Stay informed on rival listings and adjust strategy accordingly</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor listing competition&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Optimize online listing</h3>
                     <p>Ensure all listing details, photos, and keywords are properly entered on MLS and real estate portals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;optimize online listing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare listing agreements</h3>
                     <p>Draft and execute seller representation contracts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare listing agreements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare listing presentation</h3>
                     <p>Draft a professional listing presentation package for a prospective seller</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare listing presentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare seller disclosures</h3>
                     <p>Gather and organize all legally required property disclosures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare seller disclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote open houses</h3>
                     <p>Schedule, advertise, and host successful open house events</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote open houses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Renew expired listings</h3>
                     <p>Proactively work to relist properties whose initial listing has expired</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;renew expired listings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to showing requests</h3>
                     <p>Promptly schedule and confirm all showings with buyers and their agents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to showing requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule maintenance/repairs</h3>
                     <p>Coordinate with vendors to address any pre-listing repairs or updates</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule maintenance/repairs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule professional photography</h3>
                     <p>Coordinate with a real estate photographer to capture high-quality listing photos</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule professional photography&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track listing analytics</h3>
                     <p>Monitor online listing performance, views, and engagement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track listing analytics&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update listing status</h3>
                     <p>Communicate changes in listing status (active, pending, sold) to all stakeholders</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update listing status&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update marketing materials</h3>
                     <p>Refresh listing photos, descriptions, and collateral as needed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update marketing materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Write property description</h3>
                     <p>Craft an engaging, accurate description of the listed property</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;write property description&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Listing & Marketing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -454,226 +438,226 @@
                 <div class="task-card">
                     <h3>Assist with buyer's offer</h3>
                     <p>Review, negotiate, and submit purchase offers on the buyer's behalf</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assist with buyer's offer&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Assist with pricing strategy</h3>
                     <p>Research comps and recommend an optimal list price</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assist with pricing strategy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collect seller testimonials</h3>
                     <p>Request positive reviews to feature in future marketing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect seller testimonials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate offer details</h3>
                     <p>Present and explain all offer terms to the seller</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate offer details&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct buyer consultation</h3>
                     <p>Meet with prospective buyers to understand their needs and goals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct buyer consultation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct seller consultation</h3>
                     <p>Meet with prospective sellers to discuss listing strategy and goals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct seller consultation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct seller home tour</h3>
                     <p>Walk through the property, identify strengths, and note any issues</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct seller home tour&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate buyer's inspections</h3>
                     <p>Schedule, attend, and follow up on any necessary home inspections</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate buyer's inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate seller's move-out</h3>
                     <p>Provide guidance and resources for a smooth transition</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate seller's move-out&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop buyer search criteria</h3>
                     <p>Create detailed buyer profiles to guide property searches</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop buyer search criteria&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate seller relocation</h3>
                     <p>Offer support for sellers who are moving to a new area</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate seller relocation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Guide buyer through closing</h3>
                     <p>Ensure a smooth transaction from contract to keys in hand</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;guide buyer through closing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle seller objections</h3>
                     <p>Professionally address any concerns or hesitations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle seller objections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain buyer communication</h3>
                     <p>Provide regular updates and respond promptly to buyer inquiries</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain buyer communication&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage buyer showings</h3>
                     <p>Schedule, confirm, and coordinate all property viewings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage buyer showings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage rental transactions</h3>
                     <p>Guide both landlords and tenants through leasing processes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage rental transactions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage seller expectations</h3>
                     <p>Set realistic timelines and communicate throughout the process</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage seller expectations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate seller concessions</h3>
                     <p>Advocate for the seller's best interests during contract talks</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate seller concessions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare seller for listing</h3>
                     <p>Advise on property prep, staging, and disclosure requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare seller for listing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide buyer education</h3>
                     <p>Offer guidance on mortgage, inspection, appraisal, and closing processes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide buyer education&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide seller education</h3>
                     <p>Explain the home selling steps, marketing plan, and commission structure</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide seller education&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Represent buyer in negotiations</h3>
                     <p>Advocate for the buyer's best interests during contract discussions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;represent buyer in negotiations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Represent seller at closing</h3>
                     <p>Attend the closing and address any last-minute issues</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;represent seller at closing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review seller disclosures</h3>
                     <p>Ensure all legally required property information is accurately disclosed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review seller disclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Set buyer expectations</h3>
                     <p>Explain the home buying process, timeline, and agent responsibilities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;set buyer expectations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Buyer & Seller Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -691,226 +675,226 @@
                 <div class="task-card">
                     <h3>Administer referral program</h3>
                     <p>Manage the tracking and payout of client referral fees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer referral program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Advise on lease-to-own deals</h3>
                     <p>Provide guidance on specialized lease-purchase contracts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;advise on lease-to-own deals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Attend closing</h3>
                     <p>Represent the client and ensure a smooth transaction</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;attend closing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Attend home inspection</h3>
                     <p>Be present to observe and discuss findings with the inspector</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;attend home inspection&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate appraisal process</h3>
                     <p>Order the appraisal and provide supporting documents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate appraisal process&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate lease takeovers</h3>
                     <p>Facilitate the transfer of an existing lease to the new owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate lease takeovers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate rental move-in/out</h3>
                     <p>Manage the administrative tasks for tenant transitions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate rental move-in/out&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate title search</h3>
                     <p>Order and review the property's title report</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate title search&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate 1031 exchanges</h3>
                     <p>Help investors defer capital gains through like-kind exchanges</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate 1031 exchanges&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate mortgage application</h3>
                     <p>Assist the buyer in submitting a complete loan application</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate mortgage application&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate title clearance</h3>
                     <p>Work to resolve any title issues or encumbrances</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate title clearance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle short sales/foreclosures</h3>
                     <p>Navigate the unique requirements of distressed property sales</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle short sales/foreclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage appraisal challenges</h3>
                     <p>Facilitate any necessary re-evaluation or appeal</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage appraisal challenges&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage contract negotiations</h3>
                     <p>Facilitate discussions and revisions between all parties</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage contract negotiations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage earnest money</h3>
                     <p>Hold, track, and disburse the buyer's good-faith deposit</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage earnest money&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor loan approval status</h3>
                     <p>Regularly follow up with the lender on approval progress</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor loan approval status&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate inspection items</h3>
                     <p>Advocate for the client's interests during repair discussions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate inspection items&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Order title insurance</h3>
                     <p>Coordinate the title company to issue the required policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;order title insurance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee property management</h3>
                     <p>Assist landlords with tenant screening, maintenance, and financials</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee property management&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare closing disclosure</h3>
                     <p>Review and explain the final settlement statement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare closing disclosure&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare purchase agreement</h3>
                     <p>Draft the initial offer and purchase contract</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare purchase agreement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review appraisal findings</h3>
                     <p>Ensure the appraised value aligns with the purchase price</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review appraisal findings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review inspection report</h3>
                     <p>Analyze the report and identify any concerns or needed repairs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review inspection report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule final walkthrough</h3>
                     <p>Arrange for the buyer to inspect the property before closing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule final walkthrough&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule home inspection</h3>
                     <p>Arrange for a comprehensive property inspection</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule home inspection&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Transaction Coordination</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -928,190 +912,190 @@
                 <div class="task-card">
                     <h3>Adhere to foreign investor regulations</h3>
                     <p>Understand and apply rules for non-resident property sales</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adhere to foreign investor regulations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Adhere to respa guidelines</h3>
                     <p>Comply with the Real Estate Settlement Procedures Act</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adhere to respa guidelines&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Comply with cfpb regulations</h3>
                     <p>Follow guidelines for consumer financial protection</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;comply with cfpb regulations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Comply with state regulations</h3>
                     <p>Stay up-to-date on state-specific real estate laws and forms</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;comply with state regulations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Disclose known property defects</h3>
                     <p>Provide full transparency on any material issues with the home</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;disclose known property defects&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>File required transaction docs</h3>
                     <p>Submit all necessary paperwork to title companies and authorities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;file required transaction docs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement anti-money laundering controls</h3>
                     <p>Establish AML compliance procedures for a real estate brokerage to meet FinCEN and regulatory requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement anti-money laundering controls&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain anti-money laundering policies</h3>
                     <p>Implement measures to detect and report suspicious transactions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain anti-money laundering policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain client privacy</h3>
                     <p>Safeguard all sensitive personal and financial information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain client privacy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain error & omissions insurance</h3>
                     <p>Carry professional liability coverage for potential claims</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain error & omissions insurance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain fair housing policies</h3>
                     <p>Ensure all marketing and client interactions comply with FHA laws</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain fair housing policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage ada accessibility requirements</h3>
                     <p>Advise clients on fair housing and accessibility laws</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage ada accessibility requirements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage client data retention</h3>
                     <p>Store records and documents per legal and ethical requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage client data retention&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage data privacy policies</h3>
                     <p>Protect client data in accordance with data protection laws</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage data privacy policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage transaction checklists</h3>
                     <p>Track the completion of all required documentation and milestones</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage transaction checklists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare property disclosures</h3>
                     <p>Gather and organize all legally required seller disclosures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare property disclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide agency disclosures</h3>
                     <p>Explain the agent's fiduciary duties and legal representation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide agency disclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide energy efficiency disclosures</h3>
                     <p>Disclose a home's energy usage and improvement opportunities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide energy efficiency disclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide lead-based paint disclosures</h3>
                     <p>Notify buyers of potential lead hazards in older homes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide lead-based paint disclosures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review property survey</h3>
                     <p>Analyze the property boundaries, easements, and encroachments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review property survey&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track licenses and renewals</h3>
                     <p>Ensure all agent and broker licenses remain active and compliant</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track licenses and renewals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Compliance & Disclosure Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -1129,181 +1113,181 @@
                 <div class="task-card">
                     <h3>Analyze client data trends</h3>
                     <p>Identify patterns in client demographics, behavior, and transaction history to improve retention and targeting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze client data trends&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct client satisfaction surveys</h3>
                     <p>Collect and analyze feedback to improve service delivery</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct client satisfaction surveys&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create client profiles</h3>
                     <p>Gather detailed information to personalize the client experience</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create client profiles&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Customize client communication</h3>
                     <p>Tailor messaging and channels to individual preferences</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;customize client communication&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop client loyalty program</h3>
                     <p>Implement a system to reward and retain high-value clients</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop client loyalty program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate client focus groups</h3>
                     <p>Gather targeted input to enhance products and services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate client focus groups&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Gather client feedback</h3>
                     <p>Solicit and document client satisfaction throughout the process</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;gather client feedback&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain client contact database</h3>
                     <p>Centralize and organize all client contact details</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain client contact database&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain client gift program</h3>
                     <p>Select and deliver thoughtful gifts for special occasions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain client gift program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain client referral pipeline</h3>
                     <p>Nurture relationships to generate ongoing referral business</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain client referral pipeline&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage client referral program</h3>
                     <p>Administer the tracking and rewards for client referrals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage client referral program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage client social media</h3>
                     <p>Engage with and respond to online client interactions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage client social media&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer concierge-style services</h3>
                     <p>Provide white-glove assistance beyond real estate transactions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer concierge-style services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize client events/mixers</h3>
                     <p>Host networking opportunities to build relationships</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize client events/mixers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide client education resources</h3>
                     <p>Share valuable content to position the agent as an expert</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide client education resources&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide client progress updates</h3>
                     <p>Keep clients informed of key milestones and next steps</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide client progress updates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide market trend updates</h3>
                     <p>Share relevant real estate news and analysis</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide market trend updates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to client inquiries</h3>
                     <p>Address questions and concerns in a timely manner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to client inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule client check-ins</h3>
                     <p>Proactively follow up with buyers and sellers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule client check-ins&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Send personalized communications</h3>
                     <p>Craft tailored messages, newsletters, and outreach</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;send personalized communications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Client Relationship Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1321,154 +1305,154 @@
                 <div class="task-card">
                     <h3>Administer agent draw programs</h3>
                     <p>Manage and process financial draws for real estate agents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer agent draw programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Administer retirement plan contributions</h3>
                     <p>Help a real estate brokerage manage agent retirement plan enrollment, contributions, and compliance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer retirement plan contributions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Analyze agent production metrics</h3>
                     <p>Evaluate individual and team agent performance using key real estate production data</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze agent production metrics&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Assist with agent tax preparation</h3>
                     <p>Help real estate agents organize income, expenses, and deductions for annual tax filing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assist with agent tax preparation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Ensure wage garnishment compliance</h3>
                     <p>Help a real estate brokerage process and comply with court-ordered wage garnishments for agent commissions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;ensure wage garnishment compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate agent healthcare benefits</h3>
                     <p>Help a real estate brokerage offer and administer health insurance options for agents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate agent healthcare benefits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle accounts receivable</h3>
                     <p>Track and collect outstanding commissions, referral fees, and other amounts owed to the brokerage or agent</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle accounts receivable&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain detailed transaction records</h3>
                     <p>Establish a complete recordkeeping system for real estate transactions to meet legal and brokerage requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain detailed transaction records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain escrow trust accounts</h3>
                     <p>Properly manage and reconcile real estate escrow and trust accounts in compliance with state licensing requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain escrow trust accounts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent performance bonuses</h3>
                     <p>Design and administer a performance bonus program that rewards real estate agent production milestones</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent performance bonuses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage commission disbursements</h3>
                     <p>Process and track commission payments to agents following real estate transaction closings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage commission disbursements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare agent commission statements</h3>
                     <p>Generate accurate, detailed commission statements for real estate agents after transaction closings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare agent commission statements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process charitable donation requests</h3>
                     <p>Handle agent or brokerage charitable donation requests and community giving programs professionally</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process charitable donation requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide agent expense reimbursement</h3>
                     <p>Process and manage expense reimbursement requests from real estate agents for approved business expenses</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide agent expense reimbursement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide agent payment options</h3>
                     <p>Offer and explain different commission payment structures and disbursement options available to agents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide agent payment options&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Reconcile agent commission reports</h3>
                     <p>Reconcile brokerage commission reports against individual agent records to ensure accuracy and resolve discrepancies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;reconcile agent commission reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track agent sales production</h3>
                     <p>Monitor and record individual agent sales volume, transaction counts, and production milestones</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track agent sales production&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Financial & Commission Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -1486,181 +1470,181 @@
                 <div class="task-card">
                     <h3>Analyze open house attendance data</h3>
                     <p>Review open house sign-in data to evaluate buyer interest, lead quality, and listing exposure</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze open house attendance data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct virtual showings/tours</h3>
                     <p>Plan and execute professional virtual property tours for remote or out-of-area buyers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct virtual showings/tours&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Confirm showing appointments</h3>
                     <p>Confirm scheduled property showings with buyers, sellers, and showing agents to prevent missed appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;confirm showing appointments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute showing instructions</h3>
                     <p>Create and send clear property access and showing instructions to buyer agents and showing services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute showing instructions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate property tours during open houses</h3>
                     <p>Guide potential buyers through a property during an open house with effective narration and engagement techniques</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate property tours during open houses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Follow up on buyer showing feedback</h3>
                     <p>Collect and act on feedback from buyer's agents after property showings to inform pricing and strategy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;follow up on buyer showing feedback&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Greet and register open house attendees</h3>
                     <p>Welcome and capture contact information from open house visitors in a professional and friendly manner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;greet and register open house attendees&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle open house lead follow-up</h3>
                     <p>Execute a systematic follow-up campaign for leads captured at an open house</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle open house lead follow-up&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain open house sign-in sheets</h3>
                     <p>Create, manage, and archive open house sign-in records for lead tracking and compliance purposes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain open house sign-in sheets&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent showing feedback</h3>
                     <p>Collect and organize showing feedback from buyer's agents to inform listing strategy for multiple properties</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent showing feedback&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage no-show/cancellation policy</h3>
                     <p>Create and enforce a policy for handling last-minute showing cancellations and buyer no-shows</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage no-show/cancellation policy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage open house agent schedules</h3>
                     <p>Coordinate and schedule agents to host open houses across multiple listings efficiently</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage open house agent schedules&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare open house materials</h3>
                     <p>Assemble all necessary materials and supplies for a professional open house event</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare open house materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare showing disclosure forms</h3>
                     <p>Prepare agency disclosure and consent forms required before conducting property showings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare showing disclosure forms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote open house marketing</h3>
                     <p>Market an upcoming open house across digital and physical channels to maximize attendance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote open house marketing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide open house agent training</h3>
                     <p>Train real estate agents on professional open house techniques that maximize lead capture and buyer conversion</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide open house agent training&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide showing agent support</h3>
                     <p>Support buyer's agents with information, access, and assistance needed to successfully show a listed property</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide showing agent support&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule open house events</h3>
                     <p>Plan and schedule property open house events with optimal timing and coordination across all parties</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule open house events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule property showings</h3>
                     <p>Coordinate and schedule individual property showings for buyers efficiently and professionally</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule property showings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track showing activity metrics</h3>
                     <p>Monitor and analyze property showing volume, frequency, and trends to inform listing strategy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track showing activity metrics&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Open House & Showing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1678,145 +1662,145 @@
                 <div class="task-card">
                     <h3>Analyze market trends and data</h3>
                     <p>Research and interpret local real estate market data to inform agent strategy and client communications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze market trends and data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate agent advertising campaigns</h3>
                     <p>Plan and manage multi-channel advertising campaigns to build an agent's brand and generate leads</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate agent advertising campaigns&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop agent recruitment initiatives</h3>
                     <p>Design and execute strategies to attract and recruit productive real estate agents to a brokerage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop agent recruitment initiatives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop prospecting strategies</h3>
                     <p>Build a systematic lead generation plan tailored to a realtor's market, strengths, and goals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop prospecting strategies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate agent mentorship program</h3>
                     <p>Design and run a structured mentorship program pairing experienced agents with new licensees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate agent mentorship program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement agent social media plans</h3>
                     <p>Build and execute a strategic social media content plan for a real estate agent's business</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement agent social media plans&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent continuing education</h3>
                     <p>Track and support real estate agents' continuing education requirements for license renewal</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent continuing education&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent licensing and fees</h3>
                     <p>Track agent license status, renewals, fees, and association memberships for a real estate brokerage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent licensing and fees&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent marketing materials</h3>
                     <p>Organize, update, and distribute branded marketing materials for real estate agents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent marketing materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent onboarding/offboarding</h3>
                     <p>Execute a complete onboarding or offboarding process for real estate agents joining or leaving the brokerage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent onboarding/offboarding&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage agent recognition programs</h3>
                     <p>Design and run an agent recognition program that celebrates milestones and motivates the team</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage agent recognition programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer agent productivity tools</h3>
                     <p>Evaluate and implement technology tools that help real estate agents work more efficiently</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer agent productivity tools&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize agent networking events</h3>
                     <p>Plan and execute networking events that build relationships between agents and referral partners</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize agent networking events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee agent branding and websites</h3>
                     <p>Guide agents in developing a professional personal brand and effective real estate website presence</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee agent branding and websites&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee agent professional development</h3>
                     <p>Design and manage a comprehensive professional development program for real estate agents at all experience levels</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee agent professional development&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide agent coaching and training</h3>
                     <p>Deliver structured coaching and training sessions that help real estate agents improve specific skills and hit production goals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide agent coaching and training&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Development</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>

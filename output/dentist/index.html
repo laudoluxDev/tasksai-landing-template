@@ -23,7 +23,6 @@
         "url": "https://dentisttasksai.com",
         "operatingSystem": "Windows, macOS, Linux",
         "offers": [
-            {"@type": "Offer", "name": "Try It", "price": "5.00", "priceCurrency": "USD", "description": "2 credits"},
             {"@type": "Offer", "name": "Starter", "price": "29.00", "priceCurrency": "USD", "description": "15 credits"},
             {"@type": "Offer", "name": "Pro", "price": "99.00", "priceCurrency": "USD", "description": "60 credits"},
             {"@type": "Offer", "name": "Business", "price": "199.00", "priceCurrency": "USD", "description": "150 credits"},
@@ -248,7 +247,8 @@
         .demo-card {
             background: #0f172a;
             border-radius: 12px;
-            width: 100%;
+            width: 540px;
+            min-width: 540px;
             max-width: 540px;
             box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
             overflow: hidden;
@@ -286,7 +286,8 @@
 
         .demo-card-body {
             padding: 24px 22px 22px;
-            min-height: 220px;
+            height: 300px;
+            overflow: hidden;
         }
 
         .demo-slides { position: relative; }
@@ -928,6 +929,11 @@
 
         /* ─── Responsive ─── */
         @media (max-width: 768px) {
+            .demo-card {
+                width: 100% !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+            }
             .hero h1 { font-size: 2.1rem; }
             .hero .subtitle { font-size: 1.05rem; }
             .section-title { font-size: 1.6rem; }
@@ -1075,8 +1081,8 @@
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Pick Your Task</h3>
-                    <p>Browse 200+ purpose-built tasks organized by workflow. Each task is named for exactly what it does — no guessing required.</p>
+                    <h3>200+ Tasks That Find Themselves</h3>
+                    <p>Tell your AI what you need. It selects the right task automatically — from a library of 200+ purpose-built workflows. No browsing. No guessing. Just results.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>

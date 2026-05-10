@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #DB2777; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(219,39,119,0.1); color: #DB2777; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">SalonTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,73 +192,73 @@
                 <div class="task-card">
                     <h3>Distribute salon service menus</h3>
                     <p>Ensure clients are aware of the salon's full range of offerings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute salon service menus&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Follow up with no-show clients</h3>
                     <p>Reach out to clients who missed their scheduled appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;follow up with no-show clients&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Host client appreciation events</h3>
                     <p>Organize social gatherings to show gratitude to loyal clients</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;host client appreciation events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer client appreciation discounts</h3>
                     <p>Provide special pricing or bonuses for loyal customers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer client appreciation discounts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer client loyalty program rewards</h3>
                     <p>Incentivize repeat business through a points-based system</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer client loyalty program rewards&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Send appointment confirmations</h3>
                     <p>Automate email/text reminders for upcoming client appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;send appointment confirmations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Send holiday greetings to clients</h3>
                     <p>Design festive email or card campaigns for major holidays</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;send holiday greetings to clients&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Write a client rebooking reminder</h3>
                     <p>Draft a friendly reminder encouraging a client to rebook their next appointment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;write a client rebooking reminder&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Client Communications & Retention</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -304,82 +288,82 @@
                 <div class="task-card">
                     <h3>Handle appointment changes</h3>
                     <p>Reschedule, cancel, or modify client bookings as needed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle appointment changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a scheduling policy</h3>
                     <p>Establish guidelines for booking, tardiness, and cancellations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a scheduling policy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement online booking</h3>
                     <p>Allow clients to self-schedule appointments through a website or app</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement online booking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage appointment waitlists</h3>
                     <p>Notify clients when openings become available in busy schedules</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage appointment waitlists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage client waitlists</h3>
                     <p>Develop a system to quickly fill last-minute openings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage client waitlists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee schedules</h3>
                     <p>Create weekly or monthly work schedules for salon staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee schedules&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Optimize appointment duration</h3>
                     <p>Determine ideal time allotments for various salon services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;optimize appointment duration&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide last-minute booking</h3>
                     <p>Accommodate same-day or short-notice appointment requests</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide last-minute booking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Resolve client scheduling conflicts</h3>
                     <p>Find solutions when double-bookings or timing issues arise</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;resolve client scheduling conflicts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Appointment & Schedule Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -397,109 +381,109 @@
                 <div class="task-card">
                     <h3>Collect client late payment fees</h3>
                     <p>Establish and enforce policies for overdue balances</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect client late payment fees&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct inventory audits</h3>
                     <p>Reconcile physical inventory with digital records</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct inventory audits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a commission structure</h3>
                     <p>Develop fair policies for compensating booth rental stylists</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a commission structure&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain accurate financial records</h3>
                     <p>Track income, expenses, and profitability by department</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain accurate financial records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage gift card sales and redemption</h3>
                     <p>Track the issuance, usage, and liability of salon gift cards</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage gift card sales and redemption&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon credit card processing</h3>
                     <p>Ensure PCI compliance and competitive merchant fees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon credit card processing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon expense budgets</h3>
                     <p>Allocate funds for operations, marketing, and capital projects</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon expense budgets&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon inventory</h3>
                     <p>Order, receive, and stock retail products and salon supplies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon inventory&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer payment plan options</h3>
                     <p>Allow clients to pay for services over time</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer payment plan options&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process employee expense reports</h3>
                     <p>Reimburse staff for business-related purchases</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process employee expense reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide financial reporting</h3>
                     <p>Generate periodic statements for salon management</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide financial reporting&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track client retail purchases</h3>
                     <p>Analyze product sales data to optimize inventory</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track client retail purchases&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Retail Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -517,46 +501,46 @@
                 <div class="task-card">
                     <h3>Adhere to blood-borne pathogen standards</h3>
                     <p>Ensure proper protocols for handling bodily fluids</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adhere to blood-borne pathogen standards&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Health & Safety Compliance</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct safety inspections</h3>
                     <p>Identify and address potential hazards in the salon environment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct safety inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Health & Safety Compliance</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a workplace violence prevention plan</h3>
                     <p>Establish procedures to address threats, harassment, or assault</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a workplace violence prevention plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Health & Safety Compliance</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a sharps injury prevention program</h3>
                     <p>Train staff on the proper handling of tools and implements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a sharps injury prevention program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Health & Safety Compliance</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain msds documentation</h3>
                     <p>Provide safety data sheets for all chemicals used on-site</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain msds documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Health & Safety Compliance</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -574,82 +558,82 @@
                 <div class="task-card">
                     <h3>Collaborate with local influencers</h3>
                     <p>Partner with relevant social media personalities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collaborate with local influencers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a client referral program</h3>
                     <p>Incentivize existing clients to recommend the salon</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a client referral program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a salon branding strategy</h3>
                     <p>Establish a consistent visual identity and messaging</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a salon branding strategy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute salon print advertising</h3>
                     <p>Create and distribute flyers, brochures, or direct mailers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute salon print advertising&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Gather client testimonials</h3>
                     <p>Request and curate client feedback to use in marketing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;gather client testimonials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer new client referral incentives</h3>
                     <p>Encourage existing clients to recommend the salon</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer new client referral incentives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer seasonal service promotions</h3>
                     <p>Highlight timely offerings to drive increased bookings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer seasonal service promotions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize in-salon promotional events</h3>
                     <p>Host special events to attract new and existing clients</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize in-salon promotional events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote salon gift card sales</h3>
                     <p>Encourage clients to purchase gift cards for friends/family</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote salon gift card sales&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Marketing & Promotions</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -667,109 +651,109 @@
                 <div class="task-card">
                     <h3>Administer employee benefit programs</h3>
                     <p>Enroll staff in healthcare, retirement, and other offerings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer employee benefit programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Administer employee compensation plans</h3>
                     <p>Design competitive and equitable pay structures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer employee compensation plans&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct employee performance reviews</h3>
                     <p>Provide constructive feedback and identify growth opportunities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct employee performance reviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct employee satisfaction surveys</h3>
                     <p>Gather feedback to improve the work culture</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct employee satisfaction surveys&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop employee handbooks</h3>
                     <p>Establish policies, procedures, and expectations for staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop employee handbooks&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle employee disciplinary actions</h3>
                     <p>Address performance issues or policy violations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle employee disciplinary actions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement employee recognition programs</h3>
                     <p>Celebrate staff achievements and contributions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement employee recognition programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain employee personnel files</h3>
                     <p>Securely store confidential employee records</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain employee personnel files&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee leave and time off</h3>
                     <p>Track PTO, sick days, and other absences</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee leave and time off&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee onboarding</h3>
                     <p>Orient new hires to the salon's culture and operations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee onboarding&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process employee terminations</h3>
                     <p>Ensure a smooth exit process for departing staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process employee terminations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process payroll for employees</h3>
                     <p>Ensure timely and accurate compensation for all staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process payroll for employees&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Staff & HR Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -787,1027 +771,1027 @@
                 <div class="task-card">
                     <h3>Analyze appointment data</h3>
                     <p>Use metrics to identify busy periods and optimize staffing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze appointment data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Analyze appointment no-shows</h3>
                     <p>Identify patterns and implement strategies to reduce missed visits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze appointment no-shows&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Analyze client retention data</h3>
                     <p>Use metrics to identify opportunities to improve client loyalty</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze client retention data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Assist with booth rental relocation</h3>
                     <p>Help stylists transition to new rental spaces within the salon</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assist with booth rental relocation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collect client feedback surveys</h3>
                     <p>Design a post-appointment survey to gather client feedback</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect client feedback surveys&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate booth rental updates</h3>
                     <p>Notify stylists of changes to policies, rates, or procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate booth rental updates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate schedule updates</h3>
                     <p>Notify clients of changes to stylist availability or service hours</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate schedule updates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Comply with ada accessibility</h3>
                     <p>Make reasonable accommodations for clients with disabilities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;comply with ada accessibility&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Comply with health department regulations</h3>
                     <p>Meet all local and state requirements for salon operations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;comply with health department regulations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct a salon swot analysis</h3>
                     <p>Assess the salon's strengths, weaknesses, opportunities, and threats</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct a salon swot analysis&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct booth rental audits</h3>
                     <p>Review agreements, payments, and compliance regularly</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct booth rental audits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct booth rental inspections</h3>
                     <p>Ensure rented spaces meet cleanliness and safety standards</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct booth rental inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct employee safety training</h3>
                     <p>Educate staff on emergency procedures and risk mitigation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct employee safety training&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct local seo optimization</h3>
                     <p>Improve the salon's visibility in online search results</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct local seo optimization&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct market rate analyses</h3>
                     <p>Research competitor pricing to stay competitive</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct market rate analyses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct market research surveys</h3>
                     <p>Gather insights from clients and the community</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct market research surveys&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct post-service check-ins</h3>
                     <p>Follow up with clients after their appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct post-service check-ins&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct workplace diversity training</h3>
                     <p>Promote inclusion and cultural awareness</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct workplace diversity training&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Craft a birthday email campaign</h3>
                     <p>Design a series of automated emails to celebrate client birthdays</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;craft a birthday email campaign&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create a salon blog or vlog</h3>
                     <p>Publish educational and inspirational content</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create a salon blog or vlog&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create a salon operational policy manual</h3>
                     <p>Document standard procedures for all business functions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create a salon operational policy manual&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create a salon website</h3>
                     <p>Develop an informative and visually appealing online presence</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create a salon website&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a chemical safety program</h3>
                     <p>Train staff on the proper handling and storage of hazardous products</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a chemical safety program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a comprehensive business plan</h3>
                     <p>Outline the salon's vision, strategy, and operational details</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a comprehensive business plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop an emergency action plan</h3>
                     <p>Prepare for natural disasters, power outages, and other crises</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop an emergency action plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a salon strategic growth plan</h3>
                     <p>Identify opportunities to expand the business</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a salon strategic growth plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a salon sustainability program</h3>
                     <p>Implement eco-friendly practices and reduce environmental impact</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a salon sustainability program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop a scheduling software</h3>
                     <p>Implement a dedicated system for managing salon bookings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop a scheduling software&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop booth rental exit policies</h3>
                     <p>Establish protocols for stylists ending their rental agreement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop booth rental exit policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop employee career pathways</h3>
                     <p>Create opportunities for advancement and skill development</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop employee career pathways&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop strategic partnerships</h3>
                     <p>Collaborate with complementary businesses for cross-promotion</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop strategic partnerships&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute salon product samples</h3>
                     <p>Provide clients with complimentary retail items</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute salon product samples&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft booth rental agreements</h3>
                     <p>Create legally compliant booth rental contracts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft booth rental agreements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft independent contractor agreements</h3>
                     <p>Establish terms for non-booth rental stylists</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft independent contractor agreements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Enforce a professional dress code</h3>
                     <p>Establish guidelines for employee appearance and hygiene</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;enforce a professional dress code&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Ensure booth rental compliance</h3>
                     <p>Verify stylists meet licensing, insurance, and tax requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;ensure booth rental compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Ensure proper licensing and permits</h3>
                     <p>Verify all salon services are legally authorized to operate</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;ensure proper licensing and permits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Ensure worker's compensation coverage</h3>
                     <p>Provide adequate insurance for employee injuries or illnesses</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;ensure worker's compensation coverage&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Establish booth rental policies</h3>
                     <p>Develop guidelines for booth usage, decor, and client policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;establish booth rental policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Establish salon operating hours</h3>
                     <p>Set appropriate service availability based on client demand</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;establish salon operating hours&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate employee training programs</h3>
                     <p>Upskill staff on technical, customer service, and leadership skills</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate employee training programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate team building activities</h3>
                     <p>Organize events to foster camaraderie and collaboration</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate team building activities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle refunds and exchanges</h3>
                     <p>Develop a fair policy for returning or exchanging services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle refunds and exchanges&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle walk-in appointments</h3>
                     <p>Accommodate unscheduled clients without disrupting the flow</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle walk-in appointments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a client loyalty app</h3>
                     <p>Develop a mobile app to track rewards and appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a client loyalty app&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a client loyalty program</h3>
                     <p>Establish a rewards system to incentivize repeat business</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a client loyalty program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a hazardous waste disposal plan</h3>
                     <p>Safely dispose of used chemicals, sharps, and other hazardous materials</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a hazardous waste disposal plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement an employee referral program</h3>
                     <p>Incentivize staff to recommend new hires</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement an employee referral program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a preventative equipment maintenance program</h3>
                     <p>Prolong the lifespan of salon assets</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a preventative equipment maintenance program&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a resource procurement system</h3>
                     <p>Streamline the ordering and delivery of salon supplies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a resource procurement system&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a salon email newsletter</h3>
                     <p>Regularly communicate with clients via email marketing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a salon email newsletter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a salon mobile app</h3>
                     <p>Provide a convenient digital experience for clients</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a salon mobile app&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a salon security system</h3>
                     <p>Protect the premises from theft, vandalism, or unauthorized entry</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a salon security system&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement a salon text message list</h3>
                     <p>Build a subscriber base for promotional SMS messaging</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement a salon text message list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement infection control protocols</h3>
                     <p>Establish procedures for sanitizing tools and workspaces</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement infection control protocols&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement pricing strategies</h3>
                     <p>Set competitive rates for salon services and retail products</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement pricing strategies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement staff scheduling rules</h3>
                     <p>Establish guidelines for time off, shift trading, and overtime</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement staff scheduling rules&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain appointment records</h3>
                     <p>Track client visit history, service preferences, and other data</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain appointment records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain booth rental records</h3>
                     <p>Track occupancy, vacancies, and other key metrics</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain booth rental records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain client database</h3>
                     <p>Organize client information securely and efficiently</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain client database&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain client sanitization records</h3>
                     <p>Document cleaning and disinfection practices for each service</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain client sanitization records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain employee medical records</h3>
                     <p>Securely store sensitive health information for staff</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain employee medical records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain equipment maintenance logs</h3>
                     <p>Track servicing, repairs, and replacements for salon assets</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain equipment maintenance logs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain osha compliance</h3>
                     <p>Ensure the salon meets workplace safety regulations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain osha compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage booth rental payments</h3>
                     <p>Collect rent, track delinquencies, and handle security deposits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage booth rental payments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage booth rental waitlists</h3>
                     <p>Maintain a queue of stylists seeking available spaces</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage booth rental waitlists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage client online bookings</h3>
                     <p>Ensure a seamless digital scheduling experience</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage client online bookings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage client package purchases</h3>
                     <p>Track pre-paid service packages and monitor usage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage client package purchases&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee professional licenses</h3>
                     <p>Verify stylists maintain required certifications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee professional licenses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee scheduling software</h3>
                     <p>Optimize staffing assignments and minimize overtime</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee scheduling software&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage online review responses</h3>
                     <p>Engage with client feedback on review platforms</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage online review responses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage point-of-sale system</h3>
                     <p>Ensure accurate transaction processing and inventory tracking</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage point-of-sale system&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon facility maintenance</h3>
                     <p>Ensure the physical space is well-kept and functional</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon facility maintenance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon fleet vehicle maintenance</h3>
                     <p>Ensure proper care and upkeep of company vehicles</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon fleet vehicle maintenance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon social media accounts</h3>
                     <p>Post engaging content and respond to followers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon social media accounts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage salon software systems</h3>
                     <p>Maintain and upgrade technology platforms as needed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage salon software systems&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate booth rental renewals</h3>
                     <p>Work with stylists to extend existing rental agreements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate booth rental renewals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate booth rental terms</h3>
                     <p>Work with stylists to establish fair rental rates and policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate booth rental terms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate vendor contracts</h3>
                     <p>Secure the best terms for supplies, equipment, and services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate vendor contracts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer booth rental incentives</h3>
                     <p>Develop programs to attract and retain top talent</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer booth rental incentives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer booth rental referral bonuses</h3>
                     <p>Incentivize stylists to recommend the salon to peers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer booth rental referral bonuses&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer client concierge services</h3>
                     <p>Provide personalized services to premium clients</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer client concierge services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer client loyalty point redemption</h3>
                     <p>Allow clients to exchange rewards for salon services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer client loyalty point redemption&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer client referral incentives</h3>
                     <p>Incentivize clients to refer friends and family to the salon</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer client referral incentives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer online booking incentives</h3>
                     <p>Encourage clients to book digitally through promotional offers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer online booking incentives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer online retail sales</h3>
                     <p>Sell products through the salon's website or e-commerce platform</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer online retail sales&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer package booking discounts</h3>
                     <p>Incentivize clients to pre-purchase multiple appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer package booking discounts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Offer package pricing discounts</h3>
                     <p>Bundle services to provide value and encourage repeat visits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;offer package pricing discounts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Onboard new booth renters</h3>
                     <p>Orient stylists to salon policies and procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;onboard new booth renters&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize salon storage and organization</h3>
                     <p>Optimize the layout and flow of the salon environment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize salon storage and organization&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee salon construction projects</h3>
                     <p>Manage the build-out of a new salon location</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee salon construction projects&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee salon renovation projects</h3>
                     <p>Coordinate upgrades, expansions, or remodeling efforts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee salon renovation projects&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Participate in industry trade shows</h3>
                     <p>Network with other salon professionals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;participate in industry trade shows&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Participate in local community events</h3>
                     <p>Sponsor or volunteer at neighborhood activities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;participate in local community events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Personalize client thank-you notes</h3>
                     <p>Create a template for handwritten thank-you notes to send after appointments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;personalize client thank-you notes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare sales tax filings</h3>
                     <p>Comply with state and local tax requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare sales tax filings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process client package refunds</h3>
                     <p>Handle requests to cancel or modify pre-paid service packages</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process client package refunds&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process client payments</h3>
                     <p>Accept various payment methods (cash, card, digital wallets)</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process client payments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide booth rental access control</h3>
                     <p>Manage salon entry and access for booth rental stylists</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide booth rental access control&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide booth rental training</h3>
                     <p>Educate stylists on best practices for booth management</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide booth rental training&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide employee counseling resources</h3>
                     <p>Offer support for personal or professional challenges</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide employee counseling resources&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide employee scheduling app</h3>
                     <p>Give staff mobile access to view and manage their schedules</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide employee scheduling app&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide float/on-call staffing</h3>
                     <p>Schedule flexible employees to cover unexpected absences</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide float/on-call staffing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide staff with ppe</h3>
                     <p>Ensure access to personal protective equipment as needed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide staff with ppe&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Resolve booth rental disputes</h3>
                     <p>Mediate conflicts between stylists and salon management</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;resolve booth rental disputes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Resolve employee workplace conflicts</h3>
                     <p>Mediate disputes and promote a harmonious work environment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;resolve employee workplace conflicts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to client complaints</h3>
                     <p>Develop a process for handling and resolving client complaints professionally</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to client complaints&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to client online reviews</h3>
                     <p>Craft thoughtful responses to both positive and negative reviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to client online reviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule employee breaks</h3>
                     <p>Ensure compliance with labor laws and provide adequate rest time</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule employee breaks&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Segment client communications</h3>
                     <p>Tailor messaging based on client preferences, history, and demographics</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;segment client communications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Send appointment reminders</h3>
                     <p>Automatically email or text clients about upcoming visits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;send appointment reminders&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Send client newsletters</h3>
                     <p>Create an engaging monthly or quarterly newsletter</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;send client newsletters&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Send client reactivation campaigns</h3>
                     <p>Reconnect with inactive clients to encourage return visits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;send client reactivation campaigns&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update client contact information</h3>
                     <p>Ensure client records have current phone numbers, emails, and addresses</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update client contact information&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Operations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>

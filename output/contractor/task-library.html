@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #F97316; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(249,115,22,0.1); color: #F97316; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">ContractorTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,55 +192,55 @@
                 <div class="task-card">
                     <h3>Draft project scope summary</h3>
                     <p>Write a plain-language summary of the project scope for estimating purposes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft project scope summary&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log bid request tracking</h3>
                     <p>Maintain a log of all active bid requests with due dates and status</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log bid request tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare alternate bid item list</h3>
                     <p>Document alternate bid items with add/deduct amounts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare alternate bid item list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare bid invitation response</h3>
                     <p>Draft a formal response to a bid invitation request with company information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare bid invitation response&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare labor hours estimate worksheet</h3>
                     <p>Compile a worksheet estimating labor hours by trade and task</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare labor hours estimate worksheet&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare material quantity takeoff sheet</h3>
                     <p>Create a spreadsheet tracking material quantities needed for an estimate</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare material quantity takeoff sheet&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -274,820 +258,820 @@
                 <div class="task-card">
                     <h3>Draft business continuity plan</h3>
                     <p>Write the administrative version of the company's business continuity plan</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft business continuity plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft change order request</h3>
                     <p>Write a formal change order request documenting scope, cost, and schedule impact</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft change order request&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft contract transmittal letter</h3>
                     <p>Write a cover letter transmitting a signed contract to the owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft contract transmittal letter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft final completion notice</h3>
                     <p>Write a formal letter notifying the owner of substantial completion</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft final completion notice&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft joint check agreement</h3>
                     <p>Prepare a joint check agreement for owner, contractor, and sub</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft joint check agreement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft lien waiver</h3>
                     <p>Prepare a conditional or unconditional lien waiver for payment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft lien waiver&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft no-bid letter</h3>
                     <p>Write a professional letter declining to bid on a project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft no-bid letter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft notice of substituted subcontractor</h3>
                     <p>Prepare formal notice to owner when replacing a listed subcontractor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft notice of substituted subcontractor&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft project reference letter request</h3>
                     <p>Write a letter requesting a project reference or testimonial</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft project reference letter request&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft request for schedule extension</h3>
                     <p>Write a formal request for a contract time extension</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft request for schedule extension&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft subcontractor scope letter</h3>
                     <p>Write a detailed scope of work letter for a subcontractor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft subcontractor scope letter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log annual state report filing</h3>
                     <p>Track annual state business report filing requirements and status</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log annual state report filing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log as-built drawing submission</h3>
                     <p>Document the preparation and delivery of as-built drawings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log as-built drawing submission&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log award or recognition submission</h3>
                     <p>Compile documents for a project award or industry recognition submission</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log award or recognition submission&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log bank line of credit documentation</h3>
                     <p>Maintain records of the company's operating line of credit</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log bank line of credit documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log bid protest documentation</h3>
                     <p>Record the basis and timeline of a bid protest submission</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log bid protest documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log certificate of insurance issuance</h3>
                     <p>Track COIs issued to owners and GCs for active projects</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log certificate of insurance issuance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log consent of surety</h3>
                     <p>Obtain and file the surety's consent to final payment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log consent of surety&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log contract dispute documentation</h3>
                     <p>Compile correspondence and records for a contract dispute file</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log contract dispute documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log contract milestone dates</h3>
                     <p>Document all contractual milestone dates including notice to proceed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log contract milestone dates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log dbe/mbe/wbe participation tracking</h3>
                     <p>Track certified diverse business utilization for compliance reporting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log dbe/mbe/wbe participation tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log dispute reserve documentation</h3>
                     <p>Document amounts in dispute and held in reserve</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log dispute reserve documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log duns/uei number documentation</h3>
                     <p>Record the company's DUNS or UEI number and registration status</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log duns/uei number documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log equipment rental agreement</h3>
                     <p>Document rental equipment contract terms, pickup, and return</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log equipment rental agreement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log executed contract file</h3>
                     <p>Organize and document a signed contract in the project file</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log executed contract file&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log incident/accident report</h3>
                     <p>Complete a standardized incident report form for a jobsite accident</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log incident/accident report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log jobsite visitor record</h3>
                     <p>Maintain a sign-in log for all project visitors including inspectors and owner reps</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log jobsite visitor record&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log lead or asbestos abatement documentation</h3>
                     <p>Record contractor qualifications and disposal manifests for abatement work</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log lead or asbestos abatement documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log liquidated damages calculation</h3>
                     <p>Document the liquidated damages clause and calculate potential exposure</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log liquidated damages calculation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log material delivery discrepancy</h3>
                     <p>Document material shortages or damage upon delivery</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log material delivery discrepancy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log operation and maintenance manual</h3>
                     <p>Compile and organize O&M manuals for all installed equipment and systems</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log operation and maintenance manual&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log owner-approved change orders</h3>
                     <p>Record signed and approved change orders in the contract file</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log owner-approved change orders&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log payroll compliance documentation</h3>
                     <p>Track fringe benefit, apprentice ratio, and rate compliance for public works</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log payroll compliance documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log performance and payment bond tracking</h3>
                     <p>Track bond issuance and expiration for each bonded project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log performance and payment bond tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log professional liability (e&o) policy</h3>
                     <p>Document errors and omissions coverage if applicable</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log professional liability (e&o) policy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log project cost report</h3>
                     <p>Compile actual costs vs. budget by cost code for management review</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log project cost report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log project files archive</h3>
                     <p>Organize all project documentation for long-term archiving</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log project files archive&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log spare parts and keys delivery</h3>
                     <p>Record delivery of spare parts, keys, and access cards to the owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log spare parts and keys delivery&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log state registration by jurisdiction</h3>
                     <p>Document contractor registration and qualification in each state</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log state registration by jurisdiction&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log subcontract default bond claim</h3>
                     <p>Document steps for submitting a claim on a subcontractor's bond</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log subcontract default bond claim&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log subcontractor license verification</h3>
                     <p>Verify and document current contractor license status for each sub</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log subcontractor license verification&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log subcontractor payment tracking</h3>
                     <p>Track payments made to each subcontractor by month and invoice</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log subcontractor payment tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log subcontractor performance evaluation</h3>
                     <p>Record post-project performance ratings for each subcontractor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log subcontractor performance evaluation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log subcontractor prequalification</h3>
                     <p>Track submission and review of subcontractor prequalification packages</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log subcontractor prequalification&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log submittals received and returned</h3>
                     <p>Track all submittals with submission date, review status, and return date</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log submittals received and returned&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log tax lien or hold notice</h3>
                     <p>Document any tax liens or payment holds affecting the project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log tax lien or hold notice&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log training and certification tracking</h3>
                     <p>Maintain records of employee certifications and training completions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log training and certification tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log training records for owner staff</h3>
                     <p>Document training provided to owner's staff on systems and equipment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log training records for owner staff&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log union agreement compliance</h3>
                     <p>Document compliance with union collective bargaining agreements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log union agreement compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare annual financial statement</h3>
                     <p>Compile the documents for an annual reviewed or audited financial statement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare annual financial statement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare approved subcontractor list</h3>
                     <p>Maintain a current list of prequalified subcontractors by trade</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare approved subcontractor list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare as-built drawing transmittal</h3>
                     <p>Write the cover letter for submitting as-built drawings at project close</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare as-built drawing transmittal&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare backup subcontractor list</h3>
                     <p>Compile a list of backup subs in case a primary sub cannot perform</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare backup subcontractor list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare bonding capacity documentation</h3>
                     <p>Compile documents showing the company's surety bonding capacity</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare bonding capacity documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare change order backup package</h3>
                     <p>Compile labor, material, and equipment documentation supporting a change order</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare change order backup package&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare client satisfaction survey</h3>
                     <p>Write a post-project satisfaction survey for the owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare client satisfaction survey&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare commissioning documentation</h3>
                     <p>Compile commissioning reports and test results for mechanical systems</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare commissioning documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare contract change log</h3>
                     <p>Track all executed change orders with number, date, and amount</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare contract change log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare contract review checklist</h3>
                     <p>Create a checklist of contract terms to review before signing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare contract review checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare corporate document file</h3>
                     <p>Organize articles of incorporation, operating agreements, and meeting minutes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare corporate document file&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare daily job log</h3>
                     <p>Write the daily construction log recording work performed and conditions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare daily job log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare dbe/mbe/wbe certification documentation</h3>
                     <p>Compile documents for diverse business enterprise certification</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare dbe/mbe/wbe certification documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare equipment insurance documentation</h3>
                     <p>Record equipment floater policy details and scheduled equipment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare equipment insurance documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare equipment usage cost log</h3>
                     <p>Track equipment time and cost charged to a specific project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare equipment usage cost log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare federal contractor registration</h3>
                     <p>Document SAM.gov registration and updates for federal work</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare federal contractor registration&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare final pay application</h3>
                     <p>Prepare and submit the final pay application including retainage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare final pay application&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare job cost summary</h3>
                     <p>Write a monthly or final job cost summary by category</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare job cost summary&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare joint venture agreement summary</h3>
                     <p>Write a summary of key terms of a joint venture teaming agreement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare joint venture agreement summary&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare lien release for payment</h3>
                     <p>Compile conditional lien releases accompanying a payment application</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare lien release for payment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare lien waiver log</h3>
                     <p>Track lien waivers submitted and received from subcontractors</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare lien waiver log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare meeting minutes</h3>
                     <p>Record all decisions, action items, and attendees from a project meeting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare meeting minutes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare near-miss report</h3>
                     <p>Document a near-miss event with corrective actions noted</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare near-miss report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare notice of non-payment</h3>
                     <p>Draft a formal notice of non-payment or overdue invoice</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare notice of non-payment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare notice to owner (nto) log</h3>
                     <p>Track notices to owner filed by subcontractors or suppliers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare notice to owner (nto) log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare one-year warranty walkthrough checklist</h3>
                     <p>Create a checklist for the 11-month warranty inspection</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare one-year warranty walkthrough checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare prevailing wage payroll records</h3>
                     <p>Compile certified payroll documentation for prevailing wage projects</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare prevailing wage payroll records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare profit fade analysis</h3>
                     <p>Write a summary of project profit fade with causes identified</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare profit fade analysis&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare project case study</h3>
                     <p>Write a brief project case study for the company's marketing portfolio</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare project case study&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare purchase order log</h3>
                     <p>Track all purchase orders issued with vendor, amount, and status</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare purchase order log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare retainage release request</h3>
                     <p>Write a formal request for retainage release at project completion</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare retainage release request&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare subcontract agreement</h3>
                     <p>Draft a subcontract agreement for a specific trade or scope</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare subcontract agreement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare subcontractor change order</h3>
                     <p>Draft a change order to a subcontractor for a scope change</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare subcontractor change order&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare subcontractor final releases</h3>
                     <p>Collect final lien releases and closeout documents from all subs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare subcontractor final releases&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare subcontractor insurance tracking</h3>
                     <p>Track required insurance certificates and coverage limits for each sub</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare subcontractor insurance tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare submittal log</h3>
                     <p>Create and maintain the master submittal log for the project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare submittal log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare surety bond application</h3>
                     <p>Compile financial documents for a bonding application</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare surety bond application&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare toolbox talk record</h3>
                     <p>Document toolbox talk topic, date, attendees, and signatures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare toolbox talk record&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare vehicle fleet insurance log</h3>
                     <p>Record insurance coverage for all company vehicles</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare vehicle fleet insurance log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare warranty documentation</h3>
                     <p>Compile warranty letters and terms for all installed systems and materials</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare warranty documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare warranty letter compilation</h3>
                     <p>Gather and organize manufacturer and contractor warranty letters</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare warranty letter compilation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare wip (work-in-progress) schedule</h3>
                     <p>Compile the work-in-progress schedule for financial reporting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare wip (work-in-progress) schedule&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Contract Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>
@@ -1105,379 +1089,379 @@
                 <div class="task-card">
                     <h3>Draft bid clarification letter</h3>
                     <p>Write a letter requesting clarification on ambiguous bid documents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft bid clarification letter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft contract scope of work</h3>
                     <p>Write a detailed description of work to be performed under the contract</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft contract scope of work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft coordination meeting agenda</h3>
                     <p>Write the agenda for a weekly subcontractor coordination meeting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft coordination meeting agenda&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft monthly progress report</h3>
                     <p>Write a comprehensive monthly project status report</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft monthly progress report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft notice of delay</h3>
                     <p>Write a formal letter notifying the owner of a project delay and its cause</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft notice of delay&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft notice to proceed letter</h3>
                     <p>Prepare the notice to proceed issued to a subcontractor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft notice to proceed letter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft post-bid follow-up letter</h3>
                     <p>Write a follow-up letter after bid submission to express interest</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft post-bid follow-up letter&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft pre-bid meeting agenda</h3>
                     <p>Prepare an agenda for a pre-bid meeting with project stakeholders</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft pre-bid meeting agenda&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft project closeout schedule</h3>
                     <p>Write a schedule for completing all closeout tasks and submittals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft project closeout schedule&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft request for information (rfi)</h3>
                     <p>Write a formal RFI to request design clarification</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft request for information (rfi)&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft schedule delay analysis</h3>
                     <p>Write a narrative documenting the cause and impact of a schedule delay</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft schedule delay analysis&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log addenda tracking</h3>
                     <p>Track all addenda issued during the bidding period and their impact</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log addenda tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log back-charge notice</h3>
                     <p>Write a formal notice of back-charge to a subcontractor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log back-charge notice&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log bid bond documentation</h3>
                     <p>Track bid bond requirements, submissions, and returns</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log bid bond documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log bid result notification</h3>
                     <p>Record bid results and note whether the project was awarded</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log bid result notification&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log contract correspondence file</h3>
                     <p>Maintain a log of all formal correspondence related to the contract</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log contract correspondence file&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log critical path items</h3>
                     <p>Document tasks currently on the critical path and mitigation steps</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log critical path items&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log final inspection checklist</h3>
                     <p>Track items identified in the final inspection and their resolution</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log final inspection checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log historical cost data</h3>
                     <p>Organize past project cost data for use in future estimates</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log historical cost data&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log material substitution request</h3>
                     <p>Prepare and track requests for product substitutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log material substitution request&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log punchlist tracking</h3>
                     <p>Maintain the project punchlist with item status and responsible party</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log punchlist tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log schedule update</h3>
                     <p>Document weekly or bi-weekly schedule updates and variances</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log schedule update&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log subcontractor quote requests</h3>
                     <p>Track which subs have been contacted for quotes and their response status</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log subcontractor quote requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log weather delay documentation</h3>
                     <p>Record weather conditions and delays with dates and duration</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log weather delay documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare bid comparison matrix</h3>
                     <p>Create a side-by-side comparison of subcontractor bids</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare bid comparison matrix&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare bid summary cover sheet</h3>
                     <p>Create a professional cover sheet summarizing the bid proposal</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare bid summary cover sheet&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare contract closeout checklist</h3>
                     <p>List all documents and items required for contract closeout</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare contract closeout checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare delivery schedule coordination</h3>
                     <p>Document scheduled material deliveries and receiving assignments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare delivery schedule coordination&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare insurance certificate request</h3>
                     <p>Request and log certificates of insurance from subcontractors</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare insurance certificate request&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare lessons learned document</h3>
                     <p>Write a post-project lessons learned summary for internal review</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare lessons learned document&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare look-ahead schedule</h3>
                     <p>Write a 3-week or 6-week look-ahead schedule for field coordination</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare look-ahead schedule&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare project closeout checklist</h3>
                     <p>Create a comprehensive checklist of all closeout deliverables</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare project closeout checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare project feasibility summary</h3>
                     <p>Write a summary of cost and schedule feasibility for a prospective project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare project feasibility summary&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare project schedule draft</h3>
                     <p>Create a baseline project schedule identifying major milestones</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare project schedule draft&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare pull planning session notes</h3>
                     <p>Record outcomes and commitments from a pull planning session</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare pull planning session notes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare rfi log</h3>
                     <p>Track all RFIs submitted, dates sent, and responses received</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare rfi log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare specialty items cost log</h3>
                     <p>Track costs for specialty or custom materials and lead times</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare specialty items cost log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare sub default notice</h3>
                     <p>Draft a formal notice of default to a non-performing subcontractor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare sub default notice&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare substantial completion documentation</h3>
                     <p>Compile the documentation package for substantial completion notification</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare substantial completion documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare unit price schedule</h3>
                     <p>Compile a unit price list for standard bid items</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare unit price schedule&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare vendor approved product list</h3>
                     <p>Compile a list of owner- or spec-approved product substitutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare vendor approved product list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare weekly progress report</h3>
                     <p>Write the weekly project status report for the owner or project manager</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare weekly progress report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Project Scheduling & Progress Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1495,127 +1479,127 @@
                 <div class="task-card">
                     <h3>Draft billing continuation sheet</h3>
                     <p>Complete the itemized continuation sheet supporting the pay application</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft billing continuation sheet&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft final invoice</h3>
                     <p>Write the final project invoice including retainage and all outstanding amounts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft final invoice&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft value engineering options list</h3>
                     <p>Document potential cost-saving alternatives for review by the owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft value engineering options list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft vendor payment authorization</h3>
                     <p>Prepare payment authorization for an approved vendor invoice</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft vendor payment authorization&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log material invoice tracking</h3>
                     <p>Record all material invoices received with approval and payment status</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log material invoice tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log overbillings and underbillings</h3>
                     <p>Track project billing status relative to percent complete</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log overbillings and underbillings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log owner payment receipt</h3>
                     <p>Record all owner payments received with date, check number, and amount</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log owner payment receipt&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log pay application</h3>
                     <p>Prepare a monthly pay application (AIA G702/G703 or equivalent)</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log pay application&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log post-project financial review</h3>
                     <p>Document the final profit/loss analysis for management review</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log post-project financial review&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log retainage release tracking</h3>
                     <p>Track retainage withheld and requests for retainage release</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log retainage release tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log stored materials documentation</h3>
                     <p>Compile documentation for stored materials billed on a pay application</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log stored materials documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare overhead and profit calculation sheet</h3>
                     <p>Document the company's overhead rate and markup for estimating</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare overhead and profit calculation sheet&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare schedule of values</h3>
                     <p>Draft the schedule of values for contract billing purposes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare schedule of values&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare subcontractor pay application review</h3>
                     <p>Review and log subcontractor pay applications for processing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare subcontractor pay application review&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Billing Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1633,190 +1617,190 @@
                 <div class="task-card">
                     <h3>Draft workers' compensation incident report</h3>
                     <p>Prepare the employer's first report of injury form</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft workers' compensation incident report&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log confined space entry permit</h3>
                     <p>Prepare and log confined space entry permits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log confined space entry permit&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log crane inspection and operator certification</h3>
                     <p>Track crane inspection certificates and operator qualifications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log crane inspection and operator certification&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log final permit closeout</h3>
                     <p>Document permit final inspections and approvals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log final permit closeout&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log osha 300 injury and illness log</h3>
                     <p>Maintain the required OSHA injury and illness log</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log osha 300 injury and illness log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log respirator fit test records</h3>
                     <p>Track annual fit test results for employees using respirators</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log respirator fit test records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log safety inspection checklist</h3>
                     <p>Record results of weekly safety walkthrough inspections</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log safety inspection checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log scaffolding inspection record</h3>
                     <p>Document daily scaffold inspection results</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log scaffolding inspection record&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log sds (safety data sheet) binder</h3>
                     <p>Maintain a current SDS binder for all chemicals on site</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log sds (safety data sheet) binder&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare business license renewal</h3>
                     <p>Track local business license renewals and fees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare business license renewal&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare certificate of occupancy tracking</h3>
                     <p>Track CO application, inspection, and issuance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare certificate of occupancy tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare drug testing compliance log</h3>
                     <p>Track pre-employment and post-incident drug testing records</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare drug testing compliance log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare electrical safety lockout/tagout log</h3>
                     <p>Track lockout/tagout procedure compliance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare electrical safety lockout/tagout log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare excavation safety checklist</h3>
                     <p>Document required excavation and trenching safety compliance steps</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare excavation safety checklist&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare fall protection plan</h3>
                     <p>Document the fall protection plan for work at heights</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare fall protection plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare hazard communication plan</h3>
                     <p>Compile the written hazard communication program for the project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare hazard communication plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare hot work permit</h3>
                     <p>Document hot work permits for welding or cutting activities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare hot work permit&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare insurance renewal calendar</h3>
                     <p>Track expiration dates for all business insurance policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare insurance renewal calendar&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare osha 300a annual summary</h3>
                     <p>Compile and post the OSHA 300A annual injury summary</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare osha 300a annual summary&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare silica exposure control plan</h3>
                     <p>Compile the required silica dust control plan</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare silica exposure control plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare site-specific safety plan</h3>
                     <p>Compile a site-specific safety and health plan for the project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare site-specific safety plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>
@@ -1834,10 +1818,10 @@
                 <div class="task-card">
                     <h3>Prepare supplier contact list</h3>
                     <p>Compile a current list of material suppliers with contact and account information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare supplier contact list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Vendor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -1855,37 +1839,37 @@
                 <div class="task-card">
                     <h3>Log contractor qualification prequalification package</h3>
                     <p>Compile prequalification documents for submission to GCs or owners</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log contractor qualification prequalification package&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Log workers' compensation policy documentation</h3>
                     <p>Record WC policy details, coverage dates, and experience modifier</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;log workers' compensation policy documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare contractor license renewal log</h3>
                     <p>Track state contractor license expiration dates and renewal steps</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare contractor license renewal log&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare employee handbook</h3>
                     <p>Write the company's employee policies and HR handbook</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare employee handbook&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing, Insurance & Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>
@@ -1903,10 +1887,10 @@
                 <div class="task-card">
                     <h3>Prepare attic stock delivery record</h3>
                     <p>Document the delivery of spare materials and attic stock to the owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare attic stock delivery record&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Project Closeout Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
