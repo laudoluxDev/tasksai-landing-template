@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #3B82F6; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(59,130,246,0.1); color: #3B82F6; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">HRTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,82 +192,82 @@
                 <div class="task-card">
                     <h3>Check references</h3>
                     <p>Contact provided references to validate experience</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;check references&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct in-person interviews</h3>
                     <p>Lead structured behavioral and technical interviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct in-person interviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct phone screens</h3>
                     <p>Perform initial phone interviews to assess fit</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct phone screens&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Extend job offers</h3>
                     <p>Draft and send formal offer letters to selected candidates</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;extend job offers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Onboard new hires</h3>
                     <p>Manage new employee paperwork and setup</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;onboard new hires&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare interview questions</h3>
                     <p>Develop targeted questions to assess candidate skills</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare interview questions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review resumes and cvs</h3>
                     <p>Systematically evaluate candidate applications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review resumes and cvs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule interviews</h3>
                     <p>Coordinate calendar availability for interviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule interviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Write a job posting</h3>
                     <p>Draft a clear, compelling job posting for an open position</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;write a job posting&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Recruiting & Hiring Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -301,64 +285,64 @@
                 <div class="task-card">
                     <h3>Assign mentors/buddies</h3>
                     <p>Pair new hires with seasoned employees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assign mentors/buddies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Complete i-9 and w-4 forms</h3>
                     <p>Assist new hires with employment paperwork</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;complete i-9 and w-4 forms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct orientation sessions</h3>
                     <p>Lead new hire orientation presentations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct orientation sessions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create onboarding checklists</h3>
                     <p>Develop comprehensive checklists for new hires</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create onboarding checklists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare new hire materials</h3>
                     <p>Assemble welcome packets, ID badges, equipment, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare new hire materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule onboarding activities</h3>
                     <p>Coordinate trainings, meetings, and activities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule onboarding activities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Set up new employee accounts</h3>
                     <p>Provision computer, email, payroll, benefits, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;set up new employee accounts&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Onboarding & Orientation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -376,73 +360,73 @@
                 <div class="task-card">
                     <h3>Develop performance review forms</h3>
                     <p>Design templates for annual/quarterly reviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop performance review forms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate review meetings</h3>
                     <p>Lead performance review discussions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate review meetings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Gather 360 feedback</h3>
                     <p>Solicit peer/manager/subordinate feedback</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;gather 360 feedback&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage performance issues</h3>
                     <p>Document, counsel, and develop improvement plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage performance issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule performance check-ins</h3>
                     <p>Coordinate meetings for performance discussions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule performance check-ins&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Set performance goals</h3>
                     <p>Collaborate with employees on SMART objectives</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;set performance goals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track employee development</h3>
                     <p>Monitor progress on goals and development plans</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track employee development&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Write performance reviews</h3>
                     <p>Compose detailed, balanced review narratives</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;write performance reviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Performance Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>
@@ -460,64 +444,64 @@
                 <div class="task-card">
                     <h3>Accommodate disabilities</h3>
                     <p>Interact with employees and providers for ADA support</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;accommodate disabilities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Administer disciplinary actions</h3>
                     <p>Issue warnings, suspensions, or terminations as needed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer disciplinary actions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct workplace investigations</h3>
                     <p>Gather facts, interview parties, and document findings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct workplace investigations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain personnel records</h3>
                     <p>Securely store and manage employee files</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain personnel records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage leave policies</h3>
                     <p>Oversee compliance with FMLA, sick leave, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage leave policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Resolve harassment claims</h3>
                     <p>Intake reports, assess, and facilitate resolutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;resolve harassment claims&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to employee concerns</h3>
                     <p>Address inquiries, grievances, and complaints</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to employee concerns&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Employee Relations & Investigations</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -535,64 +519,64 @@
                 <div class="task-card">
                     <h3>Calculate final pay and benefits</h3>
                     <p>Process remaining wages, PTO, COBRA, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;calculate final pay and benefits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Cancel accounts and access</h3>
                     <p>Disable system logins, emails, and network privileges</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;cancel accounts and access&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct exit interviews</h3>
                     <p>Gather feedback from departing employees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct exit interviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Initiate termination processes</h3>
                     <p>Prepare paperwork, notifications, and logistics</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;initiate termination processes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide employment verifications</h3>
                     <p>Respond to requests for references and employment history</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide employment verifications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Return company property</h3>
                     <p>Collect laptops, badges, keys, and other assets</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;return company property&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update hr systems</h3>
                     <p>Record termination details and rehire eligibility</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update hr systems&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Termination & Offboarding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -610,73 +594,73 @@
                 <div class="task-card">
                     <h3>Administer leave and time off</h3>
                     <p>Track, approve, and report on PTO, sick leave, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer leave and time off&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate workplace events</h3>
                     <p>Plan and execute company parties, celebrations, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate workplace events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate workplace safety</h3>
                     <p>Implement OSHA regulations and conduct training</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate workplace safety&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain employee handbooks</h3>
                     <p>Review, update, and distribute policy manuals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain employee handbooks&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain insurance coverage</h3>
                     <p>Enroll employees in health, dental, vision, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain insurance coverage&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage personnel files</h3>
                     <p>Ensure compliant storage and access controls</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage personnel files&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage vendor relationships</h3>
                     <p>Procure and maintain HR-related service providers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage vendor relationships&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process payroll and taxes</h3>
                     <p>Calculate wages, withholdings, and tax payments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process payroll and taxes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Policy Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>
@@ -694,64 +678,64 @@
                 <div class="task-card">
                     <h3>Administer retirement plans</h3>
                     <p>Manage 401(k), pension, and other savings programs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer retirement plans&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate benefits details</h3>
                     <p>Educate employees on coverage, utilization, and costs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate benefits details&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Enroll employees in benefits</h3>
                     <p>Guide new hires through insurance selections</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;enroll employees in benefits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain compliance reporting</h3>
                     <p>File required ACA, ERISA, and other regulatory forms</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain compliance reporting&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage open enrollment</h3>
                     <p>Facilitate annual benefits election process</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage open enrollment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process life events changes</h3>
                     <p>Update coverage for marriages, births, divorces, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process life events changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Resolve benefits claims issues</h3>
                     <p>Liaise with providers to address employee questions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;resolve benefits claims issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Benefits Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -769,64 +753,64 @@
                 <div class="task-card">
                     <h3>Deliver manager training</h3>
                     <p>Provide guidance on people management best practices</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;deliver manager training&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft internal announcements</h3>
                     <p>Compose and distribute company-wide communications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft internal announcements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate team building events</h3>
                     <p>Plan and execute offsite retreats, parties, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate team building events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain hr sharepoint/intranet</h3>
                     <p>Curate and update HR-specific resources</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain hr sharepoint/intranet&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage employee recognition</h3>
                     <p>Coordinate and promote awards, bonuses, and celebrations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage employee recognition&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Publish employee newsletters</h3>
                     <p>Create and distribute periodic staff updates</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;publish employee newsletters&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to employee inquiries</h3>
                     <p>Address HR-related questions and concerns</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to employee inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">HR Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>

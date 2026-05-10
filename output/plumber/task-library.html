@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #0284C7; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(2,132,199,0.1); color: #0284C7; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">PlumberTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,91 +192,91 @@
                 <div class="task-card">
                     <h3>Adjust estimate for plumbing project scope changes</h3>
                     <p>Revise the bid when the customer requests additions, deletions, or modifications to the original project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adjust estimate for plumbing project scope changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Calculate material costs for plumbing project</h3>
                     <p>Determine the costs of pipes, fittings, fixtures, and other materials needed for a plumbing job</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;calculate material costs for plumbing project&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create plumbing service agreement document</h3>
                     <p>Prepare a formal contract that outlines the scope of work, pricing, and terms and conditions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create plumbing service agreement document&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Estimate labor hours for plumbing work</h3>
                     <p>Assess the time required for plumbers to complete a plumbing installation or repair</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;estimate labor hours for plumbing work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Factor in overhead costs for plumbing bid</h3>
                     <p>Include expenses like insurance, licenses, transportation, and equipment when pricing a plumbing job</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;factor in overhead costs for plumbing bid&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate plumbing contract terms with customer</h3>
                     <p>Discuss and agree on payment schedules, warranties, and other contractual details</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate plumbing contract terms with customer&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Obtain customer signature on plumbing contract</h3>
                     <p>Ensure the customer has reviewed and approved the plumbing service agreement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;obtain customer signature on plumbing contract&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare plumbing service estimate</h3>
                     <p>Draft a detailed estimate for a plumbing service or installation job</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare plumbing service estimate&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Research comparable plumbing jobs for accurate pricing</h3>
                     <p>Analyze past projects, industry benchmarks, and competitor rates to price a plumbing job competitively</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;research comparable plumbing jobs for accurate pricing&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track plumbing job profitability against estimate</h3>
                     <p>Monitor actual costs and hours worked to assess the accuracy of the initial bid</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track plumbing job profitability against estimate&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Estimating & Bidding</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -310,91 +294,91 @@
                 <div class="task-card">
                     <h3>Address plumbing inspection failures or violations</h3>
                     <p>Resolve any issues identified during the inspection process</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;address plumbing inspection failures or violations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Complete plumbing permit application forms</h3>
                     <p>Fill out the required paperwork to obtain permits from the local building/planning department</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;complete plumbing permit application forms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Determine plumbing permit requirements</h3>
                     <p>Research local codes and regulations to identify necessary permits for a plumbing project</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;determine plumbing permit requirements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document passed plumbing inspections</h3>
                     <p>Retain copies of signed inspection reports for the customer's records and your files</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document passed plumbing inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate plumbing final inspection</h3>
                     <p>Assist the inspector during the completion walkthrough of the plumbing installation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate plumbing final inspection&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain plumbing permit documentation</h3>
                     <p>File and organize all permit-related paperwork for current and past projects</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain plumbing permit documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Pay plumbing permit fees to local authorities</h3>
                     <p>Submit payment for the permit application, inspection fees, and any other required charges</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;pay plumbing permit fees to local authorities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare for plumbing rough-in inspection</h3>
                     <p>Ensure the plumbing work is ready for the initial on-site inspection</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare for plumbing rough-in inspection&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule plumbing inspections with local officials</h3>
                     <p>Coordinate with the building department to arrange for required plumbing inspections</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule plumbing inspections with local officials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Submit plumbing permit application with supporting docs</h3>
                     <p>Gather and submit all documents needed to process the permit request</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;submit plumbing permit application with supporting docs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Permit & Inspection Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -412,91 +396,91 @@
                 <div class="task-card">
                     <h3>Analyze plumbing service productivity metrics</h3>
                     <p>Review technician performance, job profitability, and other KPIs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;analyze plumbing service productivity metrics&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Assign plumbers to work orders based on skills</h3>
                     <p>Match the right technicians to each plumbing job based on their expertise</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assign plumbers to work orders based on skills&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collect payment from customers for plumbing work</h3>
                     <p>Process invoices, accept payment methods, and provide receipts</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect payment from customers for plumbing work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create plumbing work order for new job</h3>
                     <p>Prepare a standardized work order form that details the customer's request</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create plumbing work order for new job&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Dispatch plumbers to jobsites as scheduled</h3>
                     <p>Provide technicians with work order details and route information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;dispatch plumbers to jobsites as scheduled&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document plumbing work completed on-site</h3>
                     <p>Record details of the repairs, replacements, or installations performed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document plumbing work completed on-site&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Follow up with customers after plumbing service</h3>
                     <p>Ensure customer satisfaction, address any issues, and request reviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;follow up with customers after plumbing service&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain plumbing job history and documentation</h3>
                     <p>Store work orders, invoices, and other records for future reference</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain plumbing job history and documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor plumbing job progress in real-time</h3>
                     <p>Track the status of each active work order using a job management system</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor plumbing job progress in real-time&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule plumbing service appointments</h3>
                     <p>Coordinate visit times that work for the customer and your available crews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule plumbing service appointments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Work Order & Job Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -514,91 +498,91 @@
                 <div class="task-card">
                     <h3>Collect customer feedback on plumbing services</h3>
                     <p>Solicit reviews, ratings, and testimonials to improve your offerings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect customer feedback on plumbing services&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Create plumbing service newsletters and updates</h3>
                     <p>Distribute helpful tips, seasonal reminders, and company news</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create plumbing service newsletters and updates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document customer interactions and agreements</h3>
                     <p>Log all communications, commitments, and decisions in the customer's file</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document customer interactions and agreements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Educate customers on plumbing code requirements</h3>
                     <p>Explain local regulations and permit needs for their plumbing projects</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;educate customers on plumbing code requirements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Follow up with customers on open plumbing issues</h3>
                     <p>Proactively check in to ensure satisfaction and resolve any outstanding problems</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;follow up with customers on open plumbing issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle customer complaints about plumbing work</h3>
                     <p>Address concerns, investigate issues, and find resolutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle customer complaints about plumbing work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain consistent plumbing brand messaging</h3>
                     <p>Ensure all customer-facing communications align with your company's voice</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain consistent plumbing brand messaging&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Promote plumbing specials, discounts, and offers</h3>
                     <p>Market your services and incentives to attract new and repeat customers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;promote plumbing specials, discounts, and offers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide plumbing system operation guidance</h3>
                     <p>Instruct customers on how to properly use and maintain their plumbing fixtures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide plumbing system operation guidance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to plumbing service inquiries</h3>
                     <p>Answer phone calls, emails, and messages from prospective customers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to plumbing service inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Customer Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -616,91 +600,91 @@
                 <div class="task-card">
                     <h3>Create plumbing safety policies and procedures</h3>
                     <p>Establish guidelines for jobsite conditions, PPE, and hazard mitigation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;create plumbing safety policies and procedures&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document plumbing jobsite safety inspections</h3>
                     <p>Conduct regular reviews and retain records of identified issues and corrections</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document plumbing jobsite safety inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>File plumbing incident and accident reports</h3>
                     <p>Thoroughly document any injuries, property damage, or other incidents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;file plumbing incident and accident reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain plumber training and certification records</h3>
                     <p>Document the ongoing education and qualifications of your workforce</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain plumber training and certification records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor changes to plumbing laws and regulations</h3>
                     <p>Stay informed of any updates that impact your business operations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor changes to plumbing laws and regulations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Obtain required plumbing licenses and certifications</h3>
                     <p>Ensure your business and technicians meet all legal requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;obtain required plumbing licenses and certifications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare for plumbing regulatory audits or inspections</h3>
                     <p>Organize records and prepare your team to successfully pass external reviews</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare for plumbing regulatory audits or inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide plumbing safety training for technicians</h3>
                     <p>Educate crews on proper techniques, equipment usage, and risk management</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide plumbing safety training for technicians&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review plumbing operations for compliance</h3>
                     <p>Assess adherence to codes, regulations, and industry best practices</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review plumbing operations for compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update plumbing manuals, forms, and templates</h3>
                     <p>Ensure all documentation reflects current safety standards and policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update plumbing manuals, forms, and templates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat4">Safety & Compliance Documentation</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -718,91 +702,91 @@
                 <div class="task-card">
                     <h3>Document plumbing subcontractor interactions</h3>
                     <p>Record all communications, change orders, and issues for reference</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document plumbing subcontractor interactions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain an approved list of plumbing suppliers</h3>
                     <p>Identify reliable sources for materials, equipment, and specialty items</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain an approved list of plumbing suppliers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage plumbing inventory and material tracking</h3>
                     <p>Monitor stock levels, usage, and warehousing to avoid shortages</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage plumbing inventory and material tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage plumbing subcontractor scheduling and dispatch</h3>
                     <p>Coordinate the availability and deployment of supplemental labor</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage plumbing subcontractor scheduling and dispatch&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate contracts with plumbing subcontractors</h3>
                     <p>Establish terms, rates, and service level agreements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate contracts with plumbing subcontractors&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate pricing and terms with plumbing suppliers</h3>
                     <p>Secure favorable rates, discounts, and payment structures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate pricing and terms with plumbing suppliers&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee plumbing subcontractor work quality</h3>
                     <p>Monitor job performance and ensure compliance with your standards</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee plumbing subcontractor work quality&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Place orders for plumbing materials and equipment</h3>
                     <p>Ensure timely delivery of the necessary products for each job</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;place orders for plumbing materials and equipment&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Qualify plumbing subcontractors and vendors</h3>
                     <p>Vet potential partners for licensing, insurance, performance, and pricing</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;qualify plumbing subcontractors and vendors&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Resolve plumbing material defects or delivery issues</h3>
                     <p>Address problems with suppliers to minimize disruption to your work</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;resolve plumbing material defects or delivery issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Subcontractor & Supplier Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -820,91 +804,91 @@
                 <div class="task-card">
                     <h3>Acquire plumbing workers' compensation coverage</h3>
                     <p>Ensure proper protection for your employees on the job</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;acquire plumbing workers' compensation coverage&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document plumbing insurance policy information</h3>
                     <p>Organize coverage details, renewal dates, and contact information</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document plumbing insurance policy information&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>File plumbing insurance claims for incidents</h3>
                     <p>Report and provide supporting documentation for any covered losses</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;file plumbing insurance claims for incidents&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain plumbing contractor license requirements</h3>
                     <p>Renew licenses, track continuing education, and address any issues</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain plumbing contractor license requirements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage plumbing business entity compliance</h3>
                     <p>Maintain proper legal structure, tax IDs, and operational registrations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage plumbing business entity compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Obtain plumbing business licenses and permits</h3>
                     <p>Register your company with local and state authorities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;obtain plumbing business licenses and permits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Obtain plumbing surety bonds for larger projects</h3>
                     <p>Meet customer or regulatory requirements for performance guarantees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;obtain plumbing surety bonds for larger projects&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review plumbing insurance coverage annually</h3>
                     <p>Assess whether policies still meet the needs of your evolving business</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review plumbing insurance coverage annually&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Secure general liability insurance for plumbing work</h3>
                     <p>Protect the business from claims of property damage or injury</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;secure general liability insurance for plumbing work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Stay informed of changes to plumbing licensing laws</h3>
                     <p>Proactively adapt your practices to regulatory updates</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;stay informed of changes to plumbing licensing laws&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Licensing & Insurance Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -922,91 +906,91 @@
                 <div class="task-card">
                     <h3>Conduct plumbing employee performance reviews</h3>
                     <p>Assess skills, provide feedback, and identify training needs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct plumbing employee performance reviews&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate plumbing office supplies and inventory</h3>
                     <p>Procure, stock, and distribute the necessary tools and materials</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate plumbing office supplies and inventory&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop annual plumbing business plan</h3>
                     <p>Create a strategic roadmap for growth, profitability, and sustainability</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop annual plumbing business plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle plumbing employee hiring and onboarding</h3>
                     <p>Recruit, interview, and integrate new technicians into the team</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle plumbing employee hiring and onboarding&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement plumbing fleet fuel and mileage tracking</h3>
                     <p>Monitor usage, costs, and environmental impact of transportation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement plumbing fleet fuel and mileage tracking&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain plumbing company website and online presence</h3>
                     <p>Manage digital marketing, SEO, and customer-facing digital assets</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain plumbing company website and online presence&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage plumbing company financial records</h3>
                     <p>Maintain accurate books, invoices, receipts, and tax documentation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage plumbing company financial records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage plumbing fleet maintenance and repairs</h3>
                     <p>Oversee the care and upkeep of company vehicles and equipment</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage plumbing fleet maintenance and repairs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process payroll for plumbing field technicians</h3>
                     <p>Ensure proper compensation, tax withholding, and benefit deductions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process payroll for plumbing field technicians&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide plumbing employee benefits administration</h3>
                     <p>Enroll staff in health insurance, retirement plans, and other offerings</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide plumbing employee benefits administration&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat7">Business Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>

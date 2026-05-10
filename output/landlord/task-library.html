@@ -95,13 +95,12 @@
             transform: translateY(-1px);
         }
         .task-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; color: #1a1a1a; }
-        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 12px; }
+        .task-card p { font-size: 0.87rem; color: #6b7280; line-height: 1.55; flex: 1; margin-bottom: 8px; }
+        .task-trigger { font-size: 0.8rem; color: #9ca3af; margin-bottom: 12px; }
+        .task-trigger em { color: #D97706; font-style: normal; font-weight: 500; }
         .task-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
         .task-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
-        .task-cx { font-size: 0.75rem; color: #9ca3af; font-weight: 500; }
-        .cx-simple { color: #15803d; }
-        .cx-medium { color: #92400e; }
-        .cx-complex { color: #7e22ce; }
+
 
         /* Badge colors */
         .badge-cat0 { background: rgba(217,119,6,0.1); color: #D97706; }
@@ -155,23 +154,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">LandlordTasks<span>AI</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="/#features">Features</a>
-                <a href="/task-library">Task Library</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/support">Support</a>
-                <a href="/#pricing" class="header-cta">Get Credits</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="mobile-overlay" id="overlay"></div>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script src="/header.js"></script>
 
     <section class="page-hero">
         <div class="container">
@@ -208,406 +192,406 @@
                 <div class="task-card">
                     <h3>Audit lease files for completeness</h3>
                     <p>Periodically review lease records to ensure all documents are present</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;audit lease files for completeness&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft custom lease addendums</h3>
                     <p>Create specialized addendums for individual tenant situations (pets, parking, etc.)</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft custom lease addendums&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Draft lease amendment documentation</h3>
                     <p>Prepare paperwork to formally modify an existing lease agreement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;draft lease amendment documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Explain lease terms to new tenants</h3>
                     <p>Walk through the full lease agreement and answer any tenant questions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;explain lease terms to new tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>File lease agreements with authorities</h3>
                     <p>Submit copies of new/renewed leases to required government agencies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;file lease agreements with authorities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant requests to break lease early</h3>
                     <p>Review request, calculate costs, and process lease termination</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant requests to break lease early&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain digital lease agreement records</h3>
                     <p>Scan, organize, and backup all current and past lease documents</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain digital lease agreement records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage lease assignments and sublets</h3>
                     <p>Review, approve, and document any tenant requests to assign or sublet</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage lease assignments and sublets&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage security deposit refunds</h3>
                     <p>Process security deposit refunds for tenants moving out, deducting for damages or unpaid rent</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage security deposit refunds&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate lease terms with new tenants</h3>
                     <p>Work with prospective tenants to agree on rental rates, deposits, and lease clauses</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate lease terms with new tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Notify tenants of lease policy changes</h3>
                     <p>Communicate any revisions to rental policies or procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;notify tenants of lease policy changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Organize lease files by property/tenant</h3>
                     <p>Maintain a filing system to quickly locate any lease agreement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;organize lease files by property/tenant&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare and send lease renewal notices</h3>
                     <p>Generate and send lease renewal notices to existing tenants per their lease terms</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare and send lease renewal notices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare lease renewal offer</h3>
                     <p>Draft a lease renewal offer letter with updated terms and rent amount</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare lease renewal offer&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare lease termination notices</h3>
                     <p>Generate and deliver formal notices when terminating a tenancy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare lease termination notices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare move-in and move-out checklists</h3>
                     <p>Document the condition of the rental at start and end of tenancy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare move-in and move-out checklists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to tenant requests for lease changes</h3>
                     <p>Review tenant requests, negotiate updates, and amend the lease as needed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to tenant requests for lease changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Retain expired lease documentation</h3>
                     <p>Keep copies of past leases for required record retention period</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;retain expired lease documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review and update standard lease agreement</h3>
                     <p>Review the lease template, incorporate any changes in laws/regulations, and update it for new rental period</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review and update standard lease agreement&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review lease language with legal counsel</h3>
                     <p>Consult a lawyer to validate lease terms and compliance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review lease language with legal counsel&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review leases for legal compliance</h3>
                     <p>Audit leases to ensure they meet all applicable landlord-tenant laws</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review leases for legal compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Store digital copies of all leases</h3>
                     <p>Backup current and past lease agreements in a secure cloud storage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;store digital copies of all leases&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track and enforce lease expiration dates</h3>
                     <p>Monitor lease end dates, send timely renewal offers or non-renewal notices</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track and enforce lease expiration dates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track recurring lease renewal dates</h3>
                     <p>Maintain a schedule of when each tenant's lease is up for renewal</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track recurring lease renewal dates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Update lease templates for legal changes</h3>
                     <p>Revise standard lease templates to reflect evolving landlord-tenant laws</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;update lease templates for legal changes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Assess and bill tenants for excessive cleaning/damage</h3>
                     <p>Document costs and collect payment for unit restoration</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;assess and bill tenants for excessive cleaning/damage&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collect and secure new tenant security deposits</h3>
                     <p>Receive, record, and properly hold deposit funds</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect and secure new tenant security deposits&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct periodic unit inspections during tenancy</h3>
                     <p>Document any changes or damages over the lease term</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct periodic unit inspections during tenancy&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Conduct rental unit move-in inspections</h3>
                     <p>Document the condition of the property at tenant occupancy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct rental unit move-in inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate move-in schedules with new tenants</h3>
                     <p>Schedule dates, times, and logistics for tenant arrivals</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate move-in schedules with new tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate tenant utility service disconnections</h3>
                     <p>Work with providers to transition services to the next occupant</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate tenant utility service disconnections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute move-in information and instructions</h3>
                     <p>Deliver checklists, rules, and other onboarding materials</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute move-in information and instructions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Generate and deliver move-out notices to tenants</h3>
                     <p>Provide formal written notice of lease expiration</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;generate and deliver move-out notices to tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Generate and retain move-in condition reports</h3>
                     <p>Maintain detailed records of the unit's initial state</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;generate and retain move-in condition reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain a move-in/out calendar and schedule</h3>
                     <p>Track upcoming and recent tenant turnover activities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain a move-in/out calendar and schedule&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain comprehensive move-in/out documentation</h3>
                     <p>Store all records related to tenant occupancy transitions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain comprehensive move-in/out documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage abandoned property left by outgoing tenants</h3>
                     <p>Properly handle, store, and dispose of items left behind</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage abandoned property left by outgoing tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage tenant requests for pre-move-out walkthroughs</h3>
                     <p>Schedule and participate in early condition assessments</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage tenant requests for pre-move-out walkthroughs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Perform final walkthrough with outgoing tenants</h3>
                     <p>Jointly inspect the unit condition during move-out</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;perform final walkthrough with outgoing tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare and distribute tenant move-out guides</h3>
                     <p>Provide instructions on surrender procedures and requirements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare and distribute tenant move-out guides&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare detailed move-out cleaning checklists</h3>
                     <p>Provide guidance on expected unit condition at surrender</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare detailed move-out cleaning checklists&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process and retain digital move-in/out photos</h3>
                     <p>Catalogue visual records of unit condition changes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process and retain digital move-in/out photos&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process security deposit refunds and deductions</h3>
                     <p>Calculate amounts to be returned or withheld from deposits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process security deposit refunds and deductions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide move-in orientation for new tenants</h3>
                     <p>Explain policies, procedures, and use of equipment/systems</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide move-in orientation for new tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Review and approve tenant requests for carpet cleaning</h3>
                     <p>Assess the need for and oversee professional carpet cleaning</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;review and approve tenant requests for carpet cleaning&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat0">Lease & Rental Agreement Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -625,226 +609,226 @@
                 <div class="task-card">
                     <h3>Address tenant concerns about safety/security</h3>
                     <p>Respond to issues related to the property or neighborhood</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;address tenant concerns about safety/security&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collect tenant feedback and suggestions</h3>
                     <p>Solicit input to improve policies, services, and amenities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect tenant feedback and suggestions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Communicate changes to rental policies</h3>
                     <p>Inform tenants of updated rules, fees, or procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;communicate changes to rental policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate with tenant representatives</h3>
                     <p>Collaborate with tenant association leaders or spokespeople</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate with tenant representatives&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Deliver formal tenant violation notices</h3>
                     <p>Issue warnings about lease breaches, noise complaints, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;deliver formal tenant violation notices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Deliver seasonal reminders to tenants</h3>
                     <p>Send periodic notes about winterizing, yard work, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;deliver seasonal reminders to tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute newsletters and updates</h3>
                     <p>Share community news, tips, and announcements with tenants</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute newsletters and updates&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute tenant surveys and feedback forms</h3>
                     <p>Collect input to assess satisfaction and identify improvements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute tenant surveys and feedback forms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document all tenant interactions</h3>
                     <p>Keep records of calls, emails, notices, and in-person visits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document all tenant interactions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document tenant lease violations</h3>
                     <p>Record details of any breaches to support enforcement</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document tenant lease violations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Escalate serious tenant disputes</h3>
                     <p>Elevate major conflicts to property owner or legal counsel</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;escalate serious tenant disputes&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate move-in and move-out walkthroughs</h3>
                     <p>Conduct joint inspections with tenants to note property condition</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate move-in and move-out walkthroughs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Facilitate tenant community events</h3>
                     <p>Organize social gatherings, holiday celebrations, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;facilitate tenant community events&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant maintenance requests</h3>
                     <p>Document, assign, and follow up on repair and service needs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant maintenance requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant payment questions/issues</h3>
                     <p>Respond to inquiries about rent, fees, and account balances</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant payment questions/issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant requests for accommodations</h3>
                     <p>Review and approve modifications for disability, family status, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant requests for accommodations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage tenant move-in/move-out coordination</h3>
                     <p>Schedule dates, provide checklists, collect/refund deposits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage tenant move-in/move-out coordination&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage tenant portal/website inquiries</h3>
                     <p>Respond to messages and work requests submitted online</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage tenant portal/website inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage tenant service animal requests</h3>
                     <p>Review, approve, and track accommodations for assistance pets</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage tenant service animal requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Notify tenants of entry for inspections</h3>
                     <p>Provide advance notice before accessing a rental for checkups</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;notify tenants of entry for inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Notify tenants of planned maintenance</h3>
                     <p>Inform residents about upcoming repairs, renovations, or improvements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;notify tenants of planned maintenance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Notify tenants of utility/service interruptions</h3>
                     <p>Provide advance warning about planned outages or disruptions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;notify tenants of utility/service interruptions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide tenant references and histories</h3>
                     <p>Verify rental details for prospective landlords</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide tenant references and histories&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to routine tenant inquiries</h3>
                     <p>Address common questions about rent, maintenance, policies, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to routine tenant inquiries&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to tenant complaints and grievances</h3>
                     <p>Address concerns about service, policies, or other issues</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to tenant complaints and grievances&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat1">Tenant Communications</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -862,181 +846,181 @@
                 <div class="task-card">
                     <h3>Coordinate and oversee property inspections</h3>
                     <p>Schedule and supervise periodic walkthroughs of rental units</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate and oversee property inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate utility services and connections</h3>
                     <p>Set up, maintain, and disconnect water, power, internet, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate utility services and connections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate warranty and service claims</h3>
                     <p>File and follow up on claims for covered equipment failures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate warranty and service claims&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document all maintenance activities</h3>
                     <p>Keep records of repairs, upgrades, and work performed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document all maintenance activities&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Document warranties and service agreements</h3>
                     <p>Maintain records of coverage for equipment and systems</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;document warranties and service agreements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant repair requests and work orders</h3>
                     <p>Receive, prioritize, and route maintenance needs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant repair requests and work orders&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain an inventory of rental unit keys</h3>
                     <p>Track, secure, and distribute spare unit and common area keys</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain an inventory of rental unit keys&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain an inventory of supplies and materials</h3>
                     <p>Keep track of on-hand inventory for common repairs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain an inventory of supplies and materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain a property maintenance calendar</h3>
                     <p>Schedule recurring tasks like HVAC service, pest control, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain a property maintenance calendar&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain property condition assessment records</h3>
                     <p>Document the current state of all building components</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain property condition assessment records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage bids and proposals from contractors</h3>
                     <p>Solicit, evaluate, and select external service providers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage bids and proposals from contractors&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage emergency maintenance and repairs</h3>
                     <p>Respond quickly to urgent situations that impact habitability</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage emergency maintenance and repairs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage vendor and contractor relationships</h3>
                     <p>Evaluate, select, and oversee external service providers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage vendor and contractor relationships&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Obtain necessary permits for improvements</h3>
                     <p>Apply for and track approvals for renovations or upgrades</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;obtain necessary permits for improvements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee preventive maintenance programs</h3>
                     <p>Implement schedules for HVAC, plumbing, electrical, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee preventive maintenance programs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare cost estimates for capital projects</h3>
                     <p>Project expenses for major renovations or improvements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare cost estimates for capital projects&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to tenant questions about repairs</h3>
                     <p>Address inquiries about the status and nature of work performed</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to tenant questions about repairs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule and oversee routine maintenance work</h3>
                     <p>Arrange for regular cleaning, landscaping, pest control, etc.</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule and oversee routine maintenance work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Schedule and supervise unit turnover work</h3>
                     <p>Manage cleaning, repairs, and upgrades between tenants</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;schedule and supervise unit turnover work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Troubleshoot and diagnose maintenance issues</h3>
                     <p>Investigate problems and determine appropriate solutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;troubleshoot and diagnose maintenance issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat2">Maintenance & Repair Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
             </div>
@@ -1054,226 +1038,226 @@
                 <div class="task-card">
                     <h3>Calculate and apply security deposit interest</h3>
                     <p>Determine and credit appropriate interest to tenant deposits</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;calculate and apply security deposit interest&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Calculate and collect annual rent increases</h3>
                     <p>Implement contractual rent escalations per lease agreements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;calculate and collect annual rent increases&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Collect and process monthly rent payments</h3>
                     <p>Receive, record, and deposit rental income</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;collect and process monthly rent payments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate with property owner's cpa or bookkeeper</h3>
                     <p>Collaborate on tax preparation, audits, and financial reporting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate with property owner's cpa or bookkeeper&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Generate rent rolls and occupancy reports</h3>
                     <p>Compile data on current rent amounts and unit vacancies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;generate rent rolls and occupancy reports&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Generate year-end tax documentation</h3>
                     <p>Prepare 1099s, 1098s, and other tax forms for tenants and owners</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;generate year-end tax documentation&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant bounced or reversed payments</h3>
                     <p>Address issues with failed rent checks or online transactions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant bounced or reversed payments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant maintenance fee reimbursements</h3>
                     <p>Refund or credit tenants for verified repair costs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant maintenance fee reimbursements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain detailed property financial records</h3>
                     <p>Track income, expenses, budgets, and profitability by unit</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain detailed property financial records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain digital accounting records and backups</h3>
                     <p>Store and regularly backup all financial documentation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain digital accounting records and backups&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain property insurance coverage</h3>
                     <p>Obtain, update, and file claims for property and liability policies</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain property insurance coverage&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage commercial tenant percentage rents</h3>
                     <p>Calculate and collect percentage-based rents for retail/office</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage commercial tenant percentage rents&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage late fees and rental arrears</h3>
                     <p>Address overdue rent, send notices, and pursue collection</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage late fees and rental arrears&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage online rental payment portals</h3>
                     <p>Administer digital platforms for tenants to submit rent and fees</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage online rental payment portals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage payment plans for delinquent tenants</h3>
                     <p>Negotiate and document repayment arrangements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage payment plans for delinquent tenants&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage security deposit accounts and refunds</h3>
                     <p>Track, hold, and return deposits per lease terms</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage security deposit accounts and refunds&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Monitor tenant compliance with rent payment terms</h3>
                     <p>Track rent due dates, late fees, and lease violations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;monitor tenant compliance with rent payment terms&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare and deliver monthly owner statements</h3>
                     <p>Generate periodic financial reports for property owners</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare and deliver monthly owner statements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare annual property operating budgets</h3>
                     <p>Forecast income, expenses, and capital improvement needs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare annual property operating budgets&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare annual property valuations and appraisals</h3>
                     <p>Obtain professional assessments of market value</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare annual property valuations and appraisals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Prepare operating expense reimbursement bills</h3>
                     <p>Invoice commercial tenants for their pro rata share of costs</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;prepare operating expense reimbursement bills&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process invoices and vendor payments</h3>
                     <p>Review, approve, and pay bills for property operations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process invoices and vendor payments&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process tenant application and screening fees</h3>
                     <p>Collect and record non-refundable fees for rental applications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process tenant application and screening fees&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Reconcile bank statements and transactions</h3>
                     <p>Ensure financial records match banking activity</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;reconcile bank statements and transactions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Track and recover utility sub-metering charges</h3>
                     <p>Bill tenants for their individual water, electricity, etc. usage</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;track and recover utility sub-metering charges&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat3">Financial & Rent Administration</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
@@ -1303,181 +1287,181 @@
                 <div class="task-card">
                     <h3>Adhere to fair debt collection practices and laws</h3>
                     <p>Ensure proper procedures when pursuing unpaid rent</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adhere to fair debt collection practices and laws&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Adhere to fair housing act and anti-discrimination laws</h3>
                     <p>Ensure rental policies and practices comply with regulations</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;adhere to fair housing act and anti-discrimination laws&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Administer legally-binding rent increase notifications</h3>
                     <p>Issue formal letters to increase rent per contractual terms</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;administer legally-binding rent increase notifications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Comply with local rent control or stabilization laws</h3>
                     <p>Adhere to regulated rent increase limits and procedures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;comply with local rent control or stabilization laws&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Comply with local waste management and recycling rules</h3>
                     <p>Follow municipal ordinances for property waste handling</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;comply with local waste management and recycling rules&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Deliver legally-required tenant notices</h3>
                     <p>Provide formal written communications per landlord-tenant laws</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;deliver legally-required tenant notices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Deliver legally-valid termination notices for evictions</h3>
                     <p>Issue proper documentation when ending a tenancy</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;deliver legally-valid termination notices for evictions&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Distribute mandated tenant education materials</h3>
                     <p>Provide legally-required notices and disclosures</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;distribute mandated tenant education materials&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Ensure lead-based paint disclosures are provided</h3>
                     <p>Deliver required notifications about potential lead hazards</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;ensure lead-based paint disclosures are provided&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Fulfill state-mandated reporting and filings</h3>
                     <p>Submit periodic registrations, licenses, and other compliance</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;fulfill state-mandated reporting and filings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain proper disposal and storage of tenant records</h3>
                     <p>Securely retain and discard confidential documentation</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain proper disposal and storage of tenant records&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain records of all notices and postings</h3>
                     <p>Document when and how required communications were delivered</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain records of all notices and postings&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage legally-required tenant utility shut-off notices</h3>
                     <p>Provide advance warning before terminating essential services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage legally-required tenant utility shut-off notices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Post required signage in common areas of properties</h3>
                     <p>Display mandatory notices, disclosures, and announcements</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;post required signage in common areas of properties&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Properly store and handle tenant security deposit funds</h3>
                     <p>Maintain appropriate bank accounts and safeguards</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;properly store and handle tenant security deposit funds&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide legally-compliant lease termination notices</h3>
                     <p>Issue proper paperwork when ending a tenancy, if applicable</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide legally-compliant lease termination notices&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Provide proper notices for entry and unit inspections</h3>
                     <p>Give tenants advance warning before accessing their homes</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;provide proper notices for entry and unit inspections&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to subpoenas and information requests</h3>
                     <p>Cooperate with official inquiries about tenant records</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to subpoenas and information requests&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Respond to tenant requests for reasonable accommodations</h3>
                     <p>Review and approve modifications related to disabilities</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;respond to tenant requests for reasonable accommodations&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Retain records to demonstrate legal compliance</h3>
                     <p>Store documentation to prove adherence to applicable rules</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;retain records to demonstrate legal compliance&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat5">Compliance & Legal Notices</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
             </div>
@@ -1495,127 +1479,127 @@
                 <div class="task-card">
                     <h3>Conduct performance reviews of service contractors</h3>
                     <p>Evaluate quality, responsiveness, and value for the money</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;conduct performance reviews of service contractors&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Coordinate schedules for maintenance and repairs</h3>
                     <p>Work with vendors to minimize disruption to tenants</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;coordinate schedules for maintenance and repairs&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Develop and maintain a vendor communication plan</h3>
                     <p>Establish protocols for information sharing and coordination</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;develop and maintain a vendor communication plan&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Establish and enforce vendor liability insurance requirements</h3>
                     <p>Ensure adequate coverage to protect the property owner</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;establish and enforce vendor liability insurance requirements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Handle tenant escalations about vendor service issues</h3>
                     <p>Resolve complaints and ensure satisfactory resolutions</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;handle tenant escalations about vendor service issues&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Implement quality control checks for vendor work</h3>
                     <p>Inspect completed tasks to verify adherence to specifications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;implement quality control checks for vendor work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain a centralized vendor contact information database</h3>
                     <p>Store comprehensive details on all approved providers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain a centralized vendor contact information database&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-simple">Simple</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Maintain an approved vendor and contractor list</h3>
                     <p>Evaluate, vet, and curate a pool of qualified service providers</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;maintain an approved vendor and contractor list&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage vendor insurance, licenses, and certifications</h3>
                     <p>Ensure external providers meet all required qualifications</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage vendor insurance, licenses, and certifications&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Manage vendor relationships and contract renewals</h3>
                     <p>Evaluate ongoing needs, renegotiate terms, and retain partners</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;manage vendor relationships and contract renewals&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Negotiate and execute vendor service agreements</h3>
                     <p>Draft, review, and finalize contracts for recurring services</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;negotiate and execute vendor service agreements&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-complex">Complex</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Oversee vendor compliance with company policies</h3>
                     <p>Enforce standards for safety, conduct, and work quality</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;oversee vendor compliance with company policies&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Process and pay vendor invoices in a timely manner</h3>
                     <p>Review bills, approve for payment, and manage accounting</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;process and pay vendor invoices in a timely manner&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
                 <div class="task-card">
                     <h3>Solicit bids and proposals for property work</h3>
                     <p>Request quotes, compare options, and select external partners</p>
+                    <div class="task-trigger">💬 Just say: <em>&ldquo;solicit bids and proposals for property work&rdquo;</em></div>
                     <div class="task-footer">
                         <span class="task-badge badge-cat6">Vendor & Contractor Management</span>
                         <a href="/verified_safe.html" title="Security verified" style="display:inline-flex;align-items:center;gap:4px;background:#10b981;color:white;padding:3px 9px;border-radius:100px;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap;">🛡️ Verified Safe</a>
-                        <span class="task-cx cx-medium">Medium</span>
                     </div>
                 </div>
             </div>
