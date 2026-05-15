@@ -744,6 +744,7 @@ def main():
                 ("faq-template.html", "faq.html"),
                 ("buy-credits-template.html", "buy-credits.html"),
                 ("feedback-thanks-template.html", "feedback-thanks.html"),
+                ("unsubscribe-template.html", "unsubscribe.html"),
             ]:
                 tmpl_path = TEMPLATE_FILE.parent / tmpl_name
                 if tmpl_path.exists():
