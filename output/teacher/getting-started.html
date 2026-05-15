@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started — TeacherTasksAI</title>
+  <title>Getting Started - TeacherTasksAI</title>
   <meta name="description" content="Connect TeacherTasksAI to OpenClaw, Claude Desktop, Cursor, and Windsurf. Step-by-step setup guide." />
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QYEGTMFW8"></script>
@@ -141,15 +141,41 @@
 <div class="page-hero">
   <div class="container">
     <h1>Get started with <span>TeacherTasksAI</span></h1>
-    <p>Choose your AI client below — setup takes under 5 minutes.</p>
+    <p>Choose your AI client below - setup takes under 5 minutes.</p>
+  </div>
+</div>
+
+<!-- Compatibility banner -->
+<div style="background:#fff;border-bottom:1px solid #e5e7eb;padding:18px 0;">
+  <div class="container">
+    <p style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9ca3af;margin-bottom:10px;">Platform compatibility</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Claude Desktop</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; OpenClaw</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Cursor</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Windsurf</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Cline</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fef9c3;color:#854d0e;font-weight:600;">&#8987; Gemini (coming soon)</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600;">&#10005; claude.ai website</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600;">&#10005; ChatGPT</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600;">&#10005; Gemini Gems</span>
+    </div>
+    <p style="margin-top:10px;font-size:0.8rem;color:#92400e;background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:8px 12px;display:inline-block;">
+      ⚠️ <strong>claude.ai (website) ≠ Claude Desktop (app).</strong> The website doesn't support skills. You need the free <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Claude Desktop app</a>.
+    </p>
   </div>
 </div>
 
 <div class="content">
   <div class="container">
 
+    <!-- Changed platforms link -->
+    <p style="text-align:center;margin-bottom:28px;font-size:0.85rem;color:#9ca3af;">
+      Using a different AI tool now? All platforms are covered below. <a href="#path-tabs" style="color:var(--accent);">Choose your setup →</a>
+    </p>
+
     <!-- ── Path selector tabs ── -->
-    <div class="path-tabs">
+    <div class="path-tabs" id="path-tabs">
       <button class="path-tab active" onclick="showPath('openclaw', this)">
         <div class="tab-label">Recommended</div>
         <div class="tab-name">OpenClaw <span class="recommended-badge">Easiest</span></div>
@@ -157,13 +183,13 @@
       </button>
       <button class="path-tab" onclick="showPath('mcp', this)">
         <div class="tab-label">Also supported</div>
-        <div class="tab-name">Claude Desktop / Cursor / Windsurf</div>
-        <div class="tab-note">MCP installer — requires Python 3.8+</div>
+        <div class="tab-name">Claude Desktop / Cursor / Windsurf / Cline</div>
+        <div class="tab-note">MCP installer - requires Python 3.10+</div>
       </button>
     </div>
 
     <!-- ══════════════════════════════════════
-         PATH A — OpenClaw
+         PATH A - OpenClaw
     ══════════════════════════════════════ -->
     <div id="path-openclaw" class="path-section active">
 
@@ -204,118 +230,196 @@
 
       <div class="info-box">
         <h3>💡 Don't have a license key yet?</h3>
-        <p>Sign up for 5 free credits — no credit card required. Your license key is emailed to you immediately.</p>
+        <p>Sign up for 5 free credits - no credit card required. Your license key is emailed to you immediately.</p>
         <p><a href="/signup">→ Get 5 free credits at teachertasksai.com/signup</a></p>
       </div>
 
     </div><!-- /path-openclaw -->
 
     <!-- ══════════════════════════════════════
-         PATH B — MCP (Claude Desktop / Cursor / Windsurf)
+         PATH B - MCP (Claude Desktop / Cursor / Windsurf)
     ══════════════════════════════════════ -->
     <div id="path-mcp" class="path-section">
 
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">1</div>
-          <h2>Requirements</h2>
-        </div>
-        <ul>
-          <li><strong>Python 3.8 or later</strong> — <a href="https://python.org/downloads" target="_blank">download at python.org</a> if needed</li>
-          <li><strong>A TeacherTasksAI license key</strong> — you'll receive this by email after purchase, or <a href="/signup">get 5 free credits</a> to get one now</li>
-          <li><strong>At least one supported MCP client</strong> — Claude Desktop, Cursor, or Windsurf</li>
-        </ul>
-        <div class="alert">
-          <strong>⚠️ Mac users running macOS 14+</strong>
-          macOS may ask "python3 would like to access files in your Downloads folder" — click <strong>Allow</strong>. This is a one-time security prompt.
-        </div>
+      <!-- Per-client sub-tabs -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;">
+        <button class="path-tab active" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('claude', this)">
+          <div class="tab-name" style="font-size:0.95rem;">Claude Desktop</div>
+          <div class="tab-note">Most common</div>
+        </button>
+        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('cursor', this)">
+          <div class="tab-name" style="font-size:0.95rem;">Cursor</div>
+          <div class="tab-note">AI code editor</div>
+        </button>
+        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('windsurf', this)">
+          <div class="tab-name" style="font-size:0.95rem;">Windsurf</div>
+          <div class="tab-note">AI code editor</div>
+        </button>
+        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('cline', this)">
+          <div class="tab-name" style="font-size:0.95rem;">Cline</div>
+          <div class="tab-note">VS Code extension</div>
+        </button>
       </div>
 
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">2</div>
-          <h2>Download Your Package</h2>
-        </div>
-        <p>After purchase, you'll receive an email with a personalized download link. Extract the zip file — you'll see two folders:</p>
-        <ul>
-          <li><code>openclaw/</code> — for OpenClaw users (see the OpenClaw tab above)</li>
-          <li><code>mcp/</code> — for Claude Desktop, Cursor, and Windsurf</li>
-        </ul>
+      <!-- Common requirements -->
+      <div class="alert" style="margin-bottom:24px;">
+        <strong>⚠️ Requires Python 3.10+</strong>
+        Check with <code>python3 --version</code> in your terminal. Download from <a href="https://python.org/downloads" target="_blank" style="color:#92400e;">python.org</a> if needed.
       </div>
 
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">3</div>
-          <h2>Run the Installer</h2>
+      <!-- ── Claude Desktop ── -->
+      <div id="mcp-claude" class="mcp-client-section">
+        <div class="alert" style="margin-bottom:20px;">
+          <strong>⚠️ claude.ai (website) ≠ Claude Desktop (app)</strong>
+          These instructions are for the <strong>downloadable Claude Desktop app</strong> — not the claude.ai website. The website does not support skills.<br/>
+          <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free (Mac &amp; Windows) →</a>
         </div>
-        <p>Open a terminal (<strong>Mac:</strong> Terminal app &nbsp;|&nbsp; <strong>Windows:</strong> Command Prompt or PowerShell) and run:</p>
-        <div class="code-block">
-          <span class="comment"># Navigate to the mcp folder</span><br/>
-          <span class="cmd">cd ~/Downloads/teacher/mcp</span><br/><br/>
-          <span class="comment"># Run the installer — it will prompt you for your license key</span><br/>
-          <span class="cmd">python3 install.py</span>
+        <div class="step">
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
+          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
         </div>
-        <p>The installer will:</p>
-        <ol>
-          <li>Detect your installed MCP clients (Claude Desktop, Cursor, Windsurf)</li>
-          <li>Install the required Python packages automatically</li>
-          <li>Back up your existing MCP config (nothing is lost)</li>
-          <li>Configure TeacherTasksAI in all detected clients</li>
-        </ol>
-      </div>
-
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">4</div>
-          <h2>Restart Your MCP Client</h2>
+        <div class="step">
+          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
+          <div class="code-block">
+            <span class="cmd">cd ~/Downloads/teachertasksai/mcp</span><br/>
+            <span class="cmd">pip3 install -r requirements.txt</span><br/>
+            <span class="cmd">python3 install.py</span>
+          </div>
+          <p>The installer detects Claude Desktop automatically, backs up your existing config, and adds TeacherTasksAI.</p>
         </div>
-        <p>Fully quit and reopen Claude Desktop, Cursor, or Windsurf. MCP servers load at startup — a restart is required.</p>
-        <p>You should see <strong>teacher</strong> appear in your connected tools list.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">5</div>
-          <h2>Start Using Your Tasks</h2>
+        <div class="step">
+          <div class="step-header"><div class="step-num">3</div><h2>Restart Claude Desktop</h2></div>
+          <p>Fully quit and reopen Claude Desktop (MCP servers load at startup). You should see <strong>teachertasksai</strong> in your connected tools.</p>
         </div>
-        <p>Just describe what you need in plain language:</p>
-        <div class="code-block">
-          <span class="comment">You type:</span><br/>
-          <span class="cmd">"I need help with Write a parent progress update"</span><br/><br/>
-          <span class="comment">TeacherTasksAI finds the right task, confirms with you,</span><br/>
-          <span class="comment">then runs it. Each task uses 1 credit.</span>
+        <div class="step">
+          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="code-block"><span class="cmd">"I need help with Write a parent progress update"</span></div>
+          <p>Or check your balance: <em>"Check my teacher credits"</em></p>
         </div>
-        <p>Check your credit balance anytime: <em>"Check my teacher credits"</em></p>
-      </div>
-
-      <hr class="divider" />
-
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">?</div>
-          <h2>Manual Configuration</h2>
-        </div>
-        <p>If you prefer to configure manually, add this to your MCP client's config file:</p>
-        <div class="code-block">
+        <hr class="divider"/>
+        <div class="step">
+          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
+          <p>Config file location:</p>
+          <ul>
+            <li><strong>Mac:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+            <li><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
+          </ul>
+          <div class="code-block">
 <span class="key">{</span><br/>
 &nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"teacher"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"teachertasksai"</span>: {<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/path/to/mcp/server.py"</span>],<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"TEACHERTASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-license-key-here"</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// paste the license key from your confirmation email</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"TEACHERTASKSAITASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 &nbsp;&nbsp;}<br/>
 <span class="key">}</span>
+          </div>
         </div>
-        <p><strong>Config file locations:</strong></p>
-        <ul>
-          <li><strong>Claude Desktop (Mac):</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
-          <li><strong>Claude Desktop (Windows):</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
-          <li><strong>Cursor / Windsurf:</strong> Check Settings → MCP</li>
-        </ul>
+      </div>
+
+      <!-- ── Cursor ── -->
+      <div id="mcp-cursor" class="mcp-client-section" style="display:none;">
+        <div class="step">
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
+          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
+          <div class="code-block">
+            <span class="cmd">cd ~/Downloads/teachertasksai/mcp</span><br/>
+            <span class="cmd">pip3 install -r requirements.txt</span><br/>
+            <span class="cmd">python3 install.py</span>
+          </div>
+          <p>The installer detects Cursor and configures it automatically.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">3</div><h2>Restart Cursor</h2></div>
+          <p>Fully quit and reopen Cursor. Go to <strong>Settings → MCP</strong> to confirm <strong>teachertasksai</strong> appears.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="code-block"><span class="cmd">"I need help with Write a parent progress update"</span></div>
+        </div>
+        <hr class="divider"/>
+        <div class="step">
+          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
+          <p>In Cursor: <strong>Settings → MCP Servers → Add</strong>. Use the same JSON block as Claude Desktop above (same format).</p>
+        </div>
+      </div>
+
+      <!-- ── Windsurf ── -->
+      <div id="mcp-windsurf" class="mcp-client-section" style="display:none;">
+        <div class="step">
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
+          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
+          <div class="code-block">
+            <span class="cmd">cd ~/Downloads/teachertasksai/mcp</span><br/>
+            <span class="cmd">pip3 install -r requirements.txt</span><br/>
+            <span class="cmd">python3 install.py</span>
+          </div>
+          <p>The installer writes to <code>~/.codeium/windsurf/mcp_config.json</code> automatically.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">3</div><h2>Restart Windsurf</h2></div>
+          <p>Fully quit and reopen Windsurf. Click the <strong>MCPs icon</strong> (top-right of the Cascade panel) — you should see <strong>teachertasksai</strong> listed.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="code-block"><span class="cmd">"I need help with Write a parent progress update"</span></div>
+        </div>
+        <hr class="divider"/>
+        <div class="step">
+          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
+          <p>Edit <code>~/.codeium/windsurf/mcp_config.json</code> directly:</p>
+          <div class="code-block">
+<span class="key">{</span><br/>
+&nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"teachertasksai"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"TEACHERTASKSAITASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;}<br/>
+<span class="key">}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Cline ── -->
+      <div id="mcp-cline" class="mcp-client-section" style="display:none;">
+        <div class="step">
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
+          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
+          <div class="code-block">
+            <span class="cmd">cd ~/Downloads/teachertasksai/mcp</span><br/>
+            <span class="cmd">pip3 install -r requirements.txt</span><br/>
+            <span class="cmd">python3 install.py</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">3</div><h2>Configure in Cline</h2></div>
+          <p>In VS Code: open the <strong>Cline sidebar → MCP Servers → Configure MCP Servers</strong>. Add the server entry from the <code>README.md</code> inside your zip, or paste:</p>
+          <div class="code-block">
+<span class="key">{</span><br/>
+&nbsp;&nbsp;<span class="val">"teachertasksai"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"TEACHERTASKSAITASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
+&nbsp;&nbsp;}<br/>
+<span class="key">}</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">4</div><h2>Reload VS Code &amp; test</h2></div>
+          <div class="code-block"><span class="cmd">"I need help with Write a parent progress update"</span></div>
+        </div>
       </div>
 
     </div><!-- /path-mcp -->
@@ -336,7 +440,7 @@
         <div>
           <label for="sf_topic">What do you need help with?</label>
           <select id="sf_topic" name="topic">
-            <option value="">— Select a topic —</option>
+            <option value="">- Select a topic -</option>
             <option>Installation / setup</option>
             <option>License key or credits</option>
             <option>Task not working as expected</option>
@@ -346,7 +450,7 @@
         </div>
         <div>
           <label for="sf_msg">Message</label>
-          <textarea id="sf_msg" name="message" placeholder="Describe what's happening…" required></textarea>
+          <textarea id="sf_msg" name="message" placeholder="Describe what's happening..." required></textarea>
         </div>
         <button type="submit" id="sf_btn">Send Message</button>
         <div class="form-success" id="sf_success">✓ Message sent! We'll reply within a few hours.</div>
@@ -376,6 +480,14 @@
     tab.classList.add('active');
   }
 
+  function showMcpClient(id, tab) {
+    document.querySelectorAll('.mcp-client-section').forEach(s => s.style.display = 'none');
+    // Only deactivate tabs within the MCP sub-tab row
+    tab.parentElement.querySelectorAll('.path-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('mcp-' + id).style.display = 'block';
+    tab.classList.add('active');
+  }
+
   (function () {
     var form = document.getElementById('supportForm');
     if (!form) return;
@@ -384,7 +496,7 @@
       var btn     = document.getElementById('sf_btn');
       var success = document.getElementById('sf_success');
       btn.disabled    = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = 'Sending...';
       var payload = {
         name:    document.getElementById('sf_name').value.trim(),
         email:   document.getElementById('sf_email').value.trim(),

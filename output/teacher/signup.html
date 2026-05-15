@@ -177,6 +177,55 @@
             border-color: #ef4444;
         }
 
+        /* ─── Platform selector ─── */
+        .platform-section {
+            margin-bottom: 22px;
+        }
+        .platform-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .platform-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 12px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+            font-size: 0.88rem;
+            color: #374151;
+            font-weight: 500;
+            user-select: none;
+        }
+        .platform-option:hover { border-color: var(--accent); background: #f0f9ff; }
+        .platform-option input[type="checkbox"] {
+            width: 15px; height: 15px; margin: 0;
+            accent-color: var(--accent); cursor: pointer; flex-shrink: 0;
+        }
+        .platform-option.checked { border-color: var(--accent); background: #f0f9ff; }
+        .platform-option .incompatible { color: #9ca3af; font-weight: 400; }
+        .platform-warning {
+            margin-top: 10px;
+            padding: 10px 12px;
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: #92400e;
+            display: none;
+        }
+        .platform-warning a { color: #92400e; font-weight: 600; }
+
         /* ─── Consent ─── */
         .consent-row {
             display: flex;
@@ -334,7 +383,42 @@
                         <span class="field-error" id="emailError">Enter a valid email address</span>
                     </div>
 
-                    <div class="consent-row">
+                    <!-- Platform selector -->
+                <div class="platform-section">
+                    <span class="platform-label">What AI tool(s) do you use? <span style="font-weight:400;color:#9ca3af">(select all that apply)</span></span>
+                    <div class="platform-grid">
+                        <label class="platform-option" id="plat-claude_desktop">
+                            <input type="checkbox" name="platforms" value="claude_desktop" onchange="updatePlatformUI()">
+                            Claude Desktop
+                        </label>
+                        <label class="platform-option" id="plat-openclaw">
+                            <input type="checkbox" name="platforms" value="openclaw" onchange="updatePlatformUI()">
+                            OpenClaw
+                        </label>
+                        <label class="platform-option" id="plat-cursor">
+                            <input type="checkbox" name="platforms" value="cursor" onchange="updatePlatformUI()">
+                            Cursor
+                        </label>
+                        <label class="platform-option" id="plat-windsurf">
+                            <input type="checkbox" name="platforms" value="windsurf" onchange="updatePlatformUI()">
+                            Windsurf
+                        </label>
+                        <label class="platform-option" id="plat-cline">
+                            <input type="checkbox" name="platforms" value="cline" onchange="updatePlatformUI()">
+                            Cline (VS Code)
+                        </label>
+                        <label class="platform-option" id="plat-other">
+                            <input type="checkbox" name="platforms" value="other" onchange="updatePlatformUI()">
+                            Other / Not sure
+                        </label>
+                    </div>
+                    <!-- Warning shown if user selects an incompatible platform -->
+                    <div class="platform-warning" id="claudeWebWarning">
+                        ⚠️ <strong>Heads up:</strong> <strong>claude.ai (the website)</strong> does not support skills — you need the <a href="https://claude.ai/download" target="_blank">Claude Desktop app</a> (free download). Not the same thing!
+                    </div>
+                </div>
+
+                <div class="consent-row">
                         <input type="checkbox" id="consent" name="consent" required>
                         <label for="consent" class="consent-text">
                             I agree to the <a href="/terms.html" target="_blank">Terms of Service</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a>
@@ -359,6 +443,14 @@
 
     <script>
         const API_BASE = 'https://api.lawtasksai.com';
+
+        // Platform UI
+        function updatePlatformUI() {
+            document.querySelectorAll('.platform-option').forEach(label => {
+                const cb = label.querySelector('input[type="checkbox"]');
+                label.classList.toggle('checked', cb.checked);
+            });
+        }
 
         const form = document.getElementById('signupForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -417,13 +509,17 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner"></span>Creating your account…';
 
+            // Collect selected platforms
+            const selectedPlatforms = Array.from(document.querySelectorAll('input[name="platforms"]:checked')).map(cb => cb.value);
+
             try {
                 const res = await fetch(`${API_BASE}/v1/signup`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'X-Product-ID': 'teacher' },
                     body: JSON.stringify({
                         name: `${firstName} ${lastName}`,
-                        email: email
+                        email: email,
+                        platforms: selectedPlatforms
                     })
                 });
 
@@ -432,8 +528,11 @@
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'sign_up', { method: 'email' });
                     }
-                    // Store email for success page
-                    try { sessionStorage.setItem('signup_email', email); } catch(e) {}
+                    // Store email + platforms for success page
+                    try {
+                        sessionStorage.setItem('signup_email', email);
+                        sessionStorage.setItem('signup_platforms', JSON.stringify(selectedPlatforms));
+                    } catch(e) {}
                     window.location.href = '/success.html?signup=1';
                 } else {
                     const data = await res.json().catch(() => ({}));

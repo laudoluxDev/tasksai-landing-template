@@ -111,18 +111,92 @@
                     </svg>
                 </div>
                 <h1>You're in! 🎉</h1>
-                <p class="subtitle">Check your email — your 5 free credits and license key are on their way.</p>
-                <div class="details" style="text-align:left;margin-bottom:28px;">
-                    <div class="detail-row">
-                        <span class="detail-label">Free Credits</span>
-                        <span class="detail-value">5 credits</span>
+                <p class="subtitle">Your 5 free credits are ready. Now let's get you set up — it takes about 5 minutes.</p>
+
+                <!-- Platform-aware install block -->
+                <div id="install-block" style="text-align:left;margin-bottom:24px;">
+
+                  <!-- Shown while we detect platform from sessionStorage -->
+                  <div id="install-detecting" style="color:#6b7280;font-size:0.9rem;padding:12px 0;">Loading your setup instructions…</div>
+
+                  <!-- Claude Desktop -->
+                  <div class="install-platform" id="install-claude_desktop" style="display:none;">
+                    <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:0.85rem;color:#92400e;">
+                      ⚠️ <strong>Important:</strong> These instructions are for the <strong>Claude Desktop app</strong>, not claude.ai (the website). <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free →</a>
                     </div>
-                    <div class="detail-row">
-                        <span class="detail-label">What's next</span>
-                        <span class="detail-value">Check your inbox for your license key</span>
-                    </div>
+                    <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
+                      <li>Check your email for your license key</li>
+                      <li>Download your skill package (button below)</li>
+                      <li>Open Claude Desktop → <strong>Settings → Developer → Edit Config</strong></li>
+                      <li>Paste the JSON snippet from the README inside the zip</li>
+                      <li>Restart Claude Desktop</li>
+                    </ol>
+                    <div class="code-block" style="margin-top:10px;">Config location:<br/>Mac: ~/Library/Application Support/Claude/claude_desktop_config.json<br/>Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
+                  </div>
+
+                  <!-- OpenClaw -->
+                  <div class="install-platform" id="install-openclaw" style="display:none;">
+                    <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
+                      <li>Check your email for your license key</li>
+                      <li>Open your OpenClaw chat and type:</li>
+                    </ol>
+                    <div class="code-block">I just downloaded the EventPlannerTasksAI skill. Please find it in my Downloads folder and install it.</div>
+                    <p style="font-size:0.85rem;color:#6b7280;">OpenClaw will find and install it automatically. Then restart OpenClaw.</p>
+                  </div>
+
+                  <!-- Cursor -->
+                  <div class="install-platform" id="install-cursor" style="display:none;">
+                    <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
+                      <li>Check your email for your license key</li>
+                      <li>Download your skill package (button below)</li>
+                      <li>In Cursor: open <strong>Settings → MCP</strong></li>
+                      <li>Add the MCP server entry from the README in your zip</li>
+                      <li>Restart Cursor</li>
+                    </ol>
+                  </div>
+
+                  <!-- Windsurf -->
+                  <div class="install-platform" id="install-windsurf" style="display:none;">
+                    <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
+                      <li>Check your email for your license key</li>
+                      <li>Download your skill package (button below)</li>
+                      <li>In Windsurf: click the <strong>MCPs icon</strong> (top-right of Cascade panel)</li>
+                      <li>Click <strong>Add manually</strong> and paste the config from the README</li>
+                      <li>Config file location: <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;">~/.codeium/windsurf/mcp_config.json</code></li>
+                      <li>Restart Windsurf</li>
+                    </ol>
+                  </div>
+
+                  <!-- Cline -->
+                  <div class="install-platform" id="install-cline" style="display:none;">
+                    <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
+                      <li>Check your email for your license key</li>
+                      <li>Download your skill package (button below)</li>
+                      <li>In VS Code: open the <strong>Cline sidebar → MCP Servers</strong></li>
+                      <li>Click <strong>Configure MCP Servers</strong> and add the entry from the README</li>
+                      <li>Reload VS Code</li>
+                    </ol>
+                  </div>
+
+                  <!-- Other / fallback -->
+                  <div class="install-platform" id="install-other" style="display:none;">
+                    <p style="color:#4b5563;font-size:0.9rem;margin-bottom:12px;">No problem — your package includes full setup instructions for all supported platforms. Check the README inside the zip.</p>
+                    <p style="font-size:0.85rem;color:#6b7280;">Supported: Claude Desktop &bull; OpenClaw &bull; Cursor &bull; Windsurf &bull; Cline</p>
+                  </div>
+
+                  <!-- Multi-platform note -->
+                  <div id="multi-platform-note" style="display:none;margin-top:14px;padding:10px 14px;background:#f0f9ff;border-radius:6px;font-size:0.82rem;color:#0369a1;">
+                    🖥️ Using multiple platforms? The <a href="/getting-started.html" style="color:#0369a1;font-weight:600;">full setup guide</a> has instructions for all of them.
+                  </div>
+
+                  <!-- Changed platforms link -->
+                  <p style="margin-top:14px;font-size:0.8rem;color:#9ca3af;text-align:center;">
+                    Using a different AI tool? <a href="/getting-started.html" style="color:var(--accent);">Get updated install instructions →</a>
+                  </p>
+
                 </div>
-                <a href="/getting-started.html" class="download-btn" style="margin-bottom:16px;">Get Started →</a>
+
+                <a href="/getting-started.html" class="download-btn" style="margin-bottom:16px;">View Full Setup Guide →</a>
                 <p style="color:#9ca3af;font-size:0.85rem;">Want more credits? <a href="/buy-credits.html" style="color:var(--accent);">Browse plans →</a></p>
             </div>
 
@@ -271,6 +345,37 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
         });
     }
 
+    // --- Platform-aware install block (signup flow) ---
+    function renderPlatformInstall() {
+        var detecting = document.getElementById('install-detecting');
+        if (!detecting) return; // not on signup-success view
+        var platforms = [];
+        try {
+            var raw = sessionStorage.getItem('signup_platforms');
+            if (raw) platforms = JSON.parse(raw);
+        } catch(e) {}
+        if (!platforms.length) platforms = ['other'];
+
+        detecting.style.display = 'none';
+        var allPlatformDivs = document.querySelectorAll('.install-platform');
+        allPlatformDivs.forEach(function(d) { d.style.display = 'none'; });
+
+        // Show first selected platform's instructions
+        var primary = platforms[0];
+        var primaryEl = document.getElementById('install-' + primary);
+        if (primaryEl) primaryEl.style.display = 'block';
+        else {
+            var fallback = document.getElementById('install-other');
+            if (fallback) fallback.style.display = 'block';
+        }
+
+        // If multiple platforms, show multi-platform note
+        if (platforms.length > 1) {
+            var note = document.getElementById('multi-platform-note');
+            if (note) note.style.display = 'block';
+        }
+    }
+
     const API_BASE = 'https://api.lawtasksai.com';
     const PRODUCT_ID = 'eventplanner';
 
@@ -282,6 +387,7 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
         if (params.get('signup') === '1' || params.get('signup') === 'true') {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('signup-success').style.display = 'block';
+            renderPlatformInstall();
             return;
         }
 
