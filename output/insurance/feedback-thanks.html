@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanks for your feedback — InsuranceTasksAI</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #0369A1; --accent-hover: #0369A1; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f4f5f7; color: #1a1a2e; min-height: 100vh; display: flex; flex-direction: column; }
+  header { background: white; border-bottom: 1px solid #e5e7eb; padding: 0 24px; height: 60px; display: flex; align-items: center; }
+  .logo { font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+  main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 48px 24px; }
+  .card { background: white; border-radius: 12px; padding: 40px; max-width: 580px; width: 100%; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+  .icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.6rem; }
+  .icon.green { background: #d1fae5; }
+  .icon.blue  { background: #dbeafe; }
+  .icon.amber { background: #fef3c7; }
+  h1 { font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 10px; }
+  .subtitle { text-align: center; color: #6b7280; font-size: 0.95rem; margin-bottom: 28px; line-height: 1.6; }
+  .section { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; }
+  .section h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; color: #1a1a2e; }
+  .section p, .section li { font-size: 0.9rem; color: #4b5563; line-height: 1.7; }
+  .section ol, .section ul { padding-left: 20px; }
+  .section li { margin-bottom: 4px; }
+  .section code { background: #e5e7eb; padding: 1px 5px; border-radius: 3px; font-size: 0.85em; font-family: monospace; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: white; padding: 11px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; margin: 4px; }
+  .btn.secondary { background: white; color: var(--accent); border: 1.5px solid var(--accent); }
+  .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 24px; }
+  .compat-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .badge-ok  { display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600; }
+  .badge-no  { display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600; }
+  .badge-soon{ display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;padding:4px 10px;border-radius:20px;background:#fef9c3;color:#854d0e;font-weight:600; }
+  .prompt-box { background: #0f172a; color: #7dd3fc; border-radius: 8px; padding: 14px 18px; font-family: monospace; font-size: 0.88rem; margin: 12px 0; }
+  .warning-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 6px; padding: 10px 14px; font-size: 0.85rem; color: #92400e; margin: 12px 0; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+  .form-group input, .form-group textarea { width: 100%; padding: 10px 12px; border: 1.5px solid #d1d5db; border-radius: 8px; font-size: 0.9rem; font-family: inherit; }
+  .form-group textarea { min-height: 100px; resize: vertical; }
+  .submit-btn { background: var(--accent); color: white; border: none; padding: 11px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; width: 100%; margin-top: 4px; }
+  .success-msg { display:none; background:#d1fae5; border-radius:8px; padding:14px; text-align:center; color:#065f46; font-weight:600; margin-top:12px; }
+  footer { padding: 24px; text-align: center; font-size: 0.8rem; color: #9ca3af; }
+  footer a { color: #9ca3af; }
+  .content-block { display: none; }
+  .content-block.active { display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">InsuranceTasksAI</a>
+</header>
+
+<main>
+  <div class="card">
+
+    <!-- ── INSTALLATION ── -->
+    <div class="content-block" id="block-installation">
+      <div class="icon green">🔧</div>
+      <h1>Let's get you installed</h1>
+      <p class="subtitle">Installation issues are the most common reason people get stuck. Here's the fastest path for your platform.</p>
+
+      <div class="warning-box">
+        ⚠️ <strong>Claude users:</strong> You need the <strong>Claude Desktop app</strong>, not claude.ai (the website). <a href="https://claude.ai/download" style="color:#92400e;font-weight:700;">Download it free →</a>
+      </div>
+
+      <div class="section">
+        <h3>Claude Desktop</h3>
+        <ol>
+          <li>Download your skill package (check your confirmation email)</li>
+          <li>Extract the zip — open the downloaded <code>mcp</code> folder</li>
+          <li>Run <code>install.py</code> — it configures everything automatically</li>
+          <li>Restart Claude Desktop</li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>OpenClaw</h3>
+        <p>Open OpenClaw and type:</p>
+        <div class="prompt-box">openclaw skills install insurance</div>
+      </div>
+
+      <div class="section">
+        <h3>Cursor / Windsurf / Cline / Claude Code</h3>
+        <ol>
+          <li>Download your skill package (check your confirmation email)</li>
+          <li>Extract the zip — open the downloaded <code>mcp</code> folder</li>
+          <li>Run <code>install.py</code> — detects your client automatically</li>
+          <li>Restart your AI client</li>
+        </ol>
+      </div>
+
+      <div class="btns">
+        <a href="/getting-started.html" class="btn">Full setup guide →</a>
+        <a href="mailto:hello@insurancetasksai.com" class="btn secondary">Email support</a>
+      </div>
+    </div>
+
+    <!-- ── FORGOT ── -->
+    <div class="content-block" id="block-forgot">
+      <div class="icon green">⏳</div>
+      <h1>Your credits are still waiting</h1>
+      <p class="subtitle">No worries at all — your 5 credits don't expire. Whenever you're ready, here's how to pick up where you left off.</p>
+
+      <div class="section">
+        <h3>Your InsuranceTasksAI credits</h3>
+        <p>✅ <strong>5 free credits</strong> — still in your account, no expiry<br>
+        Each credit runs one complete task. Check your confirmation email for your license key.</p>
+      </div>
+
+      <div class="section">
+        <h3>Not installed yet? Takes 5 minutes</h3>
+        <ol>
+          <li>Download your skill package (link in your confirmation email)</li>
+          <li>Extract the zip — open the <code>mcp</code> folder</li>
+          <li>Run <code>install.py</code></li>
+          <li>Restart your AI client</li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>Once installed, try this first</h3>
+        <div class="prompt-box">"I need help with Write a coverage explanation letter"</div>
+      </div>
+
+      <div class="btns">
+        <a href="/task-library.html" class="btn">Browse 200+ tasks →</a>
+        <a href="/getting-started.html" class="btn secondary">Setup guide</a>
+      </div>
+    </div>
+
+    <!-- ── WRONG TOOL ── -->
+    <div class="content-block" id="block-wrong_tool">
+      <div class="icon blue">🖥️</div>
+      <h1>Let's find the right setup</h1>
+      <p class="subtitle">InsuranceTasksAI works as a skill inside several AI clients. Here's what's supported — pick yours and get the right instructions.</p>
+
+      <div class="compat-row">
+        <span class="badge-ok">✓ Claude Desktop</span>
+        <span class="badge-ok">✓ Claude Code</span>
+        <span class="badge-ok">✓ OpenClaw</span>
+        <span class="badge-ok">✓ Cursor</span>
+        <span class="badge-ok">✓ Windsurf</span>
+        <span class="badge-ok">✓ Cline (VS Code)</span>
+        <span class="badge-soon">⏳ Gemini (coming soon)</span>
+        <span class="badge-no">✗ claude.ai website</span>
+        <span class="badge-no">✗ ChatGPT</span>
+        <span class="badge-no">✗ Gemini Gems</span>
+      </div>
+
+      <div class="warning-box">
+        ⚠️ <strong>claude.ai ≠ Claude Desktop.</strong> The claude.ai website doesn't support skills. You need the free <a href="https://claude.ai/download" style="color:#92400e;font-weight:700;">Claude Desktop app</a>.
+      </div>
+
+      <div class="section">
+        <h3>Have both Claude Desktop and Claude Code?</h3>
+        <p>The installer detects both automatically and configures them in a single run — no extra steps needed.</p>
+      </div>
+
+      <div class="btns">
+        <a href="/getting-started.html" class="btn">Setup guide for all platforms →</a>
+      </div>
+    </div>
+
+    <!-- ── NOT SURE ── -->
+    <div class="content-block" id="block-not_sure">
+      <div class="icon blue">💡</div>
+      <h1>Here's how it works in 60 seconds</h1>
+      <p class="subtitle">InsuranceTasksAI gives your AI expert-level frameworks for insurance agents and insurance office staff tasks — delivered as structured, professional output.</p>
+
+      <div class="section">
+        <h3>What is a task?</h3>
+        <p>Each task is a specialized expert framework. You describe your situation, InsuranceTasksAI runs the right analysis and produces structured, professional output — not a generic AI response.</p>
+        <p style="margin-top:8px;">Example: ask the <strong>Statute of Limitations Analyzer</strong> about a personal injury case and you get the exact limitations period, tolling rules, and key cases for your jurisdiction.</p>
+      </div>
+
+      <div class="section">
+        <h3>What does a credit cost?</h3>
+        <p>1 credit = 1 task. You have <strong>5 free credits</strong> — enough to try 5 different tasks. Credits don't expire.</p>
+      </div>
+
+      <div class="section">
+        <h3>How do I run a task?</h3>
+        <p>Once installed, just describe what you need in plain language:</p>
+        <div class="prompt-box">"I need help with Write a coverage explanation letter"</div>
+        <p style="margin-top:8px;">InsuranceTasksAI finds the right task, confirms with you, then runs it.</p>
+      </div>
+
+      <div class="btns">
+        <a href="/task-library.html" class="btn">See all 200+ tasks →</a>
+        <a href="/getting-started.html" class="btn secondary">Get installed →</a>
+      </div>
+    </div>
+
+    <!-- ── OTHER ── -->
+    <div class="content-block" id="block-other">
+      <div class="icon amber">💬</div>
+      <h1>Thanks — tell us more</h1>
+      <p class="subtitle">We read every message. What got in the way?</p>
+
+      <div class="section">
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="fb-email">Your email (optional — so we can follow up)</label>
+            <input type="email" id="fb-email" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="fb-message">What happened? <span style="font-weight:400;color:#9ca3af">(be as specific as you like)</span></label>
+            <textarea id="fb-message" placeholder="e.g. I ran install.py but got an error…"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send feedback →</button>
+          <div class="success-msg" id="fb-success">✅ Got it — thanks! We'll take a look.</div>
+        </form>
+      </div>
+
+      <div class="btns">
+        <a href="/getting-started.html" class="btn secondary">Setup guide →</a>
+        <a href="mailto:hello@insurancetasksai.com" class="btn secondary">Email us directly</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <a href="/">InsuranceTasksAI</a> &nbsp;·&nbsp;
+  <a href="/getting-started.html">Setup guide</a> &nbsp;·&nbsp;
+  <a href="/task-library.html">Task library</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@insurancetasksai.com">Support</a>
+</footer>
+
+<script>
+  const API_BASE = "https://api.lawtasksai.com";
+  const PRODUCT_ID = "insurance";
+
+  // Show the right content block based on ?reason= param
+  function showBlock() {
+    const reason = new URLSearchParams(window.location.search).get('reason') || 'other';
+    const valid = ['installation', 'forgot', 'wrong_tool', 'not_sure', 'other'];
+    const id = valid.includes(reason) ? reason : 'other';
+    const el = document.getElementById('block-' + id);
+    if (el) el.classList.add('active');
+  }
+  showBlock();
+
+  // "Other" free-text form — POST to API then show success message
+  const form = document.getElementById('feedbackForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('fb-email').value.trim();
+      const message = document.getElementById('fb-message').value.trim();
+      if (!message) return;
+      try {
+        await fetch(`${API_BASE}/v1/feedback`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+          body: JSON.stringify({ reason: 'other', email, extra: message, product: PRODUCT_ID })
+        });
+      } catch(err) { /* fail silently */ }
+      form.style.display = 'none';
+      document.getElementById('fb-success').style.display = 'block';
+    });
+  }
+</script>
+
+</body>
+</html>

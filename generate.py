@@ -743,6 +743,7 @@ def main():
                 ("verified-safe-template.html", "verified_safe.html"),
                 ("faq-template.html", "faq.html"),
                 ("buy-credits-template.html", "buy-credits.html"),
+                ("feedback-thanks-template.html", "feedback-thanks.html"),
             ]:
                 tmpl_path = TEMPLATE_FILE.parent / tmpl_name
                 if tmpl_path.exists():
@@ -769,11 +770,21 @@ def main():
                         f'&copy; 2026 Laudo Lux, LLC &nbsp;&middot;&nbsp; <a href="mailto:{support_email}" style="color:#475569;">{support_email}</a>'
                         f'</div></div></footer>'
                     )
+                    # Build first_prompt from sample_tasks
+                    _tasks_list = v.get("sample_tasks", [])
+                    _first_task = _tasks_list[0] if _tasks_list else f"a {occupation} task"
+                    _first_task_name = _first_task if isinstance(_first_task, str) else str(_first_task)
+                    _first_prompt = f'I need help with {_first_task_name}'
+                    _skill_count = str(v.get("skill_count", v.get("hero_count", "200+")))
+                    # Darken accent by appending opacity for dark variant (simple approach)
+                    _accent_dark = v.get("accent_color_dark", accent)
+                    _api_base = v.get("api_base", "https://api.lawtasksai.com")
                     rendered = tmpl_content \
                         .replace("{{PRODUCT_NAME}}", product_name) \
                         .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
                         .replace("{{PRIMARY_COLOR}}", primary) \
                         .replace("{{ACCENT_COLOR}}", accent) \
+                        .replace("{{ACCENT_COLOR_DARK}}", _accent_dark) \
                         .replace("{{BACKGROUND_COLOR}}", background) \
                         .replace("{{DOMAIN}}", domain) \
                         .replace("{{PRODUCT_ID}}", product_id) \
@@ -784,9 +795,12 @@ def main():
                         .replace("{{LOGO_HTML_FOOTER}}", logo_split) \
                         .replace("{{NAME}}", product_name) \
                         .replace("{{HERO_COUNT}}", hero_count) \
+                        .replace("{{SKILL_COUNT}}", _skill_count) \
+                        .replace("{{FIRST_PROMPT}}", _first_prompt) \
                         .replace("{{TARGET_AUDIENCE}}", target_audience) \
                         .replace("{{PRICING_CARDS}}", pricing_cards) \
                         .replace("{{API_COST_DISCLAIMER_BOTTOM_TEXT}}", api_cost_disclaimer_bottom_text) \
+                        .replace("{{API_BASE}}", _api_base) \
                         .replace("{{FOOTER}}", footer_html) \
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
