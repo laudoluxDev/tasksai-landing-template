@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsubscribe — DentistTasksAI</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #06B6D4; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f4f5f7; color: #1a1a2e; min-height: 100vh; display: flex; flex-direction: column; }
+  main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 48px 24px; }
+  .card { background: white; border-radius: 12px; padding: 40px; max-width: 480px; width: 100%; box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-align: center; }
+  .icon { font-size: 2.5rem; margin-bottom: 16px; }
+  h1 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+  p { color: #6b7280; font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
+  .note { font-size: 0.85rem; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; color: #4b5563; margin: 20px 0; text-align: left; }
+  .btn { display: inline-block; background: var(--accent); color: white; padding: 11px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 8px; }
+  .btn.ghost { background: white; color: var(--accent); border: 1.5px solid var(--accent); margin-left: 8px; }
+  footer { padding: 24px; text-align: center; font-size: 0.8rem; color: #9ca3af; }
+  footer a { color: #9ca3af; }
+
+  /* Pending state — shown before ?confirmed=1 */
+  .state-pending { display: block; }
+  .state-confirmed { display: none; }
+
+  /* Confirmed state */
+  body.confirmed .state-pending { display: none; }
+  body.confirmed .state-confirmed { display: block; }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+<script src="/header.js"></script>
+
+<main>
+  <div class="card">
+
+    <!-- Pending (no ?confirmed param) -->
+    <div class="state-pending">
+      <div class="icon">📧</div>
+      <h1>Unsubscribe from DentistTasksAI emails?</h1>
+      <p>You'll stop receiving tips, reminders, and updates from us. Your account and credits are not affected.</p>
+      <div class="note">
+        💡 <strong>Your 5 credits don't expire.</strong> You can always log back in and use them — unsubscribing just stops the emails.
+      </div>
+      <a href="https://api.lawtasksai.com/unsubscribe?email={{USER_EMAIL}}&product=dentist" class="btn">Yes, unsubscribe me</a>
+      <a href="/" class="btn ghost">Keep me subscribed</a>
+    </div>
+
+    <!-- Confirmed (after redirect back with ?confirmed=1) -->
+    <div class="state-confirmed">
+      <div class="icon">✅</div>
+      <h1>You've been unsubscribed</h1>
+      <p>You won't receive any more emails from DentistTasksAI. Your account and credits are untouched.</p>
+      <div class="note">
+        Changed your mind? Email us at <a href="mailto:hello@dentisttasksai.com" style="color:var(--accent);">hello@dentisttasksai.com</a> and we'll re-add you.
+      </div>
+      <a href="/task-library" class="btn">Browse tasks →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <a href="/">DentistTasksAI</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@dentisttasksai.com">Support</a>
+</footer>
+
+<script>
+  // Show confirmed state if ?confirmed=1 in URL
+  if (new URLSearchParams(window.location.search).get('confirmed') === '1') {
+    document.body.classList.add('confirmed');
+  }
+
+  // Pre-fill email from ?email= param into the unsubscribe link
+  var emailParam = new URLSearchParams(window.location.search).get('email');
+  if (emailParam) {
+    var links = document.querySelectorAll('a[href*="/unsubscribe"]');
+    links.forEach(function(a) {
+      if (!a.href.includes('email=')) {
+        a.href += '&email=' + encodeURIComponent(emailParam);
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
