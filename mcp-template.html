@@ -240,6 +240,10 @@
           <div class="tab-name" style="font-size:0.95rem;">Claude Desktop</div>
           <div class="tab-note">Most common</div>
         </button>
+        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('claudecode', this)">
+          <div class="tab-name" style="font-size:0.95rem;">Claude Code</div>
+          <div class="tab-note">Anthropic CLI</div>
+        </button>
         <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('cursor', this)">
           <div class="tab-name" style="font-size:0.95rem;">Cursor</div>
           <div class="tab-note">AI code editor</div>
@@ -308,6 +312,49 @@
 &nbsp;&nbsp;}<br/>
 <span class="key">}</span>
           </div>
+        </div>
+      </div>
+
+      <!-- ── Claude Code ── -->
+      <div id="mcp-claudecode" class="mcp-client-section" style="display:none;">
+        <div class="step">
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
+          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
+          <div class="code-block">
+            <span class="cmd">cd ~/Downloads/{{PRODUCT_ID}}tasksai/mcp</span><br/>
+            <span class="cmd">pip3 install -r requirements.txt</span><br/>
+            <span class="cmd">python3 install.py</span>
+          </div>
+          <p>The installer detects Claude Code automatically and writes to <code>~/.claude.json</code>. If you also have Claude Desktop installed, it configures both in the same run — no extra steps.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">3</div><h2>Start a new Claude Code session</h2></div>
+          <p>Open a new Claude Code session (restart if one is already running). The MCP server loads at session start.</p>
+        </div>
+        <div class="step">
+          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="code-block"><span class="cmd">"I need help with {{EXAMPLE_TASK}}"</span></div>
+          <p>Or check your balance: <em>"Check my {{PRODUCT_ID}} credits"</em></p>
+        </div>
+        <hr class="divider"/>
+        <div class="step">
+          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
+          <p>Add directly to <code>~/.claude.json</code>:</p>
+          <div class="code-block">
+<span class="key">{</span><br/>
+&nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"{{PRODUCT_ID}}tasksai"</span>: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"{{PRODUCT_ID_UPPER}}TASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;}<br/>
+<span class="key">}</span>
+          </div>
+          <p>Or use the CLI: <code>claude mcp add --transport stdio {{PRODUCT_ID}}tasksai python3 /full/path/to/server.py</code></p>
         </div>
       </div>
 
