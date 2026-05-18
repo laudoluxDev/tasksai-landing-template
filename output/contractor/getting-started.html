@@ -184,7 +184,7 @@
       <button class="path-tab" onclick="showPath('mcp', this)">
         <div class="tab-label">Also supported</div>
         <div class="tab-name">Claude Desktop / Cursor / Windsurf / Cline</div>
-        <div class="tab-note">MCP installer - requires Python 3.10+</div>
+        <div class="tab-note">Download installer — no terminal needed</div>
       </button>
     </div>
 
@@ -265,10 +265,19 @@
         </button>
       </div>
 
-      <!-- Common requirements -->
-      <div class="alert" style="margin-bottom:24px;">
-        <strong>⚠️ Requires Python 3.10+</strong>
-        Check with <code>python3 --version</code> in your terminal. Download from <a href="https://python.org/downloads" target="_blank" style="color:#92400e;">python.org</a> if needed.
+      <!-- ── OS download box ── -->
+      <div id="exe-download-box" style="background:#f0fdf4;border:2px solid #86efac;border-radius:12px;padding:28px 32px;margin-bottom:32px;text-align:center;">
+        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#16a34a;margin-bottom:8px;">Step 1 — Download the installer</p>
+        <p style="color:#166534;margin-bottom:20px;font-size:0.95rem;">One file. Double-click it, enter your license key, then restart your AI client. No terminal required.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a id="btn-primary-dl" href="#" style="display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:white;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:8px;text-decoration:none;" target="_blank">
+            <span id="btn-primary-icon">⬇</span> <span id="btn-primary-label">Download Installer</span>
+          </a>
+          <a id="btn-alt-dl" href="#" style="display:inline-flex;align-items:center;gap:8px;background:white;color:#374151;font-weight:600;font-size:0.9rem;padding:14px 20px;border-radius:8px;text-decoration:none;border:1px solid #d1d5db;" target="_blank">
+            <span id="btn-alt-label">Other platform</span>
+          </a>
+        </div>
+        <p style="margin-top:14px;font-size:0.78rem;color:#6b7280;">Can't run the installer? <a href="#" onclick="document.getElementById('manual-install-section').style.display='block';this.closest('p').style.display='none';return false;" style="color:#16a34a;font-weight:600;">Use the manual Python setup instead →</a></p>
       </div>
 
       <!-- ── Claude Desktop ── -->
@@ -279,36 +288,42 @@
           <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free (Mac &amp; Windows) →</a>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
-          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
+          <p>Use the download button above. Double-click <code>ContractorTasksAI-Setup.exe</code> (Windows) or <code>ContractorTasksAI-Setup</code> (Mac). Enter your license key when prompted.</p>
+          <p style="margin-top:8px;color:#6b7280;font-size:0.9rem;">The installer places the server in a permanent location and configures Claude Desktop automatically. You can delete the installer file when it's done.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
-          <div class="code-block">
-            <span class="cmd">cd ~/Downloads/contractortasksai/mcp</span><br/>
-            <span class="cmd">pip3 install -r requirements.txt</span><br/>
-            <span class="cmd">python3 install.py</span>
-          </div>
-          <p>The installer detects Claude Desktop automatically, backs up your existing config, and adds ContractorTasksAI.</p>
+          <div class="step-header"><div class="step-num">2</div><h2>Restart Claude Desktop</h2></div>
+          <p>Fully quit and reopen Claude Desktop — MCP servers load at startup. You should see <strong>contractortasksai</strong> in your connected tools.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Restart Claude Desktop</h2></div>
-          <p>Fully quit and reopen Claude Desktop (MCP servers load at startup). You should see <strong>contractortasksai</strong> in your connected tools.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
           <div class="code-block"><span class="cmd">"I need help with Draft a change order request"</span></div>
           <p>Or check your balance: <em>"Check my contractor credits"</em></p>
         </div>
-        <hr class="divider"/>
-        <div class="step">
-          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
-          <p>Config file location:</p>
-          <ul>
-            <li><strong>Mac:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
-            <li><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
-          </ul>
-          <div class="code-block">
+        <!-- Manual install fallback (hidden by default) -->
+        <div id="manual-install-section" style="display:none;">
+          <hr class="divider"/>
+          <div class="alert"><strong>Manual setup (Python required)</strong> Only use this if the installer didn't work.</div>
+          <div class="step">
+            <div class="step-header"><div class="step-num">A</div><h2>Requirements</h2></div>
+            <p>Python 3.10+ required. Check: <code>python3 --version</code>. Download from <a href="https://python.org/downloads" target="_blank">python.org</a> if needed.</p>
+          </div>
+          <div class="step">
+            <div class="step-header"><div class="step-num">B</div><h2>Run the Python installer</h2></div>
+            <div class="code-block">
+              <span class="cmd">cd ~/Downloads/contractortasksai/mcp</span><br/>
+              <span class="cmd">pip3 install -r requirements.txt</span><br/>
+              <span class="cmd">python3 install.py</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-header"><div class="step-num">C</div><h2>Manual config location</h2></div>
+            <ul>
+              <li><strong>Mac:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+              <li><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
+            </ul>
+            <div class="code-block">
 <span class="key">{</span><br/>
 &nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"contractortasksai"</span>: {<br/>
@@ -318,6 +333,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 &nbsp;&nbsp;}<br/>
 <span class="key">}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -325,146 +341,64 @@
       <!-- ── Claude Code ── -->
       <div id="mcp-claudecode" class="mcp-client-section" style="display:none;">
         <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
-          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
+          <p>Use the download button above. The installer detects Claude Code automatically and writes to <code>~/.claude.json</code>. If you also have Claude Desktop, it configures both in one pass.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
-          <div class="code-block">
-            <span class="cmd">cd ~/Downloads/contractortasksai/mcp</span><br/>
-            <span class="cmd">pip3 install -r requirements.txt</span><br/>
-            <span class="cmd">python3 install.py</span>
-          </div>
-          <p>The installer detects Claude Code automatically and writes to <code>~/.claude.json</code>. If you also have Claude Desktop installed, it configures both in the same run — no extra steps.</p>
+          <div class="step-header"><div class="step-num">2</div><h2>Start a new Claude Code session</h2></div>
+          <p>Restart if one is already running. The MCP server loads at session start.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Start a new Claude Code session</h2></div>
-          <p>Open a new Claude Code session (restart if one is already running). The MCP server loads at session start.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
           <div class="code-block"><span class="cmd">"I need help with Draft a change order request"</span></div>
           <p>Or check your balance: <em>"Check my contractor credits"</em></p>
-        </div>
-        <hr class="divider"/>
-        <div class="step">
-          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
-          <p>Add directly to <code>~/.claude.json</code>:</p>
-          <div class="code-block">
-<span class="key">{</span><br/>
-&nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"contractortasksai"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"CONTRACTORTASKSAITASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-&nbsp;&nbsp;}<br/>
-<span class="key">}</span>
-          </div>
-          <p>Or use the CLI: <code>claude mcp add --transport stdio contractortasksai python3 /full/path/to/server.py</code></p>
         </div>
       </div>
 
       <!-- ── Cursor ── -->
       <div id="mcp-cursor" class="mcp-client-section" style="display:none;">
         <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
-          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
+          <p>Use the download button above. The installer detects Cursor automatically and configures it.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
-          <div class="code-block">
-            <span class="cmd">cd ~/Downloads/contractortasksai/mcp</span><br/>
-            <span class="cmd">pip3 install -r requirements.txt</span><br/>
-            <span class="cmd">python3 install.py</span>
-          </div>
-          <p>The installer detects Cursor and configures it automatically.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Restart Cursor</h2></div>
+          <div class="step-header"><div class="step-num">2</div><h2>Restart Cursor</h2></div>
           <p>Fully quit and reopen Cursor. Go to <strong>Settings → MCP</strong> to confirm <strong>contractortasksai</strong> appears.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
           <div class="code-block"><span class="cmd">"I need help with Draft a change order request"</span></div>
-        </div>
-        <hr class="divider"/>
-        <div class="step">
-          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
-          <p>In Cursor: <strong>Settings → MCP Servers → Add</strong>. Use the same JSON block as Claude Desktop above (same format).</p>
         </div>
       </div>
 
       <!-- ── Windsurf ── -->
       <div id="mcp-windsurf" class="mcp-client-section" style="display:none;">
         <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
-          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
+          <p>Use the download button above. The installer writes to <code>~/.codeium/windsurf/mcp_config.json</code> automatically.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
-          <div class="code-block">
-            <span class="cmd">cd ~/Downloads/contractortasksai/mcp</span><br/>
-            <span class="cmd">pip3 install -r requirements.txt</span><br/>
-            <span class="cmd">python3 install.py</span>
-          </div>
-          <p>The installer writes to <code>~/.codeium/windsurf/mcp_config.json</code> automatically.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Restart Windsurf</h2></div>
+          <div class="step-header"><div class="step-num">2</div><h2>Restart Windsurf</h2></div>
           <p>Fully quit and reopen Windsurf. Click the <strong>MCPs icon</strong> (top-right of the Cascade panel) — you should see <strong>contractortasksai</strong> listed.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">4</div><h2>Test it</h2></div>
+          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
           <div class="code-block"><span class="cmd">"I need help with Draft a change order request"</span></div>
-        </div>
-        <hr class="divider"/>
-        <div class="step">
-          <div class="step-header"><div class="step-num">?</div><h2>Manual config (advanced)</h2></div>
-          <p>Edit <code>~/.codeium/windsurf/mcp_config.json</code> directly:</p>
-          <div class="code-block">
-<span class="key">{</span><br/>
-&nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"contractortasksai"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"CONTRACTORTASKSAITASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-&nbsp;&nbsp;}<br/>
-<span class="key">}</span>
-          </div>
         </div>
       </div>
 
       <!-- ── Cline ── -->
       <div id="mcp-cline" class="mcp-client-section" style="display:none;">
         <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; extract your package</h2></div>
-          <p>Check your email for the download link. Extract the zip — open the <code>mcp/</code> folder inside.</p>
+          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
+          <p>Use the download button above. The installer detects Cline in VS Code and configures it automatically.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Run the installer</h2></div>
-          <div class="code-block">
-            <span class="cmd">cd ~/Downloads/contractortasksai/mcp</span><br/>
-            <span class="cmd">pip3 install -r requirements.txt</span><br/>
-            <span class="cmd">python3 install.py</span>
-          </div>
+          <div class="step-header"><div class="step-num">2</div><h2>Reload VS Code</h2></div>
+          <p>Reload the VS Code window (<strong>Cmd/Ctrl+Shift+P → Reload Window</strong>). Open the Cline sidebar → MCP Servers to confirm <strong>contractortasksai</strong> is listed.</p>
         </div>
         <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Configure in Cline</h2></div>
-          <p>In VS Code: open the <strong>Cline sidebar → MCP Servers → Configure MCP Servers</strong>. Add the server entry from the <code>README.md</code> inside your zip, or paste:</p>
-          <div class="code-block">
-<span class="key">{</span><br/>
-&nbsp;&nbsp;<span class="val">"contractortasksai"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"CONTRACTORTASKSAITASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
-&nbsp;&nbsp;}<br/>
-<span class="key">}</span>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">4</div><h2>Reload VS Code &amp; test</h2></div>
+          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
           <div class="code-block"><span class="cmd">"I need help with Draft a change order request"</span></div>
         </div>
       </div>
@@ -529,11 +463,41 @@
 
   function showMcpClient(id, tab) {
     document.querySelectorAll('.mcp-client-section').forEach(s => s.style.display = 'none');
-    // Only deactivate tabs within the MCP sub-tab row
     tab.parentElement.querySelectorAll('.path-tab').forEach(t => t.classList.remove('active'));
     document.getElementById('mcp-' + id).style.display = 'block';
     tab.classList.add('active');
   }
+
+  // ── OS auto-detect for download buttons ────────────────────────────────────
+  (function () {
+    var PRODUCT   = 'ContractorTasksAI';
+    var BASE_URL  = 'https://github.com/laudoluxDev/lawtasksai-mcp/releases/latest/download/';
+    var win_file  = PRODUCT + '-Setup.exe';
+    var mac_file  = PRODUCT + '-Setup-mac';
+
+    var isMac     = /Mac|iPod|iPhone|iPad/.test(navigator.platform ||
+                    navigator.userAgentData && navigator.userAgentData.platform || '');
+
+    var primary   = document.getElementById('btn-primary-dl');
+    var alt       = document.getElementById('btn-alt-dl');
+    var primLabel = document.getElementById('btn-primary-label');
+    var altLabel  = document.getElementById('btn-alt-label');
+    var primIcon  = document.getElementById('btn-primary-icon');
+
+    if (isMac) {
+      primary.href    = BASE_URL + mac_file;
+      alt.href        = BASE_URL + win_file;
+      primLabel.textContent = 'Download for Mac';
+      altLabel.textContent  = 'Download for Windows instead';
+      primIcon.textContent  = '⬇';
+    } else {
+      primary.href    = BASE_URL + win_file;
+      alt.href        = BASE_URL + mac_file;
+      primLabel.textContent = 'Download for Windows';
+      altLabel.textContent  = 'Download for Mac instead';
+      primIcon.textContent  = '⬇';
+    }
+  })();
 
   (function () {
     var form = document.getElementById('supportForm');
