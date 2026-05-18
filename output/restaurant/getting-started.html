@@ -273,6 +273,19 @@
         <p style="margin-top:14px;font-size:0.78rem;color:#6b7280;">Can't run the installer? <a href="#" onclick="document.getElementById('manual-install-section').style.display='block';this.closest('p').style.display='none';return false;" style="color:#16a34a;font-weight:600;">Use the manual Python setup instead →</a></p>
       </div>
 
+      <!-- ── Windows SmartScreen notice ── -->
+      <div id="smartscreen-notice" style="display:none;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:20px 24px;margin-bottom:28px;">
+        <p style="font-weight:700;color:#1e40af;margin-bottom:8px;">🛡️ Windows will show a safety warning — this is normal</p>
+        <p style="color:#1e3a8a;font-size:0.9rem;margin-bottom:12px;">Because this is new software, Windows displays a blue "Windows protected your PC" screen the first time you run it. This happens with all new apps — it doesn't mean anything is wrong.</p>
+        <p style="font-weight:600;color:#1e40af;font-size:0.9rem;margin-bottom:6px;">Here's what to do:</p>
+        <ol style="color:#1e3a8a;font-size:0.9rem;margin:0 0 0 18px;line-height:1.8;">
+          <li>Click <strong>"More info"</strong> (small link below the main message)</li>
+          <li>Click <strong>"Run anyway"</strong></li>
+          <li>That's it — the installer will open normally</li>
+        </ol>
+        <p style="margin-top:12px;font-size:0.82rem;color:#3730a3;">This warning will disappear as more people install the app. It's a standard Windows precaution for new software from any publisher.</p>
+      </div>
+
       <!-- ── Claude Desktop ── -->
       <div id="mcp-claude" class="mcp-client-section">
         <div class="alert" style="margin-bottom:20px;">
@@ -284,6 +297,7 @@
           <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
           <p>Use the download button above. Double-click <code>RestaurantTasksAI-Setup.exe</code> (Windows) or <code>RestaurantTasksAI-Setup</code> (Mac). Enter your license key when prompted.</p>
           <p style="margin-top:8px;color:#6b7280;font-size:0.9rem;">The installer places the server in a permanent location and configures Claude Desktop automatically. You can delete the installer file when it's done.</p>
+          <p style="margin-top:10px;font-size:0.88rem;">⚠️ <strong>Windows users:</strong> If you see a blue "Windows protected your PC" screen, click <strong>More info → Run anyway</strong>. This is a standard Windows precaution for new software — it's safe to proceed. <a href="#" onclick="document.getElementById('smartscreen-notice').style.display='block';this.closest('p').style.display='none';return false;" style="color:#2563eb;font-weight:600;">See step-by-step instructions →</a></p>
         </div>
         <div class="step">
           <div class="step-header"><div class="step-num">2</div><h2>Restart Claude Desktop</h2></div>
@@ -489,6 +503,9 @@
       primLabel.textContent = 'Download for Windows';
       altLabel.textContent  = 'Download for Mac instead';
       primIcon.textContent  = '⬇';
+      // Auto-show SmartScreen notice for Windows users
+      var ssNotice = document.getElementById('smartscreen-notice');
+      if (ssNotice) ssNotice.style.display = 'block';
     }
   })();
 
