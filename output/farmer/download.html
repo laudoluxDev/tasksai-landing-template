@@ -586,6 +586,14 @@
         <button class="dl-btn" onclick="downloadInstaller('${lic.license_key}')">⬇ Download Installer</button>
         <a href="/buy-credits.html" class="buy-btn">Buy More Credits</a>
       </div>
+      <div id="mac-notice" style="display:none;background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:0.875rem;color:#92400e;">
+        <strong>⚠️ Mac users:</strong> macOS may block the installer when you first open it. If you see a security warning:
+        <ol style="margin:8px 0 0 18px;line-height:1.9;">
+          <li><strong>Right-click</strong> (or Control+click) the downloaded file → select <strong>Open</strong> → click <strong>Open</strong> in the dialog.</li>
+          <li>If that doesn't work: <strong>System Settings → Privacy &amp; Security</strong> → scroll down → click <strong>Open Anyway</strong>.</li>
+        </ol>
+        <p style="margin-top:8px;color:#b45309;">We're in the process of obtaining Apple code signing certification, which will eliminate this step entirely.</p>
+      </div>
       <div class="setup-steps">
         <p>📋 Quick setup (Claude Desktop)</p>
         <ol>
@@ -683,6 +691,11 @@
   }
 
   function downloadInstaller(licenseKey) {
+    // Show Mac security notice if on macOS
+    if (/Mac|iPhone|iPad|iPod/.test(navigator.platform) || /MacIntel|MacPPC|Mac68K/.test(navigator.userAgent)) {
+      const notice = document.getElementById('mac-notice');
+      if (notice) notice.style.display = 'block';
+    }
     window.location.href = `${API_BASE}/download/loader/${licenseKey}`;
   }
 
