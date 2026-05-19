@@ -461,7 +461,7 @@
         const formError = document.getElementById('formError');
 
         function showError(msg) {
-            formError.textContent = msg;
+            formError.innerHTML = msg;
             formError.style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -541,7 +541,7 @@
                 } else {
                     const data = await res.json().catch(() => ({}));
                     if (res.status === 400 && data.detail && data.detail.includes('already registered')) {
-                        showError('That email is already registered. Try signing in instead.');
+                        showError('That email is already registered. Check your inbox for your original welcome email — your license key is inside. <a href="/getting-started.html" style="color:#2563eb;font-weight:600;">Go to the setup guide →</a>');
                     } else {
                         showError(data.detail || 'Something went wrong. Please try again.');
                     }
