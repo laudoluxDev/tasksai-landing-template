@@ -300,20 +300,60 @@
           These instructions are for the <strong>downloadable Claude Desktop app</strong> — not the claude.ai website. The website does not support skills.<br/>
           <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free (Mac &amp; Windows) →</a>
         </div>
+
         <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the download button above. Double-click <code>TherapistTasksAI-Setup.exe</code> (Windows) or <code>TherapistTasksAI-Setup</code> (Mac). Enter your license key when prompted.</p>
-          <p style="margin-top:8px;color:#6b7280;font-size:0.9rem;">The installer places the server in a permanent location and configures Claude Desktop automatically. You can delete the installer file when it's done.</p>
-          <p style="margin-top:10px;font-size:0.88rem;">⚠️ <strong>Windows users:</strong> If you see a blue "Windows protected your PC" screen, click <strong>More info → Run anyway</strong>. This is a standard Windows precaution for new software — it's safe to proceed. <a href="#" onclick="document.getElementById('smartscreen-notice').style.display='block';this.closest('p').style.display='none';return false;" style="color:#2563eb;font-weight:600;">See step-by-step instructions →</a></p>
+          <div class="step-header"><div class="step-num">1</div><h2>Close Claude Desktop</h2></div>
+          <p>If Claude Desktop is running, <strong>fully quit it first</strong> — not just close the window.</p>
+          <ul>
+            <li><strong>Windows:</strong> Right-click the Claude icon in the system tray (bottom-right near the clock) → <strong>Quit</strong></li>
+            <li><strong>Mac:</strong> Click <strong>Claude → Quit Claude</strong> in the menu bar, or press <strong>⌘Q</strong></li>
+          </ul>
+          <p style="margin-top:8px;color:#6b7280;font-size:0.88rem;">This ensures the installer can write files without conflicts.</p>
         </div>
+
         <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Restart Claude Desktop</h2></div>
-          <p>Fully quit and reopen Claude Desktop — MCP servers load at startup. You should see <strong>therapisttasksai</strong> in your connected tools.</p>
+          <div class="step-header"><div class="step-num">2</div><h2>Download &amp; run the installer</h2></div>
+          <p>Use the green download button above. Double-click <code>TherapistTasksAI-Setup.exe</code> (Windows) or <code>TherapistTasksAI-Setup</code> (Mac).</p>
+          <ol>
+            <li>Enter your license key (from your signup email)</li>
+            <li>Click <strong>Verify</strong> to confirm your key works</li>
+            <li>Click <strong>Install</strong></li>
+            <li>Wait for "Installation complete" — then close the installer</li>
+          </ol>
+          <p style="margin-top:10px;font-size:0.88rem;">⚠️ <strong>Windows users:</strong> If you see a blue "Windows protected your PC" screen, click <strong>More info → Run anyway</strong>. This is normal for new software. <a href="#" onclick="document.getElementById('smartscreen-notice').style.display='block';this.closest('p').style.display='none';return false;" style="color:#2563eb;font-weight:600;">See details →</a></p>
+          <p style="margin-top:8px;color:#6b7280;font-size:0.88rem;">The installer places the server in a permanent location and configures Claude Desktop automatically. You can delete the installer file afterward.</p>
         </div>
+
         <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
-          <div class="code-block"><span class="cmd">"I need help with Write a therapy progress note"</span></div>
-          <p>Or check your balance: <em>"Check my therapist credits"</em></p>
+          <div class="step-header"><div class="step-num">3</div><h2>Open Claude Desktop &amp; approve the connector</h2></div>
+          <p>Open Claude Desktop. Go to <strong>Settings → Connectors</strong> (or <strong>Customize</strong>).</p>
+          <p>You'll see <strong>therapisttasksai</strong> listed. Click to <strong>approve</strong> it. It should show a green status.</p>
+          <div class="info-box" style="margin-top:12px;">
+            <p style="margin:0;">💡 <strong>Don't see it?</strong> Try fully quitting Claude Desktop (Step 1) and reopening it. MCP servers load at startup.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-header"><div class="step-num">4</div><h2>Start a conversation with TherapistTasksAI</h2></div>
+          <p>Open a <strong>new conversation</strong> in Claude Desktop and type:</p>
+          <div class="code-block"><span class="cmd">"Use TherapistTasksAI to help me with Write a therapy progress note"</span></div>
+          <p>TherapistTasksAI will search its skill library and present options. Pick one, and Claude will run the full expert framework (1 credit per use).</p>
+          <div class="info-box" style="margin-top:16px;">
+            <h3>💡 Pro tip: Set up a Project for automatic activation</h3>
+            <p>Create a <strong>Project</strong> in Claude Desktop (e.g., "My Practice" or "My Office") and add this custom instruction:</p>
+            <div class="code-block" style="background:#0c4a6e;border-color:#0c4a6e;text-align:left;"><span class="cmd">"Always use TherapistTasksAI tools to answer my questions. Search for the right skill before responding."</span></div>
+            <p>Every conversation in that project will automatically use TherapistTasksAI — no need to mention it each time.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-header"><div class="step-num">5</div><h2>You're set!</h2></div>
+          <p>Try these to explore:</p>
+          <ul>
+            <li><em>"Check my therapist credits"</em> — see your balance</li>
+            <li><em>"Show therapist categories"</em> — browse all skill categories</li>
+            <li><em>"Search TherapistTasksAI for Write a therapy progress note"</em> — find specific skills</li>
+          </ul>
         </div>
         <!-- Manual install fallback (hidden by default) -->
         <div id="manual-install-section" style="display:none;">
