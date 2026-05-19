@@ -723,6 +723,33 @@ def main():
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                 (out_dir / "getting-started.html").write_text(mcp_page, encoding="utf-8")
 
+            # Generate download.html (account portal)
+            dl_template_path = TEMPLATE_FILE.parent / "download-template.html"
+            if dl_template_path.exists():
+                dl_tmpl = dl_template_path.read_text(encoding="utf-8")
+                # Derive license key prefix from product_id
+                prefix_map = {
+                    "law": "lt_", "realtor": "rt_", "farmer": "ft_", "teacher": "tt_",
+                    "therapist": "th_", "marketing": "mt_", "contractor": "ct_",
+                    "accounting": "at_", "chiropractor": "ch_", "church": "cu_",
+                    "dentist": "dt_", "designer": "ds_", "electrician": "el_",
+                    "eventplanner": "ep_", "funeral": "fu_", "hr": "hr_",
+                    "insurance": "in_", "landlord": "ll_", "militaryspouse": "ms_",
+                    "mortgage": "mo_", "mortuary": "mu_", "nutritionist": "nt_",
+                    "pastor": "pt_", "personaltrainer": "pp_", "plumber": "pl_",
+                    "principal": "pr_", "restaurant": "re_", "salon": "sl_",
+                    "travelagent": "ta_", "vet": "vt_",
+                }
+                lic_prefix = prefix_map.get(product_id, product_id[:2] + "_")
+                dl_page = dl_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{LICENSE_KEY_PREFIX}}", lic_prefix) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                (out_dir / "download.html").write_text(dl_page, encoding="utf-8")
+
             # Generate header.js
             header_template_path = TEMPLATE_FILE.parent / "header-template.js"
             if header_template_path.exists():

@@ -146,6 +146,7 @@
     { href: "/faq.html",            label: "FAQ" },
     { href: "/buy-credits.html",    label: "Buy Credits" },
     { href: "/support.html",        label: "Support" },
+    { href: "/download.html",        label: "My Account" },
   ];
 
   var navHTML = navItems.map(function (item) {
