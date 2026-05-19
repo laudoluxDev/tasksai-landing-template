@@ -244,10 +244,22 @@
       </div>
 
       <div id="tab-email" class="tab-content active">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="you@example.com">
-        <p class="input-hint">The email you used when signing up</p>
-        <button class="btn" onclick="loginByEmail()">Access My Account</button>
+        <!-- State 1: input form -->
+        <div id="email-form">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <p class="input-hint">We’ll send a secure login link to this address</p>
+          <button class="btn" onclick="requestMagicLink()">Send Login Link</button>
+        </div>
+        <!-- State 2: check inbox -->
+        <div id="email-sent" style="display:none;text-align:center;padding:16px 0;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">📬</div>
+          <p style="font-weight:700;font-size:1.05rem;color:#1a1a2e;margin-bottom:8px;">Check your inbox</p>
+          <p style="color:#6b7280;font-size:0.9rem;margin-bottom:20px;">We sent a login link to <strong id="sent-to-email"></strong>. It expires in 15 minutes.</p>
+          <p style="color:#9ca3af;font-size:0.82rem;">Didn’t get it? Check your spam folder, or
+            <a href="#" onclick="resetEmailForm();return false;" style="color:var(--accent);font-weight:600;">try again</a>.
+          </p>
+        </div>
       </div>
 
       <div id="tab-key" class="tab-content">
@@ -301,13 +313,20 @@
   // ── Tab switching ──
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-      hideMessage();
+      _switchTab(tab.dataset.tab, tab);
     });
   });
+
+  function _switchTab(name, clickedTab) {
+    // Works on both the initial form and the dynamically restored form
+    const container = clickedTab ? clickedTab.closest('.card') || document : document;
+    container.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    container.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    if (clickedTab) clickedTab.classList.add('active');
+    const content = document.getElementById('tab-' + name);
+    if (content) content.classList.add('active');
+    hideMessage();
+  }
 
   function showMessage(html, type) {
     const msg = document.getElementById('login-message');
@@ -319,36 +338,76 @@
     msg.className = 'message';
   }
 
-  // ── Auto-login from localStorage / URL param ──
-  window.onload = function () {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) { currentLicenseKey = saved; loadDashboard(); return; }
+  // ── Auto-login from localStorage / URL params ──
+  window.onload = async function () {
     const params = new URLSearchParams(window.location.search);
+
+    // Magic link token in URL — verify it
+    const mlToken = params.get('token');
+    if (mlToken) {
+      // Clean the token from the URL so refresh doesn't re-use it
+      window.history.replaceState({}, '', window.location.pathname);
+      await verifyMagicToken(mlToken);
+      return;
+    }
+
+    // Direct license key param (legacy / installer flow)
     const keyParam = params.get('key') || params.get('license_key');
     if (keyParam) {
       currentLicenseKey = keyParam;
       localStorage.setItem(STORAGE_KEY, keyParam);
       loadDashboard();
+      return;
     }
+
+    // Saved key from previous session
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) { currentLicenseKey = saved; loadDashboard(); }
   };
 
-  // ── Login by email ──
-  async function loginByEmail() {
+  // ── Magic link: request ──
+  async function requestMagicLink() {
     const email = document.getElementById('email').value.trim();
-    if (!email) { showMessage('Please enter your email address.', 'error'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showMessage('Please enter a valid email address.', 'error');
+      return;
+    }
     const btn = event.target;
-    btn.disabled = true; btn.textContent = 'Looking up…';
+    btn.disabled = true; btn.textContent = 'Sending…';
     try {
-      // Use the new multi-license endpoint to get all verticals at once
-      const res = await fetch(`${API_BASE}/auth/account-licenses`, {
+      await fetch(`${API_BASE}/auth/magic-link`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+        body: JSON.stringify({ email })
+      });
+      // Always show the inbox confirmation — never reveal whether email exists
+      document.getElementById('email-form').style.display = 'none';
+      document.getElementById('email-sent').style.display = 'block';
+      document.getElementById('sent-to-email').textContent = email;
+      hideMessage();
+    } catch (e) {
+      showMessage('Connection error — please try again.', 'error');
+      btn.disabled = false; btn.textContent = 'Send Login Link';
+    }
+  }
+
+  // ── Magic link: verify token from URL ──
+  async function verifyMagicToken(token) {
+    // Show a loading state in the login card
+    const loginSection = document.getElementById('login-section');
+    loginSection.innerHTML = `
+      <div class="card" style="text-align:center;">
+        <p style="color:#6b7280;font-size:1rem;padding:16px 0;">Verifying your link…</p>
+      </div>`;
+    try {
+      const res = await fetch(`${API_BASE}/auth/magic-link/verify`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ token })
       });
       const data = await res.json();
       if (res.ok && data.licenses && data.licenses.length) {
-        userEmail = email;
-        // Find this vertical's license key (if any) for localStorage
+        userEmail = data.email;
         const myLic = data.licenses.find(l => l.product_id === PRODUCT_ID);
         if (myLic) {
           currentLicenseKey = myLic.license_key;
@@ -356,16 +415,51 @@
         }
         renderDashboard(data.licenses);
       } else {
-        showMessage(
-          (data.detail || 'No account found with that email.') +
-          ' <a href="/signup.html" style="color:var(--accent);font-weight:600;">Sign up free →</a>',
-          'error'
-        );
+        // Token invalid/expired — show error and restore form
+        const msg = data.detail || 'This link is invalid or has expired.';
+        _restoreLoginWithError(msg);
       }
     } catch (e) {
-      showMessage('Connection error — please try again.', 'error');
+      _restoreLoginWithError('Connection error — please try again.');
     }
-    btn.disabled = false; btn.textContent = 'Access My Account';
+  }
+
+  // Restore the full login card after a failed token verify
+  function _restoreLoginWithError(msg) {
+    const loginSection = document.getElementById('login-section');
+    loginSection.innerHTML = `
+      <div class="card">
+        <h1>My Account</h1>
+        <p class="subtitle">Download your PrincipalTasksAI installer or check your credit balance.</p>
+        <div class="tabs">
+          <div class="tab active" data-tab="email" onclick="_switchTab('email',this)">Look up by Email</div>
+          <div class="tab" data-tab="key" onclick="_switchTab('key',this)">I have my License Key</div>
+        </div>
+        <div id="tab-email" class="tab-content active">
+          <div id="email-form">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com">
+            <p class="input-hint">We’ll send a secure login link to this address</p>
+            <button class="btn" onclick="requestMagicLink()">Send Login Link</button>
+          </div>
+          <div id="email-sent" style="display:none;"></div>
+        </div>
+        <div id="tab-key" class="tab-content">
+          <label for="license-key-input">License Key</label>
+          <input type="text" id="license-key-input" placeholder="pr_xxxxxxxxxxxxxxxx">
+          <p class="input-hint">Your license key from your welcome email</p>
+          <button class="btn" onclick="loginByKey()">Access My Account</button>
+        </div>
+        <div id="login-message" class="message error" style="display:block;">${msg} <a href="/signup.html" style="color:var(--accent);font-weight:600;">Sign up free →</a></div>
+      </div>`;
+  }
+
+  // ── Reset email tab back to input form ──
+  function resetEmailForm() {
+    document.getElementById('email-form').style.display = 'block';
+    document.getElementById('email-sent').style.display = 'none';
+    document.getElementById('email').value = '';
+    hideMessage();
   }
 
   // ── Login by license key (key → email lookup → all licenses) ──
