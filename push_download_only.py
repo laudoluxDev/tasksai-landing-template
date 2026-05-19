@@ -3,7 +3,7 @@
 
 import base64, json, os, time, urllib.request, urllib.error
 
-GITHUB_TOKEN = "REMOVED_TOKEN"
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 ORG = "laudoluxDev"
 OUTPUT_DIR = "/Users/clio/dev/tasksai-landing-template/output"
 COMMIT_MSG = "feat: multi-vertical account dashboard on download page"

@@ -11,7 +11,7 @@ import time
 import urllib.request
 import urllib.error
 
-GITHUB_TOKEN = "REMOVED_TOKEN"
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 ORG = "laudoluxDev"
 OUTPUT_DIR = "/Users/clio/dev/tasksai-landing-template/output"
 COMMIT_MSG = "feat: download.html account portal, My Account nav link, signup error fix"
