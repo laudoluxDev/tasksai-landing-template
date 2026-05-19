@@ -3,6 +3,15 @@
 
 import base64, json, os, time, urllib.request, urllib.error
 
+# Load .env if present (keeps token out of git)
+_env = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+if os.path.exists(_env):
+    for _l in open(_env):
+        _l = _l.strip()
+        if _l and not _l.startswith("#") and "=" in _l:
+            _k, _v = _l.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 ORG = "laudoluxDev"
 OUTPUT_DIR = "/Users/clio/dev/tasksai-landing-template/output"
