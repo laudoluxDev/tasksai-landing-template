@@ -508,12 +508,34 @@
 </footer>
 
 <script>
-  function showPath(id, tab) {
+  function showPath(id, btn) {
     document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.path-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('#path-tabs .path-tab').forEach(t => t.classList.remove('active'));
     document.getElementById('path-' + id).classList.add('active');
-    tab.classList.add('active');
+    if (btn) btn.classList.add('active');
   }
+
+  // Auto-select tab based on ?platform= URL param
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var platform = params.get('platform') || '';
+    var MCP_PLATFORMS = ['claude_desktop','claude_code','cursor','windsurf','cline'];
+    var MCP_CLIENT_MAP = {
+      'claude_desktop': 'claude', 'claude_code': 'claudecode',
+      'cursor': 'cursor', 'windsurf': 'windsurf', 'cline': 'cline'
+    };
+    if (MCP_PLATFORMS.indexOf(platform) !== -1) {
+      // Switch to MCP tab
+      var mcpBtn = document.querySelector('#path-tabs .path-tab:nth-child(2)');
+      showPath('mcp', mcpBtn);
+      // Switch to correct MCP sub-client
+      var clientId = MCP_CLIENT_MAP[platform];
+      if (clientId) {
+        var clientBtn = document.querySelector('[onclick="showMcpClient(\'' + clientId + '\', this)"]');
+        if (clientBtn) showMcpClient(clientId, clientBtn);
+      }
+    }
+  })();
 
   function showMcpClient(id, tab) {
     document.querySelectorAll('.mcp-client-section').forEach(s => s.style.display = 'none');
