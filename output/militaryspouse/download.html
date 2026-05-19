@@ -272,7 +272,7 @@
       <h2>Purchase History</h2>
       <table class="purchases-table">
         <thead>
-          <tr><th>Date</th><th>Product</th><th>Description</th><th>Credits</th></tr>
+          <tr><th>Date</th><th>Description</th><th>Credits</th><th>Invoice</th></tr>
         </thead>
         <tbody id="purchases-body">
           <tr><td colspan="4" style="text-align:center;color:#6b7280;">Loading…</td></tr>
@@ -375,25 +375,30 @@
     const btn = event.target;
     btn.disabled = true; btn.textContent = 'Verifying…';
     try {
-      // Validate the key first
-      const res = await fetch(`${API_BASE}/v1/credits/balance`, {
+      // Step 1: Validate key + grab balance in one call
+      const balRes = await fetch(`${API_BASE}/v1/credits/balance`, {
         headers: { 'Authorization': `Bearer ${key}`, 'X-Product-ID': PRODUCT_ID }
       });
-      if (!res.ok) {
+      if (!balRes.ok) {
         showMessage('Invalid license key. Please check and try again.', 'error');
         btn.disabled = false; btn.textContent = 'Access My Account';
         return;
       }
+      const balData = await balRes.json();
+      const fallbackCredits = balData.credits_balance || 0;
+
       currentLicenseKey = key;
       localStorage.setItem(STORAGE_KEY, key);
-      // Fetch /v1/me to get email, then load all licenses
+
+      // Step 2: Fetch /v1/me to get email (now includes email field)
       const meRes = await fetch(`${API_BASE}/v1/me`, {
         headers: { 'Authorization': `Bearer ${key}`, 'X-Product-ID': PRODUCT_ID }
       });
       if (meRes.ok) {
         const me = await meRes.json();
-        userEmail = me.email;
+        userEmail = me.email || null;
         if (userEmail) {
+          // Step 3: Fetch all licenses for this email
           const licRes = await fetch(`${API_BASE}/auth/account-licenses`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -407,14 +412,15 @@
           }
         }
       }
-      // Fallback: show single-license dashboard if /v1/me or account-licenses fails
+
+      // Fallback: /v1/me failed or returned no email — show single-license view
       renderDashboard([{
         license_key: key,
         product_id: PRODUCT_ID,
         product_name: 'MilitarySpouseTasksAI',
         product_domain: 'militaryspousetasksai.com',
-        credits_remaining: (await (await fetch(`${API_BASE}/v1/credits/balance`, { headers: { 'Authorization': `Bearer ${key}` } })).json()).credits_balance,
-        license_type: 'credits'
+        credits_remaining: fallbackCredits,
+        license_type: balData.license_type || 'credits'
       }]);
     } catch (e) {
       showMessage('Connection error — please try again.', 'error');
@@ -561,9 +567,9 @@
     tbody.innerHTML = purchases.map(p => `
       <tr>
         <td>${new Date(p.date).toLocaleDateString()}</td>
-        <td>${p.product_name || p.product_id || '—'}</td>
         <td>${p.description}</td>
         <td>+${p.credits}</td>
+        <td>${p.invoice_url ? `<a href="${p.invoice_url}" target="_blank" class="invoice-link">Download</a>` : '—'}</td>
       </tr>
     `).join('');
   }
