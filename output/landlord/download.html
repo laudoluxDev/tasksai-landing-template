@@ -14,10 +14,12 @@
     :root { --accent: #D97706; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a1a2e; background: #fafbfc; min-height: 100vh; }
     .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
-    main { padding: 40px 24px; }
+    main { padding: 40px 24px; max-width: 700px; margin: 0 auto; }
+
+    /* ── Login card ── */
     .card { background: white; border-radius: 12px; padding: 32px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 24px; }
     h1 { font-size: 1.75rem; margin-bottom: 8px; text-align: center; }
-    h2 { font-size: 1.25rem; margin-bottom: 16px; color: #1a1a2e; }
+    h2 { font-size: 1.1rem; margin-bottom: 16px; color: #1a1a2e; font-weight: 700; }
     .subtitle { color: #374151; text-align: center; margin-bottom: 24px; }
     .tabs { display: flex; gap: 8px; margin-bottom: 24px; }
     .tab { flex: 1; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; background: white; cursor: pointer; text-align: center; font-weight: 500; color: #374151; transition: all 0.2s; }
@@ -32,34 +34,192 @@
     .btn { width: 100%; padding: 14px 24px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; margin-top: 16px; font-family: inherit; }
     .btn:hover { opacity: 0.9; }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .btn-secondary { background: white; color: var(--accent); border: 2px solid var(--accent); margin-top: 12px; display: block; text-align: center; text-decoration: none; }
     .message { padding: 16px; border-radius: 8px; margin-top: 16px; display: none; }
     .message.success { background: #ecfdf5; border: 1px solid #10b981; color: #065f46; display: block; }
     .message.error { background: #fef2f2; border: 1px solid #ef4444; color: #991b1b; display: block; }
+
+    /* ── Dashboard ── */
     #dashboard { display: none; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px; }
-    .stat-card { background: #f9fafb; border-radius: 8px; padding: 20px; text-align: center; }
-    .stat-value { font-size: 2rem; font-weight: 700; color: var(--accent); }
-    .stat-label { font-size: 0.9rem; color: #374151; margin-top: 4px; }
-    .license-box { background: #f3f4f6; border-radius: 8px; padding: 16px; margin: 16px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-    .license-key { font-family: monospace; font-size: 0.95rem; color: #1a1a2e; word-break: break-all; }
-    .copy-btn { padding: 8px 16px; background: var(--accent); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; white-space: nowrap; font-family: inherit; }
+    .logout-btn { color: #6b7280; background: none; border: none; cursor: pointer; font-size: 0.85rem; }
+    .logout-btn:hover { color: #ef4444; }
+
+    /* ── Vertical cards ── */
+    .vertical-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px 32px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07);
+      margin-bottom: 20px;
+      border: 2px solid #e5e7eb;
+    }
+    .vertical-card.current {
+      border-color: var(--accent);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    }
+    .vertical-card.other {
+      opacity: 0.82;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+    .card-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; }
+    .card-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge-current { background: color-mix(in srgb, var(--accent) 12%, white); color: var(--accent); }
+    .badge-other { background: #f3f4f6; color: #6b7280; }
+
+    .credits-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .credits-num { font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1; }
+    .credits-label { font-size: 0.88rem; color: #6b7280; }
+
+    .license-box {
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .license-key { font-family: monospace; font-size: 0.9rem; color: #1a1a2e; word-break: break-all; }
+    .copy-btn {
+      padding: 6px 14px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      font-family: inherit;
+      flex-shrink: 0;
+    }
     .copy-btn:hover { opacity: 0.9; }
+
+    /* Current vertical action buttons */
+    .action-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .dl-btn {
+      flex: 1;
+      min-width: 160px;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+    .dl-btn:hover { opacity: 0.88; }
+    .buy-btn {
+      flex: 1;
+      min-width: 140px;
+      padding: 12px 20px;
+      background: white;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: center;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .buy-btn:hover { background: color-mix(in srgb, var(--accent) 6%, white); }
+
+    /* Other vertical navigation links */
+    .other-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .visit-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .visit-link:hover { text-decoration: underline; }
+    .other-buy-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    .other-buy-link:hover { color: #374151; text-decoration: underline; }
+
+    /* Setup steps */
+    .setup-steps {
+      background: color-mix(in srgb, var(--accent) 5%, white);
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, white);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 16px;
+    }
+    .setup-steps p { font-weight: 600; color: var(--accent); margin-bottom: 6px; font-size: 0.875rem; }
+    .setup-steps ol { padding-left: 18px; color: #374151; font-size: 0.85rem; line-height: 2; }
+
+    /* No vertical card (not signed up) */
+    .signup-nudge {
+      background: #f9fafb;
+      border: 2px dashed #e5e7eb;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .signup-nudge p { color: #6b7280; margin-bottom: 16px; }
+    .signup-nudge a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .signup-nudge a:hover { opacity: 0.88; }
+
+    /* Purchase history */
     .purchases-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    .purchases-table th, .purchases-table td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
-    .purchases-table th { font-weight: 600; color: #374151; font-size: 0.9rem; text-transform: uppercase; }
-    .purchases-table td { color: #374151; }
+    .purchases-table th, .purchases-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+    .purchases-table th { font-weight: 600; color: #374151; font-size: 0.85rem; text-transform: uppercase; }
+    .purchases-table td { color: #374151; font-size: 0.9rem; }
     .invoice-link { color: var(--accent); text-decoration: none; font-weight: 500; }
     .invoice-link:hover { text-decoration: underline; }
-    .logout-btn { color: #374151; background: none; border: none; cursor: pointer; font-size: 0.9rem; }
-    .logout-btn:hover { color: #ef4444; }
+
     footer { padding: 40px 24px; text-align: center; color: #6b7280; font-size: 0.9rem; }
     footer a { color: #374151; text-decoration: none; margin: 0 8px; }
     footer a:hover { color: var(--accent); }
-    .setup-steps { background: color-mix(in srgb, var(--accent) 5%, white); border: 1px solid color-mix(in srgb, var(--accent) 20%, white); border-radius: 8px; padding: 16px 20px; margin-top: 16px; }
-    .setup-steps p { font-weight: 600; color: var(--accent); margin-bottom: 8px; font-size: 0.9rem; }
-    .setup-steps ol { padding-left: 18px; color: #374151; font-size: 0.88rem; line-height: 2; }
-    @media (max-width: 600px) { .license-box { flex-direction: column; } .purchases-table { font-size: 0.9rem; } .purchases-table th, .purchases-table td { padding: 8px; } }
+
+    @media (max-width: 600px) {
+      .license-box { flex-direction: column; align-items: flex-start; }
+      .action-row { flex-direction: column; }
+      .dl-btn, .buy-btn { min-width: unset; }
+    }
   </style>
 </head>
 <body>
@@ -68,14 +228,14 @@
 <script src="/header.js"></script>
 
 <main>
-  <div style="text-align:right;max-width:700px;margin:12px auto 0;padding:0 24px;">
+  <div style="text-align:right;margin-bottom:8px;">
     <button id="logout-btn" class="logout-btn" onclick="logout()" style="display:none;">Log Out</button>
   </div>
 
-  <!-- Login Section -->
+  <!-- ── Login Section ── -->
   <div id="login-section">
     <div class="card">
-      <h1>Access Your Account</h1>
+      <h1>My Account</h1>
       <p class="subtitle">Download your LandlordTasksAI installer or check your credit balance.</p>
 
       <div class="tabs">
@@ -101,54 +261,25 @@
     </div>
   </div>
 
-  <!-- Dashboard Section -->
+  <!-- ── Dashboard ── -->
   <div id="dashboard">
-    <div class="card">
-      <h2>👋 Welcome back!</h2>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-value" id="credits-balance">—</div>
-          <div class="stat-label">Credits Remaining</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" id="total-purchased">—</div>
-          <div class="stat-label">Total Purchased</div>
-        </div>
-      </div>
+    <!-- Cards injected here by JS -->
+    <div id="vertical-cards"></div>
 
-      <label>Your License Key</label>
-      <div class="license-box">
-        <span class="license-key" id="display-license-key">—</span>
-        <button class="copy-btn" onclick="copyLicenseKey()">Copy</button>
-      </div>
-
-      <button class="btn" onclick="downloadInstaller()">⬇ Download LandlordTasksAI Installer</button>
-      <a href="/landlord-pricing.html" class="btn btn-secondary" id="buy-credits-link">Buy More Credits</a>
-
-      <div class="setup-steps">
-        <p>📋 Quick setup reminder (Claude Desktop)</p>
-        <ol>
-          <li>Close Claude Desktop first (system tray → Quit)</li>
-          <li>Double-click the downloaded installer, enter your license key above</li>
-          <li>Open Claude Desktop → Settings → Connectors → approve <strong>landlordtasksai</strong></li>
-          <li>Start a new conversation: <em>"Use LandlordTasksAI to help me with..."</em></li>
-        </ol>
-        <p style="margin-top:8px;font-weight:400;"><a href="/getting-started.html?platform=claude_desktop" style="color:var(--accent);">Full setup guide →</a></p>
-      </div>
-    </div>
-
+    <!-- Purchase history -->
     <div class="card">
       <h2>Purchase History</h2>
       <table class="purchases-table">
         <thead>
-          <tr><th>Date</th><th>Description</th><th>Credits</th><th>Invoice</th></tr>
+          <tr><th>Date</th><th>Product</th><th>Description</th><th>Credits</th></tr>
         </thead>
         <tbody id="purchases-body">
-          <tr><td colspan="4" style="text-align:center;color:#6b7280;">Loading...</td></tr>
+          <tr><td colspan="4" style="text-align:center;color:#6b7280;">Loading…</td></tr>
         </tbody>
       </table>
     </div>
+
   </div>
 </main>
 
@@ -161,12 +292,13 @@
 </footer>
 
 <script>
-  const API_BASE = 'https://api.lawtasksai.com';
-  const PRODUCT_ID = 'landlord';
+  const API_BASE    = 'https://api.lawtasksai.com';
+  const PRODUCT_ID  = 'landlord';
   const STORAGE_KEY = 'landlord_license_key';
   let currentLicenseKey = null;
+  let userEmail = null;
 
-  // Tab switching
+  // ── Tab switching ──
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -177,107 +309,247 @@
     });
   });
 
-  function showMessage(text, type) {
+  function showMessage(html, type) {
     const msg = document.getElementById('login-message');
-    msg.innerHTML = text;
+    msg.innerHTML = html;
     msg.className = 'message ' + type;
   }
-
   function hideMessage() {
     const msg = document.getElementById('login-message');
     msg.className = 'message';
   }
 
-  // Auto-login from localStorage
-  window.onload = function() {
-    const savedKey = localStorage.getItem(STORAGE_KEY);
-    if (savedKey) { currentLicenseKey = savedKey; loadDashboard(); }
-    // Also pre-fill from URL param (e.g. from success page)
+  // ── Auto-login from localStorage / URL param ──
+  window.onload = function () {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) { currentLicenseKey = saved; loadDashboard(); return; }
     const params = new URLSearchParams(window.location.search);
     const keyParam = params.get('key') || params.get('license_key');
-    if (keyParam && !currentLicenseKey) { currentLicenseKey = keyParam; localStorage.setItem(STORAGE_KEY, keyParam); loadDashboard(); }
+    if (keyParam) {
+      currentLicenseKey = keyParam;
+      localStorage.setItem(STORAGE_KEY, keyParam);
+      loadDashboard();
+    }
   };
 
+  // ── Login by email ──
   async function loginByEmail() {
     const email = document.getElementById('email').value.trim();
     if (!email) { showMessage('Please enter your email address.', 'error'); return; }
     const btn = event.target;
-    btn.disabled = true; btn.textContent = 'Looking up...';
+    btn.disabled = true; btn.textContent = 'Looking up…';
     try {
-      const res = await fetch(`${API_BASE}/auth/recover-license`, {
+      // Use the new multi-license endpoint to get all verticals at once
+      const res = await fetch(`${API_BASE}/auth/account-licenses`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
       const data = await res.json();
-      if (res.ok) {
-        currentLicenseKey = data.license_key;
-        localStorage.setItem(STORAGE_KEY, currentLicenseKey);
-        loadDashboard();
+      if (res.ok && data.licenses && data.licenses.length) {
+        userEmail = email;
+        // Find this vertical's license key (if any) for localStorage
+        const myLic = data.licenses.find(l => l.product_id === PRODUCT_ID);
+        if (myLic) {
+          currentLicenseKey = myLic.license_key;
+          localStorage.setItem(STORAGE_KEY, currentLicenseKey);
+        }
+        renderDashboard(data.licenses);
       } else {
-        showMessage(data.detail || 'No account found with that email. Check your signup email or contact support.', 'error');
+        showMessage(
+          (data.detail || 'No account found with that email.') +
+          ' <a href="/signup.html" style="color:var(--accent);font-weight:600;">Sign up free →</a>',
+          'error'
+        );
       }
-    } catch(e) {
+    } catch (e) {
       showMessage('Connection error — please try again.', 'error');
     }
     btn.disabled = false; btn.textContent = 'Access My Account';
   }
 
+  // ── Login by license key (key → email lookup → all licenses) ──
   async function loginByKey() {
     const key = document.getElementById('license-key-input').value.trim();
     if (!key) { showMessage('Please enter your license key.', 'error'); return; }
     const btn = event.target;
-    btn.disabled = true; btn.textContent = 'Verifying...';
+    btn.disabled = true; btn.textContent = 'Verifying…';
     try {
+      // Validate the key first
       const res = await fetch(`${API_BASE}/v1/credits/balance`, {
         headers: { 'Authorization': `Bearer ${key}`, 'X-Product-ID': PRODUCT_ID }
       });
-      if (res.ok) {
-        currentLicenseKey = key;
-        localStorage.setItem(STORAGE_KEY, currentLicenseKey);
-        loadDashboard();
-      } else {
+      if (!res.ok) {
         showMessage('Invalid license key. Please check and try again.', 'error');
+        btn.disabled = false; btn.textContent = 'Access My Account';
+        return;
       }
-    } catch(e) {
+      currentLicenseKey = key;
+      localStorage.setItem(STORAGE_KEY, key);
+      // Fetch /v1/me to get email, then load all licenses
+      const meRes = await fetch(`${API_BASE}/v1/me`, {
+        headers: { 'Authorization': `Bearer ${key}`, 'X-Product-ID': PRODUCT_ID }
+      });
+      if (meRes.ok) {
+        const me = await meRes.json();
+        userEmail = me.email;
+        if (userEmail) {
+          const licRes = await fetch(`${API_BASE}/auth/account-licenses`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: userEmail })
+          });
+          if (licRes.ok) {
+            const licData = await licRes.json();
+            renderDashboard(licData.licenses);
+            btn.disabled = false; btn.textContent = 'Access My Account';
+            return;
+          }
+        }
+      }
+      // Fallback: show single-license dashboard if /v1/me or account-licenses fails
+      renderDashboard([{
+        license_key: key,
+        product_id: PRODUCT_ID,
+        product_name: 'LandlordTasksAI',
+        product_domain: 'landlordtasksai.com',
+        credits_remaining: (await (await fetch(`${API_BASE}/v1/credits/balance`, { headers: { 'Authorization': `Bearer ${key}` } })).json()).credits_balance,
+        license_type: 'credits'
+      }]);
+    } catch (e) {
       showMessage('Connection error — please try again.', 'error');
     }
     btn.disabled = false; btn.textContent = 'Access My Account';
   }
 
-  async function loadDashboard() {
+  // ── Render dashboard with vertical cards ──
+  function renderDashboard(licenses) {
     document.getElementById('login-section').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
-    document.getElementById('logout-btn').style.display = 'block';
-    document.getElementById('display-license-key').textContent = currentLicenseKey;
+    document.getElementById('logout-btn').style.display = 'inline-block';
 
-    // Fix buy credits link
-    document.getElementById('buy-credits-link').href = '/#pricing';
+    const container = document.getElementById('vertical-cards');
+    container.innerHTML = '';
 
-    try {
-      const res = await fetch(`${API_BASE}/v1/credits/balance`, {
-        headers: { 'Authorization': `Bearer ${currentLicenseKey}`, 'X-Product-ID': PRODUCT_ID }
-      });
-      if (res.ok) {
-        const data = await res.json();
-        document.getElementById('credits-balance').textContent = data.credits_balance;
-      }
-    } catch(e) { document.getElementById('credits-balance').textContent = '?'; }
+    // Check if user has a license for the current vertical
+    const myLic = licenses.find(l => l.product_id === PRODUCT_ID);
 
+    // Current vertical card — always first
+    if (myLic) {
+      container.appendChild(buildCurrentCard(myLic));
+    } else {
+      container.appendChild(buildSignupNudge());
+    }
+
+    // Other verticals
+    const others = licenses.filter(l => l.product_id !== PRODUCT_ID);
+    if (others.length > 0) {
+      const section = document.createElement('div');
+      section.style.cssText = 'margin-top:8px;';
+      const heading = document.createElement('p');
+      heading.style.cssText = 'font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#9ca3af;margin-bottom:12px;';
+      heading.textContent = 'Your other products';
+      section.appendChild(heading);
+      others.forEach(lic => section.appendChild(buildOtherCard(lic)));
+      container.appendChild(section);
+    }
+
+    // Load purchase history using whichever key we have
+    const keyForHistory = myLic ? myLic.license_key : (licenses[0] ? licenses[0].license_key : null);
+    if (keyForHistory) loadPurchases(keyForHistory);
+  }
+
+  function buildCurrentCard(lic) {
+    const el = document.createElement('div');
+    el.className = 'vertical-card current';
+    el.innerHTML = `
+      <div class="card-header">
+        <div class="card-title">${lic.product_name}</div>
+        <span class="card-badge badge-current">You're here</span>
+      </div>
+      <div class="credits-row">
+        <span class="credits-num">${lic.credits_remaining}</span>
+        <span class="credits-label">credits remaining</span>
+      </div>
+      <div class="license-box">
+        <span class="license-key" id="cur-key-display">${lic.license_key}</span>
+        <button class="copy-btn" onclick="copyKey('${lic.license_key}', this)">Copy</button>
+      </div>
+      <div class="action-row">
+        <button class="dl-btn" onclick="downloadInstaller('${lic.license_key}')">⬇ Download Installer</button>
+        <a href="/buy-credits.html" class="buy-btn">Buy More Credits</a>
+      </div>
+      <div class="setup-steps">
+        <p>📋 Quick setup (Claude Desktop)</p>
+        <ol>
+          <li>Close Claude Desktop first (system tray → Quit)</li>
+          <li>Double-click the installer, enter your license key when prompted</li>
+          <li>Open Claude Desktop → Settings → Connectors → approve <strong>${lic.product_id}tasksai</strong></li>
+          <li>Start a new conversation — your tasks are ready</li>
+        </ol>
+        <p style="margin-top:8px;font-weight:400;"><a href="/getting-started.html" style="color:var(--accent);">Full setup guide →</a></p>
+      </div>
+    `;
+    return el;
+  }
+
+  function buildOtherCard(lic) {
+    const el = document.createElement('div');
+    el.className = 'vertical-card other';
+    el.innerHTML = `
+      <div class="card-header">
+        <div class="card-title">${lic.product_name}</div>
+        <span class="card-badge badge-other">${lic.license_type}</span>
+      </div>
+      <div class="credits-row">
+        <span class="credits-num" style="font-size:1.4rem;">${lic.credits_remaining}</span>
+        <span class="credits-label">credits remaining</span>
+      </div>
+      <div class="license-box">
+        <span class="license-key" style="font-size:0.82rem;">${lic.license_key}</span>
+        <button class="copy-btn" style="background:#6b7280;" onclick="copyKey('${lic.license_key}', this)">Copy</button>
+      </div>
+      <div class="other-actions">
+        <a href="https://${lic.product_domain}/download.html" class="visit-link">
+          Open ${lic.product_name} account →
+        </a>
+        <span style="color:#e5e7eb;margin:0 4px;">·</span>
+        <a href="https://${lic.product_domain}/buy-credits.html" class="other-buy-link">
+          Buy credits
+        </a>
+      </div>
+    `;
+    return el;
+  }
+
+  function buildSignupNudge() {
+    const el = document.createElement('div');
+    el.className = 'signup-nudge';
+    el.innerHTML = `
+      <p style="font-size:1.05rem;font-weight:600;color:#1a1a2e;margin-bottom:8px;">
+        You don't have a LandlordTasksAI account yet
+      </p>
+      <p>Your other products are shown below. Sign up for LandlordTasksAI to get 5 free credits.</p>
+      <a href="/signup.html">Get Started Free →</a>
+    `;
+    return el;
+  }
+
+  async function loadPurchases(licenseKey) {
     try {
       const res = await fetch(`${API_BASE}/v1/account/purchases`, {
-        headers: { 'Authorization': `Bearer ${currentLicenseKey}`, 'X-Product-ID': PRODUCT_ID }
+        headers: { 'Authorization': `Bearer ${licenseKey}`, 'X-Product-ID': PRODUCT_ID }
       });
-      if (res.ok) { renderPurchases(await res.json()); }
-      else { document.getElementById('purchases-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:#6b7280;">No purchase history available.</td></tr>'; }
-    } catch(e) { document.getElementById('purchases-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:#6b7280;">Could not load purchases.</td></tr>'; }
-
-    try {
-      const res = await fetch(`${API_BASE}/v1/account/stats`, {
-        headers: { 'Authorization': `Bearer ${currentLicenseKey}`, 'X-Product-ID': PRODUCT_ID }
-      });
-      if (res.ok) { const d = await res.json(); document.getElementById('total-purchased').textContent = d.total_purchased || '—'; }
-    } catch(e) {}
+      if (res.ok) {
+        renderPurchases(await res.json());
+      } else {
+        document.getElementById('purchases-body').innerHTML =
+          '<tr><td colspan="4" style="text-align:center;color:#6b7280;">No purchase history available.</td></tr>';
+      }
+    } catch (e) {
+      document.getElementById('purchases-body').innerHTML =
+        '<tr><td colspan="4" style="text-align:center;color:#6b7280;">Could not load purchases.</td></tr>';
+    }
   }
 
   function renderPurchases(purchases) {
@@ -289,30 +561,32 @@
     tbody.innerHTML = purchases.map(p => `
       <tr>
         <td>${new Date(p.date).toLocaleDateString()}</td>
+        <td>${p.product_name || p.product_id || '—'}</td>
         <td>${p.description}</td>
         <td>+${p.credits}</td>
-        <td>${p.invoice_url ? `<a href="${p.invoice_url}" target="_blank" class="invoice-link">Download</a>` : '—'}</td>
       </tr>
     `).join('');
   }
 
-  function copyLicenseKey() {
-    navigator.clipboard.writeText(currentLicenseKey);
-    const btn = document.querySelector('.copy-btn');
+  function copyKey(key, btn) {
+    navigator.clipboard.writeText(key);
+    const orig = btn.textContent;
     btn.textContent = 'Copied!';
-    setTimeout(() => btn.textContent = 'Copy', 2000);
+    setTimeout(() => btn.textContent = orig, 2000);
   }
 
-  function downloadInstaller() {
-    window.location.href = `${API_BASE}/download/loader/${currentLicenseKey}`;
+  function downloadInstaller(licenseKey) {
+    window.location.href = `${API_BASE}/download/loader/${licenseKey}`;
   }
 
   function logout() {
     localStorage.removeItem(STORAGE_KEY);
     currentLicenseKey = null;
+    userEmail = null;
     document.getElementById('login-section').style.display = 'block';
     document.getElementById('dashboard').style.display = 'none';
     document.getElementById('logout-btn').style.display = 'none';
+    document.getElementById('vertical-cards').innerHTML = '';
   }
 </script>
 

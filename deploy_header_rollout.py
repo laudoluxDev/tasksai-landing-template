@@ -11,10 +11,10 @@ import time
 import urllib.request
 import urllib.error
 
-GITHUB_TOKEN = "YOUR_GITHUB_TOKEN_HERE"
+GITHUB_TOKEN = "REMOVED_TOKEN"
 ORG = "laudoluxDev"
 OUTPUT_DIR = "/Users/clio/dev/tasksai-landing-template/output"
-COMMIT_MSG = "feat: uniform header.js nav across all pages"
+COMMIT_MSG = "feat: download.html account portal, My Account nav link, signup error fix"
 
 REPO_MAP = {
     "contractor":     "contractor-landing",
@@ -59,6 +59,7 @@ FILES = [
     "support.html",
     "privacy.html",
     "terms.html",
+    "download.html",
 ]
 
 HEADERS = {
