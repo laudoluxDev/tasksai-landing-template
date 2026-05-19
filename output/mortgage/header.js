@@ -129,9 +129,8 @@
     if (p.indexOf("task-library") > -1) return "/task-library.html";
     if (p.indexOf("getting-started") > -1) return "/getting-started.html";
     if (p.indexOf("verified_safe") > -1) return "/verified_safe.html";
-    if (p.indexOf("faq") > -1) return "/faq.html";
-    if (p.indexOf("buy-credits") > -1) return "/buy-credits.html";
     if (p.indexOf("support") > -1) return "/support.html";
+    if (p.indexOf("download") > -1) return "/download.html";
     if (p.indexOf("signup") > -1) return "/signup.html";
     return "";
   }
@@ -143,10 +142,8 @@
     { href: "/task-library.html",   label: "Task Library" },
     { href: "/getting-started.html",label: "Getting Started" },
     { href: "/verified_safe.html",  label: "🛡️ Verified Safe" },
-    { href: "/faq.html",            label: "FAQ" },
-    { href: "/buy-credits.html",    label: "Buy Credits" },
     { href: "/support.html",        label: "Support" },
-    { href: "/download.html",        label: "My Account" },
+    { href: "/download.html",       label: "My Account" },
   ];
 
   var navHTML = navItems.map(function (item) {
@@ -160,7 +157,7 @@
     '    <a href="/" class="sh-logo">' + LOGO_HTML + '</a>',
     '    <nav class="sh-nav" id="shNav">',
     '      ' + navHTML,
-    '      <a href="/signup.html" class="sh-cta">Try Free</a>',
+    '      <a href="/buy-credits.html" class="sh-cta">Buy Credits</a>',
     '    </nav>',
     '    <button class="sh-hamburger" id="shHamburger" aria-label="Menu" aria-expanded="false">',
     '      <span></span><span></span><span></span>',
