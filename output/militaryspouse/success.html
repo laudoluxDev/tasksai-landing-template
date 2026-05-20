@@ -111,7 +111,7 @@
                     </svg>
                 </div>
                 <h1>You're in! 🎉</h1>
-                <p class="subtitle">Your 5 free credits are ready. Now let's get you set up — it takes about 5 minutes.</p>
+                <p class="subtitle">Your 5 free credits are ready — <strong>they never expire</strong>. Let's get you set up in about 5 minutes.</p>
 
                 <!-- Platform-aware install block -->
                 <div id="install-block" style="text-align:left;margin-bottom:24px;">
@@ -122,79 +122,77 @@
                   <!-- Claude Desktop -->
                   <div class="install-platform" id="install-claude_desktop" style="display:none;">
                     <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:0.85rem;color:#92400e;">
-                      ⚠️ <strong>Important:</strong> These instructions are for the <strong>Claude Desktop app</strong>, not claude.ai (the website). <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free →</a>
+                      ⚠️ <strong>Important:</strong> You need the <strong>Claude Desktop app</strong> (not the claude.ai website — they're different). <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free →</a>
                     </div>
                     <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
-                      <li>Check your email for your license key</li>
-                      <li>Download your skill package (button below)</li>
-                      <li>Open Claude Desktop → <strong>Settings → Developer → Edit Config</strong></li>
-                      <li>Paste the JSON snippet from the README inside the zip</li>
+                      <li>Go to the <a href="/getting-started.html" style="color:var(--accent);font-weight:600;">Getting Started page</a> and download the installer</li>
+                      <li>Run the installer — it finds Claude Desktop automatically and configures it</li>
+                      <li>Your license key (shown in your welcome email) is entered for you automatically</li>
                       <li>Restart Claude Desktop</li>
+                      <li>To confirm it worked, ask Claude: <strong>"Check my MilitarySpouseTasksAI balance"</strong></li>
                     </ol>
-                    <div class="code-block" style="margin-top:10px;">Config location:<br/>Mac: ~/Library/Application Support/Claude/claude_desktop_config.json<br/>Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
+                    <p style="margin-top:10px;font-size:0.82rem;background:#f0f9ff;border-radius:6px;padding:10px 12px;color:#0369a1;">
+                      🪟 <strong>Windows users:</strong> If Windows shows a security warning, click <strong>More info → Run anyway</strong>. The installer isn't signed yet — it's safe.
+                    </p>
                   </div>
 
                   <!-- Claude Code -->
                   <div class="install-platform" id="install-claude_code" style="display:none;">
                     <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
-                      <li>Check your email for your license key and download link</li>
-                      <li>Extract the zip — open the downloaded <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;">mcp</code> folder</li>
-                      <li>Run <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;">install.py</code> — it writes to <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;">~/.claude.json</code> automatically</li>
+                      <li>Go to the <a href="/getting-started.html" style="color:var(--accent);font-weight:600;">Getting Started page</a> and download the installer</li>
+                      <li>Run the installer — it detects Claude Code and writes to <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;">~/.claude.json</code> automatically</li>
                       <li>Start a new Claude Code session</li>
+                      <li>To confirm it worked, type: <strong>"Check my MilitarySpouseTasksAI balance"</strong></li>
                     </ol>
                     <p style="margin-top:10px;font-size:0.82rem;background:#ecfdf5;border-radius:6px;padding:10px 12px;color:#065f46;">
-                      🖥️ <strong>Also have Claude Desktop?</strong> The installer detects both and sets up each one in the same run.
+                      🖥️ <strong>Also have Claude Desktop?</strong> The installer detects both and sets up each one in the same pass.
                     </p>
                   </div>
 
                   <!-- OpenClaw -->
                   <div class="install-platform" id="install-openclaw" style="display:none;">
                     <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
-                      <li>Check your email for your license key</li>
                       <li>Open your OpenClaw chat and type:</li>
                     </ol>
-                    <div class="code-block">I just downloaded the MilitarySpouseTasksAI skill. Please find it in my Downloads folder and install it.</div>
-                    <p style="font-size:0.85rem;color:#6b7280;">OpenClaw will find and install it automatically. Then restart OpenClaw.</p>
+                    <div class="code-block">openclaw skills install militaryspousetasksai</div>
+                    <p style="font-size:0.85rem;color:#6b7280;margin-top:8px;">OpenClaw will prompt for your license key (from your welcome email) and configure everything. Then restart OpenClaw.</p>
+                    <p style="margin-top:8px;font-size:0.85rem;color:#6b7280;">To confirm it worked, ask: <strong>"Check my MilitarySpouseTasksAI balance"</strong></p>
                   </div>
 
                   <!-- Cursor -->
                   <div class="install-platform" id="install-cursor" style="display:none;">
                     <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
-                      <li>Check your email for your license key</li>
-                      <li>Download your skill package (button below)</li>
-                      <li>In Cursor: open <strong>Settings → MCP</strong></li>
-                      <li>Add the MCP server entry from the README in your zip</li>
+                      <li>Go to the <a href="/getting-started.html" style="color:var(--accent);font-weight:600;">Getting Started page</a> and download the installer</li>
+                      <li>Run the installer — it detects Cursor and configures it automatically</li>
                       <li>Restart Cursor</li>
+                      <li>To confirm it worked, ask: <strong>"Check my MilitarySpouseTasksAI balance"</strong></li>
                     </ol>
                   </div>
 
                   <!-- Windsurf -->
                   <div class="install-platform" id="install-windsurf" style="display:none;">
                     <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
-                      <li>Check your email for your license key</li>
-                      <li>Download your skill package (button below)</li>
-                      <li>In Windsurf: click the <strong>MCPs icon</strong> (top-right of Cascade panel)</li>
-                      <li>Click <strong>Add manually</strong> and paste the config from the README</li>
-                      <li>Config file location: <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;">~/.codeium/windsurf/mcp_config.json</code></li>
+                      <li>Go to the <a href="/getting-started.html" style="color:var(--accent);font-weight:600;">Getting Started page</a> and download the installer</li>
+                      <li>Run the installer — it detects Windsurf and configures it automatically</li>
                       <li>Restart Windsurf</li>
+                      <li>To confirm it worked, ask: <strong>"Check my MilitarySpouseTasksAI balance"</strong></li>
                     </ol>
                   </div>
 
                   <!-- Cline -->
                   <div class="install-platform" id="install-cline" style="display:none;">
                     <ol style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:1.8;">
-                      <li>Check your email for your license key</li>
-                      <li>Download your skill package (button below)</li>
-                      <li>In VS Code: open the <strong>Cline sidebar → MCP Servers</strong></li>
-                      <li>Click <strong>Configure MCP Servers</strong> and add the entry from the README</li>
+                      <li>Go to the <a href="/getting-started.html" style="color:var(--accent);font-weight:600;">Getting Started page</a> and download the installer</li>
+                      <li>Run the installer — it detects Cline (VS Code) and configures it automatically</li>
                       <li>Reload VS Code</li>
+                      <li>To confirm it worked, ask: <strong>"Check my MilitarySpouseTasksAI balance"</strong></li>
                     </ol>
                   </div>
 
                   <!-- Other / fallback -->
                   <div class="install-platform" id="install-other" style="display:none;">
-                    <p style="color:#4b5563;font-size:0.9rem;margin-bottom:12px;">No problem — your package includes full setup instructions for all supported platforms. Check the README inside the zip.</p>
-                    <p style="font-size:0.85rem;color:#6b7280;">Supported: Claude Desktop &bull; OpenClaw &bull; Cursor &bull; Windsurf &bull; Cline</p>
+                    <p style="color:#4b5563;font-size:0.9rem;margin-bottom:12px;">Head to the <a href="/getting-started.html" style="color:var(--accent);font-weight:600;">Getting Started page</a> for step-by-step setup instructions for all supported platforms.</p>
+                    <p style="font-size:0.85rem;color:#6b7280;">Supported: Claude Desktop &bull; Claude Code &bull; OpenClaw &bull; Cursor &bull; Windsurf &bull; Cline</p>
                   </div>
 
                   <!-- Multi-platform note -->
@@ -209,8 +207,17 @@
 
                 </div>
 
-                <a href="/getting-started.html" class="download-btn" style="margin-bottom:16px;">View Full Setup Guide →</a>
-                <p style="color:#9ca3af;font-size:0.85rem;">Want more credits? <a href="/buy-credits.html" style="color:var(--accent);">Browse plans →</a></p>
+                <a href="/getting-started.html" class="download-btn" style="margin-bottom:16px;">Download Installer &amp; Setup Guide →</a>
+
+                <!-- First task CTA -->
+                <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:18px 20px;margin-bottom:16px;text-align:left;">
+                  <p style="font-weight:700;color:#166534;font-size:0.9rem;margin-bottom:8px;">🚀 Try your first task right now</p>
+                  <p style="font-size:0.85rem;color:#4b5563;margin-bottom:10px;">Once installed, open your AI client and paste this:</p>
+                  <div class="code-block" id="first-task-prompt" style="font-size:0.82rem;">Search MilitarySpouseTasksAI for tasks that can help me today</div>
+                  <p style="font-size:0.78rem;color:#6b7280;margin-top:8px;">Browse the <a href="/task-library.html" style="color:var(--accent);">Task Library</a> to see what's available first.</p>
+                </div>
+
+                <p style="color:#9ca3af;font-size:0.82rem;text-align:center;">💳 Your 5 credits never expire &nbsp;·&nbsp; <a href="/buy-credits.html" style="color:var(--accent);">Buy more anytime →</a></p>
             </div>
 
             <!-- Content (purchase) -->
