@@ -385,7 +385,8 @@
 
                     <!-- Platform selector -->
                 <div class="platform-section">
-                    <span class="platform-label">What AI tool(s) do you use? <span style="font-weight:400;color:#9ca3af">(select all that apply)</span></span>
+                    <span class="platform-label">What AI tool(s) do you use? <span style="font-weight:600;color:#dc2626">*</span> <span style="font-weight:400;color:#9ca3af">(select all that apply)</span></span>
+                    <div id="platformError" style="display:none;color:#dc2626;font-size:0.82rem;margin-top:4px;">Please select at least one AI tool you use.</div>
                     <div class="platform-grid">
                         <label class="platform-option" id="plat-claude_desktop">
                             <input type="checkbox" name="platforms" value="claude_desktop" onchange="updatePlatformUI()">
@@ -450,7 +451,14 @@
 
         // Platform UI
         function updatePlatformUI() {
-            document.querySelectorAll('.platform-option').forEach(label => {
+            // Clear platform error when user selects one
+        document.querySelectorAll('input[name="platforms"]').forEach(cb => {
+            cb.addEventListener('change', () => {
+                document.getElementById('platformError').style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('.platform-option').forEach(label => {
                 const cb = label.querySelector('input[type="checkbox"]');
                 label.classList.toggle('checked', cb.checked);
             });
@@ -496,6 +504,14 @@
             }
             if (!consent) {
                 showError('Please agree to the Terms of Service and Privacy Policy to continue.');
+                valid = false;
+            }
+
+            // Require at least one platform selected
+            const selectedPlatforms = Array.from(document.querySelectorAll('input[name="platforms"]:checked'));
+            if (selectedPlatforms.length === 0) {
+                document.getElementById('platformError').style.display = 'block';
+                document.querySelector('.platform-section').scrollIntoView({behavior: 'smooth', block: 'center'});
                 valid = false;
             }
 
