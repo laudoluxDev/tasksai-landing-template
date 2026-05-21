@@ -270,19 +270,6 @@
         <p style="margin-top:14px;font-size:0.78rem;color:#6b7280;">Can't run the installer? <a href="#" onclick="document.getElementById('manual-install-section').style.display='block';this.closest('p').style.display='none';return false;" style="color:#16a34a;font-weight:600;">Use the manual Python setup instead →</a></p>
       </div>
 
-      <!-- ── Windows SmartScreen notice ── -->
-      <div id="smartscreen-notice" style="display:none;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:20px 24px;margin-bottom:28px;">
-        <p style="font-weight:700;color:#1e40af;margin-bottom:8px;">🛡️ Windows will show a safety warning — this is normal</p>
-        <p style="color:#1e3a8a;font-size:0.9rem;margin-bottom:12px;">Because this is new software, Windows displays a blue "Windows protected your PC" screen the first time you run it. This happens with all new apps — it doesn't mean anything is wrong.</p>
-        <p style="font-weight:600;color:#1e40af;font-size:0.9rem;margin-bottom:6px;">Here's what to do:</p>
-        <ol style="color:#1e3a8a;font-size:0.9rem;margin:0 0 0 18px;line-height:1.8;">
-          <li>Click <strong>"More info"</strong> (small link below the main message)</li>
-          <li>Click <strong>"Run anyway"</strong></li>
-          <li>That's it — the installer will open normally</li>
-        </ol>
-        <p style="margin-top:12px;font-size:0.82rem;color:#3730a3;">This warning will disappear as more people install the app. It's a standard Windows precaution for new software from any publisher.</p>
-      </div>
-
       <!-- ── Claude Desktop ── -->
       <div id="mcp-claude" class="mcp-client-section">
         <div class="alert" style="margin-bottom:20px;">
@@ -310,7 +297,16 @@
             <li>Click <strong>Install</strong></li>
             <li>Wait for "Installation complete" — then close the installer</li>
           </ol>
-          <p style="margin-top:10px;font-size:0.88rem;">⚠️ <strong>Windows users:</strong> If you see a blue "Windows protected your PC" screen, click <strong>More info → Run anyway</strong>. This is normal for new software. <a href="#" onclick="document.getElementById('smartscreen-notice').style.display='block';this.closest('p').style.display='none';return false;" style="color:#2563eb;font-weight:600;">See details →</a></p>
+          <div style="background:#eff6ff;border:2px solid #93c5fd;border-radius:10px;padding:18px 22px;margin-top:14px;">
+            <p style="font-weight:700;color:#1e40af;margin:0 0 8px;font-size:0.95rem;">🛡️ Windows users: you'll see a safety warning — here's what to do</p>
+            <p style="color:#1e3a8a;font-size:0.88rem;margin:0 0 10px;">Windows shows a blue "Windows protected your PC" screen for all new software. It doesn't mean anything is wrong — just click through it:</p>
+            <ol style="color:#1e3a8a;font-size:0.9rem;margin:0 0 0 18px;line-height:2;font-weight:600;">
+              <li>Click <strong>"More info"</strong> (small text link below the main message)</li>
+              <li>Click <strong>"Run anyway"</strong></li>
+              <li>The installer opens normally — continue from there</li>
+            </ol>
+            <p style="margin-top:10px;font-size:0.82rem;color:#3730a3;margin-bottom:0;">This warning will disappear as more people install the app. It's a standard Windows precaution for any new publisher.</p>
+          </div>
           <p style="margin-top:8px;color:#6b7280;font-size:0.88rem;">The installer places the server in a permanent location and configures Claude Desktop automatically. You can delete the installer file afterward.</p>
         </div>
 
@@ -394,6 +390,12 @@
 
       <!-- ── Claude Code ── -->
       <div id="mcp-claudecode" class="mcp-client-section" style="display:none;">
+        <div class="info-box" style="margin-bottom:24px;">
+          <h3>🤖 Claude Code tip: you can ask it to install for you</h3>
+          <p>Claude Code has filesystem access, so it can run the installer itself. Start a session and say:</p>
+          <div class="code-block" style="background:#0c4a6e;border-color:#0c4a6e;text-align:left;margin:8px 0;"><span class="cmd">"Download and install the MilitarySpouseTasksAI MCP from militaryspousetasksai.com"</span></div>
+          <p style="margin:0;">Or follow the manual steps below if you prefer to do it yourself.</p>
+        </div>
         <div class="step">
           <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
           <p>Use the download button above. The installer detects Claude Code automatically and writes to <code>~/.claude.json</code>. If you also have Claude Desktop, it configures both in one pass.</p>
