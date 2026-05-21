@@ -614,6 +614,29 @@ def generate_page(template: str, vertical: dict) -> str:
     for placeholder, value in replacements.items():
         page = page.replace(placeholder, value)
 
+    # Waitlist mode: replace hero CTAs and pricing section for verticals without an installer
+    if not vertical.get("has_installer", False):
+        # Replace hero CTA buttons
+        page = page.replace(
+            '<a href="/signup" class="cta-button">Try Free — 5 Credits, No Card</a>\n                <a href="#pricing" class="cta-button secondary">See Pricing</a>',
+            '<a href="/signup" class="cta-button">Join the Waitlist — Free</a>'
+        )
+        # Replace pricing section with waitlist CTA
+        import re as _re
+        page = _re.sub(
+            r'<!-- ─── Pricing ─── -->.*?</section>',
+            '''<!-- Waitlist CTA (replaces pricing for unreleased verticals) -->
+    <section class="pricing" id="pricing" style="background:#f8fafc;">
+        <div class="container" style="text-align:center;padding:60px 24px;">
+            <h2 class="section-title" style="margin-bottom:16px;">''' + product_name + ''' is coming soon</h2>
+            <p style="color:#6b7280;font-size:1rem;max-width:480px;margin:0 auto 32px;">We\'re putting the finishing touches on ''' + product_name + '''. Join the waitlist and be first to know when it launches — you\'ll get early access and a free trial.</p>
+            <a href="/signup" style="display:inline-block;padding:14px 32px;background:var(--accent);color:white;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;">Join the Waitlist &rarr;</a>
+        </div>
+    </section>''',
+            page,
+            flags=_re.DOTALL
+        )
+
     return page
 
 
@@ -684,8 +707,12 @@ def main():
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                 (out_dir / "success.html").write_text(success_page, encoding="utf-8")
 
-            # Generate signup.html
-            signup_template_path = TEMPLATE_FILE.parent / "signup-template.html"
+            # Generate signup.html — use waitlist template for verticals without an installer
+            has_installer = v.get("has_installer", False)
+            if has_installer:
+                signup_template_path = TEMPLATE_FILE.parent / "signup-template.html"
+            else:
+                signup_template_path = TEMPLATE_FILE.parent / "signup-waitlist-template.html"
             if signup_template_path.exists():
                 signup_tmpl = signup_template_path.read_text(encoding="utf-8")
                 profession = v.get("occupation", v.get("audience", slug))
