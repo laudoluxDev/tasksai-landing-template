@@ -169,22 +169,42 @@
 <div class="content">
   <div class="container">
 
-    <!-- Changed platforms link -->
-    <p style="text-align:center;margin-bottom:28px;font-size:0.85rem;color:#9ca3af;">
-      Using a different AI tool now? All platforms are covered below. <a href="#path-tabs" style="color:var(--accent);">Choose your setup →</a>
-    </p>
+    <!-- ── Platform selector ── -->
+    <div style="text-align:center;margin-bottom:20px;">
+      <p style="font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:6px;">Select your AI client to get started:</p>
+      <p style="font-size:0.85rem;color:#6b7280;">Each platform takes under 5 minutes to set up.</p>
+    </div>
 
-    <!-- ── Path selector tabs ── -->
-    <div class="path-tabs" id="path-tabs">
-      <button class="path-tab active" onclick="showPath('openclaw', this)">
-        <div class="tab-label">Recommended</div>
-        <div class="tab-name">OpenClaw <span class="recommended-badge">Easiest</span></div>
-        <div class="tab-note">One command. No config files.</div>
+    <div class="path-tabs" id="path-tabs" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;">
+      <button class="path-tab active" onclick="showPath('mcp', this); showMcpClient('claude', document.querySelector('[onclick=\'showMcpClient(\'claude\', this)\']'))" style="flex:1;min-width:140px;">
+        <div class="tab-label" style="color:#9ca3af;">Most popular</div>
+        <div class="tab-name">Claude Desktop</div>
+        <div class="tab-note">Anthropic's free app</div>
       </button>
-      <button class="path-tab" onclick="showPath('mcp', this)">
-        <div class="tab-label">Also supported</div>
-        <div class="tab-name">Claude Desktop / Cursor / Windsurf / Cline</div>
-        <div class="tab-note">Download installer — no terminal needed</div>
+      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('cursor', document.querySelector('[onclick=\'showMcpClient(\'cursor\', this)\']'))" style="flex:1;min-width:140px;">
+        <div class="tab-label" style="color:#9ca3af;">AI code editor</div>
+        <div class="tab-name">Cursor</div>
+        <div class="tab-note">Works great for professionals</div>
+      </button>
+      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('windsurf', document.querySelector('[onclick=\'showMcpClient(\'windsurf\', this)\']'))" style="flex:1;min-width:140px;">
+        <div class="tab-label" style="color:#9ca3af;">AI code editor</div>
+        <div class="tab-name">Windsurf</div>
+        <div class="tab-note">Clean, fast interface</div>
+      </button>
+      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('cline', document.querySelector('[onclick=\'showMcpClient(\'cline\', this)\']'))" style="flex:1;min-width:140px;">
+        <div class="tab-label" style="color:#9ca3af;">VS Code extension</div>
+        <div class="tab-name">Cline</div>
+        <div class="tab-note">Inside VS Code</div>
+      </button>
+      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('claudecode', document.querySelector('[onclick=\'showMcpClient(\'claudecode\', this)\']'))" style="flex:1;min-width:140px;">
+        <div class="tab-label" style="color:#9ca3af;">Anthropic CLI</div>
+        <div class="tab-name">Claude Code</div>
+        <div class="tab-note">Terminal-based</div>
+      </button>
+      <button class="path-tab" onclick="showPath('openclaw', this)" style="flex:1;min-width:140px;">
+        <div class="tab-label" style="color:#9ca3af;">Alternative</div>
+        <div class="tab-name">OpenClaw</div>
+        <div class="tab-note">One command, no config</div>
       </button>
     </div>
 
@@ -526,25 +546,42 @@
     if (btn) btn.classList.add('active');
   }
 
-  // Auto-select tab based on ?platform= URL param
+  // Default: show MCP path with Claude Desktop active
   (function() {
     var params = new URLSearchParams(window.location.search);
-    var platform = params.get('platform') || '';
-    var MCP_PLATFORMS = ['claude_desktop','claude_code','cursor','windsurf','cline'];
+    var platform = params.get('platform') || 'claude_desktop';
     var MCP_CLIENT_MAP = {
       'claude_desktop': 'claude', 'claude_code': 'claudecode',
       'cursor': 'cursor', 'windsurf': 'windsurf', 'cline': 'cline'
     };
-    if (MCP_PLATFORMS.indexOf(platform) !== -1) {
-      // Switch to MCP tab
-      var mcpBtn = document.querySelector('#path-tabs .path-tab:nth-child(2)');
-      showPath('mcp', mcpBtn);
-      // Switch to correct MCP sub-client
-      var clientId = MCP_CLIENT_MAP[platform];
-      if (clientId) {
-        var clientBtn = document.querySelector('[onclick="showMcpClient(\'' + clientId + '\', this)"]');
-        if (clientBtn) showMcpClient(clientId, clientBtn);
-      }
+    var clientId = MCP_CLIENT_MAP[platform];
+    if (clientId) {
+      // Find and activate the matching top-level tab
+      var tabMap = { 'claude':'claude-desktop', 'claudecode':'claude-code', 'cursor':'cursor', 'windsurf':'windsurf', 'cline':'cline' };
+      document.querySelectorAll('#path-tabs .path-tab').forEach(function(t) {
+        var txt = t.querySelector('.tab-name') ? t.querySelector('.tab-name').textContent.trim() : '';
+        if ((clientId === 'claude' && txt === 'Claude Desktop') ||
+            (clientId === 'cursor' && txt === 'Cursor') ||
+            (clientId === 'windsurf' && txt === 'Windsurf') ||
+            (clientId === 'cline' && txt === 'Cline') ||
+            (clientId === 'claudecode' && txt === 'Claude Code')) {
+          t.classList.add('active');
+        } else {
+          t.classList.remove('active');
+        }
+      });
+      // Show MCP path section
+      document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
+      document.getElementById('path-mcp').classList.add('active');
+      // Show correct MCP sub-client
+      var clientBtn = document.querySelector('[onclick*="showMcpClient(\'' + clientId + '\'"]');
+      if (clientBtn) showMcpClient(clientId, clientBtn);
+    } else if (platform === 'openclaw') {
+      document.querySelectorAll('#path-tabs .path-tab').forEach(function(t) {
+        t.classList.toggle('active', (t.querySelector('.tab-name')||{}).textContent === 'OpenClaw');
+      });
+      document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
+      document.getElementById('path-openclaw').classList.add('active');
     }
   })();
 
