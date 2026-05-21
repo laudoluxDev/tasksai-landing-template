@@ -176,32 +176,32 @@
     </div>
 
     <div class="path-tabs" id="path-tabs" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;">
-      <button class="path-tab active" onclick="showPath('mcp', this); showMcpClient('claude', document.querySelector('[onclick=\'showMcpClient(\'claude\', this)\']'))" style="flex:1;min-width:140px;">
+      <button class="path-tab active" onclick="selectPlatform('claude', this)" style="flex:1;min-width:140px;">
         <div class="tab-label" style="color:#9ca3af;">Most popular</div>
         <div class="tab-name">Claude Desktop</div>
         <div class="tab-note">Anthropic's free app</div>
       </button>
-      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('cursor', document.querySelector('[onclick=\'showMcpClient(\'cursor\', this)\']'))" style="flex:1;min-width:140px;">
+      <button class="path-tab" onclick="selectPlatform('cursor', this)" style="flex:1;min-width:140px;">
         <div class="tab-label" style="color:#9ca3af;">AI code editor</div>
         <div class="tab-name">Cursor</div>
         <div class="tab-note">Works great for professionals</div>
       </button>
-      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('windsurf', document.querySelector('[onclick=\'showMcpClient(\'windsurf\', this)\']'))" style="flex:1;min-width:140px;">
+      <button class="path-tab" onclick="selectPlatform('windsurf', this)" style="flex:1;min-width:140px;">
         <div class="tab-label" style="color:#9ca3af;">AI code editor</div>
         <div class="tab-name">Windsurf</div>
         <div class="tab-note">Clean, fast interface</div>
       </button>
-      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('cline', document.querySelector('[onclick=\'showMcpClient(\'cline\', this)\']'))" style="flex:1;min-width:140px;">
+      <button class="path-tab" onclick="selectPlatform('cline', this)" style="flex:1;min-width:140px;">
         <div class="tab-label" style="color:#9ca3af;">VS Code extension</div>
         <div class="tab-name">Cline</div>
         <div class="tab-note">Inside VS Code</div>
       </button>
-      <button class="path-tab" onclick="showPath('mcp', this); showMcpClient('claudecode', document.querySelector('[onclick=\'showMcpClient(\'claudecode\', this)\']'))" style="flex:1;min-width:140px;">
+      <button class="path-tab" onclick="selectPlatform('claudecode', this)" style="flex:1;min-width:140px;">
         <div class="tab-label" style="color:#9ca3af;">Anthropic CLI</div>
         <div class="tab-name">Claude Code</div>
         <div class="tab-note">Terminal-based</div>
       </button>
-      <button class="path-tab" onclick="showPath('openclaw', this)" style="flex:1;min-width:140px;">
+      <button class="path-tab" onclick="selectPlatform('openclaw', this)" style="flex:1;min-width:140px;">
         <div class="tab-label" style="color:#9ca3af;">Alternative</div>
         <div class="tab-name">OpenClaw</div>
         <div class="tab-note">One command, no config</div>
@@ -260,30 +260,6 @@
          PATH B - MCP (Claude Desktop / Cursor / Windsurf)
     ══════════════════════════════════════ -->
     <div id="path-mcp" class="path-section">
-
-      <!-- Per-client sub-tabs -->
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;">
-        <button class="path-tab active" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('claude', this)">
-          <div class="tab-name" style="font-size:0.95rem;">Claude Desktop</div>
-          <div class="tab-note">Most common</div>
-        </button>
-        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('claudecode', this)">
-          <div class="tab-name" style="font-size:0.95rem;">Claude Code</div>
-          <div class="tab-note">Anthropic CLI</div>
-        </button>
-        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('cursor', this)">
-          <div class="tab-name" style="font-size:0.95rem;">Cursor</div>
-          <div class="tab-note">AI code editor</div>
-        </button>
-        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('windsurf', this)">
-          <div class="tab-name" style="font-size:0.95rem;">Windsurf</div>
-          <div class="tab-note">AI code editor</div>
-        </button>
-        <button class="path-tab" style="min-width:140px;padding:12px 16px;" onclick="showMcpClient('cline', this)">
-          <div class="tab-name" style="font-size:0.95rem;">Cline</div>
-          <div class="tab-note">VS Code extension</div>
-        </button>
-      </div>
 
       <!-- ── OS download box ── -->
       <div id="exe-download-box" style="background:#f0fdf4;border:2px solid #86efac;border-radius:12px;padding:28px 32px;margin-bottom:32px;text-align:center;">
@@ -539,58 +515,45 @@
 </footer>
 
 <script>
-  function showPath(id, btn) {
-    document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
+  // Single entry point for all platform selection
+  function selectPlatform(id, btn) {
+    // Update outer tab highlights
     document.querySelectorAll('#path-tabs .path-tab').forEach(t => t.classList.remove('active'));
-    document.getElementById('path-' + id).classList.add('active');
     if (btn) btn.classList.add('active');
-  }
 
-  // Default: show MCP path with Claude Desktop active
-  (function() {
-    var params = new URLSearchParams(window.location.search);
-    var platform = params.get('platform') || 'claude_desktop';
-    var MCP_CLIENT_MAP = {
-      'claude_desktop': 'claude', 'claude_code': 'claudecode',
-      'cursor': 'cursor', 'windsurf': 'windsurf', 'cline': 'cline'
-    };
-    var clientId = MCP_CLIENT_MAP[platform];
-    if (clientId) {
-      // Find and activate the matching top-level tab
-      var tabMap = { 'claude':'claude-desktop', 'claudecode':'claude-code', 'cursor':'cursor', 'windsurf':'windsurf', 'cline':'cline' };
-      document.querySelectorAll('#path-tabs .path-tab').forEach(function(t) {
-        var txt = t.querySelector('.tab-name') ? t.querySelector('.tab-name').textContent.trim() : '';
-        if ((clientId === 'claude' && txt === 'Claude Desktop') ||
-            (clientId === 'cursor' && txt === 'Cursor') ||
-            (clientId === 'windsurf' && txt === 'Windsurf') ||
-            (clientId === 'cline' && txt === 'Cline') ||
-            (clientId === 'claudecode' && txt === 'Claude Code')) {
-          t.classList.add('active');
-        } else {
-          t.classList.remove('active');
-        }
-      });
-      // Show MCP path section
-      document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
-      document.getElementById('path-mcp').classList.add('active');
-      // Show correct MCP sub-client
-      var clientBtn = document.querySelector('[onclick*="showMcpClient(\'' + clientId + '\'"]');
-      if (clientBtn) showMcpClient(clientId, clientBtn);
-    } else if (platform === 'openclaw') {
-      document.querySelectorAll('#path-tabs .path-tab').forEach(function(t) {
-        t.classList.toggle('active', (t.querySelector('.tab-name')||{}).textContent === 'OpenClaw');
-      });
+    if (id === 'openclaw') {
+      // Show OpenClaw path, hide MCP path
       document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
       document.getElementById('path-openclaw').classList.add('active');
+    } else {
+      // Show MCP path and reveal the correct client section
+      document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
+      document.getElementById('path-mcp').classList.add('active');
+      document.querySelectorAll('.mcp-client-section').forEach(s => s.style.display = 'none');
+      document.getElementById('mcp-' + id).style.display = 'block';
     }
-  })();
-
-  function showMcpClient(id, tab) {
-    document.querySelectorAll('.mcp-client-section').forEach(s => s.style.display = 'none');
-    tab.parentElement.querySelectorAll('.path-tab').forEach(t => t.classList.remove('active'));
-    document.getElementById('mcp-' + id).style.display = 'block';
-    tab.classList.add('active');
   }
+
+  // On load: read ?platform= param (default claude_desktop → 'claude')
+  (function() {
+    var PLATFORM_MAP = {
+      'claude_desktop': 'claude', 'claude-desktop': 'claude',
+      'claude_code': 'claudecode', 'claude-code': 'claudecode',
+      'cursor': 'cursor', 'windsurf': 'windsurf',
+      'cline': 'cline', 'openclaw': 'openclaw'
+    };
+    var param = new URLSearchParams(window.location.search).get('platform') || 'claude_desktop';
+    var clientId = PLATFORM_MAP[param] || 'claude';
+    // Find matching outer tab button and activate
+    var NAME_MAP = { claude: 'Claude Desktop', cursor: 'Cursor', windsurf: 'Windsurf', cline: 'Cline', claudecode: 'Claude Code', openclaw: 'OpenClaw' };
+    var targetName = NAME_MAP[clientId];
+    var matchBtn = null;
+    document.querySelectorAll('#path-tabs .path-tab').forEach(function(t) {
+      var nm = t.querySelector('.tab-name');
+      if (nm && nm.textContent.trim() === targetName) matchBtn = t;
+    });
+    selectPlatform(clientId, matchBtn);
+  })();
 
   // ── OS auto-detect for download buttons ────────────────────────────────────
   (function () {
