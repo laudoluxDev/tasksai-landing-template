@@ -71,7 +71,8 @@
       }
     ],
     "features_subtitle": "Every task built for the job site, the bid, and the invoice.",
-    "has_installer": true
+    "has_installer": true,
+    "youtube_video_id": "6O8JmgTp8Os"
   },
   {
     "product_id": "realtor",
@@ -229,7 +230,8 @@
         "preview": "Based on 3 comparable sales within 0.5 miles, the recommended list price range is $485,000\u2013$499,000..."
       }
     ],
-    "has_installer": true
+    "has_installer": true,
+    "youtube_video_id": "nMN5EQ1k5eQ"
   },
   {
     "product_id": "accounting",
@@ -268,7 +270,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for returns, clients, and the work between deadlines.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "chiropractor",
@@ -307,7 +310,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for patient care, notes, and practice growth.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "church",
@@ -346,7 +350,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for ministry, administration, and the congregation.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "dentist",
@@ -385,7 +390,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for patient care, treatment plans, and the front desk.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "designer",
@@ -424,7 +430,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for briefs, clients, and creative work that ships.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "electrician",
@@ -463,7 +470,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for estimates, job specs, and code compliance.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "eventplanner",
@@ -502,7 +510,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for timelines, vendors, and the day-of details.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "farmer",
@@ -541,7 +550,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-GT4MQX8ZQE",
     "features_subtitle": "Every task built for how farms actually run \u2014 season to season.",
-    "has_installer": true
+    "has_installer": true,
+    "youtube_video_id": ""
   },
   {
     "product_id": "funeral",
@@ -580,7 +590,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built with the care and precision families deserve.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "hr",
@@ -619,7 +630,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for the full employee lifecycle \u2014 hire to goodbye.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "insurance",
@@ -658,7 +670,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for policies, claims, and client relationships.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "landlord",
@@ -697,7 +710,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for leases, tenants, and keeping properties running.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "militaryspouse",
@@ -736,7 +750,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for the moves, the gaps, and the fresh starts.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "mortgage",
@@ -775,7 +790,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for borrowers, lenders, and closing on time.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "mortuary",
@@ -814,7 +830,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built with the care and precision families deserve.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "nutritionist",
@@ -853,7 +870,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for assessments, meal plans, and client progress.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "pastor",
@@ -892,7 +910,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for sermons, pastoral care, and church leadership.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "personaltrainer",
@@ -931,7 +950,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for programs, clients, and results that stick.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "plumber",
@@ -970,7 +990,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for service calls, estimates, and getting the job done.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "principal",
@@ -1009,7 +1030,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for staff, students, families, and everything else.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "restaurant",
@@ -1048,7 +1070,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for the kitchen, the floor, and the front office.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "salon",
@@ -1087,7 +1110,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-N14JL8C4EC",
     "features_subtitle": "Every task built for the chair, the client, and the business behind it.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "teacher",
@@ -1208,7 +1232,8 @@
         "preview": "Student demonstrated 87 words per minute on the Aimsweb oral reading fluency probe, compared to the goal of 110 wpm. Continued difficulty with..."
       }
     ],
-    "has_installer": true
+    "has_installer": true,
+    "youtube_video_id": "nYf9ebeY6G0"
   },
   {
     "product_id": "therapist",
@@ -1247,7 +1272,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-CRPT3804J6",
     "features_subtitle": "Every task built around clinical documentation and client care.",
-    "has_installer": true
+    "has_installer": true,
+    "youtube_video_id": "aZVB-hYqXmI"
   },
   {
     "product_id": "travelagent",
@@ -1286,7 +1312,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for itineraries, bookings, and happy travelers.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "vet",
@@ -1325,7 +1352,8 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for patient care, owner communication, and the clinic.",
-    "has_installer": false
+    "has_installer": false,
+    "youtube_video_id": ""
   },
   {
     "product_id": "marketing",
@@ -1373,6 +1401,7 @@
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-XG8WVN0QR3",
     "features_subtitle": "Every task built for campaigns, clients, and copy that converts.",
-    "has_installer": true
+    "has_installer": true,
+    "youtube_video_id": ""
   }
 ]

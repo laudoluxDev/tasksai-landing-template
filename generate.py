@@ -51,6 +51,29 @@ def build_feature_cards(features: list[dict]) -> str:
     return "\n                ".join(cards)
 
 
+def build_youtube_section(video_id: str, product_name: str) -> str:
+    """Build a YouTube embed section, or empty string if no video ID."""
+    if not video_id:
+        return ""
+    return f"""
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">See {product_name} in Action</h2>
+            <p class="section-subtitle">Watch how {product_name} compares to raw AI — same task, dramatically better output.</p>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/{video_id}"
+                    title="{product_name} explainer video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>"""
+
+
 def build_testimonials_html(testimonials: list, heading: str = "What our users are saying") -> str:
     """Render testimonials section HTML, or empty string if no valid entries."""
     if not testimonials:
@@ -506,6 +529,9 @@ def generate_page(template: str, vertical: dict) -> str:
     demo_tasks = vertical.get("demo_tasks", [])
     hero_demo_html = build_hero_demo_html(demo_tasks, product_name, accent)
 
+    youtube_video_id = vertical.get("youtube_video_id", "")
+    youtube_video_section = build_youtube_section(youtube_video_id, product_name)
+
     testimonials = vertical.get("testimonials", [])
     testimonials_heading = vertical.get("testimonials_heading", "What our users are saying")
     testimonials_section = build_testimonials_html(testimonials, testimonials_heading)
@@ -609,6 +635,7 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{COMPLIANCE_SECTION}}": compliance_section,
         "{{PRICING_CARDS}}": pricing_cards,
         "{{HERO_DEMO_HTML}}": hero_demo_html,
+        "{{YOUTUBE_VIDEO_SECTION}}": youtube_video_section,
     }
 
     for placeholder, value in replacements.items():

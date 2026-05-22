@@ -416,6 +416,31 @@
         }
 
         /* ─── Example Tasks Band ─── */
+        /* ── YouTube Video Section ── */
+        .video-section {
+            padding: 60px 0;
+            background: var(--background);
+            text-align: center;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 860px;
+            margin: 32px auto 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
         .tasks-band {
             background: var(--accent);
             padding: 28px 0;
@@ -990,6 +1015,8 @@
             {{HERO_DEMO_HTML}}
         </div>
     </section>
+
+    {{YOUTUBE_VIDEO_SECTION}}
 
     <!-- ─── Example Tasks Band ─── -->
     <div class="tasks-band">
