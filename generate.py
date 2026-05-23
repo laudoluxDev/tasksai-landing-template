@@ -58,17 +58,20 @@ def build_youtube_section(video_id: str, product_name: str) -> str:
     return f"""
     <section class="video-section">
         <div class="container">
-            <h2 class="section-title">See {product_name} in Action</h2>
-            <p class="section-subtitle">Watch how {product_name} compares to raw AI — same task, dramatically better output.</p>
-            <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/{video_id}"
-                    title="{product_name} explainer video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
+            <div class="video-eyebrow">See It In Action</div>
+            <h2 class="section-title">Watch {product_name} Work</h2>
+            <p class="section-subtitle">Same task. Raw AI vs. {product_name}. The difference is immediate.</p>
+            <div class="video-outer">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/{video_id}?rel=0&modestbranding=1"
+                        title="{product_name} explainer video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>"""
