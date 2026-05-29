@@ -329,8 +329,45 @@
           </div>
         </div>
 
+        <!-- ── Permissions section (Claude Desktop only) ── -->
+        <div class="step" id="permissions-step">
+          <div class="step-header"><div class="step-num">5</div><h2>Enable permissions so your skills always work</h2></div>
+
+          <div style="background:#f0f9ff;border:2px solid #bae6fd;border-radius:12px;padding:22px 26px;margin-bottom:20px;">
+            <p style="font-weight:700;color:#0c4a6e;font-size:0.95rem;margin:0 0 8px;">&#128274; This step is Claude Desktop only — do it once and it's permanent</p>
+            <p style="color:#075985;font-size:0.88rem;margin:0 0 14px;">Without this, Claude Desktop will ask permission <em>every single time</em> you use a skill — and may skip your skills entirely. Takes 30 seconds.</p>
+            <p style="font-size:0.82rem;color:#6b7280;margin:0 0 14px;">&#9432; <em>Cursor, Windsurf, and Cline users: skip this step — your tools are always available once installed.</em></p>
+
+            <ol style="padding-left:18px;color:#075985;font-size:0.9rem;line-height:2.2;margin:0 0 16px;">
+              <li>In Claude Desktop, click <strong>Settings</strong></li>
+              <li>Go to <strong>Connectors</strong> — you'll see a note that connectors have moved to <strong>Customize</strong>. Click that link.</li>
+            </ol>
+            <img src="https://lawtasksai.com/images/setup/step1-connectors.png"
+                 alt="Claude Desktop Settings — Connectors pointing to Customize"
+                 style="width:100%;border-radius:8px;border:1px solid #e0f2fe;display:block;margin:0 0 6px;" />
+            <p style="font-size:0.78rem;color:#6b7280;text-align:center;margin:0 0 16px;">Settings &rarr; Connectors &rarr; click &ldquo;Customize&rdquo;</p>
+
+            <p style="font-size:0.82rem;color:#075985;margin:0 0 14px;">&#9432; <em>Your connector will be listed as <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">travelagenttasksai</code> in the Desktop section.</em></p>
+
+            <ol start="3" style="padding-left:18px;color:#075985;font-size:0.9rem;line-height:2.2;margin:0 0 16px;">
+              <li>Under <strong>Desktop</strong>, click <strong>travelagenttasksai</strong></li>
+              <li>Next to <strong>Other tools</strong>, click the dropdown and select <strong>Always allow</strong></li>
+            </ol>
+            <img src="https://lawtasksai.com/images/setup/step2-always-allow.png"
+                 alt="Claude Desktop — TravelAgentTasksAI tools set to Always Allow"
+                 style="width:100%;border-radius:8px;border:1px solid #e0f2fe;display:block;margin:0 0 6px;" />
+            <p style="font-size:0.78rem;color:#6b7280;text-align:center;margin:0 0 16px;">Set all four tools to &ldquo;Always allow&rdquo;</p>
+
+            <p style="font-size:0.82rem;color:#075985;margin:0 0 14px;">&#9432; <em>You'll see four tools: <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">travelagenttasksai_search</code>, <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">travelagenttasksai_execute</code>, <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">travelagenttasksai_balance</code>, <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">travelagenttasksai_categories</code> — set them all to &ldquo;Always allow.&rdquo;</em></p>
+
+            <ol start="5" style="padding-left:18px;color:#075985;font-size:0.9rem;line-height:2.2;margin:0;">
+              <li>Start a <strong>new conversation</strong> in Claude Desktop — tools load at conversation start, not mid-chat.</li>
+            </ol>
+          </div>
+        </div>
+
         <div class="step">
-          <div class="step-header"><div class="step-num">5</div><h2>Start a conversation with TravelAgentTasksAI</h2></div>
+          <div class="step-header"><div class="step-num">6</div><h2>Start a conversation with TravelAgentTasksAI</h2></div>
 
           <!-- User trigger call-out -->
           <div style="background:#fef3c7;border:2px solid #f59e0b;border-radius:10px;padding:18px 22px;margin-bottom:20px;">
@@ -358,7 +395,7 @@
         </div>
 
         <div class="step">
-          <div class="step-header"><div class="step-num">6</div><h2>You're set!</h2></div>
+          <div class="step-header"><div class="step-num">7</div><h2>You're set!</h2></div>
           <p>Try these to explore:</p>
           <ul>
             <li><em>"Check my travelagent credits"</em> — see your balance</li>
