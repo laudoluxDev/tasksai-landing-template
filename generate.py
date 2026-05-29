@@ -890,6 +890,40 @@ def main():
                         .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
 
+            # ── Blog posts ────────────────────────────────────────────────────
+            blog_templates = [
+                ("blog-prefix-template.html",      f"use-{product_id}tasksai-to-the-phrase-that-unlocks-everything.html"),
+                ("blog-permissions-template.html", f"{product_id}tasksai-permissions-always-allow.html"),
+            ]
+            for blog_tmpl_name, blog_out_name in blog_templates:
+                blog_tmpl_path = TEMPLATE_FILE.parent / blog_tmpl_name
+                if not blog_tmpl_path.exists():
+                    continue
+                blog_dir = out_dir / "blog"
+                blog_dir.mkdir(exist_ok=True)
+                blog_content = blog_tmpl_path.read_text(encoding="utf-8")
+                # Build prefixed example chips for the prefix post
+                _tasks_list = v.get("sample_tasks", [])
+                _prefixed_chips = "".join(
+                    f'<div class="example-item"><span class="prefix">Use {{{{PRODUCT_NAME}}}} to</span> {t}</div>'
+                    for t in _tasks_list[:5]
+                ).replace("{{PRODUCT_NAME}}", product_name)
+                example_task = _tasks_list[0] if _tasks_list else f"help me with a {occupation} task"
+                _support_email = v.get("support_email", f"hello@{domain}")
+                rendered_blog = blog_content \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{HERO_COUNT}}", hero_count) \
+                    .replace("{{TARGET_AUDIENCE}}", target_audience) \
+                    .replace("{{OCCUPATION}}", occupation) \
+                    .replace("{{SUPPORT_EMAIL}}", _support_email) \
+                    .replace("{{EXAMPLE_TASK}}", example_task) \
+                    .replace("{{EXAMPLE_TASK_CHIPS_PREFIXED}}", _prefixed_chips) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                (blog_dir / blog_out_name).write_text(rendered_blog, encoding="utf-8")
+
             # Quick sanity check: no unreplaced placeholders
             remaining = [tok for tok in ["{{PRODUCT_NAME}}", "{{PRIMARY_COLOR}}", "{{ACCENT_COLOR}}"] if tok in page]
             if remaining:

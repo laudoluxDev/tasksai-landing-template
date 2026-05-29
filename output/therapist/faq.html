@@ -248,6 +248,36 @@
             <div class="faq-category">
                 <div class="faq-category-title">Getting Started</div>
                 <div class="faq-list">
+
+                    <!-- FEATURED: prefix -->
+                    <div class="faq-item" style="border:2px solid #7C3AED;border-radius:10px;margin-bottom:10px;">
+                        <button class="faq-question" style="padding:18px 20px;">
+                            TherapistTasksAI is installed but Claude is just answering normally. My skills aren’t being used.
+                            <span style="flex-shrink:0;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;padding:2px 8px;border-radius:20px;background:#7C3AED;color:white;margin-left:8px;">Most common</span>
+                        </button>
+                        <div class="faq-answer" style="padding:0 20px 20px;">
+                            <p><strong>Claude defaults to its own training unless you explicitly direct it.</strong> It doesn’t automatically reach for installed skills — it answers generically first.</p>
+                            <p>The fix is a four-word prefix. Start every prompt with <strong>“Use TherapistTasksAI to…”</strong> and Claude will always invoke your skill library instead of guessing.</p>
+                            <div style="background:#0f172a;border-radius:8px;padding:12px 16px;font-family:'Courier New',monospace;font-size:0.88rem;color:#7dd3fc;margin:12px 0;">Use TherapistTasksAI to {{EXAMPLE_TASK}}</div>
+                            <p>You don’t need to know which of the 200+ tasks to use — TherapistTasksAI finds the right framework automatically.</p>
+                            <p>Full explanation, copy-paste examples, and the Projects trick to skip the prefix entirely: <a href="/blog/use-therapisttasksai-to-the-phrase-that-unlocks-everything.html">“Use TherapistTasksAI to…” — The Phrase That Unlocks Everything →</a></p>
+                        </div>
+                    </div>
+
+                    <!-- FEATURED: permissions -->
+                    <div class="faq-item" style="border:2px solid #7C3AED;border-radius:10px;margin-bottom:10px;">
+                        <button class="faq-question" style="padding:18px 20px;">
+                            TherapistTasksAI worked once but now it’s stopped — or it works inconsistently.
+                            <span style="flex-shrink:0;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;padding:2px 8px;border-radius:20px;background:#7C3AED;color:white;margin-left:8px;">Most common</span>
+                        </button>
+                        <div class="faq-answer" style="padding:0 20px 20px;">
+                            <p><strong>Claude Desktop asks permission every time a tool runs.</strong> If that prompt was dismissed even once, your skills are silently blocked for the rest of the conversation — no error, Claude just answers normally.</p>
+                            <p>Fix it permanently in 30 seconds: go to <strong>Settings → Connectors → Customize → therapisttasksai</strong> and set all four tools to <strong>Always allow</strong>. Start a new conversation and it works every time.</p>
+                            <p>Full walkthrough with screenshots: <a href="/blog/therapisttasksai-permissions-always-allow.html">Why TherapistTasksAI Isn’t Responding — And the 30-Second Permissions Fix →</a></p>
+                            <p style="font-size:0.85rem;color:#6b7280;">&#9432; Cursor, Windsurf, and Cline don’t have this permission system — skip this if you’re on those clients.</p>
+                        </div>
+                    </div>
+
                     <div class="faq-item">
                         <button class="faq-question">What is TherapistTasksAI and how does it work?</button>
                         <div class="faq-answer">TherapistTasksAI is a plugin for AI assistants (Claude Desktop, OpenClaw, and any MCP-compatible client) that gives you 200+ pre-built, expert-crafted task templates for Therapists, counselors, social workers, and mental health professionals. Instead of figuring out how to prompt an AI, you pick a task, answer its specific questions, and get professional-quality output immediately.</div>

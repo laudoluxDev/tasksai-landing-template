@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why VetTasksAI Isn't Responding — And the 30-Second Permissions Fix | VetTasksAI</title>
+    <meta name="description" content="Claude Desktop asks permission every time a skill runs. Dismiss that prompt once and your skills stop working silently. Here's the one-time fix.">
+    <link rel="canonical" href="https://vettasksai.com/blog/vettasksai-permissions-always-allow.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/shared.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why VetTasksAI Isn't Responding \u2014 And the 30-Second Permissions Fix",
+        "datePublished": "2026-05-29",
+        "author": { "@type": "Organization", "name": "VetTasksAI" },
+        "publisher": { "@type": "Organization", "name": "VetTasksAI", "url": "https://vettasksai.com" },
+        "description": "Claude Desktop asks permission every time a skill runs. Dismiss that prompt once and your skills stop working silently. Here's the one-time fix."
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a1a2e; background: #fafbfc; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        .post-hero { padding: 48px 0 32px; background: linear-gradient(180deg, white 0%, #f3f4f6 100%); }
+        .post-hero .container { max-width: 800px; }
+        .post-series { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #059669; margin-bottom: 12px; }
+        .post-series a { color: #059669; text-decoration: none; }
+        .post-series a:hover { text-decoration: underline; }
+        .post-hero h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
+        .post-meta { font-size: 0.9rem; color: #6b7280; }
+
+        .post-body { padding: 48px 0 80px; }
+        .post-body .container { max-width: 800px; }
+        .post-content { font-size: 1.05rem; line-height: 1.8; color: #374151; }
+        .post-content h2 { font-size: 1.5rem; font-weight: 700; color: #1a1a2e; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e5e7eb; }
+        .post-content h3 { font-size: 1.15rem; font-weight: 600; color: #1a1a2e; margin: 28px 0 12px; }
+        .post-content p { margin-bottom: 20px; }
+        .post-content ul, .post-content ol { margin: 0 0 20px 24px; }
+        .post-content li { margin-bottom: 8px; }
+        .post-content a { color: #059669; text-decoration: underline; }
+        .post-content a:hover { opacity: 0.8; }
+        .post-content strong { color: #1a1a2e; font-weight: 600; }
+        .post-content code { background: #f1f5f9; color: #0f172a; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Courier New', monospace; }
+
+        .callout { border-left: 4px solid #059669; background: #f8faff; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 28px 0; }
+        .callout.warning { border-color: #f59e0b; background: #fffbeb; }
+        .callout.green { border-color: #16a34a; background: #f0fdf4; }
+        .callout.red { border-color: #dc2626; background: #fef2f2; }
+        .callout p { margin: 0; font-size: 0.95rem; color: #374151; }
+        .callout.warning p { color: #78350f; }
+        .callout.green p { color: #14532d; }
+        .callout.red p { color: #7f1d1d; }
+        .callout strong { display: block; margin-bottom: 4px; color: inherit; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .col-card { border-radius: 10px; padding: 20px; }
+        .col-card h4 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+        .col-card.bad { background: #fef2f2; border: 1px solid #fecaca; }
+        .col-card.bad h4 { color: #dc2626; }
+        .col-card.bad p { color: #7f1d1d; font-size: 0.9rem; margin: 0; }
+        .col-card.good { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .col-card.good h4 { color: #16a34a; }
+        .col-card.good p { color: #14532d; font-size: 0.9rem; margin: 0; }
+
+        .steps-box { background: #f0f9ff; border: 2px solid #bae6fd; border-radius: 12px; padding: 28px 32px; margin: 28px 0; }
+        .steps-box h3 { color: #0c4a6e; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; }
+        .steps-box ol { padding-left: 20px; color: #075985; font-size: 0.97rem; line-height: 2.4; margin-bottom: 16px; }
+        .steps-box ol li { padding-left: 4px; }
+        .steps-box p { color: #075985; font-size: 0.9rem; margin-bottom: 12px; }
+        .steps-box code { background: #e0f2fe; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; }
+        .step-img { width: 100%; border-radius: 8px; border: 1px solid #bae6fd; display: block; margin: 14px 0 4px; }
+        .img-caption { font-size: 0.78rem; color: #6b7280; text-align: center; margin-bottom: 18px; }
+
+        .code-block { background: #0f172a; border-radius: 8px; padding: 14px 18px; font-family: 'Courier New', monospace; font-size: 0.92rem; color: #7dd3fc; line-height: 1.7; margin: 16px 0; overflow-x: auto; }
+
+        .related-box { background: #faf5ff; border: 2px solid #d8b4fe; border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+        .related-box .label { color: #7c3aed; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .related-box h3 { color: #3b0764; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .related-box .excerpt { font-size: 0.92rem; color: #6b21a8; margin-bottom: 14px; }
+        .related-box a { display: inline-block; background: #7c3aed; color: white; font-weight: 700; font-size: 0.9rem; padding: 10px 20px; border-radius: 8px; text-decoration: none; }
+
+        .post-cta { border-radius: 12px; padding: 36px; margin: 48px 0 0; text-align: center; color: white; background: #059669; }
+        .post-cta h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+        .post-cta p { opacity: 0.9; margin-bottom: 24px; }
+        .post-cta a { display: inline-block; background: white; color: #059669; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 1rem; }
+
+        footer { background: #1a1a2e; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+        footer a { color: #9ca3af; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 640px) {
+            .post-hero h1 { font-size: 1.6rem; }
+            .two-col { grid-template-columns: 1fr; }
+            .steps-box { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="site-header"></div>
+<script src="/header.js"></script>
+
+<div class="post-hero">
+    <div class="container">
+        <p class="post-series"><a href="/blog/">VetTasksAI Blog</a> &nbsp;›&nbsp; Getting Started</p>
+        <h1>Why VetTasksAI Isn't Responding — And the 30-Second Permissions Fix</h1>
+        <p class="post-meta">May 29, 2026 &nbsp;·&nbsp; 4 min read &nbsp;·&nbsp; VetTasksAI Team</p>
+    </div>
+</div>
+
+<div class="post-body">
+    <div class="container">
+        <div class="post-content">
+
+            <p>You installed VetTasksAI. You opened Claude Desktop. You ran a task — and nothing happened. Claude just answered normally, as if VetTasksAI wasn't there.</p>
+
+            <p>Or maybe it worked the first time, but now it's stopped. Or it works sometimes but not others.</p>
+
+            <p>There's almost always one cause: <strong>Claude Desktop's tool permissions are set to ask for approval every single time — and at some point, that approval was dismissed.</strong> Once dismissed, the tool is blocked for the rest of the conversation.</p>
+
+            <p>The fix takes 30 seconds and you only do it once.</p>
+
+            <h2>What's actually happening</h2>
+
+            <p>Claude Desktop is cautious about tool calls by default. When VetTasksAI tries to run — searching the skill library, executing a framework, checking your balance — Claude surfaces a small permission prompt: <em>"Allow vettasksai to run?"</em></p>
+
+            <p>If you click Allow, it runs. If you dismiss it, close it, or don't notice it, Claude marks the tool as blocked for that conversation. Every subsequent attempt to use a skill silently fails. Claude doesn't throw an error — it just answers from its own training as if your skills don't exist.</p>
+
+            <div class="two-col">
+                <div class="col-card bad">
+                    <h4>❌ Default behavior</h4>
+                    <p>Asks permission on every tool call. One dismiss = blocked for the entire conversation. No error message. Skills silently stop working.</p>
+                </div>
+                <div class="col-card good">
+                    <h4>✅ After the fix</h4>
+                    <p>All four tools permanently set to "Always allow." No prompts. No approvals. Skills work reliably every time, in every conversation.</p>
+                </div>
+            </div>
+
+            <div class="callout warning">
+                <p><strong>This is Claude Desktop only.</strong> Cursor, Windsurf, Cline, and OpenClaw don't have this permission system — your tools are always available once installed. If you're using one of those clients, skip this entirely.</p>
+            </div>
+
+            <h2>The fix: set all tools to "Always allow"</h2>
+
+            <div class="steps-box">
+                <h3>🔒 Enable permanent permissions — do this once</h3>
+
+                <ol>
+                    <li>Open Claude Desktop and click <strong>Settings</strong></li>
+                    <li>Go to <strong>Connectors</strong></li>
+                </ol>
+
+                <p>You'll see a note that connectors have moved to <strong>Customize</strong>. Click that link.</p>
+
+                <img src="https://lawtasksai.com/images/setup/step1-connectors.png"
+                     alt="Claude Desktop Settings — Connectors tab with arrow pointing to Customize link"
+                     class="step-img" />
+                <p class="img-caption">Settings → Connectors → click the "Customize" link</p>
+
+                <ol start="3">
+                    <li>In the Customize panel, look under <strong>Desktop</strong> for <strong>vettasksai</strong> and click it</li>
+                    <li>Next to <strong>Other tools</strong>, open the dropdown and select <strong>Always allow</strong></li>
+                </ol>
+
+                <img src="https://lawtasksai.com/images/setup/step2-always-allow.png"
+                     alt="Claude Desktop — VetTasksAI tool permissions set to Always Allow"
+                     class="step-img" />
+                <p class="img-caption">Set all four VetTasksAI tools to "Always allow"</p>
+
+                <p>You'll see four tools: <code>vettasksai_search</code>, <code>vettasksai_execute</code>, <code>vettasksai_balance</code>, <code>vettasksai_categories</code>. Set all four to <strong>Always allow</strong>.</p>
+
+                <ol start="5">
+                    <li>Start a <strong>new conversation</strong> — permissions take effect at conversation start, not mid-chat</li>
+                </ol>
+            </div>
+
+            <p>That's it. You'll never see a permission prompt again, and VetTasksAI will respond reliably in every conversation going forward.</p>
+
+            <h2>How to confirm it worked</h2>
+
+            <p>Open a new Claude Desktop conversation and type:</p>
+
+            <div class="code-block">Use VetTasksAI to check my balance</div>
+
+            <p>You should see your credit balance returned immediately — no prompts, no delays. If you do, permissions are working correctly.</p>
+
+            <div class="callout green">
+                <p><strong>If it still doesn't work</strong> after setting permissions and starting a new conversation: fully quit Claude Desktop (⌘Q on Mac, system tray → Quit on Windows) and reopen it. MCP servers load at startup — a simple window close doesn't reload them.</p>
+            </div>
+
+            <h2>Why this isn't obvious</h2>
+
+            <p>The permission prompt is easy to miss — it's a small in-conversation UI element, not a system dialog. And when you dismiss it, Claude doesn't tell you the tool is now blocked. It just continues the conversation using its own training data, which often produces a reasonable-sounding answer. There's no failure state that screams "your skills aren't working."</p>
+
+            <p>This is a Claude Desktop design decision, not a VetTasksAI bug. The "Always allow" setting exists precisely for installed tools you trust — which is exactly what VetTasksAI is.</p>
+
+            <h2>One more thing while you're here</h2>
+
+            <p>Even with permissions working, there's a second thing that trips up new users: Claude won't automatically reach for your skills unless you direct it to. After you fix permissions, use this prefix to guarantee your skills are invoked every time:</p>
+
+            <div class="code-block">Use VetTasksAI to…</div>
+
+            <p>The full explanation of why that prefix matters — and how to set up Claude Projects so you never have to type it again — is in the companion post below.</p>
+
+            <div class="related-box">
+                <p class="label">Related post · Getting Started</p>
+                <h3>"Use VetTasksAI to…" — The Phrase That Unlocks Everything</h3>
+                <p class="excerpt">Even with permissions fixed, Claude defaults to its own training unless you direct it. This post explains the trigger prefix, why it works, and how to make it automatic with a Claude Project.</p>
+                <a href="/blog/use-vettasksai-to-the-phrase-that-unlocks-everything.html">Read the post →</a>
+            </div>
+
+        </div>
+
+        <div class="post-cta">
+            <h2>Ready to get started?</h2>
+            <p>200+ expert frameworks. 5 free credits. No credit card required.</p>
+            <a href="/signup.html">Get started free →</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/support.html">Support</a>
+        </p>
+        <p style="margin-top:12px;">© 2026 VetTasksAI. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

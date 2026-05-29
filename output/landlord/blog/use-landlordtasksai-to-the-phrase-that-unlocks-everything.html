@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Use LandlordTasksAI to…" — The Phrase That Unlocks Everything | LandlordTasksAI</title>
+    <meta name="description" content="Installed LandlordTasksAI but Claude keeps answering from its own training? Four words fix it. Here's why the prefix works, examples to copy, and how to make it automatic.">
+    <link rel="canonical" href="https://landlordtasksai.com/blog/use-landlordtasksai-to-the-phrase-that-unlocks-everything.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/shared.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "\"Use LandlordTasksAI to\u2026\" \u2014 The Phrase That Unlocks Everything",
+        "datePublished": "2026-05-29",
+        "author": { "@type": "Organization", "name": "LandlordTasksAI" },
+        "publisher": { "@type": "Organization", "name": "LandlordTasksAI", "url": "https://landlordtasksai.com" },
+        "description": "Installed LandlordTasksAI but Claude keeps answering from its own training? Four words fix it."
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a1a2e; background: #fafbfc; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        .post-hero { padding: 48px 0 32px; background: linear-gradient(180deg, white 0%, #f3f4f6 100%); }
+        .post-hero .container { max-width: 800px; }
+        .post-series { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #D97706; margin-bottom: 12px; }
+        .post-series a { color: #D97706; text-decoration: none; }
+        .post-series a:hover { text-decoration: underline; }
+        .post-hero h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
+        .post-meta { font-size: 0.9rem; color: #6b7280; }
+
+        .post-body { padding: 48px 0 80px; }
+        .post-body .container { max-width: 800px; }
+        .post-content { font-size: 1.05rem; line-height: 1.8; color: #374151; }
+        .post-content h2 { font-size: 1.5rem; font-weight: 700; color: #1a1a2e; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e5e7eb; }
+        .post-content h3 { font-size: 1.15rem; font-weight: 600; color: #1a1a2e; margin: 28px 0 12px; }
+        .post-content p { margin-bottom: 20px; }
+        .post-content ul, .post-content ol { margin: 0 0 20px 24px; }
+        .post-content li { margin-bottom: 8px; }
+        .post-content a { color: #D97706; text-decoration: underline; }
+        .post-content a:hover { opacity: 0.8; }
+        .post-content strong { color: #1a1a2e; font-weight: 600; }
+        .post-content code { background: #f1f5f9; color: #0f172a; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Courier New', monospace; }
+
+        .callout { border-left: 4px solid #D97706; background: #f8faff; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 28px 0; }
+        .callout.warning { border-color: #f59e0b; background: #fffbeb; }
+        .callout.green { border-color: #16a34a; background: #f0fdf4; }
+        .callout.info { border-color: #0891b2; background: #f0f9ff; }
+        .callout p { margin: 0; font-size: 0.95rem; color: #374151; }
+        .callout.warning p { color: #78350f; }
+        .callout.green p { color: #14532d; }
+        .callout.info p { color: #0c4a6e; }
+        .callout strong { display: block; margin-bottom: 4px; color: inherit; }
+
+        .code-block { background: #0f172a; border-radius: 10px; padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.92rem; color: #7dd3fc; line-height: 1.8; overflow-x: auto; }
+
+        .example-grid { display: grid; gap: 10px; margin: 20px 0; }
+        .example-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 0.9rem; color: #1e293b; }
+        .example-item .prefix { color: #D97706; font-weight: 700; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .col-card { border-radius: 10px; padding: 20px; }
+        .col-card h4 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+        .col-card.bad { background: #fef2f2; border: 1px solid #fecaca; }
+        .col-card.bad h4 { color: #dc2626; }
+        .col-card.bad p { color: #7f1d1d; font-size: 0.9rem; margin: 0; }
+        .col-card.good { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .col-card.good h4 { color: #16a34a; }
+        .col-card.good p { color: #14532d; font-size: 0.9rem; margin: 0; }
+
+        .project-box { background: #faf5ff; border: 2px solid #d8b4fe; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+        .project-box h3 { color: #6b21a8; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+        .project-box p { color: #581c87; font-size: 0.92rem; margin-bottom: 10px; }
+        .project-box .code-block { background: #1e1b4b; color: #c4b5fd; margin: 10px 0 0; }
+
+        .related-box { background: #f0f9ff; border: 2px solid #bae6fd; border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+        .related-box .label { color: #0369a1; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+        .related-box h3 { color: #0c4a6e; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .related-box .excerpt { font-size: 0.92rem; color: #075985; margin-bottom: 14px; }
+        .related-box a { display: inline-block; background: #0891b2; color: white; font-weight: 700; font-size: 0.9rem; padding: 10px 20px; border-radius: 8px; text-decoration: none; }
+
+        .post-cta { border-radius: 12px; padding: 36px; margin: 48px 0 0; text-align: center; color: white; background: #D97706; }
+        .post-cta h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+        .post-cta p { opacity: 0.9; margin-bottom: 24px; }
+        .post-cta a { display: inline-block; background: white; color: #D97706; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 1rem; }
+
+        footer { background: #1a1a2e; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+        footer a { color: #9ca3af; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 640px) {
+            .post-hero h1 { font-size: 1.6rem; }
+            .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="site-header"></div>
+<script src="/header.js"></script>
+
+<div class="post-hero">
+    <div class="container">
+        <p class="post-series"><a href="/blog/">LandlordTasksAI Blog</a> &nbsp;›&nbsp; Getting Started</p>
+        <h1>"Use LandlordTasksAI to…" — The Phrase That Unlocks Everything</h1>
+        <p class="post-meta">May 29, 2026 &nbsp;·&nbsp; 5 min read &nbsp;·&nbsp; LandlordTasksAI Team</p>
+    </div>
+</div>
+
+<div class="post-body">
+    <div class="container">
+        <div class="post-content">
+
+            <p>You installed LandlordTasksAI. You opened Claude Desktop. You typed something like <em>"Write a lease renewal offer"</em> — and Claude gave you a decent but generic answer. No expert framework. No structured output. No sign that LandlordTasksAI was involved at all.</p>
+
+            <p>This is the most common thing new users experience, and it has a simple explanation: <strong>Claude has its own built-in training, and it will answer from that training by default.</strong> It doesn't automatically reach for your installed skills unless you tell it to.</p>
+
+            <p>The fix is four words.</p>
+
+            <div class="code-block">Use LandlordTasksAI to…</div>
+
+            <p>That prefix is the trigger. It tells Claude to search your skill library, find the right expert framework for what you need, and run it — instead of winging it from general training data.</p>
+
+            <p>Here's everything you need to know about why it works, how to use it, and how to make it automatic so you never have to think about it again.</p>
+
+            <h2>Why Claude doesn't use your skills automatically</h2>
+
+            <p>Claude Desktop is a general-purpose AI assistant. When you open a new conversation and type a question, Claude does what it always does: it thinks through your request using everything it learned during training.</p>
+
+            <p>LandlordTasksAI installs as an MCP (Model Context Protocol) tool — a set of specialized capabilities that Claude can call on demand. The key word is <em>on demand</em>. Claude doesn't scan your installed tools before every response. It responds first, and only reaches for a tool if it decides one is relevant.</p>
+
+            <p>The problem is that <em>"Write a lease renewal offer"</em> sounds like a general task — and Claude is very good at general tasks. It won't automatically think "I should check if there's a specialized framework for this." It'll just answer.</p>
+
+            <p>When you start with <strong>"Use LandlordTasksAI to…"</strong>, you're explicitly directing Claude to invoke your skill library first. It searches for the right framework, confirms its selection, and then runs the full expert workflow — structured, consistent, built specifically for Landlords, property managers, and real estate investors.</p>
+
+            <div class="two-col">
+                <div class="col-card bad">
+                    <h4>❌ Without the prefix</h4>
+                    <p>"Write a lease renewal offer"</p>
+                </div>
+                <div class="col-card good">
+                    <h4>✅ With the prefix</h4>
+                    <p>"Use LandlordTasksAI to Write a lease renewal offer"</p>
+                </div>
+            </div>
+
+            <p>Same intent. Completely different result. The first gets Claude's best general effort. The second invokes your 200+-skill expert library and runs the framework designed specifically for that task.</p>
+
+            <h2>Examples you can use right now</h2>
+
+            <p>You don't need to know which skill to use — LandlordTasksAI finds the right one automatically. Just describe what you need:</p>
+
+            <div class="example-grid">
+                <div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> Write a lease renewal offer</div><div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> Draft a rent increase notice</div><div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> Prepare a move-out inspection report</div><div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> Create a maintenance request acknowledgment</div><div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> Write a lease violation notice</div>
+                <div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> search for tasks I can run today</div>
+                <div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> show me what categories are available</div>
+                <div class="example-item"><span class="prefix">Use LandlordTasksAI to</span> check my balance</div>
+            </div>
+
+            <p>That last one is useful when you're exploring. LandlordTasksAI will return a full list of skill categories so you can see the full range of what's available across all 200+ frameworks.</p>
+
+            <div class="callout">
+                <p><strong>You never need to know the task name.</strong> Describe what you're working on in plain language. LandlordTasksAI searches the library, finds the closest match, and confirms before running. You stay in control of every step.</p>
+            </div>
+
+            <h2>One prerequisite: enable permissions in Claude Desktop</h2>
+
+            <p>Before the prefix works reliably, there's a one-time setup step in Claude Desktop that most users skip. By default, Claude asks for approval every time a tool runs — and if that prompt is dismissed even once, your skills stop working for the rest of the conversation. No error. Claude just answers from its own training as if LandlordTasksAI isn't there.</p>
+
+            <p>The fix is 30 seconds: go to <strong>Settings → Connectors → Customize → landlordtasksai</strong> and set all four tools to <strong>Always allow</strong>. Do it once and it's permanent.</p>
+
+            <div class="callout info">
+                <p><strong>Full walkthrough with screenshots:</strong> <a href="/blog/landlordtasksai-permissions-always-allow.html">Why LandlordTasksAI Isn't Responding — And the 30-Second Permissions Fix →</a></p>
+                <p style="margin-top:8px;">ℹ Cursor, Windsurf, and Cline users don't need this step — skip ahead.</p>
+            </div>
+
+            <h2>Make it automatic with a Claude Project</h2>
+
+            <p>If typing the prefix every time feels like overhead, Claude Desktop's Projects feature eliminates it entirely. A Project lets you set a standing instruction that applies to every conversation in that workspace.</p>
+
+            <div class="project-box">
+                <h3>💡 Power user move: the LandlordTasksAI Project</h3>
+                <p>Create a Project in Claude Desktop (e.g., "My Workspace") and add this as a custom instruction:</p>
+                <div class="code-block">"Always use LandlordTasksAI tools to answer my questions. Search for the right skill before responding."</div>
+                <p style="margin-top:12px;">Every conversation you start inside that Project will automatically invoke LandlordTasksAI — no prefix needed, ever. Just describe what you need and Claude handles the rest.</p>
+            </div>
+
+            <h2>A few more things worth knowing</h2>
+
+            <h3>Each task uses 1 credit</h3>
+            <p>Searching the library is free. Running a task costs 1 credit. Check your balance anytime:</p>
+            <div class="code-block">Use LandlordTasksAI to check my balance</div>
+            <p>Credits never expire — they're there when you need them.</p>
+
+            <h3>You can browse before you run</h3>
+            <p>Not sure what's in the library? Ask:</p>
+            <div class="code-block">Use LandlordTasksAI to show me all available categories</div>
+
+            <div class="callout green">
+                <p><strong>The short version:</strong> Install LandlordTasksAI → enable "Always allow" in Claude Desktop → start every prompt with "Use LandlordTasksAI to…" → get expert-level frameworks instead of generic AI answers. That's the whole system.</p>
+            </div>
+
+            <p>If you haven't set up LandlordTasksAI yet, the <a href="/getting-started.html">Getting Started guide</a> walks through installation in under five minutes. Or <a href="/task-library.html">browse the full task library</a> to see what's available before you sign up.</p>
+
+        </div>
+
+        <div class="post-cta">
+            <h2>Ready to try it?</h2>
+            <p>200+ expert frameworks. 5 free credits to start. No credit card required.</p>
+            <a href="/signup.html">Get started free →</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/support.html">Support</a>
+        </p>
+        <p style="margin-top:12px;">© 2026 LandlordTasksAI. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
