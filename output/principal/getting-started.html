@@ -331,14 +331,29 @@
 
         <div class="step">
           <div class="step-header"><div class="step-num">5</div><h2>Start a conversation with PrincipalTasksAI</h2></div>
-          <p>Open a <strong>new conversation</strong> in Claude Desktop and type:</p>
-          <div class="code-block"><span class="cmd">"Use PrincipalTasksAI to help me with Write a parent communication letter"</span></div>
+
+          <!-- User trigger call-out -->
+          <div style="background:#fef3c7;border:2px solid #f59e0b;border-radius:10px;padding:18px 22px;margin-bottom:20px;">
+            <p style="font-weight:800;color:#92400e;font-size:1rem;margin:0 0 6px;">🎯 The user trigger — one rule to remember</p>
+            <p style="color:#78350f;font-size:0.9rem;margin:0 0 12px;">Start every prompt with <strong>"Use PrincipalTasksAI to…"</strong> and Claude will always invoke your skills — every time, without fail.</p>
+            <div class="code-block" style="font-size:0.88rem;"><span class="cmd">Use PrincipalTasksAI to Write a parent communication letter</span></div>
+            <p style="font-size:0.82rem;color:#92400e;margin:10px 0 0;">That prefix is your trigger. Without it, Claude may answer from its own training instead of using your PrincipalTasksAI skills.</p>
+          </div>
+
+          <p>More examples — paste any of these into a new conversation:</p>
+          <ul style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:2;margin-bottom:16px;">
+            <li><em>"Use PrincipalTasksAI to Write a parent communication letter"</em></li>
+            <li><em>"Use PrincipalTasksAI to search for tasks I can run today"</em></li>
+            <li><em>"Use PrincipalTasksAI to show me what categories are available"</em></li>
+          </ul>
+
           <p>PrincipalTasksAI will search its skill library and present options. Pick one, and Claude will run the full expert framework (1 credit per use).</p>
+
           <div class="info-box" style="margin-top:16px;">
-            <h3>💡 Pro tip: Set up a Project for automatic activation</h3>
+            <h3>💡 Power user tip: skip the trigger entirely with a Project</h3>
             <p>Create a <strong>Project</strong> in Claude Desktop (e.g., "My Practice" or "My Office") and add this custom instruction:</p>
             <div class="code-block" style="background:#0c4a6e;border-color:#0c4a6e;text-align:left;"><span class="cmd">"Always use PrincipalTasksAI tools to answer my questions. Search for the right skill before responding."</span></div>
-            <p>Every conversation in that project will automatically use PrincipalTasksAI — no need to mention it each time.</p>
+            <p>Every conversation in that project will automatically use PrincipalTasksAI — no trigger needed, ever.</p>
           </div>
         </div>
 
