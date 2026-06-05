@@ -713,41 +713,43 @@
 
         /* ─── Pay-as-you-go explainer ─── */
         .payg-explainer {
-            max-width: 700px;
+            max-width: 900px;
             margin: 48px auto 0;
             background: var(--background);
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            padding: 28px 32px;
+            padding: 36px 40px;
         }
 
         .payg-explainer h3 {
             font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
-            font-size: 1.05rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #111827;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .payg-explainer ul {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
 
         .payg-explainer li {
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             color: #374151;
             display: flex;
-            gap: 10px;
+            gap: 12px;
             align-items: flex-start;
+            line-height: 1.5;
         }
 
         .payg-explainer li::before {
             content: "✓";
             color: var(--accent);
             font-weight: 700;
+            font-size: 1.1rem;
             flex-shrink: 0;
         }
 
