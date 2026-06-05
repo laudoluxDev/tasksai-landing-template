@@ -447,7 +447,7 @@ def generate_page(template: str, vertical: dict) -> str:
     _occ_words = _occ_first.split()
     if len(_occ_words) > 3:
         _occ_first = ' '.join(_occ_words[:3])
-    hero_h1 = vertical.get("hero_h1") or vertical.get("claude_your") or f"Stop guessing prompts. Get your {_occ_first} paperwork done in minutes."
+    hero_h1 = vertical.get("hero_h1") or vertical.get("claude_your") or f"Your {_occ_first} paperwork. Done in minutes."
     # If hero_h1 ends with a complete sentence (period), use it as-is.
     # Otherwise append the brand tagline span.
     hero_h1_stripped = hero_h1.rstrip(".")
@@ -553,8 +553,8 @@ def generate_page(template: str, vertical: dict) -> str:
 
     hero_subhead_custom = vertical.get("hero_subhead", "").strip()
     hero_subhead_or_default = hero_subhead_custom if hero_subhead_custom else (
-        f"A generic AI is a Swiss Army knife \u2014 useful for everything, optimized for nothing. "
-        f"{product_name} is {hero_count} purpose-built tasks, each engineered for exactly the work <em>you</em> do."
+        f"{hero_count} ready-to-use AI templates for {audience_short_early.lower()}. "
+        f"Get professional output inside Claude Desktop (free app) \u2014 no prompt engineering, no learning curve. Just type what you need."
     )
 
     hero_fine_print_custom = vertical.get("hero_fine_print", "").strip()
