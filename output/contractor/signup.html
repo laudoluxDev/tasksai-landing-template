@@ -191,28 +191,29 @@
         .platform-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 10px;
         }
         .platform-option {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 9px 12px;
+            gap: 10px;
+            padding: 12px 14px;
             border: 1.5px solid #d1d5db;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             transition: border-color 0.15s, background 0.15s;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             color: #374151;
             font-weight: 500;
             user-select: none;
         }
         .platform-option:hover { border-color: var(--accent); background: #f0f9ff; }
         .platform-option input[type="checkbox"] {
-            width: 15px; height: 15px; margin: 0;
+            width: 18px; height: 18px; margin: 0;
             accent-color: var(--accent); cursor: pointer; flex-shrink: 0;
         }
         .platform-option.checked { border-color: var(--accent); background: #f0f9ff; }
+        .platform-option .platform-icon { font-size: 1.1rem; flex-shrink: 0; }
         .platform-option .incompatible { color: #9ca3af; font-weight: 400; }
         .platform-warning {
             margin-top: 10px;
@@ -390,50 +391,51 @@
                     <div class="platform-grid">
                         <label class="platform-option" id="plat-claude_desktop">
                             <input type="checkbox" name="platforms" value="claude_desktop" onchange="updatePlatformUI()">
+                            <span class="platform-icon">🤖</span>
                             Claude Desktop
                         </label>
                         <label class="platform-option" id="plat-claude_code">
                             <input type="checkbox" name="platforms" value="claude_code" onchange="updatePlatformUI()">
+                            <span class="platform-icon">⌨️</span>
                             Claude Code
                         </label>
                         <label class="platform-option" id="plat-openclaw">
                             <input type="checkbox" name="platforms" value="openclaw" onchange="updatePlatformUI()">
+                            <span class="platform-icon">🦞</span>
                             OpenClaw
                         </label>
                         <label class="platform-option" id="plat-cursor">
                             <input type="checkbox" name="platforms" value="cursor" onchange="updatePlatformUI()">
+                            <span class="platform-icon">✦</span>
                             Cursor
                         </label>
                         <label class="platform-option" id="plat-windsurf">
                             <input type="checkbox" name="platforms" value="windsurf" onchange="updatePlatformUI()">
+                            <span class="platform-icon">🏄</span>
                             Windsurf
                         </label>
                         <label class="platform-option" id="plat-cline">
                             <input type="checkbox" name="platforms" value="cline" onchange="updatePlatformUI()">
+                            <span class="platform-icon">💻</span>
                             Cline (VS Code)
                         </label>
                         <label class="platform-option" id="plat-other">
                             <input type="checkbox" name="platforms" value="other" onchange="updatePlatformUI()">
+                            <span class="platform-icon">❓</span>
                             Other / Not sure
                         </label>
                     </div>
                     <!-- Warning shown if user selects an incompatible platform -->
                     <div class="platform-warning" id="claudeWebWarning">
-                        ⚠️ <strong>Heads up:</strong> <strong>claude.ai (the website)</strong> does not support skills — you need the <a href="https://claude.ai/download" target="_blank">Claude Desktop app</a> (free download). Not the same thing!
+                        ⚠️ <strong>Heads up:</strong> <strong>claude.ai (the website)</strong> does not support plugins — you need the <a href="https://claude.ai/download" target="_blank">Claude Desktop app</a> (free download). Not the same thing!
                     </div>
                 </div>
-
-                <div class="consent-row">
-                        <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent" class="consent-text">
-                            I agree to the <a href="/terms.html" target="_blank">Terms of Service</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a>
-                        </label>
-                    </div>
 
                     <button type="submit" class="submit-btn" id="submitBtn">
                         Get my free credits →
                     </button>
                     <p style="font-size:0.82rem;color:#9ca3af;text-align:center;margin-top:12px;">We'll email your license key instantly. You'll be up and running in 5 minutes.</p>
+                    <p style="font-size:0.78rem;color:#9ca3af;text-align:center;margin-top:8px;">By signing up, you agree to our <a href="/terms.html" target="_blank" style="color:#9ca3af;text-decoration:underline;">Terms of Service</a> and <a href="/privacy.html" target="_blank" style="color:#9ca3af;text-decoration:underline;">Privacy Policy</a>.</p>
                 </form>
             </div>
 
@@ -495,16 +497,11 @@
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
-            const consent = document.getElementById('consent').checked;
 
             if (!firstName) { fieldError('firstName', 'firstNameError'); valid = false; }
             if (!lastName) { fieldError('lastName', 'lastNameError'); valid = false; }
             if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                 fieldError('email', 'emailError'); valid = false;
-            }
-            if (!consent) {
-                showError('Please agree to the Terms of Service and Privacy Policy to continue.');
-                valid = false;
             }
 
             // Require at least one platform selected

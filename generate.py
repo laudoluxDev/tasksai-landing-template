@@ -228,6 +228,31 @@ def build_hero_demo_html(demo_tasks: list, product_name: str, accent_color: str)
 """
 
 
+def build_social_proof_html(vertical: dict) -> str:
+    """Build a social proof banner. Returns empty string if show_social_proof is False."""
+    if not vertical.get("show_social_proof", False):
+        return ""
+    count = vertical.get("social_proof_count", 0)
+    if count < 1:
+        return ""
+    product_name = vertical.get("name", vertical.get("product_id", ""))
+    occupation = vertical.get("occupation", vertical.get("audience", "professionals"))
+    # Use a short form of occupation for the banner
+    occ_short = occupation.split(",")[0].strip()
+    return f"""<section class="social-proof-section">
+    <div class="container">
+        <p>Join {count}+ {occ_short} already using {product_name}</p>
+    </div>
+</section>"""
+
+
+def build_trust_bar_html(vertical: dict) -> str:
+    """Build a trust/privacy bar. Generic version — the template now has it hardcoded."""
+    # The template.html already has the trust bar hardcoded below the hero.
+    # This function exists for future per-vertical customization but returns empty.
+    return ""
+
+
 def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> str:
     """Render compliance/trust badges section HTML, or empty string if no items."""
     if not items:
@@ -259,27 +284,14 @@ def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> s
 
 
 def build_pricing_html(tiers: list, hero_count: str, show_default_tryit: bool = True) -> str:
-    """Render pricing cards HTML. If tiers is empty, return the default pricing-grid HTML."""
+    """Render pricing cards HTML. If tiers is empty, return the default 3-tier pricing-grid HTML."""
     if not tiers:
         return f"""<div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Try It</h3>
-                    <div class="price">$5</div>
-                    <div class="credits">5 credits</div>
-                    <p class="per-credit">$1.00 per task</p>
-                    <ul>
-                        <li>\u2713 All {hero_count} tasks</li>
-                        <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Perfect for a first look</li>
-                    </ul>
-                    <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
-                </div>
-
-                <div class="pricing-card">
                     <h3>Starter</h3>
                     <div class="price">$29</div>
-                    <div class="credits">30 credits</div>
-                    <p class="per-credit">$0.97 per task</p>
+                    <div class="credits">50 credits</div>
+                    <p class="per-credit">$0.58 per task</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
@@ -292,53 +304,27 @@ def build_pricing_html(tiers: list, hero_count: str, show_default_tryit: bool = 
                     <div class="badge">Most Popular</div>
                     <h3>Professional</h3>
                     <div class="price">$79</div>
-                    <div class="credits">100 credits</div>
-                    <p class="per-credit">$0.79 per task &middot; 21% off</p>
+                    <div class="credits">150 credits</div>
+                    <p class="per-credit">$0.53 per task</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
                         <li>\u2713 Best for regular use</li>
                     </ul>
-                    <button onclick="checkout('professional')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('professional')" class="buy-btn">Best Value</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Power User</h3>
-                    <div class="price">$149</div>
-                    <div class="credits">200 credits</div>
-                    <p class="per-credit">$0.75 per task &middot; 25% off</p>
+                    <h3>Office</h3>
+                    <div class="price">$199</div>
+                    <div class="credits">500 credits</div>
+                    <p class="per-credit">$0.40 per task</p>
                     <ul>
                         <li>\u2713 All {hero_count} tasks</li>
                         <li>\u2713 Credits never expire</li>
                         <li>\u2713 For high-volume workflows</li>
                     </ul>
-                    <button onclick="checkout('poweruser')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Studio</h3>
-                    <div class="price">$299</div>
-                    <div class="credits">500 credits</div>
-                    <p class="per-credit">$0.60 per task &middot; 40% off</p>
-                    <ul>
-                        <li>\u2713 All {hero_count} tasks</li>
-                        <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Ideal for teams and firms</li>
-                    </ul>
-                    <button onclick="checkout('studio')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Unlimited</h3>
-                    <div class="price">$499</div>
-                    <div class="credits">1,000 credits</div>
-                    <p class="per-credit">$0.50 per task &middot; 50% off</p>
-                    <ul>
-                        <li>\u2713 All {hero_count} tasks</li>
-                        <li>\u2713 Credits never expire</li>
-                        <li>\u2713 Maximum value</li>
-                    </ul>
-                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('office')" class="buy-btn">Get Credits</button>
                 </div>
             </div>"""
 
@@ -449,7 +435,19 @@ def generate_page(template: str, vertical: dict) -> str:
     accent = vertical.get("accent_color", "#6366F1")
     background = vertical.get("background_color", "#FAFAFA")
     tasks = vertical.get("example_tasks") or vertical.get("sample_tasks", [])
-    hero_h1 = vertical.get("hero_h1") or vertical.get("claude_your") or "Stop prompt engineering. Start getting work done"
+    audience_short_early = target_audience_short(target_audience)
+    # Build a clean occupation noun for the default headline
+    _occ_raw = vertical.get("occupation", audience_short_early).lower()
+    # Take just the first occupation term (before 'and' or comma)
+    _occ_first = _occ_raw.split(',')[0].split(' and ')[0].strip()
+    # Depluralize common patterns for headline readability
+    if _occ_first.endswith('s') and not _occ_first.endswith('ss'):
+        _occ_first = _occ_first.rstrip('s')
+    # Trim overly long occupation phrases
+    _occ_words = _occ_first.split()
+    if len(_occ_words) > 3:
+        _occ_first = ' '.join(_occ_words[:3])
+    hero_h1 = vertical.get("hero_h1") or vertical.get("claude_your") or f"Stop guessing prompts. Get your {_occ_first} paperwork done in minutes."
     # If hero_h1 ends with a complete sentence (period), use it as-is.
     # Otherwise append the brand tagline span.
     hero_h1_stripped = hero_h1.rstrip(".")
@@ -530,7 +528,13 @@ def generate_page(template: str, vertical: dict) -> str:
     pricing_cards = build_pricing_html(pricing_tiers, hero_count, show_tryit)
 
     demo_tasks = vertical.get("demo_tasks", [])
-    hero_demo_html = build_hero_demo_html(demo_tasks, product_name, accent)
+    # hero_demo_html kept for backward compat but no longer injected into pages
+    hero_demo_html = ""  # Removed from template — demo animation replaced by YouTube/before-after
+    _hero_demo_for_compat = build_hero_demo_html(demo_tasks, product_name, accent)  # kept but not used
+
+    # Social proof and trust bar
+    social_proof_html = build_social_proof_html(vertical)
+    trust_bar_html = build_trust_bar_html(vertical)
 
     youtube_video_id = vertical.get("youtube_video_id", "")
     youtube_video_section = build_youtube_section(youtube_video_id, product_name)
@@ -639,6 +643,8 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{PRICING_CARDS}}": pricing_cards,
         "{{HERO_DEMO_HTML}}": hero_demo_html,
         "{{YOUTUBE_VIDEO_SECTION}}": youtube_video_section,
+        "{{SOCIAL_PROOF_HTML}}": social_proof_html,
+        "{{TRUST_BAR_HTML}}": trust_bar_html,
     }
 
     for placeholder, value in replacements.items():
@@ -646,23 +652,25 @@ def generate_page(template: str, vertical: dict) -> str:
 
     # Waitlist mode: replace hero CTAs and pricing section for verticals without an installer
     if not vertical.get("has_installer", False):
-        # Replace hero CTA buttons
+        # Replace hero CTA button
         page = page.replace(
-            '<a href="/signup" class="cta-button">Try Free — 5 Credits, No Card</a>\n                <a href="#pricing" class="cta-button secondary">See Pricing</a>',
-            '<a href="/signup" class="cta-button">Join the Waitlist — Free</a>'
+            '<a href="/signup" class="cta-button">Get My 5 Free Credits \u2192</a>',
+            '<a href="/signup" class="cta-button">Join the Waitlist \u2014 Free</a>'
         )
         # Replace pricing section with waitlist CTA
         import re as _re
         page = _re.sub(
-            r'<!-- ─── Pricing ─── -->.*?</section>',
+            r'<!-- ─── Pricing ─── -->.*?<!-- ─── Final CTA ─── -->',
             '''<!-- Waitlist CTA (replaces pricing for unreleased verticals) -->
     <section class="pricing" id="pricing" style="background:#f8fafc;">
         <div class="container" style="text-align:center;padding:60px 24px;">
             <h2 class="section-title" style="margin-bottom:16px;">''' + product_name + ''' is coming soon</h2>
-            <p style="color:#6b7280;font-size:1rem;max-width:480px;margin:0 auto 32px;">We\'re putting the finishing touches on ''' + product_name + '''. Join the waitlist and be first to know when it launches — you\'ll get early access and a free trial.</p>
+            <p style="color:#6b7280;font-size:1rem;max-width:480px;margin:0 auto 32px;">We\'re putting the finishing touches on ''' + product_name + '''. Join the waitlist and be first to know when it launches \u2014 you\'ll get early access and a free trial.</p>
             <a href="/signup" style="display:inline-block;padding:14px 32px;background:var(--accent);color:white;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;">Join the Waitlist &rarr;</a>
         </div>
-    </section>''',
+    </section>
+
+    <!-- ─── Final CTA ─── -->''',
             page,
             flags=_re.DOTALL
         )

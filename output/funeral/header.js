@@ -128,9 +128,7 @@
     if (p === "" || p === "/" || p.endsWith("/index.html")) return "/";
     if (p.indexOf("task-library") > -1) return "/task-library.html";
     if (p.indexOf("getting-started") > -1) return "/getting-started.html";
-    if (p.indexOf("verified_safe") > -1) return "/verified_safe.html";
     if (p.indexOf("support") > -1) return "/support.html";
-    if (p.indexOf("download") > -1) return "/download.html";
     if (p.indexOf("signup") > -1) return "/signup.html";
     return "";
   }
@@ -141,9 +139,7 @@
     { href: "/",                    label: "Home" },
     { href: "/task-library.html",   label: "Task Library" },
     { href: "/getting-started.html",label: "Getting Started" },
-    { href: "/verified_safe.html",  label: "🛡️ Verified Safe" },
     { href: "/support.html",        label: "Support" },
-    { href: "/download.html",       label: "My Account" },
   ];
 
   var navHTML = navItems.map(function (item) {
@@ -157,7 +153,7 @@
     '    <a href="/" class="sh-logo">' + LOGO_HTML + '</a>',
     '    <nav class="sh-nav" id="shNav">',
     '      ' + navHTML,
-    '      <a href="/buy-credits.html" class="sh-cta">Buy Credits</a>',
+    '      <a href="/signup" class="sh-cta">Get Free Credits</a>',
     '    </nav>',
     '    <button class="sh-hamburger" id="shHamburger" aria-label="Menu" aria-expanded="false">',
     '      <span></span><span></span><span></span>',

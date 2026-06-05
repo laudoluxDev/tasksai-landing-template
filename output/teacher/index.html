@@ -19,7 +19,7 @@
         "@type": "SoftwareApplication",
         "name": "TeacherTasksAI",
         "applicationCategory": "BusinessApplication",
-        "description": "AI-powered task automation for K-12 teachers, special education staff, and school counselors. 167+ specialized tasks. Privacy-focused. Works with OpenClaw, Claude Desktop, and any MCP-compatible AI assistant.",
+        "description": "AI-powered task automation for K-12 teachers, special education staff, and school counselors. 167+ specialized tasks. Privacy-focused. Works with Claude Desktop and any professional AI desktop app.",
         "url": "https://teachertasksai.com",
         "operatingSystem": "Windows, macOS, Linux",
         "offers": [
@@ -36,6 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -51,7 +52,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: var(--primary);
+            color: #374151;
             background: var(--background);
         }
 
@@ -153,7 +154,7 @@
 
         /* ─── Hero ─── */
         .hero {
-            padding: 90px 0 80px;
+            padding: 100px 0 90px;
             text-align: center;
             background: linear-gradient(180deg, white 0%, var(--background) 100%);
         }
@@ -172,19 +173,20 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
+            font-size: 3.2rem;
             font-weight: 700;
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 20px;
             letter-spacing: -0.02em;
-            color: var(--primary);
+            color: #111827;
         }
 
         .hero h1 span { color: var(--accent); }
 
         .hero .subtitle {
             font-size: 1.2rem;
-            color: #4b5563;
+            color: #374151;
             margin-bottom: 40px;
             max-width: 640px;
             margin-left: auto;
@@ -217,17 +219,6 @@
             transform: translateY(-2px);
         }
 
-        .cta-button.secondary {
-            background: white;
-            color: var(--accent);
-            border: 2px solid var(--accent);
-            box-shadow: none;
-        }
-
-        .cta-button.secondary:hover {
-            background: var(--primary-light);
-        }
-
         .hero-fine-print {
             font-size: 0.82rem;
             color: #9ca3af;
@@ -235,197 +226,28 @@
             letter-spacing: 0.01em;
         }
 
-        /* ─── Hero Demo Animation ─── */
-        .hero-demo {
-            margin-top: 52px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
+        /* ─── Trust Bar ─── */
+        .trust-bar {
+            background: color-mix(in srgb, var(--accent) 7%, white);
+            border-top: 1px solid color-mix(in srgb, var(--accent) 20%, #e5e7eb);
+            border-bottom: 1px solid color-mix(in srgb, var(--accent) 20%, #e5e7eb);
+            padding: 20px 0;
+            text-align: center;
         }
 
-        .demo-card {
-            background: #0f172a;
-            border-radius: 12px;
-            width: 540px;
-            min-width: 540px;
-            max-width: 540px;
-            box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
-            overflow: hidden;
-            font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+        .trust-bar p {
+            font-size: 0.95rem;
+            color: #374151;
+            font-weight: 500;
         }
 
-        .demo-card-header {
-            background: #1e293b;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid #334155;
-        }
-
-        .demo-dots {
-            display: flex;
-            gap: 6px;
-        }
-        .demo-dots span {
-            width: 12px; height: 12px;
-            border-radius: 50%;
-            display: block;
-        }
-        .demo-dots span:nth-child(1) { background: #ef4444; }
-        .demo-dots span:nth-child(2) { background: #f59e0b; }
-        .demo-dots span:nth-child(3) { background: #22c55e; }
-
-        .demo-card-title {
-            font-size: 0.78rem;
-            color: #94a3b8;
-            font-family: inherit;
-            letter-spacing: 0.02em;
-        }
-
-        .demo-card-body {
-            padding: 24px 22px 22px;
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .demo-slides { position: relative; }
-
-        .demo-slide {
-            display: none;
-            flex-direction: column;
-            gap: 14px;
-        }
-        .demo-slide.active { display: flex; }
-
-        .demo-prompt-row {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-            color: #e2e8f0;
-            font-size: 0.92rem;
-            line-height: 1.5;
-        }
-        .demo-caret { color: var(--accent); font-weight: 700; flex-shrink: 0; }
-        .demo-prompt-text { flex: 1; }
-        .demo-cursor {
+        .trust-bar p strong {
             color: var(--accent);
-            animation: blink 0.9s step-end infinite;
-        }
-        .demo-slide.phase-skill .demo-cursor,
-        .demo-slide.phase-output .demo-cursor { display: none; }
-
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
-        .demo-step {
-            display: none;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.83rem;
-            line-height: 1.5;
-            padding: 8px 12px;
-            border-radius: 6px;
-            animation: fadeSlideIn 0.35s ease;
-        }
-        @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to   { opacity: 1; transform: translateY(0); }
         }
 
-        .step-skill  { background: #1e293b; color: #94a3b8; }
-        .step-skill strong { color: #e2e8f0; font-weight: 600; }
-        .demo-product-name { color: var(--accent); font-weight: 600; }
-        .step-output {
-            background: #052e16;
-            color: #86efac;
-            flex-direction: column;
-            gap: 8px;
-            align-items: stretch;
-        }
-        .demo-output-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .demo-output-header .demo-check { color: #22c55e; font-weight: 700; flex-shrink: 0; }
-        .demo-output-detail {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding-left: 4px;
-        }
-        .demo-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-        .demo-chip {
-            background: #0f4c2a;
-            color: #4ade80;
-            font-size: 0.72rem;
-            padding: 2px 8px;
-            border-radius: 20px;
-            border: 1px solid #166534;
-            font-family: inherit;
-        }
-        .demo-chip-more {
-            color: #86efac;
-            background: transparent;
-            border-color: #166534;
-        }
-        .demo-filename {
-            font-size: 0.75rem;
-            color: #6ee7b7;
-            letter-spacing: 0.01em;
-        }
-        .demo-preview {
-            font-size: 0.75rem;
-            color: #86efac;
-            font-style: italic;
-            line-height: 1.5;
-            opacity: 0.85;
-        }
-
-        .demo-slide.phase-skill  .step-skill  { display: flex; }
-        .demo-slide.phase-output .step-skill  { display: flex; }
-        .demo-slide.phase-output .step-output { display: flex; }
-
-        .demo-spinner {
-            width: 13px; height: 13px;
-            border: 2px solid #334155;
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            flex-shrink: 0;
-            animation: spin 0.7s linear infinite;
-        }
-        .demo-slide.phase-output .demo-spinner {
-            border-top-color: #22c55e;
-            animation: none;
-            border-color: #22c55e;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        .demo-indicators {
-            display: flex;
-            gap: 8px;
-        }
-        .demo-dot {
-            width: 8px; height: 8px;
-            border-radius: 50%;
-            background: #cbd5e1;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .demo-dot.active {
-            background: var(--accent);
-            transform: scale(1.3);
-        }
-
-        /* ─── Example Tasks Band ─── */
         /* ── YouTube Video Section ── */
         .video-section {
-            padding: 80px 0 90px;
+            padding: 100px 0;
             background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
             text-align: center;
             overflow: hidden;
@@ -479,66 +301,14 @@
             display: block;
         }
 
-        .tasks-band {
-            background: var(--accent);
-            padding: 28px 0;
-            overflow: hidden;
-        }
-
-        .tasks-band-label {
-            text-align: center;
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 20px;
-        }
-
-        .tasks-scroll {
-            display: flex;
-            gap: 0;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0 24px;
-            row-gap: 10px;
-        }
-
-        .task-chip {
-            color: rgba(255,255,255,0.85);
-            font-size: 0.9rem;
-            font-weight: 700;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 0 18px;
-            border-right: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .task-chip:last-child {
-            border-right: none;
-        }
-
-        .task-chip::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 0.85rem;
-        }
-
-        .task-chip.accent {
-            color: white;
-            font-weight: 700;
-        }
-
         /* ─── Section Common ─── */
         .section-title {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
             font-size: 2rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 16px;
-            color: var(--primary);
+            color: #111827;
         }
 
         .section-subtitle {
@@ -550,16 +320,90 @@
             line-height: 1.7;
         }
 
+        /* ─── How It Works ─── */
+        .how-it-works {
+            padding: 100px 0;
+            background: var(--background);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 32px 24px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step-time {
+            display: inline-block;
+            background: color-mix(in srgb, var(--accent) 12%, white);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .step h3 {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .step p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .step p a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         /* ─── Features ─── */
         .features {
-            padding: 80px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 28px;
+        }
+
+        @media (max-width: 640px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .feature-card {
@@ -650,7 +494,6 @@
             margin-top: 2px;
         }
 
-
         .task-modal-loading {
             text-align: center;
             padding: 40px;
@@ -670,10 +513,11 @@
         }
 
         .feature-card h3 {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 10px;
-            color: var(--primary);
+            color: #111827;
         }
 
         .feature-card p {
@@ -682,63 +526,27 @@
             line-height: 1.6;
         }
 
-        /* ─── How It Works ─── */
-        .how-it-works {
-            padding: 80px 0;
-            background: var(--background);
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .step {
-            text-align: center;
-            padding: 32px 24px;
-            background: white;
-            border-radius: 16px;
-            border: 1px solid #e5e7eb;
-            position: relative;
-        }
-
-        .step-number {
-            width: 48px;
-            height: 48px;
+        /* ─── Social Proof ─── */
+        .social-proof-section {
+            padding: 48px 0;
             background: var(--accent);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
+            text-align: center;
         }
 
-        .step h3 {
+        .social-proof-section p {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--primary);
-        }
-
-        .step p {
-            color: #6b7280;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            color: white;
         }
 
         /* ─── Privacy / ZDR ─── */
         .privacy-section {
-            padding: 80px 0;
+            padding: 100px 0;
             background: color-mix(in srgb, var(--accent) 8%, white);
             color: var(--primary);
         }
 
-        .privacy-section .section-title { color: var(--primary); }
+        .privacy-section .section-title { color: #111827; }
         .privacy-section .section-eyebrow { color: var(--accent); }
         .privacy-section .section-sub { color: #4b5563; }
 
@@ -758,10 +566,11 @@
         }
 
         .privacy-card h3 {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 10px;
-            color: var(--primary);
+            color: #111827;
         }
 
         .privacy-card p {
@@ -785,16 +594,22 @@
 
         /* ─── Pricing ─── */
         .pricing {
-            padding: 80px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .pricing-card {
@@ -837,16 +652,18 @@
         }
 
         .pricing-card h3 {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: var(--primary);
+            color: #111827;
         }
 
         .pricing-card .price {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
             font-size: 2.6rem;
             font-weight: 700;
-            color: var(--primary);
+            color: #111827;
             margin-bottom: 4px;
             line-height: 1;
         }
@@ -894,9 +711,71 @@
 
         .buy-btn:hover { background: var(--accent-hover); }
 
+        /* ─── Pay-as-you-go explainer ─── */
+        .payg-explainer {
+            max-width: 700px;
+            margin: 48px auto 0;
+            background: var(--background);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px 32px;
+        }
+
+        .payg-explainer h3 {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .payg-explainer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .payg-explainer li {
+            font-size: 0.9rem;
+            color: #374151;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .payg-explainer li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ─── Final CTA ─── */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-family: 'General Sans', 'Inter', -apple-system, sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .final-cta p {
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-bottom: 36px;
+        }
+
         /* ─── FAQ ─── */
         .faq {
-            padding: 80px 0;
+            padding: 100px 0;
             background: var(--background);
         }
 
@@ -985,16 +864,12 @@
 
         /* ─── Responsive ─── */
         @media (max-width: 768px) {
-            .demo-card {
-                width: 100% !important;
-                min-width: 0 !important;
-                max-width: 100% !important;
-            }
-            .hero h1 { font-size: 2.1rem; }
+            .hero h1 { font-size: 2.2rem; }
             .hero .subtitle { font-size: 1.05rem; }
             .section-title { font-size: 1.6rem; }
             .pricing-card.featured { transform: none; }
             .pricing-card.featured:hover { transform: translateY(-4px); }
+            .final-cta h2 { font-size: 1.8rem; }
 
             .hamburger { display: block; }
 
@@ -1050,138 +925,21 @@
     <section class="hero">
         <div class="container">
             <div class="hero-eyebrow">For K-12 teachers, SpEd staff & counselors</div>
-            <h1>Turn hours of paperwork into minutes of AI.<br><span>No Prompt Engineering.</span></h1>
-            <p class="subtitle">TeacherTasksAI is a plugin for Claude Desktop with 200+ ready-to-run tasks — IEP summaries, report card comments, parent emails, behavior plans, and more. Pick a task, answer a few questions, done. No prompt writing. FERPA-aligned.</p>
+            <h1>Stop guessing prompts. Get your classroom paperwork done in minutes.</h1>
+            <p class="subtitle">167 ready-to-use AI tasks built specifically for educators — IEP summaries, report card comments, parent emails, behavior plans, and more. Pick a task, answer a few questions, done. No prompt writing required.</p>
             <div class="hero-ctas">
-                <a href="/signup" class="cta-button">Try Free — 5 Credits, No Card</a>
-                <a href="#pricing" class="cta-button secondary">See Pricing</a>
+                <a href="/signup" class="cta-button">Get My 5 Free Credits →</a>
             </div>
             <p class="hero-fine-print">5 free credits on signup · Credits never expire · No subscription</p>
-            <p style="margin-top:10px;font-size:0.82rem;color:#6b7280;text-align:center;">Works inside <strong>Claude Desktop</strong> (free from Anthropic) — <a href="https://claude.ai/download" target="_blank" style="color:var(--accent);">download it here</a>. 5-minute setup.</p>
-            
-<div class="hero-demo" aria-hidden="true">
-    <div class="demo-card">
-        <div class="demo-card-header">
-            <div class="demo-dots"><span></span><span></span><span></span></div>
-            <span class="demo-card-title">TeacherTasksAI</span>
-        </div>
-        <div class="demo-card-body">
-            <div class="demo-slides">
-        <div class="demo-slide" data-index="0">
-            <div class="demo-prompt-row">
-                <span class="demo-caret">&gt;</span>
-                <span class="demo-prompt-text">Write a parent newsletter for this week's classroom updates</span><span class="demo-cursor">|</span>
-            </div>
-            <div class="demo-step step-skill">
-                <span class="demo-spinner"></span>
-                <span>Loading <span class="demo-product-name">TeacherTasksAI</span>: <strong>Parent Newsletter Writer</strong></span>
-            </div>
-            <div class="demo-step step-output">
-                <div class="demo-output-header">
-                    <span class="demo-check">&#10003;</span>
-                    <span><span class="demo-product-name">TeacherTasksAI</span> response ready</span>
-                </div>
-                <div class="demo-output-detail">
-                    <div class="demo-chips"><span class="demo-chip">Friendly tone</span><span class="demo-chip">Weekly format</span><span class="demo-chip">Upcoming events</span><span class="demo-chip demo-chip-more">+ more</span></div>
-                    <div class="demo-filename">&#128196; parent_newsletter_week_of_<span class="demo-ts"></span>.docx</div>
-                    <div class="demo-preview">&ldquo;Dear Families, It's been an exciting week in Room 14! We wrapped up our unit on ecosystems...&rdquo;</div>
-                </div>
-            </div>
-        </div>
-        <div class="demo-slide" data-index="1">
-            <div class="demo-prompt-row">
-                <span class="demo-caret">&gt;</span>
-                <span class="demo-prompt-text">Create a lesson plan on fractions for 4th grade</span><span class="demo-cursor">|</span>
-            </div>
-            <div class="demo-step step-skill">
-                <span class="demo-spinner"></span>
-                <span>Loading <span class="demo-product-name">TeacherTasksAI</span>: <strong>Lesson Plan Builder</strong></span>
-            </div>
-            <div class="demo-step step-output">
-                <div class="demo-output-header">
-                    <span class="demo-check">&#10003;</span>
-                    <span><span class="demo-product-name">TeacherTasksAI</span> response ready</span>
-                </div>
-                <div class="demo-output-detail">
-                    <div class="demo-chips"><span class="demo-chip">Common Core aligned</span><span class="demo-chip">4th grade</span><span class="demo-chip">15-min activities</span><span class="demo-chip demo-chip-more">+ more</span></div>
-                    <div class="demo-filename">&#128196; lesson_plan_fractions_4th_<span class="demo-ts"></span>.docx</div>
-                    <div class="demo-preview">&ldquo;Lesson Objective: Students will compare fractions with unlike denominators using visual mo...&rdquo;</div>
-                </div>
-            </div>
-        </div>
-        <div class="demo-slide" data-index="2">
-            <div class="demo-prompt-row">
-                <span class="demo-caret">&gt;</span>
-                <span class="demo-prompt-text">Write an IEP progress note for a student struggling with reading fluency</span><span class="demo-cursor">|</span>
-            </div>
-            <div class="demo-step step-skill">
-                <span class="demo-spinner"></span>
-                <span>Loading <span class="demo-product-name">TeacherTasksAI</span>: <strong>IEP Progress Note</strong></span>
-            </div>
-            <div class="demo-step step-output">
-                <div class="demo-output-header">
-                    <span class="demo-check">&#10003;</span>
-                    <span><span class="demo-product-name">TeacherTasksAI</span> response ready</span>
-                </div>
-                <div class="demo-output-detail">
-                    <div class="demo-chips"><span class="demo-chip">Goal-aligned</span><span class="demo-chip">Measurable data</span><span class="demo-chip">Next steps</span><span class="demo-chip demo-chip-more">+ more</span></div>
-                    <div class="demo-filename">&#128196; iep_progress_note_reading_<span class="demo-ts"></span>.docx</div>
-                    <div class="demo-preview">&ldquo;Student demonstrated 87 words per minute on the Aimsweb oral reading fluency probe, compar...&rdquo;</div>
-                </div>
-            </div>
-        </div>
-            </div>
-        </div>
-    </div>
-    <div class="demo-indicators"><span class="demo-dot active" data-dot="0"></span><span class="demo-dot" data-dot="1"></span><span class="demo-dot" data-dot="2"></span></div>
-</div>
-<script>
-(function(){
-    // Stamp all timestamp placeholders with current datetime
-    var now = new Date();
-    var ts  = now.getFullYear().toString()
-            + String(now.getMonth()+1).padStart(2,'0')
-            + String(now.getDate()).padStart(2,'0')
-            + '_'
-            + String(now.getHours()).padStart(2,'0')
-            + String(now.getMinutes()).padStart(2,'0');
-    document.querySelectorAll('.demo-ts').forEach(function(el){ el.textContent = ts; });
-
-    var slides = document.querySelectorAll('.demo-slide');
-    var dots   = document.querySelectorAll('.demo-dot');
-    if (!slides.length) return;
-    var current = 0;
-    // ms: cursor blink, skill row, output row, read pause
-    var PHASES = [800, 900, 1100, 3500];
-    var total  = slides.length;
-
-    function showSlide(idx) {
-        slides.forEach(function(s,i) {
-            s.classList.toggle('active', i === idx);
-            s.classList.remove('phase-skill','phase-output');
-        });
-        dots.forEach(function(d,i) { d.classList.toggle('active', i === idx); });
-        var s = slides[idx];
-        setTimeout(function(){ s.classList.add('phase-skill');  }, PHASES[0]);
-        setTimeout(function(){ s.classList.add('phase-output'); }, PHASES[0]+PHASES[1]);
-    }
-
-    function next() {
-        current = (current + 1) % total;
-        showSlide(current);
-    }
-
-    showSlide(0);
-    setInterval(next, PHASES[0]+PHASES[1]+PHASES[2]+PHASES[3]);
-
-    dots.forEach(function(d,i) {
-        d.addEventListener('click', function() { current=i; showSlide(i); });
-    });
-})();
-</script>
-
         </div>
     </section>
+
+    <!-- ─── Trust Bar ─── -->
+    <div class="trust-bar">
+        <div class="container">
+            <p>🔒 <strong>Your data stays on your machine.</strong> We never see your clients, documents, or details.</p>
+        </div>
+    </div>
 
     
     <section class="video-section">
@@ -1204,17 +962,39 @@
         </div>
     </section>
 
-    <!-- ─── Example Tasks Band ─── -->
-    <div class="tasks-band">
-        <p class="tasks-band-label">Example Tasks</p>
-        <div class="tasks-scroll">
-            <span class="task-chip">Write a parent progress update</span>
-            <span class="task-chip">Draft report card comments</span>
-            <span class="task-chip">Prepare an IEP goal summary</span>
-            <span class="task-chip">Create a behavior plan documentation</span>
-            <span class="task-chip">Write a substitute teacher note</span>
+    <!-- ─── How It Works ─── -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Up and running in under 5 minutes</h2>
+            <p class="section-subtitle">No technical setup. No prompt engineering. Just real professional output from step one.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-time">30 seconds</div>
+                    <h3>Get your free credits</h3>
+                    <p>Enter your email and get your license key instantly. 5 credits, no credit card required.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-time">1 minute</div>
+                    <h3>Download the free AI app</h3>
+                    <p>Get <a href="https://claude.ai/download" target="_blank">Claude Desktop</a> from Anthropic — it's free. This is the AI your tasks run inside.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-time">1 minute</div>
+                    <h3>Run our installer</h3>
+                    <p>Double-click the installer, paste your license key, and it configures everything automatically. Done.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-time">Instant</div>
+                    <h3>Run your first task</h3>
+                    <p>Type what you need. TeacherTasksAI finds the right task automatically and delivers professional output.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- ─── Features ─── -->
     <section class="features" id="features">
@@ -1274,36 +1054,6 @@
         </div>
     </section>
 
-    <!-- ─── How It Works ─── -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <h2 class="section-title">From Question to Professional Output in Seconds</h2>
-            <p class="section-subtitle">No setup wizards. No prompt libraries to memorize. Just open the task, answer a few questions, and get the output you need.</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Quick 5-Minute Setup</h3>
-                    <p>Download <strong>Claude Desktop</strong> (free from Anthropic if you don't have it), then run our one-click installer. It configures everything automatically — no technical steps.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>167+ Tasks That Find Themselves</h3>
-                    <p>Tell your AI what you need. It selects the right task automatically — from a library of 167+ purpose-built workflows. No browsing. No guessing. Just results.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Provide Your Details</h3>
-                    <p>The task asks you the right questions. You fill in your specific information — client names, dates, context. No prompt engineering.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Get Professional Output</h3>
-                    <p>Receive structured, professional output ready to use. Review it, apply your judgment, and you're done. One credit, one task.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="compliance-section" style="padding:60px 0 80px;background:color-mix(in srgb, var(--accent) 8%, white);">
     <div class="container">
         <h2 class="section-title">Built for K-12 Privacy Requirements</h2>
@@ -1327,84 +1077,21 @@
     </div>
 </section>
 
-    <!-- ─── Platform Compatibility ─── -->
-    <section style="padding:48px 0;background:#f9fafb;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
-        <div class="container" style="max-width:800px;">
-            <h2 style="text-align:center;font-size:1.4rem;font-weight:700;margin-bottom:8px;">Works with your AI tools</h2>
-            <p style="text-align:center;color:#6b7280;font-size:0.95rem;margin-bottom:12px;">TeacherTasksAI runs as a plugin inside your AI client. Most users start with <strong>Claude Desktop</strong> — it's free and takes 5 minutes to set up.</p>
-            <p style="text-align:center;margin-bottom:28px;"><a href="https://claude.ai/download" target="_blank" style="font-size:0.9rem;color:var(--accent);font-weight:600;">→ Download Claude Desktop (free)</a></p>
-
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:20px;">
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #d1fae5;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10003;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#065f46;">Claude Desktop</div><div style="font-size:0.75rem;color:#6b7280;">Mac &amp; Windows app</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #d1fae5;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10003;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#065f46;">Claude Code</div><div style="font-size:0.75rem;color:#6b7280;">Anthropic CLI agent</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #d1fae5;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10003;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#065f46;">OpenClaw</div><div style="font-size:0.75rem;color:#6b7280;">incl. ClawBro hosted</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #d1fae5;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10003;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#065f46;">Cursor</div><div style="font-size:0.75rem;color:#6b7280;">AI code editor</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #d1fae5;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10003;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#065f46;">Windsurf</div><div style="font-size:0.75rem;color:#6b7280;">AI code editor</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #d1fae5;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10003;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#065f46;">Cline (VS Code)</div><div style="font-size:0.75rem;color:#6b7280;">VS Code extension</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #fef9c3;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#8987;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#854d0e;">Gemini</div><div style="font-size:0.75rem;color:#6b7280;">Coming soon</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #fee2e2;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10005;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#991b1b;">claude.ai (website)</div><div style="font-size:0.75rem;color:#6b7280;">Not compatible</div></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:1.5px solid #fee2e2;border-radius:10px;">
-                    <span style="font-size:1.1rem;">&#10005;</span>
-                    <div><div style="font-weight:700;font-size:0.9rem;color:#991b1b;">ChatGPT</div><div style="font-size:0.75rem;color:#6b7280;">Not compatible</div></div>
-                </div>
-            </div>
-
-            <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 16px;font-size:0.85rem;color:#166534;text-align:center;">
-                ✅ <strong>Already have Claude Desktop?</strong> You're ready — just run our installer and you're done in minutes. Don't have it yet? <a href="https://claude.ai/download" target="_blank" style="color:#166534;font-weight:700;">Download it free from Anthropic</a>. Have both Claude Desktop and Claude Code? The installer sets up both automatically.
-            </div>
-        </div>
-    </section>
+    <!-- ─── Social Proof ─── -->
+    
 
     <!-- ─── Pricing ─── -->
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, Pay-As-You-Go Pricing</h2>
             <p class="section-subtitle">No subscriptions. Individual teachers pay per credit pack; schools and districts get volume pricing. Credits never expire.</p>
-            <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-bottom:40px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
             <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:8px;padding:16px 20px;margin-bottom:32px;color:#78350f;font-size:0.95rem;text-align:center;"><strong>Heads up:</strong> TeacherTasksAI credits cover TeacherTasksAI tasks only. The AI itself runs through Claude Desktop or another MCP-compatible client, which may require its own API key or subscription (Anthropic, OpenAI, etc.). Plan for that separately.</div>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Try It</h3>
-                    <div class="price">$5</div>
-                    <div class="credits">5 credits</div>
-                    <p class="per-credit">$1.00 per task</p>
-                    <ul>
-                        <li>✓ All 167+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Perfect for a first look</li>
-                    </ul>
-                    <button onclick="checkout('tryit')" class="buy-btn">Try It</button>
-                </div>
-
-                <div class="pricing-card">
                     <h3>Starter</h3>
                     <div class="price">$29</div>
-                    <div class="credits">30 credits</div>
-                    <p class="per-credit">$0.97 per task</p>
+                    <div class="credits">50 credits</div>
+                    <p class="per-credit">$0.58 per task</p>
                     <ul>
                         <li>✓ All 167+ tasks</li>
                         <li>✓ Credits never expire</li>
@@ -1417,63 +1104,57 @@
                     <div class="badge">Most Popular</div>
                     <h3>Professional</h3>
                     <div class="price">$79</div>
-                    <div class="credits">100 credits</div>
-                    <p class="per-credit">$0.79 per task &middot; 21% off</p>
+                    <div class="credits">150 credits</div>
+                    <p class="per-credit">$0.53 per task</p>
                     <ul>
                         <li>✓ All 167+ tasks</li>
                         <li>✓ Credits never expire</li>
                         <li>✓ Best for regular use</li>
                     </ul>
-                    <button onclick="checkout('professional')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('professional')" class="buy-btn">Best Value</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Power User</h3>
-                    <div class="price">$149</div>
-                    <div class="credits">200 credits</div>
-                    <p class="per-credit">$0.75 per task &middot; 25% off</p>
+                    <h3>Office</h3>
+                    <div class="price">$199</div>
+                    <div class="credits">500 credits</div>
+                    <p class="per-credit">$0.40 per task</p>
                     <ul>
                         <li>✓ All 167+ tasks</li>
                         <li>✓ Credits never expire</li>
                         <li>✓ For high-volume workflows</li>
                     </ul>
-                    <button onclick="checkout('poweruser')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Studio</h3>
-                    <div class="price">$299</div>
-                    <div class="credits">500 credits</div>
-                    <p class="per-credit">$0.60 per task &middot; 40% off</p>
-                    <ul>
-                        <li>✓ All 167+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Ideal for teams and firms</li>
-                    </ul>
-                    <button onclick="checkout('studio')" class="buy-btn">Get Credits</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Unlimited</h3>
-                    <div class="price">$499</div>
-                    <div class="credits">1,000 credits</div>
-                    <p class="per-credit">$0.50 per task &middot; 50% off</p>
-                    <ul>
-                        <li>✓ All 167+ tasks</li>
-                        <li>✓ Credits never expire</li>
-                        <li>✓ Maximum value</li>
-                    </ul>
-                    <button onclick="checkout('unlimited')" class="buy-btn">Get Credits</button>
+                    <button onclick="checkout('office')" class="buy-btn">Get Credits</button>
                 </div>
             </div>
 
+            <!-- Why pay-as-you-go? -->
+            <div class="payg-explainer">
+                <h3>Why pay-as-you-go?</h3>
+                <ul>
+                    <li>Credits never expire — buy once, use whenever you need them. No monthly pressure.</li>
+                    <li>No subscription waste — you only pay for the tasks you actually run.</li>
+                    <li>Your data stays yours — we never store your documents or client information.</li>
+                    <li>Pennies per task compared to $99/month SaaS tools you barely use.</li>
+                </ul>
+            </div>
+
             <p style="text-align:center; color:#9ca3af; font-size:0.8rem; margin-top:24px;"></p>
+            <p style="text-align:center; color:#9ca3af; font-size:0.9rem; margin-top:12px;">By purchasing, you agree to our <a href="/terms" style="color:var(--accent); text-decoration:underline;">Terms of Service</a></p>
         </div>
     </section>
 
     
 
-
+    <!-- ─── Final CTA ─── -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to get started?</h2>
+            <p>Join professionals who've stopped wrestling with generic AI and started getting work done.</p>
+            <a href="/signup" class="cta-button">Get My 5 Free Credits →</a>
+            <p style="margin-top:16px;font-size:0.82rem;color:#64748b;">5 free credits · No credit card · Works in 5 minutes</p>
+        </div>
+    </section>
 
     <!-- ─── Footer ─── -->
     <footer>
@@ -1487,7 +1168,7 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2026 TeacherTasksAI. All rights reserved. · <a href="https://teachertasksai.com">teachertasksai.com</a></p>
-                <p style="margin-top:8px;">Powered by <a href="https://openclaw.ai">OpenClaw</a> · Works with Claude Desktop & MCP</p>
+                <p style="margin-top:8px;">Powered by <a href="https://openclaw.ai">OpenClaw</a></p>
             </div>
         </div>
     </footer>
@@ -1499,22 +1180,22 @@
         const navLinks = document.getElementById('navLinks');
         const overlay = document.getElementById('overlay');
 
-        function toggleNav() {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
+        if (hamburger && navLinks && overlay) {
+            function toggleNav() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+            }
 
-        hamburger.addEventListener('click', toggleNav);
-        overlay.addEventListener('click', toggleNav);
+            hamburger.addEventListener('click', toggleNav);
+            overlay.addEventListener('click', toggleNav);
 
-        navLinks.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) toggleNav();
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) toggleNav();
+                });
             });
-        });
-
-
+        }
     </script>
 
     <script>
@@ -1594,7 +1275,6 @@
 
             try {
                 const all = await getAllSkills();
-                // Build slug the same way the API does: lowercase, spaces+& → _and_, strip non-alnum
                 const slug = categoryName.toLowerCase()
                     .replace(/\s*&\s*/g, '_and_')
                     .replace(/[^a-z0-9]+/g, '_')
@@ -1640,7 +1320,6 @@
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
     </script>
 
-    <!-- ─── Task Modal ─── -->
     <!-- Email capture modal for checkout -->
     <div id="emailModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;align-items:center;justify-content:center;">
         <div style="background:#fff;border-radius:12px;padding:36px 32px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.2);">

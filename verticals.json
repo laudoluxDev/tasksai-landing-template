@@ -10,7 +10,7 @@
     "license_prefix": "ct_",
     "support_email": "hello@contractortasksai.com",
     "accent_color": "#F97316",
-    "icon": "\ud83c\udfd7\ufe0f",
+    "icon": "🏗️",
     "audience": "General contractors, subcontractors, and construction project managers",
     "categories": [
       "Estimating & Bidding Administration",
@@ -72,20 +72,26 @@
     ],
     "features_subtitle": "Every task built for the job site, the bid, and the invoice.",
     "has_installer": true,
-    "youtube_video_id": "bxVG3H_3eh4"
+    "youtube_video_id": "bxVG3H_3eh4",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1": "Stop guessing prompts. Get your construction paperwork done in minutes.",
+    "hero_eyebrow": "For general contractors & construction professionals",
+    "hero_subhead": "180+ ready-to-use AI tasks built specifically for contractors — bids, change orders, pay applications, safety docs, and more. No prompt engineering required. Just pick a task, answer a few questions, and get professional output.",
+    "hero_h1_no_span": true
   },
   {
     "product_id": "realtor",
     "name": "RealtorTasksAI",
     "display_name": "Realtor Tasks AI",
-    "tagline": "169 AI-powered tasks for real estate agents and brokers. Listings, offers, buyer emails, disclosures \u2014 done in minutes.",
-    "hero_description": "Close more deals with less paperwork. RealtorTasksAI handles listing descriptions, buyer communications, transaction coordination, and compliance docs \u2014 all locally on your machine.",
+    "tagline": "169 AI-powered tasks for real estate agents and brokers. Listings, offers, buyer emails, disclosures — done in minutes.",
+    "hero_description": "Close more deals with less paperwork. RealtorTasksAI handles listing descriptions, buyer communications, transaction coordination, and compliance docs — all locally on your machine.",
     "domain": "realtortasksai.com",
     "credentials_dir": ".realtortasksai",
     "license_prefix": "rt_",
     "support_email": "hello@realtortasksai.com",
     "accent_color": "#0EA5E9",
-    "icon": "\ud83c\udfe0",
+    "icon": "🏠",
     "audience": "Real estate agents, brokers, and transaction coordinators",
     "categories": [
       "Listing & Marketing Administration",
@@ -110,29 +116,29 @@
     "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-GV4V3CJLYW",
-    "hero_h1": "Write the listing. Send the follow-up. Close the deal",
+    "hero_h1": "Stop guessing prompts. Get your real estate paperwork done in minutes.",
     "hero_eyebrow": "For real estate agents & brokers",
-    "hero_subhead": "169 ready-to-run tasks for every part of your deal \u2014 listing descriptions, offer letters, buyer emails, disclosure packets, CMA summaries, showing follow-ups, and more. Pick a task, answer a few questions, get professional output. No prompts to write. Works in Claude Desktop and OpenClaw.",
-    "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
+    "hero_subhead": "169 ready-to-use AI workflows built specifically for agents and brokers. Write flawless MLS listings, offer letters, CMAs, and disclosures inside your AI app — no prompt engineering required.",
+    "hero_fine_print": "5 free credits on signup · Credits never expire · No subscription",
     "features_intro": "Built for agents who close deals, not write prompts",
     "features_subtitle": "Every task built for the exact work real estate agents do every day.",
-    "pricing_tagline": "No subscriptions. Buy credits when you need them \u2014 one credit per task. Credits never expire, so you're never pressured to use them.",
+    "pricing_tagline": "No subscriptions. Buy credits when you need them — one credit per task. Credits never expire, so you're never pressured to use them.",
     "compliance_heading": "Your clients' data stays yours",
     "compliance": [
       {
         "badge": "Privacy-First",
         "title": "Zero document retention",
-        "description": "RealtorTasksAI never receives your listings, client names, addresses, or transaction details. Our servers only count that a credit was used \u2014 nothing else."
+        "description": "RealtorTasksAI never receives your listings, client names, addresses, or transaction details. Our servers only count that a credit was used — nothing else."
       },
       {
         "badge": "Local Execution",
         "title": "Runs on your machine",
-        "description": "Your documents go to your AI provider (Anthropic, OpenAI) under your account \u2014 or stay entirely local with OpenClaw + Ollama. Either way, we never see the content."
+        "description": "Your documents go to your AI provider (Anthropic, OpenAI) under your account — or stay entirely local with OpenClaw + Ollama. Either way, we never see the content."
       },
       {
         "badge": "No Lock-in",
-        "title": "Works with any MCP client",
-        "description": "Claude Desktop, OpenClaw, Cursor \u2014 if it supports MCP, RealtorTasksAI works in it. Switch AI providers anytime without losing your credits."
+        "title": "Works with your favorite AI app",
+        "description": "Claude Desktop, OpenClaw, Cursor — RealtorTasksAI works in it. Switch AI providers anytime without losing your credits."
       }
     ],
     "testimonials_heading": "What agents are saying",
@@ -158,37 +164,37 @@
     ],
     "features": [
       {
-        "icon": "\ud83c\udfe0",
+        "icon": "🏠",
         "title": "Listings That Get Showings",
         "full_title": "Listing & Marketing Administration",
-        "desc": "Write compelling MLS descriptions, develop full marketing plans, schedule professional photography, optimize online listings, and manage syndication \u2014 in minutes, not hours."
+        "desc": "Write compelling MLS descriptions, develop full marketing plans, schedule professional photography, optimize online listings, and manage syndication — in minutes, not hours."
       },
       {
-        "icon": "\u2709\ufe0f",
+        "icon": "✉️",
         "title": "Buyer & Seller Communications",
         "full_title": "Buyer & Seller Communications",
         "desc": "Draft offer letters, respond to inquiries, set expectations, handle objections, send personalized follow-ups, and keep clients informed at every stage without starting from scratch."
       },
       {
-        "icon": "\ud83d\udd04",
+        "icon": "🔄",
         "title": "Transaction Coordination",
         "full_title": "Transaction Coordination",
         "desc": "Manage checklists, coordinate inspections, appraisals, and title searches, track loan approval status, schedule the final walkthrough, and get to the closing table without anything falling through the cracks."
       },
       {
-        "icon": "\ud83d\udccb",
+        "icon": "📋",
         "title": "Disclosures & Compliance Docs",
         "full_title": "Compliance & Disclosure Documentation",
-        "desc": "Prepare seller disclosures, lead-based paint notices, agency disclosures, fair housing compliance, RESPA guidelines, and required transaction documents \u2014 correctly, every time."
+        "desc": "Prepare seller disclosures, lead-based paint notices, agency disclosures, fair housing compliance, RESPA guidelines, and required transaction documents — correctly, every time."
       },
       {
-        "icon": "\ud83e\udd1d",
+        "icon": "🤝",
         "title": "Open House Management",
         "full_title": "Open House & Showing Administration",
         "desc": "Promote open houses, manage sign-in sheets, schedule and confirm showings, handle no-shows, follow up on feedback, and convert open house leads into active buyers."
       },
       {
-        "icon": "\ud83d\udcc8",
+        "icon": "📈",
         "title": "Client Relationships & Referrals",
         "full_title": "Client Relationship Management",
         "desc": "Build referral pipelines, maintain your contact database, send personalized check-ins, run client appreciation programs, and collect testimonials that bring in the next deal."
@@ -216,7 +222,7 @@
           "Personal details"
         ],
         "filename": "followup_email_openhouse_sat",
-        "preview": "It was wonderful meeting you Saturday \u2014 the main floor really does live as well as it shows..."
+        "preview": "It was wonderful meeting you Saturday — the main floor really does live as well as it shows..."
       },
       {
         "prompt": "Prepare a CMA summary for 123 Maple Street",
@@ -227,24 +233,26 @@
           "Days on market"
         ],
         "filename": "cma_summary_123maple",
-        "preview": "Based on 3 comparable sales within 0.5 miles, the recommended list price range is $485,000\u2013$499,000..."
+        "preview": "Based on 3 comparable sales within 0.5 miles, the recommended list price range is $485,000–$499,000..."
       }
     ],
     "has_installer": true,
-    "youtube_video_id": "Q_0iJeNr7sY"
+    "youtube_video_id": "Q_0iJeNr7sY",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "accounting",
     "name": "AccountingTasksAI",
     "display_name": "Accounting Tasks AI",
     "tagline": "200+ AI-powered administrative tools for accountants and bookkeepers.",
-    "hero_description": "Spend less time on client communications and documentation. AccountingTasksAI handles engagement letters, client memos, compliance checklists, and reporting templates \u2014 so you can focus on the numbers.",
+    "hero_description": "Spend less time on client communications and documentation. AccountingTasksAI handles engagement letters, client memos, compliance checklists, and reporting templates — so you can focus on the numbers.",
     "domain": "accountingtasksai.com",
     "credentials_dir": ".accountingtasksai",
     "license_prefix": "ac_",
     "support_email": "hello@accountingtasksai.com",
     "accent_color": "#10B981",
-    "icon": "\ud83d\udcca",
+    "icon": "📊",
     "audience": "CPAs, bookkeepers, and accounting firm staff",
     "categories": [
       "Client Onboarding & Engagement",
@@ -271,7 +279,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for returns, clients, and the work between deadlines.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "chiropractor",
@@ -284,7 +294,7 @@
     "license_prefix": "ch_",
     "support_email": "hello@chiropractortasksai.com",
     "accent_color": "#8B5CF6",
-    "icon": "\ud83e\uddb4",
+    "icon": "🦴",
     "audience": "Chiropractors and chiropractic office staff",
     "categories": [
       "Patient Intake & Onboarding",
@@ -311,7 +321,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for patient care, notes, and practice growth.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "church",
@@ -324,7 +336,7 @@
     "license_prefix": "ca_",
     "support_email": "hello@churchadmintasksai.com",
     "accent_color": "#6366F1",
-    "icon": "\u26ea",
+    "icon": "⛪",
     "audience": "Church administrators, pastors, and ministry staff",
     "categories": [
       "Member Communications & Outreach",
@@ -351,7 +363,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for ministry, administration, and the congregation.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "dentist",
@@ -364,7 +378,7 @@
     "license_prefix": "dt_",
     "support_email": "hello@dentisttasksai.com",
     "accent_color": "#06B6D4",
-    "icon": "\ud83e\uddb7",
+    "icon": "🦷",
     "audience": "Dentists and dental office administrators",
     "categories": [
       "Patient Intake & Onboarding",
@@ -391,7 +405,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for patient care, treatment plans, and the front desk.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "designer",
@@ -404,7 +420,7 @@
     "license_prefix": "ds_",
     "support_email": "hello@designertasksai.com",
     "accent_color": "#EC4899",
-    "icon": "\ud83c\udfa8",
+    "icon": "🎨",
     "audience": "Graphic designers, interior designers, and creative agencies",
     "categories": [
       "Client Proposals & Contracts",
@@ -431,7 +447,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for briefs, clients, and creative work that ships.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "electrician",
@@ -444,7 +462,7 @@
     "license_prefix": "el_",
     "support_email": "hello@electriciantasksai.com",
     "accent_color": "#EAB308",
-    "icon": "\u26a1",
+    "icon": "⚡",
     "audience": "Electrical contractors and electricians",
     "categories": [
       "Estimating & Bidding",
@@ -471,7 +489,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for estimates, job specs, and code compliance.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "eventplanner",
@@ -484,7 +504,7 @@
     "license_prefix": "ep_",
     "support_email": "hello@eventplannertasksai.com",
     "accent_color": "#F43F5E",
-    "icon": "\ud83c\udf89",
+    "icon": "🎉",
     "audience": "Event planners, wedding coordinators, and corporate event managers",
     "categories": [
       "Client Proposals & Contracts",
@@ -511,7 +531,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for timelines, vendors, and the day-of details.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "farmer",
@@ -524,7 +546,7 @@
     "license_prefix": "fa_",
     "support_email": "hello@farmertasksai.com",
     "accent_color": "#84CC16",
-    "icon": "\ud83c\udf3e",
+    "icon": "🌾",
     "audience": "Farmers, ranchers, and agricultural operations managers",
     "categories": [
       "USDA & Government Program Documentation",
@@ -549,9 +571,15 @@
     "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-GT4MQX8ZQE",
-    "features_subtitle": "Every task built for how farms actually run \u2014 season to season.",
+    "features_subtitle": "Every task built for how farms actually run — season to season.",
     "has_installer": true,
-    "youtube_video_id": "qtKP1MpxwjM"
+    "youtube_video_id": "qtKP1MpxwjM",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1": "Stop guessing prompts. Get your farm paperwork done in minutes.",
+    "hero_eyebrow": "For farmers, ranchers & agricultural operations",
+    "hero_subhead": "200+ ready-to-use AI tasks built specifically for farmers and agricultural professionals — USDA docs, equipment logs, lease agreements, grant applications, and more. No prompts to write.",
+    "hero_h1_no_span": true
   },
   {
     "product_id": "funeral",
@@ -564,7 +592,7 @@
     "license_prefix": "fu_",
     "support_email": "hello@funeraltasksai.com",
     "accent_color": "#475569",
-    "icon": "\ud83d\udd4a\ufe0f",
+    "icon": "🕊️",
     "audience": "Funeral directors, morticians, and funeral home staff",
     "categories": [
       "Arrangement & Authorization Documents",
@@ -591,7 +619,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built with the care and precision families deserve.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "hr",
@@ -604,7 +634,7 @@
     "license_prefix": "hr_",
     "support_email": "hello@hrtasksai.com",
     "accent_color": "#3B82F6",
-    "icon": "\ud83d\udc65",
+    "icon": "👥",
     "audience": "HR managers, HR generalists, and small business owners",
     "categories": [
       "Recruiting & Hiring Documentation",
@@ -629,9 +659,13 @@
     "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "",
-    "features_subtitle": "Every task built for the full employee lifecycle \u2014 hire to goodbye.",
+    "features_subtitle": "Every task built for the full employee lifecycle — hire to goodbye.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1": "Stop guessing prompts. Get your HR paperwork done in minutes.",
+    "hero_h1_no_span": true
   },
   {
     "product_id": "insurance",
@@ -644,7 +678,7 @@
     "license_prefix": "in_",
     "support_email": "hello@insurancetasksai.com",
     "accent_color": "#0369A1",
-    "icon": "\ud83d\udee1\ufe0f",
+    "icon": "🛡️",
     "audience": "Insurance agents, brokers, and claims adjusters",
     "categories": [
       "Policy Documentation & Summaries",
@@ -671,7 +705,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for policies, claims, and client relationships.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "landlord",
@@ -684,7 +720,7 @@
     "license_prefix": "ll_",
     "support_email": "hello@landlordtasksai.com",
     "accent_color": "#D97706",
-    "icon": "\ud83c\udfe2",
+    "icon": "🏢",
     "audience": "Landlords, property managers, and real estate investors",
     "categories": [
       "Lease & Rental Agreement Administration",
@@ -711,7 +747,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for leases, tenants, and keeping properties running.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "militaryspouse",
@@ -724,7 +762,7 @@
     "license_prefix": "ms_",
     "support_email": "hello@militaryspousetasksai.com",
     "accent_color": "#1D4ED8",
-    "icon": "\u2b50",
+    "icon": "⭐",
     "audience": "Military spouses, veterans, and military families",
     "categories": [
       "PCS & Relocation Documentation",
@@ -751,7 +789,11 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for the moves, the gaps, and the fresh starts.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1": "Stop guessing prompts. Get your military family paperwork done in minutes.",
+    "hero_h1_no_span": true
   },
   {
     "product_id": "mortgage",
@@ -764,7 +806,7 @@
     "license_prefix": "mo_",
     "support_email": "hello@mortgagetasksai.com",
     "accent_color": "#0891B2",
-    "icon": "\ud83c\udfe6",
+    "icon": "🏦",
     "audience": "Mortgage loan officers, processors, and underwriters",
     "categories": [
       "Borrower Communications",
@@ -791,7 +833,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for borrowers, lenders, and closing on time.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "mortuary",
@@ -804,7 +848,7 @@
     "license_prefix": "mr_",
     "support_email": "hello@mortuarytasksai.com",
     "accent_color": "#334155",
-    "icon": "\ud83d\udd6f\ufe0f",
+    "icon": "🕯️",
     "audience": "Mortuary science professionals and funeral home staff",
     "categories": [
       "Case & Preparation Records",
@@ -831,7 +875,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built with the care and precision families deserve.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "nutritionist",
@@ -844,7 +890,7 @@
     "license_prefix": "nu_",
     "support_email": "hello@nutritionisttasksai.com",
     "accent_color": "#65A30D",
-    "icon": "\ud83e\udd66",
+    "icon": "🥦",
     "audience": "Registered dietitians, nutritionists, and wellness coaches",
     "categories": [
       "Client Intake & Assessment",
@@ -871,7 +917,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for assessments, meal plans, and client progress.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "pastor",
@@ -884,7 +932,7 @@
     "license_prefix": "pa_",
     "support_email": "hello@pastortasksai.com",
     "accent_color": "#7C3AED",
-    "icon": "\u271d\ufe0f",
+    "icon": "✝️",
     "audience": "Pastors, ministers, and church leaders",
     "categories": [
       "Sermon & Teaching Preparation",
@@ -911,7 +959,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for sermons, pastoral care, and church leadership.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "personaltrainer",
@@ -924,7 +974,7 @@
     "license_prefix": "pt_",
     "support_email": "hello@personaltrainertasksai.com",
     "accent_color": "#EF4444",
-    "icon": "\ud83d\udcaa",
+    "icon": "💪",
     "audience": "Personal trainers, fitness coaches, and gym owners",
     "categories": [
       "Client Intake & Agreements",
@@ -951,7 +1001,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for programs, clients, and results that stick.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "plumber",
@@ -964,7 +1016,7 @@
     "license_prefix": "pl_",
     "support_email": "hello@plumbertasksai.com",
     "accent_color": "#0284C7",
-    "icon": "\ud83d\udd27",
+    "icon": "🔧",
     "audience": "Plumbing contractors and plumbers",
     "categories": [
       "Estimating & Bidding",
@@ -991,7 +1043,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for service calls, estimates, and getting the job done.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "principal",
@@ -1004,7 +1058,7 @@
     "license_prefix": "pr_",
     "support_email": "hello@principaltasksai.com",
     "accent_color": "#B45309",
-    "icon": "\ud83c\udfeb",
+    "icon": "🏫",
     "audience": "School principals, vice principals, and district administrators",
     "categories": [
       "Parent & Family Communications",
@@ -1031,7 +1085,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for staff, students, families, and everything else.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "restaurant",
@@ -1044,7 +1100,7 @@
     "license_prefix": "rs_",
     "support_email": "hello@restauranttasksai.com",
     "accent_color": "#DC2626",
-    "icon": "\ud83c\udf7d\ufe0f",
+    "icon": "🍽️",
     "audience": "Restaurant owners, managers, and food service operators",
     "categories": [
       "Staff & HR Administration",
@@ -1071,7 +1127,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for the kitchen, the floor, and the front office.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "salon",
@@ -1084,7 +1142,7 @@
     "license_prefix": "sl_",
     "support_email": "hello@salontasksai.com",
     "accent_color": "#DB2777",
-    "icon": "\u2702\ufe0f",
+    "icon": "✂️",
     "audience": "Salon owners, spa operators, and beauty professionals",
     "categories": [
       "Client Communications & Retention",
@@ -1111,7 +1169,9 @@
     "ga_measurement_id": "G-N14JL8C4EC",
     "features_subtitle": "Every task built for the chair, the client, and the business behind it.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "teacher",
@@ -1124,7 +1184,7 @@
     "license_prefix": "tc_",
     "support_email": "hello@teachertasksai.com",
     "accent_color": "#0D9488",
-    "icon": "\ud83d\udcda",
+    "icon": "📚",
     "audience": "K-12 teachers, special education staff, and school counselors",
     "categories": [
       "Parent & Family Communications",
@@ -1149,10 +1209,10 @@
     "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-1QYEGTMFW8",
-    "hero_h1": "Turn hours of paperwork into minutes of AI",
+    "hero_h1": "Stop guessing prompts. Get your classroom paperwork done in minutes.",
     "hero_eyebrow": "For K-12 teachers, SpEd staff & counselors",
-    "hero_subhead": "TeacherTasksAI is a plugin for Claude Desktop with 200+ ready-to-run tasks \u2014 IEP summaries, report card comments, parent emails, behavior plans, and more. Pick a task, answer a few questions, done. No prompt writing. FERPA-aligned.",
-    "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
+    "hero_subhead": "167 ready-to-use AI tasks built specifically for educators — IEP summaries, report card comments, parent emails, behavior plans, and more. Pick a task, answer a few questions, done. No prompt writing required.",
+    "hero_fine_print": "5 free credits on signup · Credits never expire · No subscription",
     "features_intro": "Built for K-12 teachers, SpEd staff & counselors",
     "features_subtitle": "Every task built for what happens before, during, and after class.",
     "pricing_tagline": "No subscriptions. Individual teachers pay per credit pack; schools and districts get volume pricing. Credits never expire.",
@@ -1184,7 +1244,7 @@
       {
         "badge": "FERPA",
         "title": "FERPA-Aligned",
-        "description": "Student data stays on your machine. Our servers only count credits used \u2014 we never see names, grades, IEP details, or any education record content."
+        "description": "Student data stays on your machine. Our servers only count credits used — we never see names, grades, IEP details, or any education record content."
       },
       {
         "badge": "COPPA",
@@ -1233,7 +1293,10 @@
       }
     ],
     "has_installer": true,
-    "youtube_video_id": "n7FRIYxDgYQ"
+    "youtube_video_id": "n7FRIYxDgYQ",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1_no_span": true
   },
   {
     "product_id": "therapist",
@@ -1246,7 +1309,7 @@
     "license_prefix": "th_",
     "support_email": "hello@therapisttasksai.com",
     "accent_color": "#7C3AED",
-    "icon": "\ud83e\udde0",
+    "icon": "🧠",
     "audience": "Therapists, counselors, social workers, and mental health professionals",
     "categories": [
       "Progress Notes & Clinical Documentation",
@@ -1273,7 +1336,13 @@
     "ga_measurement_id": "G-CRPT3804J6",
     "features_subtitle": "Every task built around clinical documentation and client care.",
     "has_installer": true,
-    "youtube_video_id": "ppx-Nw27ii4"
+    "youtube_video_id": "ppx-Nw27ii4",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1": "Stop guessing prompts. Get your clinical documentation done in minutes.",
+    "hero_eyebrow": "For therapists, counselors & mental health professionals",
+    "hero_subhead": "200+ ready-to-use AI tasks built specifically for therapists — progress notes, treatment plans, insurance documentation, and intake forms. No prompt engineering. HIPAA-aligned local execution.",
+    "hero_h1_no_span": true
   },
   {
     "product_id": "travelagent",
@@ -1286,7 +1355,7 @@
     "license_prefix": "ta_",
     "support_email": "hello@travelagenttasksai.com",
     "accent_color": "#0891B2",
-    "icon": "\u2708\ufe0f",
+    "icon": "✈️",
     "audience": "Travel agents, travel advisors, and tour operators",
     "categories": [
       "Itinerary & Trip Planning",
@@ -1313,7 +1382,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for itineraries, bookings, and happy travelers.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "vet",
@@ -1326,7 +1397,7 @@
     "license_prefix": "vt_",
     "support_email": "hello@vettasksai.com",
     "accent_color": "#059669",
-    "icon": "\ud83d\udc3e",
+    "icon": "🐾",
     "audience": "Veterinarians and veterinary practice staff",
     "categories": [
       "Client & Patient Communications",
@@ -1353,7 +1424,9 @@
     "ga_measurement_id": "",
     "features_subtitle": "Every task built for patient care, owner communication, and the clinic.",
     "has_installer": false,
-    "youtube_video_id": ""
+    "youtube_video_id": "",
+    "show_social_proof": false,
+    "social_proof_count": 0
   },
   {
     "product_id": "marketing",
@@ -1366,7 +1439,7 @@
     "license_prefix": "mkt_",
     "support_email": "hello@marketingtasksai.com",
     "accent_color": "#F59E0B",
-    "icon": "\ud83d\udce3",
+    "icon": "📣",
     "audience": "Marketing managers, digital marketers, content creators, and marketing agency professionals",
     "categories": [
       "Strategy & Planning",
@@ -1402,6 +1475,12 @@
     "ga_measurement_id": "G-XG8WVN0QR3",
     "features_subtitle": "Every task built for campaigns, clients, and copy that converts.",
     "has_installer": true,
-    "youtube_video_id": "PTEoaKNbevA"
+    "youtube_video_id": "PTEoaKNbevA",
+    "show_social_proof": false,
+    "social_proof_count": 0,
+    "hero_h1": "Stop guessing prompts. Get your marketing work done in minutes.",
+    "hero_eyebrow": "For marketing managers, digital marketers & agencies",
+    "hero_subhead": "206 ready-to-use AI tasks built specifically for marketers — campaigns, email sequences, ad copy, analytics reports, SEO audits, and more. No prompt engineering required.",
+    "hero_h1_no_span": true
   }
 ]
