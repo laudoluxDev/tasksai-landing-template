@@ -77,7 +77,7 @@
     "social_proof_count": 0,
     "hero_h1": "Your construction paperwork. Done in minutes.",
     "hero_eyebrow": "For general contractors & construction professionals",
-    "hero_subhead": "180 ready-to-use AI templates for contractors. Generate bids, change orders, pay applications, safety plans, and project docs inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>180 ready-to-use AI templates</strong> for contractors. Generate bids, change orders, pay applications, safety plans, and project docs inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_h1_no_span": true
   },
   {
@@ -118,7 +118,7 @@
     "ga_measurement_id": "G-GV4V3CJLYW",
     "hero_h1": "Your real estate paperwork. Done in minutes.",
     "hero_eyebrow": "For real estate agents & brokers",
-    "hero_subhead": "169 ready-to-use AI templates for agents & brokers. Write flawless MLS listings, offer letters, CMAs, and disclosures inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>169 ready-to-use AI templates</strong> for agents & brokers. Write flawless MLS listings, offer letters, CMAs, and disclosures inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_fine_print": "5 free credits on signup · Credits never expire · No subscription",
     "features_intro": "Built for agents who close deals, not write prompts",
     "features_subtitle": "Every task built for the exact work real estate agents do every day.",
@@ -578,7 +578,7 @@
     "social_proof_count": 0,
     "hero_h1": "Your farm paperwork. Done in minutes.",
     "hero_eyebrow": "For farmers, ranchers & agricultural operations",
-    "hero_subhead": "193 ready-to-use AI templates for agriculture. Draft USDA forms, crop plans, equipment logs, grant applications, and compliance docs inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>193 ready-to-use AI templates</strong> for agriculture. Draft USDA forms, crop plans, equipment logs, grant applications, and compliance docs inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_h1_no_span": true
   },
   {
@@ -1174,7 +1174,7 @@
     "social_proof_count": 0,
     "hero_h1": "Your salon paperwork. Done in minutes.",
     "hero_eyebrow": "For salon owners, stylists & beauty professionals",
-    "hero_subhead": "169 ready-to-use AI templates for beauty professionals. Write client consultations, marketing posts, inventory reports, and staff schedules inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>169 ready-to-use AI templates</strong> for beauty professionals. Write client consultations, marketing posts, inventory reports, and staff schedules inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_h1_no_span": true
   },
   {
@@ -1215,7 +1215,7 @@
     "ga_measurement_id": "G-1QYEGTMFW8",
     "hero_h1": "Your classroom paperwork. Done in minutes.",
     "hero_eyebrow": "For K-12 teachers, SpEd staff & counselors",
-    "hero_subhead": "167 ready-to-use AI templates for educators. Write IEP summaries, report card comments, parent emails, lesson plans, and behavior plans inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>167 ready-to-use AI templates</strong> for educators. Write IEP summaries, report card comments, parent emails, lesson plans, and behavior plans inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_fine_print": "5 free credits on signup · Credits never expire · No subscription",
     "features_intro": "Built for K-12 teachers, SpEd staff & counselors",
     "features_subtitle": "Every task built for what happens before, during, and after class.",
@@ -1345,7 +1345,7 @@
     "social_proof_count": 0,
     "hero_h1": "Your clinical documentation. Done in minutes.",
     "hero_eyebrow": "For therapists, counselors & mental health professionals",
-    "hero_subhead": "155 ready-to-use AI templates for mental health professionals. Draft progress notes, treatment plans, insurance appeals, and intake assessments inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>155 ready-to-use AI templates</strong> for mental health professionals. Draft progress notes, treatment plans, insurance appeals, and intake assessments inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_h1_no_span": true
   },
   {
@@ -1484,7 +1484,7 @@
     "social_proof_count": 0,
     "hero_h1": "Your marketing deliverables. Done in minutes.",
     "hero_eyebrow": "For marketing managers, digital marketers & agencies",
-    "hero_subhead": "206 ready-to-use AI templates for marketers. Create campaign briefs, email sequences, ad copy, content calendars, and analytics reports inside Claude Desktop (free app) — no prompt engineering, no learning curve. Just type what you need.",
+    "hero_subhead": "<strong>206 ready-to-use AI templates</strong> for marketers. Create campaign briefs, email sequences, ad copy, content calendars, and analytics reports inside <strong>Claude Desktop</strong> (free app) — no prompt engineering, no learning curve. Just type what you need.",
     "hero_h1_no_span": true
   }
 ]

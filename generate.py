@@ -267,9 +267,9 @@ def build_compliance_html(items: list, heading: str = "Trust & Compliance") -> s
         title = esc(item.get("title", ""))
         description = esc(item.get("description", ""))
         cards.append(f"""            <div class="compliance-card" style="background:#ffffff;padding:28px;border-radius:12px;border:1px solid color-mix(in srgb, var(--accent) 25%, #e5e7eb);box-shadow:0 2px 8px color-mix(in srgb, var(--accent) 10%, transparent);">
-                <div style="display:inline-block;padding:4px 12px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:0.8rem;font-weight:600;margin-bottom:12px;">{badge}</div>
+                <div style="display:inline-block;padding:5px 14px;border-radius:20px;background:var(--accent);color:#ffffff;font-size:1rem;font-weight:600;margin-bottom:12px;">{badge}</div>
                 <h3 style="font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:8px;">{title}</h3>
-                <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;">{description}</p>
+                <p style="font-size:1.05rem;color:#6b7280;line-height:1.6;">{description}</p>
             </div>""")
 
     cards_html = "\n".join(cards)
@@ -553,8 +553,8 @@ def generate_page(template: str, vertical: dict) -> str:
 
     hero_subhead_custom = vertical.get("hero_subhead", "").strip()
     hero_subhead_or_default = hero_subhead_custom if hero_subhead_custom else (
-        f"{hero_count} ready-to-use AI templates for {audience_short_early.lower()}. "
-        f"Get professional output inside Claude Desktop (free app) \u2014 no prompt engineering, no learning curve. Just type what you need."
+        f"<strong>{hero_count} ready-to-use AI templates</strong> for {audience_short_early.lower()}. "
+        f"Get professional output inside <strong>Claude Desktop</strong> (free app) \u2014 no prompt engineering, no learning curve. Just type what you need."
     )
 
     hero_fine_print_custom = vertical.get("hero_fine_print", "").strip()
