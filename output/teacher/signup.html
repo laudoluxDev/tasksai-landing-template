@@ -541,16 +541,22 @@
                 });
 
                 if (res.ok) {
-                    // GA4 signup event
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'sign_up', { method: 'email' });
-                    }
                     // Store email + platforms for success page
                     try {
                         sessionStorage.setItem('signup_email', email);
                         sessionStorage.setItem('signup_platforms', JSON.stringify(selectedPlatforms));
                     } catch(e) {}
-                    window.location.href = '/success.html?signup=1';
+                    // GA4 signup event — use event_callback to ensure beacon sends before redirect
+                    const doRedirect = () => { window.location.href = '/success.html?signup=1'; };
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'sign_up', {
+                            method: 'email',
+                            event_callback: doRedirect,
+                            event_timeout: 2000
+                        });
+                    } else {
+                        doRedirect();
+                    }
                 } else {
                     const data = await res.json().catch(() => ({}));
                     if (res.status === 400 && data.detail && data.detail.includes('already registered')) {
