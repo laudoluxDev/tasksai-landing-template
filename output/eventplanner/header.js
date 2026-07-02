@@ -128,6 +128,7 @@
     if (p === "" || p === "/" || p.endsWith("/index.html")) return "/";
     if (p.indexOf("task-library") > -1) return "/task-library.html";
     if (p.indexOf("getting-started") > -1) return "/getting-started.html";
+    if (p.indexOf("download") > -1) return "/download.html";
     if (p.indexOf("support") > -1) return "/support.html";
     if (p.indexOf("signup") > -1) return "/signup.html";
     return "";
@@ -139,6 +140,7 @@
     { href: "/",                    label: "Home" },
     { href: "/task-library.html",   label: "Task Library" },
     { href: "/getting-started.html",label: "Getting Started" },
+    { href: "/download.html",       label: "My Account" },
     { href: "/support.html",        label: "Support" },
   ];
 
