@@ -975,6 +975,18 @@ def main():
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
                 (out_dir / "download.html").write_text(dl_page, encoding="utf-8")
 
+            # Generate reset-password.html
+            reset_template_path = TEMPLATE_FILE.parent / "reset-password-template.html"
+            if reset_template_path.exists():
+                reset_tmpl = reset_template_path.read_text(encoding="utf-8")
+                reset_page = reset_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
+                (out_dir / "reset-password.html").write_text(reset_page, encoding="utf-8")
+
             # Generate header.js
             header_template_path = TEMPLATE_FILE.parent / "header-template.js"
             if header_template_path.exists():
