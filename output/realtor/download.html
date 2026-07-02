@@ -256,7 +256,7 @@
           <label for="email">Email Address</label>
           <input type="email" id="email" placeholder="you@example.com">
           <p class="input-hint">We’ll send a secure login link to this address</p>
-          <button class="btn" onclick="requestMagicLink()">Send Login Link</button>
+          <button class="btn" onclick="requestMagicLink(this)">Send Login Link</button>
         </div>
         <!-- State 2: check inbox -->
         <div id="email-sent" style="display:none;text-align:center;padding:16px 0;">
@@ -373,27 +373,28 @@
   };
 
   // ── Magic link: request ──
-  async function requestMagicLink() {
+  async function requestMagicLink(btn) {
     const email = document.getElementById('email').value.trim();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showMessage('Please enter a valid email address.', 'error');
       return;
     }
-    const btn = event.target;
-    btn.disabled = true; btn.textContent = 'Sending…';
+    if (!btn) btn = document.querySelector('#email-form .btn');
+    btn.disabled = true; btn.textContent = 'Sending...';
     try {
-      await fetch(`${API_BASE}/auth/magic-link`, {
+      const res = await fetch(`${API_BASE}/auth/magic-link?product=${encodeURIComponent(PRODUCT_ID)}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
+      if (!res.ok) throw new Error('login link unavailable');
       // Always show the inbox confirmation — never reveal whether email exists
       document.getElementById('email-form').style.display = 'none';
       document.getElementById('email-sent').style.display = 'block';
       document.getElementById('sent-to-email').textContent = email;
       hideMessage();
     } catch (e) {
-      showMessage('Connection error — please try again.', 'error');
+      showMessage('We could not send the login link from this page. Please try again, or email <a href="mailto:hello@realtortasksai.com" style="color:var(--accent);font-weight:600;">hello@realtortasksai.com</a>.', 'error');
       btn.disabled = false; btn.textContent = 'Send Login Link';
     }
   }
@@ -447,7 +448,7 @@
             <label for="email">Email Address</label>
             <input type="email" id="email" placeholder="you@example.com">
             <p class="input-hint">We’ll send a secure login link to this address</p>
-            <button class="btn" onclick="requestMagicLink()">Send Login Link</button>
+            <button class="btn" onclick="requestMagicLink(this)">Send Login Link</button>
           </div>
           <div id="email-sent" style="display:none;"></div>
         </div>
