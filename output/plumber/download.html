@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account - PlumberTasksAI</title>
-  <meta name="description" content="Access your PlumberTasksAI account, download your installer, and view your credits and purchase history.">
+  <meta name="description" content="Access your PlumberTasksAI account, install from GitHub, and view your credits and purchase history.">
   
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -236,7 +236,7 @@
   <div id="login-section">
     <div class="card">
       <h1>My Account</h1>
-      <p class="subtitle">Download your PlumberTasksAI installer or check your credit balance.</p>
+      <p class="subtitle">Log in to view your credits, copy your backup license key, or install PlumberTasksAI from GitHub.</p>
 
       <div class="tabs">
         <div class="tab active" data-tab="email">Look up by Email</div>
@@ -430,7 +430,7 @@
     loginSection.innerHTML = `
       <div class="card">
         <h1>My Account</h1>
-        <p class="subtitle">Download your PlumberTasksAI installer or check your credit balance.</p>
+        <p class="subtitle">Log in to view your credits, copy your backup license key, or install PlumberTasksAI from GitHub.</p>
         <div class="tabs">
           <div class="tab active" data-tab="email" onclick="_switchTab('email',this)">Look up by Email</div>
           <div class="tab" data-tab="key" onclick="_switchTab('key',this)">I have my License Key</div>
@@ -577,8 +577,8 @@
         <button class="copy-btn" onclick="copyKey('${lic.license_key}', this)">Copy</button>
       </div>
       <div class="action-row">
-        <button class="dl-btn" onclick="downloadInstaller('${lic.license_key}')">⬇ Download Installer</button>
-        <button class="buy-btn" style="border:0;cursor:pointer;" onclick="refreshCurrentBalance('${lic.license_key}', this)">Reveal Credits</button>
+        <button class="dl-btn" onclick="openInstallGuide()">Install from GitHub</button>
+        <button class="buy-btn" style="border:0;cursor:pointer;" onclick="refreshCurrentBalance('${lic.license_key}', this)">Refresh Balance</button>
         <a href="/buy-credits.html" class="buy-btn">Buy More Credits</a>
       </div>
       <div id="mac-notice" style="display:none;background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:0.875rem;color:#92400e;">
@@ -590,14 +590,14 @@
         <p style="margin-top:8px;color:#b45309;">We're in the process of obtaining Apple code signing certification, which will eliminate this step entirely.</p>
       </div>
       <div class="setup-steps">
-        <p>📋 Quick setup (Claude Desktop)</p>
+        <p>Quick setup</p>
         <ol>
-          <li>Close Claude Desktop first (system tray → Quit)</li>
-          <li>Double-click the installer, enter your license key when prompted</li>
-          <li>Open Claude Desktop → Settings → Connectors → approve <strong>${lic.product_id}tasksai</strong></li>
-          <li>Start a new conversation — your tasks are ready</li>
+          <li>Open the official GitHub install prompt</li>
+          <li>Paste it into your AI assistant</li>
+          <li>Approve the browser connection with your account email</li>
+          <li>Restart your MCP client if the assistant tells you to</li>
         </ol>
-        <p style="margin-top:8px;font-weight:400;"><a href="/getting-started.html" style="color:var(--accent);">Full setup guide →</a></p>
+        <p style="margin-top:8px;font-weight:400;"><a href="/install.html" style="color:var(--accent);">Official install page -></a></p>
       </div>
     `;
     return el;
@@ -716,13 +716,8 @@
     btn.textContent = original;
   }
 
-  function downloadInstaller(licenseKey) {
-    // Show Mac security notice if on macOS
-    if (/Mac|iPhone|iPad|iPod/.test(navigator.platform) || /MacIntel|MacPPC|Mac68K/.test(navigator.userAgent)) {
-      const notice = document.getElementById('mac-notice');
-      if (notice) notice.style.display = 'block';
-    }
-    window.location.href = `${API_BASE}/download/loader/${licenseKey}`;
+  function openInstallGuide() {
+    window.location.href = '/install.html';
   }
 
   function logout() {

@@ -904,18 +904,35 @@ def main():
                 example_task = tasks_list[0] if tasks_list else f"a {v.get('occupation', slug)} task"
                 product_id_upper = product_id.upper() + "TASKSAI"
                 installer_asset_name = v.get("installer_asset_name") or _installer_asset_name(product_name, product_id)
+                repo_slug = domain.split(".")[0]
                 mcp_page = mcp_tmpl \
                     .replace("{{PRODUCT_NAME}}", product_name) \
                     .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
                     .replace("{{ACCENT_COLOR}}", accent) \
                     .replace("{{DOMAIN}}", domain) \
                     .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{REPO_SLUG}}", repo_slug) \
                     .replace("{{PRODUCT_ID_UPPER}}", product_id_upper) \
                     .replace("{{INSTALLER_ASSET_NAME}}", installer_asset_name) \
                     .replace("{{LOGO_HTML}}", logo_split) \
                     .replace("{{EXAMPLE_TASK}}", example_task) \
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
                 (out_dir / "getting-started.html").write_text(mcp_page, encoding="utf-8")
+                (out_dir / "install.html").write_text(mcp_page, encoding="utf-8")
+
+            # Generate connect.html (browser MCP approval)
+            connect_template_path = TEMPLATE_FILE.parent / "connect-template.html"
+            if connect_template_path.exists():
+                connect_tmpl = connect_template_path.read_text(encoding="utf-8")
+                repo_slug = domain.split(".")[0]
+                connect_page = connect_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{REPO_SLUG}}", repo_slug) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
+                (out_dir / "connect.html").write_text(connect_page, encoding="utf-8")
 
             # Generate download.html (account portal)
             dl_template_path = TEMPLATE_FILE.parent / "download-template.html"

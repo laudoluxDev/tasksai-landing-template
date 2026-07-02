@@ -3,672 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started - {{PRODUCT_NAME}}</title>
-  <meta name="description" content="Connect {{PRODUCT_NAME}} to OpenClaw, Claude Desktop, Cursor, and Windsurf. Step-by-step setup guide." />
+  <title>Install {{PRODUCT_NAME}}</title>
+  <meta name="description" content="Install {{PRODUCT_NAME}} from the official GitHub MCP repository and connect your account in the browser." />
   {{GA_TAG}}
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a1a2e; background: #fafbfc; }
-    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
-
-    .page-hero { padding: 56px 0 36px; text-align: center; background: linear-gradient(180deg, white 0%, #f3f4f6 100%); }
-    .page-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
-    .page-hero h1 span { color: {{ACCENT_COLOR}}; }
-    .page-hero p { font-size: 1.1rem; color: #6b7280; max-width: 620px; margin: 0 auto; }
-
-    .content { padding: 48px 0 80px; }
-
-    /* ── Install-path tabs ── */
-    .path-tabs { display: flex; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
-    .path-tab {
-      flex: 1; min-width: 180px; padding: 18px 20px; border-radius: 12px;
-      border: 2px solid #e5e7eb; background: white; cursor: pointer;
-      text-align: left; transition: border-color 0.15s, box-shadow 0.15s;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --accent: {{ACCENT_COLOR}}; }
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; line-height: 1.6; }
+    .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+    .hero { background: #ffffff; border-bottom: 1px solid #e5e7eb; padding: 56px 0 36px; text-align: center; }
+    .eyebrow { color: var(--accent); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+    h1 { font-size: 2.15rem; line-height: 1.15; margin-bottom: 12px; }
+    .hero p { color: #4b5563; font-size: 1.05rem; max-width: 690px; margin: 0 auto; }
+    main { padding: 40px 0 72px; }
+    .panel { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 28px; margin-bottom: 22px; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05); }
+    .panel h2 { font-size: 1.2rem; margin-bottom: 10px; }
+    .panel p, .panel li { color: #4b5563; }
+    .steps { counter-reset: step; display: grid; gap: 16px; }
+    .step { display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; }
+    .num { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--accent); color: #ffffff; font-weight: 800; }
+    .code { background: #0f172a; color: #e5e7eb; border-radius: 8px; padding: 18px 20px; margin: 14px 0; overflow-x: auto; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.92rem; line-height: 1.7; white-space: pre-wrap; }
+    .copy-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .btn { appearance: none; border: 0; border-radius: 8px; background: var(--accent); color: #ffffff; font-weight: 800; padding: 12px 18px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+    .btn.secondary { background: #ffffff; color: var(--accent); border: 2px solid var(--accent); }
+    .identity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+    .identity { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; }
+    .identity strong { display: block; color: #111827; font-size: 0.82rem; margin-bottom: 4px; }
+    .identity span, .identity a { color: #4b5563; font-size: 0.92rem; word-break: break-word; }
+    .note { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; border-radius: 8px; padding: 14px 16px; margin-top: 14px; }
+    .warn { background: #fffbeb; border: 1px solid #fcd34d; color: #92400e; border-radius: 8px; padding: 14px 16px; margin-top: 14px; }
+    footer { background: #111827; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
+    footer a { color: #d1d5db; text-decoration: none; margin: 0 10px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 1.7rem; }
+      .panel { padding: 22px; }
+      .step { grid-template-columns: 1fr; }
     }
-    .path-tab:hover { border-color: {{ACCENT_COLOR}}; }
-    .path-tab.active { border-color: {{ACCENT_COLOR}}; box-shadow: 0 0 0 3px color-mix(in srgb, {{ACCENT_COLOR}} 15%, transparent); }
-    .path-tab .tab-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #9ca3af; margin-bottom: 4px; }
-    .path-tab .tab-name { font-size: 1.1rem; font-weight: 700; color: #111827; }
-    .path-tab .tab-note { font-size: 0.82rem; color: #6b7280; margin-top: 4px; }
-    .path-tab.active .tab-label { color: {{ACCENT_COLOR}}; }
-    .path-tab .recommended-badge {
-      display: inline-block; font-size: 0.7rem; font-weight: 700;
-      background: {{ACCENT_COLOR}}; color: white;
-      padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle;
-    }
-
-    .path-section { display: none; }
-    .path-section.active { display: block; }
-
-    /* ── Steps ── */
-    .step { margin-bottom: 44px; }
-    .step-header { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
-    .step-num { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: {{ACCENT_COLOR}}; color: white; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
-    .step h2 { font-size: 1.3rem; font-weight: 700; }
-    .step p, .step li { color: #4b5563; font-size: 1rem; margin-bottom: 8px; }
-    .step ul, .step ol { padding-left: 20px; margin-bottom: 12px; }
-    .step li { margin-bottom: 6px; }
-    .step a { color: {{ACCENT_COLOR}}; text-decoration: none; font-weight: 500; }
-    .step a:hover { text-decoration: underline; }
-
-    /* ── Code blocks ── */
-    .code-block {
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin: 14px 0;
-      font-family: 'Courier New', monospace;
-      font-size: 0.92rem;
-      color: #f1f5f9;
-      overflow-x: auto;
-      line-height: 1.8;
-    }
-    .code-block .comment { color: #94a3b8; font-style: italic; }
-    .code-block .cmd     { color: #7dd3fc; }
-    .code-block .key     { color: #86efac; }
-    .code-block .val     { color: #fda4af; }
-
-    /* Inline code */
-    .step code, p code, li code {
-      background: #f1f5f9; color: #0f172a;
-      padding: 2px 6px; border-radius: 4px;
-      font-size: 0.88em; font-family: 'Courier New', monospace;
-    }
-
-    /* ── Alert / info boxes ── */
-    .alert { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 16px 20px; margin: 16px 0; font-size: 0.95rem; color: #92400e; }
-    .alert strong { display: block; margin-bottom: 4px; }
-    .info-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
-    .info-box h3 { font-size: 1rem; font-weight: 700; color: #0369a1; margin-bottom: 8px; }
-    .info-box p, .info-box li { color: #0c4a6e; font-size: 0.95rem; margin-bottom: 6px; }
-    .info-box a { color: #0369a1; font-weight: 600; }
-
-    /* ── Divider ── */
-    .divider { border: none; border-top: 1px solid #e5e7eb; margin: 40px 0; }
-
-    /* ── Support / CTA box ── */
-    .cta-box { background: {{ACCENT_COLOR}}; border-radius: 12px; padding: 40px; text-align: center; color: white; margin-top: 48px; }
-    .cta-box h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
-    .cta-box > p { opacity: 0.9; margin-bottom: 24px; }
-
-    /* ── Contact form ── */
-    .contact-form { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; text-align: left; }
-    .contact-form label { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; display: block; }
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-      width: 100%; padding: 10px 14px; border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.15);
-      color: white; font-size: 0.95rem; font-family: inherit;
-    }
-    .contact-form select option { color: #1a1a2e; background: white; }
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: rgba(255,255,255,0.45); }
-    .contact-form textarea { min-height: 110px; resize: vertical; }
-    .contact-form button {
-      padding: 12px 28px; border-radius: 8px; border: none;
-      background: white; color: {{ACCENT_COLOR}};
-      font-weight: 700; font-size: 1rem; cursor: pointer;
-      align-self: flex-start; transition: opacity 0.15s;
-    }
-    .contact-form button:hover { opacity: 0.9; }
-    .contact-form button:disabled { opacity: 0.6; cursor: default; }
-    .form-success {
-      display: none; background: rgba(255,255,255,0.18);
-      border-radius: 8px; padding: 16px 20px;
-      color: white; font-weight: 600;
-    }
-
-    footer { background: #1a1a2e; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
-    footer a { color: #9ca3af; text-decoration: none; margin: 0 12px; }
-    footer a:hover { color: white; }
   </style>
 </head>
 <body>
-
 <div id="site-header"></div>
 <script src="/header.js"></script>
 
-<div class="page-hero">
+<section class="hero">
   <div class="container">
-    <h1>Get started with <span>{{PRODUCT_NAME}}</span></h1>
-    <p>Choose your AI client below - setup takes under 5 minutes.</p>
+    <div class="eyebrow">Official GitHub MCP Install</div>
+    <h1>Install {{PRODUCT_NAME}} from GitHub</h1>
+    <p>Use the official public MCP wrapper repo, then connect your account through the browser. Your {{PRODUCT_NAME}} task content stays with your chosen AI client or provider; the TasksAI API handles identity, credits, catalog access, and licensed skill delivery.</p>
   </div>
-</div>
+</section>
 
-<!-- Compatibility banner -->
-<div style="background:#fff;border-bottom:1px solid #e5e7eb;padding:18px 0;">
+<main>
   <div class="container">
-    <p style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9ca3af;margin-bottom:10px;">Platform compatibility</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Claude Desktop</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; OpenClaw</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Cursor</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Windsurf</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#d1fae5;color:#065f46;font-weight:600;">&#10003; Cline</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fef9c3;color:#854d0e;font-weight:600;">&#8987; Gemini (coming soon)</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600;">&#10005; claude.ai website</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600;">&#10005; ChatGPT</span>
-      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;padding:4px 10px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:600;">&#10005; Gemini Gems</span>
-    </div>
-    <p style="margin-top:10px;font-size:0.8rem;color:#92400e;background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:8px 12px;display:inline-block;">
-      ⚠️ <strong>claude.ai (website) ≠ Claude Desktop (app).</strong> The website doesn't support skills. You need the free <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Claude Desktop app</a>.
-    </p>
+    <section class="panel">
+      <h2>Copy This Install Prompt</h2>
+      <p>Paste this into Claude Desktop, Cursor, Codex, or another MCP-capable AI assistant.</p>
+      <div class="code" id="installPrompt">Please install {{PRODUCT_NAME}} from https://github.com/laudoluxDev/{{REPO_SLUG}}-mcp. Read the repository's agent-install.json, verify that it is the official installer for {{DOMAIN}}, run the official installer command, connect my {{PRODUCT_NAME}} account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
+      <div class="copy-row">
+        <button class="btn" type="button" onclick="copyPrompt()">Copy Prompt</button>
+        <a class="btn secondary" href="https://github.com/laudoluxDev/{{REPO_SLUG}}-mcp" target="_blank" rel="noopener">Open GitHub Repo</a>
+        <a class="btn secondary" href="/connect.html">Open Browser Connect</a>
+      </div>
+      <div class="note">The installer uses <strong>npx @tasksai/install</strong>. If your AI assistant says npx is missing, install Node.js from nodejs.org, then paste the prompt again.</div>
+    </section>
+
+    <section class="panel">
+      <h2>What Happens During Install</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <strong>The assistant reads the manifest</strong>
+            <p>It checks <code>agent-install.json</code> in the official {{PRODUCT_NAME}} repo and verifies the repo/domain identity before running anything.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <strong>The official installer runs</strong>
+            <p>The manifest points to the shared <code>@tasksai/install</code> package with this vertical's product id: <code>{{PRODUCT_ID}}</code>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <strong>You connect your account in the browser</strong>
+            <p>The installer shows a short connection code and opens <a href="/connect.html">this site's connect page</a>. Approve with your account email. License-key entry is only a backup.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <strong>The assistant confirms the install</strong>
+            <p>It runs the health check, tells you whether to restart your MCP client, and confirms your {{PRODUCT_NAME}} credit balance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Vertical Identity</h2>
+      <p>These values are unique to this vertical and are what the installer and API use to keep products separate.</p>
+      <div class="identity-grid">
+        <div class="identity"><strong>Product</strong><span>{{PRODUCT_NAME}}</span></div>
+        <div class="identity"><strong>Product ID</strong><span>{{PRODUCT_ID}}</span></div>
+        <div class="identity"><strong>Official Domain</strong><a href="https://{{DOMAIN}}">{{DOMAIN}}</a></div>
+        <div class="identity"><strong>GitHub Repo</strong><a href="https://github.com/laudoluxDev/{{REPO_SLUG}}-mcp">laudoluxDev/{{REPO_SLUG}}-mcp</a></div>
+        <div class="identity"><strong>Tool Prefix</strong><span>{{REPO_SLUG}}</span></div>
+        <div class="identity"><strong>Support Email</strong><a href="mailto:support@{{DOMAIN}}">support@{{DOMAIN}}</a></div>
+      </div>
+      <div class="warn">Do not install from forks, copied commands in comments, or repos that do not match this domain and GitHub repo.</div>
+    </section>
+
+    <section class="panel">
+      <h2>After Install</h2>
+      <p>Start a new conversation in your AI client and try:</p>
+      <div class="code">Use {{PRODUCT_NAME}} to {{EXAMPLE_TASK}}</div>
+      <p>You can also ask: <em>Check my {{PRODUCT_NAME}} credit balance</em>.</p>
+      <div class="copy-row">
+        <a class="btn" href="/download.html">Login / Check Balance</a>
+        <a class="btn secondary" href="/support.html">Get Support</a>
+      </div>
+    </section>
   </div>
-</div>
-
-<div class="content">
-  <div class="container">
-
-    <!-- ── Platform selector ── -->
-    <div style="text-align:center;margin-bottom:20px;">
-      <p style="font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:6px;">Select your AI client to get started:</p>
-      <p style="font-size:0.85rem;color:#6b7280;">Each platform takes under 5 minutes to set up.</p>
-    </div>
-
-    <div class="path-tabs" id="path-tabs" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;">
-      <button class="path-tab active" onclick="selectPlatform('claude', this)" style="flex:1;min-width:140px;">
-        <div class="tab-label" style="color:#9ca3af;">Most popular</div>
-        <div class="tab-name">Claude Desktop</div>
-        <div class="tab-note">Anthropic's free app</div>
-      </button>
-      <button class="path-tab" onclick="selectPlatform('cursor', this)" style="flex:1;min-width:140px;">
-        <div class="tab-label" style="color:#9ca3af;">AI code editor</div>
-        <div class="tab-name">Cursor</div>
-        <div class="tab-note">Works great for professionals</div>
-      </button>
-      <button class="path-tab" onclick="selectPlatform('windsurf', this)" style="flex:1;min-width:140px;">
-        <div class="tab-label" style="color:#9ca3af;">AI code editor</div>
-        <div class="tab-name">Windsurf</div>
-        <div class="tab-note">Clean, fast interface</div>
-      </button>
-      <button class="path-tab" onclick="selectPlatform('cline', this)" style="flex:1;min-width:140px;">
-        <div class="tab-label" style="color:#9ca3af;">VS Code extension</div>
-        <div class="tab-name">Cline</div>
-        <div class="tab-note">Inside VS Code</div>
-      </button>
-      <button class="path-tab" onclick="selectPlatform('claudecode', this)" style="flex:1;min-width:140px;">
-        <div class="tab-label" style="color:#9ca3af;">Anthropic CLI</div>
-        <div class="tab-name">Claude Code</div>
-        <div class="tab-note">Terminal-based</div>
-      </button>
-      <button class="path-tab" onclick="selectPlatform('openclaw', this)" style="flex:1;min-width:140px;">
-        <div class="tab-label" style="color:#9ca3af;">Alternative</div>
-        <div class="tab-name">OpenClaw</div>
-        <div class="tab-note">One command, no config</div>
-      </button>
-    </div>
-
-    <!-- ══════════════════════════════════════
-         PATH A - OpenClaw
-    ══════════════════════════════════════ -->
-    <div id="path-openclaw" class="path-section">
-
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">1</div>
-          <h2>Install OpenClaw</h2>
-        </div>
-        <p>If you don't have OpenClaw yet, download and install it from <a href="https://openclaw.ai" target="_blank">openclaw.ai</a>. It runs on Mac and Windows.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">2</div>
-          <h2>Install {{PRODUCT_NAME}}</h2>
-        </div>
-        <p>Open a terminal and run:</p>
-        <div class="code-block">
-          <span class="cmd">openclaw skills install {{PRODUCT_ID}}</span>
-        </div>
-        <p>OpenClaw will download the skill, prompt you for your license key, and configure everything automatically. That's it.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-header">
-          <div class="step-num">3</div>
-          <h2>Start using your tasks</h2>
-        </div>
-        <p>Just describe what you need in plain language:</p>
-        <div class="code-block">
-          <span class="comment">You type:</span><br/>
-          <span class="cmd">"I need help with {{EXAMPLE_TASK}}"</span><br/><br/>
-          <span class="comment">{{PRODUCT_NAME}} finds the right task, confirms with you,</span><br/>
-          <span class="comment">then runs it. Each task uses 1 credit.</span>
-        </div>
-        <p>Check your credit balance anytime: <em>"Check my {{PRODUCT_ID}} credits"</em></p>
-      </div>
-
-      <div class="info-box">
-        <h3>💡 Don't have a license key yet?</h3>
-        <p>Sign up for 5 free credits - no credit card required. Your license key is emailed to you immediately.</p>
-        <p><a href="/signup">→ Get 5 free credits at {{DOMAIN}}/signup</a></p>
-      </div>
-
-    </div><!-- /path-openclaw -->
-
-    <!-- ══════════════════════════════════════
-         PATH B - MCP (Claude Desktop / Cursor / Windsurf)
-    ══════════════════════════════════════ -->
-    <div id="path-mcp" class="path-section active">
-
-      <!-- ── OS download box ── -->
-      <div id="exe-download-box" style="background:#f0fdf4;border:2px solid #86efac;border-radius:12px;padding:28px 32px;margin-bottom:32px;text-align:center;">
-        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#16a34a;margin-bottom:8px;">Step 1 — Download the installer</p>
-        <p style="color:#166534;margin-bottom:8px;font-size:0.95rem;">One file. Double-click it, enter your license key, then restart your AI client. No terminal required.</p>
-        <p style="font-size:0.8rem;color:#374151;margin-bottom:20px;"><strong>Requirements:</strong> Mac or Windows &nbsp;·&nbsp; Claude Desktop, Cursor, Windsurf, or Cline already installed &nbsp;·&nbsp; No terminal or Python required</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a id="btn-primary-dl" href="#" style="display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:white;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:8px;text-decoration:none;" target="_blank">
-            <span id="btn-primary-icon">⬇</span> <span id="btn-primary-label">Download Installer</span>
-          </a>
-          <a id="btn-alt-dl" href="#" style="display:inline-flex;align-items:center;gap:8px;background:white;color:#374151;font-weight:600;font-size:0.9rem;padding:14px 20px;border-radius:8px;text-decoration:none;border:1px solid #d1d5db;" target="_blank">
-            <span id="btn-alt-label">Other platform</span>
-          </a>
-        </div>
-        <p style="margin-top:14px;font-size:0.78rem;color:#6b7280;">Can't run the installer? <a href="#" onclick="document.getElementById('manual-install-section').style.display='block';this.closest('p').style.display='none';return false;" style="color:#16a34a;font-weight:600;">Use the manual Python setup instead →</a></p>
-      </div>
-
-      <!-- ── Claude Desktop ── -->
-      <div id="mcp-claude" class="mcp-client-section">
-        <div class="alert" style="margin-bottom:20px;">
-          <strong>⚠️ claude.ai (website) ≠ Claude Desktop (app)</strong>
-          These instructions are for the <strong>downloadable Claude Desktop app</strong> — not the claude.ai website. The website does not support skills.<br/>
-          <a href="https://claude.ai/download" target="_blank" style="color:#92400e;font-weight:700;">Download Claude Desktop free (Mac &amp; Windows) →</a>
-        </div>
-
-        <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Close Claude Desktop</h2></div>
-          <p>If Claude Desktop is running, <strong>fully quit it first</strong> — not just close the window.</p>
-          <ul>
-            <li><strong>Windows:</strong> Right-click the Claude icon in the system tray (bottom-right near the clock) → <strong>Quit</strong></li>
-            <li><strong>Mac:</strong> Click <strong>Claude → Quit Claude</strong> in the menu bar, or press <strong>⌘Q</strong></li>
-          </ul>
-          <p style="margin-top:8px;color:#6b7280;font-size:0.88rem;">This ensures the installer can write files without conflicts.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the green download button above. Double-click <code>{{INSTALLER_ASSET_NAME}}-Setup.exe</code> (Windows) or <code>{{INSTALLER_ASSET_NAME}}-Setup</code> (Mac).</p>
-          <ol>
-            <li>Enter your license key (from your signup email)</li>
-            <li>Click <strong>Verify</strong> to confirm your key works</li>
-            <li>Click <strong>Install</strong></li>
-            <li>Wait for "Installation complete" — then close the installer</li>
-          </ol>
-          <div style="background:#eff6ff;border:2px solid #93c5fd;border-radius:10px;padding:18px 22px;margin-top:14px;">
-            <p style="font-weight:700;color:#1e40af;margin:0 0 8px;font-size:0.95rem;">🛡️ Windows users: you'll see a safety warning — here's what to do</p>
-            <p style="color:#1e3a8a;font-size:0.88rem;margin:0 0 10px;">Windows shows a blue "Windows protected your PC" screen for all new software. It doesn't mean anything is wrong — just click through it:</p>
-            <ol style="color:#1e3a8a;font-size:0.9rem;margin:0 0 0 18px;line-height:2;font-weight:600;">
-              <li>Click <strong>"More info"</strong> (small text link below the main message)</li>
-              <li>Click <strong>"Run anyway"</strong></li>
-              <li>The installer opens normally — continue from there</li>
-            </ol>
-            <p style="margin-top:10px;font-size:0.82rem;color:#3730a3;margin-bottom:0;">This warning will disappear as more people install the app. It's a standard Windows precaution for any new publisher.</p>
-          </div>
-          <p style="margin-top:8px;color:#6b7280;font-size:0.88rem;">The installer places the server in a permanent location and configures Claude Desktop automatically. You can delete the installer file afterward.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Open Claude Desktop &amp; approve the connector</h2></div>
-          <p>Open Claude Desktop. Go to <strong>Settings → Connectors</strong> (or <strong>Customize</strong>).</p>
-          <p>You'll see <strong>{{PRODUCT_ID}}tasksai</strong> listed. Click to <strong>approve</strong> it. It should show a green status.</p>
-          <div class="info-box" style="margin-top:12px;">
-            <p style="margin:0;">💡 <strong>Don't see it?</strong> Try fully quitting Claude Desktop (Step 1) and reopening it. MCP servers load at startup.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-header"><div class="step-num">4</div><h2>Confirm it's working (30 seconds)</h2></div>
-          <p>Open a new Claude Desktop conversation and type:</p>
-          <div class="code-block"><span class="cmd">Check my {{PRODUCT_NAME}} balance</span></div>
-          <p>You should see your credit balance returned instantly. If you do — you're all set! 🎉</p>
-          <div class="info-box" style="margin-top:12px;">
-            <p style="margin:0;">🛑 <strong>Got an error?</strong> Make sure you fully quit and restarted Claude Desktop after the installer ran. If it still fails, visit <a href="/support.html" style="color:var(--accent);">Support</a>.</p>
-          </div>
-        </div>
-
-        <!-- ── Permissions section (Claude Desktop only) ── -->
-        <div class="step" id="permissions-step">
-          <div class="step-header"><div class="step-num">5</div><h2>Enable permissions so your skills always work</h2></div>
-
-          <div style="background:#f0f9ff;border:2px solid #bae6fd;border-radius:12px;padding:22px 26px;margin-bottom:20px;">
-            <p style="font-weight:700;color:#0c4a6e;font-size:0.95rem;margin:0 0 8px;">&#128274; This step is Claude Desktop only — do it once and it's permanent</p>
-            <p style="color:#075985;font-size:0.88rem;margin:0 0 14px;">Without this, Claude Desktop will ask permission <em>every single time</em> you use a skill — and may skip your skills entirely. Takes 30 seconds.</p>
-            <p style="font-size:0.82rem;color:#6b7280;margin:0 0 14px;">&#9432; <em>Cursor, Windsurf, and Cline users: skip this step — your tools are always available once installed.</em></p>
-
-            <ol style="padding-left:18px;color:#075985;font-size:0.9rem;line-height:2.2;margin:0 0 16px;">
-              <li>In Claude Desktop, click <strong>Settings</strong></li>
-              <li>Go to <strong>Connectors</strong> — you'll see a note that connectors have moved to <strong>Customize</strong>. Click that link.</li>
-            </ol>
-            <img src="https://lawtasksai.com/images/setup/step1-connectors.png"
-                 alt="Claude Desktop Settings — Connectors pointing to Customize"
-                 style="width:100%;border-radius:8px;border:1px solid #e0f2fe;display:block;margin:0 0 6px;" />
-            <p style="font-size:0.78rem;color:#6b7280;text-align:center;margin:0 0 16px;">Settings &rarr; Connectors &rarr; click &ldquo;Customize&rdquo;</p>
-
-            <p style="font-size:0.82rem;color:#075985;margin:0 0 14px;">&#9432; <em>Your connector will be listed as <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">{{PRODUCT_ID}}tasksai</code> in the Desktop section.</em></p>
-
-            <ol start="3" style="padding-left:18px;color:#075985;font-size:0.9rem;line-height:2.2;margin:0 0 16px;">
-              <li>Under <strong>Desktop</strong>, click <strong>{{PRODUCT_ID}}tasksai</strong></li>
-              <li>Next to <strong>Other tools</strong>, click the dropdown and select <strong>Always allow</strong></li>
-            </ol>
-            <img src="https://lawtasksai.com/images/setup/step2-always-allow.png"
-                 alt="Claude Desktop — {{PRODUCT_NAME}} tools set to Always Allow"
-                 style="width:100%;border-radius:8px;border:1px solid #e0f2fe;display:block;margin:0 0 6px;" />
-            <p style="font-size:0.78rem;color:#6b7280;text-align:center;margin:0 0 16px;">Set all four tools to &ldquo;Always allow&rdquo;</p>
-
-            <p style="font-size:0.82rem;color:#075985;margin:0 0 14px;">&#9432; <em>You'll see four tools: <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">{{PRODUCT_ID}}tasksai_search</code>, <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">{{PRODUCT_ID}}tasksai_execute</code>, <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">{{PRODUCT_ID}}tasksai_balance</code>, <code style="background:#e0f2fe;padding:1px 5px;border-radius:3px;">{{PRODUCT_ID}}tasksai_categories</code> — set them all to &ldquo;Always allow.&rdquo;</em></p>
-
-            <ol start="5" style="padding-left:18px;color:#075985;font-size:0.9rem;line-height:2.2;margin:0;">
-              <li>Start a <strong>new conversation</strong> in Claude Desktop — tools load at conversation start, not mid-chat.</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-header"><div class="step-num">6</div><h2>Start a conversation with {{PRODUCT_NAME}}</h2></div>
-
-          <!-- User trigger call-out -->
-          <div style="background:#fef3c7;border:2px solid #f59e0b;border-radius:10px;padding:18px 22px;margin-bottom:20px;">
-            <p style="font-weight:800;color:#92400e;font-size:1rem;margin:0 0 6px;">🎯 The user trigger — one rule to remember</p>
-            <p style="color:#78350f;font-size:0.9rem;margin:0 0 12px;">Start every prompt with <strong>"Use {{PRODUCT_NAME}} to…"</strong> and Claude will always invoke your skills — every time, without fail.</p>
-            <div class="code-block" style="font-size:0.88rem;"><span class="cmd">Use {{PRODUCT_NAME}} to {{EXAMPLE_TASK}}</span></div>
-            <p style="font-size:0.82rem;color:#92400e;margin:10px 0 0;">That prefix is your trigger. Without it, Claude may answer from its own training instead of using your {{PRODUCT_NAME}} skills.</p>
-          </div>
-
-          <p>More examples — paste any of these into a new conversation:</p>
-          <ul style="padding-left:20px;color:#4b5563;font-size:0.9rem;line-height:2;margin-bottom:16px;">
-            <li><em>"Use {{PRODUCT_NAME}} to {{EXAMPLE_TASK}}"</em></li>
-            <li><em>"Use {{PRODUCT_NAME}} to search for tasks I can run today"</em></li>
-            <li><em>"Use {{PRODUCT_NAME}} to show me what categories are available"</em></li>
-          </ul>
-
-          <p>{{PRODUCT_NAME}} will search its skill library and present options. Pick one, and Claude will run the full expert framework (1 credit per use).</p>
-
-          <div class="info-box" style="margin-top:16px;">
-            <h3>💡 Power user tip: skip the trigger entirely with a Project</h3>
-            <p>Create a <strong>Project</strong> in Claude Desktop (e.g., "My Practice" or "My Office") and add this custom instruction:</p>
-            <div class="code-block" style="background:#0c4a6e;border-color:#0c4a6e;text-align:left;"><span class="cmd">"Always use {{PRODUCT_NAME}} tools to answer my questions. Search for the right skill before responding."</span></div>
-            <p>Every conversation in that project will automatically use {{PRODUCT_NAME}} — no trigger needed, ever.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-header"><div class="step-num">7</div><h2>You're set!</h2></div>
-          <p>Try these to explore:</p>
-          <ul>
-            <li><em>"Check my {{PRODUCT_ID}} credits"</em> — see your balance</li>
-            <li><em>"Show {{PRODUCT_ID}} categories"</em> — browse all skill categories</li>
-            <li><em>"Search {{PRODUCT_NAME}} for {{EXAMPLE_TASK}}"</em> — find specific skills</li>
-          </ul>
-        </div>
-        <!-- Manual install fallback (hidden by default) -->
-        <div id="manual-install-section" style="display:none;">
-          <hr class="divider"/>
-          <div class="alert"><strong>Manual setup (Python required)</strong> Only use this if the installer didn't work.</div>
-          <div class="step">
-            <div class="step-header"><div class="step-num">A</div><h2>Requirements</h2></div>
-            <p>Python 3.10+ required. Check: <code>python3 --version</code>. Download from <a href="https://python.org/downloads" target="_blank">python.org</a> if needed.</p>
-          </div>
-          <div class="step">
-            <div class="step-header"><div class="step-num">B</div><h2>Run the Python installer</h2></div>
-            <div class="code-block">
-              <span class="cmd">cd ~/Downloads/{{PRODUCT_ID}}tasksai/mcp</span><br/>
-              <span class="cmd">pip3 install -r requirements.txt</span><br/>
-              <span class="cmd">python3 install.py</span>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-header"><div class="step-num">C</div><h2>Manual config location</h2></div>
-            <ul>
-              <li><strong>Mac:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
-              <li><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
-            </ul>
-            <div class="code-block">
-<span class="key">{</span><br/>
-&nbsp;&nbsp;<span class="val">"mcpServers"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"{{PRODUCT_ID}}tasksai"</span>: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"command"</span>: <span class="cmd">"python3"</span>,<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"args"</span>: [<span class="cmd">"/full/path/to/mcp/server.py"</span>],<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">"env"</span>: { <span class="val">"{{PRODUCT_ID_UPPER}}TASKSAI_LICENSE_KEY"</span>: <span class="cmd">"your-key"</span> }<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-&nbsp;&nbsp;}<br/>
-<span class="key">}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Claude Code ── -->
-      <div id="mcp-claudecode" class="mcp-client-section" style="display:none;">
-        <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the download button above. The installer detects Claude Code automatically and writes to <code>~/.claude.json</code>. If you also have Claude Desktop, it configures both in one pass.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Start a new Claude Code session</h2></div>
-          <p>Restart if one is already running. The MCP server loads at session start.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
-          <div class="code-block"><span class="cmd">"I need help with {{EXAMPLE_TASK}}"</span></div>
-          <p>Or check your balance: <em>"Check my {{PRODUCT_ID}} credits"</em></p>
-        </div>
-      </div>
-
-      <!-- ── Cursor ── -->
-      <div id="mcp-cursor" class="mcp-client-section" style="display:none;">
-        <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the download button above. The installer detects Cursor automatically and configures it.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Restart Cursor</h2></div>
-          <p>Fully quit and reopen Cursor. Go to <strong>Settings → MCP</strong> to confirm <strong>{{PRODUCT_ID}}tasksai</strong> appears.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
-          <div class="code-block"><span class="cmd">"I need help with {{EXAMPLE_TASK}}"</span></div>
-        </div>
-      </div>
-
-      <!-- ── Windsurf ── -->
-      <div id="mcp-windsurf" class="mcp-client-section" style="display:none;">
-        <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the download button above. The installer writes to <code>~/.codeium/windsurf/mcp_config.json</code> automatically.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Restart Windsurf</h2></div>
-          <p>Fully quit and reopen Windsurf. Click the <strong>MCPs icon</strong> (top-right of the Cascade panel) — you should see <strong>{{PRODUCT_ID}}tasksai</strong> listed.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
-          <div class="code-block"><span class="cmd">"I need help with {{EXAMPLE_TASK}}"</span></div>
-        </div>
-      </div>
-
-      <!-- ── Cline ── -->
-      <div id="mcp-cline" class="mcp-client-section" style="display:none;">
-        <div class="step">
-          <div class="step-header"><div class="step-num">1</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the download button above. The installer detects Cline in VS Code and configures it automatically.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">2</div><h2>Reload VS Code</h2></div>
-          <p>Reload the VS Code window (<strong>Cmd/Ctrl+Shift+P → Reload Window</strong>). Open the Cline sidebar → MCP Servers to confirm <strong>{{PRODUCT_ID}}tasksai</strong> is listed.</p>
-        </div>
-        <div class="step">
-          <div class="step-header"><div class="step-num">3</div><h2>Try it</h2></div>
-          <div class="code-block"><span class="cmd">"I need help with {{EXAMPLE_TASK}}"</span></div>
-        </div>
-      </div>
-
-    </div><!-- /path-mcp -->
-
-    <!-- ── Support contact form ── -->
-    <div class="cta-box">
-      <h2>Need Help?</h2>
-      <p>Fill in the form and we'll get back to you within a few hours.</p>
-      <form class="contact-form" id="supportForm">
-        <div>
-          <label for="sf_name">Your name</label>
-          <input type="text" id="sf_name" name="name" placeholder="Jane Smith" required />
-        </div>
-        <div>
-          <label for="sf_email">Your email</label>
-          <input type="email" id="sf_email" name="email" placeholder="jane@example.com" required />
-        </div>
-        <div>
-          <label for="sf_topic">What do you need help with?</label>
-          <select id="sf_topic" name="topic">
-            <option value="">- Select a topic -</option>
-            <option>Installation / setup</option>
-            <option>License key or credits</option>
-            <option>Task not working as expected</option>
-            <option>Billing question</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="sf_msg">Message</label>
-          <textarea id="sf_msg" name="message" placeholder="Describe what's happening..." required></textarea>
-        </div>
-        <button type="submit" id="sf_btn">Send Message</button>
-        <div class="form-success" id="sf_success">✓ Message sent! We'll reply within a few hours.</div>
-      </form>
-    </div>
-
-  </div>
-</div>
+</main>
 
 <footer>
   <div class="container">
-    <p>
-      <a href="/">Home</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="/support">Support</a>
-    </p>
-    <p style="margin-top:12px;">© 2026 {{PRODUCT_NAME}}. All rights reserved.</p>
+    <a href="/">Home</a>
+    <a href="/download.html">Account</a>
+    <a href="/support.html">Support</a>
+    <a href="/privacy.html">Privacy</a>
+    <p style="margin-top:12px;">&copy; 2026 {{PRODUCT_NAME}}</p>
   </div>
 </footer>
 
 <script>
-  // Single entry point for all platform selection
-  function selectPlatform(id, btn) {
-    // Update outer tab highlights
-    document.querySelectorAll('#path-tabs .path-tab').forEach(t => t.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-
-    if (id === 'openclaw') {
-      // Show OpenClaw path, hide MCP path
-      document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
-      document.getElementById('path-openclaw').classList.add('active');
-    } else {
-      // Show MCP path and reveal the correct client section
-      document.querySelectorAll('.path-section').forEach(s => s.classList.remove('active'));
-      document.getElementById('path-mcp').classList.add('active');
-      document.querySelectorAll('.mcp-client-section').forEach(s => s.style.display = 'none');
-      document.getElementById('mcp-' + id).style.display = 'block';
-    }
+  function copyPrompt() {
+    var text = document.getElementById('installPrompt').textContent;
+    navigator.clipboard.writeText(text);
   }
-
-  // On load: read ?platform= param (default claude_desktop → 'claude')
-  (function() {
-    var PLATFORM_MAP = {
-      'claude_desktop': 'claude', 'claude-desktop': 'claude',
-      'claude_code': 'claudecode', 'claude-code': 'claudecode',
-      'cursor': 'cursor', 'windsurf': 'windsurf',
-      'cline': 'cline', 'openclaw': 'openclaw'
-    };
-    var param = new URLSearchParams(window.location.search).get('platform') || 'claude_desktop';
-    var clientId = PLATFORM_MAP[param] || 'claude';
-    // Find matching outer tab button and activate
-    var NAME_MAP = { claude: 'Claude Desktop', cursor: 'Cursor', windsurf: 'Windsurf', cline: 'Cline', claudecode: 'Claude Code', openclaw: 'OpenClaw' };
-    var targetName = NAME_MAP[clientId];
-    var matchBtn = null;
-    document.querySelectorAll('#path-tabs .path-tab').forEach(function(t) {
-      var nm = t.querySelector('.tab-name');
-      if (nm && nm.textContent.trim() === targetName) matchBtn = t;
-    });
-    selectPlatform(clientId, matchBtn);
-  })();
-
-  // ── OS auto-detect for download buttons ────────────────────────────────────
-  (function () {
-    var PRODUCT   = '{{INSTALLER_ASSET_NAME}}';
-    var BASE_URL  = 'https://github.com/laudoluxDev/lawtasksai-mcp/releases/latest/download/';
-    var win_file  = PRODUCT + '-Setup.exe';
-    var mac_file  = PRODUCT + '-Setup';
-
-    var isMac     = /Mac|iPod|iPhone|iPad/.test(navigator.platform ||
-                    navigator.userAgentData && navigator.userAgentData.platform || '');
-
-    var primary   = document.getElementById('btn-primary-dl');
-    var alt       = document.getElementById('btn-alt-dl');
-    var primLabel = document.getElementById('btn-primary-label');
-    var altLabel  = document.getElementById('btn-alt-label');
-    var primIcon  = document.getElementById('btn-primary-icon');
-
-    if (isMac) {
-      primary.href    = BASE_URL + mac_file;
-      alt.href        = BASE_URL + win_file;
-      primLabel.textContent = 'Download for Mac';
-      altLabel.textContent  = 'Download for Windows instead';
-      primIcon.textContent  = '⬇';
-    } else {
-      primary.href    = BASE_URL + win_file;
-      alt.href        = BASE_URL + mac_file;
-      primLabel.textContent = 'Download for Windows';
-      altLabel.textContent  = 'Download for Mac instead';
-      primIcon.textContent  = '⬇';
-      // Auto-show SmartScreen notice for Windows users
-      var ssNotice = document.getElementById('smartscreen-notice');
-      if (ssNotice) ssNotice.style.display = 'block';
-    }
-  })();
-
-  (function () {
-    var form = document.getElementById('supportForm');
-    if (!form) return;
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      var btn     = document.getElementById('sf_btn');
-      var success = document.getElementById('sf_success');
-      btn.disabled    = true;
-      btn.textContent = 'Sending...';
-      var payload = {
-        name:    document.getElementById('sf_name').value.trim(),
-        email:   document.getElementById('sf_email').value.trim(),
-        topic:   document.getElementById('sf_topic').value,
-        message: document.getElementById('sf_msg').value.trim(),
-        product: '{{PRODUCT_NAME}}'
-      };
-      try {
-        var res = await fetch('https://api.lawtasksai.com/v1/support', {
-          method: 'POST',
-          body: JSON.stringify(payload),
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
-        });
-        if (res.ok || res.status === 204) {
-          form.reset();
-          success.style.display = 'block';
-          btn.style.display = 'none';
-        } else {
-          btn.disabled    = false;
-          btn.textContent = 'Send Message';
-          alert('Something went wrong. Please email us directly at hello@{{DOMAIN}}');
-        }
-      } catch (err) {
-        btn.disabled    = false;
-        btn.textContent = 'Send Message';
-        alert('Something went wrong. Please email us directly at hello@{{DOMAIN}}');
-      }
-    });
-  })();
 </script>
-
 </body>
 </html>

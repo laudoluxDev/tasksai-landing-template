@@ -127,6 +127,7 @@
     var p = window.location.pathname.replace(/\/$/, "") || "/";
     if (p === "" || p === "/" || p.endsWith("/index.html")) return "/";
     if (p.indexOf("task-library") > -1) return "/task-library.html";
+    if (p.indexOf("install") > -1) return "/install.html";
     if (p.indexOf("getting-started") > -1) return "/getting-started.html";
     if (p.indexOf("download") > -1) return "/download.html";
     if (p.indexOf("support") > -1) return "/support.html";
@@ -139,7 +140,7 @@
   var navItems = [
     { href: "/",                    label: "Home" },
     { href: "/task-library.html",   label: "Task Library" },
-    { href: "/getting-started.html",label: "Install" },
+    { href: "/install.html",         label: "Install" },
     { href: "/getting-started.html",label: "Getting Started" },
     { href: "/download.html",       label: "Login" },
     { href: "/download.html",       label: "Credit Balance" },

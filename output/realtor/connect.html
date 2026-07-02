@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect RealtorTasksAI</title>
+  <meta name="description" content="Approve a RealtorTasksAI MCP browser connection." />
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV4V3CJLYW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GV4V3CJLYW');
+</script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --accent: #0EA5E9; }
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; line-height: 1.6; min-height: 100vh; }
+    .wrap { max-width: 620px; margin: 0 auto; padding: 48px 24px; }
+    .card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 30px; box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08); }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; text-align: center; }
+    .sub { color: #4b5563; text-align: center; margin-bottom: 24px; }
+    label { display: block; font-weight: 700; margin: 16px 0 6px; }
+    input { width: 100%; border: 2px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; font: inherit; }
+    input:focus { outline: none; border-color: var(--accent); }
+    .hint { color: #6b7280; font-size: 0.88rem; margin-top: 6px; }
+    .btn { width: 100%; margin-top: 20px; border: 0; border-radius: 8px; padding: 13px 18px; background: var(--accent); color: #ffffff; font-weight: 800; font: inherit; cursor: pointer; }
+    .btn:disabled { opacity: 0.55; cursor: default; }
+    .message { display: none; border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-size: 0.94rem; }
+    .message.ok { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .message.err { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .fallback { margin-top: 22px; padding-top: 18px; border-top: 1px solid #e5e7eb; }
+    .fallback summary { cursor: pointer; color: var(--accent); font-weight: 700; }
+    .identity { margin-top: 22px; color: #6b7280; font-size: 0.86rem; text-align: center; }
+    .identity a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<div id="site-header"></div>
+<script src="/header.js"></script>
+
+<main class="wrap">
+  <div class="card">
+    <h1>Connect RealtorTasksAI</h1>
+    <p class="sub">Approve the connection code shown by the GitHub installer.</p>
+
+    <label for="code">Connection Code</label>
+    <input id="code" autocomplete="one-time-code" placeholder="ABCD-1234" />
+    <p class="hint">The installer shows this short code during browser connection.</p>
+
+    <label for="email">Account Email</label>
+    <input id="email" type="email" autocomplete="email" placeholder="you@example.com" />
+    <p class="hint">Use the email you used for RealtorTasksAI signup or purchase.</p>
+
+    <button id="approveBtn" class="btn" type="button" onclick="approve()">Approve Connection</button>
+    <div id="message" class="message"></div>
+
+    <details class="fallback">
+      <summary>Use license key instead</summary>
+      <label for="license">License Key</label>
+      <input id="license" placeholder="Paste your license key" />
+      <p class="hint">License key is a backup if email approval cannot find your account.</p>
+    </details>
+
+    <p class="identity">
+      Product ID: <strong>realtor</strong><br />
+      Official repo: <a href="https://github.com/laudoluxDev/realtortasksai-mcp" target="_blank" rel="noopener">laudoluxDev/realtortasksai-mcp</a>
+    </p>
+  </div>
+</main>
+
+<script>
+  var API_BASE = 'https://api.lawtasksai.com';
+  var PRODUCT_ID = 'realtor';
+
+  (function prefill() {
+    var params = new URLSearchParams(window.location.search);
+    var code = params.get('code');
+    var product = params.get('product');
+    if (code) document.getElementById('code').value = code;
+    if (product && product !== PRODUCT_ID) {
+      show('This connection was started for a different product. Please restart the RealtorTasksAI installer.', 'err');
+    }
+  })();
+
+  function show(text, type) {
+    var msg = document.getElementById('message');
+    msg.textContent = text;
+    msg.className = 'message ' + type;
+  }
+
+  async function approve() {
+    var btn = document.getElementById('approveBtn');
+    var userCode = document.getElementById('code').value.trim().toUpperCase();
+    var email = document.getElementById('email').value.trim();
+    var license = document.getElementById('license').value.trim();
+    if (!userCode) { show('Enter the connection code shown by the installer.', 'err'); return; }
+    if (!email && !license) { show('Enter your account email, or use license key as backup.', 'err'); return; }
+    btn.disabled = true;
+    btn.textContent = 'Approving...';
+    try {
+      var payload = { user_code: userCode };
+      if (license) payload.license_key = license;
+      else payload.email = email;
+      var res = await fetch(API_BASE + '/v1/mcp/connect/approve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+        body: JSON.stringify(payload)
+      });
+      var data = await res.json().catch(function () { return {}; });
+      if (!res.ok) throw new Error(data.detail || 'Connection could not be approved.');
+      show('Connection approved. Return to your AI assistant to finish installation.', 'ok');
+      btn.textContent = 'Approved';
+    } catch (err) {
+      show(err.message || 'Connection could not be approved.', 'err');
+      btn.disabled = false;
+      btn.textContent = 'Approve Connection';
+    }
+  }
+</script>
+</body>
+</html>
