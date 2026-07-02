@@ -578,12 +578,14 @@
         <span class="credits-num">${lic.credits_remaining}</span>
         <span class="credits-label">credits remaining</span>
       </div>
+      <div id="balance-message" style="display:none;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:10px 12px;margin:-4px 0 14px;color:#065f46;font-size:0.88rem;"></div>
       <div class="license-box">
         <span class="license-key" id="cur-key-display">${lic.license_key}</span>
         <button class="copy-btn" onclick="copyKey('${lic.license_key}', this)">Copy</button>
       </div>
       <div class="action-row">
         <button class="dl-btn" onclick="downloadInstaller('${lic.license_key}')">⬇ Download Installer</button>
+        <button class="buy-btn" style="border:0;cursor:pointer;" onclick="refreshCurrentBalance('${lic.license_key}', this)">Reveal Credits</button>
         <a href="/buy-credits.html" class="buy-btn">Buy More Credits</a>
       </div>
       <div id="mac-notice" style="display:none;background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:0.875rem;color:#92400e;">
@@ -688,6 +690,37 @@
     const orig = btn.textContent;
     btn.textContent = 'Copied!';
     setTimeout(() => btn.textContent = orig, 2000);
+  }
+
+  async function refreshCurrentBalance(licenseKey, btn) {
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Checking…';
+    try {
+      const res = await fetch(`${API_BASE}/v1/credits/balance`, {
+        headers: { 'Authorization': `Bearer ${licenseKey}`, 'X-Product-ID': PRODUCT_ID }
+      });
+      if (!res.ok) throw new Error('balance unavailable');
+      const data = await res.json();
+      const num = document.querySelector('.vertical-card.current .credits-num');
+      if (num) num.textContent = data.credits_balance || 0;
+      const msg = document.getElementById('balance-message');
+      if (msg) {
+        msg.textContent = `Your current balance is ${data.credits_balance || 0} credits.`;
+        msg.style.display = 'block';
+      }
+    } catch (e) {
+      const msg = document.getElementById('balance-message');
+      if (msg) {
+        msg.textContent = 'Could not refresh your balance. Please try again.';
+        msg.style.display = 'block';
+        msg.style.background = '#fef2f2';
+        msg.style.borderColor = '#fecaca';
+        msg.style.color = '#991b1b';
+      }
+    }
+    btn.disabled = false;
+    btn.textContent = original;
   }
 
   function downloadInstaller(licenseKey) {

@@ -17,6 +17,14 @@ OUTPUT_DIR = BASE_DIR / "output"
 
 # ── Helpers ────────────────────────────────────────────────────────────────
 
+def _installer_asset_name(product_name: str, product_id: str) -> str:
+    """Return the GitHub release asset base name for installer downloads."""
+    overrides = {
+        "church": "ChurchTasksAI",
+    }
+    return overrides.get(product_id, product_name)
+
+
 def build_logo_html(product_name: str, accent_color: str) -> str:
     """Split ProductNameTasksAI into logo with <span> around 'AI'."""
     if product_name.endswith("TasksAI"):
@@ -895,6 +903,7 @@ def main():
                 tasks_list = v.get("sample_tasks", [])
                 example_task = tasks_list[0] if tasks_list else f"a {v.get('occupation', slug)} task"
                 product_id_upper = product_id.upper() + "TASKSAI"
+                installer_asset_name = v.get("installer_asset_name") or _installer_asset_name(product_name, product_id)
                 mcp_page = mcp_tmpl \
                     .replace("{{PRODUCT_NAME}}", product_name) \
                     .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
@@ -902,6 +911,7 @@ def main():
                     .replace("{{DOMAIN}}", domain) \
                     .replace("{{PRODUCT_ID}}", product_id) \
                     .replace("{{PRODUCT_ID_UPPER}}", product_id_upper) \
+                    .replace("{{INSTALLER_ASSET_NAME}}", installer_asset_name) \
                     .replace("{{LOGO_HTML}}", logo_split) \
                     .replace("{{EXAMPLE_TASK}}", example_task) \
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))

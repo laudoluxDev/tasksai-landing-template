@@ -290,7 +290,7 @@
 
         <div class="step">
           <div class="step-header"><div class="step-num">2</div><h2>Download &amp; run the installer</h2></div>
-          <p>Use the green download button above. Double-click <code>{{PRODUCT_NAME}}-Setup.exe</code> (Windows) or <code>{{PRODUCT_NAME}}-Setup</code> (Mac).</p>
+          <p>Use the green download button above. Double-click <code>{{INSTALLER_ASSET_NAME}}-Setup.exe</code> (Windows) or <code>{{INSTALLER_ASSET_NAME}}-Setup</code> (Mac).</p>
           <ol>
             <li>Enter your license key (from your signup email)</li>
             <li>Click <strong>Verify</strong> to confirm your key works</li>
@@ -598,10 +598,10 @@
 
   // ── OS auto-detect for download buttons ────────────────────────────────────
   (function () {
-    var PRODUCT   = '{{PRODUCT_NAME}}';
+    var PRODUCT   = '{{INSTALLER_ASSET_NAME}}';
     var BASE_URL  = 'https://github.com/laudoluxDev/lawtasksai-mcp/releases/latest/download/';
     var win_file  = PRODUCT + '-Setup.exe';
-    var mac_file  = PRODUCT + '-Setup-mac';
+    var mac_file  = PRODUCT + '-Setup';
 
     var isMac     = /Mac|iPod|iPhone|iPad/.test(navigator.platform ||
                     navigator.userAgentData && navigator.userAgentData.platform || '');
