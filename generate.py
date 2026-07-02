@@ -408,18 +408,132 @@ def build_schema_offers(show_tryit: bool) -> str:
     return f"[\n{inner}\n        ]"
 
 
-def build_ga_tag(ga_id: str) -> str:
-    """Build the Google Analytics script tag, or empty string if no GA ID."""
-    if not ga_id:
+def build_ga_tag(ga_id: str, ads_id: str = "") -> str:
+    """Build Google gtag setup, or empty string if no Google IDs are configured."""
+    ids = [item for item in [ga_id, ads_id] if item]
+    if not ids:
         return ""
+    config_lines = "\n".join(f"  gtag('config', '{item}');" for item in ids)
     return f"""<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={ga_id}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={ids[0]}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
-  gtag('config', '{ga_id}');
+{config_lines}
 </script>"""
+
+
+def _ads_send_to(ads_id: str, conversion_label: str) -> str:
+    """Return a Google Ads send_to value, or empty string when incomplete."""
+    if not ads_id or not conversion_label:
+        return ""
+    return f"{ads_id}/{conversion_label}"
+
+
+def build_signup_tracking_js(vertical: dict) -> str:
+    """Build signup tracking helper with optional Google Ads conversion callback."""
+    send_to = _ads_send_to(
+        vertical.get("google_ads_id", ""),
+        vertical.get("google_ads_signup_conversion_label", ""),
+    )
+    if not send_to:
+        return """function trackSignupAndRedirect(doRedirect) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'sign_up', {
+                    method: 'email',
+                    event_callback: doRedirect,
+                    event_timeout: 2000
+                });
+            } else {
+                doRedirect();
+            }
+        }"""
+    return f"""function trackSignupAndRedirect(doRedirect) {{
+            if (typeof gtag === 'undefined') {{
+                doRedirect();
+                return;
+            }}
+            let didRedirect = false;
+            const redirectOnce = () => {{
+                if (didRedirect) return;
+                didRedirect = true;
+                doRedirect();
+            }};
+            gtag('event', 'sign_up', {{ method: 'email' }});
+            gtag('event', 'conversion', {{
+                send_to: '{send_to}',
+                event_callback: redirectOnce,
+                event_timeout: 2000
+            }});
+            setTimeout(redirectOnce, 2200);
+        }}"""
+
+
+def build_checkout_tracking_js(vertical: dict) -> str:
+    """Build checkout-start tracking helper with optional Google Ads conversion callback."""
+    send_to = _ads_send_to(
+        vertical.get("google_ads_id", ""),
+        vertical.get("google_ads_checkout_conversion_label", ""),
+    )
+    if not send_to:
+        return """function trackCheckoutStartAndRedirect(checkoutUrl, pack) {
+            window.location.href = checkoutUrl;
+        }"""
+    return f"""function trackCheckoutStartAndRedirect(checkoutUrl, pack) {{
+            if (typeof gtag === 'undefined') {{
+                window.location.href = checkoutUrl;
+                return;
+            }}
+            let didRedirect = false;
+            const redirectOnce = () => {{
+                if (didRedirect) return;
+                didRedirect = true;
+                window.location.href = checkoutUrl;
+            }};
+            gtag('event', 'begin_checkout', {{ product_id: PRODUCT_ID, pack: pack }});
+            gtag('event', 'conversion', {{
+                send_to: '{send_to}',
+                event_callback: redirectOnce,
+                event_timeout: 2000
+            }});
+            setTimeout(redirectOnce, 2200);
+        }}"""
+
+
+def build_purchase_tracking_js(vertical: dict) -> str:
+    """Build purchase tracking helper with optional Google Ads conversion."""
+    send_to = _ads_send_to(
+        vertical.get("google_ads_id", ""),
+        vertical.get("google_ads_purchase_conversion_label", ""),
+    )
+    if not send_to:
+        return """function trackPurchaseIfConfigured(sessionId, data) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'purchase', {
+                    transaction_id: sessionId,
+                    product_id: PRODUCT_ID,
+                    credits: data.credits_purchased || 0
+                });
+            }
+        }"""
+    return f"""function trackPurchaseIfConfigured(sessionId, data) {{
+            if (typeof gtag === 'undefined' || !sessionId) return;
+            const storageKey = 'ads_purchase_tracked_' + PRODUCT_ID + '_' + sessionId;
+            try {{
+                if (sessionStorage.getItem(storageKey)) return;
+                sessionStorage.setItem(storageKey, '1');
+            }} catch (e) {{}}
+            gtag('event', 'purchase', {{
+                transaction_id: sessionId,
+                product_id: PRODUCT_ID,
+                credits: data.credits_purchased || 0
+            }});
+            gtag('event', 'conversion', {{
+                send_to: '{send_to}',
+                transaction_id: sessionId
+            }});
+        }}"""
 
 
 def generate_page(template: str, vertical: dict) -> str:
@@ -521,7 +635,7 @@ def generate_page(template: str, vertical: dict) -> str:
     api_base = vertical.get("api_base", "https://api.lawtasksai.com")
 
     # Build GA tag (empty string if no GA ID)
-    ga_tag = build_ga_tag(vertical.get("ga_measurement_id", ""))
+    ga_tag = build_ga_tag(vertical.get("ga_measurement_id", ""), vertical.get("google_ads_id", ""))
 
     # New optional fields
     pricing_tiers = vertical.get("pricing_tiers", [])
@@ -638,6 +752,9 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{SCHEMA_OFFERS}}": build_schema_offers(show_tryit),
         "{{TRYIT_CARD}}": "",
         "{{GA_TAG}}": ga_tag,
+        "{{SIGNUP_TRACKING_JS}}": build_signup_tracking_js(vertical),
+        "{{CHECKOUT_TRACKING_JS}}": build_checkout_tracking_js(vertical),
+        "{{PURCHASE_TRACKING_JS}}": build_purchase_tracking_js(vertical),
         "{{TESTIMONIALS_SECTION}}": testimonials_section,
         "{{COMPLIANCE_SECTION}}": compliance_section,
         "{{PRICING_CARDS}}": pricing_cards,
@@ -742,7 +859,8 @@ def main():
                     .replace("{{PRODUCT_ID_UPPER}}", product_id.upper()) \
                     .replace("{{PRODUCT_ID}}", product_id) \
                     .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com")) \
-                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", ""))) \
+                    .replace("{{PURCHASE_TRACKING_JS}}", build_purchase_tracking_js(v))
                 (out_dir / "success.html").write_text(success_page, encoding="utf-8")
 
             # Generate signup.html — use waitlist template for verticals without an installer
@@ -764,6 +882,7 @@ def main():
                     .replace("{{PRODUCT_ID}}", product_id) \
                     .replace("{{API_BASE}}", v.get("api_base", "https://api.lawtasksai.com")) \
                     .replace("{{GA_MEASUREMENT_ID}}", v.get("ga_measurement_id", "")) \
+                    .replace("{{SIGNUP_TRACKING_JS}}", build_signup_tracking_js(v)) \
                     .replace("{{PROFESSION}}", profession) \
                     .replace("{{PROFESSIONALS}}", professionals) \
                     .replace("{{ROLE_TITLE}}", role_title)
@@ -785,7 +904,7 @@ def main():
                     .replace("{{PRODUCT_ID_UPPER}}", product_id_upper) \
                     .replace("{{LOGO_HTML}}", logo_split) \
                     .replace("{{EXAMPLE_TASK}}", example_task) \
-                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
                 (out_dir / "getting-started.html").write_text(mcp_page, encoding="utf-8")
 
             # Generate download.html (account portal)
@@ -812,7 +931,7 @@ def main():
                     .replace("{{ACCENT_COLOR}}", accent) \
                     .replace("{{DOMAIN}}", domain) \
                     .replace("{{LICENSE_KEY_PREFIX}}", lic_prefix) \
-                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
                 (out_dir / "download.html").write_text(dl_page, encoding="utf-8")
 
             # Generate header.js
@@ -896,7 +1015,8 @@ def main():
                         .replace("{{API_COST_DISCLAIMER_BOTTOM_TEXT}}", api_cost_disclaimer_bottom_text) \
                         .replace("{{API_BASE}}", _api_base) \
                         .replace("{{FOOTER}}", footer_html) \
-                        .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                        .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", ""))) \
+                        .replace("{{CHECKOUT_TRACKING_JS}}", build_checkout_tracking_js(v))
                     (out_dir / out_name).write_text(rendered, encoding="utf-8")
 
             # ── Blog posts ────────────────────────────────────────────────────
@@ -930,7 +1050,7 @@ def main():
                     .replace("{{SUPPORT_EMAIL}}", _support_email) \
                     .replace("{{EXAMPLE_TASK}}", example_task) \
                     .replace("{{EXAMPLE_TASK_CHIPS_PREFIXED}}", _prefixed_chips) \
-                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", "")))
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
                 (blog_dir / blog_out_name).write_text(rendered_blog, encoding="utf-8")
 
             # Quick sanity check: no unreplaced placeholders

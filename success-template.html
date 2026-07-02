@@ -412,6 +412,7 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
 
     const API_BASE = '{{API_BASE}}';
     const PRODUCT_ID = '{{PRODUCT_ID}}';
+    {{PURCHASE_TRACKING_JS}}
 
     async function loadPurchaseDetails() {
         const params = new URLSearchParams(window.location.search);
@@ -439,6 +440,7 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
                 document.getElementById('total-credits').textContent = data.total_credits || '—';
                 document.getElementById('license-key').textContent = data.license_key || '—';
                 document.getElementById('download-btn').href = `${API_BASE}/download/loader?session_id=${sessionId}`;
+                trackPurchaseIfConfigured(sessionId, data);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
                 return;

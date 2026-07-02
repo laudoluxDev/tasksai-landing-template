@@ -450,6 +450,7 @@
 
     <script>
         const API_BASE = '{{API_BASE}}';
+        {{SIGNUP_TRACKING_JS}}
 
         // Platform UI
         function updatePlatformUI() {
@@ -546,17 +547,8 @@
                         sessionStorage.setItem('signup_email', email);
                         sessionStorage.setItem('signup_platforms', JSON.stringify(selectedPlatforms));
                     } catch(e) {}
-                    // GA4 signup event — use event_callback to ensure beacon sends before redirect
                     const doRedirect = () => { window.location.href = '/success.html?signup=1'; };
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'sign_up', {
-                            method: 'email',
-                            event_callback: doRedirect,
-                            event_timeout: 2000
-                        });
-                    } else {
-                        doRedirect();
-                    }
+                    trackSignupAndRedirect(doRedirect);
                 } else {
                     const data = await res.json().catch(() => ({}));
                     if (res.status === 400 && data.detail && data.detail.includes('already registered')) {

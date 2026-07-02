@@ -1099,6 +1099,9 @@
     <script>
         const API_BASE = 'https://api.lawtasksai.com';
         const PRODUCT_ID = 'eventplanner';
+        function trackCheckoutStartAndRedirect(checkoutUrl, pack) {
+            window.location.href = checkoutUrl;
+        }
 
         function checkout(pack) {
             document.getElementById('emailModalPack').value = pack;
@@ -1138,7 +1141,7 @@
                 });
                 const data = await response.json();
                 if (data.checkout_url) {
-                    window.location.href = data.checkout_url;
+                    trackCheckoutStartAndRedirect(data.checkout_url, pack);
                 } else {
                     alert('Unable to start checkout. Please try again or contact support.');
                 }

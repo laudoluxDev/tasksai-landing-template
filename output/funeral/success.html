@@ -412,6 +412,15 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
 
     const API_BASE = 'https://api.lawtasksai.com';
     const PRODUCT_ID = 'funeral';
+    function trackPurchaseIfConfigured(sessionId, data) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'purchase', {
+                    transaction_id: sessionId,
+                    product_id: PRODUCT_ID,
+                    credits: data.credits_purchased || 0
+                });
+            }
+        }
 
     async function loadPurchaseDetails() {
         const params = new URLSearchParams(window.location.search);
@@ -439,6 +448,7 @@ Windows: %APPDATA%\Claude\claude_desktop_config.json</div>
                 document.getElementById('total-credits').textContent = data.total_credits || '—';
                 document.getElementById('license-key').textContent = data.license_key || '—';
                 document.getElementById('download-btn').href = `${API_BASE}/download/loader?session_id=${sessionId}`;
+                trackPurchaseIfConfigured(sessionId, data);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
                 return;
