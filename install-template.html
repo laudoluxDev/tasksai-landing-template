@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Install MortuaryTasksAI</title>
-  <meta name="description" content="Install MortuaryTasksAI with Claude Desktop, Cursor, Codex, Windsurf, or another MCP-compatible AI assistant.">
-  <link rel="canonical" href="https://mortuarytasksai.com/install.html">
+  <title>Install {{PRODUCT_NAME}}</title>
+  <meta name="description" content="Install {{PRODUCT_NAME}} with Claude Desktop, Cursor, Codex, Windsurf, or another MCP-compatible AI assistant.">
+  <link rel="canonical" href="https://{{DOMAIN}}/install.html">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
+  {{GA_TAG}}
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --accent: #334155; }
+    :root { --accent: {{ACCENT_COLOR}}; }
     body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; line-height: 1.6; }
     .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
     main { background: #f8fafc; min-height: calc(100vh - 64px); }
@@ -50,7 +50,7 @@
 <main>
   <section class="install-hero">
     <div class="container">
-      <h1>Install MortuaryTasksAI with your AI assistant.</h1>
+      <h1>Install {{PRODUCT_NAME}} with your AI assistant.</h1>
       <p>Use Claude Desktop, Cursor, Codex, Windsurf, or another MCP-compatible client. Your assistant reads the official GitHub manifest, chooses the right installer path for your machine, connects your account, and verifies the setup.</p>
     </div>
   </section>
@@ -64,23 +64,23 @@
           <span class="prompt-label">Install prompt</span>
           <button class="button secondary" id="copyPromptButton" type="button">Copy Prompt</button>
         </div>
-        <div class="prompt-box" id="installPrompt">Please install MortuaryTasksAI from https://github.com/laudoluxDev/mortuarytasksai-mcp. Read the repository's agent-install.json, verify that it is the official installer for mortuarytasksai.com, run the official installer command, connect my MortuaryTasksAI account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
+        <div class="prompt-box" id="installPrompt">Please install {{PRODUCT_NAME}} from https://github.com/laudoluxDev/{{REPO_SLUG}}-mcp. Read the repository's agent-install.json, verify that it is the official installer for {{DOMAIN}}, run the official installer command, connect my {{PRODUCT_NAME}} account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
         <div class="copy-status" id="copyPromptStatus" aria-live="polite"></div>
 
         <ol class="steps">
           <li>Open Claude Desktop, Cursor, Codex, Windsurf, or another MCP-capable AI assistant.</li>
           <li>Paste the prompt above.</li>
-          <li>Approve the connection in your browser if prompted. Use the email for your MortuaryTasksAI account; manual license-key entry is only a backup.</li>
+          <li>Approve the connection in your browser if prompted. Use the email for your {{PRODUCT_NAME}} account; manual license-key entry is only a backup.</li>
           <li>Restart your AI assistant if prompted.</li>
-          <li>Ask: <strong>Check my MortuaryTasksAI credit balance.</strong></li>
+          <li>Ask: <strong>Check my {{PRODUCT_NAME}} credit balance.</strong></li>
         </ol>
 
         <div class="note">
-          MortuaryTasksAI servers handle authentication, credits, catalog/search metadata, and licensed skill delivery. MortuaryTasksAI does not process your task content. Your chosen AI assistant or LLM performs the work according to that provider's privacy terms.
+          {{PRODUCT_NAME}} servers handle authentication, credits, catalog/search metadata, and licensed skill delivery. {{PRODUCT_NAME}} does not process your task content. Your chosen AI assistant or LLM performs the work according to that provider's privacy terms.
         </div>
 
         <div class="note">
-          If your assistant says npm or npx is unavailable, install Node.js first. Node.js is a standard helper app used by many developer tools, and it includes npm and npx automatically. Go to <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>, download the recommended installer for your computer, run it, then paste the MortuaryTasksAI prompt again.
+          If your assistant says npm or npx is unavailable, install Node.js first. Node.js is a standard helper app used by many developer tools, and it includes npm and npx automatically. Go to <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>, download the recommended installer for your computer, run it, then paste the {{PRODUCT_NAME}} prompt again.
         </div>
       </div>
 
@@ -105,14 +105,14 @@
 
 <footer>
   <div class="container">
-    <a href="/index.html" class="logo" style="color:#ffffff;">Mortuary<span>TasksAI</span></a>
+    <a href="/index.html" class="logo" style="color:#ffffff;">{{PRODUCT_NAME_SPLIT}}</a>
     <div class="footer-links">
       <a href="/getting-started.html">Getting Started</a>
       <a href="/task-library.html">Task Library</a>
       <a href="/download.html">Account</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy</a>
-      <a href="mailto:support@mortuarytasksai.com">support@mortuarytasksai.com</a>
+      <a href="mailto:support@{{DOMAIN}}">support@{{DOMAIN}}</a>
     </div>
     <p style="margin-top:16px;color:#94a3b8;">&copy; 2026 Laudo Lux, LLC</p>
   </div>

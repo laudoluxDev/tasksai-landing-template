@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Install SalonTasksAI</title>
-  <meta name="description" content="Install SalonTasksAI from the official GitHub MCP repository and connect your account in the browser." />
+  <meta name="description" content="Install SalonTasksAI with Claude Desktop, Cursor, Codex, Windsurf, or another MCP-compatible AI assistant.">
+  <link rel="canonical" href="https://salontasksai.com/install.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N14JL8C4EC"></script>
 <script>
@@ -17,34 +19,34 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --accent: #DB2777; }
     body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; line-height: 1.6; }
-    .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
-    .hero { background: #ffffff; border-bottom: 1px solid #e5e7eb; padding: 56px 0 36px; text-align: center; }
-    .eyebrow { color: var(--accent); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-    h1 { font-size: 2.15rem; line-height: 1.15; margin-bottom: 12px; }
-    .hero p { color: #4b5563; font-size: 1.05rem; max-width: 690px; margin: 0 auto; }
-    main { padding: 40px 0 72px; }
-    .panel { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 28px; margin-bottom: 22px; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05); }
-    .panel h2 { font-size: 1.2rem; margin-bottom: 10px; }
-    .panel p, .panel li { color: #4b5563; }
-    .steps { counter-reset: step; display: grid; gap: 16px; }
-    .step { display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; }
-    .num { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--accent); color: #ffffff; font-weight: 800; }
-    .code { background: #0f172a; color: #e5e7eb; border-radius: 8px; padding: 18px 20px; margin: 14px 0; overflow-x: auto; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.92rem; line-height: 1.7; white-space: pre-wrap; }
-    .copy-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-    .btn { appearance: none; border: 0; border-radius: 8px; background: var(--accent); color: #ffffff; font-weight: 800; padding: 12px 18px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
-    .btn.secondary { background: #ffffff; color: var(--accent); border: 2px solid var(--accent); }
-    .identity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
-    .identity { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; }
-    .identity strong { display: block; color: #111827; font-size: 0.82rem; margin-bottom: 4px; }
-    .identity span, .identity a { color: #4b5563; font-size: 0.92rem; word-break: break-word; }
-    .note { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; border-radius: 8px; padding: 14px 16px; margin-top: 14px; }
-    .warn { background: #fffbeb; border: 1px solid #fcd34d; color: #92400e; border-radius: 8px; padding: 14px 16px; margin-top: 14px; }
-    footer { background: #111827; color: #9ca3af; padding: 32px 0; text-align: center; font-size: 0.9rem; }
-    footer a { color: #d1d5db; text-decoration: none; margin: 0 10px; }
-    @media (max-width: 640px) {
-      h1 { font-size: 1.7rem; }
-      .panel { padding: 22px; }
-      .step { grid-template-columns: 1fr; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    main { background: #f8fafc; min-height: calc(100vh - 64px); }
+    .install-hero { padding: 72px 0 40px; background: #ffffff; border-bottom: 1px solid #e2e8f0; }
+    .install-hero h1 { max-width: 860px; font-size: 3rem; line-height: 1.08; letter-spacing: 0; margin-bottom: 18px; }
+    .install-hero p { max-width: 760px; color: #374151; font-size: 1.12rem; }
+    .install-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr); gap: 28px; padding: 40px 0 72px; }
+    .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 28px; }
+    .panel h2 { font-size: 1.35rem; margin-bottom: 12px; }
+    .panel p, .panel li { color: #1f2937; }
+    .steps { margin: 22px 0 0; padding-left: 22px; }
+    .steps li { margin-bottom: 14px; }
+    .prompt-header { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; margin-top: 18px; }
+    .prompt-label { color: #374151; font-weight: 700; }
+    .prompt-box { background: #0f172a; color: #e5e7eb; border-radius: 8px; padding: 20px; margin: 10px 0 0; overflow-x: auto; font-family: Menlo, Monaco, Consolas, monospace; font-size: 0.94rem; line-height: 1.6; }
+    .copy-status { color: #166534; font-size: 0.92rem; font-weight: 700; min-height: 1.4em; }
+    .note { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; padding: 16px 18px; border-radius: 8px; margin-top: 18px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    button.button { border: 0; cursor: pointer; font: inherit; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; border-radius: 7px; text-decoration: none; font-weight: 700; }
+    .button.primary { background: var(--accent); color: #ffffff; }
+    .button.secondary { background: #e5e7eb; color: #0f172a; }
+    footer { background: #0f172a; color: #cbd5e1; padding: 32px 0; }
+    footer a { color: #cbd5e1; text-decoration: none; }
+    footer a:hover { color: #ffffff; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; }
+    @media (max-width: 860px) {
+      .install-hero h1 { font-size: 2.25rem; }
+      .install-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -52,104 +54,117 @@
 <div id="site-header"></div>
 <script src="/header.js"></script>
 
-<section class="hero">
-  <div class="container">
-    <div class="eyebrow">Official GitHub MCP Install</div>
-    <h1>Install SalonTasksAI from GitHub</h1>
-    <p>Use the official public MCP wrapper repo, then connect your account through the browser. Your SalonTasksAI task content stays with your chosen AI client or provider; the TasksAI API handles identity, credits, catalog access, and licensed skill delivery.</p>
-  </div>
-</section>
-
 <main>
-  <div class="container">
-    <section class="panel">
-      <h2>Copy This Install Prompt</h2>
-      <p>Paste this into Claude Desktop, Cursor, Codex, or another MCP-capable AI assistant.</p>
-      <div class="code" id="installPrompt">Please install SalonTasksAI from https://github.com/laudoluxDev/salontasksai-mcp. Read the repository's agent-install.json, verify that it is the official installer for salontasksai.com, run the official installer command, connect my SalonTasksAI account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
-      <div class="copy-row">
-        <button class="btn" type="button" onclick="copyPrompt()">Copy Prompt</button>
-        <a class="btn secondary" href="https://github.com/laudoluxDev/salontasksai-mcp" target="_blank" rel="noopener">Open GitHub Repo</a>
-        <a class="btn secondary" href="/connect.html">Open Browser Connect</a>
-      </div>
-      <div class="note">The installer uses <strong>npx @tasksai/install</strong>. If your AI assistant says npx is missing, install Node.js from nodejs.org, then paste the prompt again.</div>
-    </section>
+  <section class="install-hero">
+    <div class="container">
+      <h1>Install SalonTasksAI with your AI assistant.</h1>
+      <p>Use Claude Desktop, Cursor, Codex, Windsurf, or another MCP-compatible client. Your assistant reads the official GitHub manifest, chooses the right installer path for your machine, connects your account, and verifies the setup.</p>
+    </div>
+  </section>
 
-    <section class="panel">
-      <h2>What Happens During Install</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <div>
-            <strong>The assistant reads the manifest</strong>
-            <p>It checks <code>agent-install.json</code> in the official SalonTasksAI repo and verifies the repo/domain identity before running anything.</p>
-          </div>
+  <section class="container">
+    <div class="install-grid">
+      <div class="panel">
+        <h2>Recommended install</h2>
+        <p>Copy this prompt into your AI assistant:</p>
+        <div class="prompt-header">
+          <span class="prompt-label">Install prompt</span>
+          <button class="button secondary" id="copyPromptButton" type="button">Copy Prompt</button>
         </div>
-        <div class="step">
-          <div class="num">2</div>
-          <div>
-            <strong>The official installer runs</strong>
-            <p>The manifest points to the shared <code>@tasksai/install</code> package with this vertical's product id: <code>salon</code>.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <div>
-            <strong>You connect your account in the browser</strong>
-            <p>The installer shows a short connection code and opens <a href="/connect.html">this site's connect page</a>. Approve with your account email. License-key entry is only a backup.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <div>
-            <strong>The assistant confirms the install</strong>
-            <p>It runs the health check, tells you whether to restart your MCP client, and confirms your SalonTasksAI credit balance.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="prompt-box" id="installPrompt">Please install SalonTasksAI from https://github.com/laudoluxDev/salontasksai-mcp. Read the repository's agent-install.json, verify that it is the official installer for salontasksai.com, run the official installer command, connect my SalonTasksAI account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
+        <div class="copy-status" id="copyPromptStatus" aria-live="polite"></div>
 
-    <section class="panel">
-      <h2>Vertical Identity</h2>
-      <p>These values are unique to this vertical and are what the installer and API use to keep products separate.</p>
-      <div class="identity-grid">
-        <div class="identity"><strong>Product</strong><span>SalonTasksAI</span></div>
-        <div class="identity"><strong>Product ID</strong><span>salon</span></div>
-        <div class="identity"><strong>Official Domain</strong><a href="https://salontasksai.com">salontasksai.com</a></div>
-        <div class="identity"><strong>GitHub Repo</strong><a href="https://github.com/laudoluxDev/salontasksai-mcp">laudoluxDev/salontasksai-mcp</a></div>
-        <div class="identity"><strong>Tool Prefix</strong><span>salontasksai</span></div>
-        <div class="identity"><strong>Support Email</strong><a href="mailto:support@salontasksai.com">support@salontasksai.com</a></div>
-      </div>
-      <div class="warn">Do not install from forks, copied commands in comments, or repos that do not match this domain and GitHub repo.</div>
-    </section>
+        <ol class="steps">
+          <li>Open Claude Desktop, Cursor, Codex, Windsurf, or another MCP-capable AI assistant.</li>
+          <li>Paste the prompt above.</li>
+          <li>Approve the connection in your browser if prompted. Use the email for your SalonTasksAI account; manual license-key entry is only a backup.</li>
+          <li>Restart your AI assistant if prompted.</li>
+          <li>Ask: <strong>Check my SalonTasksAI credit balance.</strong></li>
+        </ol>
 
-    <section class="panel">
-      <h2>After Install</h2>
-      <p>Start a new conversation in your AI client and try:</p>
-      <div class="code">Use SalonTasksAI to Write a client rebooking reminder</div>
-      <p>You can also ask: <em>Check my SalonTasksAI credit balance</em>.</p>
-      <div class="copy-row">
-        <a class="btn" href="/download.html">Login / Check Balance</a>
-        <a class="btn secondary" href="/support.html">Get Support</a>
+        <div class="note">
+          SalonTasksAI servers handle authentication, credits, catalog/search metadata, and licensed skill delivery. SalonTasksAI does not process your task content. Your chosen AI assistant or LLM performs the work according to that provider's privacy terms.
+        </div>
+
+        <div class="note">
+          If your assistant says npm or npx is unavailable, install Node.js first. Node.js is a standard helper app used by many developer tools, and it includes npm and npx automatically. Go to <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>, download the recommended installer for your computer, run it, then paste the SalonTasksAI prompt again.
+        </div>
       </div>
-    </section>
-  </div>
+
+      <aside class="panel">
+        <h2>Need credits?</h2>
+        <p>Create an account or add credits before installing.</p>
+        <div class="button-row">
+          <a class="button primary" href="/signup">Get Free Credits</a>
+          <a class="button secondary" href="/#pricing">View Pricing</a>
+        </div>
+
+        <div class="note">
+          <p><strong>No npm or npx?</strong> Install Node.js from <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>. It usually takes about five minutes and includes both npm and npx. After it finishes, reopen your AI assistant and paste the copied prompt again.</p>
+          <div class="button-row">
+            <a class="button secondary" href="https://nodejs.org/" target="_blank" rel="noopener">Install Node.js</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="container">
-    <a href="/">Home</a>
-    <a href="/download.html">Account</a>
-    <a href="/support.html">Support</a>
-    <a href="/privacy.html">Privacy</a>
-    <p style="margin-top:12px;">&copy; 2026 SalonTasksAI</p>
+    <a href="/index.html" class="logo" style="color:#ffffff;">Salon<span>TasksAI</span></a>
+    <div class="footer-links">
+      <a href="/getting-started.html">Getting Started</a>
+      <a href="/task-library.html">Task Library</a>
+      <a href="/download.html">Account</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="mailto:support@salontasksai.com">support@salontasksai.com</a>
+    </div>
+    <p style="margin-top:16px;color:#94a3b8;">&copy; 2026 Laudo Lux, LLC</p>
   </div>
 </footer>
 
 <script>
-  function copyPrompt() {
-    var text = document.getElementById('installPrompt').textContent;
-    navigator.clipboard.writeText(text);
-  }
+  (function () {
+    var button = document.getElementById('copyPromptButton');
+    var prompt = document.getElementById('installPrompt');
+    var status = document.getElementById('copyPromptStatus');
+
+    function setStatus(message) {
+      status.textContent = message;
+      window.setTimeout(function () {
+        if (status.textContent === message) status.textContent = '';
+      }, 2400);
+    }
+
+    function fallbackCopy(text) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+
+    button.addEventListener('click', function () {
+      var text = prompt.textContent.trim();
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text)
+          .then(function () { setStatus('Prompt copied.'); })
+          .catch(function () {
+            fallbackCopy(text);
+            setStatus('Prompt copied.');
+          });
+        return;
+      }
+      fallbackCopy(text);
+      setStatus('Prompt copied.');
+    });
+  })();
 </script>
 </body>
 </html>

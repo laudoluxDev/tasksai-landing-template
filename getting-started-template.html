@@ -3,21 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Getting Started with RealtorTasksAI</title>
-  <meta name="description" content="What to do after RealtorTasksAI is installed: check your balance, browse categories, run your first workflow, and understand credits and privacy.">
-  <link rel="canonical" href="https://realtortasksai.com/getting-started.html">
+  <title>Getting Started with {{PRODUCT_NAME}}</title>
+  <meta name="description" content="What to do after {{PRODUCT_NAME}} is installed: check your balance, browse categories, run your first workflow, and understand credits and privacy.">
+  <link rel="canonical" href="https://{{DOMAIN}}/getting-started.html">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV4V3CJLYW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GV4V3CJLYW');
-</script>
+  {{GA_TAG}}
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --accent: #0EA5E9; }
+    :root { --accent: {{ACCENT_COLOR}}; }
     body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; line-height: 1.6; }
     .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
     main { background: #f8fafc; min-height: calc(100vh - 64px); }
@@ -67,10 +60,10 @@
 <main>
   <section class="guide-hero">
     <div class="container">
-      <h1>Start using RealtorTasksAI.</h1>
-      <p>This page is for after RealtorTasksAI is installed. Use it to confirm the connection, run your first workflow, understand credits, and fix the most common first-use issues.</p>
+      <h1>Start using {{PRODUCT_NAME}}.</h1>
+      <p>This page is for after {{PRODUCT_NAME}} is installed. Use it to confirm the connection, run your first workflow, understand credits, and fix the most common first-use issues.</p>
       <div class="guide-actions">
-        <a class="button primary" href="/install.html">Install RealtorTasksAI</a>
+        <a class="button primary" href="/install.html">Install {{PRODUCT_NAME}}</a>
         <a class="button secondary" href="/task-library.html">Browse Task Library</a>
       </div>
     </div>
@@ -81,27 +74,27 @@
       <div class="guide-main">
         <section class="guide-section">
           <h2>First, confirm it is connected</h2>
-          <p>Open the AI assistant where you installed RealtorTasksAI and start a new conversation. Then ask:</p>
+          <p>Open the AI assistant where you installed {{PRODUCT_NAME}} and start a new conversation. Then ask:</p>
           <div class="prompt-list">
-            <div class="prompt">Check my RealtorTasksAI credit balance.</div>
+            <div class="prompt">Check my {{PRODUCT_NAME}} credit balance.</div>
           </div>
           <div class="note success-note">
             If your balance appears, the connection is working. Searches, category browsing, and balance checks do not use a credit.
           </div>
           <div class="note warning-note">
-            If the assistant says it cannot find RealtorTasksAI, fully quit and reopen the AI assistant. Many MCP clients load tools only when the app starts.
+            If the assistant says it cannot find {{PRODUCT_NAME}}, fully quit and reopen the AI assistant. Many MCP clients load tools only when the app starts.
           </div>
         </section>
 
         <section class="guide-section">
           <h2>Try a first workflow</h2>
-          <p>You do not need to know the exact workflow name. Describe the task in ordinary language and ask RealtorTasksAI to search first.</p>
+          <p>You do not need to know the exact workflow name. Describe the task in ordinary language and ask {{PRODUCT_NAME}} to search first.</p>
           <div class="prompt-list">
-            <div class="prompt">Use RealtorTasksAI to search for a workflow about Write a property listing description.</div>
-            <div class="prompt">Use RealtorTasksAI to show me available categories.</div>
-            <div class="prompt">Use RealtorTasksAI to help with Write a property listing description.</div>
+            <div class="prompt">Use {{PRODUCT_NAME}} to search for a workflow about {{EXAMPLE_TASK}}.</div>
+            <div class="prompt">Use {{PRODUCT_NAME}} to show me available categories.</div>
+            <div class="prompt">Use {{PRODUCT_NAME}} to help with {{EXAMPLE_TASK}}.</div>
           </div>
-          <p>RealtorTasksAI will return matching workflows. Pick the one you want to run. A credit is used when a licensed workflow is launched, not when you search or browse.</p>
+          <p>{{PRODUCT_NAME}} will return matching workflows. Pick the one you want to run. A credit is used when a licensed workflow is launched, not when you search or browse.</p>
         </section>
 
         <section class="guide-section">
@@ -116,19 +109,19 @@
             <tbody>
               <tr>
                 <td>Check credits</td>
-                <td>Check my RealtorTasksAI balance.</td>
+                <td>Check my {{PRODUCT_NAME}} balance.</td>
               </tr>
               <tr>
                 <td>Browse broadly</td>
-                <td>Show me RealtorTasksAI categories.</td>
+                <td>Show me {{PRODUCT_NAME}} categories.</td>
               </tr>
               <tr>
                 <td>Find the right workflow</td>
-                <td>Search RealtorTasksAI for a workflow about [your task].</td>
+                <td>Search {{PRODUCT_NAME}} for a workflow about [your task].</td>
               </tr>
               <tr>
                 <td>Run a chosen workflow</td>
-                <td>Run the RealtorTasksAI workflow named [workflow name or ID].</td>
+                <td>Run the {{PRODUCT_NAME}} workflow named [workflow name or ID].</td>
               </tr>
             </tbody>
           </table>
@@ -140,7 +133,7 @@
         <section class="guide-section">
           <h2>Credits and account approval</h2>
           <p>One credit runs one licensed workflow. Balance checks, category browsing, and search are free.</p>
-          <p>When installation or account approval is needed, use the email address for your RealtorTasksAI account. Manual license-key entry is only a backup path.</p>
+          <p>When installation or account approval is needed, use the email address for your {{PRODUCT_NAME}} account. Manual license-key entry is only a backup path.</p>
           <div class="guide-actions">
             <a class="button primary" href="/signup">Get Free Credits</a>
             <a class="button secondary" href="/#pricing">View Pricing</a>
@@ -149,7 +142,7 @@
 
         <section class="guide-section">
           <h2>Privacy in plain English</h2>
-          <p>RealtorTasksAI servers handle account approval, credits, catalog/search metadata, and licensed workflow delivery. RealtorTasksAI does not receive your task prompts, uploaded documents, or task answers.</p>
+          <p>{{PRODUCT_NAME}} servers handle account approval, credits, catalog/search metadata, and licensed workflow delivery. {{PRODUCT_NAME}} does not receive your task prompts, uploaded documents, or task answers.</p>
           <p>After the licensed workflow is delivered, your chosen AI assistant runs the workflow according to that assistant provider's privacy terms and settings.</p>
         </section>
 
@@ -158,11 +151,11 @@
           <h3>The assistant says npm or npx is unavailable</h3>
           <p>Install Node.js first. Node.js is a standard helper app used by many modern tools, and it includes npm and npx automatically. Go to <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>, download the recommended installer for your computer, run it, reopen your AI assistant, and paste the install prompt again.</p>
 
-          <h3>RealtorTasksAI does not appear in your AI assistant</h3>
+          <h3>{{PRODUCT_NAME}} does not appear in your AI assistant</h3>
           <p>Fully quit and reopen the assistant. If it still does not appear, go back to the install page and paste the install prompt again so the assistant can re-check the setup.</p>
 
           <h3>The assistant asks for approval</h3>
-          <p>Approve RealtorTasksAI when your AI assistant asks. In Claude Desktop, you may also need to set the RealtorTasksAI tools to always allow in the connector settings.</p>
+          <p>Approve {{PRODUCT_NAME}} when your AI assistant asks. In Claude Desktop, you may also need to set the {{PRODUCT_NAME}} tools to always allow in the connector settings.</p>
         </section>
       </div>
 
@@ -175,7 +168,7 @@
 
         <section class="side-panel">
           <h2>Good first test</h2>
-          <p>Ask your assistant to check your RealtorTasksAI balance. That confirms the account and connection before you run a paid workflow.</p>
+          <p>Ask your assistant to check your {{PRODUCT_NAME}} balance. That confirms the account and connection before you run a paid workflow.</p>
         </section>
 
         <section class="side-panel">
@@ -190,14 +183,14 @@
 
 <footer>
   <div class="container">
-    <a href="/index.html" class="logo" style="color:#ffffff;">Realtor<span>TasksAI</span></a>
+    <a href="/index.html" class="logo" style="color:#ffffff;">{{PRODUCT_NAME_SPLIT}}</a>
     <div class="footer-links">
       <a href="/install.html">Install</a>
       <a href="/task-library.html">Task Library</a>
       <a href="/download.html">Account</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy</a>
-      <a href="mailto:support@realtortasksai.com">support@realtortasksai.com</a>
+      <a href="mailto:support@{{DOMAIN}}">support@{{DOMAIN}}</a>
     </div>
     <p style="margin-top:16px;color:#94a3b8;">&copy; 2026 Laudo Lux, LLC</p>
   </div>

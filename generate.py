@@ -896,16 +896,18 @@ def main():
                     .replace("{{ROLE_TITLE}}", role_title)
                 (out_dir / "signup.html").write_text(signup_page, encoding="utf-8")
 
-            # Generate getting-started.html (from mcp-template.html)
-            mcp_template_path = TEMPLATE_FILE.parent / "mcp-template.html"
-            if mcp_template_path.exists():
-                mcp_tmpl = mcp_template_path.read_text(encoding="utf-8")
+            # Generate install.html and getting-started.html from separate templates.
+            install_template_path = TEMPLATE_FILE.parent / "install-template.html"
+            getting_started_template_path = TEMPLATE_FILE.parent / "getting-started-template.html"
+            if install_template_path.exists() and getting_started_template_path.exists():
+                install_tmpl = install_template_path.read_text(encoding="utf-8")
+                getting_started_tmpl = getting_started_template_path.read_text(encoding="utf-8")
                 tasks_list = v.get("sample_tasks", [])
                 example_task = tasks_list[0] if tasks_list else f"a {v.get('occupation', slug)} task"
                 product_id_upper = product_id.upper() + "TASKSAI"
                 installer_asset_name = v.get("installer_asset_name") or _installer_asset_name(product_name, product_id)
                 repo_slug = domain.split(".")[0]
-                mcp_page = mcp_tmpl \
+                install_page = install_tmpl \
                     .replace("{{PRODUCT_NAME}}", product_name) \
                     .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
                     .replace("{{ACCENT_COLOR}}", accent) \
@@ -917,8 +919,20 @@ def main():
                     .replace("{{LOGO_HTML}}", logo_split) \
                     .replace("{{EXAMPLE_TASK}}", example_task) \
                     .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
-                (out_dir / "getting-started.html").write_text(mcp_page, encoding="utf-8")
-                (out_dir / "install.html").write_text(mcp_page, encoding="utf-8")
+                getting_started_page = getting_started_tmpl \
+                    .replace("{{PRODUCT_NAME}}", product_name) \
+                    .replace("{{PRODUCT_NAME_SPLIT}}", logo_split) \
+                    .replace("{{ACCENT_COLOR}}", accent) \
+                    .replace("{{DOMAIN}}", domain) \
+                    .replace("{{PRODUCT_ID}}", product_id) \
+                    .replace("{{REPO_SLUG}}", repo_slug) \
+                    .replace("{{PRODUCT_ID_UPPER}}", product_id_upper) \
+                    .replace("{{INSTALLER_ASSET_NAME}}", installer_asset_name) \
+                    .replace("{{LOGO_HTML}}", logo_split) \
+                    .replace("{{EXAMPLE_TASK}}", example_task) \
+                    .replace("{{GA_TAG}}", build_ga_tag(v.get("ga_measurement_id", ""), v.get("google_ads_id", "")))
+                (out_dir / "install.html").write_text(install_page, encoding="utf-8")
+                (out_dir / "getting-started.html").write_text(getting_started_page, encoding="utf-8")
 
             # Generate connect.html (browser MCP approval)
             connect_template_path = TEMPLATE_FILE.parent / "connect-template.html"
