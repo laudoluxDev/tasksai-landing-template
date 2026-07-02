@@ -32,7 +32,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           slugs=(
-            accounting chiropractor churchadmin contractor dentist designer
+            accounting chiropractor church contractor dentist designer
             electrician eventplanner farmer funeral hr insurance landlord
             marketing militaryspouse mortgage mortuary nutritionist pastor personaltrainer
             plumber principal realtor restaurant salon teacher therapist
@@ -41,6 +41,7 @@ jobs:
 
           # marketing uses a differently-named CF Pages project
           declare -A project_overrides
+          project_overrides[church]="churchadmin-landing"
           project_overrides[marketing]="marketingtasksai-landing"
           project_overrides[mortuary]="mortician-landing"
           for slug in "${slugs[@]}"; do
