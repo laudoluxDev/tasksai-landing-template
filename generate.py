@@ -890,6 +890,7 @@ def main():
                         .replace("{{HERO_COUNT}}", hero_count) \
                         .replace("{{SKILL_COUNT}}", _skill_count) \
                         .replace("{{FIRST_PROMPT}}", _first_prompt) \
+                        .replace("{{EXAMPLE_TASK}}", _first_task_name) \
                         .replace("{{TARGET_AUDIENCE}}", target_audience) \
                         .replace("{{PRICING_CARDS}}", pricing_cards) \
                         .replace("{{API_COST_DISCLAIMER_BOTTOM_TEXT}}", api_cost_disclaimer_bottom_text) \
