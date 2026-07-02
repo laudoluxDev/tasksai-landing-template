@@ -42,6 +42,7 @@ jobs:
           # marketing uses a differently-named CF Pages project
           declare -A project_overrides
           project_overrides[marketing]="marketingtasksai-landing"
+          project_overrides[mortuary]="mortician-landing"
           for slug in "${slugs[@]}"; do
             project="${project_overrides[$slug]:-${slug}-landing}"
             echo "Deploying $slug → $project..."
