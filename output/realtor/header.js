@@ -140,6 +140,7 @@
     { href: "/",                    label: "Home" },
     { href: "/task-library.html",   label: "Task Library" },
     { href: "/getting-started.html",label: "Install" },
+    { href: "/getting-started.html",label: "Getting Started" },
     { href: "/download.html",       label: "Login" },
     { href: "/download.html",       label: "Credit Balance" },
     { href: "/support.html",        label: "Support" },
