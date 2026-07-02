@@ -384,6 +384,12 @@
                         <span class="field-error" id="emailError">Enter a valid email address</span>
                     </div>
 
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="At least 8 characters" autocomplete="new-password" required>
+                        <span class="field-error" id="passwordError">Use at least 8 characters</span>
+                    </div>
+
                     <!-- Platform selector -->
                 <div class="platform-section">
                     <span class="platform-label">What AI tool(s) do you use? <span style="font-weight:600;color:#dc2626">*</span> <span style="font-weight:400;color:#9ca3af">(select all that apply)</span></span>
@@ -434,7 +440,7 @@
                     <button type="submit" class="submit-btn" id="submitBtn">
                         Get my free credits →
                     </button>
-                    <p style="font-size:0.82rem;color:#9ca3af;text-align:center;margin-top:12px;">We'll email your license key instantly. You'll be up and running in 5 minutes.</p>
+                    <p style="font-size:0.82rem;color:#9ca3af;text-align:center;margin-top:12px;">Use this password later to log in, view credits, and manage your account.</p>
                     <p style="font-size:0.78rem;color:#9ca3af;text-align:center;margin-top:8px;">By signing up, you agree to our <a href="/terms.html" target="_blank" style="color:#9ca3af;text-decoration:underline;">Terms of Service</a> and <a href="/privacy.html" target="_blank" style="color:#9ca3af;text-decoration:underline;">Privacy Policy</a>.</p>
                 </form>
             </div>
@@ -498,11 +504,15 @@
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
 
             if (!firstName) { fieldError('firstName', 'firstNameError'); valid = false; }
             if (!lastName) { fieldError('lastName', 'lastNameError'); valid = false; }
             if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                 fieldError('email', 'emailError'); valid = false;
+            }
+            if (!password || password.length < 8) {
+                fieldError('password', 'passwordError'); valid = false;
             }
 
             // Require at least one platform selected
@@ -523,6 +533,7 @@
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner"></span>Creating your account…';
@@ -537,6 +548,7 @@
                     body: JSON.stringify({
                         name: `${firstName} ${lastName}`,
                         email: email,
+                        password: password,
                         platforms: selectedPlatforms
                     })
                 });
@@ -552,7 +564,7 @@
                 } else {
                     const data = await res.json().catch(() => ({}));
                     if (res.status === 400 && data.detail && data.detail.includes('already registered')) {
-                        showError('That email is already registered. <a href="/download.html" style="color:#2563eb;font-weight:600;">Go to My Account to get your license key and installer →</a>');
+                        showError('That email is already registered. <a href="/download.html" style="color:#2563eb;font-weight:600;">Go to My Account to log in →</a>');
                     } else {
                         showError(data.detail || 'Something went wrong. Please try again.');
                     }

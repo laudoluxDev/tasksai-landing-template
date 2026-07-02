@@ -28,7 +28,7 @@
     .tab-content { display: none; }
     .tab-content.active { display: block; }
     label { display: block; font-weight: 500; margin-bottom: 8px; color: #374151; }
-    input[type="text"], input[type="email"] { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s; font-family: inherit; }
+    input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s; font-family: inherit; }
     input:focus { outline: none; border-color: var(--accent); }
     .input-hint { font-size: 0.9rem; color: #6b7280; margin-top: 6px; }
     .btn { width: 100%; padding: 14px 24px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; margin-top: 16px; font-family: inherit; }
@@ -236,37 +236,15 @@
   <div id="login-section">
     <div class="card">
       <h1>My Account</h1>
-      <p class="subtitle">Log in to view your credits, copy your backup license key, or install NutritionistTasksAI from GitHub.</p>
+      <p class="subtitle">Log in to view your credits, purchase history, and NutritionistTasksAI setup links.</p>
 
-      <div class="tabs">
-        <div class="tab active" data-tab="email">Look up by Email</div>
-        <div class="tab" data-tab="key">I have my License Key</div>
-      </div>
-
-      <div id="tab-email" class="tab-content active">
-        <!-- State 1: input form -->
-        <div id="email-form">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="you@example.com">
-          <p class="input-hint">We’ll send a secure login link to this address</p>
-          <button class="btn" onclick="requestMagicLink(this)">Send Login Link</button>
-        </div>
-        <!-- State 2: check inbox -->
-        <div id="email-sent" style="display:none;text-align:center;padding:16px 0;">
-          <div style="font-size:2.5rem;margin-bottom:12px;">📬</div>
-          <p style="font-weight:700;font-size:1.05rem;color:#1a1a2e;margin-bottom:8px;">Check your inbox</p>
-          <p style="color:#6b7280;font-size:0.9rem;margin-bottom:20px;">We sent a login link to <strong id="sent-to-email"></strong>. It expires in 15 minutes.</p>
-          <p style="color:#9ca3af;font-size:0.82rem;">Didn’t get it? Check your spam folder, or
-            <a href="#" onclick="resetEmailForm();return false;" style="color:var(--accent);font-weight:600;">try again</a>.
-          </p>
-        </div>
-      </div>
-
-      <div id="tab-key" class="tab-content">
-        <label for="license-key-input">License Key</label>
-        <input type="text" id="license-key-input" placeholder="nt_xxxxxxxxxxxxxxxx">
-        <p class="input-hint">Your license key from your welcome email</p>
-        <button class="btn" onclick="loginByKey()">Access My Account</button>
+      <div id="password-form">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com" autocomplete="email">
+        <label for="password" style="margin-top:14px;">Password</label>
+        <input type="password" id="password" placeholder="Your password" autocomplete="current-password">
+        <button class="btn" onclick="loginWithPassword(this)">Log In</button>
+        <p class="input-hint" style="text-align:center;margin-top:14px;">New here? <a href="/signup.html" style="color:var(--accent);font-weight:600;">Create a free account</a>.</p>
       </div>
 
       <div id="login-message" class="message"></div>
@@ -307,6 +285,7 @@
   const API_BASE    = 'https://api.lawtasksai.com';
   const PRODUCT_ID  = 'nutritionist';
   const STORAGE_KEY = 'nutritionist_license_key';
+  const ACCOUNT_EMAIL_KEY = 'nutritionist_account_email';
   let currentLicenseKey = null;
   let userEmail = null;
 
@@ -342,12 +321,11 @@
   window.onload = async function () {
     const params = new URLSearchParams(window.location.search);
 
-    // Magic link token in URL — verify it
+    // Old magic-link URLs are no longer the primary login flow.
     const mlToken = params.get('token');
     if (mlToken) {
-      // Clean the token from the URL so refresh doesn't re-use it
       window.history.replaceState({}, '', window.location.pathname);
-      await verifyMagicToken(mlToken);
+      showMessage('Please log in with your email and password.', 'error');
       return;
     }
 
@@ -365,127 +343,58 @@
     if (saved) { currentLicenseKey = saved; loadDashboard(); }
   };
 
-  // ── Magic link: request ──
-  async function requestMagicLink(btn) {
+  // ── Traditional email/password login ──
+  async function loginWithPassword(btn) {
     const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showMessage('Please enter a valid email address.', 'error');
       return;
     }
-    if (!btn) btn = document.querySelector('#email-form .btn');
-    btn.disabled = true; btn.textContent = 'Sending...';
-    try {
-      const res = await fetch(`${API_BASE}/auth/magic-link?product=${encodeURIComponent(PRODUCT_ID)}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-      if (!res.ok) throw new Error('login link unavailable');
-      // Always show the inbox confirmation — never reveal whether email exists
-      document.getElementById('email-form').style.display = 'none';
-      document.getElementById('email-sent').style.display = 'block';
-      document.getElementById('sent-to-email').textContent = email;
-      hideMessage();
-    } catch (e) {
-      showMessage('We could not send the login link from this page. Please try again, or email <a href="mailto:hello@nutritionisttasksai.com" style="color:var(--accent);font-weight:600;">hello@nutritionisttasksai.com</a>.', 'error');
-      btn.disabled = false; btn.textContent = 'Send Login Link';
+    if (!password) {
+      showMessage('Please enter your password.', 'error');
+      return;
     }
-  }
-
-  // ── Magic link: verify token from URL ──
-  async function verifyMagicToken(token) {
-    // Show a loading state in the login card
-    const loginSection = document.getElementById('login-section');
-    loginSection.innerHTML = `
-      <div class="card" style="text-align:center;">
-        <p style="color:#6b7280;font-size:1rem;padding:16px 0;">Verifying your link…</p>
-      </div>`;
+    btn.disabled = true; btn.textContent = 'Logging in...';
     try {
-      const res = await fetch(`${API_BASE}/auth/magic-link/verify`, {
+      const res = await fetch(`${API_BASE}/auth/account-login?product=${encodeURIComponent(PRODUCT_ID)}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token })
+        headers: { 'Content-Type': 'application/json', 'X-Product-ID': PRODUCT_ID },
+        body: JSON.stringify({ email, password })
       });
-      const data = await res.json();
-      if (res.ok && data.licenses && data.licenses.length) {
-        userEmail = data.email;
-        const myLic = data.licenses.find(l => l.product_id === PRODUCT_ID);
-        if (myLic) {
-          currentLicenseKey = myLic.license_key;
-          localStorage.setItem(STORAGE_KEY, currentLicenseKey);
-        }
-        renderDashboard(data.licenses);
-      } else {
-        // Token invalid/expired — show error and restore form
-        const msg = data.detail || 'This link is invalid or has expired.';
-        _restoreLoginWithError(msg);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.licenses || !data.licenses.length) {
+        throw new Error(data.detail || 'Invalid email or password.');
       }
+      userEmail = data.email;
+      localStorage.setItem(ACCOUNT_EMAIL_KEY, userEmail);
+      const myLic = data.licenses.find(l => l.product_id === PRODUCT_ID) || data.licenses[0];
+      if (myLic && myLic.license_key) {
+        currentLicenseKey = myLic.license_key;
+        localStorage.setItem(STORAGE_KEY, currentLicenseKey);
+      }
+      renderDashboard(data.licenses);
     } catch (e) {
-      _restoreLoginWithError('Connection error — please try again.');
+      showMessage(e.message || 'Could not log in. Please try again.', 'error');
+      btn.disabled = false; btn.textContent = 'Log In';
     }
   }
 
-  // Restore the full login card after a failed token verify
-  function _restoreLoginWithError(msg) {
-    const loginSection = document.getElementById('login-section');
-    loginSection.innerHTML = `
-      <div class="card">
-        <h1>My Account</h1>
-        <p class="subtitle">Log in to view your credits, copy your backup license key, or install NutritionistTasksAI from GitHub.</p>
-        <div class="tabs">
-          <div class="tab active" data-tab="email" onclick="_switchTab('email',this)">Look up by Email</div>
-          <div class="tab" data-tab="key" onclick="_switchTab('key',this)">I have my License Key</div>
-        </div>
-        <div id="tab-email" class="tab-content active">
-          <div id="email-form">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@example.com">
-            <p class="input-hint">We’ll send a secure login link to this address</p>
-            <button class="btn" onclick="requestMagicLink(this)">Send Login Link</button>
-          </div>
-          <div id="email-sent" style="display:none;"></div>
-        </div>
-        <div id="tab-key" class="tab-content">
-          <label for="license-key-input">License Key</label>
-          <input type="text" id="license-key-input" placeholder="nt_xxxxxxxxxxxxxxxx">
-          <p class="input-hint">Your license key from your welcome email</p>
-          <button class="btn" onclick="loginByKey()">Access My Account</button>
-        </div>
-        <div id="login-message" class="message error" style="display:block;">${msg} <a href="/signup.html" style="color:var(--accent);font-weight:600;">Sign up free →</a></div>
-      </div>`;
-  }
-
-  // ── Reset email tab back to input form ──
-  function resetEmailForm() {
-    document.getElementById('email-form').style.display = 'block';
-    document.getElementById('email-sent').style.display = 'none';
-    document.getElementById('email').value = '';
-    hideMessage();
-  }
-
-  // ── Login by license key (key → email lookup → all licenses) ──
-  async function loginByKey() {
-    const key = document.getElementById('license-key-input').value.trim();
-    if (!key) { showMessage('Please enter your license key.', 'error'); return; }
-    const btn = event.target;
-    btn.disabled = true; btn.textContent = 'Verifying…';
+  // ── Hidden legacy session loader for old account links and saved sessions ──
+  async function loadDashboard() {
+    const key = currentLicenseKey;
+    if (!key) return;
     try {
-      // Step 1: Validate key + grab balance in one call
       const balRes = await fetch(`${API_BASE}/v1/credits/balance`, {
         headers: { 'Authorization': `Bearer ${key}`, 'X-Product-ID': PRODUCT_ID }
       });
       if (!balRes.ok) {
-        showMessage('Invalid license key. Please check and try again.', 'error');
-        btn.disabled = false; btn.textContent = 'Access My Account';
+        localStorage.removeItem(STORAGE_KEY);
         return;
       }
       const balData = await balRes.json();
       const fallbackCredits = balData.credits_balance || 0;
 
-      currentLicenseKey = key;
-      localStorage.setItem(STORAGE_KEY, key);
-
-      // Step 2: Fetch /v1/me to get email (now includes email field)
       const meRes = await fetch(`${API_BASE}/v1/me`, {
         headers: { 'Authorization': `Bearer ${key}`, 'X-Product-ID': PRODUCT_ID }
       });
@@ -502,13 +411,11 @@
           if (licRes.ok) {
             const licData = await licRes.json();
             renderDashboard(licData.licenses);
-            btn.disabled = false; btn.textContent = 'Access My Account';
             return;
           }
         }
       }
 
-      // Fallback: /v1/me failed or returned no email — show single-license view
       renderDashboard([{
         license_key: key,
         product_id: PRODUCT_ID,
@@ -518,9 +425,8 @@
         license_type: balData.license_type || 'credits'
       }]);
     } catch (e) {
-      showMessage('Connection error — please try again.', 'error');
+      localStorage.removeItem(STORAGE_KEY);
     }
-    btn.disabled = false; btn.textContent = 'Access My Account';
   }
 
   // ── Render dashboard with vertical cards ──
@@ -573,10 +479,6 @@
         <span class="credits-label">credits remaining</span>
       </div>
       <div id="balance-message" style="display:none;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:10px 12px;margin:-4px 0 14px;color:#065f46;font-size:0.88rem;"></div>
-      <div class="license-box">
-        <span class="license-key" id="cur-key-display">${lic.license_key}</span>
-        <button class="copy-btn" onclick="copyKey('${lic.license_key}', this)">Copy</button>
-      </div>
       <div class="action-row">
         <button class="dl-btn" onclick="openInstallGuide()">Install from GitHub</button>
         <button class="buy-btn" style="border:0;cursor:pointer;" onclick="refreshCurrentBalance('${lic.license_key}', this)">Refresh Balance</button>
@@ -615,10 +517,6 @@
       <div class="credits-row">
         <span class="credits-num" style="font-size:1.4rem;">${lic.credits_remaining}</span>
         <span class="credits-label">credits remaining</span>
-      </div>
-      <div class="license-box">
-        <span class="license-key" style="font-size:0.82rem;">${lic.license_key}</span>
-        <button class="copy-btn" style="background:#6b7280;" onclick="copyKey('${lic.license_key}', this)">Copy</button>
       </div>
       <div class="other-actions">
         <a href="https://${lic.product_domain}/download.html" class="visit-link">
@@ -723,6 +621,7 @@
 
   function logout() {
     localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(ACCOUNT_EMAIL_KEY);
     currentLicenseKey = null;
     userEmail = null;
     document.getElementById('login-section').style.display = 'block';
