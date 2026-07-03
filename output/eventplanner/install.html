@@ -129,7 +129,7 @@
           <span class="prompt-label">Terminal install command</span>
           <button class="button secondary copy-code" type="button" data-copy-target="terminalInstall">Copy Command</button>
         </div>
-        <div class="code-box" id="terminalInstall">npm exec --package=@tasksai/install -- tasksai-install eventplanner --source https://github.com/laudoluxDev/eventplannertasksai-mcp --client codex</div>
+        <div class="code-box" id="terminalInstall">npm exec --package=@tasksai/install --call 'tasksai-install eventplanner --source https://github.com/laudoluxDev/eventplannertasksai-mcp --client codex'</div>
 
         <p class="small" style="margin-top:12px;">Change <code>codex</code> to <code>claude-desktop</code>, <code>cursor</code>, or <code>windsurf</code> if you are installing into a different AI app. Use <code>--client all</code> only when you want the installer to configure every supported app on this computer.</p>
 
@@ -144,7 +144,7 @@
           <span class="prompt-label">Health check command</span>
           <button class="button secondary copy-code" type="button" data-copy-target="doctorCommand">Copy Command</button>
         </div>
-        <div class="code-box" id="doctorCommand">npm exec --package=@tasksai/install -- tasksai-install eventplanner doctor --client codex</div>
+        <div class="code-box" id="doctorCommand">npm exec --package=@tasksai/install --call 'tasksai-install eventplanner doctor --client codex'</div>
 
         <div class="note warning">
           If Terminal says <strong>npx: command not found</strong>, install Node.js from <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>, reopen Terminal, and run the command again.
