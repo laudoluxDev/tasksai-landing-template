@@ -17,17 +17,31 @@
     .install-hero { padding: 72px 0 40px; background: #ffffff; border-bottom: 1px solid #e2e8f0; }
     .install-hero h1 { max-width: 860px; font-size: 3rem; line-height: 1.08; letter-spacing: 0; margin-bottom: 18px; }
     .install-hero p { max-width: 760px; color: #374151; font-size: 1.12rem; }
-    .install-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr); gap: 28px; padding: 40px 0 72px; }
-    .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 28px; }
+    .install-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr); gap: 28px; padding: 40px 0 32px; }
+    .single-column { padding-bottom: 72px; }
+    .single-column > * + * { margin-top: 24px; }
+    .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 28px; }
     .panel h2 { font-size: 1.35rem; margin-bottom: 12px; }
+    .panel h3 { font-size: 1rem; margin: 22px 0 8px; }
     .panel p, .panel li { color: #1f2937; }
     .steps { margin: 22px 0 0; padding-left: 22px; }
     .steps li { margin-bottom: 14px; }
     .prompt-header { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; margin-top: 18px; }
     .prompt-label { color: #374151; font-weight: 700; }
     .prompt-box { background: #0f172a; color: #e5e7eb; border-radius: 8px; padding: 20px; margin: 10px 0 0; overflow-x: auto; font-family: Menlo, Monaco, Consolas, monospace; font-size: 0.94rem; line-height: 1.6; }
+    .code-box { background: #0f172a; color: #e5e7eb; border-radius: 8px; padding: 16px; margin: 10px 0 0; overflow-x: auto; font-family: Menlo, Monaco, Consolas, monospace; font-size: 0.9rem; line-height: 1.6; white-space: pre; }
     .copy-status { color: #166534; font-size: 0.92rem; font-weight: 700; min-height: 1.4em; }
     .note { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; padding: 16px 18px; border-radius: 8px; margin-top: 18px; }
+    .warning { background: #fff7ed; border-color: #fed7aa; color: #7c2d12; }
+    .success { background: #f0fdf4; border-color: #bbf7d0; color: #14532d; }
+    .client-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+    .client-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; background: #ffffff; }
+    .client-card h3 { margin-top: 0; }
+    .client-card code { background: #f3f4f6; padding: 2px 5px; border-radius: 4px; font-size: 0.8rem; word-break: break-word; }
+    details { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px 18px; background: #ffffff; }
+    details summary { cursor: pointer; font-weight: 800; color: #111827; }
+    details[open] summary { margin-bottom: 14px; }
+    .small { font-size: 0.92rem; color: #4b5563; }
     .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
     button.button { border: 0; cursor: pointer; font: inherit; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; border-radius: 7px; text-decoration: none; font-weight: 700; }
@@ -40,6 +54,10 @@
     @media (max-width: 860px) {
       .install-hero h1 { font-size: 2.25rem; }
       .install-grid { grid-template-columns: 1fr; }
+      .client-grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 861px) and (max-width: 1100px) {
+      .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -70,6 +88,7 @@
         <ol class="steps">
           <li>Open Claude Desktop, Cursor, Codex, Windsurf, or another MCP-capable AI assistant.</li>
           <li>Paste the prompt above.</li>
+          <li>If your assistant asks for permission to write local setup files, approve it. Those files are the local AccountingTasksAI runtime and your AI app's MCP settings.</li>
           <li>Approve the connection in your browser if prompted. Use the email for your AccountingTasksAI account; manual license-key entry is only a backup.</li>
           <li>Restart your AI assistant if prompted.</li>
           <li>Ask: <strong>Check my AccountingTasksAI credit balance.</strong></li>
@@ -99,6 +118,105 @@
           </div>
         </div>
       </aside>
+    </div>
+
+    <div class="single-column">
+      <section class="panel" id="blocked">
+        <h2>If your assistant is blocked</h2>
+        <p>Some AI apps run in a security sandbox. If your assistant says it cannot write to a local config file, nothing is wrong with your account. Run the same official installer directly in Terminal:</p>
+
+        <div class="prompt-header">
+          <span class="prompt-label">Terminal install command</span>
+          <button class="button secondary copy-code" type="button" data-copy-target="terminalInstall">Copy Command</button>
+        </div>
+        <div class="code-box" id="terminalInstall">npx @tasksai/install accounting --source https://github.com/laudoluxDev/accountingtasksai-mcp --client codex</div>
+
+        <p class="small" style="margin-top:12px;">Change <code>codex</code> to <code>claude-desktop</code>, <code>cursor</code>, or <code>windsurf</code> if you are installing into a different AI app. Use <code>--client all</code> only when you want the installer to configure every supported app on this computer.</p>
+
+        <h3>After Terminal finishes</h3>
+        <ol class="steps">
+          <li>Approve the browser connection when the installer opens it.</li>
+          <li>Restart your AI app so it reloads MCP tools.</li>
+          <li>Run the health check below if you want confirmation.</li>
+        </ol>
+
+        <div class="prompt-header">
+          <span class="prompt-label">Health check command</span>
+          <button class="button secondary copy-code" type="button" data-copy-target="doctorCommand">Copy Command</button>
+        </div>
+        <div class="code-box" id="doctorCommand">npx @tasksai/install accounting doctor --client codex</div>
+
+        <div class="note warning">
+          If Terminal says <strong>npx: command not found</strong>, install Node.js from <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>, reopen Terminal, and run the command again.
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Choose your AI app</h2>
+        <p>Use the same installer for each supported app. The only difference is the <code>--client</code> value and the app you restart afterward.</p>
+        <div class="client-grid">
+          <div class="client-card">
+            <h3>Codex</h3>
+            <p>Use <code>--client codex</code>.</p>
+            <p class="small">Config file: <code>~/.codex/config.toml</code></p>
+            <p class="small">Restart Codex after install.</p>
+          </div>
+          <div class="client-card">
+            <h3>Claude Desktop</h3>
+            <p>Use <code>--client claude-desktop</code>.</p>
+            <p class="small">Config file: <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></p>
+            <p class="small">Restart Claude Desktop and set AccountingTasksAI tools to always allow if prompted.</p>
+          </div>
+          <div class="client-card">
+            <h3>Cursor</h3>
+            <p>Use <code>--client cursor</code>.</p>
+            <p class="small">Config file: <code>~/.cursor/mcp.json</code></p>
+            <p class="small">Restart Cursor after install.</p>
+          </div>
+          <div class="client-card">
+            <h3>Windsurf</h3>
+            <p>Use <code>--client windsurf</code>.</p>
+            <p class="small">Config file: <code>~/.codeium/windsurf/mcp_config.json</code></p>
+            <p class="small">Restart Windsurf after install.</p>
+          </div>
+        </div>
+      </section>
+
+      <details id="manual">
+        <summary>Last resort: manual setup</summary>
+        <p class="small">Use this only if both the AI-assisted install and Terminal install are blocked. First run the Terminal installer with the right <code>--client</code> so the local runtime and <code>.env</code> file exist. Then add the matching MCP entry to your AI app.</p>
+
+        <h3>Codex TOML example</h3>
+        <div class="code-box">[mcp_servers.accounting]
+command = "python3"
+args = ["~/Library/Application Support/TasksAI/accounting/runtime/server.py"]
+
+[mcp_servers.accounting.env]
+TASKSAI_PRODUCT_ID = "accounting"
+TASKSAI_CLIENT = "codex"
+PYTHONPATH = "~/Library/Application Support/TasksAI/accounting/python"
+DOTENV_PATH = "~/Library/Application Support/TasksAI/accounting/.env"</div>
+
+        <h3>Claude Desktop, Cursor, or Windsurf JSON example</h3>
+        <div class="code-box">{
+  "mcpServers": {
+    "accounting": {
+      "command": "python3",
+      "args": ["~/Library/Application Support/TasksAI/accounting/runtime/server.py"],
+      "env": {
+        "TASKSAI_PRODUCT_ID": "accounting",
+        "TASKSAI_CLIENT": "claude-desktop",
+        "PYTHONPATH": "~/Library/Application Support/TasksAI/accounting/python",
+        "DOTENV_PATH": "~/Library/Application Support/TasksAI/accounting/.env"
+      }
+    }
+  }
+}</div>
+        <div class="note">
+          Manual setup does not expose your proprietary prompts. Credentials stay in the local <code>.env</code> file created by the installer.
+          If your AI app does not expand <code>~</code>, replace it with your full home folder path.
+        </div>
+      </details>
     </div>
   </section>
 </main>
@@ -156,6 +274,23 @@
       }
       fallbackCopy(text);
       setStatus('Prompt copied.');
+    });
+
+    document.querySelectorAll('.copy-code').forEach(function (copyButton) {
+      copyButton.addEventListener('click', function () {
+        var target = document.getElementById(copyButton.getAttribute('data-copy-target'));
+        if (!target) return;
+        var text = target.textContent.trim();
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(function () { setStatus('Command copied.'); }).catch(function () {
+            fallbackCopy(text);
+            setStatus('Command copied.');
+          });
+          return;
+        }
+        fallbackCopy(text);
+        setStatus('Command copied.');
+      });
     });
   })();
 </script>

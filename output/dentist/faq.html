@@ -277,11 +277,19 @@
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">What AI apps does it work with?</button>
-                        <div class="faq-answer">DentistTasksAI works with popular AI desktop apps: <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>, <a href="https://claude.ai/download" target="_blank" rel="noopener">Claude Desktop</a>, Cursor, Windsurf, and others. It does not require a specific AI model — you can use Claude, GPT-4, or a local model through OpenClaw + Ollama.</div>
+                        <div class="faq-answer">DentistTasksAI works with MCP-capable AI apps including Codex, Claude Desktop, Cursor, and Windsurf. The installer writes the local MCP config for the app you choose, then you restart that app so it can load the DentistTasksAI tools.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">How do I install it?</button>
-                        <div class="faq-answer">Visit the <a href="/getting-started.html">Getting Started page</a> for step-by-step instructions for every supported platform. OpenClaw users can install with one command: <code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:0.9em;">openclaw skills install dentist</code>. MCP users download a zip and run the installer.</div>
+                        <div class="faq-answer">Start on the <a href="/install.html">Install page</a>. The recommended path is to copy the official GitHub prompt into your AI assistant. If the assistant is blocked from writing local setup files, use the Terminal fallback command on the same page, then restart your AI app and run the health check.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">My AI assistant says it cannot write to a config file. Is that bad?</button>
+                        <div class="faq-answer">No. Some AI apps run in a security sandbox and cannot edit local MCP config files automatically. This is normal. Go to <a href="/install.html#blocked">the blocked-install section</a>, run the Terminal command, approve the browser connection, restart your AI app, and run the health check command shown there.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do I need to edit JSON or TOML by hand?</button>
+                        <div class="faq-answer">Usually no. Use the AI-assisted install first, then the Terminal fallback if needed. Manual JSON or TOML setup is a last resort for locked-down computers, and the <a href="/install.html#manual">manual setup section</a> shows the exact shape only if you need it.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">How is this different from just using ChatGPT or Claude directly?</button>
