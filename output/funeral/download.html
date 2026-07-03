@@ -285,6 +285,7 @@
 <script>
   const API_BASE    = 'https://api.lawtasksai.com';
   const PRODUCT_ID  = 'funeral';
+  const PRODUCT_NAME = 'FuneralTasksAI';
   const STORAGE_KEY = 'funeral_license_key';
   const ACCOUNT_EMAIL_KEY = 'funeral_account_email';
   let currentLicenseKey = null;
@@ -369,11 +370,13 @@
       }
       userEmail = data.email;
       localStorage.setItem(ACCOUNT_EMAIL_KEY, userEmail);
-      const myLic = data.licenses.find(l => l.product_id === PRODUCT_ID) || data.licenses[0];
-      if (myLic && myLic.license_key) {
-        currentLicenseKey = myLic.license_key;
-        localStorage.setItem(STORAGE_KEY, currentLicenseKey);
+      const myLic = data.licenses.find(l => l.product_id === PRODUCT_ID);
+      if (!myLic || !myLic.license_key) {
+        localStorage.removeItem(STORAGE_KEY);
+        throw new Error(`No ${PRODUCT_NAME} account found for this email. Create a free ${PRODUCT_NAME} account to get 5 credits.`);
       }
+      currentLicenseKey = myLic.license_key;
+      localStorage.setItem(STORAGE_KEY, currentLicenseKey);
       renderDashboard(data.licenses);
     } catch (e) {
       showMessage(e.message || 'Could not log in. Please try again.', 'error');
@@ -411,6 +414,13 @@
           });
           if (licRes.ok) {
             const licData = await licRes.json();
+            const myLic = (licData.licenses || []).find(l => l.product_id === PRODUCT_ID);
+            if (!myLic) {
+              localStorage.removeItem(STORAGE_KEY);
+              currentLicenseKey = null;
+              showMessage(`Your saved login is for another TasksAI product. Log in with a ${PRODUCT_NAME} account, or create one to get 5 free credits.`, 'error');
+              return;
+            }
             renderDashboard(licData.licenses);
             return;
           }
