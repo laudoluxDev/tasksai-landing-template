@@ -60,7 +60,7 @@
       <p>Paste this into Claude Desktop, Cursor, Codex, or another MCP-capable AI assistant.</p>
       <div class="code" id="installPrompt">Please install {{PRODUCT_NAME}} from https://github.com/laudoluxDev/{{REPO_SLUG}}-mcp. Read the repository's agent-install.json, verify that it is the official installer for {{DOMAIN}}, run the official installer command, connect my {{PRODUCT_NAME}} account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
       <div class="copy-row">
-        <button class="btn" type="button" onclick="copyPrompt()">Copy Prompt</button>
+        <button class="btn" type="button" onclick="copyPrompt(this)">Copy prompt</button>
         <a class="btn secondary" href="https://github.com/laudoluxDev/{{REPO_SLUG}}-mcp" target="_blank" rel="noopener">Open GitHub Repo</a>
         <a class="btn secondary" href="/connect.html">Open Browser Connect</a>
       </div>
@@ -139,9 +139,37 @@
 </footer>
 
 <script>
-  function copyPrompt() {
+  function fallbackCopy(text) {
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+  function flashButton(btn, message) {
+    var original = btn.getAttribute('data-original-label') || btn.textContent;
+    btn.setAttribute('data-original-label', original);
+    if (btn._copyResetTimer) window.clearTimeout(btn._copyResetTimer);
+    btn.textContent = message;
+    btn._copyResetTimer = window.setTimeout(function () {
+      btn.textContent = original;
+    }, 1800);
+  }
+  function copyPrompt(btn) {
     var text = document.getElementById('installPrompt').textContent;
-    navigator.clipboard.writeText(text);
+    function copied() { flashButton(btn, 'Copied'); }
+    function failed() { flashButton(btn, 'Copy failed'); }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(copied).catch(function () {
+        try { fallbackCopy(text); copied(); } catch (err) { failed(); }
+      });
+      return;
+    }
+    try { fallbackCopy(text); copied(); } catch (err) { failed(); }
   }
 </script>
 </body>

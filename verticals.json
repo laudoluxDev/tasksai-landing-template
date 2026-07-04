@@ -75,10 +75,10 @@
     "youtube_video_id": "bxVG3H_3eh4",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a contractor powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a contractor powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For general contractors & construction professionals",
-    "hero_subhead": "<strong>180 professionally-built construction workflows for Claude.</strong> Bids, change orders, pay applications, safety plans, and project docs \u2014 precision-built for how you actually run a job site.",
-    "hero_h1_no_span": "Turn Claude into a contractor powerhouse \u2014 in under 5 minutes"
+    "hero_subhead": "<strong>180 professionally-built construction workflows for your AI app.</strong> Bids, change orders, pay applications, safety plans, and project docs \u2014 precision-built for how you actually run a job site.",
+    "hero_h1_no_span": "Turn your AI app into a contractor powerhouse \u2014 in under 5 minutes"
   },
   {
     "product_id": "realtor",
@@ -116,9 +116,9 @@
     "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-GV4V3CJLYW",
-    "hero_h1": "Turn Claude into a real estate powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a real estate powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For real estate agents & brokers",
-    "hero_subhead": "<strong>169 professionally-built real estate workflows for Claude.</strong> MLS listings, offer letters, CMAs, buyer emails, and disclosures \u2014 precision-built for how you actually close deals.",
+    "hero_subhead": "<strong>169 professionally-built real estate workflows for your AI app.</strong> MLS listings, offer letters, CMAs, buyer emails, and disclosures \u2014 precision-built for how you actually close deals.",
     "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
     "features_intro": "Built for agents who close deals, not write prompts",
     "features_subtitle": "Every task built for the exact work real estate agents do every day.",
@@ -138,7 +138,7 @@
       {
         "badge": "No Lock-in",
         "title": "Works with your favorite AI app",
-        "description": "Claude Desktop, OpenClaw, Cursor \u2014 RealtorTasksAI works in it. Switch AI providers anytime without losing your credits."
+        "description": "Works with Claude Desktop, Cursor, Codex, Windsurf, and other MCP-capable AI apps. Switch AI providers anytime without losing your credits."
       }
     ],
     "testimonials_heading": "What agents are saying",
@@ -200,7 +200,7 @@
         "desc": "Build referral pipelines, maintain your contact database, send personalized check-ins, run client appreciation programs, and collect testimonials that bring in the next deal."
       }
     ],
-    "hero_h1_no_span": "Turn Claude into a real estate powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a real estate powerhouse \u2014 in under 5 minutes",
     "demo_tasks": [
       {
         "prompt": "Write a listing description for a 4BR home in Denver",
@@ -282,10 +282,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into an accounting powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into an accounting powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into an accounting powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into an accounting powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For CPAs, bookkeepers & accounting professionals",
-    "hero_subhead": "<strong>200 professionally-built accounting workflows for Claude.</strong> Engagement letters, client memos, compliance checklists, and financial reports \u2014 precision-built for how you actually practice."
+    "hero_subhead": "<strong>200 professionally-built accounting workflows for your AI app.</strong> Engagement letters, client memos, compliance checklists, and financial reports \u2014 precision-built for how you actually practice."
   },
   {
     "product_id": "chiropractor",
@@ -328,10 +328,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a chiropractic practice powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a chiropractic practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a chiropractic practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a chiropractic practice powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For chiropractors & chiropractic office staff",
-    "hero_subhead": "<strong>200 professionally-built chiropractic workflows for Claude.</strong> SOAP notes, patient communications, insurance documentation, and treatment plans \u2014 precision-built for how you actually run your practice."
+    "hero_subhead": "<strong>200 professionally-built chiropractic workflows for your AI app.</strong> SOAP notes, patient communications, insurance documentation, and treatment plans \u2014 precision-built for how you actually run your practice."
   },
   {
     "product_id": "church",
@@ -374,10 +374,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a church admin powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a church admin powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a church admin powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a church admin powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For church administrators, pastors & ministry staff",
-    "hero_subhead": "<strong>200 professionally-built ministry workflows for Claude.</strong> Bulletins, sermons, member communications, event coordination, and volunteer management \u2014 precision-built for how your church actually operates."
+    "hero_subhead": "<strong>200 professionally-built ministry workflows for your AI app.</strong> Bulletins, sermons, member communications, event coordination, and volunteer management \u2014 precision-built for how your church actually operates."
   },
   {
     "product_id": "dentist",
@@ -420,10 +420,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a dental practice powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a dental practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a dental practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a dental practice powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For dentists & dental office administrators",
-    "hero_subhead": "<strong>200 professionally-built dental workflows for Claude.</strong> Patient communications, insurance narratives, treatment plans, and office documentation \u2014 precision-built for how you actually run your practice."
+    "hero_subhead": "<strong>200 professionally-built dental workflows for your AI app.</strong> Patient communications, insurance narratives, treatment plans, and office documentation \u2014 precision-built for how you actually run your practice."
   },
   {
     "product_id": "designer",
@@ -466,10 +466,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a creative powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a creative powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a creative powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a creative powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For graphic designers, interior designers & creative agencies",
-    "hero_subhead": "<strong>200 professionally-built design workflows for Claude.</strong> Client proposals, project briefs, creative briefs, scope documents, and client communications \u2014 precision-built for how you actually run a creative practice."
+    "hero_subhead": "<strong>200 professionally-built design workflows for your AI app.</strong> Client proposals, project briefs, creative briefs, scope documents, and client communications \u2014 precision-built for how you actually run a creative practice."
   },
   {
     "product_id": "electrician",
@@ -512,10 +512,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into an electrical contractor powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into an electrical contractor powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into an electrical contractor powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into an electrical contractor powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For electricians & electrical contractors",
-    "hero_subhead": "<strong>200 professionally-built electrical contractor workflows for Claude.</strong> Bids, work orders, inspection reports, safety documentation, and client proposals \u2014 precision-built for how you actually run jobs."
+    "hero_subhead": "<strong>200 professionally-built electrical contractor workflows for your AI app.</strong> Bids, work orders, inspection reports, safety documentation, and client proposals \u2014 precision-built for how you actually run jobs."
   },
   {
     "product_id": "eventplanner",
@@ -558,10 +558,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into an event planning powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into an event planning powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into an event planning powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into an event planning powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For event planners, wedding coordinators & corporate event managers",
-    "hero_subhead": "<strong>200 professionally-built event planning workflows for Claude.</strong> Event proposals, vendor contracts, run-of-show documents, and client communications \u2014 precision-built for how you actually plan events."
+    "hero_subhead": "<strong>200 professionally-built event planning workflows for your AI app.</strong> Event proposals, vendor contracts, run-of-show documents, and client communications \u2014 precision-built for how you actually plan events."
   },
   {
     "product_id": "farmer",
@@ -604,10 +604,10 @@
     "youtube_video_id": "qtKP1MpxwjM",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a farm management powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a farm management powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For farmers, ranchers & agricultural professionals",
-    "hero_subhead": "<strong>200 professionally-built agricultural workflows for Claude.</strong> Crop plans, equipment logs, grant applications, compliance records, and marketing materials \u2014 precision-built for how you actually run your operation.",
-    "hero_h1_no_span": "Turn Claude into a farm management powerhouse \u2014 in under 5 minutes"
+    "hero_subhead": "<strong>200 professionally-built agricultural workflows for your AI app.</strong> Crop plans, equipment logs, grant applications, compliance records, and marketing materials \u2014 precision-built for how you actually run your operation.",
+    "hero_h1_no_span": "Turn your AI app into a farm management powerhouse \u2014 in under 5 minutes"
   },
   {
     "product_id": "funeral",
@@ -650,10 +650,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a funeral home powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a funeral home powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a funeral home powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a funeral home powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For funeral directors, morticians & funeral home staff",
-    "hero_subhead": "<strong>200 professionally-built funeral service workflows for Claude.</strong> Obituaries, family communications, service programs, aftercare letters, and compliance documentation \u2014 precision-built for how you actually serve families."
+    "hero_subhead": "<strong>200 professionally-built funeral service workflows for your AI app.</strong> Obituaries, family communications, service programs, aftercare letters, and compliance documentation \u2014 precision-built for how you actually serve families."
   },
   {
     "product_id": "hr",
@@ -696,10 +696,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into an HR powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into an HR powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into an HR powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into an HR powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For HR managers, HR generalists & small business owners",
-    "hero_subhead": "<strong>200 professionally-built HR workflows for Claude.</strong> Job descriptions, performance reviews, onboarding documents, policy memos, and employee communications \u2014 precision-built for how you actually manage people."
+    "hero_subhead": "<strong>200 professionally-built HR workflows for your AI app.</strong> Job descriptions, performance reviews, onboarding documents, policy memos, and employee communications \u2014 precision-built for how you actually manage people."
   },
   {
     "product_id": "insurance",
@@ -742,10 +742,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into an insurance powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into an insurance powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into an insurance powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into an insurance powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For insurance agents, brokers & claims adjusters",
-    "hero_subhead": "<strong>200 professionally-built insurance workflows for Claude.</strong> Coverage summaries, claim narratives, client proposals, follow-up letters, and compliance documentation \u2014 precision-built for how you actually work your book."
+    "hero_subhead": "<strong>200 professionally-built insurance workflows for your AI app.</strong> Coverage summaries, claim narratives, client proposals, follow-up letters, and compliance documentation \u2014 precision-built for how you actually work your book."
   },
   {
     "product_id": "landlord",
@@ -788,10 +788,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a property management powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a property management powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a property management powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a property management powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For landlords, property managers & rental investors",
-    "hero_subhead": "<strong>200 professionally-built property management workflows for Claude.</strong> Lease agreements, tenant notices, maintenance communications, move-in inspections, and eviction documentation \u2014 precision-built for how you actually manage properties."
+    "hero_subhead": "<strong>200 professionally-built property management workflows for your AI app.</strong> Lease agreements, tenant notices, maintenance communications, move-in inspections, and eviction documentation \u2014 precision-built for how you actually manage properties."
   },
   {
     "product_id": "militaryspouse",
@@ -834,8 +834,8 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a military family powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a military family powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a military family powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a military family powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For military spouses managing businesses & households",
     "hero_subhead": "<strong>200 professionally-built workflows for military spouses.</strong> Business documents, relocation planning, financial organization, resume writing, and household management \u2014 precision-built for how you actually keep everything running."
   },
@@ -880,10 +880,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a mortgage powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a mortgage powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a mortgage powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a mortgage powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For mortgage loan officers, processors & brokers",
-    "hero_subhead": "<strong>200 professionally-built mortgage workflows for Claude.</strong> Pre-approval letters, loan summaries, borrower communications, rate quotes, and compliance documentation \u2014 precision-built for how you actually close loans."
+    "hero_subhead": "<strong>200 professionally-built mortgage workflows for your AI app.</strong> Pre-approval letters, loan summaries, borrower communications, rate quotes, and compliance documentation \u2014 precision-built for how you actually close loans."
   },
   {
     "product_id": "mortuary",
@@ -926,10 +926,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a mortuary science powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a mortuary science powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a mortuary science powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a mortuary science powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For morticians, funeral directors & mortuary professionals",
-    "hero_subhead": "<strong>200 professionally-built mortuary workflows for Claude.</strong> Family consultation documents, obituaries, service records, aftercare communications, and regulatory paperwork \u2014 precision-built for how you actually serve families."
+    "hero_subhead": "<strong>200 professionally-built mortuary workflows for your AI app.</strong> Family consultation documents, obituaries, service records, aftercare communications, and regulatory paperwork \u2014 precision-built for how you actually serve families."
   },
   {
     "product_id": "nutritionist",
@@ -972,10 +972,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a nutrition practice powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a nutrition practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a nutrition practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a nutrition practice powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For registered dietitians, nutritionists & wellness coaches",
-    "hero_subhead": "<strong>200 professionally-built nutrition workflows for Claude.</strong> Meal plans, client assessments, nutrition education materials, progress notes, and practice documentation \u2014 precision-built for how you actually work with clients."
+    "hero_subhead": "<strong>200 professionally-built nutrition workflows for your AI app.</strong> Meal plans, client assessments, nutrition education materials, progress notes, and practice documentation \u2014 precision-built for how you actually work with clients."
   },
   {
     "product_id": "pastor",
@@ -1018,10 +1018,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a ministry powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a ministry powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a ministry powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a ministry powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For pastors, ministers & church leaders",
-    "hero_subhead": "<strong>200 professionally-built ministry workflows for Claude.</strong> Sermon outlines, pastoral letters, counseling notes, congregational communications, and ministry planning documents \u2014 precision-built for how you actually lead."
+    "hero_subhead": "<strong>200 professionally-built ministry workflows for your AI app.</strong> Sermon outlines, pastoral letters, counseling notes, congregational communications, and ministry planning documents \u2014 precision-built for how you actually lead."
   },
   {
     "product_id": "personaltrainer",
@@ -1064,10 +1064,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a fitness business powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a fitness business powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a fitness business powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a fitness business powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For personal trainers, fitness coaches & gym owners",
-    "hero_subhead": "<strong>200 professionally-built fitness business workflows for Claude.</strong> Training programs, client assessments, nutrition guidance, progress reports, and marketing content \u2014 precision-built for how you actually run your fitness business."
+    "hero_subhead": "<strong>200 professionally-built fitness business workflows for your AI app.</strong> Training programs, client assessments, nutrition guidance, progress reports, and marketing content \u2014 precision-built for how you actually run your fitness business."
   },
   {
     "product_id": "plumber",
@@ -1110,10 +1110,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a plumbing contractor powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a plumbing contractor powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a plumbing contractor powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a plumbing contractor powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For plumbers & plumbing contractors",
-    "hero_subhead": "<strong>200 professionally-built plumbing contractor workflows for Claude.</strong> Estimates, work orders, inspection reports, warranty documentation, and customer communications \u2014 precision-built for how you actually run jobs."
+    "hero_subhead": "<strong>200 professionally-built plumbing contractor workflows for your AI app.</strong> Estimates, work orders, inspection reports, warranty documentation, and customer communications \u2014 precision-built for how you actually run jobs."
   },
   {
     "product_id": "principal",
@@ -1156,10 +1156,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a school leadership powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a school leadership powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a school leadership powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a school leadership powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For school principals, vice principals & district administrators",
-    "hero_subhead": "<strong>200 professionally-built school leadership workflows for Claude.</strong> Parent communications, staff evaluations, policy documents, discipline letters, and improvement plans \u2014 precision-built for how you actually lead a school."
+    "hero_subhead": "<strong>200 professionally-built school leadership workflows for your AI app.</strong> Parent communications, staff evaluations, policy documents, discipline letters, and improvement plans \u2014 precision-built for how you actually lead a school."
   },
   {
     "product_id": "restaurant",
@@ -1202,10 +1202,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a restaurant management powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a restaurant management powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a restaurant management powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a restaurant management powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For restaurant owners, managers & food service operators",
-    "hero_subhead": "<strong>200 professionally-built restaurant workflows for Claude.</strong> Staff schedules, vendor communications, menu descriptions, training materials, and customer service responses \u2014 precision-built for how you actually run a restaurant."
+    "hero_subhead": "<strong>200 professionally-built restaurant workflows for your AI app.</strong> Staff schedules, vendor communications, menu descriptions, training materials, and customer service responses \u2014 precision-built for how you actually run a restaurant."
   },
   {
     "product_id": "salon",
@@ -1248,10 +1248,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a salon business powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a salon business powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For salon owners, stylists & beauty professionals",
-    "hero_subhead": "<strong>200 professionally-built salon business workflows for Claude.</strong> Client consultation notes, service menus, promotional content, staff communications, and client follow-ups \u2014 precision-built for how you actually run your salon.",
-    "hero_h1_no_span": "Turn Claude into a salon business powerhouse \u2014 in under 5 minutes"
+    "hero_subhead": "<strong>200 professionally-built salon business workflows for your AI app.</strong> Client consultation notes, service menus, promotional content, staff communications, and client follow-ups \u2014 precision-built for how you actually run your salon.",
+    "hero_h1_no_span": "Turn your AI app into a salon business powerhouse \u2014 in under 5 minutes"
   },
   {
     "product_id": "teacher",
@@ -1289,9 +1289,9 @@
     "show_tryit": false,
     "api_base": "https://api.lawtasksai.com",
     "ga_measurement_id": "G-1QYEGTMFW8",
-    "hero_h1": "Turn Claude into a teaching powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a teaching powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For K-12 teachers, special education staff & school counselors",
-    "hero_subhead": "<strong>167 professionally-built teaching workflows for Claude.</strong> Lesson plans, parent communications, IEP support, differentiation strategies, and student assessments \u2014 precision-built for how you actually teach.",
+    "hero_subhead": "<strong>167 professionally-built teaching workflows for your AI app.</strong> Lesson plans, parent communications, IEP support, differentiation strategies, and student assessments \u2014 precision-built for how you actually teach.",
     "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
     "features_intro": "Built for K-12 teachers, SpEd staff & counselors",
     "features_subtitle": "Every task built for what happens before, during, and after class.",
@@ -1376,7 +1376,7 @@
     "youtube_video_id": "n7FRIYxDgYQ",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1_no_span": "Turn Claude into a teaching powerhouse \u2014 in under 5 minutes"
+    "hero_h1_no_span": "Turn your AI app into a teaching powerhouse \u2014 in under 5 minutes"
   },
   {
     "product_id": "therapist",
@@ -1419,10 +1419,10 @@
     "youtube_video_id": "ppx-Nw27ii4",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a mental health practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a mental health practice powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For therapists, counselors & mental health professionals",
-    "hero_subhead": "<strong>200 professionally-built mental health practice workflows for Claude.</strong> Progress notes, treatment plans, psychoeducation materials, intake documentation, and practice communications \u2014 precision-built for how you actually practice.",
-    "hero_h1_no_span": "Turn Claude into a mental health practice powerhouse \u2014 in under 5 minutes"
+    "hero_subhead": "<strong>200 professionally-built mental health practice workflows for your AI app.</strong> Progress notes, treatment plans, psychoeducation materials, intake documentation, and practice communications \u2014 precision-built for how you actually practice.",
+    "hero_h1_no_span": "Turn your AI app into a mental health practice powerhouse \u2014 in under 5 minutes"
   },
   {
     "product_id": "travelagent",
@@ -1465,10 +1465,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a travel business powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a travel business powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a travel business powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a travel business powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For travel agents, travel advisors & tour operators",
-    "hero_subhead": "<strong>200 professionally-built travel business workflows for Claude.</strong> Itineraries, client proposals, destination guides, booking confirmations, and travel advisories \u2014 precision-built for how you actually serve clients."
+    "hero_subhead": "<strong>200 professionally-built travel business workflows for your AI app.</strong> Itineraries, client proposals, destination guides, booking confirmations, and travel advisories \u2014 precision-built for how you actually serve clients."
   },
   {
     "product_id": "vet",
@@ -1511,10 +1511,10 @@
     "youtube_video_id": "",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a veterinary practice powerhouse \u2014 in under 5 minutes",
-    "hero_h1_no_span": "Turn Claude into a veterinary practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a veterinary practice powerhouse \u2014 in under 5 minutes",
+    "hero_h1_no_span": "Turn your AI app into a veterinary practice powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For veterinarians, vet technicians & veterinary office staff",
-    "hero_subhead": "<strong>200 professionally-built veterinary workflows for Claude.</strong> SOAP notes, client discharge instructions, medication guides, practice communications, and patient records \u2014 precision-built for how you actually care for patients."
+    "hero_subhead": "<strong>200 professionally-built veterinary workflows for your AI app.</strong> SOAP notes, client discharge instructions, medication guides, practice communications, and patient records \u2014 precision-built for how you actually care for patients."
   },
   {
     "product_id": "marketing",
@@ -1566,9 +1566,9 @@
     "youtube_video_id": "PTEoaKNbevA",
     "show_social_proof": false,
     "social_proof_count": 0,
-    "hero_h1": "Turn Claude into a marketing powerhouse \u2014 in under 5 minutes",
+    "hero_h1": "Turn your AI app into a marketing powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For marketing managers, digital marketers & creative agencies",
-    "hero_subhead": "<strong>206 professionally-built marketing workflows for Claude.</strong> Campaign briefs, social copy, email sequences, competitive analysis, and content strategy \u2014 precision-built for how you actually do marketing.",
-    "hero_h1_no_span": "Turn Claude into a marketing powerhouse \u2014 in under 5 minutes"
+    "hero_subhead": "<strong>206 professionally-built marketing workflows for your AI app.</strong> Campaign briefs, social copy, email sequences, competitive analysis, and content strategy \u2014 precision-built for how you actually do marketing.",
+    "hero_h1_no_span": "Turn your AI app into a marketing powerhouse \u2014 in under 5 minutes"
   }
 ]

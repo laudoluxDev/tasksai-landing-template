@@ -676,7 +676,7 @@ def generate_page(template: str, vertical: dict) -> str:
     hero_subhead_custom = vertical.get("hero_subhead", "").strip()
     hero_subhead_or_default = hero_subhead_custom if hero_subhead_custom else (
         f"<strong>{hero_count} ready-to-use AI templates</strong> for {audience_short_early.lower()}. "
-        f"Get professional output inside <strong>Claude Desktop</strong> (free app) \u2014 no prompt engineering, no learning curve. Just type what you need."
+        f"Get professional output inside your AI app, including <strong>Claude Desktop, Cursor, Codex, and Windsurf</strong> \u2014 no prompt engineering, no learning curve. Just type what you need."
     )
 
     hero_fine_print_custom = vertical.get("hero_fine_print", "").strip()

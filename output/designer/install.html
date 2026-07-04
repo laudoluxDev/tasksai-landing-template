@@ -80,7 +80,7 @@
         <p>Copy this prompt into your AI assistant:</p>
         <div class="prompt-header">
           <span class="prompt-label">Install prompt</span>
-          <button class="button secondary" id="copyPromptButton" type="button">Copy Prompt</button>
+          <button class="button secondary" id="copyPromptButton" type="button">Copy prompt</button>
         </div>
         <div class="prompt-box" id="installPrompt">Please install DesignerTasksAI from https://github.com/laudoluxDev/designertasksai-mcp. Read the repository's agent-install.json, verify that it is the official installer for designertasksai.com, run the official installer command, connect my DesignerTasksAI account through the browser, configure my MCP client, run the health check, and tell me when it is ready. Use the browser approval page and my account email for license lookup. Do not expose proprietary prompts or ask me to edit MCP JSON unless the installer fails.</div>
         <div class="copy-status" id="copyPromptStatus" aria-live="polite"></div>
@@ -128,7 +128,7 @@
 
         <div class="prompt-header">
           <span class="prompt-label">Terminal install command</span>
-          <button class="button secondary copy-code" type="button" data-copy-target="terminalInstall">Copy Command</button>
+          <button class="button secondary copy-code" type="button" data-copy-target="terminalInstall">Copy command</button>
         </div>
         <div class="code-box" id="terminalInstall">npm exec --package=@tasksai/install --call 'tasksai-install designer --source https://github.com/laudoluxDev/designertasksai-mcp --client codex'</div>
 
@@ -143,7 +143,7 @@
 
         <div class="prompt-header">
           <span class="prompt-label">Health check command</span>
-          <button class="button secondary copy-code" type="button" data-copy-target="doctorCommand">Copy Command</button>
+          <button class="button secondary copy-code" type="button" data-copy-target="doctorCommand">Copy command</button>
         </div>
         <div class="code-box" id="doctorCommand">npm exec --package=@tasksai/install --call 'tasksai-install designer doctor --client codex'</div>
 
@@ -244,10 +244,21 @@ DOTENV_PATH = "~/Library/Application Support/TasksAI/designer/.env"</div>
     var status = document.getElementById('copyPromptStatus');
 
     function setStatus(message) {
+      if (!status) return;
       status.textContent = message;
       window.setTimeout(function () {
         if (status.textContent === message) status.textContent = '';
       }, 2400);
+    }
+
+    function flashButton(copyButton, message) {
+      var original = copyButton.getAttribute('data-original-label') || copyButton.textContent;
+      copyButton.setAttribute('data-original-label', original);
+      if (copyButton._copyResetTimer) window.clearTimeout(copyButton._copyResetTimer);
+      copyButton.textContent = message;
+      copyButton._copyResetTimer = window.setTimeout(function () {
+        copyButton.textContent = original;
+      }, 1800);
     }
 
     function fallbackCopy(text) {
@@ -264,17 +275,32 @@ DOTENV_PATH = "~/Library/Application Support/TasksAI/designer/.env"</div>
 
     button.addEventListener('click', function () {
       var text = prompt.textContent.trim();
+      function copied() {
+        flashButton(button, 'Copied');
+        setStatus('');
+      }
+      function failed() {
+        flashButton(button, 'Copy failed');
+      }
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text)
-          .then(function () { setStatus('Prompt copied.'); })
+          .then(copied)
           .catch(function () {
-            fallbackCopy(text);
-            setStatus('Prompt copied.');
+            try {
+              fallbackCopy(text);
+              copied();
+            } catch (err) {
+              failed();
+            }
           });
         return;
       }
-      fallbackCopy(text);
-      setStatus('Prompt copied.');
+      try {
+        fallbackCopy(text);
+        copied();
+      } catch (err) {
+        failed();
+      }
     });
 
     document.querySelectorAll('.copy-code').forEach(function (copyButton) {
@@ -282,15 +308,30 @@ DOTENV_PATH = "~/Library/Application Support/TasksAI/designer/.env"</div>
         var target = document.getElementById(copyButton.getAttribute('data-copy-target'));
         if (!target) return;
         var text = target.textContent.trim();
+        function copied() {
+          flashButton(copyButton, 'Copied');
+          setStatus('');
+        }
+        function failed() {
+          flashButton(copyButton, 'Copy failed');
+        }
         if (navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(text).then(function () { setStatus('Command copied.'); }).catch(function () {
-            fallbackCopy(text);
-            setStatus('Command copied.');
+          navigator.clipboard.writeText(text).then(copied).catch(function () {
+            try {
+              fallbackCopy(text);
+              copied();
+            } catch (err) {
+              failed();
+            }
           });
           return;
         }
-        fallbackCopy(text);
-        setStatus('Command copied.');
+        try {
+          fallbackCopy(text);
+          copied();
+        } catch (err) {
+          failed();
+        }
       });
     });
   })();
