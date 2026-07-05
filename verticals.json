@@ -122,7 +122,49 @@
     "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
     "features_intro": "Built for agents who close deals, not write prompts",
     "features_subtitle": "Every task built for the exact work real estate agents do every day.",
-    "pricing_tagline": "No subscriptions. Buy credits when you need them \u2014 one credit per task. Credits never expire, so you're never pressured to use them.",
+    "pricing_tagline": "No subscriptions. Buy credits when you need them. Most tasks use 1 credit and can produce a local file you can keep, edit, or share.",
+    "pricing_tiers": [
+      {
+        "name": "Starter",
+        "price": "$9",
+        "credits": "20 credits",
+        "per_credit": "$0.45 per credit",
+        "checkout_pack": "starter",
+        "button_label": "Get Started",
+        "features": [
+          "All 169 real estate workflows",
+          "Credits never expire",
+          "Good for first client files"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$29",
+        "credits": "80 credits",
+        "per_credit": "$0.36 per credit",
+        "checkout_pack": "professional",
+        "button_label": "Best Value",
+        "featured": true,
+        "features": [
+          "All 169 real estate workflows",
+          "Credits never expire",
+          "Best for regular agent use"
+        ]
+      },
+      {
+        "name": "Office",
+        "price": "$79",
+        "credits": "300 credits",
+        "per_credit": "$0.26 per credit",
+        "checkout_pack": "office",
+        "button_label": "Get Credits",
+        "features": [
+          "All 169 real estate workflows",
+          "Credits never expire",
+          "For teams and frequent files"
+        ]
+      }
+    ],
     "compliance_heading": "Your clients' data stays yours",
     "compliance": [
       {
@@ -607,6 +649,49 @@
     "hero_h1": "Turn your AI app into a farm management powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For farmers, ranchers & agricultural professionals",
     "hero_subhead": "<strong>200 professionally-built agricultural workflows for your AI app.</strong> Crop plans, equipment logs, grant applications, compliance records, and marketing materials \u2014 precision-built for how you actually run your operation.",
+    "pricing_tagline": "No subscriptions. Buy credits when you need them. Most tasks use 1 credit and can produce a local farm record, checklist, or log.",
+    "pricing_tiers": [
+      {
+        "name": "Starter",
+        "price": "$9",
+        "credits": "25 credits",
+        "per_credit": "$0.36 per credit",
+        "checkout_pack": "starter",
+        "button_label": "Get Started",
+        "features": [
+          "All 200 farm workflows",
+          "Credits never expire",
+          "Good for first records and logs"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$19",
+        "credits": "75 credits",
+        "per_credit": "$0.25 per credit",
+        "checkout_pack": "professional",
+        "button_label": "Best Value",
+        "featured": true,
+        "features": [
+          "All 200 farm workflows",
+          "Credits never expire",
+          "Best for seasonal admin work"
+        ]
+      },
+      {
+        "name": "Office",
+        "price": "$49",
+        "credits": "250 credits",
+        "per_credit": "$0.20 per credit",
+        "checkout_pack": "office",
+        "button_label": "Get Credits",
+        "features": [
+          "All 200 farm workflows",
+          "Credits never expire",
+          "For frequent records and files"
+        ]
+      }
+    ],
     "hero_h1_no_span": "Turn your AI app into a farm management powerhouse \u2014 in under 5 minutes"
   },
   {
@@ -1295,7 +1380,49 @@
     "hero_fine_print": "5 free credits on signup \u00b7 Credits never expire \u00b7 No subscription",
     "features_intro": "Built for K-12 teachers, SpEd staff & counselors",
     "features_subtitle": "Every task built for what happens before, during, and after class.",
-    "pricing_tagline": "No subscriptions. Individual teachers pay per credit pack; schools and districts get volume pricing. Credits never expire.",
+    "pricing_tagline": "No subscriptions. Individual teachers pay per credit pack; schools and districts get volume pricing. Most tasks use 1 credit and can produce a local classroom file.",
+    "pricing_tiers": [
+      {
+        "name": "Starter",
+        "price": "$5",
+        "credits": "20 credits",
+        "per_credit": "$0.25 per credit",
+        "checkout_pack": "starter",
+        "button_label": "Get Started",
+        "features": [
+          "All 167 teaching workflows",
+          "Credits never expire",
+          "Good for first classroom files"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$12",
+        "credits": "60 credits",
+        "per_credit": "$0.20 per credit",
+        "checkout_pack": "professional",
+        "button_label": "Best Value",
+        "featured": true,
+        "features": [
+          "All 167 teaching workflows",
+          "Credits never expire",
+          "Best for weekly classroom use"
+        ]
+      },
+      {
+        "name": "School Year",
+        "price": "$29",
+        "credits": "200 credits",
+        "per_credit": "$0.15 per credit",
+        "checkout_pack": "office",
+        "button_label": "Get Credits",
+        "features": [
+          "All 167 teaching workflows",
+          "Credits never expire",
+          "For frequent classroom documents"
+        ]
+      }
+    ],
     "api_cost_disclaimer_position": "top",
     "api_cost_disclaimer": "TeacherTasksAI credits cover TeacherTasksAI tasks only. The AI itself runs through Claude Desktop or another MCP-compatible client, which may require its own API key or subscription (Anthropic, OpenAI, etc.). Plan for that separately.",
     "testimonials_heading": "What teachers are saying",
@@ -1422,6 +1549,49 @@
     "hero_h1": "Turn your AI app into a mental health practice powerhouse \u2014 in under 5 minutes",
     "hero_eyebrow": "For therapists, counselors & mental health professionals",
     "hero_subhead": "<strong>200 professionally-built mental health practice workflows for your AI app.</strong> Progress notes, treatment plans, psychoeducation materials, intake documentation, and practice communications \u2014 precision-built for how you actually practice.",
+    "pricing_tagline": "No subscriptions. Buy credits when you need them. Most tasks use 1 credit and can produce a local admin draft, handout, or practice document.",
+    "pricing_tiers": [
+      {
+        "name": "Starter",
+        "price": "$9",
+        "credits": "20 credits",
+        "per_credit": "$0.45 per credit",
+        "checkout_pack": "starter",
+        "button_label": "Get Started",
+        "features": [
+          "All 200 therapy-practice workflows",
+          "Credits never expire",
+          "Good for first practice files"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$29",
+        "credits": "80 credits",
+        "per_credit": "$0.36 per credit",
+        "checkout_pack": "professional",
+        "button_label": "Best Value",
+        "featured": true,
+        "features": [
+          "All 200 therapy-practice workflows",
+          "Credits never expire",
+          "Best for regular practice admin"
+        ]
+      },
+      {
+        "name": "Office",
+        "price": "$79",
+        "credits": "300 credits",
+        "per_credit": "$0.26 per credit",
+        "checkout_pack": "office",
+        "button_label": "Get Credits",
+        "features": [
+          "All 200 therapy-practice workflows",
+          "Credits never expire",
+          "For frequent files and handouts"
+        ]
+      }
+    ],
     "hero_h1_no_span": "Turn your AI app into a mental health practice powerhouse \u2014 in under 5 minutes"
   },
   {

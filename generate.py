@@ -390,30 +390,34 @@ def target_audience_short(full: str) -> str:
     return short
 
 
-def build_schema_offers(show_tryit: bool) -> str:
-    """Build the JSON-LD offers array, conditionally including the Try It tier."""
+def build_schema_offers(tiers: list, show_tryit: bool) -> str:
+    """Build JSON-LD offers from the same tiers rendered on the page."""
     offers = []
     if show_tryit:
         offers.append({"@type": "Offer", "name": "Try It", "price": "5.00",
                        "priceCurrency": "USD", "description": "2 credits"})
-    offers += [
-        {"@type": "Offer", "name": "Starter",    "price": "29.00",  "priceCurrency": "USD", "description": "15 credits"},
-        {"@type": "Offer", "name": "Pro",         "price": "99.00",  "priceCurrency": "USD", "description": "60 credits"},
-        {"@type": "Offer", "name": "Business",   "price": "199.00", "priceCurrency": "USD", "description": "150 credits"},
-        {"@type": "Offer", "name": "Power",       "price": "349.00", "priceCurrency": "USD", "description": "350 credits"},
-        {"@type": "Offer", "name": "Unlimited",   "price": "599.00", "priceCurrency": "USD", "description": "800 credits"},
-        {"@type": "Offer", "name": "Enterprise",  "price": "999.00", "priceCurrency": "USD", "description": "2000 credits"},
-    ]
-    lines = []
-    for i, offer in enumerate(offers):
-        comma = "," if i < len(offers) - 1 else ""
-        lines.append(
-            f'            {{"@type": "Offer", "name": "{offer["name"]}", '
-            f'"price": "{offer["price"]}", "priceCurrency": "USD", '
-            f'"description": "{offer["description"]}"}}{comma}'
-        )
-    inner = "\n".join(lines)
-    return f"[\n{inner}\n        ]"
+    if tiers:
+        for tier in tiers:
+            price = str(tier.get("price", "")).replace("$", "").strip()
+            try:
+                price = f"{float(price):.2f}"
+            except ValueError:
+                pass
+            if price:
+                offers.append({
+                    "@type": "Offer",
+                    "name": tier.get("name", ""),
+                    "price": price,
+                    "priceCurrency": "USD",
+                    "description": tier.get("credits", ""),
+                })
+    else:
+        offers += [
+            {"@type": "Offer", "name": "Starter", "price": "29.00", "priceCurrency": "USD", "description": "50 credits"},
+            {"@type": "Offer", "name": "Professional", "price": "79.00", "priceCurrency": "USD", "description": "150 credits"},
+            {"@type": "Offer", "name": "Office", "price": "199.00", "priceCurrency": "USD", "description": "500 credits"},
+        ]
+    return json.dumps(offers, indent=12)
 
 
 def build_ga_tag(ga_id: str, ads_id: str = "") -> str:
@@ -757,7 +761,7 @@ def generate_page(template: str, vertical: dict) -> str:
         "{{LOGO_HTML_FOOTER}}": logo_html,
         "{{API_BASE}}": api_base,
 
-        "{{SCHEMA_OFFERS}}": build_schema_offers(show_tryit),
+        "{{SCHEMA_OFFERS}}": build_schema_offers(pricing_tiers, show_tryit),
         "{{TRYIT_CARD}}": "",
         "{{GA_TAG}}": ga_tag,
         "{{SIGNUP_TRACKING_JS}}": build_signup_tracking_js(vertical),
