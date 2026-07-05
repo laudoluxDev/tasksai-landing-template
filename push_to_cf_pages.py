@@ -1,110 +1,186 @@
 #!/usr/bin/env python3
 """
-Deploy specific files directly to Cloudflare Pages for all 29 verticals.
-Uses wrangler pages deploy with a temp directory containing only the changed files.
+Manual Cloudflare Pages deploy helper for generated TasksAI vertical sites.
+
+The normal deploy path is the GitHub Actions workflow in this repository. Use
+this helper only when a direct Pages deploy is needed from the generated output
+in this checkout.
 """
 
-import os, sys, time, subprocess, shutil, tempfile
+from __future__ import annotations
+
+import argparse
+import os
+import shutil
+import subprocess
+import sys
+import time
 from pathlib import Path
 
-# Load .env — check script dir first, then vault backup location
-_env_candidates = [
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"),
-    os.path.expanduser("~/clio_obsidian_vault/Workspace_Admin/.env"),
-]
-for _env in _env_candidates:
-    if os.path.exists(_env):
-        for _l in open(_env):
-            _l = _l.strip()
-            if _l and not _l.startswith("#") and "=" in _l:
-                _k, _v = _l.split("=", 1)
-                os.environ.setdefault(_k.strip(), _v.strip())
-        break
 
-CF_EMAIL   = "kentmercier@gmail.com"
-CF_API_KEY = "3994dcbe5afdd67ca6c8c4f8e9139fc71aead"  # global key — has Pages permissions
-OUTPUT_DIR = "/Users/clio/dev/tasksai-landing-template/output"
+ROOT = Path(__file__).resolve().parent
+OUTPUT_DIR = ROOT / "output"
+LOCAL_HOME = ROOT / ".wrangler" / "home"
 
-REPO_MAP = {
-    "contractor":     "contractor-landing",
-    "realtor":        "realtor-landing",
-    "accounting":     "accounting-landing",
-    "chiropractor":   "chiropractor-landing",
-    "church":         "churchadmin-landing",
-    "dentist":        "dentist-landing",
-    "designer":       "designer-landing",
-    "electrician":    "electrician-landing",
-    "eventplanner":   "eventplanner-landing",
-    "farmer":         "farmer-landing",
-    "funeral":        "funeral-landing",
-    "hr":             "hr-landing",
-    "insurance":      "insurance-landing",
-    "landlord":       "landlord-landing",
+PAGES_PROJECTS = {
+    "contractor": "contractor-landing",
+    "realtor": "realtor-landing",
+    "accounting": "accounting-landing",
+    "chiropractor": "chiropractor-landing",
+    "church": "churchadmin-landing",
+    "dentist": "dentist-landing",
+    "designer": "designer-landing",
+    "electrician": "electrician-landing",
+    "eventplanner": "eventplanner-landing",
+    "farmer": "farmer-landing",
+    "funeral": "funeral-landing",
+    "hr": "hr-landing",
+    "insurance": "insurance-landing",
+    "landlord": "landlord-landing",
     "militaryspouse": "militaryspouse-landing",
-    "mortgage":       "mortgage-landing",
-    "mortuary":       "mortician-landing",
-    "nutritionist":   "nutritionist-landing",
-    "pastor":         "pastor-landing",
-    "personaltrainer":"personaltrainer-landing",
-    "plumber":        "plumber-landing",
-    "principal":      "principal-landing",
-    "restaurant":     "restaurant-landing",
-    "salon":          "salon-landing",
-    "teacher":        "teacher-landing",
-    "therapist":      "therapist-landing",
-    "travelagent":    "travelagent-landing",
-    "vet":            "vet-landing",
-    "marketing":      "marketingtasksai-landing",
+    "mortgage": "mortgage-landing",
+    "mortuary": "mortician-landing",
+    "nutritionist": "nutritionist-landing",
+    "pastor": "pastor-landing",
+    "personaltrainer": "personaltrainer-landing",
+    "plumber": "plumber-landing",
+    "principal": "principal-landing",
+    "restaurant": "restaurant-landing",
+    "salon": "salon-landing",
+    "teacher": "teacher-landing",
+    "therapist": "therapist-landing",
+    "travelagent": "travelagent-landing",
+    "vet": "vet-landing",
+    "marketing": "marketingtasksai-landing",
 }
 
-# Which files to deploy — pass as args, default to download.html
-FILES_TO_DEPLOY = sys.argv[1:] if len(sys.argv) > 1 else ["download.html"]
 
-env = {
-    **os.environ,
-    "CLOUDFLARE_API_TOKEN": "",  # clear token — use global key instead
-    "CLOUDFLARE_EMAIL": CF_EMAIL,
-    "CLOUDFLARE_API_KEY": CF_API_KEY,
-}
+def load_env_files() -> None:
+    """Load optional local environment files without baking secrets into code."""
+    candidates = [
+        ROOT / ".env",
+        Path.home() / "clio_obsidian_vault" / "Workspace_Admin" / ".env",
+    ]
+    for env_path in candidates:
+        if not env_path.exists():
+            continue
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+        return
 
-ok = err = skip = 0
-print(f"Deploying {FILES_TO_DEPLOY} to {len(REPO_MAP)} CF Pages projects via wrangler...\n")
 
-for vertical, project in REPO_MAP.items():
-    # Build a temp dir with all current files for this vertical PLUS the updated ones
-    # We need ALL files because wrangler replaces the full deployment
-    vertical_dir = os.path.join(OUTPUT_DIR, vertical)
-    if not os.path.isdir(vertical_dir):
-        print(f"  SKIP  {vertical:20s}  no output dir")
-        skip += 1
-        continue
-
-    # Verify target files exist
-    missing = [f for f in FILES_TO_DEPLOY if not os.path.exists(os.path.join(vertical_dir, f))]
-    if missing:
-        print(f"  SKIP  {vertical:20s}  missing: {missing}")
-        skip += 1
-        continue
-
-    # Deploy the full vertical directory (wrangler handles incremental hashing)
-    result = subprocess.run(
-        ["npx", "wrangler", "pages", "deploy", vertical_dir,
-         "--project-name", project,
-         "--branch", "main",
-         "--commit-message", f"deploy: {', '.join(FILES_TO_DEPLOY)}"],
-        capture_output=True, text=True, env=env, timeout=60
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Deploy generated vertical output to Cloudflare Pages."
     )
+    parser.add_argument(
+        "--vertical",
+        action="append",
+        choices=sorted(PAGES_PROJECTS),
+        help="Deploy one vertical. Repeat for more than one. Defaults to all verticals.",
+    )
+    parser.add_argument(
+        "files",
+        nargs="*",
+        help="Optional file names to require before deploying. The full vertical output directory is always deployed.",
+    )
+    return parser.parse_args()
 
-    if result.returncode == 0:
-        # Extract deployment URL from output
-        url_line = next((l for l in result.stdout.splitlines() if "pages.dev" in l or "Deployment complete" in l), "")
-        print(f"  OK   {vertical:20s}  {project}  {url_line.strip()[:60]}")
-        ok += 1
-    else:
-        err_msg = result.stderr.strip().splitlines()[-1] if result.stderr.strip() else result.stdout.strip().splitlines()[-1]
-        print(f"  ERR  {vertical:20s}  {project}  {err_msg[:80]}")
-        err += 1
 
-    time.sleep(0.3)
+def build_env() -> dict[str, str]:
+    env = dict(os.environ)
+    has_token = bool(env.get("CLOUDFLARE_API_TOKEN"))
+    has_key_pair = bool(env.get("CLOUDFLARE_EMAIL") and env.get("CLOUDFLARE_API_KEY"))
+    if not has_token and not has_key_pair:
+        raise SystemExit(
+            "Missing Cloudflare credentials. Set CLOUDFLARE_API_TOKEN, or set "
+            "CLOUDFLARE_EMAIL and CLOUDFLARE_API_KEY in your shell or local .env."
+        )
 
-print(f"\nDone: {ok} deployed, {err} errors, {skip} skipped")
+    LOCAL_HOME.mkdir(parents=True, exist_ok=True)
+    (LOCAL_HOME / "Library" / "Preferences").mkdir(parents=True, exist_ok=True)
+    env.setdefault("HOME", str(LOCAL_HOME))
+    env.setdefault("WRANGLER_SEND_METRICS", "false")
+    return env
+
+
+def main() -> int:
+    args = parse_args()
+    load_env_files()
+    env = build_env()
+
+    if not shutil.which("npx"):
+        raise SystemExit("Missing npx. Install Node.js/npm before running this helper.")
+    if not OUTPUT_DIR.is_dir():
+        raise SystemExit(f"Missing generated output directory: {OUTPUT_DIR}")
+
+    slugs = args.vertical or sorted(PAGES_PROJECTS)
+    required_files = args.files
+    ok = err = skip = 0
+
+    print(f"Deploying {len(slugs)} generated vertical site(s) from {OUTPUT_DIR}\n")
+
+    for slug in slugs:
+        project = PAGES_PROJECTS[slug]
+        vertical_dir = OUTPUT_DIR / slug
+        if not vertical_dir.is_dir():
+            print(f"  SKIP  {slug:20s}  no output dir")
+            skip += 1
+            continue
+
+        missing = [name for name in required_files if not (vertical_dir / name).exists()]
+        if missing:
+            print(f"  SKIP  {slug:20s}  missing: {missing}")
+            skip += 1
+            continue
+
+        result = subprocess.run(
+            [
+                "npx",
+                "wrangler",
+                "pages",
+                "deploy",
+                str(vertical_dir),
+                "--project-name",
+                project,
+                "--branch",
+                "main",
+                "--commit-dirty=true",
+                "--commit-message",
+                f"deploy generated {slug} site",
+            ],
+            capture_output=True,
+            text=True,
+            env=env,
+            timeout=90,
+        )
+
+        if result.returncode == 0:
+            url_line = next(
+                (
+                    line
+                    for line in result.stdout.splitlines()
+                    if "pages.dev" in line or "Deployment complete" in line
+                ),
+                "",
+            )
+            print(f"  OK    {slug:20s}  {project}  {url_line.strip()[:80]}")
+            ok += 1
+        else:
+            output = result.stderr.strip() or result.stdout.strip()
+            err_msg = output.splitlines()[-1] if output else "wrangler failed"
+            print(f"  ERR   {slug:20s}  {project}  {err_msg[:100]}")
+            err += 1
+
+        time.sleep(0.3)
+
+    print(f"\nDone: {ok} deployed, {err} errors, {skip} skipped")
+    return 1 if err else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
