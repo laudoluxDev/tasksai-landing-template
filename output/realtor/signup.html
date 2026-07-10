@@ -469,6 +469,36 @@
             }
         }
 
+        const ATTRIBUTION_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid'];
+
+        function getSignupAttribution() {
+            const params = new URLSearchParams(window.location.search);
+            const attribution = {};
+            ATTRIBUTION_KEYS.forEach(key => {
+                const value = params.get(key);
+                if (value) attribution[key] = value.slice(0, 300);
+            });
+            attribution.landing_path = window.location.pathname;
+            try {
+                if (document.referrer) {
+                    attribution.referrer_host = new URL(document.referrer).hostname.slice(0, 300);
+                }
+            } catch(e) {}
+
+            if (Object.keys(attribution).length > 1 || attribution.utm_source || attribution.gclid || attribution.gbraid || attribution.wbraid) {
+                try {
+                    sessionStorage.setItem('signup_attribution', JSON.stringify(attribution));
+                } catch(e) {}
+                return attribution;
+            }
+
+            try {
+                return JSON.parse(sessionStorage.getItem('signup_attribution') || '{}');
+            } catch(e) {
+                return {};
+            }
+        }
+
         // Platform UI
         function updatePlatformUI() {
             // Clear platform error when user selects one
@@ -551,6 +581,7 @@
 
             // Collect selected platforms
             const selectedPlatforms = Array.from(document.querySelectorAll('input[name="platforms"]:checked')).map(cb => cb.value);
+            const attribution = getSignupAttribution();
 
             try {
                 const res = await fetch(`${API_BASE}/v1/signup`, {
@@ -560,7 +591,8 @@
                         name: `${firstName} ${lastName}`,
                         email: email,
                         password: password,
-                        platforms: selectedPlatforms
+                        platforms: selectedPlatforms,
+                        attribution: attribution
                     })
                 });
 
@@ -569,6 +601,7 @@
                     try {
                         sessionStorage.setItem('signup_email', email);
                         sessionStorage.setItem('signup_platforms', JSON.stringify(selectedPlatforms));
+                        sessionStorage.setItem('signup_attribution', JSON.stringify(attribution));
                     } catch(e) {}
                     const doRedirect = () => { window.location.href = '/success.html?signup=1'; };
                     trackSignupAndRedirect(doRedirect);
